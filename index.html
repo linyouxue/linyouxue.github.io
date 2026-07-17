@@ -78,7 +78,7 @@
     audio.addEventListener('timeupdate',()=>{if(isSeeking||pendingSeek!==null)return;renderProgress(audio.currentTime);renderLyrics(audio.currentTime)});
     audio.addEventListener('play',()=>{document.querySelector('#play span').innerHTML=icons.pause;document.querySelector('#play').setAttribute('aria-label','暂停')});
     audio.addEventListener('pause',()=>{document.querySelector('#play span').innerHTML=icons.play;document.querySelector('#play').setAttribute('aria-label','播放')});
-    audio.addEventListener('ended',()=>{if(modeIndex===2){audio.currentTime=0;audio.play()}else if(modeIndex===1){loadTrack(randomTrack(),true)}else if(trackIndex<tracks.length-1){loadTrack(trackIndex+1,true)}else{audio.currentTime=0;renderProgress(0)}});
+    audio.addEventListener('ended',()=>{if(modeIndex===2){audio.currentTime=0;audio.play()}else if(modeIndex===1){loadTrack(randomTrack(),true)}else{loadTrack(trackIndex+1,true)}});
     function seekFromPointer(event){const rect=progress.getBoundingClientRect();const ratio=Math.min(1,Math.max(0,(event.clientX-rect.left)/rect.width));seekTo(ratio*duration)}
     progress.addEventListener('pointerdown',event=>{isSeeking=true;progress.setPointerCapture?.(event.pointerId);seekFromPointer(event)});
     progress.addEventListener('pointermove',event=>{if(isSeeking)seekFromPointer(event)});
