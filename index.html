@@ -65,7 +65,11 @@
     audio.addEventListener('play',()=>{document.querySelector('#play span').textContent='Ⅱ';document.querySelector('#play').setAttribute('aria-label','暂停')});
     audio.addEventListener('pause',()=>{document.querySelector('#play span').textContent='▶';document.querySelector('#play').setAttribute('aria-label','播放')});
     audio.addEventListener('ended',()=>{if(modeIndex===0){renderProgress(0)}else{audio.currentTime=0;audio.play()}});
-    progress.addEventListener('pointerdown',()=>isSeeking=true);progress.addEventListener('input',event=>seekTo(event.currentTarget.value));progress.addEventListener('change',event=>seekTo(event.currentTarget.value));progress.addEventListener('pointerup',event=>{seekTo(event.currentTarget.value);isSeeking=false});progress.addEventListener('pointercancel',()=>isSeeking=false);
+    function seekFromPointer(event){const rect=progress.getBoundingClientRect();const ratio=Math.min(1,Math.max(0,(event.clientX-rect.left)/rect.width));seekTo(ratio*duration)}
+    progress.addEventListener('pointerdown',event=>{isSeeking=true;progress.setPointerCapture?.(event.pointerId);seekFromPointer(event)});
+    progress.addEventListener('pointermove',event=>{if(isSeeking)seekFromPointer(event)});
+    progress.addEventListener('input',event=>{if(!isSeeking)seekTo(event.currentTarget.value)});progress.addEventListener('change',event=>{if(!isSeeking)seekTo(event.currentTarget.value)});
+    progress.addEventListener('pointerup',event=>{seekFromPointer(event);isSeeking=false;progress.releasePointerCapture?.(event.pointerId)});progress.addEventListener('pointercancel',()=>isSeeking=false);
     document.querySelector('#play').addEventListener('click',async()=>{if(audio.paused){try{await audio.play()}catch{}}else audio.pause()});
     document.querySelector('#previous').addEventListener('click',()=>seekTo(0));document.querySelector('#next').addEventListener('click',()=>seekTo(0));
     document.querySelector('#mode').addEventListener('click',event=>{modeIndex=(modeIndex+1)%modes.length;event.currentTarget.textContent=modes[modeIndex][1];event.currentTarget.setAttribute('aria-label',`播放模式：${modes[modeIndex][0]}`);document.querySelector('#mode-status').textContent=modes[modeIndex][0]});
