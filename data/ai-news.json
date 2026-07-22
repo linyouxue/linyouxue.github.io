@@ -1,258 +1,1784 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-22T15:35:00Z",
-  "item_count": 18,
+  "generated_at": "2026-07-22T19:42:11Z",
+  "item_count": 102,
   "category_counts": {
-    "research": 2,
-    "frontier": 1,
-    "china": 6,
-    "bigtech": 2,
-    "startups": 4,
-    "opensource": 1,
-    "policy": 2
+    "research": 20,
+    "frontier": 16,
+    "china": 16,
+    "bigtech": 14,
+    "startups": 14,
+    "opensource": 12,
+    "policy": 10
   },
   "analysis": {
-    "title": "中国模型进入高频迭代期：从参数竞速走向产品与生态",
-    "lead": "本期共整理 18 条有效信号。真正值得关注的不只是模型变得更大，而是 Agent 能否可靠完成长任务、模型如何进入真实产品，以及算力与开源策略能否支撑规模化使用。",
+    "title": "从模型竞速走向产品、算力与生态：本期 AI 趋势观察",
+    "lead": "本期共整理 102 条有效信号。下面不是新闻复述，而是把论文、公司、创业与政策放在同一张图里后的编辑性判断。",
     "paragraphs": [
-      "研究侧，BACE 与 Reward Hacking Benchmark 指向同一个问题：当模型开始自主写代码、调用工具和规划多步任务时，只看最终得分会掩盖自我验证、跳过检查或操纵评测等失效方式。下一阶段的竞争核心，是让 Agent 在更长的工作链路里保持可验证、可复现和可控。",
-      "中国 AI 板块的强信号来自六条不同路线：Kimi 与 Qwen 继续押注超大模型和编程能力；DeepSeek 与智谱把开放模型、国产算力适配和长程执行放在前台；腾讯元宝/混元、字节豆包/Seed 则借助既有产品入口，把 Agent 和多模态能力更快推入实际使用。竞争已经从一次模型发布，延伸到模型、算力、入口和开发生态的组合。",
-      "海外实验室、大厂和创业公司的信息也呈现相同方向：前沿模型与芯片合作绑定得更紧，学术创业从聊天机器人扩展到空间智能、世界模型、机器人和 AI 原生安全。与此同时，欧盟的透明度与网络安全规则说明，产品分发与合规成本也会直接影响技术落地速度。"
+      "研究侧共收录 20 条信号，重点包括 《Effect of Mirrored Orthogonal Sampling for CMA-ES on…》、《Investigating Memetic Scheduling Strategies for…》。与只看榜单相比，更值得持续观察的是论文能否把 Agent 的可靠性、评测完整性与推理成本一起向前推进。",
+      "中国 AI 板块本期收录 16 条动态，已覆盖 Kimi / 月之暗面、Qwen / 通义千问、智谱 / Z.ai、DeepSeek、字节豆包 / Seed。代表性变化包括 《China’s Latest A.I. Breakthrough Threatens America’s…》、《China's Moonshot unveils world's largest open AI…》；竞争正在从单次模型发布延伸到开源策略、Agent 产品入口、国产算力适配和价格体系。",
+      "产业侧共有 30 条前沿实验室与大厂动态，另有 14 条创业信号和 10 条政策安全更新。把这些信息放在一起看，模型能力、算力供给、产品分发与合规成本正在变成同一个竞争问题。"
     ],
     "takeaways": [
       {
-        "title": "技术主线",
-        "body": "重点跟踪 Agent 的长程可靠性、工具调用和真实工作流评测，而不只比较静态榜单。"
+        "title": "技术判断",
+        "body": "Agent 的长程可靠性、工具调用与真实工作流评测，比单一静态 benchmark 更值得跟踪。"
       },
       {
         "title": "中国 AI",
-        "body": "六家公司正在形成“大模型能力 + 开放策略 + 超级应用入口 + 国产算力”的多路线竞争。"
+        "body": "当前重点覆盖 5/6 组公司；没有新消息的公司仍保留在持续监控名单中。"
       },
       {
-        "title": "产品判断",
-        "body": "能否稳定接入工作流、形成分发闭环并控制推理成本，比一次发布会更能说明商业进展。"
+        "title": "产业判断",
+        "body": "开放权重、低价 API、消费端入口和国产算力适配，正在共同决定模型能否形成规模化使用。"
       }
     ],
     "china_watch_coverage": {
-      "Kimi / 月之暗面": 1,
-      "Qwen / 通义千问": 1,
-      "腾讯元宝 / 混元": 1,
-      "智谱 / Z.ai": 1,
-      "DeepSeek": 1,
+      "Kimi / 月之暗面": 10,
+      "Qwen / 通义千问": 10,
+      "腾讯元宝 / 混元": 0,
+      "智谱 / Z.ai": 5,
+      "DeepSeek": 5,
       "字节豆包 / Seed": 1
     }
   },
   "sources": [
-    {"name": "OpenAI", "status": "ok", "count": 1, "note": "Initial verified snapshot"},
-    {"name": "OpenAlex / arXiv", "status": "ok", "count": 2, "note": "Conference papers and abstracts"},
-    {"name": "Academic Startup Radar", "status": "ok", "count": 4, "note": "Founder and funding monitor"},
-    {"name": "Hugging Face", "status": "ok", "count": 2, "note": "Open-source ecosystem"},
-    {"name": "EU AI Policy", "status": "ok", "count": 2, "note": "Official Commission updates"},
-    {"name": "Industry Monitor", "status": "ok", "count": 2, "note": "Big-tech and infrastructure"},
-    {"name": "China AI Company Radar", "status": "ok", "count": 6, "note": "Kimi, Qwen, Tencent, Zhipu, DeepSeek and ByteDance"}
+    {
+      "name": "Hugging Face",
+      "status": "ok",
+      "count": 7,
+      "note": ""
+    },
+    {
+      "name": "NVIDIA AI",
+      "status": "ok",
+      "count": 6,
+      "note": ""
+    },
+    {
+      "name": "OpenAI",
+      "status": "ok",
+      "count": 9,
+      "note": ""
+    },
+    {
+      "name": "Google DeepMind",
+      "status": "ok",
+      "count": 8,
+      "note": ""
+    },
+    {
+      "name": "Google AI",
+      "status": "ok",
+      "count": 7,
+      "note": ""
+    },
+    {
+      "name": "World Model Founders",
+      "status": "ok",
+      "count": 7,
+      "note": ""
+    },
+    {
+      "name": "Academic Startup Radar",
+      "status": "ok",
+      "count": 10,
+      "note": ""
+    },
+    {
+      "name": "OpenAlex Conference Index",
+      "status": "ok",
+      "count": 20,
+      "note": ""
+    },
+    {
+      "name": "Microsoft Research",
+      "status": "ok",
+      "count": 6,
+      "note": ""
+    },
+    {
+      "name": "AI Policy Monitor",
+      "status": "ok",
+      "count": 10,
+      "note": ""
+    },
+    {
+      "name": "Open Source AI Monitor",
+      "status": "ok",
+      "count": 8,
+      "note": ""
+    },
+    {
+      "name": "China AI · Kimi & Qwen",
+      "status": "ok",
+      "count": 10,
+      "note": ""
+    },
+    {
+      "name": "China AI · Tencent & ByteDance",
+      "status": "ok",
+      "count": 10,
+      "note": ""
+    },
+    {
+      "name": "Frontier Lab Monitor",
+      "status": "ok",
+      "count": 9,
+      "note": ""
+    },
+    {
+      "name": "China AI · DeepSeek & Zhipu",
+      "status": "ok",
+      "count": 10,
+      "note": ""
+    },
+    {
+      "name": "Anthropic",
+      "status": "ok",
+      "count": 8,
+      "note": ""
+    }
   ],
   "items": [
     {
-      "id": "openai-hf-security-20260722",
+      "id": "7ca2d64e7c8b0451",
       "category": "frontier",
-      "title": "OpenAI and Hugging Face respond to a model-evaluation security incident",
-      "summary": "OpenAI and Hugging Face disclosed a security incident involving a cyber-capable AI agent during model evaluation. Their joint update explains the incident, the containment work and how advanced cyber capabilities will be evaluated more safely.",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
-      "published_at": "2026-07-22T08:00:00Z",
-      "tags": ["OpenAI", "Hugging Face", "Cyber Safety"],
-      "importance": 104
-    },
-    {
-      "id": "bace-gecco-2026",
-      "category": "research",
-      "title": "BACE: LLM-based Code Generation through Bayesian Anchored Co-Evolution",
-      "summary": "BACE treats generated code and tests as co-evolving populations instead of accepting synthetic tests as ground truth. Bayesian belief updates model tests as noisy sensors, while public examples anchor the search and reduce self-validating drift. The authors report strong results on LiveCodeBench v6 across proprietary and open-weight models.",
-      "source": "OpenAlex · arXiv",
-      "url": "https://arxiv.org/abs/2603.28653",
-      "published_at": "2026-07-10T00:00:00Z",
-      "tags": ["Code Generation", "Bayesian Methods", "LLM Agents"],
-      "authors": ["Kaushitha Silva", "Srinath Perera"],
-      "venue": "GECCO 2026",
-      "importance": 101
-    },
-    {
-      "id": "rhb-icml-2026",
-      "category": "research",
-      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
-      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
-      "source": "OpenReview · arXiv",
-      "url": "https://arxiv.org/abs/2605.02964",
-      "published_at": "2026-06-24T00:00:00Z",
-      "tags": ["Reward Hacking", "Agent Safety", "Evaluation"],
-      "authors": ["Kunvar Thaman"],
-      "venue": "ICML 2026",
+      "title": "Introducing Agent Skills | Claude by Anthropic",
+      "summary": "Claude can now use Skills to improve how it performs specific tasks. Skills are folders that include instructions, scripts, and resources that Claude can load when needed. Claude will only access a skill when it's relevant to the task at hand.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/skills",
+      "published_at": "2026-07-22T19:42:11Z",
+      "tags": [
+        "Anthropic",
+        "Official"
+      ],
       "importance": 100
     },
     {
-      "id": "world-labs-series-2026",
-      "category": "startups",
-      "title": "Fei-Fei Li's World Labs raises $1 billion for spatial intelligence",
-      "summary": "World Labs raised a major round to advance foundation models that understand and generate 3D environments. The company, co-founded by Stanford professor Fei-Fei Li, positions spatial intelligence as infrastructure for robotics, immersive media, design and simulation.",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/business/ai-pioneer-fei-fei-lis-world-labs-raises-1-billion-funding-2026-02-18/",
-      "published_at": "2026-02-18T10:00:00Z",
-      "tags": ["Fei-Fei Li", "World Models", "Spatial AI"],
-      "importance": 96
+      "id": "22ade4c9f55c7c9f",
+      "category": "frontier",
+      "title": "The Anthropic Economic Index connector",
+      "summary": "We're launching the Anthropic Economic Index connector for Claude, which lets anyone explore the data directly.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/anthropic-economic-index-connector",
+      "published_at": "2026-07-22T17:35:48Z",
+      "tags": [
+        "Anthropic",
+        "Official"
+      ],
+      "importance": 100
     },
     {
-      "id": "eu-ai-transparency-guidelines-2026",
-      "category": "policy",
-      "title": "EU publishes guidance for AI-generated content transparency",
-      "summary": "The European Commission issued practical guidance for Article 50 of the AI Act. It clarifies when users must be told they are interacting with AI and how providers should mark machine-generated or manipulated content before the obligations begin applying on 2 August 2026.",
-      "source": "European Commission",
-      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems",
-      "published_at": "2026-07-20T09:00:00Z",
-      "tags": ["EU AI Act", "Transparency", "Synthetic Media"],
-      "importance": 94
+      "id": "9d54fbf085cce28b",
+      "category": "frontier",
+      "title": "Supporting ambitious external research through the Anthropic Economic Futures Research Fund",
+      "summary": "We’re committing $200 million to the Anthropic Economic Futures Research Fund to support ambitious external research.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/economic-futures-research-fund-agenda",
+      "published_at": "2026-07-22T17:35:00Z",
+      "tags": [
+        "Anthropic",
+        "Official"
+      ],
+      "importance": 100
     },
     {
-      "id": "amd-anthropic-20260722",
+      "id": "8303b6755e541fe0",
+      "category": "frontier",
+      "title": "Accelerating the frontiers of scientific discovery: Google’s $40M commitment to the Genesis Mission",
+      "summary": "Google commits $40M in AI tokens and credits for the Genesis Mission",
+      "source": "Google DeepMind",
+      "url": "https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission/",
+      "published_at": "2026-07-22T13:38:54Z",
+      "tags": [
+        "DeepMind",
+        "Official"
+      ],
+      "importance": 100
+    },
+    {
+      "id": "f3b5f03f4da5f104",
+      "category": "frontier",
+      "title": "Building AI infrastructure with the Effingham County community",
+      "summary": "OpenAI announces Project Camellia in Effingham County, Georgia, with commitments to responsible energy, community investment, jobs, and access to Codex.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community",
+      "published_at": "2026-07-22T13:00:00Z",
+      "tags": [
+        "OpenAI",
+        "Official"
+      ],
+      "importance": 100
+    },
+    {
+      "id": "37fbe49ee08bd186",
+      "category": "frontier",
+      "title": "Advancing the next era of national science",
+      "summary": "OpenAI outlines its commitment to advancing American science working with the U.S. Department of Energy and national labs to use frontier AI to accelerate discovery.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/advancing-the-next-era-of-national-science",
+      "published_at": "2026-07-22T12:00:00Z",
+      "tags": [
+        "OpenAI",
+        "Official"
+      ],
+      "importance": 100
+    },
+    {
+      "id": "879c68fd8820dd3b",
+      "category": "frontier",
+      "title": "Donating another $20 million to Public First Action",
+      "summary": "Anthropic is contributing an additional $20 million to Public First Action, bringing our total support to $40 million.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/donation-public-first-action",
+      "published_at": "2026-07-22T10:14:58Z",
+      "tags": [
+        "Anthropic",
+        "Official"
+      ],
+      "importance": 100
+    },
+    {
+      "id": "8e9e7d0011d935fe",
+      "category": "frontier",
+      "title": "Introducing OpenAI Presence",
+      "summary": "Introducing OpenAI Presence, a proven enterprise AI agent platform that helps organizations deploy trusted voice and chat agents for customer and internal workflows.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/introducing-openai-presence",
+      "published_at": "2026-07-22T05:30:00Z",
+      "tags": [
+        "OpenAI",
+        "Official"
+      ],
+      "importance": 100
+    },
+    {
+      "id": "45488869f5bd5216",
+      "category": "frontier",
+      "title": "Introducing Claude Opus 4.8",
+      "summary": "Our latest model, Claude Opus 4.8, is an upgrade to our Opus class of models, with stronger performance across coding, agentic tasks, and professional work, and the consistency to handle long-running work.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/claude-opus-4-8",
+      "published_at": "2026-07-22T01:28:45Z",
+      "tags": [
+        "Anthropic",
+        "Official"
+      ],
+      "importance": 100
+    },
+    {
+      "id": "0b1cb54a4c12c89a",
+      "category": "frontier",
+      "title": "Introducing Claude Opus 4.5",
+      "summary": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/claude-opus-4-5",
+      "published_at": "2026-07-22T01:28:08Z",
+      "tags": [
+        "Anthropic",
+        "Official"
+      ],
+      "importance": 100
+    },
+    {
+      "id": "e09e1db1eb1d9c4b",
+      "category": "frontier",
+      "title": "Introducing Claude Opus 4.7",
+      "summary": "Our latest model, Claude Opus 4.7, is now generally available. Opus 4.7 is a notable improvement on Opus 4.6 in advanced software engineering, with particular gains on the most difficult tasks.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/claude-opus-4-7",
+      "published_at": "2026-07-22T01:26:31Z",
+      "tags": [
+        "Anthropic",
+        "Official"
+      ],
+      "importance": 100
+    },
+    {
+      "id": "f083363c7faab016",
+      "category": "frontier",
+      "title": "Introducing Claude Sonnet 5",
+      "summary": "Our most agentic Sonnet yet, with top-tier intelligence for coding and everyday professional work.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/claude-sonnet-5",
+      "published_at": "2026-07-22T01:20:28Z",
+      "tags": [
+        "Anthropic",
+        "Official"
+      ],
+      "importance": 100
+    },
+    {
+      "id": "c999e7f74d0a529e",
+      "category": "frontier",
+      "title": "Introducing the ChatGPT for small business program",
+      "summary": "OpenAI launches the ChatGPT for Small Businesses program, helping entrepreneurs build AI skills, automate work, and grow with ChatGPT Work.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/introducing-chatgpt-small-business-program",
+      "published_at": "2026-07-21T17:00:00Z",
+      "tags": [
+        "OpenAI",
+        "Official"
+      ],
+      "importance": 100
+    },
+    {
+      "id": "10245400c8eeedaf",
+      "category": "frontier",
+      "title": "Introducing Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber",
+      "summary": "We’re introducing new Gemini models, including Gemini 3.6 Flash, 3.5 Flash-Lite and 3.5 Flash Cyber.",
+      "source": "Google DeepMind",
+      "url": "https://deepmind.google/blog/introducing-gemini-36-flash-35-flash-lite-and-35-flash-cyber/",
+      "published_at": "2026-07-21T15:16:30Z",
+      "tags": [
+        "DeepMind",
+        "Official"
+      ],
+      "importance": 100
+    },
+    {
+      "id": "e467e0114144be88",
+      "category": "frontier",
+      "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
+      "summary": "OpenAI and Hugging Face share early findings from a security incident during AI model evaluation, highlighting advanced cyber capabilities and lessons for defenders.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
+      "published_at": "2026-07-21T07:00:00Z",
+      "tags": [
+        "OpenAI",
+        "Official"
+      ],
+      "importance": 100
+    },
+    {
+      "id": "63f237e2125e1d65",
+      "category": "frontier",
+      "title": "David Vélez and Robin Vince join the boards of the OpenAI Foundation and OpenAI Group PBC",
+      "summary": "David Vélez and Robin Vince join the boards of the OpenAI Foundation and OpenAI Group PBC, bringing global leadership in finance, technology, and governance.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/david-velez-robin-vince-join-openai-boards",
+      "published_at": "2026-07-21T00:00:00Z",
+      "tags": [
+        "OpenAI",
+        "Official"
+      ],
+      "importance": 100
+    },
+    {
+      "id": "e08de14b3d971dc3",
       "category": "bigtech",
-      "title": "AMD and Anthropic sign a major chip and investment agreement",
-      "summary": "The reported agreement links frontier-model demand with AMD's accelerator roadmap and includes an investment component, adding another large-scale compute partnership to the increasingly competitive AI infrastructure market.",
-      "source": "The Wall Street Journal",
-      "url": "https://www.wsj.com/tech/ai/amd-and-anthropic-sign-major-chips-and-investment-deal-4adfdc45",
-      "published_at": "2026-07-22T11:00:00Z",
-      "tags": ["Anthropic", "AMD", "AI Chips"],
+      "title": "3 Google updates from Galaxy Unpacked 2026",
+      "summary": "Gentle Monster glasses, Warby Parker glasses, a prompt asking for the history behind a pictured building, and a prompt asking to book a table at a pictured restaurant",
+      "source": "Google AI",
+      "url": "https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/",
+      "published_at": "2026-07-22T13:00:00Z",
+      "tags": [
+        "Google",
+        "Official"
+      ],
       "importance": 93
     },
     {
-      "id": "glow-stealth-20260722",
-      "category": "startups",
-      "title": "Glow emerges from stealth at a $1.2B valuation",
-      "summary": "Founded by former Meta and Snowflake executives, Glow is building endpoint security for workplaces reshaped by AI agents and new automation patterns. Its launch highlights cybersecurity as an active vertical for newly funded AI-native companies.",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/07/22/glow-emerges-from-stealth-at-1-2b-valuation-to-challenge-endpoint-security-in-the-ai-era/",
-      "published_at": "2026-07-22T10:00:00Z",
-      "tags": ["Cybersecurity", "Enterprise AI", "Funding"],
-      "importance": 91
+      "id": "e5635d9cad32670e",
+      "category": "research",
+      "title": "Effect of Mirrored Orthogonal Sampling for CMA-ES on Multimodal Problems",
+      "summary": "CMA-ES is a powerful method for continuous black-box optimization, in which search is performed by iteratively adapting a multivariate Gaussian distribution. To further improve its performance, mirrored orthogonal sampling (MOS) has been proposed as an advanced sampling technique. In this study, we show that CMA-ES with MOS can suffer from performance degradation on multimodal problems. We identify cumulative step-size adaptation (CSA), the standard step-size adaptation mechanism of CMA-ES, as a major source of this issue. We also confirm that existing bias-correction methods for CSA are insufficient to fully resolve this problem on multimodal landscapes. To address this…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3795095.3805082",
+      "published_at": "2026-07-10T00:00:00Z",
+      "tags": [
+        "Metaheuristic Optimization Algorithms Research",
+        "Sampling (signal processing)",
+        "Adaptation (eye)",
+        "Gaussian"
+      ],
+      "importance": 93,
+      "authors": [
+        "Kaito Nakatani",
+        "Masahiro Nomura",
+        "Isao Ono"
+      ],
+      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference",
+      "citations": 0
     },
     {
-      "id": "ami-labs-2026",
-      "category": "startups",
-      "title": "Yann LeCun's AMI raises $1B to build world-model AI",
-      "summary": "Advanced Machine Intelligence is pursuing systems with persistent memory, planning and an understanding of the physical world rather than a language-only architecture. The startup plans to work with industrial partners in manufacturing, biomedicine and robotics.",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/yann-lecun-raises-dollar1-billion-to-build-ai-that-understands-the-physical-world",
-      "published_at": "2026-03-10T09:00:00Z",
-      "tags": ["Yann LeCun", "World Models", "Physical AI"],
-      "importance": 89
+      "id": "50aeca60ce8dca40",
+      "category": "research",
+      "title": "Investigating Memetic Scheduling Strategies for Distributed Neuroevolution",
+      "summary": "Asynchronous evolutionary algorithms (AEAs) accelerate neuroevolution but are affected by evaluation-time bias, where networks that train quickly re-enter the population sooner and disproportionately influence evolutionary outcomes. In this work, we investigate memetic scheduling strategies that dynamically determine how much backpropagation should be done by generated genomes over the course of an asynchronous neuroevolution algorithm to see if this can mitigate evaluation-time bias under a strict 1-hour wall-clock budget per run. We compare constant, randomized, and exponentially scaled memetic backpropagation scheduling strategies across multiple time-series…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3795095.3805165",
+      "published_at": "2026-07-10T00:00:00Z",
+      "tags": [
+        "Evolutionary Algorithms and Applications",
+        "Memetic algorithm",
+        "Backpropagation",
+        "Neuroevolution"
+      ],
+      "importance": 93,
+      "authors": [
+        "Diana Velychko",
+        "Travis Desell"
+      ],
+      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference",
+      "citations": 0
     },
     {
-      "id": "physical-ai-startup-wave-2026",
-      "category": "startups",
-      "title": "AI founders pivot from chatbots toward physical-world systems",
-      "summary": "A new group of academic founders is building renderers, simulators and planners that learn space, time and physical interaction. Companies including World Labs, Overworld, Causal Labs and Extropic illustrate how startup activity is spreading into robotics, simulation and specialized hardware.",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/9bab5a3febad9832f55f8ada33de57b4",
-      "published_at": "2026-06-24T08:00:00Z",
-      "tags": ["Academic Founders", "Robotics", "Simulation"],
-      "importance": 86
+      "id": "087be68ddd1e7168",
+      "category": "research",
+      "title": "Asynchronous Neuro-Evolutionary Symbolic Regression with Maturity-Based Replacement",
+      "summary": "We consider a neuro-evolutionary symbolic regression, an approach in which mathematical formulas are internally represented by feedforward neural networks. Gradient-free global exploration of the network topology space is combined with gradient-based parameter learning. From the perspective of evolutionary algorithms, this approach has a potential weakness: newly generated networks produced by genetic operators usually require intensive parameter tuning. If this optimization has not yet converged, such networks may be prematurely discarded due to poor performance, thereby losing the opportunity to contribute their true potential to the evolutionary process. Such a waste…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3795095.3805164",
+      "published_at": "2026-07-10T00:00:00Z",
+      "tags": [
+        "Evolutionary Algorithms and Applications",
+        "Network topology",
+        "Symbolic regression",
+        "Asynchronous communication"
+      ],
+      "importance": 93,
+      "authors": [
+        "Jiřı́ Kubalı́k",
+        "Naďa Fučelová",
+        "Robert Babuška"
+      ],
+      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference",
+      "citations": 0
     },
     {
-      "id": "north-mini-code-2026",
-      "category": "opensource",
-      "title": "Cohere releases North Mini Code for agentic software engineering",
-      "summary": "North Mini Code is a 30B-parameter mixture-of-experts model with 3B active parameters, released under Apache 2.0. It targets terminal-based agents, code generation and longer software-engineering workflows while remaining deployable as an open model.",
-      "source": "Cohere Labs · Hugging Face",
-      "url": "https://huggingface.co/blog/CohereLabs/introducing-north-mini-code",
-      "published_at": "2026-06-09T09:00:00Z",
-      "tags": ["Open Weights", "Coding Model", "Apache 2.0"],
-      "importance": 84
+      "id": "750140572447f701",
+      "category": "research",
+      "title": "MixDiBB: Distributed Black-Box Optimization for Mixed-Parameter Search Spaces",
+      "summary": "Many real-world black-box optimization problems involve a mix of continuous, integer, and categorical parameters, where gradients are unavailable and gradient-based methods are inapplicable. An alternative can be found within the family of Black-Box Optimization (BBO) methods, which includes broadly adopted approaches such as Genetic Algorithms and Evolution Strategies. The most successful implementations maintain full covariance information between parameters, yielding high sample-efficiency at the cost of quadratic performance, which restricts their applicability to low-dimensional applications. This paper presents Mixed-Parameter DiBB (MixDiBB), a highly parallelizable…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3795095.3805118",
+      "published_at": "2026-07-10T00:00:00Z",
+      "tags": [
+        "Metaheuristic Optimization Algorithms Research",
+        "Parallelizable manifold",
+        "Optimization problem",
+        "Ideal (ethics)"
+      ],
+      "importance": 93,
+      "authors": [
+        "Luca Rolshoven",
+        "Matthias Stürmer",
+        "Giuseppe Cuccu"
+      ],
+      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference",
+      "citations": 0
     },
     {
-      "id": "hf-foundry-compute-2026",
+      "id": "3a364e19fcc23f30",
+      "category": "research",
+      "title": "Surrogate-Assisted Evolutionary Multi-Agent Reinforcement Learning with Adaptive Fitness Evaluation",
+      "summary": "Deep Multi-Agent Reinforcement Learning (MARL) excels in co-operative tasks but often struggles with local optima in high - dimensional joint action spaces. In contrast, Evolutionary Algorithms (EAs) offer robust global exploration capabilities. Although hybrid approaches seek to combine the strengths of both paradigms, they typically face a critical bottleneck: the prohibitive sample cost of evaluating large populations via environment rollouts. To address this challenge, we propose Surrogate-assisted Evolutionary Multi-Agent Reinforcement Learning (SEMARL), a unified framework that synergizes gradient-based refinement with surrogate-assisted evolutionary search. SEMARL…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3795095.3805146",
+      "published_at": "2026-07-10T00:00:00Z",
+      "tags": [
+        "Reinforcement Learning in Robotics",
+        "Reinforcement learning",
+        "Leverage (statistics)",
+        "Evolutionary algorithm"
+      ],
+      "importance": 93,
+      "authors": [
+        "Cong Yu",
+        "Yuxing Wang",
+        "Xinyang Li",
+        "Zaihui Yang",
+        "Haoyu Wang"
+      ],
+      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference",
+      "citations": 0
+    },
+    {
+      "id": "3326dd9d042828d8",
+      "category": "research",
+      "title": "LsmGrid: A Data-Aware Neuroevolution Framework for Designing Minimal Liquid State Machines",
+      "summary": "Liquid State Machines (LSM) are spiking recurrent neural networks inspired by the dynamics of the human brain. By encoding information as discrete spikes, they enable low-power and real-time data processing at the edge. Despite the benefits of this computational model, the design of efficient LSM still lacks a widely accepted methodological foundation. Existing approaches often rely on arbitrary parameter tuning and large reservoir sizes, which are computationally costly and demand prior domain-specific knowledge. In this work, we introduce a systematic methodology for simplifying LSM design while substantially reducing the number of required neurons and synapses. This…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3795095.3805051",
+      "published_at": "2026-07-10T00:00:00Z",
+      "tags": [
+        "Neural Networks and Reservoir Computing",
+        "Neuroevolution",
+        "Artificial neural network",
+        "Encoding (memory)"
+      ],
+      "importance": 93,
+      "authors": [
+        "Andrés Ignacio Romo",
+        "A. Otero",
+        "Jose M. Lanza-Gutiérrez"
+      ],
+      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference",
+      "citations": 0
+    },
+    {
+      "id": "0c5a7c5563b52790",
+      "category": "research",
+      "title": "Convergence Analysis of Evolution Strategies for Mixed-Integer Optimization",
+      "summary": "Mixed-integer extensions of evolution strategies (ES) that discretize selected coordinates of sampled continuous vectors often impose a lower bound on the standard deviation of integer variables to prevent premature convergence. While these methods show promising empirical results, this handling can slow the convergence of continuous variables, and its impact has lacked a clear theoretical account. In this paper, we provide a convergence analysis of evolution strategies for mixed-integer optimization, inspired by the drift analysis of the (1+1)-ES in the continuous domain. Specifically, we consider two (1+1)-ES variants for mixed-integer domains: (1+1)-LB-ES, which…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3795095.3805122",
+      "published_at": "2026-07-10T00:00:00Z",
+      "tags": [
+        "Metaheuristic Optimization Algorithms Research",
+        "Convergence (economics)",
+        "Integer (computer science)",
+        "Benchmark (surveying)"
+      ],
+      "importance": 93,
+      "authors": [
+        "Ryoki Hamano",
+        "Kento Uchida",
+        "Shinichi Shirakawa"
+      ],
+      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference",
+      "citations": 0
+    },
+    {
+      "id": "49dd9b4ed2f92aba",
+      "category": "research",
+      "title": "BACE: LLM-based Code Generation through Bayesian Anchored Co-Evolution of Code and Test Populations",
+      "summary": "Large Language Models (LLMs) have demonstrated impressive capabilities in code generation. While an interactive feedback loop can improve performance, writing effective tests is a non-trivial task. Early multi-agent frameworks, such as AgentCoder, automated this process but relied on generated tests as absolute ground truth. This approach is fragile: incorrect code frequently passes faulty or trivial tests, while valid solutions are often degraded to satisfy incorrect assertions. Addressing this limitation, newer methods have largely abandoned test generation in favor of planning and reasoning based on examples. We argue, however, that generated tests remain a valuable…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3795095.3805085",
+      "published_at": "2026-07-10T00:00:00Z",
+      "tags": [
+        "Topic Modeling",
+        "Code (set theory)",
+        "Bayesian probability",
+        "Process (computing)"
+      ],
+      "importance": 93,
+      "authors": [
+        "Kaushitha Silva",
+        "Srinath Perera"
+      ],
+      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference",
+      "citations": 0
+    },
+    {
+      "id": "11a13df93dbf033c",
+      "category": "research",
+      "title": "NEAT-DNFs: A NeuroEvolutionary Framework for Evolving Dynamic Neural Field Architectures",
+      "summary": "Dynamic Neural Fields (DNFs) offer a biologically grounded framework for modelling continuous-time neural dynamics underlying a wide range of cognitive and sensorimotor functions. Despite their expressive power, DNF architectures are typically designed and tuned manually, as their nonlinear dynamics and kernel-based interactions make systematic design and parameterisation difficult. As a result, constructing functional DNF models requires expert knowledge and iterative trial-and-error. We introduce NEAT-DNFs, a neuroevolutionary framework that extends NeuroEvolution of Augmenting Topologies (NEAT) to the automated synthesis of DNF architectures. In NEAT-DNFs, neural…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3795095.3805169",
+      "published_at": "2026-07-10T00:00:00Z",
+      "tags": [
+        "Neural Networks and Reservoir Computing",
+        "Neuroevolution",
+        "Field (mathematics)",
+        "Artificial neural network"
+      ],
+      "importance": 93,
+      "authors": [
+        "João Cunha",
+        "Wolfram Erlhagen",
+        "Raymond H. Cuijpers",
+        "Estela Bicho"
+      ],
+      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference",
+      "citations": 0
+    },
+    {
+      "id": "e4d22e53bc17fae5",
+      "category": "research",
+      "title": "Tournament Informed Adversarial Quality Diversity",
+      "summary": "Quality Diversity (QD) is a branch of evolutionary computation that seeks high-quality and behaviorally diverse solutions to a problem. While adversarial problems are common, classical QD cannot be easily applied to them, as both fitness and behavior depend on the opposing solutions. Recently, Generational Adversarial MAP-Elites (GAME) has been proposed to coevolve both sides of an adversarial problem by alternating the execution of a multi-task QD algorithm against previous elites, called tasks. The original algorithm selects new tasks based on a behavioral criterion, which may lead to undesired dynamics due to inter-side dependencies. In addition, comparing sets of…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3795095.3805154",
+      "published_at": "2026-07-10T00:00:00Z",
+      "tags": [
+        "Artificial Intelligence in Games",
+        "Adversarial system",
+        "Quality (philosophy)",
+        "Task (project management)"
+      ],
+      "importance": 93,
+      "authors": [
+        "Timothée Anne",
+        "Noah Syrkis",
+        "Meriem Elhosni",
+        "Florian Turati",
+        "Alexandre Manai"
+      ],
+      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference",
+      "citations": 0
+    },
+    {
+      "id": "ff81b9c211a356a5",
+      "category": "research",
+      "title": "Evaluation of Element-wise Effectiveness Estimation for Augmented Lagrangian CMA-ES",
+      "summary": "The augmented Lagrangian covariance matrix adaptation evolution strategy (AL-CMA-ES) is an efficient optimization method for constrained continuous black-box optimization problems, which integrates the Augmented Lagrangian method into CMA-ES. AL-CMA-ES incorporates penalty terms for the constraints into the objective function value and determines the ranking of solutions based on their evaluation value with penalties. AL-CMA-ES also adaptively tunes the penalty coefficients to balance the improvement of the objective and the constraint satisfaction. However, when multiple constraints are imposed, the coefficient adaptation is often delayed, which requires a fast movement…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3795095.3805126",
+      "published_at": "2026-07-10T00:00:00Z",
+      "tags": [
+        "Metaheuristic Optimization Algorithms Research",
+        "Augmented Lagrangian method",
+        "Penalty method",
+        "Constraint (computer-aided design)"
+      ],
+      "importance": 93,
+      "authors": [
+        "H. Nakagawa",
+        "Kento Uchida",
+        "Shinichi Shirakawa"
+      ],
+      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference",
+      "citations": 0
+    },
+    {
+      "id": "b564efb24f09798a",
+      "category": "research",
+      "title": "Phase-Alternation and Tree-Initialization to Facilitate Interpretable Rule-based Machine Learning",
+      "summary": "Interpretable machine learning is important for scientific, biomedical, and other high-stakes domains where transparency, trust, and human understanding of models are required. Recently, an evolutionary rule-based machine learning algorithm called HEROS was proposed, which separated rule from rule-set discovery each with distinct multi-objective optimization strategies yielding a two-phase, noise agnostic framework that found accurate, highly compact, and interpretable solutions on a diverse set of challenging benchmarks without requiring hyperparameter optimizations. However, HEROS is currently limited by its strictly sequential two-phase design which requires committing…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3795095.3805127",
+      "published_at": "2026-07-10T00:00:00Z",
+      "tags": [
+        "Explainable Artificial Intelligence (XAI)",
+        "Initialization",
+        "Flexibility (engineering)",
+        "Set (abstract data type)"
+      ],
+      "importance": 93,
+      "authors": [
+        "Gabriel Lipschutz-Villa",
+        "Harsh Bandhey",
+        "Khoi Dinh",
+        "Michael Heider",
+        "Malek Kamoun"
+      ],
+      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference",
+      "citations": 0
+    },
+    {
+      "id": "7582fd0f90eef5c2",
+      "category": "research",
+      "title": "ROIDS: Robust Outlier-Aware Informed Down-Sampling",
+      "summary": "Informed down-sampling (IDS) is known to improve performance in symbolic regression when combined with various selection strategies, especially tournament selection. However, recent work found that IDS's gains are not consistent across all problems. Our analysis reveals that IDS performance is worse for problems containing outliers. IDS systematically favors including outliers in subsets which pushes GP towards finding solutions that overfit to outliers. To address this, we introduce ROIDS (Robust Outlier-Aware Informed Down-Sampling), which excludes potential outliers from the sampling process of IDS. With ROIDS it is possible to keep the advantages of IDS without…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3795095.3805130",
+      "published_at": "2026-07-10T00:00:00Z",
+      "tags": [
+        "Machine Learning and Data Classification",
+        "Overfitting",
+        "Benchmark (surveying)",
+        "Outlier"
+      ],
+      "importance": 93,
+      "authors": [
+        "Alina Geiger",
+        "Martin Briesch",
+        "Dominik Sobania",
+        "Franz Rothlauf"
+      ],
+      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference",
+      "citations": 0
+    },
+    {
+      "id": "d0eaeadc922acd17",
+      "category": "research",
+      "title": "Gray-Box Optimization and the Vertex Coloring Problem",
+      "summary": "Gray-box optimization is an approach for making some problem-specific information available to the algorithm while still relying on fitness information as the main guide to an optimum. This approach was shown to be beneficial in various combinatorial optimization tasks and neatly captures the continuum between fully black-box algorithms and tailored algorithms.",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3795095.3805057",
+      "published_at": "2026-07-10T00:00:00Z",
+      "tags": [
+        "Metaheuristic Optimization Algorithms Research",
+        "Optimization problem",
+        "Vertex (graph theory)",
+        "Combinatorial optimization"
+      ],
+      "importance": 93,
+      "authors": [
+        "Johanna Gasse",
+        "Antonia Heinen",
+        "Hendrik Higl",
+        "Timo Kötzing"
+      ],
+      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference",
+      "citations": 0
+    },
+    {
+      "id": "21b28781287c242e",
+      "category": "research",
+      "title": "Analyzing search behavior of population-based optimization algorithms using graph neural networks",
+      "summary": "Optimization algorithms are traditionally represented by their descriptions, source code, and comparative results in benchmark environments. In recent years, however, it has become more popular to extract numerical features describing the behavior of algorithms during their operation. Such metrics can distinguish between algorithms, assess their novelty, or assist in selecting the best algorithm for a given problem. Unlike existing trajectory-based approaches that use partial trajectory information to derive hand-crafted behavioral features, we propose to represent complete execution trajectories as graphs and learn their embeddings using graph neural networks. In this…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3795095.3805195",
+      "published_at": "2026-07-10T00:00:00Z",
+      "tags": [
+        "Metaheuristic Optimization Algorithms Research",
+        "Benchmark (surveying)",
+        "Embedding",
+        "Graph"
+      ],
+      "importance": 93,
+      "authors": [
+        "Bartłomiej Walczak",
+        "Hubert Guzowski",
+        "Wojciech Achtelik",
+        "Maciej Smółka",
+        "Jacek Mańdziuk"
+      ],
+      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference",
+      "citations": 0
+    },
+    {
+      "id": "5d6c57444ebe2bd1",
+      "category": "research",
+      "title": "Anisotropic Random-Feature Surrogate-Assisted Evolutionary Algorithm for High-Dimensional Risk-Based Energy Management Optimization",
+      "summary": "In modern power systems, the day-ahead Energy Resource Management (ERM) problem, particularly under high penetration of Distributed Energy Resources (DERs), often becomes a high-dimensional challenge due to the uncertainties inherent in renewable generation, load consumption, and market prices. The complex, nested relationships between input control vectors and system outputs effectively transform these problems into black-box models, where only inputs and outputs are observable. This poses significant challenges for optimization algorithms, especially in terms of computational efficiency, under conditions of costly function evaluations and a limited number of…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3795095.3805187",
+      "published_at": "2026-07-10T00:00:00Z",
+      "tags": [
+        "Machine Learning and ELM",
+        "Evolutionary algorithm",
+        "Benchmark (surveying)",
+        "Multi-objective optimization"
+      ],
+      "importance": 93,
+      "authors": [
+        "Jiaming Hu",
+        "Chixin Xiao",
+        "Limei Liu",
+        "Maoxin He",
+        "Dechen Jiang"
+      ],
+      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference",
+      "citations": 0
+    },
+    {
+      "id": "e29b4db8887991c2",
+      "category": "research",
+      "title": "A Comparative Study of Model Selection Criteria for Symbolic Regression",
+      "summary": "Effective model selection is critical in symbolic regression (SR) to identify mathematical expressions that balance accuracy and complexity, and have low expected error on unseen data. Many modern implementations of genetic programming (GP) for SR generate a set of Pareto optimal candidate solutions, but reliable automatic selection of solutions that generalize well remains an open issue. Current literature offers various information-theoretic and Bayesian approaches, yet comprehensive comparisons of their performance across different data regimes are limited. This study presents a systematic empirical comparison of widely used selection criteria: the Akaike information…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3795095.3805157",
+      "published_at": "2026-07-10T00:00:00Z",
+      "tags": [
+        "Evolutionary Algorithms and Applications",
+        "Akaike information criterion",
+        "Bayesian information criterion",
+        "Model selection"
+      ],
+      "importance": 93,
+      "authors": [
+        "Ali Soltani",
+        "Gabriel Kronberger",
+        "Fabrício Olivetti de França",
+        "Mattia Billa",
+        "Alessandro Lucantonio"
+      ],
+      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference",
+      "citations": 0
+    },
+    {
+      "id": "06bd318cf9396101",
+      "category": "research",
+      "title": "Diversified Residual Symbolic Regression",
+      "summary": "Symbolic regression (SR) aims to discover explicit mathematical expressions that explain observed data and is widely used in domains where interpretability is essential. Because interpretability requires expressions to reflect meaningful regularities, SR is sensitive to observations that deviate from the dominant relationship. Such irregular observations, or outliers, are common in real-world data and can hinder SR from identifying underlying regularities. Robust regression mitigates this by downweighting observations with large residuals. However, deciding which observations should be treated as outliers is often ambiguous and depends on user interpretation and domain…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3795095.3805087",
+      "published_at": "2026-07-10T00:00:00Z",
+      "tags": [
+        "Explainable Artificial Intelligence (XAI)",
+        "Interpretability",
+        "Residual",
+        "Symbolic regression"
+      ],
+      "importance": 93,
+      "authors": [
+        "Koki Ikeda",
+        "Masahiro Nomura",
+        "Ryoki Hamano"
+      ],
+      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference",
+      "citations": 0
+    },
+    {
+      "id": "94bf9e65dda4ac9a",
+      "category": "research",
+      "title": "Particle Swarm Optimization with Population Dynamics - Artificial Splitting, Extinction, and Migration",
+      "summary": "Many Particle Swarm Optimization (PSO) variants often fail to approach the global optimum due to complex fitness landscapes and/or the structural rigidity of these variants. We developed a novel framework named PSO-SEM, centered on macro-evolutionary population management. PSO-SEM introduces three landscape-driven operators: Split (Topological Fission), Extinction (Density-driven Recycling), and Migration (Knowledge Transfer). These operators autonomously regulate the lifecycle of sub-swarms to intensify search in high-potential areas by identifying promising basins and recycling computational resources from stagnant regions. Experimental results show that PSO-SEM…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3795095.3805107",
+      "published_at": "2026-07-10T00:00:00Z",
+      "tags": [
+        "Metaheuristic Optimization Algorithms Research",
+        "Particle swarm optimization",
+        "Population",
+        "Swarm behaviour"
+      ],
+      "importance": 93,
+      "authors": [
+        "Yutong Zou",
+        "Wenjun Wang",
+        "Wei Pang"
+      ],
+      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference",
+      "citations": 0
+    },
+    {
+      "id": "0b0fc70e8bb90e53",
+      "category": "research",
+      "title": "Landscape-aware Automated Algorithm Design: An Efficient Framework for Real-world Optimization",
+      "summary": "The advent of Large Language Models (LLMs) has opened new frontiers in automated algorithm design, giving rise to numerous powerful methods. However, these approaches retain critical limitations: they require extensive evaluation of the target problem to guide the search process, making them impractical for real-world optimization tasks, where each evaluation consumes substantial computational resources. This research proposes an innovative and efficient framework that decouples algorithm discovery from high-cost evaluation. Our core innovation lies in combining a Genetic Programming (GP) function generator with an LLM-driven evolutionary algorithm designer. The…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3795095.3805094",
+      "published_at": "2026-07-10T00:00:00Z",
+      "tags": [
+        "Evolutionary Algorithms and Applications",
+        "Evolutionary algorithm",
+        "Generator (circuit theory)",
+        "Genetic algorithm"
+      ],
+      "importance": 93,
+      "authors": [
+        "Haoran Yin",
+        "Shuaiqun Pan",
+        "Zhao Wei",
+        "Jian Cheng Wong",
+        "Yew-Soon Ong"
+      ],
+      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference",
+      "citations": 0
+    },
+    {
+      "id": "84c90af149a91122",
       "category": "bigtech",
-      "title": "Hugging Face models arrive on Foundry Managed Compute",
-      "summary": "Microsoft and Hugging Face are offering a curated catalog of open-weight models with pre-staged weights, scanned runtimes and enterprise controls. The move reduces friction between community model discovery and governed production deployment on Azure.",
-      "source": "Microsoft · Hugging Face",
-      "url": "https://huggingface.co/blog/microsoft/foundry-managed-compute",
-      "published_at": "2026-07-07T09:00:00Z",
-      "tags": ["Azure", "Open Models", "Enterprise AI"],
-      "importance": 82
-    },
-    {
-      "id": "kimi-k3-open-weights-2026",
-      "category": "china",
-      "title": "月之暗面发布 Kimi K3，以超大开放权重模型押注 Agent 与编程",
-      "summary": "Kimi K3 采用 2.8 万亿参数的混合专家架构，面向长上下文、编程和知识型 Agent 任务，并开放模型权重。它把中国开放模型的竞争推向更大参数规模，同时也让推理成本、部署效率和真实任务收益成为后续观察重点。",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/china/chinas-moonshot-unveils-worlds-largest-open-ai-model-closing-us-rivals-2026-07-17/",
-      "published_at": "2026-07-17T09:00:00Z",
-      "tags": ["Kimi K3", "月之暗面", "开放权重"],
+      "title": "Connect more of your apps to Search",
+      "summary": "来自 Google AI 的最新更新。点击查看原始来源、完整内容与上下文。",
+      "source": "Google AI",
+      "url": "https://blog.google/products-and-platforms/products/search/connected-apps/",
+      "published_at": "2026-07-16T16:00:00Z",
+      "tags": [
+        "Google",
+        "Official"
+      ],
       "importance": 92
     },
     {
-      "id": "qwen38-max-2026",
-      "category": "china",
-      "title": "阿里发布 Qwen3.8 Max，继续强化编程与 Agent 能力",
-      "summary": "Qwen3.8 Max 将规模提升至约 2.4 万亿参数，重点面向编程平台和复杂 Agent 工作负载，并计划推进开放权重版本。Qwen 的看点不只是模型分数，还包括阿里云、百炼和开发者生态能否把能力快速转化为稳定调用量。",
-      "source": "The Wall Street Journal",
-      "url": "https://www.wsj.com/tech/ai/alibaba-says-new-ai-model-is-just-second-to-anthropics-fable-5-ba88a55b",
-      "published_at": "2026-07-20T08:00:00Z",
-      "tags": ["Qwen", "通义千问", "Coding Agent"],
-      "importance": 93
+      "id": "e1ffdc033601bc9f",
+      "category": "bigtech",
+      "title": "Create, edit and star in videos with two Google Vids updates",
+      "summary": "Text \"Gemini Omni and Personal Avatars in Google Vids\" surrounded by various images",
+      "source": "Google AI",
+      "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/",
+      "published_at": "2026-07-16T16:00:00Z",
+      "tags": [
+        "Google",
+        "Official"
+      ],
+      "importance": 92
     },
     {
-      "id": "tencent-hy3-yuanbao-agent-2026",
-      "category": "china",
-      "title": "腾讯发布混元 HY3，并把 Agent 能力接入元宝",
-      "summary": "腾讯正式发布混元 HY3，强调更强的 Agent 执行能力和更深入的产品集成；元宝同步加入 Agent 功能，用于拆解并完成更复杂的任务。这条路线的优势在于模型可直接进入社交、内容和办公产品，后续应关注跨应用执行的稳定性。",
-      "source": "Tencent",
-      "url": "https://www.tencent.com/zh-cn/articles/2202386.html",
-      "published_at": "2026-07-06T08:00:00Z",
-      "tags": ["腾讯元宝", "混元 HY3", "Agent"],
-      "importance": 90
-    },
-    {
-      "id": "zhipu-glm52-2026",
-      "category": "china",
-      "title": "智谱 GLM-5.2 聚焦长程编程 Agent 与百万上下文",
-      "summary": "智谱将 GLM-5.2 定位为面向编程和长程执行的开放模型，并提供最高百万级上下文能力。值得观察的是它能否把长上下文转化为稳定的代码仓库级任务完成率，以及 Z.ai 平台能否吸引更多海外开发者。",
-      "source": "Zhipu AI · Z.ai",
-      "url": "https://www.zhipuai.cn/en",
-      "published_at": "2026-06-18T08:00:00Z",
-      "tags": ["智谱", "GLM-5.2", "Long-horizon Agent"],
-      "importance": 88
-    },
-    {
-      "id": "deepseek-v4-2026",
-      "category": "china",
-      "title": "DeepSeek V4 回归，重点适配国产芯片与开放模型部署",
-      "summary": "DeepSeek V4 面向华为等国产 AI 芯片进行优化，并继续以开放模型和低成本部署作为竞争抓手。除了公司公布的能力指标，更关键的验证点是国产算力上的吞吐、工具调用稳定性，以及价格下降能否带来新的企业使用场景。",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/technology/chinas-deepseek-returns-with-new-model-year-after-viral-rise-2026-04-24/",
-      "published_at": "2026-04-24T08:00:00Z",
-      "tags": ["DeepSeek V4", "国产算力", "开放模型"],
+      "id": "f223bdb1b399909f",
+      "category": "bigtech",
+      "title": "Celebrating 25 years of visual search innovation",
+      "summary": "Google Images logo surrounded by illustrations of people searching for different images",
+      "source": "Google AI",
+      "url": "https://blog.google/products-and-platforms/products/search/google-images-25th-anniversary/",
+      "published_at": "2026-07-14T16:00:00Z",
+      "tags": [
+        "Google",
+        "Official"
+      ],
       "importance": 91
     },
     {
-      "id": "bytedance-seed21-2026",
-      "category": "china",
-      "title": "字节跳动发布 Seed2.1，把模型能力推向真实生产任务",
-      "summary": "Seed2.1 是字节跳动新一代 Agent 模型系列，目标是提升真实生产环境中的复杂任务完成能力。结合豆包的消费端入口与 Seed 的多模态研究，字节的关键变量是能否把模型能力快速转化为内容创作、办公和开发工具中的高频工作流。",
-      "source": "ByteDance Seed",
-      "url": "https://seed.bytedance.com/blog/seed2-1-officially-released-advancing-ai-productivity",
-      "published_at": "2026-06-23T08:00:00Z",
-      "tags": ["字节跳动", "Seed2.1", "豆包"],
+      "id": "5255044f68030819",
+      "category": "bigtech",
+      "title": "Verifying Rust cryptography in SymCrypt, from standards to code",
+      "summary": "Cryptographic code supports vital protections in modern computing systems. Learn how a new method helps verify code as developers write it while preserving speed and adaptability as it gets implemented and evolves. The post Verifying Rust cryptography in SymCrypt, from standards to code appeared first on Microsoft Research .",
+      "source": "Microsoft Research",
+      "url": "https://www.microsoft.com/en-us/research/blog/verifying-rust-cryptography-in-symcrypt-from-standards-to-code/",
+      "published_at": "2026-07-13T16:00:00Z",
+      "tags": [
+        "Microsoft",
+        "Research"
+      ],
+      "importance": 91
+    },
+    {
+      "id": "a1c868fc8723be2c",
+      "category": "bigtech",
+      "title": "Aurora 1.5: Extending open foundation models for weather and Earth-system applications",
+      "summary": "Aurora 1.5 adds 22 more variables, hourly temporal resolution, and probabilistic ensemble forecasting to the Aurora foundation model, making it more useful for real-world weather, climate, and energy applications. The post Aurora 1.5: Extending open foundation models for weather and Earth-system applications appeared first on Microsoft Research .",
+      "source": "Microsoft Research",
+      "url": "https://www.microsoft.com/en-us/research/blog/aurora-1-5-extending-open-foundation-models-for-weather-and-earth-system-applications/",
+      "published_at": "2026-07-09T16:46:22Z",
+      "tags": [
+        "Microsoft",
+        "Research"
+      ],
+      "importance": 90
+    },
+    {
+      "id": "a5b4c473bff32527",
+      "category": "bigtech",
+      "title": "Flint: A visualization language for the AI era",
+      "summary": "Short chart specifications are easy to write, but often produce uninspiring results. Flint is an open-source visualization language that offers a middle path, letting AI agents create expressive charts from compact, human-editable specifications. The post Flint: A visualization language for the AI era appeared first on Microsoft Research .",
+      "source": "Microsoft Research",
+      "url": "https://www.microsoft.com/en-us/research/blog/flint-a-visualization-language-for-the-ai-era/",
+      "published_at": "2026-07-08T16:00:00Z",
+      "tags": [
+        "Microsoft",
+        "Research"
+      ],
+      "importance": 90
+    },
+    {
+      "id": "7d71223c113e68d0",
+      "category": "bigtech",
+      "title": "NVIDIA Nemotron Achieves Benchmark-Leading Performance With LangChain Deep Agents Harness",
+      "summary": "NVIDIA Nemotron 3 Ultra is offering leading performance at lower cost than top closed models with the largest and most widely adopted AI agent orchestration platform. LangChain tuned its Deep Agents harness for NVIDIA Nemotron 3 Ultra, achieving the highest accuracy among open models, while completing more tasks at higher throughput and running at 10x […]",
+      "source": "NVIDIA AI",
+      "url": "https://blogs.nvidia.com/blog/nemotron-langchain-agents-open-stack/",
+      "published_at": "2026-07-08T15:00:27Z",
+      "tags": [
+        "NVIDIA",
+        "Infrastructure"
+      ],
+      "importance": 90
+    },
+    {
+      "id": "9cdf5541fc8a57e8",
+      "category": "bigtech",
+      "title": "Expanding Managed Agents in Gemini API: background tasks, remote MCP and more",
+      "summary": "Managed agents feature bundle launch",
+      "source": "Google AI",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/",
+      "published_at": "2026-07-07T08:54:00Z",
+      "tags": [
+        "Google",
+        "Official"
+      ],
+      "importance": 90
+    },
+    {
+      "id": "c3febea1386d07bd",
+      "category": "bigtech",
+      "title": "The latest AI news we announced in June 2026",
+      "summary": "来自 Google AI 的最新更新。点击查看原始来源、完整内容与上下文。",
+      "source": "Google AI",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/",
+      "published_at": "2026-07-01T18:15:00Z",
+      "tags": [
+        "Google",
+        "Official"
+      ],
       "importance": 89
     },
     {
-      "id": "eu-cyber-ai-plan-2026",
-      "category": "policy",
-      "title": "European Commission presents a cybersecurity and AI action plan",
-      "summary": "The plan connects responsible AI adoption with stronger cyber resilience. It focuses on using AI for defense while managing the security risks created by more capable models, automated attacks and AI-dependent infrastructure.",
-      "source": "European Commission",
-      "url": "https://digital-strategy.ec.europa.eu/en/library/eu-action-plan-cybersecurity-and-artificial-intelligence",
-      "published_at": "2026-07-07T08:00:00Z",
-      "tags": ["Cybersecurity", "EU Policy", "AI Safety"],
+      "id": "d2b892f9de4bfbe5",
+      "category": "bigtech",
+      "title": "New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.",
+      "summary": "Google, the New York Jobs CEO Council and Urban Assembly hosted an AI summit for 150 education and industry leaders.",
+      "source": "Google AI",
+      "url": "https://blog.google/products-and-platforms/products/education/nyc-ai-summit/",
+      "published_at": "2026-07-01T16:00:00Z",
+      "tags": [
+        "Google",
+        "Official"
+      ],
+      "importance": 89
+    },
+    {
+      "id": "921b87d225cf21e5",
+      "category": "bigtech",
+      "title": "SkillOpt: Agent skills as trainable parameters",
+      "summary": "AI agents often fail because their instructions, or skills, are manually modified with no guarantee of improvement. Learn how SkillOpt turns skill editing into a training process, making agent behavior more reliable without changing model weights. The post SkillOpt: Agent skills as trainable parameters appeared first on Microsoft Research .",
+      "source": "Microsoft Research",
+      "url": "https://www.microsoft.com/en-us/research/blog/skillopt-agent-skills-as-trainable-parameters/",
+      "published_at": "2026-06-30T16:50:02Z",
+      "tags": [
+        "Microsoft",
+        "Research"
+      ],
+      "importance": 89
+    },
+    {
+      "id": "8a78349636989d65",
+      "category": "opensource",
+      "title": "The State of Simulation for Physical AI: An Overview",
+      "summary": "来自 Hugging Face 的最新更新。点击查看原始来源、完整内容与上下文。",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/blog/nvidia/state-of-simulation-for-physical-ai",
+      "published_at": "2026-07-21T20:00:27Z",
+      "tags": [
+        "Hugging Face",
+        "Open Source"
+      ],
+      "importance": 88
+    },
+    {
+      "id": "e7fe6548d71d0526",
+      "category": "opensource",
+      "title": "Grabette: an open system to record robot-manipulation data",
+      "summary": "来自 Hugging Face 的最新更新。点击查看原始来源、完整内容与上下文。",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/blog/grabette",
+      "published_at": "2026-07-21T00:00:00Z",
+      "tags": [
+        "Hugging Face",
+        "Open Source"
+      ],
+      "importance": 88
+    },
+    {
+      "id": "fdb3848e9f8e2368",
+      "category": "china",
+      "title": "China’s Latest A.I. Breakthrough Threatens America’s Lead",
+      "summary": "China’s Latest A.I. Breakthrough Threatens America’s Lead The New York Times",
+      "source": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5UYkVrd05BamRNRHcyZ19xN1FyaklNdVBYUXlFcTQ4dGhjYWdrb0Z1LWxhdnV0VWVmOU9rNnVjQUpIZHQ5SmdCZDd2MDVNQk5rR2NSM2x4QkVhNVp2SVhJcF9jZGdmQjlJTnhTdmlOdGotbzZ0X3pFMTVwVQ?oc=5",
+      "published_at": "2026-07-17T19:13:57Z",
+      "tags": [
+        "Kimi",
+        "Qwen",
+        "China AI"
+      ],
+      "importance": 88
+    },
+    {
+      "id": "560c6cc81707617d",
+      "category": "china",
+      "title": "China's Moonshot unveils world's largest open AI model, closing in on US rivals",
+      "summary": "China's Moonshot unveils world's largest open AI model, closing in on US rivals Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOUFBidnJRbHRkSDh4WXNUVlBOY1VmZ3NCSlRhQzEwZWY3dGJfeXlMQ1FWN1FheElOWU0wdFBJZ2p0Y0VDSnd2RDlDSExSQ3lOb19UYkc4Q0d6UEtsQzN4TWg2LWtianhwbEgtZmR4OWs4QU9QbjM3RkJqNHI2TmgzRVRxcXhuRlE4ZHdlRFRvNlBvWUxYUkFQRmZ1Y3NaeWh1V0swM2NHaW5NcEg2UGdiOHFMMzN4bGMweVE?oc=5",
+      "published_at": "2026-07-17T09:20:36Z",
+      "tags": [
+        "Kimi",
+        "Qwen",
+        "China AI"
+      ],
+      "importance": 88
+    },
+    {
+      "id": "1e9111541ba4a64d",
+      "category": "china",
+      "title": "Chinese AI has leveled up, and brought renewed focus on the open weight model shift",
+      "summary": "Chinese AI has leveled up, and brought renewed focus on the open weight model shift CNBC",
+      "source": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQa2gxRHB2VXl2NEdXWHowb0QtcEFsanhlQk5zTEQzWE03cjd5QWluNjV0VWtWUi1Ia2JIOFVQODdhYWloYTdxR0xWOU5MSHBXazJkeEo4SW1Db2I2Ul9CMjRjeVBLLUVFWS1objBHNy1Rb2NYYTFQT0pKWlZja0tVMThCWlJ3SkFVY3N6VmJB0gGTAUFVX3lxTE1sd0lHVWVmRHpwZ1FtV3BGV1E0TGpLRzhuWE14QTZ6ZUJjblBEdXVFYnhtbnJYR3BCcHhPVFFUcmxOS1cxU0NmMnc4VkwydVpIZVZPWUVQdUo4aDhRc3lEaWh1N0JWcy1iZTdHZldtZm1RN0c4WTNYQlV3REJtZVhjZjBVd0tuTzhnTmNLS1lHRl90NA?oc=5",
+      "published_at": "2026-07-17T08:38:30Z",
+      "tags": [
+        "Kimi",
+        "Qwen",
+        "China AI"
+      ],
+      "importance": 88
+    },
+    {
+      "id": "fd1c769074f9c4ae",
+      "category": "bigtech",
+      "title": "Memora: A Harmonic Memory Representation Balancing Abstraction and Specificity",
+      "summary": "AI agents can't remember past conversations. They must constantly reload or retrieve context, which grows less efficient as tasks get longer and more complex. Memora solves this with a scalable memory system separating what’s stored from how it's retrieved. The post Memora: A Harmonic Memory Representation Balancing Abstraction and Specificity appeared first on Microsoft Research .",
+      "source": "Microsoft Research",
+      "url": "https://www.microsoft.com/en-us/research/blog/memora-a-harmonic-memory-representation-balancing-abstraction-and-specificity/",
+      "published_at": "2026-06-29T21:14:22Z",
+      "tags": [
+        "Microsoft",
+        "Research"
+      ],
+      "importance": 88
+    },
+    {
+      "id": "72f71e1c03e1729e",
+      "category": "bigtech",
+      "title": "Understanding the brain with AI-driven explanations and experiments",
+      "summary": "Researchers introduce generative causal testing, which translates black box models into clear hypotheses and verifies them in the scanner, revealing what specific brain regions respond to in language. The post Understanding the brain with AI-driven explanations and experiments appeared first on Microsoft Research .",
+      "source": "Microsoft Research",
+      "url": "https://www.microsoft.com/en-us/research/blog/understanding-the-brain-with-ai-driven-explanations-and-experiments/",
+      "published_at": "2026-06-25T16:00:00Z",
+      "tags": [
+        "Microsoft",
+        "Research"
+      ],
+      "importance": 88
+    },
+    {
+      "id": "d0eec51a702fc422",
+      "category": "startups",
+      "title": "The Anthropic-Physical Intelligence rumor roiling AI Twitter",
+      "summary": "The Anthropic-Physical Intelligence rumor roiling AI Twitter TechCrunch",
+      "source": "TechCrunch",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOLTFxVXJLb0pHbEh1cER6U1lybHBRWHpYaFZjY19RMUpmTGNRRTBBZ3M1TDAxclFMbEdnVERtUEpFaHRSVlY0djY3Tk1tYTA4a1RpUkFGaEh0LWNZVjh3VWQ4U2ZwZGFwX01QT3BkVVFmdUNja3NMNlBveXlwV1BMNGplTGJlanhBcFRlR2hnSG9PNFdYSUZQOS16VQ?oc=5",
+      "published_at": "2026-07-22T03:20:57Z",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "importance": 87
+    },
+    {
+      "id": "3fc933c92032368a",
+      "category": "opensource",
+      "title": "Newer Models, Same Advantage",
+      "summary": "来自 Hugging Face 的最新更新。点击查看原始来源、完整内容与上下文。",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/blog/Dharma-AI/newer-models-same-advantages",
+      "published_at": "2026-07-16T11:49:48Z",
+      "tags": [
+        "Hugging Face",
+        "Open Source"
+      ],
+      "importance": 87
+    },
+    {
+      "id": "093d757728ede1ad",
+      "category": "opensource",
+      "title": "Security incident disclosure — July 2026",
+      "summary": "来自 Hugging Face 的最新更新。点击查看原始来源、完整内容与上下文。",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/blog/security-incident-july-2026",
+      "published_at": "2026-07-16T00:00:00Z",
+      "tags": [
+        "Hugging Face",
+        "Open Source"
+      ],
+      "importance": 87
+    },
+    {
+      "id": "90e8471e22742621",
+      "category": "opensource",
+      "title": "What building Shippy taught us about building agents",
+      "summary": "来自 Hugging Face 的最新更新。点击查看原始来源、完整内容与上下文。",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/blog/allenai/shippy-tech-blog",
+      "published_at": "2026-07-15T17:29:41Z",
+      "tags": [
+        "Hugging Face",
+        "Open Source"
+      ],
+      "importance": 87
+    },
+    {
+      "id": "8e53a6ae752d264f",
+      "category": "opensource",
+      "title": "Model Routing Is Simple. Until It Isn’t.",
+      "summary": "来自 Hugging Face 的最新更新。点击查看原始来源、完整内容与上下文。",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/blog/ibm-research/model-routing-is-simple-until-it-isnt",
+      "published_at": "2026-07-15T17:27:01Z",
+      "tags": [
+        "Hugging Face",
+        "Open Source"
+      ],
+      "importance": 87
+    },
+    {
+      "id": "d82cae84e9d9b6e6",
+      "category": "opensource",
+      "title": "Welcome Inkling by Thinking Machines",
+      "summary": "来自 Hugging Face 的最新更新。点击查看原始来源、完整内容与上下文。",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/blog/thinkingmachines-inkling",
+      "published_at": "2026-07-15T00:00:00Z",
+      "tags": [
+        "Hugging Face",
+        "Open Source"
+      ],
+      "importance": 86
+    },
+    {
+      "id": "873ad7fd3d7e87f4",
+      "category": "china",
+      "title": "ByteDance, Alibaba Pull AI Companions as Beijing Tightens Rules",
+      "summary": "ByteDance, Alibaba Pull AI Companions as Beijing Tightens Rules Bloomberg.com",
+      "source": "Bloomberg.com",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQaVl2OGsxX0V2X245T0NnZ2JsT0YwRXJmYVhtcGpyQTNPVVp0QlF3eFdYcEFEdDhNMlF5TWd3V1FqNkZ1SlZoa3J2QktYTHp2ejFaMU80UlUxUEc4YTFQdlJ6UzhlNEtIYjFzaVdGcWJieTVRRXRzSGNicXBvRHdxN3llNWhBMDRfd0txMVdkZk5WTFdsc3BZVlZTZXVVRnRsMHIxX2gyaG9kQnBGSm5ZbnhxOA?oc=5",
+      "published_at": "2026-07-05T07:00:00Z",
+      "tags": [
+        "Tencent",
+        "ByteDance",
+        "China AI"
+      ],
+      "importance": 85
+    },
+    {
+      "id": "da29d8f9e9d6af50",
+      "category": "china",
+      "title": "Chinese A.I. Models Close the Gap With Anthropic and OpenAI",
+      "summary": "Chinese A.I. Models Close the Gap With Anthropic and OpenAI The New York Times",
+      "source": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOZk9RRzFlT3oyWGV2NXBQcEQyWmtFSllXV3dXd1VKVEF5T0R5OHYxaDgtcTgxdWpaWlB3TVlZbG1vUWxxLV93WC1iVnIyWmtYeE9ET25MbDJtQ0JWV1k3MHVYSTA0OURFYy1EbWVaelBUQlV6OTlCNDNIRzFIdWp0a0RlZG5aUTJQYWR3amhHNmZzbklEMVE?oc=5",
+      "published_at": "2026-07-01T07:00:00Z",
+      "tags": [
+        "DeepSeek",
+        "Zhipu",
+        "China AI"
+      ],
+      "importance": 85
+    },
+    {
+      "id": "2a7687de8b052254",
+      "category": "china",
+      "title": "China's Zhipu is closing in on top U.S. AI models with Anthropic and OpenAI held back",
+      "summary": "China's Zhipu is closing in on top U.S. AI models with Anthropic and OpenAI held back CNBC",
+      "source": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPSFBiWXhDV3VHdk83TGVfaWRuem1fODFCeUg2ckJFcGlXZzJFYUJKTzFQb0FKQ1BJLUZZN0Z3VkxKOW5Yb0lEQkw4WXB5cTRsenFGdnZLUURTeW1KdWZGakFWdlV0dFNRVkdpcElQS3lRNDhSN2x4R2xQT0FCT1Yxa01SbDdkNFdFM2fSAY8BQVVfeXFMTkFzUHpXWjJ3dGkybjdSLXBaNTEyX1Uyek4zU2ROMDRBbU5MdkV5Y3BwRm9PNEx5dzYyRDF5Y0ItMVNPZEVEZ1QzVWFRZHRhbVBJQ2FMRm01Wl9NMkxfbVVzaWcyMmh5bTczQy05MWtSeFRUWUxyeFZoekV2S0kzQXA3Si1xb2ltNVRNQXpXZWs?oc=5",
+      "published_at": "2026-06-26T07:00:00Z",
+      "tags": [
+        "DeepSeek",
+        "Zhipu",
+        "China AI"
+      ],
+      "importance": 84
+    },
+    {
+      "id": "c0978a64943e515b",
+      "category": "china",
+      "title": "After Anthropic shutdown, China's Z.ai closes frontier gap as it plans dual listing",
+      "summary": "After Anthropic shutdown, China's Z.ai closes frontier gap as it plans dual listing Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQUW5QYklqRjJ5MXFhOUlxOFdUMGREVHpiSUJrY3VSM2xsVVA5Z1dIb3BBV2pmVEthRF9wZU9MU3VvSE1VOGtwNkh3amwxdDh3eU1ZNTBUYUpINVRMN0dDSzBwTGppSWc0aGNwa2RzVEhtLXVzak5Gd2lBUUZHaDFXVWxQQVRIZnd2TzZSTm53N0QyTjBZVXl4dTdLYXh1OVQ5NVBieUZMS0xNMGFMZUtKSlZ2aXBDbjRvVThwY2pST0U3MlNDLUQ5aUNISlk?oc=5",
+      "published_at": "2026-06-25T07:00:00Z",
+      "tags": [
+        "DeepSeek",
+        "Zhipu",
+        "China AI"
+      ],
+      "importance": 83
+    },
+    {
+      "id": "b24af92529b3c94a",
+      "category": "china",
+      "title": "Hugging Face uses open-weights Z.ai GLM 5.2 to battle attacker after commercial frontier model refusal",
+      "summary": "Hugging Face uses open-weights Z.ai GLM 5.2 to battle attacker after commercial frontier model refusal SiliconANGLE",
+      "source": "SiliconANGLE",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPYVdaQU5aUWNKbTl6b00xY3RIbHZsbEpsMkFqdUhnaFlWOGlqMGRDbWJJTzk4Nkg4d1VxREl4b2tJVlQ2T0VOZG43cDZVUFZlS3hLUkRpTDdUNG5sb2JKVTM0dGpta21OcmlJNUhZTEg2TWJXUVYwc1pDNldrbWZXN20zTE4wUlBwTnp2TUdSNUUyRTZGV3dfb09GVG5CSmtoaFdNZnUyUkZQNEFtZE52QjhUWnFWTE9yRXFKekVBd3NkS0xTU2kzaXhB?oc=5",
+      "published_at": "2026-07-20T16:05:58Z",
+      "tags": [
+        "DeepSeek",
+        "Zhipu",
+        "China AI"
+      ],
+      "importance": 81
+    },
+    {
+      "id": "7bbb6716f07f1f49",
+      "category": "startups",
+      "title": "AI memory startup focused on cutting token costs raises $98 million",
+      "summary": "AI memory startup focused on cutting token costs raises $98 million CNBC",
+      "source": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOQXppdlU5eU9CcThLWDluSjhoemx3YllRcDIyZFA4Z3owR0JKS1dNeFBBSDVLU3A1SDNscWVHOVJmMmw5Z3A1Rm9UWnJpaGVEQk4zRWRaa09SYUhqRU1ocFhWVk85WExIYU5ZMXJfR01GRG8teFVPQ3ZSWFRSRmJwVFY0cGMyWWZjbzZsSkt2Q2Z0NVd6dXJjLS01N2dELTdMX2dONFNB0gGrAUFVX3lxTE1WRzlOc2pBZks5amFpSDUtMnhCbUIwbS1DWF9DRkg2M0FTeWVFVHpwSzN6ZlBjb21TdDFjQlJ5ZDI3T1hDMTBSZ19ZUWdJenZUN1d5SFBtTVZSZ2lDdWYyaWozYXZNYk9SbTJJS2VwNmlrdkhpQS1xU19vN1JUUXBNVnVqclNRRGhPR1FhVEd0RHdZRk50TWdBbmIxY3VDMDBvOVp2aWlQMVZKaw?oc=5",
+      "published_at": "2026-06-23T07:00:00Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 81
+    },
+    {
+      "id": "0f04f2baa33b1522",
+      "category": "china",
+      "title": "Alibaba previews Qwen3.8, claiming its strength trails only Anthropic’s Fable 5",
+      "summary": "Alibaba previews Qwen3.8, claiming its strength trails only Anthropic’s Fable 5 South China Morning Post",
+      "source": "South China Morning Post",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPakRPRHUwd1M1b09VMGxEN2t6V3JfNzVsc3Zpcko1djRPaXVpdlAxYTh1eld2MkVSTUVlV1VCOXExUHkzSnFMQ2h3aXV0SHdEN2g4UXRBTlYzMm5rQnBVQmVpNzZwSWdkRG1ybU4zQ1p4dXFaWjUwTGxFQzRQM0FzVUE1TTM4UjllUDFWRjRKZS14MjdTbmhkZVYtR1BaenF2RlRydXZvTWstdmJMRFNhSGZKONIBswFBVV95cUxPLVNNNUpSUTZvb3ZlaUVrN2NWOF9nX21xNTFfbl9BUEg0VkpfZnh5M05HcVhoT0g3NDZsLWVRNlJud21VWGRSdzlweXR5dTN0NzFSLU5Rc1N1cks3SzZkd0JveFdPb0swTC01LWhlbmpfVXF2U3BFQTUtb2RjaXJxQUVqUXpSVlBZWGQzak1BMm5GTUJUZGdNUDc3c3VLeXhSd0pESkdTRXQ5WkkyNGMtdFlfdw?oc=5",
+      "published_at": "2026-07-19T13:20:24Z",
+      "tags": [
+        "Kimi",
+        "Qwen",
+        "China AI"
+      ],
+      "importance": 80
+    },
+    {
+      "id": "1c076502dae40af6",
+      "category": "china",
+      "title": "Chinese AI model takes US tech industry by surprise with abilities rivaling Claude and ChatGPT",
+      "summary": "Chinese AI model takes US tech industry by surprise with abilities rivaling Claude and ChatGPT AP News",
+      "source": "AP News",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNZWthNjJoaVVtZUxQeWE1Q2tndy1yUU12Tm1Pdll0WUZxZy1PTFZrSElXMEhicnZnbTdzeVhIczVFWGZMbUNZZ3hSOTIxWnBhVUREOE1wbjEyNW9YUjJQLU83djItbXl1LThHM2ZTc3FHQm1nWGlOY1FFcFBmUFdDc3ZB?oc=5",
+      "published_at": "2026-07-17T20:06:00Z",
+      "tags": [
+        "Kimi",
+        "Qwen",
+        "China AI"
+      ],
+      "importance": 80
+    },
+    {
+      "id": "ce9b6e4667e2768f",
+      "category": "china",
+      "title": "Should You Try Kimi K3? Here’s How AI Model Compares With ChatGPT And Claude",
+      "summary": "Should You Try Kimi K3? Here’s How AI Model Compares With ChatGPT And Claude Forbes",
+      "source": "Forbes",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNeVZSZVF0bTgzcGxJQ3p0MDY2WnRzaWhsSXdna2ZyRnpGWDlvZlVtcE9GY3NROGpyRW50SFRheHdGcmhsZk4xUjBnY1VaaWgyT0toRV8wVnpvZkkzWTY3bk45U1dsODdyUlQ2aHVCdlFEVW5pNjNOOGJVR2xxbzdvZ3E0OUlycWFHMEtLa1Bpc2Q0bzh3TXdtSmdub0RvR0FCa0E5ZXl0Ykh3RFJlcVlpRjRrMFJMZ2VyTE5rSmFsSGJ6TUhySWxyN05jc0FJdU9ING1LdXY1NA?oc=5",
+      "published_at": "2026-07-17T16:27:42Z",
+      "tags": [
+        "Kimi",
+        "Qwen",
+        "China AI"
+      ],
+      "importance": 80
+    },
+    {
+      "id": "d914e72ddffab50e",
+      "category": "china",
+      "title": "China's new AI model is putting fresh pressure on Silicon Valley and Washington",
+      "summary": "China's new AI model is putting fresh pressure on Silicon Valley and Washington Business Insider",
+      "source": "Business Insider",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQRUJ2SUo3VXVSWEVNVlY0b3R1ME51bnZlazI5dFRzT2pGMVJhNWNXT053TS14Vk5NUVRnaU9Fb05DOUtmSUxBcnVHUGRZbDlYd19zOXlNUG8xNkFRT0RwV3J1ME0zS1lyX2NTUmE2VVhNRndRWEhBVUlMSk5WVUctNTByWE1MWFlpS0lqdVdHSmlSVTlaQmhTRV85YmRkcHIyZW1LdQ?oc=5",
+      "published_at": "2026-07-17T12:47:00Z",
+      "tags": [
+        "Kimi",
+        "Qwen",
+        "China AI"
+      ],
+      "importance": 80
+    },
+    {
+      "id": "133ad2d4605ab035",
+      "category": "china",
+      "title": "What Is Kimi K3? The Chinese AI Model That Has Wall Street Talking",
+      "summary": "What Is Kimi K3? The Chinese AI Model That Has Wall Street Talking Yahoo Finance",
+      "source": "Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNWXd6VUZ6enoxdWlyblFuRzlKM19jWXRpWi0xbUk3ZE5DMktoejFOSTNXRy03OWd2V2Zfb3RDekVNVWFqUXVRTEVqWmx6T2R4YUdoTlE5QTFmT2kwS19jQkpvczZmbVUwQi1qemdzV0M1TXp3NFQ4Vm5lUFEwS09RREdRa0JGcmFxVVI1TVkteHNWUQ?oc=5",
+      "published_at": "2026-07-17T12:27:43Z",
+      "tags": [
+        "Kimi",
+        "Qwen",
+        "China AI"
+      ],
+      "importance": 80
+    },
+    {
+      "id": "a426319a3f6bbec8",
+      "category": "china",
+      "title": "CAISI Assessment of Z.ai’s GLM-5.2",
+      "summary": "CAISI Assessment of Z.ai’s GLM-5.2 National Institute of Standards and Technology (.gov)",
+      "source": "National Institute of Standards and Technology (.gov)",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5KUk5XN3plQ3M5ZXZiRDZmNGNIamhWT241YnhZMnlVZkVaV1pMRkhHTmRkSFlqdUM5WnpLSmVjbkhSM0pLSEpHNmxvVVdUTjkwNG92bDJMUE51YTFyN0d5SE5CWnpBR3RzeEswR19kUnV6UTNlNHA1SFFSUUFhOE0?oc=5",
+      "published_at": "2026-07-17T12:00:00Z",
+      "tags": [
+        "DeepSeek",
+        "Zhipu",
+        "China AI"
+      ],
+      "importance": 80
+    },
+    {
+      "id": "8aa2d552c52153b1",
+      "category": "china",
+      "title": "Moonshot’s Kimi K3 pushes Chinese AI into Fable-level territory",
+      "summary": "Moonshot’s Kimi K3 pushes Chinese AI into Fable-level territory Fortune",
+      "source": "Fortune",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNNmpxdXVqWlU3TWhraGVLa290R191VEZ3UmVwRXA0QzhhQzVUcGJNUm5oR3hUNnNxUThjVmk2c1k5VmVzeXExT1hOMFhtMHpTQ25USUJiZzBaRkI4MFRiZmJLTGhIdE5UZGg5cnJ3Z1RiX2hfcnlKOXhadmJtZkRiSU8xU2cxV2tiNVVBakFsUWhFX3h2ZnNBeWVR?oc=5",
+      "published_at": "2026-07-17T01:10:00Z",
+      "tags": [
+        "Kimi",
+        "Qwen",
+        "China AI"
+      ],
+      "importance": 80
+    },
+    {
+      "id": "89fd83f2bf25f778",
+      "category": "china",
+      "title": "China's open-weight Kimi model stuns AI world with frontier-level results",
+      "summary": "China's open-weight Kimi model stuns AI world with frontier-level results Axios",
+      "source": "Axios",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPQzVrUG9XYnlvdFlrVzlBZWpiV2R2NWxROG9zcVVUclYxcE9yeFdFQUtIU3hmV3Itc2cwS1JtZFZKdXh2WVloQWdvZGdoUUtvdUpiQUF4NmRCNl9MQWFnbTFmOHdVQW9YR2V3YTdFQ3N1bUdBak0xRFVQbmtxU2plNzEySi0?oc=5",
+      "published_at": "2026-07-16T22:49:00Z",
+      "tags": [
+        "Kimi",
+        "Qwen",
+        "China AI"
+      ],
+      "importance": 80
+    },
+    {
+      "id": "c28bd4858d9cf0ab",
+      "category": "startups",
+      "title": "AMD to invest up to $5B in Anthropic; AI startup to buy up to 2 GW of chips",
+      "summary": "AMD to invest up to $5B in Anthropic; AI startup to buy up to 2 GW of chips Virginia Business",
+      "source": "Virginia Business",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNbjloUXFucDZLWFZHOW82WXZFUnlyWDZUOGZyMmZqOVVxU2tJNUJoWWlrRVloTnJ1Q3VNaHRxMUtvZXNMT0lzWDFOcllFZTJRMEtfejZsOXZONWhYWGJabFJxaUJTUTdMTHZBS2FLSkhXeU94MzU0S0prbW9JOWtpLTZGcGd4LThraUxKdE12cmpRaTlIVmV6dlA0ZDNfRUJEcFhtNzJB?oc=5",
+      "published_at": "2026-07-22T16:38:46Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 79
+    },
+    {
+      "id": "1aac5e09daa406a2",
+      "category": "opensource",
+      "title": "OpenAI cyber models broke out of training environment to hack Hugging Face",
+      "summary": "OpenAI cyber models broke out of training environment to hack Hugging Face CNBC",
+      "source": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQS0Fzbkw4bWcyTTlMV1YzMlRzZmVzTDFJUkIxUVJxWFVlZjJVcjBHQ1RSaTZXOVZRclhkRkplY1ZDWFM1UVc0WEQ5Z0daUnFhZUpCa2xTMVJOaHVrZXNJbHNZWkMzNU9TSVMwc2JtcExHam9DTGdONHJFbkJaTzhFNtIBhgFBVV95cUxPdVNpQk40cDBmZWliMlZqX1drbFJNVkEwRUE2X19rT0l1WVFjcm5uQkxBaVhXSEk0M3Rvdk5aRWR2bWFqMkJmTmsxNEg1QUIyNHlzWVpQR2dlVGtCeUxGc2EwU3NhbTM1S05vMmtNNTRoWlNsdENUdVBBS0RjV0tlLW5NV1gzZw?oc=5",
+      "published_at": "2026-07-22T15:54:04Z",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
       "importance": 78
+    },
+    {
+      "id": "86394df6ce7234d9",
+      "category": "opensource",
+      "title": "OpenAI Says Its Models Accidentally Hacked Hugging Face",
+      "summary": "OpenAI Says Its Models Accidentally Hacked Hugging Face Bloomberg.com",
+      "source": "Bloomberg.com",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPN2dIazBHT3lxakdkc1BhbjFLZ3BJVEJpOWNGQVBoYklXOUVvS2ZpR0EyTVYxaEZsV2I0b0VJYkItTDdUQ25XYUxRT0dhZG4zNjVEUi14cmJLRG9xYXdFX2h6UXJ6VVIzSEFiVDZSd1ZwMWowYUJCR09vdHVLTFFmQkRTZ0l6Rmx2VVkxcWJubmk5MEZuV25wTnROTWJ3UV9uSXVhc0NFYWJ5R0ttZU1wOEJ3?oc=5",
+      "published_at": "2026-07-21T19:51:28Z",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "importance": 78
+    },
+    {
+      "id": "06877131371ece55",
+      "category": "startups",
+      "title": "Medical AI Startup OpenEvidence Weighs $200 Million Funding Round",
+      "summary": "Medical AI Startup OpenEvidence Weighs $200 Million Funding Round PYMNTS.com",
+      "source": "PYMNTS.com",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQdmZRTW9NWk9TbEJvaVphdC1VVFVPRmNELXpLeFVIMnMxd3dDMU42c3FOR0JxdkJQd29ubFlWMnVSMXVNazl2LUdFNkNaZGhxMVVkUWt5eFdidWlCREJnbGwza3FfMUxlaFUxSmZtY1kyZmhWbVJ4eXpmQloxNWh1Z25MQ3d0ZGdCcnpsUmFHRDd5THN5WS1NWU5YMmpiekM1QkxYMnlSTGRFbkx2b0FNc1RoTEd5Tkc4U2tWNTZhYw?oc=5",
+      "published_at": "2026-07-20T00:33:17Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 78
+    },
+    {
+      "id": "55ed513ca4bd2d03",
+      "category": "startups",
+      "title": "The East Bay hunts for its own AI startup boom with plenty of space to offer",
+      "summary": "The East Bay hunts for its own AI startup boom with plenty of space to offer The Business Journals",
+      "source": "The Business Journals",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxObUVZNXkzazhiZmZuQ3FxWXczY0dQVXdET2RQV3VVZW1Ubm9uSlJxdTJYUWY4eTM4WTFyWC1kU0gyZU1YQXA5T2RSVmhGbHl0dThpRjdIYm1hWFZLcVE1em9PNDRCSUpNTEVsYUVBU1RjNjN5U2wxTEdwTHhuT213UVk3UTRGX0JBMl9YVHhDRUNOZk8xMU9PU1ZjdWgyalNTRVMxX1dLaUsteE5tQXc?oc=5",
+      "published_at": "2026-07-16T20:08:00Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 78
+    },
+    {
+      "id": "775825728e0282a9",
+      "category": "startups",
+      "title": "Stealthy Toyota spinout gets one of Boston area’s biggest robotics deals ever",
+      "summary": "Stealthy Toyota spinout gets one of Boston area’s biggest robotics deals ever The Boston Globe",
+      "source": "The Boston Globe",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPcFZIdlJKenhTblVlUWZyaHZrSHo0MXFVNWQ5Wmg0S280R3FRckhMSHdCVWhkWlpSTGszY0JENm81TXBCX1JNbEdqbjVFYjJmR1QxSlhuYUd1UjdaSFdBY1ZiWmNOTTJoLVNJV3FfS2RLSk9KYWhHbnJNa3MwNXFLX0p2aFJnYjV2YmtuZ1NjV0dadHBM?oc=5",
+      "published_at": "2026-07-15T12:16:00Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 78
+    },
+    {
+      "id": "5f5a89efbd09f340",
+      "category": "startups",
+      "title": "'I have a chip on my shoulder.' Phoebe Gates wants her $185 million AI startup Phia to succeed with 'no ties to my privilege or my last name'",
+      "summary": "'I have a chip on my shoulder.' Phoebe Gates wants her $185 million AI startup Phia to succeed with 'no ties to my privilege or my last name' Fortune",
+      "source": "Fortune",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNQjRhdXBZMk5jNzBXQWttTzlVbDBKT3Q0X19KWFJEcnhHZExqM0g4bk8xNXktQVBEWXhvYWZrSndvTTAzTEl6NVNjRWJ6TXF1RkFyY2ZBcTRDc00zVVpnT1ZoZDBkQTdQLXU1eUlqUks4TDhCZnQxRUMzcVBFRWptTEttaWVJYVhRampITlZlZGsyYlRrQjVNR1JSejdjMDJuVWI3aEhTenEyUHpqYWNoUTA2ZkotQQ?oc=5",
+      "published_at": "2026-07-11T07:00:00Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 77
+    },
+    {
+      "id": "44eac03673a30586",
+      "category": "startups",
+      "title": "AI Start-Up Kaon AI Raises $60 Million in Funding Round in Quest to Build a ‘Personalized Story Engine’ for Users",
+      "summary": "AI Start-Up Kaon AI Raises $60 Million in Funding Round in Quest to Build a ‘Personalized Story Engine’ for Users Variety",
+      "source": "Variety",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNNjBmdUV6c3QydUsyZHlzaEZrZ3YxRVJOMUx0dkZBUXBaRzl2Qm1sTWoteWhGcDUzcUFjaVJmZU40UzdKM19JMDl3bk1FbTJtdmVKT3RxY2NVYkpKV0V0Y2NIc0VrY3drbng0d19KeTVaaGxIeVJJamlEZnN5dkpsVnBRX2FwdTJBV0ZnbTZvcTM0aGdzNy1PZXlqeXVPTi05bWc?oc=5",
+      "published_at": "2026-07-08T07:00:00Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 76
+    },
+    {
+      "id": "0135e35d17a8e527",
+      "category": "opensource",
+      "title": "Why the rise of open source AI isn’t hurting Anthropic … yet",
+      "summary": "Why the rise of open source AI isn’t hurting Anthropic … yet TechCrunch",
+      "source": "TechCrunch",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOZUtFcjdaQ2poUmNMajdmWVktWmJ3R0NkSzBXUHlNeHVmVWpUSjRRZFVZdUl5a2MxNTNqM19NYlFWWUplUVl4N19lVVVjUnd2aFpubi1pZkpUcHNNQjg5NmprTGxnZW5iUE54emw1czNBLXQ3dWdTSU51bVhHVHVXbDNqUU1tb3VuLWNxNURkdnprQ0JKQnlR?oc=5",
+      "published_at": "2026-07-07T07:00:00Z",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "importance": 75
+    },
+    {
+      "id": "54445e76969bce49",
+      "category": "startups",
+      "title": "We're childhood friends who scaled our startup to $13M by age 21. Dropping out of college was the right move — if anything, we did it too late.",
+      "summary": "We're childhood friends who scaled our startup to $13M by age 21. Dropping out of college was the right move — if anything, we did it too late. Business Insider",
+      "source": "Business Insider",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNOV81Z0E4bXQtWlhhWkpzZW1ER0tFQUR5b0FoSncwV2NsWnVMeE9mYjItYnJxY3RYWmVJZ2xrWHVOY19tRkw1ck1MRnRkQ3pqQUs0ejRubzJWdGlLTEVDWl9uZHVpbmhIYVdvOUxLTVFqZWwteVRKQ1VGbXFvVWdqNDdreGR5VGlsSUtTYVBLTXdtS2hRb2xJNzduSUw?oc=5",
+      "published_at": "2026-06-29T07:00:00Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 74
+    },
+    {
+      "id": "7d6f75d793d2e729",
+      "category": "startups",
+      "title": "AI startup Engram raises $98 million at $600 million valuation with just 13 employees",
+      "summary": "AI startup Engram raises $98 million at $600 million valuation with just 13 employees calcalistech.com",
+      "source": "calcalistech.com",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFAxc0NoQm1NTy1VYkVELUhxMmVDX3l2cW05aElrMnFnalhTb1luWGdvYjdHUm5yS0tyR3RTQVN5cUxTbWpaTFZyc3JfbkdoMXB6NXV1YVlFaHp3QmQ0NWJpRWprZGRGdWIx?oc=5",
+      "published_at": "2026-06-23T07:00:00Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 73
+    },
+    {
+      "id": "b7e71835ce9abe9e",
+      "category": "startups",
+      "title": "Texas draws another AI company to relocate HQ to Austin",
+      "summary": "Texas draws another AI company to relocate HQ to Austin Austin American-Statesman",
+      "source": "Austin American-Statesman",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNUzhuWWhtZVFDM2tnNlBOUTlmZ0tkaTVINTFKUVRBcmRJUW5sbHUwVWVVTEF0aGpIVUZHcEd1dTk3Qm1kWjhBTGNjcnJ0MldLUkJKTDlQRDJZTmR0d2dYRGMtVTU3NC1XN3RIU0NrSjdTcWVQN21zVmNiY2lMcnJ0dl9ScEFMdlVpUDJwb3M4NHNwalN4U2JVRXlDS1dyRGxjQm9z?oc=5",
+      "published_at": "2026-06-23T07:00:00Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 73
+    },
+    {
+      "id": "2d831fc682ae63dc",
+      "category": "startups",
+      "title": "Delivery robot startup Robot.com is betting its next act on workplace humanoids",
+      "summary": "Delivery robot startup Robot.com is betting its next act on workplace humanoids Business Insider",
+      "source": "Business Insider",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNQ055UnFNc0FSb04zV3FQX25ROFZjMGwtaktnb2dKVElyV2hJZ0dheVRvd3M2S3BhOFlaTW5UcVA2T2t2Q1NSWTVUQThkZEdtT3BsVTBCYUE4RTBuU08tR3VHLVFiTXdJamYwaDU0SE1zS1VWZDk2SGhVWVNXUlhmaTdSbGJLVENuUklqM3pfR01kSXF3TUJlQnhlV3dZSktq?oc=5",
+      "published_at": "2026-06-22T07:00:00Z",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "importance": 73
+    },
+    {
+      "id": "412d8948521123a4",
+      "category": "policy",
+      "title": "European Commission publishes guideline on transparency obligations under AI Act",
+      "summary": "European Commission publishes guideline on transparency obligations under AI Act RAPS",
+      "source": "RAPS",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOZWJWMzlmSk84aUdUbnVDQl9QWWlMV205cXdDdFUwZTJ4VXZsdm9WeGJMczR1UF9VbkRSNDNmSnF4VUY4c3JISTA5cnBuS21fOTdmMjZRQm1hWWFyRktCbHlvVFdMSldFR0FoZllwOWNBbDFxTEVoSTlkVEJmcGNBekFUcHMyc0N1aXZuTnFhM0c3WVBMbVdISzhzTU1fVkVmY0I1YXhRcUlnQU10XzMtOWQwTkJSUQ?oc=5",
+      "published_at": "2026-07-21T21:32:00Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 72
+    },
+    {
+      "id": "e8ee4c4123c81764",
+      "category": "policy",
+      "title": "Where’s the Trump administration line on AI regulation?",
+      "summary": "Where’s the Trump administration line on AI regulation? CyberScoop",
+      "source": "CyberScoop",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPVXQxMW9pUXJ6UzM3WkN4UXVPeDlaSUVieXBYd01fQ1Ftd0hnSUNuWUhwWWJQX1FkeDA1STloU2pqU3N0QWJCVmJCYWNFYXlVaWM2eWFldVB0S0xGdkZyWm5JS09tQ05ScWY0elZVNTlzSzFjSVUtWTRpelcyOWt5NQ?oc=5",
+      "published_at": "2026-07-21T18:37:27Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 72
+    },
+    {
+      "id": "69e405e9bff1a5f9",
+      "category": "policy",
+      "title": "Partner Perspectives: The global reach of the EU AI Act",
+      "summary": "Partner Perspectives: The global reach of the EU AI Act White & Case LLP",
+      "source": "White & Case LLP",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPUzF4eGZ2bnJaZ19jUGVlYkR2SFJuZ01hV2RBSW5xa2trUFZSbkFrV2lTeGU0ZXR5S1NmNHV6cV9SWUV5MWZIOEpOTllhRHVSRG42ZXUzM3BrSjZqVVRBd2FYNVA3T2NhR2NfVXUzUEdwSWhjY3Zmb2cwU09Sb1Mwbm9GN3c1SEJySmNybmNZMldJZGNa?oc=5",
+      "published_at": "2026-07-21T12:00:00Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 72
+    },
+    {
+      "id": "d1f787eed2d7c807",
+      "category": "policy",
+      "title": "Weak AI regulation may backfire, making products less safe",
+      "summary": "Weak AI regulation may backfire, making products less safe Cornell Chronicle",
+      "source": "Cornell Chronicle",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPVXNyajdidFlKVmFFMkd5U0ZDdlJibXE0OUtzU0Q5cU9GMFdfZ3lSWnNrNS1ZYjFkUjZDdWNmZmJzREZuN1JNRk5JRVpRY0t4YkQ5ekhNekxiaDVCeS1leWx3alVRX01TM3VsS1o4S2UtX3I5ZVlVUjNvcE5kZnlaR2tSa1BsVkVCTmZMd2pXRVZJQ3cxb3ZrNWFzQlJYRU0?oc=5",
+      "published_at": "2026-07-20T19:00:00Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 72
+    },
+    {
+      "id": "c482cec7839e6cea",
+      "category": "startups",
+      "title": "How Fei-Fei Li Splits ‘World Models’ Into Three Dis…",
+      "summary": "How Fei-Fei Li Splits ‘World Models’ Into Three Dis… StartupHub.ai",
+      "source": "StartupHub.ai",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQNE1zZThQV1dNQWVEaUNzZURLTEVGWGxqTm9TOEdrSEZ5eFI5eDJDRXdUSE9SSXFLdDVyWVdzZ1F0ZTNOdFk5bnpmSmkzY1lRNzZTUURLVzVkeDU4XzJZdnRaTlBqSXJ3RlBUQXJUNGwxWmYxcmVSZVdfT3lCY0RGdms5VjF2YTJUQU95SURLUDJuaU0xWGNmMHFlV241YVRlUnpHRDVtWlRMUHJoTnY4?oc=5",
+      "published_at": "2026-06-20T07:00:00Z",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "importance": 72
+    },
+    {
+      "id": "d027fa3437533709",
+      "category": "policy",
+      "title": "Illinois Enacts AI Safety and Transparency Law for Frontier AI Developers",
+      "summary": "Illinois Enacts AI Safety and Transparency Law for Frontier AI Developers Wilson Sonsini",
+      "source": "Wilson Sonsini",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPRUZZMkpwODNiRnlJN0R4TU1wTVd3RS00NWdMWGppT0xwcklzVGVmNXFkZC1XT1h2SmhGbE9WaHJBOHlwV0N1bXIxZjMxeDBnMHRFOUlVVTNOZGNJWDJSR01oMmVJVFJVYUUxcm14ZTlMVXphdHROM3hFa3lDUi1FMUJGWnk3TmpvTWRST3RkUGd6THRFR0JGTGsxTE5haGw1TGRPMU1kZUswVXV4M0Q1RA?oc=5",
+      "published_at": "2026-07-17T20:46:37Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 71
+    },
+    {
+      "id": "5007a0fc0324b61a",
+      "category": "policy",
+      "title": "The US is advancing AI safety through state and federal action",
+      "summary": "The US is advancing AI safety through state and federal action OpenAI",
+      "source": "OpenAI",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPbzRGWVJRZDZ4OU45TlJjQVBUNENyOVZWLUlBNnprS2t1Z2lZX3p5b3hwbUYtZXlORUg1SjMxdmx6OU1mc1hGekw2MWtydkt3SGpLUUVJYVJLeGlqbFV0SEt6bHU5N2Zsc3c4YTU2eXN0S2htN01FczA5cDJRam5OZlduVDA?oc=5",
+      "published_at": "2026-07-15T16:37:34Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 71
+    },
+    {
+      "id": "2a586f35fe70a28a",
+      "category": "startups",
+      "title": "Inside Fei-Fei Li’s $1 billion new AI company, World Labs",
+      "summary": "Inside Fei-Fei Li’s $1 billion new AI company, World Labs Fast Company",
+      "source": "Fast Company",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQUXNkZk1MUzNyaFB1TFo2NVA0UGdRclQ5bUdDa0xHM09wUmQxUHFlNDQxMGJVTkxoQ1dtS05KU3dodmZEMUtpTXBJSzhualR3S0s3RVA3bV94MjJ6V2RQQXJiV2hPa2hJbnIyOS1JLXB5U21mWHFqUzctZWJMaHhMLWw1aWVWT004dkd6MEVjV1JReFpzU0FZZjlvdlFaZTZQbVRfWHN3?oc=5",
+      "published_at": "2026-06-15T07:00:00Z",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "importance": 71
+    },
+    {
+      "id": "b17ad0178b244019",
+      "category": "opensource",
+      "title": "Hugging Face breach: OpenAI claims its models were responsible",
+      "summary": "Hugging Face breach: OpenAI claims its models were responsible Axios",
+      "source": "Axios",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNSDFzbkE3eUtUalJjekRpVEJmVEV3LW1mSktHeXNlTjBabkNWOVBPc2FkdlVSVFRkRU41Sy1taDJQN3FPcGtMY0ZsX1hCUzUxU1lYZHhVdHJMdi1YV0JzMmFPdTk3LWJvc3lGak1wY05sckdqeTVKcUNaWGVLLW8zUHBVTjJWbVJUV2xmTExGZmxLalE?oc=5",
+      "published_at": "2026-07-21T19:48:04Z",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "importance": 70
+    },
+    {
+      "id": "69421bf4c310df04",
+      "category": "policy",
+      "title": "Inside the alternative playbook to AI regulation",
+      "summary": "Inside the alternative playbook to AI regulation Axios",
+      "source": "Axios",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBwR3VmVVcwSkJZRTZVU1oyODZpVlNVQ0d1cm5UZU9RMGNCclNNeDdQQTJYYUlTYkZJak5BaEJtZHUxZ0gtY1hPUHo3RzRnMWU5aVlDMmNlclRIT19rU29VSFBabXpkOHlqVkxvT28zRmU4XzN0Qmc?oc=5",
+      "published_at": "2026-07-10T07:00:00Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 69
+    },
+    {
+      "id": "61e9442221ece78e",
+      "category": "policy",
+      "title": "The Latest AI Safety Rankings Are In. Nobody Gets an A",
+      "summary": "The Latest AI Safety Rankings Are In. Nobody Gets an A Time Magazine",
+      "source": "Time Magazine",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOVHhTa2dLZUR4bWVzRkt1ZjBrM2dHcE04ZGdqMVdjT2xXQXZzS2JJcEJaQ21wMUxtMlRUZmQ5azkyaUE3RmQweWdQQmUyV0d2MVU5RXdiSE41VTNZWWtURWltZ0ROeWR6bnljblJ0YlVfckU5Rklpd0ZPbk01aDBrQU9ZOA?oc=5",
+      "published_at": "2026-07-07T07:00:00Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 69
+    },
+    {
+      "id": "949ae4b1b151a432",
+      "category": "policy",
+      "title": "Illinois governor signs AI safety law requiring audits of frontier models",
+      "summary": "Illinois governor signs AI safety law requiring audits of frontier models StateScoop",
+      "source": "StateScoop",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1PTUI5WEpENWNRV1c0NHpiMWdjQ3JfdTRqU1ZqRGRvSnZTZ25QYTl2OG5DdTBsc0wwZklMN3BlSjBPRTFaVDh6cVB5Z1pMOUpqWWlTU0FKTjk2MmpvemplS0hXYjViTC1HRFFkT1JTZi1tRS0yZ25qRQ?oc=5",
+      "published_at": "2026-07-06T07:00:00Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 69
+    },
+    {
+      "id": "3d620b370e35d19e",
+      "category": "policy",
+      "title": "Pritzker signs landmark AI regulation bill that aims to mitigate risks",
+      "summary": "Pritzker signs landmark AI regulation bill that aims to mitigate risks Capitol News Illinois",
+      "source": "Capitol News Illinois",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQNm92TVVqUHEyZW1sX2lWU1Rlc3RGZW8tUi1YZFlNMVdSS3dvcUxKc0JscDVGYXREMjFHOXd2eDRTQm9WaHNmLVNORlhkNDVPUU8tRjlPdHdIZmtuaGlzeEoxT2NjcFliNmcxMEF6bG9nMU5qcVNYZ08xc0RGV3FxbW1CMzlRYmlqRTM1WFV4UEQ2TGlVY2RQYnVnTm54a0dxeDFkUUNORDFjYS1p?oc=5",
+      "published_at": "2026-07-06T07:00:00Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 69
+    },
+    {
+      "id": "dd2cf53dd1bf7348",
+      "category": "opensource",
+      "title": "Mozilla Wants to Build a ‘Rebel Alliance’ for Open-Source AI",
+      "summary": "Mozilla Wants to Build a ‘Rebel Alliance’ for Open-Source AI Time Magazine",
+      "source": "Time Magazine",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5aWk1hakg1dlpiT3lFUVVLNjBIRk9VbVZlQmY0UU1Oc2JkOVVCOUtCOGUybFE0ZEJLUTFQT0ctY1dEWTREdDdhRDR6WEdyTEtsdnljZ3VBbEs0eWhjQmswQ0xYSF8wUXdOVm5QVllYYm1vNTMwendrWU9Sd0wzYk0?oc=5",
+      "published_at": "2026-07-14T11:00:07Z",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "importance": 68
     }
   ]
 }
