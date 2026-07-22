@@ -1,0 +1,46 @@
+name: Update AI intelligence
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/update_ai_news.py"
+      - ".github/workflows/update-ai-news.yml"
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-ai-intelligence
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Check out site
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Collect and classify AI signals
+        run: python scripts/update_ai_news.py
+
+      - name: Publish the latest snapshot
+        run: |
+          if git diff --quiet -- data/ai-news.json; then
+            echo "The snapshot is already current."
+            exit 0
+          fi
+          git config user.name "ai-signal-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ai-news.json
+          git commit -m "chore: refresh AI intelligence"
+          git push
