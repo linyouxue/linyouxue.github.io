@@ -1,14 +1,46 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-22T15:15:00Z",
-  "item_count": 13,
+  "generated_at": "2026-07-22T15:35:00Z",
+  "item_count": 18,
   "category_counts": {
     "research": 2,
     "frontier": 1,
+    "china": 6,
     "bigtech": 2,
     "startups": 4,
-    "opensource": 2,
+    "opensource": 1,
     "policy": 2
+  },
+  "analysis": {
+    "title": "中国模型进入高频迭代期：从参数竞速走向产品与生态",
+    "lead": "本期共整理 18 条有效信号。真正值得关注的不只是模型变得更大，而是 Agent 能否可靠完成长任务、模型如何进入真实产品，以及算力与开源策略能否支撑规模化使用。",
+    "paragraphs": [
+      "研究侧，BACE 与 Reward Hacking Benchmark 指向同一个问题：当模型开始自主写代码、调用工具和规划多步任务时，只看最终得分会掩盖自我验证、跳过检查或操纵评测等失效方式。下一阶段的竞争核心，是让 Agent 在更长的工作链路里保持可验证、可复现和可控。",
+      "中国 AI 板块的强信号来自六条不同路线：Kimi 与 Qwen 继续押注超大模型和编程能力；DeepSeek 与智谱把开放模型、国产算力适配和长程执行放在前台；腾讯元宝/混元、字节豆包/Seed 则借助既有产品入口，把 Agent 和多模态能力更快推入实际使用。竞争已经从一次模型发布，延伸到模型、算力、入口和开发生态的组合。",
+      "海外实验室、大厂和创业公司的信息也呈现相同方向：前沿模型与芯片合作绑定得更紧，学术创业从聊天机器人扩展到空间智能、世界模型、机器人和 AI 原生安全。与此同时，欧盟的透明度与网络安全规则说明，产品分发与合规成本也会直接影响技术落地速度。"
+    ],
+    "takeaways": [
+      {
+        "title": "技术主线",
+        "body": "重点跟踪 Agent 的长程可靠性、工具调用和真实工作流评测，而不只比较静态榜单。"
+      },
+      {
+        "title": "中国 AI",
+        "body": "六家公司正在形成“大模型能力 + 开放策略 + 超级应用入口 + 国产算力”的多路线竞争。"
+      },
+      {
+        "title": "产品判断",
+        "body": "能否稳定接入工作流、形成分发闭环并控制推理成本，比一次发布会更能说明商业进展。"
+      }
+    ],
+    "china_watch_coverage": {
+      "Kimi / 月之暗面": 1,
+      "Qwen / 通义千问": 1,
+      "腾讯元宝 / 混元": 1,
+      "智谱 / Z.ai": 1,
+      "DeepSeek": 1,
+      "字节豆包 / Seed": 1
+    }
   },
   "sources": [
     {"name": "OpenAI", "status": "ok", "count": 1, "note": "Initial verified snapshot"},
@@ -16,7 +48,8 @@
     {"name": "Academic Startup Radar", "status": "ok", "count": 4, "note": "Founder and funding monitor"},
     {"name": "Hugging Face", "status": "ok", "count": 2, "note": "Open-source ecosystem"},
     {"name": "EU AI Policy", "status": "ok", "count": 2, "note": "Official Commission updates"},
-    {"name": "Industry Monitor", "status": "ok", "count": 2, "note": "Big-tech and infrastructure"}
+    {"name": "Industry Monitor", "status": "ok", "count": 2, "note": "Big-tech and infrastructure"},
+    {"name": "China AI Company Radar", "status": "ok", "count": 6, "note": "Kimi, Qwen, Tencent, Zhipu, DeepSeek and ByteDance"}
   ],
   "items": [
     {
@@ -146,14 +179,69 @@
     },
     {
       "id": "kimi-k3-open-weights-2026",
-      "category": "opensource",
-      "title": "Kimi K3 pushes open-weight models into a larger parameter regime",
-      "summary": "A community technical overview examines Kimi K3's 2.8-trillion-parameter mixture architecture, MXFP4 quantization and promised open weights. The release is aimed at agent, coding and long-context workloads while raising new questions about practical serving costs.",
-      "source": "Hugging Face Community",
-      "url": "https://huggingface.co/blog/ResterChed/kimi-k3-model-overview-mxfp4-quantization-open-wei",
+      "category": "china",
+      "title": "月之暗面发布 Kimi K3，以超大开放权重模型押注 Agent 与编程",
+      "summary": "Kimi K3 采用 2.8 万亿参数的混合专家架构，面向长上下文、编程和知识型 Agent 任务，并开放模型权重。它把中国开放模型的竞争推向更大参数规模，同时也让推理成本、部署效率和真实任务收益成为后续观察重点。",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/china/chinas-moonshot-unveils-worlds-largest-open-ai-model-closing-us-rivals-2026-07-17/",
       "published_at": "2026-07-17T09:00:00Z",
-      "tags": ["Kimi", "Open Weights", "Inference"],
-      "importance": 80
+      "tags": ["Kimi K3", "月之暗面", "开放权重"],
+      "importance": 92
+    },
+    {
+      "id": "qwen38-max-2026",
+      "category": "china",
+      "title": "阿里发布 Qwen3.8 Max，继续强化编程与 Agent 能力",
+      "summary": "Qwen3.8 Max 将规模提升至约 2.4 万亿参数，重点面向编程平台和复杂 Agent 工作负载，并计划推进开放权重版本。Qwen 的看点不只是模型分数，还包括阿里云、百炼和开发者生态能否把能力快速转化为稳定调用量。",
+      "source": "The Wall Street Journal",
+      "url": "https://www.wsj.com/tech/ai/alibaba-says-new-ai-model-is-just-second-to-anthropics-fable-5-ba88a55b",
+      "published_at": "2026-07-20T08:00:00Z",
+      "tags": ["Qwen", "通义千问", "Coding Agent"],
+      "importance": 93
+    },
+    {
+      "id": "tencent-hy3-yuanbao-agent-2026",
+      "category": "china",
+      "title": "腾讯发布混元 HY3，并把 Agent 能力接入元宝",
+      "summary": "腾讯正式发布混元 HY3，强调更强的 Agent 执行能力和更深入的产品集成；元宝同步加入 Agent 功能，用于拆解并完成更复杂的任务。这条路线的优势在于模型可直接进入社交、内容和办公产品，后续应关注跨应用执行的稳定性。",
+      "source": "Tencent",
+      "url": "https://www.tencent.com/zh-cn/articles/2202386.html",
+      "published_at": "2026-07-06T08:00:00Z",
+      "tags": ["腾讯元宝", "混元 HY3", "Agent"],
+      "importance": 90
+    },
+    {
+      "id": "zhipu-glm52-2026",
+      "category": "china",
+      "title": "智谱 GLM-5.2 聚焦长程编程 Agent 与百万上下文",
+      "summary": "智谱将 GLM-5.2 定位为面向编程和长程执行的开放模型，并提供最高百万级上下文能力。值得观察的是它能否把长上下文转化为稳定的代码仓库级任务完成率，以及 Z.ai 平台能否吸引更多海外开发者。",
+      "source": "Zhipu AI · Z.ai",
+      "url": "https://www.zhipuai.cn/en",
+      "published_at": "2026-06-18T08:00:00Z",
+      "tags": ["智谱", "GLM-5.2", "Long-horizon Agent"],
+      "importance": 88
+    },
+    {
+      "id": "deepseek-v4-2026",
+      "category": "china",
+      "title": "DeepSeek V4 回归，重点适配国产芯片与开放模型部署",
+      "summary": "DeepSeek V4 面向华为等国产 AI 芯片进行优化，并继续以开放模型和低成本部署作为竞争抓手。除了公司公布的能力指标，更关键的验证点是国产算力上的吞吐、工具调用稳定性，以及价格下降能否带来新的企业使用场景。",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/technology/chinas-deepseek-returns-with-new-model-year-after-viral-rise-2026-04-24/",
+      "published_at": "2026-04-24T08:00:00Z",
+      "tags": ["DeepSeek V4", "国产算力", "开放模型"],
+      "importance": 91
+    },
+    {
+      "id": "bytedance-seed21-2026",
+      "category": "china",
+      "title": "字节跳动发布 Seed2.1，把模型能力推向真实生产任务",
+      "summary": "Seed2.1 是字节跳动新一代 Agent 模型系列，目标是提升真实生产环境中的复杂任务完成能力。结合豆包的消费端入口与 Seed 的多模态研究，字节的关键变量是能否把模型能力快速转化为内容创作、办公和开发工具中的高频工作流。",
+      "source": "ByteDance Seed",
+      "url": "https://seed.bytedance.com/blog/seed2-1-officially-released-advancing-ai-productivity",
+      "published_at": "2026-06-23T08:00:00Z",
+      "tags": ["字节跳动", "Seed2.1", "豆包"],
+      "importance": 89
     },
     {
       "id": "eu-cyber-ai-plan-2026",
