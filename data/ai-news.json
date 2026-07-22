@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-22T15:15:00Z",
+  "item_count": 13,
+  "category_counts": {
+    "research": 2,
+    "frontier": 1,
+    "bigtech": 2,
+    "startups": 4,
+    "opensource": 2,
+    "policy": 2
+  },
+  "sources": [
+    {"name": "OpenAI", "status": "ok", "count": 1, "note": "Initial verified snapshot"},
+    {"name": "OpenAlex / arXiv", "status": "ok", "count": 2, "note": "Conference papers and abstracts"},
+    {"name": "Academic Startup Radar", "status": "ok", "count": 4, "note": "Founder and funding monitor"},
+    {"name": "Hugging Face", "status": "ok", "count": 2, "note": "Open-source ecosystem"},
+    {"name": "EU AI Policy", "status": "ok", "count": 2, "note": "Official Commission updates"},
+    {"name": "Industry Monitor", "status": "ok", "count": 2, "note": "Big-tech and infrastructure"}
+  ],
+  "items": [
+    {
+      "id": "openai-hf-security-20260722",
+      "category": "frontier",
+      "title": "OpenAI and Hugging Face respond to a model-evaluation security incident",
+      "summary": "OpenAI and Hugging Face disclosed a security incident involving a cyber-capable AI agent during model evaluation. Their joint update explains the incident, the containment work and how advanced cyber capabilities will be evaluated more safely.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
+      "published_at": "2026-07-22T08:00:00Z",
+      "tags": ["OpenAI", "Hugging Face", "Cyber Safety"],
+      "importance": 104
+    },
+    {
+      "id": "bace-gecco-2026",
+      "category": "research",
+      "title": "BACE: LLM-based Code Generation through Bayesian Anchored Co-Evolution",
+      "summary": "BACE treats generated code and tests as co-evolving populations instead of accepting synthetic tests as ground truth. Bayesian belief updates model tests as noisy sensors, while public examples anchor the search and reduce self-validating drift. The authors report strong results on LiveCodeBench v6 across proprietary and open-weight models.",
+      "source": "OpenAlex · arXiv",
+      "url": "https://arxiv.org/abs/2603.28653",
+      "published_at": "2026-07-10T00:00:00Z",
+      "tags": ["Code Generation", "Bayesian Methods", "LLM Agents"],
+      "authors": ["Kaushitha Silva", "Srinath Perera"],
+      "venue": "GECCO 2026",
+      "importance": 101
+    },
+    {
+      "id": "rhb-icml-2026",
+      "category": "research",
+      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
+      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
+      "source": "OpenReview · arXiv",
+      "url": "https://arxiv.org/abs/2605.02964",
+      "published_at": "2026-06-24T00:00:00Z",
+      "tags": ["Reward Hacking", "Agent Safety", "Evaluation"],
+      "authors": ["Kunvar Thaman"],
+      "venue": "ICML 2026",
+      "importance": 100
+    },
+    {
+      "id": "world-labs-series-2026",
+      "category": "startups",
+      "title": "Fei-Fei Li's World Labs raises $1 billion for spatial intelligence",
+      "summary": "World Labs raised a major round to advance foundation models that understand and generate 3D environments. The company, co-founded by Stanford professor Fei-Fei Li, positions spatial intelligence as infrastructure for robotics, immersive media, design and simulation.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/business/ai-pioneer-fei-fei-lis-world-labs-raises-1-billion-funding-2026-02-18/",
+      "published_at": "2026-02-18T10:00:00Z",
+      "tags": ["Fei-Fei Li", "World Models", "Spatial AI"],
+      "importance": 96
+    },
+    {
+      "id": "eu-ai-transparency-guidelines-2026",
+      "category": "policy",
+      "title": "EU publishes guidance for AI-generated content transparency",
+      "summary": "The European Commission issued practical guidance for Article 50 of the AI Act. It clarifies when users must be told they are interacting with AI and how providers should mark machine-generated or manipulated content before the obligations begin applying on 2 August 2026.",
+      "source": "European Commission",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems",
+      "published_at": "2026-07-20T09:00:00Z",
+      "tags": ["EU AI Act", "Transparency", "Synthetic Media"],
+      "importance": 94
+    },
+    {
+      "id": "amd-anthropic-20260722",
+      "category": "bigtech",
+      "title": "AMD and Anthropic sign a major chip and investment agreement",
+      "summary": "The reported agreement links frontier-model demand with AMD's accelerator roadmap and includes an investment component, adding another large-scale compute partnership to the increasingly competitive AI infrastructure market.",
+      "source": "The Wall Street Journal",
+      "url": "https://www.wsj.com/tech/ai/amd-and-anthropic-sign-major-chips-and-investment-deal-4adfdc45",
+      "published_at": "2026-07-22T11:00:00Z",
+      "tags": ["Anthropic", "AMD", "AI Chips"],
+      "importance": 93
+    },
+    {
+      "id": "glow-stealth-20260722",
+      "category": "startups",
+      "title": "Glow emerges from stealth at a $1.2B valuation",
+      "summary": "Founded by former Meta and Snowflake executives, Glow is building endpoint security for workplaces reshaped by AI agents and new automation patterns. Its launch highlights cybersecurity as an active vertical for newly funded AI-native companies.",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/07/22/glow-emerges-from-stealth-at-1-2b-valuation-to-challenge-endpoint-security-in-the-ai-era/",
+      "published_at": "2026-07-22T10:00:00Z",
+      "tags": ["Cybersecurity", "Enterprise AI", "Funding"],
+      "importance": 91
+    },
+    {
+      "id": "ami-labs-2026",
+      "category": "startups",
+      "title": "Yann LeCun's AMI raises $1B to build world-model AI",
+      "summary": "Advanced Machine Intelligence is pursuing systems with persistent memory, planning and an understanding of the physical world rather than a language-only architecture. The startup plans to work with industrial partners in manufacturing, biomedicine and robotics.",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/yann-lecun-raises-dollar1-billion-to-build-ai-that-understands-the-physical-world",
+      "published_at": "2026-03-10T09:00:00Z",
+      "tags": ["Yann LeCun", "World Models", "Physical AI"],
+      "importance": 89
+    },
+    {
+      "id": "physical-ai-startup-wave-2026",
+      "category": "startups",
+      "title": "AI founders pivot from chatbots toward physical-world systems",
+      "summary": "A new group of academic founders is building renderers, simulators and planners that learn space, time and physical interaction. Companies including World Labs, Overworld, Causal Labs and Extropic illustrate how startup activity is spreading into robotics, simulation and specialized hardware.",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/9bab5a3febad9832f55f8ada33de57b4",
+      "published_at": "2026-06-24T08:00:00Z",
+      "tags": ["Academic Founders", "Robotics", "Simulation"],
+      "importance": 86
+    },
+    {
+      "id": "north-mini-code-2026",
+      "category": "opensource",
+      "title": "Cohere releases North Mini Code for agentic software engineering",
+      "summary": "North Mini Code is a 30B-parameter mixture-of-experts model with 3B active parameters, released under Apache 2.0. It targets terminal-based agents, code generation and longer software-engineering workflows while remaining deployable as an open model.",
+      "source": "Cohere Labs · Hugging Face",
+      "url": "https://huggingface.co/blog/CohereLabs/introducing-north-mini-code",
+      "published_at": "2026-06-09T09:00:00Z",
+      "tags": ["Open Weights", "Coding Model", "Apache 2.0"],
+      "importance": 84
+    },
+    {
+      "id": "hf-foundry-compute-2026",
+      "category": "bigtech",
+      "title": "Hugging Face models arrive on Foundry Managed Compute",
+      "summary": "Microsoft and Hugging Face are offering a curated catalog of open-weight models with pre-staged weights, scanned runtimes and enterprise controls. The move reduces friction between community model discovery and governed production deployment on Azure.",
+      "source": "Microsoft · Hugging Face",
+      "url": "https://huggingface.co/blog/microsoft/foundry-managed-compute",
+      "published_at": "2026-07-07T09:00:00Z",
+      "tags": ["Azure", "Open Models", "Enterprise AI"],
+      "importance": 82
+    },
+    {
+      "id": "kimi-k3-open-weights-2026",
+      "category": "opensource",
+      "title": "Kimi K3 pushes open-weight models into a larger parameter regime",
+      "summary": "A community technical overview examines Kimi K3's 2.8-trillion-parameter mixture architecture, MXFP4 quantization and promised open weights. The release is aimed at agent, coding and long-context workloads while raising new questions about practical serving costs.",
+      "source": "Hugging Face Community",
+      "url": "https://huggingface.co/blog/ResterChed/kimi-k3-model-overview-mxfp4-quantization-open-wei",
+      "published_at": "2026-07-17T09:00:00Z",
+      "tags": ["Kimi", "Open Weights", "Inference"],
+      "importance": 80
+    },
+    {
+      "id": "eu-cyber-ai-plan-2026",
+      "category": "policy",
+      "title": "European Commission presents a cybersecurity and AI action plan",
+      "summary": "The plan connects responsible AI adoption with stronger cyber resilience. It focuses on using AI for defense while managing the security risks created by more capable models, automated attacks and AI-dependent infrastructure.",
+      "source": "European Commission",
+      "url": "https://digital-strategy.ec.europa.eu/en/library/eu-action-plan-cybersecurity-and-artificial-intelligence",
+      "published_at": "2026-07-07T08:00:00Z",
+      "tags": ["Cybersecurity", "EU Policy", "AI Safety"],
+      "importance": 78
+    }
+  ]
+}
