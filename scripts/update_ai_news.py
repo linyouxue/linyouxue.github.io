@@ -36,10 +36,20 @@ TIMEOUT = 28
 CATEGORY_LIMITS = {
     "research": 20,
     "frontier": 16,
+    "china": 16,
     "bigtech": 14,
     "startups": 14,
     "opensource": 12,
     "policy": 10,
+}
+
+CHINA_WATCHLIST = {
+    "Kimi / 月之暗面": ["kimi", "moonshot", "月之暗面"],
+    "Qwen / 通义千问": ["qwen", "通义千问", "阿里云百炼"],
+    "腾讯元宝 / 混元": ["腾讯元宝", "yuanbao", "hunyuan", "混元", "tencent hy"],
+    "智谱 / Z.ai": ["智谱", "zhipu", "z.ai", "glm-"],
+    "DeepSeek": ["deepseek"],
+    "字节豆包 / Seed": ["字节", "bytedance", "doubao", "豆包", "seedance", "seedream", "seed2"],
 }
 
 OFFICIAL_FEEDS = [
@@ -128,6 +138,27 @@ NEWS_QUERIES = [
         "category": "opensource",
         "tags": ["Open Source", "Models & Tools"],
         "limit": 8,
+    },
+    {
+        "name": "China AI · Kimi & Qwen",
+        "query": '(Kimi OR "Moonshot AI" OR 月之暗面 OR Qwen OR 通义千问) (model OR 模型 OR release OR 发布 OR API OR funding) when:30d',
+        "category": "china",
+        "tags": ["Kimi", "Qwen", "China AI"],
+        "limit": 10,
+    },
+    {
+        "name": "China AI · DeepSeek & Zhipu",
+        "query": '(DeepSeek OR 智谱 OR Zhipu OR "Z.ai" OR GLM) (model OR 模型 OR release OR 发布 OR open-source) when:30d',
+        "category": "china",
+        "tags": ["DeepSeek", "Zhipu", "China AI"],
+        "limit": 10,
+    },
+    {
+        "name": "China AI · Tencent & ByteDance",
+        "query": '(腾讯元宝 OR "Tencent Yuanbao" OR 腾讯混元 OR Hunyuan OR 豆包 OR Doubao OR "ByteDance Seed") (AI OR model OR 模型 OR 发布) when:30d',
+        "category": "china",
+        "tags": ["Tencent", "ByteDance", "China AI"],
+        "limit": 10,
     },
 ]
 
@@ -287,7 +318,7 @@ def publisher_priority(source: str) -> int:
 
 
 def score_item(category: str, published_at: str, official: bool = False, indexed: bool = False, source: str = "") -> int:
-    base = {"research": 66, "frontier": 64, "startups": 61, "bigtech": 57, "policy": 54, "opensource": 52}.get(category, 50)
+    base = {"research": 66, "frontier": 64, "china": 63, "startups": 61, "bigtech": 57, "policy": 54, "opensource": 52}.get(category, 50)
     date = parse_datetime(published_at)
     age_days = max(0.0, (NOW - date).total_seconds() / 86400) if date else 90
     freshness = max(0, round(18 - min(age_days, 90) / 5))
@@ -529,6 +560,42 @@ def deduplicate_and_limit(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return selected
 
 
+def build_analysis(items: list[dict[str, Any]]) -> dict[str, Any]:
+    grouped = {category: [item for item in items if item["category"] == category] for category in CATEGORY_LIMITS}
+    searchable = [
+        (item, " ".join([item.get("title", ""), item.get("summary", ""), item.get("source", ""), *item.get("tags", [])]).lower())
+        for item in items
+    ]
+    coverage = {
+        company: sum(any(term.lower() in haystack for term in terms) for _, haystack in searchable)
+        for company, terms in CHINA_WATCHLIST.items()
+    }
+    covered = [company for company, count in coverage.items() if count]
+
+    research_titles = "、".join(f"《{shorten(item['title'], 58)}》" for item in grouped["research"][:2]) or "本期会议论文"
+    china_titles = "、".join(f"《{shorten(item['title'], 52)}》" for item in grouped["china"][:2]) or "中国模型公司的新动作"
+    industry_count = len(grouped["frontier"]) + len(grouped["bigtech"])
+    covered_text = "、".join(covered) if covered else "Kimi、Qwen、腾讯元宝/混元、智谱、DeepSeek 与字节豆包/Seed"
+
+    paragraphs = [
+        f"研究侧共收录 {len(grouped['research'])} 条信号，重点包括 {research_titles}。与只看榜单相比，更值得持续观察的是论文能否把 Agent 的可靠性、评测完整性与推理成本一起向前推进。",
+        f"中国 AI 板块本期收录 {len(grouped['china'])} 条动态，已覆盖 {covered_text}。代表性变化包括 {china_titles}；竞争正在从单次模型发布延伸到开源策略、Agent 产品入口、国产算力适配和价格体系。",
+        f"产业侧共有 {industry_count} 条前沿实验室与大厂动态，另有 {len(grouped['startups'])} 条创业信号和 {len(grouped['policy'])} 条政策安全更新。把这些信息放在一起看，模型能力、算力供给、产品分发与合规成本正在变成同一个竞争问题。",
+    ]
+    takeaways = [
+        {"title": "技术判断", "body": "Agent 的长程可靠性、工具调用与真实工作流评测，比单一静态 benchmark 更值得跟踪。"},
+        {"title": "中国 AI", "body": f"当前重点覆盖 {len(covered)}/{len(CHINA_WATCHLIST)} 组公司；没有新消息的公司仍保留在持续监控名单中。"},
+        {"title": "产业判断", "body": "开放权重、低价 API、消费端入口和国产算力适配，正在共同决定模型能否形成规模化使用。"},
+    ]
+    return {
+        "title": "从模型竞速走向产品、算力与生态：本期 AI 趋势观察",
+        "lead": f"本期共整理 {len(items)} 条有效信号。下面不是新闻复述，而是把论文、公司、创业与政策放在同一张图里后的编辑性判断。",
+        "paragraphs": paragraphs,
+        "takeaways": takeaways,
+        "china_watch_coverage": coverage,
+    }
+
+
 def build_payload(items: list[dict[str, Any]], statuses: list[SourceStatus]) -> dict[str, Any]:
     counts = {category: sum(item["category"] == category for item in items) for category in CATEGORY_LIMITS}
     return {
@@ -536,6 +603,7 @@ def build_payload(items: list[dict[str, Any]], statuses: list[SourceStatus]) -> 
         "generated_at": NOW.isoformat(timespec="seconds").replace("+00:00", "Z"),
         "item_count": len(items),
         "category_counts": counts,
+        "analysis": build_analysis(items),
         "sources": [status.as_dict() for status in statuses],
         "items": items,
     }
