@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A mathematical modeling case study on reconstructing hidden audience votes and improving the Dancing with the Stars elimination mechanism.">
+  <meta name="theme-color" content="#f4f6ff">
+  <link rel="icon" type="image/svg+xml" href="../assets/site-icon.svg">
+  <title>From Hidden to Heard · Linyouxue's Digital Garden</title>
+  <style>
+    :root{--ink:#17213f;--muted:#6f7b98;--line:rgba(89,105,153,.14);--accent:#6678ef;--purple:#8a66ee;--panel:rgba(255,255,255,.72);--shadow:0 24px 70px rgba(57,70,116,.12)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;background:radial-gradient(circle at 10% 5%,#dfe8ff 0,transparent 25%),radial-gradient(circle at 92% 43%,#eadfff 0,transparent 27%),linear-gradient(145deg,#f9faff,#f0f2fb 52%,#faf8ff);line-height:1.7}.progress{position:fixed;inset:0 auto auto 0;z-index:10;width:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--purple));box-shadow:0 1px 8px rgba(102,120,239,.35)}a{color:inherit}.shell{width:min(1120px,calc(100% - 36px));margin:0 auto}.nav{display:flex;align-items:center;justify-content:space-between;padding:28px 0}.brand{text-decoration:none;font-size:13px;font-weight:900;letter-spacing:-.01em}.brand span{color:var(--accent)}.back{display:flex;align-items:center;gap:8px;padding:9px 13px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.55);color:#5e6988;text-decoration:none;font-size:12px;font-weight:800;transition:.2s}.back:hover{transform:translateX(-3px);background:#fff}.hero{position:relative;padding:72px 72px 56px;border:1px solid rgba(255,255,255,.9);border-radius:36px;background:var(--panel);box-shadow:var(--shadow);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);overflow:hidden}.hero:before{content:"C";position:absolute;right:-4px;top:-90px;color:rgba(108,119,228,.055);font-family:Georgia,serif;font-size:410px;font-weight:700;line-height:1}.kicker{position:relative;display:flex;align-items:center;gap:9px;color:#7883a2;font-size:10px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}.kicker:before{content:"";width:27px;height:2px;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--purple))}.hero h1{position:relative;max-width:820px;margin:18px 0 20px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(44px,6vw,78px);line-height:1.02;letter-spacing:-.055em}.hero h1 em{color:var(--accent);font-style:normal}.lead{position:relative;max-width:680px;margin:0;color:#5f6b88;font-size:17px;line-height:1.8}.meta{position:relative;display:flex;flex-wrap:wrap;gap:8px;margin-top:31px}.meta span{padding:7px 10px;border:1px solid rgba(104,118,163,.1);border-radius:10px;background:rgba(244,246,255,.78);color:#687393;font-size:10px;font-weight:850;letter-spacing:.05em}.metrics{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin-top:46px}.metric{padding:18px;border:1px solid rgba(100,115,164,.1);border-radius:18px;background:rgba(255,255,255,.67)}.metric strong{display:block;color:#3c4d8f;font-size:27px;letter-spacing:-.045em}.metric span{color:#7b86a3;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.07em}
+    .article{display:grid;grid-template-columns:190px minmax(0,1fr);gap:50px;padding:78px 0 90px}.toc{position:sticky;top:28px;align-self:start}.toc p{margin:0 0 13px;color:#9aa3b9;font-size:9px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}.toc a{display:block;padding:6px 0;color:#7d87a2;text-decoration:none;font-size:12px;font-weight:700;transition:.2s}.toc a:hover{color:var(--accent);transform:translateX(3px)}.story{min-width:0}.story section{scroll-margin-top:25px;margin-bottom:68px}.section-label{display:block;margin-bottom:11px;color:#7884b4;font-size:10px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}.story h2{margin:0 0 20px;font-size:31px;line-height:1.2;letter-spacing:-.04em}.story>section>p{margin:0 0 17px;color:#596581;font-size:15px}.question{margin-top:28px;padding:24px 26px;border-left:4px solid var(--accent);border-radius:0 18px 18px 0;background:rgba(255,255,255,.58);color:#414e70;font-family:Georgia,"Times New Roman",serif;font-size:19px;line-height:1.6}.pipeline{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:27px}.step{position:relative;padding:24px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.62)}.step b{display:grid;place-items:center;width:31px;height:31px;margin-bottom:22px;border-radius:10px;background:linear-gradient(145deg,#687cf0,#8a64e9);color:#fff;font-size:11px;box-shadow:0 8px 18px rgba(101,111,220,.24)}.step h3{margin:0 0 8px;font-size:16px}.step p{margin:0;color:#74809c;font-size:12px;line-height:1.65}.finding{display:grid;grid-template-columns:80px 1fr;gap:20px;padding:24px 0;border-top:1px solid var(--line)}.finding:last-child{border-bottom:1px solid var(--line)}.finding-number{color:#8290c7;font-family:Georgia,serif;font-size:32px;line-height:1}.finding h3{margin:0 0 8px;font-size:17px}.finding p{margin:0;color:#68748f;font-size:13px}.finding strong{color:#5668d9}.rule{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px;margin-top:27px;padding:25px;border:1px solid rgba(101,116,164,.12);border-radius:22px;background:rgba(255,255,255,.6)}.rule-part{padding:18px;border-radius:16px;background:#f3f5fd;text-align:center}.rule-part strong{display:block;margin-bottom:3px;color:#5264d6;font-size:15px}.rule-part span{color:#7d87a1;font-size:10px}.plus{color:#8b70e3;font-size:22px;font-weight:800}.takeaway{position:relative;padding:34px;border-radius:25px;color:#fff;background:radial-gradient(circle at 90% 0,rgba(255,255,255,.2),transparent 30%),linear-gradient(135deg,#5f75e9,#8263df);box-shadow:0 22px 45px rgba(87,92,190,.23)}.takeaway p{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:24px;line-height:1.55}.takeaway small{display:block;margin-top:18px;color:rgba(255,255,255,.72);font-size:10px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.footer{display:flex;align-items:center;justify-content:space-between;padding:28px 0 38px;border-top:1px solid var(--line);color:#8490aa;font-size:11px}.footer a{color:#6272df;text-decoration:none;font-weight:850}
+    @media(max-width:820px){.hero{padding:54px 35px 38px}.metrics{grid-template-columns:1fr 1fr}.article{grid-template-columns:1fr;padding-top:55px}.toc{display:none}.pipeline{grid-template-columns:1fr}}
+    @media(max-width:520px){.shell{width:min(100% - 22px,1120px)}.nav{padding:18px 2px}.brand{font-size:11px}.hero{padding:42px 24px 30px;border-radius:25px}.hero h1{font-size:41px}.lead{font-size:14px}.metrics{grid-template-columns:1fr 1fr}.metric{padding:14px}.metric strong{font-size:23px}.article{padding:48px 8px 64px}.story h2{font-size:26px}.pipeline{gap:10px}.finding{grid-template-columns:54px 1fr}.rule{grid-template-columns:1fr}.plus{transform:rotate(90deg);text-align:center}.takeaway{padding:27px}.takeaway p{font-size:20px}.footer{align-items:flex-start;gap:20px}.footer span{max-width:190px}}
+  </style>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <div class="shell">
+    <nav class="nav" aria-label="Primary navigation"><a class="brand" href="../">Linyouxue's <span>Digital Garden</span></a><a class="back" href="../#works-tab"><svg aria-hidden="true" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>Back to Works</a></nav>
+
+    <header class="hero">
+      <span class="kicker">MCM / ICM 2026 · Problem C</span>
+      <h1>From Hidden to <em>Heard</em></h1>
+      <p class="lead">Dancing Through the Vote–Elimination Mechanism — a modeling study that reconstructs hidden audience support, compares voting rules, and designs a fairer system for <i>Dancing with the Stars</i>.</p>
+      <div class="meta"><span>Mathematical Modeling</span><span>Constrained Inference</span><span>Counterfactual Analysis</span><span>Machine Learning</span></div>
+      <div class="metrics" aria-label="Project metrics"><div class="metric"><strong>34</strong><span>Seasons</span></div><div class="metric"><strong>261</strong><span>Elimination weeks</span></div><div class="metric"><strong>88.3%</strong><span>Pct. consistency</span></div><div class="metric"><strong>67.05%</strong><span>Rule agreement</span></div></div>
+    </header>
+
+    <main class="article">
+      <aside class="toc" aria-label="Table of contents"><p>On this page</p><a href="#overview">Overview</a><a href="#system">Modeling system</a><a href="#findings">Key findings</a><a href="#design">Rule design</a><a href="#reflection">Reflection</a></aside>
+      <article class="story">
+        <section id="overview">
+          <span class="section-label">01 · The challenge</span>
+          <h2>Inferring what the show never reveals</h2>
+          <p>Judge scores are public, but weekly audience votes are not. Only the contestants who advance or leave are observed. That makes the central variable of the competition invisible—and turns any comparison of elimination rules into an inverse problem.</p>
+          <p>We used 34 seasons of historical data to reconstruct weekly vote shares, replay past eliminations under alternative rules, study contestant-level effects, and propose a practical hybrid mechanism.</p>
+          <div class="question">How can an unobserved vote distribution be recovered from visible scores and elimination outcomes—without contradicting what actually happened?</div>
+        </section>
+
+        <section id="system">
+          <span class="section-label">02 · Modeling system</span>
+          <h2>Four connected layers</h2>
+          <p>The project combines constrained statistical inference with counterfactual simulation and interpretable machine learning. Each layer answers one part of the problem while passing a consistent representation of audience support to the next.</p>
+          <div class="pipeline">
+            <div class="step"><b>01</b><h3>SSPF-QP Reconstruction</h3><p>A state-space particle filter captures week-to-week support inertia; quadratic programming minimally calibrates estimates to satisfy observed eliminations.</p></div>
+            <div class="step"><b>02</b><h3>Counterfactual Replay</h3><p>Historical schedules are held fixed while ranking-based and percentage-based aggregation rules are swapped and replayed across seasons.</p></div>
+            <div class="step"><b>03</b><h3>Macro–Micro Analysis</h3><p>Weekly and season-level random-forest models separate short-term scoring effects from longer-term survival patterns.</p></div>
+            <div class="step"><b>04</b><h3>PGHM Design</h3><p>A percentage-based aggregation rule is paired with a judges' save restricted to the bottom two contestants.</p></div>
+          </div>
+        </section>
+
+        <section id="findings">
+          <span class="section-label">03 · Results</span>
+          <h2>What the reconstruction revealed</h2>
+          <div class="finding"><span class="finding-number">01</span><div><h3>Reliable reconstruction—with visible uncertainty</h3><p>The reconstructed votes reached <strong>0.883 external consistency</strong> in percentage-based seasons and <strong>0.639</strong> in ranking-based seasons. Posterior variance records where the hidden votes remain uncertain.</p></div></div>
+          <div class="finding"><span class="finding-number">02</span><div><h3>The rule matters in roughly one out of three weeks</h3><p>Counterfactual replay produced the same eliminated contestant in <strong>67.05%</strong> of elimination weeks; the remaining <strong>32.95%</strong> changed under the alternative rule.</p></div></div>
+          <div class="finding"><span class="finding-number">03</span><div><h3>Each rule creates a different kind of influence</h3><p>Percentage aggregation preserves intensity and can amplify extreme popularity. Rank aggregation compresses score gaps, making small ordering changes more consequential.</p></div></div>
+          <div class="finding"><span class="finding-number">04</span><div><h3>Performance and persistence are not the same outcome</h3><p>The two-level random-forest analysis distinguishes factors affecting weekly scores and support from those associated with final season survival, including age, occupation, professional partner, and dynamic performance signals.</p></div></div>
+        </section>
+
+        <section id="design">
+          <span class="section-label">04 · System design</span>
+          <h2>A hybrid rule with a clear boundary</h2>
+          <p>Our proposed PGHM keeps audience preference meaningful through percentage-based aggregation, then gives judges a narrowly defined intervention: save one contestant only from the bottom two. The boundary limits extreme outcomes without allowing judges to override the public vote across the entire field.</p>
+          <div class="rule"><div class="rule-part"><strong>Percentage Aggregation</strong><span>Preserve preference intensity</span></div><span class="plus">+</span><div class="rule-part"><strong>Judges' Save</strong><span>Intervene only within Bottom 2</span></div></div>
+        </section>
+
+        <section id="reflection">
+          <span class="section-label">05 · Reflection</span>
+          <h2>What I took away</h2>
+          <p>The hardest part was not choosing a complex model. It was keeping every layer logically consistent: estimated votes had to respect observed eliminations, comparisons had to preserve the original schedule, and the final recommendation needed to be understandable enough to operate on a live show.</p>
+          <div class="takeaway"><p>Good modeling does more than fit hidden data—it makes uncertainty explicit and turns competing values into a rule people can actually use.</p><small>Project takeaway</small></div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="footer"><span>© 2026 Linyouxue · Mathematical Modeling Portfolio</span><a href="../#works-tab">Return to all works →</a></footer>
+  </div>
+  <script>
+    const progress=document.querySelector('#progress');function syncProgress(){const max=document.documentElement.scrollHeight-innerHeight;progress.style.width=`${max?scrollY/max*100:0}%`}addEventListener('scroll',syncProgress,{passive:true});addEventListener('resize',syncProgress);syncProgress();
+  </script>
+</body>
+</html>
