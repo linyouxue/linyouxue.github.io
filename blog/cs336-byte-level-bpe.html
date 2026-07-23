@@ -1,0 +1,1945 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="从 Stanford CS336 Lecture 1 出发，用 Python 手写带预分词边界的 Byte-Level BPE 训练器，并用 ab ababab abab 逐轮追踪 token 状态。">
+  <meta name="theme-color" content="#f4f6ff">
+  <meta property="og:title" content="从字符串到 Token ID：手写 Byte-Level BPE">
+  <meta property="og:description" content="预分词、频率聚合、加权 pair 统计、非重叠合并与完整训练循环。">
+  <link rel="icon" type="image/svg+xml" href="../assets/site-icon.svg">
+  <title>手写 Byte-Level BPE · Linyouxue's Digital Garden</title>
+  <style>
+    :root{--ink:#17213f;--muted:#6d7894;--line:rgba(88,104,153,.14);--accent:#6578ed;--purple:#8b66e8;--cyan:#58b9d8;--panel:rgba(255,255,255,.76);--soft:#f1f4fc;--code:#18223b;--shadow:0 24px 70px rgba(57,70,116,.12)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:30px}body{margin:0;color:var(--ink);font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;background:radial-gradient(circle at 8% 3%,#dfe8ff 0,transparent 23%),radial-gradient(circle at 96% 31%,#ebdfff 0,transparent 25%),linear-gradient(145deg,#f9faff,#f0f2fb 52%,#faf8ff);line-height:1.78}a{color:inherit}.scroll-progress{position:fixed;inset:0 auto auto 0;z-index:50;width:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--purple),var(--cyan));box-shadow:0 1px 8px rgba(102,120,239,.35)}.shell{width:min(1160px,calc(100% - 36px));margin:0 auto}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:26px 0}.brand{text-decoration:none;font-size:13px;font-weight:900}.brand span{color:var(--accent)}.back{display:flex;align-items:center;gap:8px;padding:9px 13px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.6);color:#5e6988;text-decoration:none;font-size:12px;font-weight:800;transition:.2s}.back:hover{transform:translateX(-3px);background:#fff}
+    .hero{position:relative;padding:58px 62px 46px;border:1px solid rgba(255,255,255,.94);border-radius:34px;background:var(--panel);box-shadow:var(--shadow);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);overflow:hidden}.hero:before{content:"BPE";position:absolute;right:-18px;top:-76px;color:rgba(105,119,226,.045);font-family:Georgia,serif;font-size:260px;font-weight:800;line-height:1}.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.18fr) minmax(330px,.82fr);align-items:center;gap:48px}.kicker{display:flex;align-items:center;gap:9px;color:#7883a2;font-size:10px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}.kicker:before{content:"";width:27px;height:2px;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--purple))}.hero h1{max-width:700px;margin:17px 0 17px;font-size:clamp(38px,5vw,65px);line-height:1.04;letter-spacing:-.055em}.hero h1 em{color:var(--accent);font-style:normal}.lead{max-width:700px;margin:0;color:#5e6986;font-size:15px;line-height:1.85}.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:25px}.meta span,.meta a{padding:7px 10px;border:1px solid rgba(104,118,163,.1);border-radius:10px;background:rgba(244,246,255,.82);color:#687393;text-decoration:none;font-size:9px;font-weight:850;letter-spacing:.06em;text-transform:uppercase}
+    .merge-board{padding:20px;border:1px solid rgba(108,121,170,.12);border-radius:23px;background:rgba(247,249,255,.82);box-shadow:inset 0 1px 0 #fff}.board-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;color:#78829d;font-size:9px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}.board-head i{width:7px;height:7px;border-radius:50%;background:#58d49b;box-shadow:0 0 0 5px rgba(88,212,155,.12)}.merge-row{display:grid;grid-template-columns:26px minmax(0,1fr) 18px minmax(0,1fr);align-items:center;gap:8px;padding:10px 0;border-top:1px solid rgba(97,111,158,.09)}.merge-row:first-of-type{border-top:0}.merge-row b{display:grid;place-items:center;width:24px;height:24px;border-radius:8px;background:#e9edff;color:#5d6ee0;font-size:9px}.merge-row code{padding:6px 7px;border-radius:8px;background:#fff;color:#3f4d7c;font-size:10px;white-space:nowrap}.merge-row span{color:#9aa3b7;text-align:center}.merge-row strong{color:#5366d8;font-size:10px;white-space:nowrap}
+    .metrics{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:34px}.metric{padding:16px;border:1px solid rgba(100,115,164,.1);border-radius:17px;background:rgba(255,255,255,.67)}.metric strong{display:block;color:#3c4d8f;font-size:25px;letter-spacing:-.045em}.metric span{display:block;color:#7b86a3;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;line-height:1.45}
+    .quick{display:grid;grid-template-columns:1.12fr .88fr;gap:14px;margin:18px 0 0}.quick-card{padding:22px 24px;border:1px solid rgba(255,255,255,.92);border-radius:22px;background:var(--panel);box-shadow:0 14px 38px rgba(57,70,116,.08)}.quick-card small{display:block;margin-bottom:8px;color:#7b86a4;font-size:9px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}.quick-card h2{margin:0 0 8px;font-size:19px;letter-spacing:-.03em}.quick-card p{margin:0;color:var(--muted);font-size:12px}.invariant{display:grid;grid-template-columns:auto 1fr;gap:11px;align-items:start}.invariant b{display:grid;place-items:center;width:34px;height:34px;border-radius:12px;color:#fff;background:linear-gradient(145deg,var(--accent),var(--purple));font-size:13px}.invariant code{font-size:11px}
+    .article{display:grid;grid-template-columns:225px minmax(0,1fr);gap:35px;align-items:start;margin:32px 0 70px}.toc{position:sticky;top:22px;padding:21px 18px;border:1px solid rgba(255,255,255,.9);border-radius:21px;background:rgba(255,255,255,.66);box-shadow:0 14px 38px rgba(61,74,119,.08);backdrop-filter:blur(18px);max-height:calc(100vh - 44px);overflow:auto}.toc>p{margin:0 0 12px;color:#8a94ac;font-size:9px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}.toc ul{margin:0;padding:0;list-style:none}.toc ul ul{padding:5px 0 2px 12px}.toc li{margin:2px 0}.toc a{display:block;padding:6px 8px;border-radius:9px;color:#747f9a;text-decoration:none;font-size:10px;font-weight:700;line-height:1.35;transition:.2s}.toc ul ul a{font-size:9px;font-weight:650}.toc a:hover,.toc a.active{color:#5266dc;background:#eef1ff}
+    .story{min-width:0;padding:47px 54px;border:1px solid rgba(255,255,255,.93);border-radius:29px;background:rgba(255,255,255,.8);box-shadow:var(--shadow)}.story>.level2:first-child>h2{margin-top:0}.story section{min-width:0}.story h2{margin:74px 0 18px;padding-top:2px;font-size:30px;line-height:1.25;letter-spacing:-.045em}.story h2:before{content:"";display:block;width:31px;height:3px;margin-bottom:13px;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--purple))}.story h3{margin:42px 0 13px;font-size:20px;letter-spacing:-.025em}.story h4{margin:27px 0 8px;font-size:15px}.story p{margin:0 0 17px;color:#4f5b79;font-size:14px}.story strong{color:#263453}.story ul,.story ol{margin:0 0 19px;padding-left:23px;color:#4f5b79;font-size:13px}.story li{margin:6px 0}.story blockquote{margin:23px 0;padding:17px 20px;border:1px solid rgba(101,118,237,.13);border-left:4px solid var(--accent);border-radius:0 16px 16px 0;background:#f4f6ff}.story blockquote p{margin:0;color:#4d5b86;font-weight:700}.story code{padding:.16em .4em;border-radius:6px;background:#eef1fa;color:#4b5fc4;font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;font-size:.88em}.story pre code{padding:0;background:transparent;color:inherit;font-size:inherit}.story .sourceCode{position:relative;margin:20px 0 24px;border-radius:18px;background:var(--code);box-shadow:0 14px 31px rgba(34,45,75,.16);overflow:hidden}.story pre{margin:0;padding:23px 22px;overflow:auto;color:#dbe4ff;background:transparent;font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;font-size:11.5px;line-height:1.72;tab-size:4}.story>pre{margin:20px 0 24px;border-radius:18px;background:var(--code);box-shadow:0 14px 31px rgba(34,45,75,.16)}.code-tools{position:absolute;right:10px;top:9px;z-index:2;display:flex;align-items:center;gap:7px}.code-lang{color:#94a3c9;font-size:8px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}.copy-code{border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:5px 8px;color:#bec9e7;background:rgba(255,255,255,.06);cursor:pointer;font-size:8px;font-weight:800}.copy-code:hover{background:rgba(255,255,255,.13)}.story table{width:100%;margin:22px 0;border-collapse:separate;border-spacing:0;border:1px solid var(--line);border-radius:15px;overflow:hidden;font-size:11px}.story th,.story td{padding:10px 12px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);text-align:left}.story th{color:#53617e;background:#f1f4fb;font-size:9px;text-transform:uppercase}.story tr:last-child td{border-bottom:0}.story th:last-child,.story td:last-child{border-right:0}.task-section{margin:38px 0 3px;padding:19px;border:1px solid rgba(103,120,239,.13);border-radius:20px;background:#f7f8fe}.task-section>h4{margin:0 0 11px;color:#5366d8;font-size:15px}.qa{margin:8px 0;border:1px solid rgba(97,112,163,.11);border-radius:13px;background:#fff}.qa summary{position:relative;padding:12px 39px 12px 14px;cursor:pointer;color:#354363;font-size:12px;font-weight:800;list-style:none}.qa summary::-webkit-details-marker{display:none}.qa summary:after{content:"＋";position:absolute;right:14px;color:#7380b0}.qa[open] summary:after{content:"−"}.qa>*:not(summary){margin-left:14px;margin-right:14px}.qa>p:last-child,.qa>pre:last-child,.qa>.sourceCode:last-child{margin-bottom:14px}.download-row{display:flex;flex-wrap:wrap;gap:9px;margin:18px 0 26px}.download{display:inline-flex;align-items:center;gap:7px;padding:9px 12px;border-radius:11px;color:#fff;background:linear-gradient(135deg,var(--accent),var(--purple));text-decoration:none;font-size:10px;font-weight:850;box-shadow:0 9px 20px rgba(101,110,224,.22)}
+    .footer{display:flex;align-items:center;justify-content:space-between;padding:25px 0 40px;color:#8791aa;font-size:10px}.footer a{text-decoration:none;font-weight:850}.to-top{position:fixed;right:22px;bottom:22px;z-index:20;width:42px;height:42px;border:1px solid rgba(255,255,255,.9);border-radius:14px;color:#fff;background:linear-gradient(145deg,var(--accent),var(--purple));box-shadow:0 13px 28px rgba(91,101,203,.3);cursor:pointer;opacity:0;transform:translateY(10px);pointer-events:none;transition:.2s}.to-top.show{opacity:1;transform:none;pointer-events:auto}
+        pre > code.sourceCode { white-space: pre; position: relative; }
+        pre > code.sourceCode > span { line-height: 1.25; }
+        pre > code.sourceCode > span:empty { height: 1.2em; }
+        .sourceCode { overflow: visible; }
+        code.sourceCode > span { color: inherit; text-decoration: inherit; }
+        div.sourceCode { margin: 1em 0; }
+        pre.sourceCode { margin: 0; }
+        @media screen {
+        div.sourceCode { overflow: auto; }
+        }
+        @media print {
+        pre > code.sourceCode { white-space: pre-wrap; }
+        pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+        }
+        pre.numberSource code
+          { counter-reset: source-line 0; }
+        pre.numberSource code > span
+          { position: relative; left: -4em; counter-increment: source-line; }
+        pre.numberSource code > span > a:first-child::before
+          { content: counter(source-line);
+            position: relative; left: -1em; text-align: right; vertical-align: baseline;
+            border: none; display: inline-block;
+            -webkit-touch-callout: none; -webkit-user-select: none;
+            -khtml-user-select: none; -moz-user-select: none;
+            -ms-user-select: none; user-select: none;
+            padding: 0 4px; width: 4em;
+          }
+        pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+        div.sourceCode
+          { color: #cccccc; background-color: #303030; }
+        @media screen {
+        pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+        }
+        code span.al { color: #ffcfaf; } /* Alert */
+        code span.an { color: #7f9f7f; font-weight: bold; } /* Annotation */
+        code span.at { } /* Attribute */
+        code span.bn { color: #dca3a3; } /* BaseN */
+        code span.bu { } /* BuiltIn */
+        code span.cf { color: #f0dfaf; } /* ControlFlow */
+        code span.ch { color: #dca3a3; } /* Char */
+        code span.cn { color: #dca3a3; font-weight: bold; } /* Constant */
+        code span.co { color: #7f9f7f; } /* Comment */
+        code span.cv { color: #7f9f7f; font-weight: bold; } /* CommentVar */
+        code span.do { color: #7f9f7f; } /* Documentation */
+        code span.dt { color: #dfdfbf; } /* DataType */
+        code span.dv { color: #dcdccc; } /* DecVal */
+        code span.er { color: #c3bf9f; } /* Error */
+        code span.ex { } /* Extension */
+        code span.fl { color: #c0bed1; } /* Float */
+        code span.fu { color: #efef8f; } /* Function */
+        code span.im { } /* Import */
+        code span.in { color: #7f9f7f; font-weight: bold; } /* Information */
+        code span.kw { color: #f0dfaf; } /* Keyword */
+        code span.op { color: #f0efd0; } /* Operator */
+        code span.ot { color: #efef8f; } /* Other */
+        code span.pp { color: #ffcfaf; font-weight: bold; } /* Preprocessor */
+        code span.sc { color: #dca3a3; } /* SpecialChar */
+        code span.ss { color: #cc9393; } /* SpecialString */
+        code span.st { color: #cc9393; } /* String */
+        code span.va { } /* Variable */
+        code span.vs { color: #cc9393; } /* VerbatimString */
+        code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
+        .story code span.kw,.story code span.cf{color:#9db2ff}.story code span.st{color:#a9ddc4}.story code span.co{color:#8190b1;font-style:italic}.story code span.fu{color:#8bd1ea}.story code span.dv,.story code span.bn{color:#d3b5ff}.story code span.op{color:#bdc8e8}
+    @media(max-width:900px){.hero{padding:43px 36px}.hero-grid{grid-template-columns:1fr}.merge-board{max-width:530px}.metrics{grid-template-columns:repeat(2,1fr)}.quick{grid-template-columns:1fr}.article{grid-template-columns:1fr;gap:16px}.toc{position:relative;top:auto;max-height:none}.toc>ul{columns:2}.story{padding:39px 34px}}
+    @media(max-width:600px){.shell{width:min(100% - 20px,1160px)}.nav{padding:15px 2px}.hero{padding:34px 22px;border-radius:25px}.hero h1{font-size:36px}.hero-grid{gap:27px}.merge-board{padding:15px}.merge-row{grid-template-columns:24px 1fr 14px 1fr}.metrics{gap:7px}.metric{padding:13px}.metric strong{font-size:21px}.quick-card{padding:19px}.article{margin-top:20px}.toc{padding:17px}.toc>ul{columns:1}.story{padding:31px 20px;border-radius:24px}.story h2{margin-top:57px;font-size:25px}.story h3{font-size:18px}.story pre{font-size:10px;padding:19px 15px}.footer{display:block;text-align:center}.footer a{display:block;margin-top:8px}}
+  </style>
+</head>
+<body>
+  <div class="scroll-progress" id="scroll-progress"></div>
+  <div class="shell">
+    <nav class="nav">
+      <a class="brand" href="../index.html">Linyouxue's <span>Digital Garden</span></a>
+      <a class="back" href="../index.html#notes-tab">← 返回 Notes</a>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-grid">
+        <div>
+          <span class="kicker">CS336 · Lecture 1 · Learning Note</span>
+          <h1>从字符串到 <em>Token ID</em>：手写 Byte-Level BPE</h1>
+          <p class="lead">从 UTF-8 bytes 出发，逐步实现预分词、频率聚合、加权 pair 统计、非重叠合并与训练循环。一个极小例子贯穿全文，让每个新 token 的诞生都能被看见。</p>
+          <div class="meta"><span>2026 · 07 · 23</span><span>约 22 分钟</span><span>Python</span><span>Tokenizer</span><a href="../notes/BPE.py" download>下载 BPE.py</a></div>
+        </div>
+        <div class="merge-board" aria-label="四轮 BPE 合并结果">
+          <div class="board-head"><span>Merge trace</span><i></i></div>
+          <div class="merge-row"><b>01</b><code>b"a" + b"b"</code><span>→</span><strong>256 · b"ab"</strong></div>
+          <div class="merge-row"><b>02</b><code>b"ab" + b"ab"</code><span>→</span><strong>257 · b"abab"</strong></div>
+          <div class="merge-row"><b>03</b><code>b" " + b"abab"</code><span>→</span><strong>258 · b" abab"</strong></div>
+          <div class="merge-row"><b>04</b><code>b" abab" + b"ab"</code><span>→</span><strong>259 · b" ababab"</strong></div>
+        </div>
+      </div>
+      <div class="metrics">
+        <div class="metric"><strong>256</strong><span>基础 byte tokens</span></div>
+        <div class="metric"><strong>4</strong><span>成功 merge 轮数</span></div>
+        <div class="metric"><strong>260</strong><span>最终词表大小</span></div>
+        <div class="metric"><strong>100%</strong><span>原始 bytes 可逆</span></div>
+      </div>
+    </header>
+
+    <section class="quick">
+      <div class="quick-card">
+        <small>Reading map</small>
+        <h2>先建立表示，再讨论算法</h2>
+        <p>全文先区分 <code>str</code>、<code>bytes</code> 与 token ID，再按八个函数搭起训练器。每组 Task 问答默认折叠，需要时再展开，正文主线不会被打断。</p>
+      </div>
+      <div class="quick-card invariant">
+        <b>≡</b>
+        <div><small>Core invariant</small><h2>合并只改变边界</h2><p><code>vocab[new_id] = vocab[left] + vocab[right]</code>，因此 token 数量可以减少，但原始字节内容不会改变。</p></div>
+      </div>
+    </section>
+
+    <main class="article">
+      <aside class="toc" aria-label="文章目录"><p>On this page</p><ul>
+<li><a href="#bpe-是什么" id="toc-bpe-是什么">1. BPE 是什么</a></li>
+<li><a href="#bpe-是干什么的" id="toc-bpe-是干什么的">2. BPE
+是干什么的</a>
+<ul>
+<li><a href="#把任意文本转换成整数" id="toc-把任意文本转换成整数">2.1
+把任意文本转换成整数</a></li>
+<li><a href="#缩短序列" id="toc-缩短序列">2.2 缩短序列</a></li>
+<li><a href="#在词表大小与序列长度之间折中"
+id="toc-在词表大小与序列长度之间折中">2.3
+在词表大小与序列长度之间折中</a></li>
+<li><a href="#保证可逆" id="toc-保证可逆">2.4 保证可逆</a></li>
+</ul></li>
+<li><a href="#为什么实现-byte-level-bpe"
+id="toc-为什么实现-byte-level-bpe">3. 为什么实现 Byte-Level BPE</a></li>
+<li><a href="#为什么还需要预分词" id="toc-为什么还需要预分词">4.
+为什么还需要预分词</a></li>
+<li><a href="#从任务拆解到完整实现" id="toc-从任务拆解到完整实现">5.
+从任务拆解到完整实现</a>
+<ul>
+<li><a href="#pretokenize预分词并编码为-utf-8-bytes"
+id="toc-pretokenize预分词并编码为-utf-8-bytes">5.1
+<code>pretokenize</code>：预分词并编码为 UTF-8 bytes</a></li>
+<li><a href="#build_pretoken_counts建立-pretoken-频率表"
+id="toc-build_pretoken_counts建立-pretoken-频率表">5.2
+<code>build_pretoken_counts</code>：建立 pretoken 频率表</a></li>
+<li><a href="#count_weighted_pairs加权统计相邻-pair"
+id="toc-count_weighted_pairs加权统计相邻-pair">5.3
+<code>count_weighted_pairs</code>：加权统计相邻 pair</a></li>
+<li><a href="#merge_pair在单个序列中执行非重叠合并"
+id="toc-merge_pair在单个序列中执行非重叠合并">5.4
+<code>merge_pair</code>：在单个序列中执行非重叠合并</a></li>
+<li><a href="#merge_pair_in_counts把一条-merge-应用于全部-pretoken"
+id="toc-merge_pair_in_counts把一条-merge-应用于全部-pretoken">5.5
+<code>merge_pair_in_counts</code>：把一条 merge 应用于全部
+pretoken</a></li>
+<li><a href="#choose_best_pair选择最高频-pair"
+id="toc-choose_best_pair选择最高频-pair">5.6
+<code>choose_best_pair</code>：选择最高频 pair</a></li>
+<li><a href="#show_pretoken_counts把内部状态转换成可读形式"
+id="toc-show_pretoken_counts把内部状态转换成可读形式">5.7
+<code>show_pretoken_counts</code>：把内部状态转换成可读形式</a></li>
+<li><a href="#train_byte_bpe组织完整训练循环"
+id="toc-train_byte_bpe组织完整训练循环">5.8
+<code>train_byte_bpe</code>：组织完整训练循环</a></li>
+</ul></li>
+<li><a href="#这份实现与生产级-tokenizer-的差距"
+id="toc-这份实现与生产级-tokenizer-的差距">6. 这份实现与生产级 tokenizer
+的差距</a></li>
+<li><a href="#最终完整代码" id="toc-最终完整代码">7.
+最终完整代码</a></li>
+<li><a href="#总结" id="toc-总结">8. 总结</a></li>
+<li><a href="#参考资料" id="toc-参考资料">参考资料</a></li>
+</ul></aside>
+      <article class="story">
+        <blockquote><p>范围说明：本文完整实现 Byte-Level BPE 的训练过程；生产级 tokenizer 还需要独立的编码、解码、特殊 token 与高性能数据结构。</p></blockquote>
+        <div class="download-row"><a class="download" href="../notes/BPE.py" download>↓ 下载完整 BPE.py</a></div>
+        <p>在学习 Stanford CS336 Lecture 1 之前，我对 tokenizer
+        的理解基本停留在一句话：</p>
+        <blockquote>
+        <p>tokenizer 把文本转换成 token ID。</p>
+        </blockquote>
+        <p>这句话没有错，但它把最关键的过程全部藏了起来：文本为什么要被切分？应该切成字符、单词还是子词？中文、Emoji
+        和从未见过的字符串怎么办？为什么相同文本在不同模型中会产生不同数量的
+        token？训练 tokenizer 时，词表又是怎样从 256
+        个基础字节逐步扩张出来的？</p>
+        <p>CS336 的第一讲把 tokenization
+        放在语言模型系统的起点：模型并不直接处理字符串，而是处理整数序列；tokenizer
+        决定模型看到的“基本单位”是什么。为了真正理解这一步，我没有直接调用现成库，而是把一个带预分词边界的
+        <strong>Byte-Level BPE 训练器</strong>拆成若干小任务，从
+        UTF-8、pair 计数和单轮合并开始，最终组成完整训练循环。</p>
+        <p>本文使用同一个例子贯穿全部过程：</p>
+        <pre class="text"><code>ab ababab abab</code></pre>
+        <p>最终目标是让程序自动学习出：</p>
+        <pre class="text"><code>b&quot;a&quot; + b&quot;b&quot;       -&gt; b&quot;ab&quot;
+b&quot;ab&quot; + b&quot;ab&quot;     -&gt; b&quot;abab&quot;
+b&quot; &quot; + b&quot;abab&quot;    -&gt; b&quot; abab&quot;
+b&quot; abab&quot; + b&quot;ab&quot;  -&gt; b&quot; ababab&quot;</code></pre>
+        <hr />
+        <section id="bpe-是什么" class="level2">
+        <h2>1. BPE 是什么</h2>
+        <p>BPE 的全称是 <strong>Byte Pair
+        Encoding</strong>，通常译为“字节对编码”。</p>
+        <p>它最初是一种数据压缩方法。用于 tokenizer
+        时，它的核心思想可以概括为：</p>
+        <blockquote>
+        <p>从最小单位开始，反复寻找语料中出现频率最高的相邻 token
+        对，并把这一对合并成一个新 token。</p>
+        </blockquote>
+        <p>例如，初始 token 序列是：</p>
+        <pre class="text"><code>a b a b a b</code></pre>
+        <p>其中相邻 pair 的频率为：</p>
+        <pre class="text"><code>(a, b): 3
+(b, a): 2</code></pre>
+        <p>于是把最高频的 <code>(a, b)</code> 合并为新 token
+        <code>ab</code>：</p>
+        <pre class="text"><code>ab ab ab</code></pre>
+        <p>接下来重新统计：</p>
+        <pre class="text"><code>(ab, ab): 2</code></pre>
+        <p>再把它合并成 <code>abab</code>：</p>
+        <pre class="text"><code>abab ab</code></pre>
+        <p>BPE
+        不是提前规定“一个单词应该如何拆分”，而是让训练语料中的统计规律决定哪些片段值得进入词表。高频片段会逐渐变成较长
+        token，低频或从未见过的内容仍然可以退回到底层单位表示。</p>
+        <hr />
+        </section>
+        <section id="bpe-是干什么的" class="level2">
+        <h2>2. BPE 是干什么的</h2>
+        <p>语言模型只能接收整数张量，无法直接处理 Python
+        字符串。Tokenizer 的任务是在两种表示之间建立可逆映射：</p>
+        <pre class="text"><code>原始文本 &lt;-&gt; token ID 序列</code></pre>
+        <p>BPE 在这里主要解决四个问题。</p>
+        <section id="把任意文本转换成整数" class="level3">
+        <h3>2.1 把任意文本转换成整数</h3>
+        <p>例如：</p>
+        <pre class="text"><code>ab</code></pre>
+        <p>在 UTF-8 中对应：</p>
+        <div class="sourceCode" id="cb10"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">97</span>, <span class="dv">98</span>]</span></code></pre></div>
+        <p>训练后，程序可能把这两个基础字节合并成一个新 token：</p>
+        <div class="sourceCode" id="cb11"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">256</span>]</span></code></pre></div>
+        <p>模型最终处理的是 <code>[256]</code>，而不是字符串
+        <code>"ab"</code>。</p>
+        </section>
+        <section id="缩短序列" class="level3">
+        <h3>2.2 缩短序列</h3>
+        <p>纯 byte tokenizer 能表示所有文本，但序列通常较长。BPE
+        会把频繁出现的字节片段压缩为一个 token。</p>
+        <p>例如：</p>
+        <pre class="text"><code>[97, 98, 97, 98, 97, 98]</code></pre>
+        <p>经过两轮学习后可能变成：</p>
+        <pre class="text"><code>[257, 256]</code></pre>
+        <p>底层内容没有改变，但模型需要处理的位置数减少了。</p>
+        </section>
+        <section id="在词表大小与序列长度之间折中" class="level3">
+        <h3>2.3 在词表大小与序列长度之间折中</h3>
+        <p>纯单词词表容易遇到未登录词，词表也可能极大；纯字符或纯字节词表虽然通用，但序列过长。</p>
+        <p>BPE 学到的是可变长度子词：</p>
+        <pre class="text"><code>单字节 -&gt; 字符片段 -&gt; 常见子词 -&gt; 高频单词</code></pre>
+        <p>因此它同时保留了开放词表能力和一定的压缩效率。</p>
+        </section>
+        <section id="保证可逆" class="level3">
+        <h3>2.4 保证可逆</h3>
+        <p>每个新 token 都被定义为两个旧 token 所代表 bytes 的拼接：</p>
+        <div class="sourceCode" id="cb15"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>vocab[new_token_id] <span class="op">=</span> vocab[left_id] <span class="op">+</span> vocab[right_id]</span></code></pre></div>
+        <p>所以 BPE 只改变 token
+        边界，不改变原始字节内容。只要按照顺序查表并拼接
+        bytes，就能恢复训练前的文本。</p>
+        <hr />
+        </section>
+        </section>
+        <section id="为什么实现-byte-level-bpe" class="level2">
+        <h2>3. 为什么实现 Byte-Level BPE</h2>
+        <p>如果直接从 Unicode
+        字符开始构建词表，需要面对数量庞大的字符集合和未见字符问题。Byte-Level
+        BPE 先把字符串编码为 UTF-8 bytes，再从全部 256
+        种单字节出发：</p>
+        <div class="sourceCode" id="cb16"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>vocab <span class="op">=</span> {</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="dv">0</span>: <span class="bu">bytes</span>([<span class="dv">0</span>]),</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="dv">1</span>: <span class="bu">bytes</span>([<span class="dv">1</span>]),</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    ...</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    <span class="dv">255</span>: <span class="bu">bytes</span>([<span class="dv">255</span>])</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+        <p>由于任意 UTF-8 文本都能表示成 0～255
+        的字节序列，初始词表天然覆盖任意字符串，包括：</p>
+        <ul>
+        <li>英文；</li>
+        <li>中文；</li>
+        <li>Emoji；</li>
+        <li>代码；</li>
+        <li>生僻字符；</li>
+        <li>训练语料中从未出现过的文本。</li>
+        </ul>
+        <p>需要区分两个概念：</p>
+        <pre class="text"><code>bytes：token 实际代表的底层字节内容
+token ID：训练过程中用来引用该内容的整数编号</code></pre>
+        <p>训练开始时，二者数值恰好都在 0～255；但第一次 merge 之后，新
+        token ID 会从 256 开始，因此训练中的 token 序列不能一直使用
+        <code>bytes</code> 保存，而要使用 <code>list[int]</code> 或
+        <code>tuple[int, ...]</code>。</p>
+        <hr />
+        </section>
+        <section id="为什么还需要预分词" class="level2">
+        <h2>4. 为什么还需要预分词</h2>
+        <p>最朴素的 BPE 可以直接在整篇文本上统计 pair，但现代 tokenizer
+        通常先进行 <strong>pretokenization</strong>。</p>
+        <p>以本文示例为例：</p>
+        <pre class="text"><code>ab ababab abab</code></pre>
+        <p>使用正则表达式预分词后得到：</p>
+        <div class="sourceCode" id="cb19"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>[</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">b&quot;ab&quot;</span>,</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">b&quot; ababab&quot;</span>,</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">b&quot; abab&quot;</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>]</span></code></pre></div>
+        <p>这里后两个 pretoken 保留了前导空格。BPE 只在每个 pretoken
+        内部合并，不允许跨边界建立 pair。</p>
+        <p>这样做有两个直接效果：</p>
+        <ol type="1">
+        <li>标点、单词、数字和空白之间的边界更加稳定；</li>
+        <li>训练时不会学到大量跨边界且缺乏复用价值的片段。</li>
+        </ol>
+        <p>完整流程因此变成：</p>
+        <pre class="text"><code>Python str
+    |
+    v
+正则预分词
+    |
+    v
+每个片段编码为 UTF-8 bytes
+    |
+    v
+聚合相同 pretoken
+    |
+    v
+统计内部相邻 pair
+    |
+    v
+选择最高频 pair
+    |
+    v
+创建新 token 并全局合并
+    |
+    v
+重新统计，进入下一轮</code></pre>
+        <hr />
+        </section>
+        <section id="从任务拆解到完整实现" class="level2">
+        <h2>5. 从任务拆解到完整实现</h2>
+        <p>下面按照我实际完成任务的顺序，把最终程序中的每个函数单独拆开。</p>
+        <hr />
+        <section id="pretokenize预分词并编码为-utf-8-bytes"
+        class="level3">
+        <h3>5.1 <code>pretokenize</code>：预分词并编码为 UTF-8
+        bytes</h3>
+        <section id="函数目标" class="level4">
+        <h4>函数目标</h4>
+        <p>输入 Python 字符串：</p>
+        <div class="sourceCode" id="cb21"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;ab ababab abab&quot;</span></span></code></pre></div>
+        <p>输出：</p>
+        <div class="sourceCode" id="cb22"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>[<span class="st">b&quot;ab&quot;</span>, <span class="st">b&quot; ababab&quot;</span>, <span class="st">b&quot; abab&quot;</span>]</span></code></pre></div>
+        <p>代码如下：</p>
+        <div class="sourceCode" id="cb23"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> regex</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>PRETOKEN_PATTERN <span class="op">=</span> regex.<span class="bu">compile</span>(</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    <span class="vs">r&quot;&quot;&quot;&#39;(?:[sdmt]|ll|ve|re)| ?\p</span><span class="sc">{L}</span><span class="vs">+| ?\p</span><span class="sc">{N}</span><span class="vs">+| ?[^\s\p</span><span class="sc">{L}</span><span class="vs">\p</span><span class="sc">{N}</span><span class="vs">]+|\s+(?!\S)|\s+&quot;&quot;&quot;</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> pretokenize(text):</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>    pretokens <span class="op">=</span> []</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> match <span class="kw">in</span> PRETOKEN_PATTERN.finditer(text):</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>        piece <span class="op">=</span> match.group()</span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> piece <span class="op">!=</span> <span class="st">&quot;&quot;</span>:</span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>            pretokens.append(piece.encode(<span class="st">&quot;utf-8&quot;</span>))</span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pretokens</span></code></pre></div>
+        </section>
+        <section id="逐步变化" class="level4">
+        <h4>逐步变化</h4>
+        <p>输入：</p>
+        <div class="sourceCode" id="cb24"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>text <span class="op">=</span> <span class="st">&quot;ab ababab abab&quot;</span></span></code></pre></div>
+        <p><code>regex.finditer</code> 按原顺序获得：</p>
+        <div class="sourceCode" id="cb25"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;ab&quot;</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="co">&quot; ababab&quot;</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="co">&quot; abab&quot;</span></span></code></pre></div>
+        <p>逐个调用：</p>
+        <div class="sourceCode" id="cb26"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>piece.encode(<span class="st">&quot;utf-8&quot;</span>)</span></code></pre></div>
+        <p>得到：</p>
+        <div class="sourceCode" id="cb27"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="st">b&quot;ab&quot;</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="st">b&quot; ababab&quot;</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="st">b&quot; abab&quot;</span></span></code></pre></div>
+        <p>最终返回：</p>
+        <div class="sourceCode" id="cb28"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>[<span class="st">b&quot;ab&quot;</span>, <span class="st">b&quot; ababab&quot;</span>, <span class="st">b&quot; abab&quot;</span>]</span></code></pre></div>
+        </section>
+        <section id="task-问题" class="level4">
+        <h4>Task 问题</h4>
+        <section id="为什么先在-str-上使用正则再编码为-bytes"
+        class="level5">
+        <h5>1. 为什么先在 <code>str</code> 上使用正则，再编码为
+        bytes？</h5>
+        <p>正则中的 <code>\p{L}</code>、<code>\p{N}</code> 表示 Unicode
+        字母和数字类别，它们针对字符语义工作。先把字符串整体编码成 bytes
+        后，一个中文字符可能变成多个独立字节，正则就无法再按字符类别正确分组。</p>
+        </section>
+        <section id="为什么返回-listbytes而不是一个完整-bytes"
+        class="level5">
+        <h5>2. 为什么返回 <code>list[bytes]</code>，而不是一个完整
+        bytes？</h5>
+        <p>因为每个列表元素代表一个独立 pretoken。后续 BPE
+        只能在元素内部统计和合并，不能跨两个元素的边界。</p>
+        </section>
+        <section id="为什么不能产生空-pretoken" class="level5">
+        <h5>3. 为什么不能产生空 pretoken？</h5>
+        <p>空片段不包含任何 token，既不能形成
+        pair，也没有训练意义。保留它只会增加无效状态和边界处理。</p>
+        </section>
+        <section id="为什么文件被导入时不能执行-input" class="level5">
+        <h5>4. 为什么文件被导入时不能执行 <code>input()</code>？</h5>
+        <p><code>pretokenize</code> 会被其他训练模块导入。若文件在
+        import
+        时自动等待输入，整个训练程序就会被阻塞。测试代码应放在：</p>
+        <div class="sourceCode" id="cb29"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&quot;__main__&quot;</span>:</span></code></pre></div>
+        <p>之下。</p>
+        <hr />
+        </section>
+        </section>
+        </section>
+        <section id="build_pretoken_counts建立-pretoken-频率表"
+        class="level3">
+        <h3>5.2 <code>build_pretoken_counts</code>：建立 pretoken
+        频率表</h3>
+        <section id="函数目标-1" class="level4">
+        <h4>函数目标</h4>
+        <p>将预分词结果转换为：</p>
+        <div class="sourceCode" id="cb30"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="bu">dict</span>[<span class="bu">tuple</span>[<span class="bu">int</span>, ...], <span class="bu">int</span>]</span></code></pre></div>
+        <p>其中：</p>
+        <ul>
+        <li>键是 pretoken 对应的 token ID 元组；</li>
+        <li>值是该 pretoken 在语料中的出现次数。</li>
+        </ul>
+        <div class="sourceCode" id="cb31"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> build_pretoken_counts(text):</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>    pretokens <span class="op">=</span> pretokenize(text)</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>    pretoken_counts <span class="op">=</span> {}</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> piece <span class="kw">in</span> pretokens:</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>        token_tuple <span class="op">=</span> <span class="bu">tuple</span>(piece)</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> token_tuple <span class="kw">in</span> pretoken_counts:</span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>            pretoken_counts[token_tuple] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>            pretoken_counts[token_tuple] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pretoken_counts</span></code></pre></div>
+        </section>
+        <section id="逐步变化-1" class="level4">
+        <h4>逐步变化</h4>
+        <div class="sourceCode" id="cb32"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="st">b&quot;ab&quot;</span></span></code></pre></div>
+        <p>遍历 bytes 会得到：</p>
+        <div class="sourceCode" id="cb33"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="dv">97</span>, <span class="dv">98</span></span></code></pre></div>
+        <p>所以：</p>
+        <div class="sourceCode" id="cb34"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="bu">tuple</span>(<span class="st">b&quot;ab&quot;</span>) <span class="op">==</span> (<span class="dv">97</span>, <span class="dv">98</span>)</span></code></pre></div>
+        <p>同理：</p>
+        <div class="sourceCode" id="cb35"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="bu">tuple</span>(<span class="st">b&quot; ababab&quot;</span>)</span></code></pre></div>
+        <p>得到：</p>
+        <div class="sourceCode" id="cb36"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">32</span>, <span class="dv">97</span>, <span class="dv">98</span>, <span class="dv">97</span>, <span class="dv">98</span>, <span class="dv">97</span>, <span class="dv">98</span>)</span></code></pre></div>
+        <p>最终频率表：</p>
+        <div class="sourceCode" id="cb37"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">97</span>, <span class="dv">98</span>): <span class="dv">1</span>,</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">32</span>, <span class="dv">97</span>, <span class="dv">98</span>, <span class="dv">97</span>, <span class="dv">98</span>, <span class="dv">97</span>, <span class="dv">98</span>): <span class="dv">1</span>,</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">32</span>, <span class="dv">97</span>, <span class="dv">98</span>, <span class="dv">97</span>, <span class="dv">98</span>): <span class="dv">1</span></span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+        </section>
+        <section id="task-问题-1" class="level4">
+        <h4>Task 问题</h4>
+        <section id="为什么不能用-listint-作为字典键" class="level5">
+        <h5>1. 为什么不能用 <code>list[int]</code> 作为字典键？</h5>
+        <p>Python 字典的键必须可哈希。<code>list</code>
+        可以原地修改，因此不可哈希；<code>tuple</code>
+        不可变，只要其中元素均可哈希，就可以稳定地作为字典键。</p>
+        <div class="sourceCode" id="cb38"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>counts[(<span class="dv">97</span>, <span class="dv">98</span>)] <span class="op">=</span> <span class="dv">1</span>    <span class="co"># 正确</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>counts[[<span class="dv">97</span>, <span class="dv">98</span>]] <span class="op">=</span> <span class="dv">1</span>    <span class="co"># TypeError</span></span></code></pre></div>
+        </section>
+        <section id="为什么要聚合相同-pretoken" class="level5">
+        <h5>2. 为什么要聚合相同 pretoken？</h5>
+        <p>若一个 pretoken 出现 10000 次，不必保存并扫描 10000
+        份相同序列。只保存一次序列和频率 10000，后续统计 pair
+        时乘上频率即可得到相同结果。</p>
+        </section>
+        <section id="聚合是否丢失信息" class="level5">
+        <h5>3. 聚合是否丢失信息？</h5>
+        <p>它会丢失不同 pretoken 在全文中的排列顺序，但 BPE 不允许跨
+        pretoken 合并，因此训练只需要每种 pretoken
+        的内部顺序和总频率。对 pair 统计而言，这些信息已经足够。</p>
+        <hr />
+        </section>
+        </section>
+        </section>
+        <section id="count_weighted_pairs加权统计相邻-pair"
+        class="level3">
+        <h3>5.3 <code>count_weighted_pairs</code>：加权统计相邻
+        pair</h3>
+        <section id="函数目标-2" class="level4">
+        <h4>函数目标</h4>
+        <p>遍历每个 pretoken 的所有相邻位置，并按该 pretoken
+        的出现频率累加。</p>
+        <div class="sourceCode" id="cb39"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> count_weighted_pairs(pretoken_counts):</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>    pair_counts <span class="op">=</span> {}</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> pretoken, frequency <span class="kw">in</span> pretoken_counts.items():</span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(pretoken) <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>            pair <span class="op">=</span> (pretoken[i], pretoken[i <span class="op">+</span> <span class="dv">1</span>])</span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> pair <span class="kw">in</span> pair_counts:</span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>                pair_counts[pair] <span class="op">+=</span> frequency</span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
+<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a>                pair_counts[pair] <span class="op">=</span> frequency</span>
+<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pair_counts</span></code></pre></div>
+        </section>
+        <section id="第一轮统计" class="level4">
+        <h4>第一轮统计</h4>
+        <p>初始频率表：</p>
+        <div class="sourceCode" id="cb40"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">97</span>, <span class="dv">98</span>): <span class="dv">1</span>,</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">32</span>, <span class="dv">97</span>, <span class="dv">98</span>, <span class="dv">97</span>, <span class="dv">98</span>, <span class="dv">97</span>, <span class="dv">98</span>): <span class="dv">1</span>,</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">32</span>, <span class="dv">97</span>, <span class="dv">98</span>, <span class="dv">97</span>, <span class="dv">98</span>): <span class="dv">1</span></span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+        <p>分别展开。</p>
+        <p><code>(97, 98)</code> 贡献：</p>
+        <pre class="text"><code>(97, 98): 1</code></pre>
+        <p><code>(32, 97, 98, 97, 98, 97, 98)</code> 贡献：</p>
+        <pre class="text"><code>(32, 97): 1
+(97, 98): 3
+(98, 97): 2</code></pre>
+        <p><code>(32, 97, 98, 97, 98)</code> 贡献：</p>
+        <pre class="text"><code>(32, 97): 1
+(97, 98): 2
+(98, 97): 1</code></pre>
+        <p>合计：</p>
+        <div class="sourceCode" id="cb44"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">97</span>, <span class="dv">98</span>): <span class="dv">6</span>,</span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">98</span>, <span class="dv">97</span>): <span class="dv">3</span>,</span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">32</span>, <span class="dv">97</span>): <span class="dv">2</span></span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+        <p>最高频 pair 是：</p>
+        <div class="sourceCode" id="cb45"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">97</span>, <span class="dv">98</span>)</span></code></pre></div>
+        <p>即：</p>
+        <div class="sourceCode" id="cb46"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>(<span class="st">b&quot;a&quot;</span>, <span class="st">b&quot;b&quot;</span>)</span></code></pre></div>
+        </section>
+        <section id="task-问题-2" class="level4">
+        <h4>Task 问题</h4>
+        <section
+        id="为什么每次发现-pair-要增加-pretoken-的频率而不是增加-1"
+        class="level5">
+        <h5>1. 为什么每次发现 pair 要增加 pretoken 的频率，而不是增加
+        1？</h5>
+        <p>频率表中的一条记录可能代表原文本中的多次出现。若某 pretoken
+        频率是 100，那么它内部每个相邻 pair 也在语料中出现了 100
+        份，因此应增加 100。</p>
+        </section>
+        <section id="为什么不统计两个-pretoken-之间的-pair"
+        class="level5">
+        <h5>2. 为什么不统计两个 pretoken 之间的 pair？</h5>
+        <p>预分词已经规定了 BPE 边界。跨边界 pair
+        即使在原字符串中物理相邻，也不是允许合并的候选。</p>
+        </section>
+        <section id="为什么不直接一直用-bytes-表示-token-序列"
+        class="level5">
+        <h5>3. 为什么不直接一直用 bytes 表示 token 序列？</h5>
+        <p><code>bytes</code> 的每个元素只能在 0～255。BPE 新 token 从
+        ID 256 开始，所以训练中的序列必须能存储任意整数 ID。</p>
+        </section>
+        <section id="为什么-a-a-a-中能统计出两个-a-a" class="level5">
+        <h5>4. 为什么 <code>(a, a, a)</code> 中能统计出两个
+        <code>(a, a)</code>？</h5>
+        <p>相邻位置有：</p>
+        <pre class="text"><code>位置 0、1
+位置 1、2</code></pre>
+        <p>pair 统计允许重叠，它统计的是候选 pair 出现位置；但执行一轮
+        merge 时，一个 token
+        不能参与两次合并，因此实际只能非重叠合并一次。</p>
+        </section>
+        <section id="聚合相同-pretoken-为什么能提高训练效率"
+        class="level5">
+        <h5>5. 聚合相同 pretoken 为什么能提高训练效率？</h5>
+        <p>因为程序只扫描每种唯一序列一次，再用 frequency
+        对结果加权。语料重复度越高，节省的重复遍历和存储越多。</p>
+        <hr />
+        </section>
+        </section>
+        </section>
+        <section id="merge_pair在单个序列中执行非重叠合并"
+        class="level3">
+        <h3>5.4 <code>merge_pair</code>：在单个序列中执行非重叠合并</h3>
+        <section id="函数目标-3" class="level4">
+        <h4>函数目标</h4>
+        <p>给定：</p>
+        <div class="sourceCode" id="cb48"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>tokens <span class="op">=</span> [<span class="dv">97</span>, <span class="dv">98</span>, <span class="dv">97</span>, <span class="dv">98</span>]</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>pair <span class="op">=</span> (<span class="dv">97</span>, <span class="dv">98</span>)</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>new_token_id <span class="op">=</span> <span class="dv">256</span></span></code></pre></div>
+        <p>返回：</p>
+        <div class="sourceCode" id="cb49"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">256</span>, <span class="dv">256</span>]</span></code></pre></div>
+        <p>实现：</p>
+        <div class="sourceCode" id="cb50"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> merge_pair(tokens, pair, new_token_id):</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>    merged_tokens <span class="op">=</span> []</span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> i <span class="op">&lt;</span> <span class="bu">len</span>(tokens):</span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>        has_next_token <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span> <span class="op">&lt;</span> <span class="bu">len</span>(tokens)</span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> has_next_token:</span>
+<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a>            current_pair <span class="op">=</span> (tokens[i], tokens[i <span class="op">+</span> <span class="dv">1</span>])</span>
+<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a>            current_pair <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-13"><a href="#cb50-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> current_pair <span class="op">==</span> pair:</span>
+<span id="cb50-14"><a href="#cb50-14" aria-hidden="true" tabindex="-1"></a>            merged_tokens.append(new_token_id)</span>
+<span id="cb50-15"><a href="#cb50-15" aria-hidden="true" tabindex="-1"></a>            i <span class="op">+=</span> <span class="dv">2</span></span>
+<span id="cb50-16"><a href="#cb50-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb50-17"><a href="#cb50-17" aria-hidden="true" tabindex="-1"></a>            merged_tokens.append(tokens[i])</span>
+<span id="cb50-18"><a href="#cb50-18" aria-hidden="true" tabindex="-1"></a>            i <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb50-19"><a href="#cb50-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-20"><a href="#cb50-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> merged_tokens</span></code></pre></div>
+        </section>
+        <section id="为什么是-i-2" class="level4">
+        <h4>为什么是 <code>i += 2</code></h4>
+        <p>匹配成功时，当前位置和下一位置已经共同组成一个新
+        token，两个旧 token 都被消费，所以扫描位置必须跨过 2。</p>
+        <p>匹配失败时，只保留当前 token，下一位置仍可能与其后面的 token
+        组成 pair，因此只执行 <code>i += 1</code>。</p>
+        </section>
+        <section id="重叠示例" class="level4">
+        <h4>重叠示例</h4>
+        <div class="sourceCode" id="cb51"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>tokens <span class="op">=</span> [<span class="dv">256</span>, <span class="dv">256</span>, <span class="dv">256</span>]</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>pair <span class="op">=</span> (<span class="dv">256</span>, <span class="dv">256</span>)</span></code></pre></div>
+        <p>虽然 pair 计数中有两个重叠位置，但从左向右合并后：</p>
+        <pre class="text"><code>[256, 256, 256]
+ └──────┘</code></pre>
+        <p>得到：</p>
+        <div class="sourceCode" id="cb53"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">257</span>, <span class="dv">256</span>]</span></code></pre></div>
+        <p>而不是两个 <code>257</code>。</p>
+        </section>
+        <section id="task-问题-3" class="level4">
+        <h4>Task 问题</h4>
+        <section id="为什么统计允许重叠合并却不允许重叠" class="level5">
+        <h5>1. 为什么统计允许重叠，合并却不允许重叠？</h5>
+        <p>统计阶段衡量一种局部模式有多常见；合并阶段则要生成一个合法的新序列。一个旧
+        token 无法同时属于两个新
+        token，所以同一轮合并必须选择互不重叠的位置。</p>
+        </section>
+        <section id="为什么返回新列表而不是原地修改" class="level5">
+        <h5>2. 为什么返回新列表，而不是原地修改？</h5>
+        <p>创建新列表让扫描逻辑更稳定，不会因序列长度在遍历过程中变化而造成下标错乱，同时也不会修改调用者持有的原始数据。</p>
+        </section>
+        <section id="为什么必须从左向右" class="level5">
+        <h5>3. 为什么必须从左向右？</h5>
+        <p>对于存在重叠候选的位置，必须有明确规则才能得到确定结果。从左向右是常见且简单的非重叠选择策略。</p>
+        <hr />
+        </section>
+        </section>
+        </section>
+        <section
+        id="merge_pair_in_counts把一条-merge-应用于全部-pretoken"
+        class="level3">
+        <h3>5.5 <code>merge_pair_in_counts</code>：把一条 merge
+        应用于全部 pretoken</h3>
+        <section id="函数目标-4" class="level4">
+        <h4>函数目标</h4>
+        <p>前一个函数只处理一个 token 序列。训练时需要把同一条 merge
+        规则应用于所有 pretoken：</p>
+        <div class="sourceCode" id="cb54"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> merge_pair_in_counts(pretoken_counts, pair, new_token_id):</span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>    new_counts <span class="op">=</span> {}</span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> pretoken, frequency <span class="kw">in</span> pretoken_counts.items():</span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>        token_list <span class="op">=</span> <span class="bu">list</span>(pretoken)</span>
+<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a>        merged_list <span class="op">=</span> merge_pair(</span>
+<span id="cb54-8"><a href="#cb54-8" aria-hidden="true" tabindex="-1"></a>            token_list,</span>
+<span id="cb54-9"><a href="#cb54-9" aria-hidden="true" tabindex="-1"></a>            pair,</span>
+<span id="cb54-10"><a href="#cb54-10" aria-hidden="true" tabindex="-1"></a>            new_token_id</span>
+<span id="cb54-11"><a href="#cb54-11" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb54-12"><a href="#cb54-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-13"><a href="#cb54-13" aria-hidden="true" tabindex="-1"></a>        merged_tuple <span class="op">=</span> <span class="bu">tuple</span>(merged_list)</span>
+<span id="cb54-14"><a href="#cb54-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-15"><a href="#cb54-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> merged_tuple <span class="kw">in</span> new_counts:</span>
+<span id="cb54-16"><a href="#cb54-16" aria-hidden="true" tabindex="-1"></a>            new_counts[merged_tuple] <span class="op">+=</span> frequency</span>
+<span id="cb54-17"><a href="#cb54-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb54-18"><a href="#cb54-18" aria-hidden="true" tabindex="-1"></a>            new_counts[merged_tuple] <span class="op">=</span> frequency</span>
+<span id="cb54-19"><a href="#cb54-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-20"><a href="#cb54-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> new_counts</span></code></pre></div>
+        </section>
+        <section id="第一轮变化" class="level4">
+        <h4>第一轮变化</h4>
+        <p>合并：</p>
+        <div class="sourceCode" id="cb55"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">97</span>, <span class="dv">98</span>) <span class="op">-&gt;</span> <span class="dv">256</span></span></code></pre></div>
+        <p>原频率表：</p>
+        <div class="sourceCode" id="cb56"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">97</span>, <span class="dv">98</span>): <span class="dv">1</span>,</span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">32</span>, <span class="dv">97</span>, <span class="dv">98</span>, <span class="dv">97</span>, <span class="dv">98</span>, <span class="dv">97</span>, <span class="dv">98</span>): <span class="dv">1</span>,</span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">32</span>, <span class="dv">97</span>, <span class="dv">98</span>, <span class="dv">97</span>, <span class="dv">98</span>): <span class="dv">1</span></span>
+<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+        <p>变为：</p>
+        <div class="sourceCode" id="cb57"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">256</span>,): <span class="dv">1</span>,</span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">32</span>, <span class="dv">256</span>, <span class="dv">256</span>, <span class="dv">256</span>): <span class="dv">1</span>,</span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">32</span>, <span class="dv">256</span>, <span class="dv">256</span>): <span class="dv">1</span></span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+        <p>频率没有变化，变化的是每种 pretoken 的 token 划分。</p>
+        </section>
+        <section id="task-问题-4" class="level4">
+        <h4>Task 问题</h4>
+        <section id="为什么不能一边遍历原字典一边替换它的键"
+        class="level5">
+        <h5>1. 为什么不能一边遍历原字典，一边替换它的键？</h5>
+        <p>替换字典键实际上需要删除旧键并插入新键，会改变字典结构。Python
+        通常会抛出：</p>
+        <pre class="text"><code>RuntimeError: dictionary changed size during iteration</code></pre>
+        <p>因此应构造新的 <code>new_counts</code>。</p>
+        </section>
+        <section id="为什么合并后-frequency-通常不需要重新计算"
+        class="level5">
+        <h5>2. 为什么合并后 frequency 通常不需要重新计算？</h5>
+        <p>BPE 只改变一个文本片段内部的 token
+        边界，不改变该片段在原语料中出现了多少次。</p>
+        </section>
+        <section
+        id="为什么不同旧-pretoken-合并到同一个新-tuple-时要累加频率"
+        class="level5">
+        <h5>3. 为什么不同旧 pretoken 合并到同一个新 tuple
+        时要累加频率？</h5>
+        <p>它们已经变成训练状态完全相同的序列，应当重新聚合。新序列的总频率等于所有来源频率之和。</p>
+        </section>
+        <section id="为什么-new_token_id-必须是从未使用过的新-id"
+        class="level5">
+        <h5>4. 为什么 <code>new_token_id</code> 必须是从未使用过的新
+        ID？</h5>
+        <p>一个 token ID 必须唯一指向一种 bytes 内容。复用旧 ID
+        会让同一个编号同时代表两种内容，导致词表、merge
+        和解码出现歧义。</p>
+        </section>
+        <section id="为什么-merge_pair-返回的-list-要转回-tuple"
+        class="level5">
+        <h5>5. 为什么 <code>merge_pair</code> 返回的 list 要转回
+        tuple？</h5>
+        <p><code>list</code>
+        便于构造合并结果，但不能作为字典键；频率表的键必须是可哈希的
+        <code>tuple</code>。</p>
+        <hr />
+        </section>
+        </section>
+        </section>
+        <section id="choose_best_pair选择最高频-pair" class="level3">
+        <h3>5.6 <code>choose_best_pair</code>：选择最高频 pair</h3>
+        <section id="函数目标-5" class="level4">
+        <h4>函数目标</h4>
+        <p>BPE 每轮应选择频率最高的 pair。若出现并列，还需要确定性的
+        tie-breaking 规则：</p>
+        <div class="sourceCode" id="cb59"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> choose_best_pair(pair_counts, vocab):</span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(pair_counts) <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span></span>
+<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-5"><a href="#cb59-5" aria-hidden="true" tabindex="-1"></a>    best_pair <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb59-6"><a href="#cb59-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-7"><a href="#cb59-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> pair <span class="kw">in</span> pair_counts:</span>
+<span id="cb59-8"><a href="#cb59-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> best_pair <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb59-9"><a href="#cb59-9" aria-hidden="true" tabindex="-1"></a>            best_pair <span class="op">=</span> pair</span>
+<span id="cb59-10"><a href="#cb59-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">continue</span></span>
+<span id="cb59-11"><a href="#cb59-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-12"><a href="#cb59-12" aria-hidden="true" tabindex="-1"></a>        current_frequency <span class="op">=</span> pair_counts[pair]</span>
+<span id="cb59-13"><a href="#cb59-13" aria-hidden="true" tabindex="-1"></a>        best_frequency <span class="op">=</span> pair_counts[best_pair]</span>
+<span id="cb59-14"><a href="#cb59-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-15"><a href="#cb59-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> current_frequency <span class="op">&gt;</span> best_frequency:</span>
+<span id="cb59-16"><a href="#cb59-16" aria-hidden="true" tabindex="-1"></a>            best_pair <span class="op">=</span> pair</span>
+<span id="cb59-17"><a href="#cb59-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-18"><a href="#cb59-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> current_frequency <span class="op">==</span> best_frequency:</span>
+<span id="cb59-19"><a href="#cb59-19" aria-hidden="true" tabindex="-1"></a>            current_bytes_pair <span class="op">=</span> (</span>
+<span id="cb59-20"><a href="#cb59-20" aria-hidden="true" tabindex="-1"></a>                vocab[pair[<span class="dv">0</span>]],</span>
+<span id="cb59-21"><a href="#cb59-21" aria-hidden="true" tabindex="-1"></a>                vocab[pair[<span class="dv">1</span>]]</span>
+<span id="cb59-22"><a href="#cb59-22" aria-hidden="true" tabindex="-1"></a>            )</span>
+<span id="cb59-23"><a href="#cb59-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-24"><a href="#cb59-24" aria-hidden="true" tabindex="-1"></a>            best_bytes_pair <span class="op">=</span> (</span>
+<span id="cb59-25"><a href="#cb59-25" aria-hidden="true" tabindex="-1"></a>                vocab[best_pair[<span class="dv">0</span>]],</span>
+<span id="cb59-26"><a href="#cb59-26" aria-hidden="true" tabindex="-1"></a>                vocab[best_pair[<span class="dv">1</span>]]</span>
+<span id="cb59-27"><a href="#cb59-27" aria-hidden="true" tabindex="-1"></a>            )</span>
+<span id="cb59-28"><a href="#cb59-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-29"><a href="#cb59-29" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> current_bytes_pair <span class="op">&gt;</span> best_bytes_pair:</span>
+<span id="cb59-30"><a href="#cb59-30" aria-hidden="true" tabindex="-1"></a>                best_pair <span class="op">=</span> pair</span>
+<span id="cb59-31"><a href="#cb59-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-32"><a href="#cb59-32" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> best_pair</span></code></pre></div>
+        <p>本实现规定：</p>
+        <blockquote>
+        <p>pair 频率相同时，选择对应 bytes 二元组中字典序更大的
+        pair。</p>
+        </blockquote>
+        <p>这条规则本身不是 BPE
+        唯一可能的规定，但必须明确，否则相同语料可能因为遍历顺序不同而得到不同
+        merge 列表。</p>
+        </section>
+        <section id="task-问题-5" class="level4">
+        <h4>Task 问题</h4>
+        <section id="为什么不能只写-maxpair_counts-keypair_counts.get"
+        class="level5">
+        <h5>1. 为什么不能只写
+        <code>max(pair_counts, key=pair_counts.get)</code>？</h5>
+        <p>可以用于最简实现，但它没有显式表达并列时如何选择。若要保证结果可复现，应把
+        tie-breaking 写清楚。</p>
+        </section>
+        <section id="为什么并列时比较-bytes而不是直接比较-token-id"
+        class="level5">
+        <h5>2. 为什么并列时比较 bytes，而不是直接比较 token ID？</h5>
+        <p>新 token ID 取决于先前训练过程。比较 token 所代表的 bytes
+        更接近比较实际内容，而不是比较临时编号。</p>
+        </section>
+        <section id="为什么空频率表返回-none" class="level5">
+        <h5>3. 为什么空频率表返回 <code>None</code>？</h5>
+        <p>空表表示所有 pretoken 长度都小于 2，已经不存在相邻
+        pair，训练循环应提前终止。</p>
+        <hr />
+        </section>
+        </section>
+        </section>
+        <section id="show_pretoken_counts把内部状态转换成可读形式"
+        class="level3">
+        <h3>5.7
+        <code>show_pretoken_counts</code>：把内部状态转换成可读形式</h3>
+        <section id="函数目标-6" class="level4">
+        <h4>函数目标</h4>
+        <p>训练内部保存的是 token ID：</p>
+        <div class="sourceCode" id="cb60"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">32</span>, <span class="dv">256</span>, <span class="dv">256</span>)</span></code></pre></div>
+        <p>调试时更希望看到：</p>
+        <div class="sourceCode" id="cb61"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>[<span class="st">b&quot; &quot;</span>, <span class="st">b&quot;ab&quot;</span>, <span class="st">b&quot;ab&quot;</span>]</span></code></pre></div>
+        <p>因此增加一个只负责显示的辅助函数：</p>
+        <div class="sourceCode" id="cb62"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> show_pretoken_counts(pretoken_counts, vocab):</span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>    readable_counts <span class="op">=</span> []</span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> pretoken, frequency <span class="kw">in</span> pretoken_counts.items():</span>
+<span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a>        byte_parts <span class="op">=</span> []</span>
+<span id="cb62-6"><a href="#cb62-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-7"><a href="#cb62-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> token_id <span class="kw">in</span> pretoken:</span>
+<span id="cb62-8"><a href="#cb62-8" aria-hidden="true" tabindex="-1"></a>            byte_parts.append(vocab[token_id])</span>
+<span id="cb62-9"><a href="#cb62-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-10"><a href="#cb62-10" aria-hidden="true" tabindex="-1"></a>        readable_counts.append((byte_parts, frequency))</span>
+<span id="cb62-11"><a href="#cb62-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-12"><a href="#cb62-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> readable_counts</span></code></pre></div>
+        <p>这个函数不参与训练决策，只把 ID 通过 <code>vocab</code>
+        映射回 bytes，方便观察每轮发生了什么。</p>
+        </section>
+        <section id="task-问题-6" class="level4">
+        <h4>Task 问题</h4>
+        <section id="为什么不直接把训练状态存成-bytes" class="level5">
+        <h5>1. 为什么不直接把训练状态存成 bytes？</h5>
+        <p>训练状态必须保存 256 以上的新 token
+        ID；显示函数只在需要输出时临时查词表，避免混淆“token ID
+        序列”和“token 实际内容”。</p>
+        </section>
+        <section id="为什么显示函数不能修改-pretoken_counts"
+        class="level5">
+        <h5>2. 为什么显示函数不能修改
+        <code>pretoken_counts</code>？</h5>
+        <p>调试工具不应改变算法状态。否则打开或关闭
+        <code>show_steps</code> 可能导致训练结果不同。</p>
+        </section>
+        <section id="为什么一个-token-可能显示为不完整-utf-8-bytes"
+        class="level5">
+        <h5>3. 为什么一个 token 可能显示为不完整 UTF-8 bytes？</h5>
+        <p>Byte-Level BPE 的中间 token 不一定恰好对应完整 Unicode
+        字符。只有把完整 token 序列对应的 bytes 按顺序拼接后，再统一
+        UTF-8 解码，才能保证正确恢复文本。</p>
+        <hr />
+        </section>
+        </section>
+        </section>
+        <section id="train_byte_bpe组织完整训练循环" class="level3">
+        <h3>5.8 <code>train_byte_bpe</code>：组织完整训练循环</h3>
+        <p>前面的函数分别完成了预分词、聚合、pair
+        统计和单轮合并。最后的训练函数负责把它们按顺序连接起来。</p>
+        <p>核心流程：</p>
+        <div class="sourceCode" id="cb63"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> train_byte_bpe(</span>
+<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>    text,</span>
+<span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a>    vocab_size,</span>
+<span id="cb63-4"><a href="#cb63-4" aria-hidden="true" tabindex="-1"></a>    min_frequency<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb63-5"><a href="#cb63-5" aria-hidden="true" tabindex="-1"></a>    show_steps<span class="op">=</span><span class="va">False</span></span>
+<span id="cb63-6"><a href="#cb63-6" aria-hidden="true" tabindex="-1"></a>):</span>
+<span id="cb63-7"><a href="#cb63-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> vocab_size <span class="op">&lt;</span> <span class="dv">256</span>:</span>
+<span id="cb63-8"><a href="#cb63-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">&quot;vocab_size 不能小于 256&quot;</span>)</span>
+<span id="cb63-9"><a href="#cb63-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-10"><a href="#cb63-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> min_frequency <span class="op">&lt;</span> <span class="dv">1</span>:</span>
+<span id="cb63-11"><a href="#cb63-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">&quot;min_frequency 不能小于 1&quot;</span>)</span>
+<span id="cb63-12"><a href="#cb63-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-13"><a href="#cb63-13" aria-hidden="true" tabindex="-1"></a>    vocab <span class="op">=</span> {}</span>
+<span id="cb63-14"><a href="#cb63-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-15"><a href="#cb63-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> token_id <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">256</span>):</span>
+<span id="cb63-16"><a href="#cb63-16" aria-hidden="true" tabindex="-1"></a>        vocab[token_id] <span class="op">=</span> <span class="bu">bytes</span>([token_id])</span>
+<span id="cb63-17"><a href="#cb63-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-18"><a href="#cb63-18" aria-hidden="true" tabindex="-1"></a>    merges <span class="op">=</span> []</span>
+<span id="cb63-19"><a href="#cb63-19" aria-hidden="true" tabindex="-1"></a>    pretoken_counts <span class="op">=</span> build_pretoken_counts(text)</span>
+<span id="cb63-20"><a href="#cb63-20" aria-hidden="true" tabindex="-1"></a>    round_number <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb63-21"><a href="#cb63-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-22"><a href="#cb63-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="bu">len</span>(vocab) <span class="op">&lt;</span> vocab_size:</span>
+<span id="cb63-23"><a href="#cb63-23" aria-hidden="true" tabindex="-1"></a>        pair_counts <span class="op">=</span> count_weighted_pairs(pretoken_counts)</span>
+<span id="cb63-24"><a href="#cb63-24" aria-hidden="true" tabindex="-1"></a>        best_pair <span class="op">=</span> choose_best_pair(pair_counts, vocab)</span>
+<span id="cb63-25"><a href="#cb63-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-26"><a href="#cb63-26" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> best_pair <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb63-27"><a href="#cb63-27" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span></span>
+<span id="cb63-28"><a href="#cb63-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-29"><a href="#cb63-29" aria-hidden="true" tabindex="-1"></a>        best_frequency <span class="op">=</span> pair_counts[best_pair]</span>
+<span id="cb63-30"><a href="#cb63-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-31"><a href="#cb63-31" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> best_frequency <span class="op">&lt;</span> min_frequency:</span>
+<span id="cb63-32"><a href="#cb63-32" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span></span>
+<span id="cb63-33"><a href="#cb63-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-34"><a href="#cb63-34" aria-hidden="true" tabindex="-1"></a>        new_token_id <span class="op">=</span> <span class="bu">len</span>(vocab)</span>
+<span id="cb63-35"><a href="#cb63-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-36"><a href="#cb63-36" aria-hidden="true" tabindex="-1"></a>        left_id <span class="op">=</span> best_pair[<span class="dv">0</span>]</span>
+<span id="cb63-37"><a href="#cb63-37" aria-hidden="true" tabindex="-1"></a>        right_id <span class="op">=</span> best_pair[<span class="dv">1</span>]</span>
+<span id="cb63-38"><a href="#cb63-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-39"><a href="#cb63-39" aria-hidden="true" tabindex="-1"></a>        left_bytes <span class="op">=</span> vocab[left_id]</span>
+<span id="cb63-40"><a href="#cb63-40" aria-hidden="true" tabindex="-1"></a>        right_bytes <span class="op">=</span> vocab[right_id]</span>
+<span id="cb63-41"><a href="#cb63-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-42"><a href="#cb63-42" aria-hidden="true" tabindex="-1"></a>        vocab[new_token_id] <span class="op">=</span> left_bytes <span class="op">+</span> right_bytes</span>
+<span id="cb63-43"><a href="#cb63-43" aria-hidden="true" tabindex="-1"></a>        merges.append((left_bytes, right_bytes))</span>
+<span id="cb63-44"><a href="#cb63-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-45"><a href="#cb63-45" aria-hidden="true" tabindex="-1"></a>        pretoken_counts <span class="op">=</span> merge_pair_in_counts(</span>
+<span id="cb63-46"><a href="#cb63-46" aria-hidden="true" tabindex="-1"></a>            pretoken_counts,</span>
+<span id="cb63-47"><a href="#cb63-47" aria-hidden="true" tabindex="-1"></a>            best_pair,</span>
+<span id="cb63-48"><a href="#cb63-48" aria-hidden="true" tabindex="-1"></a>            new_token_id</span>
+<span id="cb63-49"><a href="#cb63-49" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb63-50"><a href="#cb63-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-51"><a href="#cb63-51" aria-hidden="true" tabindex="-1"></a>        round_number <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb63-52"><a href="#cb63-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-53"><a href="#cb63-53" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> vocab, merges, pretoken_counts</span></code></pre></div>
+        <section id="用-ab-ababab-abab-跑完整四轮" class="level4">
+        <h4>用 <code>ab ababab abab</code> 跑完整四轮</h4>
+        <section id="初始状态" class="level5">
+        <h5>初始状态</h5>
+        <div class="sourceCode" id="cb64"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">97</span>, <span class="dv">98</span>): <span class="dv">1</span>,</span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">32</span>, <span class="dv">97</span>, <span class="dv">98</span>, <span class="dv">97</span>, <span class="dv">98</span>, <span class="dv">97</span>, <span class="dv">98</span>): <span class="dv">1</span>,</span>
+<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">32</span>, <span class="dv">97</span>, <span class="dv">98</span>, <span class="dv">97</span>, <span class="dv">98</span>): <span class="dv">1</span></span>
+<span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+        </section>
+        <section id="第一轮" class="level5">
+        <h5>第一轮</h5>
+        <p>最高频：</p>
+        <div class="sourceCode" id="cb65"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">97</span>, <span class="dv">98</span>): <span class="dv">6</span></span></code></pre></div>
+        <p>创建：</p>
+        <div class="sourceCode" id="cb66"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>vocab[<span class="dv">256</span>] <span class="op">=</span> <span class="st">b&quot;ab&quot;</span></span></code></pre></div>
+        <p>状态：</p>
+        <div class="sourceCode" id="cb67"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">256</span>,): <span class="dv">1</span>,</span>
+<span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">32</span>, <span class="dv">256</span>, <span class="dv">256</span>, <span class="dv">256</span>): <span class="dv">1</span>,</span>
+<span id="cb67-4"><a href="#cb67-4" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">32</span>, <span class="dv">256</span>, <span class="dv">256</span>): <span class="dv">1</span></span>
+<span id="cb67-5"><a href="#cb67-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+        </section>
+        <section id="第二轮" class="level5">
+        <h5>第二轮</h5>
+        <p>统计得到：</p>
+        <div class="sourceCode" id="cb68"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">256</span>, <span class="dv">256</span>): <span class="dv">3</span></span></code></pre></div>
+        <p>注意 <code>(256, 256, 256)</code>
+        中有两个重叠候选位置，但执行时只能从左向右非重叠合并一次。</p>
+        <p>创建：</p>
+        <div class="sourceCode" id="cb69"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>vocab[<span class="dv">257</span>] <span class="op">=</span> <span class="st">b&quot;abab&quot;</span></span></code></pre></div>
+        <p>状态：</p>
+        <div class="sourceCode" id="cb70"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">256</span>,): <span class="dv">1</span>,</span>
+<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">32</span>, <span class="dv">257</span>, <span class="dv">256</span>): <span class="dv">1</span>,</span>
+<span id="cb70-4"><a href="#cb70-4" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">32</span>, <span class="dv">257</span>): <span class="dv">1</span></span>
+<span id="cb70-5"><a href="#cb70-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+        </section>
+        <section id="第三轮" class="level5">
+        <h5>第三轮</h5>
+        <p>最高频：</p>
+        <div class="sourceCode" id="cb71"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">32</span>, <span class="dv">257</span>): <span class="dv">2</span></span></code></pre></div>
+        <p>创建：</p>
+        <div class="sourceCode" id="cb72"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>vocab[<span class="dv">258</span>] <span class="op">=</span> <span class="st">b&quot; abab&quot;</span></span></code></pre></div>
+        <p>状态：</p>
+        <div class="sourceCode" id="cb73"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">256</span>,): <span class="dv">1</span>,</span>
+<span id="cb73-3"><a href="#cb73-3" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">258</span>, <span class="dv">256</span>): <span class="dv">1</span>,</span>
+<span id="cb73-4"><a href="#cb73-4" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">258</span>,): <span class="dv">1</span></span>
+<span id="cb73-5"><a href="#cb73-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+        </section>
+        <section id="第四轮" class="level5">
+        <h5>第四轮</h5>
+        <p>最高频：</p>
+        <div class="sourceCode" id="cb74"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">258</span>, <span class="dv">256</span>): <span class="dv">1</span></span></code></pre></div>
+        <p>创建：</p>
+        <div class="sourceCode" id="cb75"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>vocab[<span class="dv">259</span>] <span class="op">=</span> <span class="st">b&quot; ababab&quot;</span></span></code></pre></div>
+        <p>最终状态：</p>
+        <div class="sourceCode" id="cb76"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">256</span>,): <span class="dv">1</span>,</span>
+<span id="cb76-3"><a href="#cb76-3" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">259</span>,): <span class="dv">1</span>,</span>
+<span id="cb76-4"><a href="#cb76-4" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">258</span>,): <span class="dv">1</span></span>
+<span id="cb76-5"><a href="#cb76-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+        <p>最终三个 token 的内容是：</p>
+        <div class="sourceCode" id="cb77"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a>vocab[<span class="dv">256</span>] <span class="op">==</span> <span class="st">b&quot;ab&quot;</span></span>
+<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a>vocab[<span class="dv">259</span>] <span class="op">==</span> <span class="st">b&quot; ababab&quot;</span></span>
+<span id="cb77-3"><a href="#cb77-3" aria-hidden="true" tabindex="-1"></a>vocab[<span class="dv">258</span>] <span class="op">==</span> <span class="st">b&quot; abab&quot;</span></span></code></pre></div>
+        <p>按原始 pretoken 顺序拼接：</p>
+        <div class="sourceCode" id="cb78"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="st">b&quot;ab&quot;</span> <span class="op">+</span> <span class="st">b&quot; ababab&quot;</span> <span class="op">+</span> <span class="st">b&quot; abab&quot;</span></span></code></pre></div>
+        <p>仍然得到：</p>
+        <div class="sourceCode" id="cb79"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="st">b&quot;ab ababab abab&quot;</span></span></code></pre></div>
+        </section>
+        </section>
+        <section id="task-问题-7" class="level4">
+        <h4>Task 问题</h4>
+        <section id="为什么每轮合并后必须重新统计-pair" class="level5">
+        <h5>1. 为什么每轮合并后必须重新统计 pair？</h5>
+        <p>一次 merge 会删除旧 pair，也会产生包含新 token 的新
+        pair。例如：</p>
+        <pre class="text"><code>(a, b, c) -&gt; (ab, c)</code></pre>
+        <p>原来的 <code>(a,b)</code>、<code>(b,c)</code> 消失，新的
+        <code>(ab,c)</code> 出现。上一轮的频率表已不再描述当前状态。</p>
+        </section>
+        <section id="为什么新-id-应只在成功合并后推进" class="level5">
+        <h5>2. 为什么新 ID 应只在成功合并后推进？</h5>
+        <p>每个新 ID 都应对应一个实际创建的词表项和一条 merge
+        规则。若在无 pair 或未达到最低频率时仍推进
+        ID，就会产生空洞，并破坏 ID 与 merge 次数之间的关系。</p>
+        </section>
+        <section id="为什么-lenvocab-256-lenmerges" class="level5">
+        <h5>3. 为什么
+        <code>len(vocab) == 256 + len(merges)</code>？</h5>
+        <p>初始词表固定有 256 项。每成功一轮：</p>
+        <ul>
+        <li><code>vocab</code> 增加一个新 token；</li>
+        <li><code>merges</code> 增加一条规则。</li>
+        </ul>
+        <p>二者始终同步增长。</p>
+        </section>
+        <section id="聚合后的频率表丢失原始顺序为什么仍足以训练"
+        class="level5">
+        <h5>4. 聚合后的频率表丢失原始顺序，为什么仍足以训练？</h5>
+        <p>训练只统计 pretoken 内部 pair 的总频率，不允许跨 pretoken
+        合并。每个 pretoken 的内部顺序仍保存在 tuple 中，而不同 pretoken
+        的全文先后顺序不会改变合法 pair 统计。</p>
+        </section>
+        <section id="为什么词表项的-bytes-拼接能保证文本不变"
+        class="level5">
+        <h5>5. 为什么词表项的 bytes 拼接能保证文本不变？</h5>
+        <p>定义：</p>
+        <div class="sourceCode" id="cb81"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a>vocab[new_id] <span class="op">=</span> vocab[left_id] <span class="op">+</span> vocab[right_id]</span></code></pre></div>
+        <p>所以合并前后对应的 bytes 完全相等。BPE
+        改变的是分组方式，不是数据本身。</p>
+        </section>
+        <section id="vocab_size-和-min_frequency-分别控制什么"
+        class="level5">
+        <h5>6. <code>vocab_size</code> 和 <code>min_frequency</code>
+        分别控制什么？</h5>
+        <ul>
+        <li><code>vocab_size</code> 限制最终词表最多有多少项；</li>
+        <li><code>min_frequency</code> 阻止程序继续合并极低频
+        pair。</li>
+        </ul>
+        <p>对本文极小示例，最后一轮频率只有 1，因此需要：</p>
+        <div class="sourceCode" id="cb82"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a>min_frequency <span class="op">=</span> <span class="dv">1</span></span></code></pre></div>
+        <hr />
+        </section>
+        </section>
+        </section>
+        </section>
+        <section id="这份实现与生产级-tokenizer-的差距" class="level2">
+        <h2>6. 这份实现与生产级 tokenizer 的差距</h2>
+        <p>这份代码完整实现了 Byte-Level BPE
+        的核心训练逻辑，但定位仍是教学实现。</p>
+        <p>每一轮都会：</p>
+        <ol type="1">
+        <li>扫描全部 pretoken；</li>
+        <li>重新统计全部 pair；</li>
+        <li>再扫描全部 pretoken执行合并。</li>
+        </ol>
+        <p>这种写法清晰、容易验证，但在大语料上速度较慢。生产级
+        tokenizer 通常会：</p>
+        <ul>
+        <li>增量维护 pair 频率；</li>
+        <li>保存 pair 到出现位置的索引；</li>
+        <li>使用更紧凑的数据结构；</li>
+        <li>用 Rust 或 C++ 实现热点路径；</li>
+        <li>单独处理特殊 token；</li>
+        <li>保存可直接用于编码的 merge rank；</li>
+        <li>对正则预分词和批处理进行优化。</li>
+        </ul>
+        <p>但从学习角度看，先实现这个版本很重要。只有明确理解“当前状态是什么、pair
+        如何统计、merge 如何改变状态”，后续的性能优化才不是黑箱。</p>
+        <hr />
+        </section>
+        <section id="最终完整代码" class="level2">
+        <h2>7. 最终完整代码</h2>
+        <blockquote>
+        <p>完整代码可直接复制，也可以<a href="../notes/BPE.py">下载
+        BPE.py</a>后在本地运行。</p>
+        </blockquote>
+        <p>下面是最终可运行版本。运行前安装：</p>
+        <div class="sourceCode" id="cb83"><pre
+        class="sourceCode bash"><code class="sourceCode bash"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install regex</span></code></pre></div>
+        <p>示例输入固定为：</p>
+        <pre class="text"><code>ab ababab abab</code></pre>
+        <p>目标词表大小为 260，因此会在 256 个基础 byte token 上执行 4
+        轮成功合并。</p>
+        <div class="sourceCode" id="cb85"><pre
+        class="sourceCode python"><code class="sourceCode python"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 导入第三方 regex 模块。</span></span>
+<span id="cb85-2"><a href="#cb85-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 它支持 \p{L}、\p{N} 等 Unicode 字符类别。</span></span>
+<span id="cb85-3"><a href="#cb85-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> regex</span>
+<span id="cb85-4"><a href="#cb85-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-5"><a href="#cb85-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-6"><a href="#cb85-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 编译预分词正则表达式。</span></span>
+<span id="cb85-7"><a href="#cb85-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 该规则会把文本分为英文缩写、字母、数字、标点和空白等片段。</span></span>
+<span id="cb85-8"><a href="#cb85-8" aria-hidden="true" tabindex="-1"></a><span class="co"># BPE 只允许在同一个 pretoken 内部合并，不能跨越这些片段的边界。</span></span>
+<span id="cb85-9"><a href="#cb85-9" aria-hidden="true" tabindex="-1"></a>PRETOKEN_PATTERN <span class="op">=</span> regex.<span class="bu">compile</span>(</span>
+<span id="cb85-10"><a href="#cb85-10" aria-hidden="true" tabindex="-1"></a>    <span class="vs">r&quot;&quot;&quot;&#39;(?:[sdmt]|ll|ve|re)| ?\p</span><span class="sc">{L}</span><span class="vs">+| ?\p</span><span class="sc">{N}</span><span class="vs">+| ?[^\s\p</span><span class="sc">{L}</span><span class="vs">\p</span><span class="sc">{N}</span><span class="vs">]+|\s+(?!\S)|\s+&quot;&quot;&quot;</span></span>
+<span id="cb85-11"><a href="#cb85-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb85-12"><a href="#cb85-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-13"><a href="#cb85-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-14"><a href="#cb85-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> pretokenize(text):</span>
+<span id="cb85-15"><a href="#cb85-15" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb85-16"><a href="#cb85-16" aria-hidden="true" tabindex="-1"></a><span class="co">    将 Python 字符串预分词，并把每个片段编码成 UTF-8 bytes。</span></span>
+<span id="cb85-17"><a href="#cb85-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-18"><a href="#cb85-18" aria-hidden="true" tabindex="-1"></a><span class="co">    参数：</span></span>
+<span id="cb85-19"><a href="#cb85-19" aria-hidden="true" tabindex="-1"></a><span class="co">        text：需要处理的 Python 字符串。</span></span>
+<span id="cb85-20"><a href="#cb85-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-21"><a href="#cb85-21" aria-hidden="true" tabindex="-1"></a><span class="co">    返回：</span></span>
+<span id="cb85-22"><a href="#cb85-22" aria-hidden="true" tabindex="-1"></a><span class="co">        list[bytes]，其中每一项都是一个 pretoken。</span></span>
+<span id="cb85-23"><a href="#cb85-23" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb85-24"><a href="#cb85-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-25"><a href="#cb85-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 创建空列表，用于保存最终的 bytes 片段。</span></span>
+<span id="cb85-26"><a href="#cb85-26" aria-hidden="true" tabindex="-1"></a>    pretokens <span class="op">=</span> []</span>
+<span id="cb85-27"><a href="#cb85-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-28"><a href="#cb85-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># finditer 从左向右返回每一个正则匹配对象。</span></span>
+<span id="cb85-29"><a href="#cb85-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> match <span class="kw">in</span> PRETOKEN_PATTERN.finditer(text):</span>
+<span id="cb85-30"><a href="#cb85-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-31"><a href="#cb85-31" aria-hidden="true" tabindex="-1"></a>        <span class="co"># group() 取得当前匹配到的完整字符串。</span></span>
+<span id="cb85-32"><a href="#cb85-32" aria-hidden="true" tabindex="-1"></a>        piece <span class="op">=</span> match.group()</span>
+<span id="cb85-33"><a href="#cb85-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-34"><a href="#cb85-34" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 正则通常不会产生空匹配，但这里仍然进行保护。</span></span>
+<span id="cb85-35"><a href="#cb85-35" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> piece <span class="op">!=</span> <span class="st">&quot;&quot;</span>:</span>
+<span id="cb85-36"><a href="#cb85-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-37"><a href="#cb85-37" aria-hidden="true" tabindex="-1"></a>            <span class="co"># 先取得完整字符串片段，再把它编码为 UTF-8 bytes。</span></span>
+<span id="cb85-38"><a href="#cb85-38" aria-hidden="true" tabindex="-1"></a>            encoded_piece <span class="op">=</span> piece.encode(<span class="st">&quot;utf-8&quot;</span>)</span>
+<span id="cb85-39"><a href="#cb85-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-40"><a href="#cb85-40" aria-hidden="true" tabindex="-1"></a>            <span class="co"># 把编码后的 pretoken 加入结果列表。</span></span>
+<span id="cb85-41"><a href="#cb85-41" aria-hidden="true" tabindex="-1"></a>            pretokens.append(encoded_piece)</span>
+<span id="cb85-42"><a href="#cb85-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-43"><a href="#cb85-43" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 空字符串不会产生匹配，因此会自然返回空列表。</span></span>
+<span id="cb85-44"><a href="#cb85-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pretokens</span>
+<span id="cb85-45"><a href="#cb85-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-46"><a href="#cb85-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-47"><a href="#cb85-47" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> build_pretoken_counts(text):</span>
+<span id="cb85-48"><a href="#cb85-48" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb85-49"><a href="#cb85-49" aria-hidden="true" tabindex="-1"></a><span class="co">    建立 pretoken 频率表。</span></span>
+<span id="cb85-50"><a href="#cb85-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-51"><a href="#cb85-51" aria-hidden="true" tabindex="-1"></a><span class="co">    返回结构：</span></span>
+<span id="cb85-52"><a href="#cb85-52" aria-hidden="true" tabindex="-1"></a><span class="co">        dict[tuple[int, ...], int]</span></span>
+<span id="cb85-53"><a href="#cb85-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-54"><a href="#cb85-54" aria-hidden="true" tabindex="-1"></a><span class="co">    字典键：</span></span>
+<span id="cb85-55"><a href="#cb85-55" aria-hidden="true" tabindex="-1"></a><span class="co">        pretoken 对应的 token ID 元组。</span></span>
+<span id="cb85-56"><a href="#cb85-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-57"><a href="#cb85-57" aria-hidden="true" tabindex="-1"></a><span class="co">    字典值：</span></span>
+<span id="cb85-58"><a href="#cb85-58" aria-hidden="true" tabindex="-1"></a><span class="co">        该 pretoken 在文本中的出现频率。</span></span>
+<span id="cb85-59"><a href="#cb85-59" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb85-60"><a href="#cb85-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-61"><a href="#cb85-61" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 调用预分词函数，得到 list[bytes]。</span></span>
+<span id="cb85-62"><a href="#cb85-62" aria-hidden="true" tabindex="-1"></a>    pretokens <span class="op">=</span> pretokenize(text)</span>
+<span id="cb85-63"><a href="#cb85-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-64"><a href="#cb85-64" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 创建空字典，用于保存 pretoken 频率。</span></span>
+<span id="cb85-65"><a href="#cb85-65" aria-hidden="true" tabindex="-1"></a>    pretoken_counts <span class="op">=</span> {}</span>
+<span id="cb85-66"><a href="#cb85-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-67"><a href="#cb85-67" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 依次处理每个 pretoken。</span></span>
+<span id="cb85-68"><a href="#cb85-68" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> piece <span class="kw">in</span> pretokens:</span>
+<span id="cb85-69"><a href="#cb85-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-70"><a href="#cb85-70" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 遍历 bytes 会得到 0～255 的字节整数。</span></span>
+<span id="cb85-71"><a href="#cb85-71" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 将其转换成 tuple，使它可以作为字典键。</span></span>
+<span id="cb85-72"><a href="#cb85-72" aria-hidden="true" tabindex="-1"></a>        token_tuple <span class="op">=</span> <span class="bu">tuple</span>(piece)</span>
+<span id="cb85-73"><a href="#cb85-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-74"><a href="#cb85-74" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 如果该 pretoken 已经出现过，就把频率增加 1。</span></span>
+<span id="cb85-75"><a href="#cb85-75" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> token_tuple <span class="kw">in</span> pretoken_counts:</span>
+<span id="cb85-76"><a href="#cb85-76" aria-hidden="true" tabindex="-1"></a>            pretoken_counts[token_tuple] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb85-77"><a href="#cb85-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-78"><a href="#cb85-78" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 如果是第一次出现，就把频率初始化为 1。</span></span>
+<span id="cb85-79"><a href="#cb85-79" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb85-80"><a href="#cb85-80" aria-hidden="true" tabindex="-1"></a>            pretoken_counts[token_tuple] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb85-81"><a href="#cb85-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-82"><a href="#cb85-82" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 返回聚合后的频率表。</span></span>
+<span id="cb85-83"><a href="#cb85-83" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pretoken_counts</span>
+<span id="cb85-84"><a href="#cb85-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-85"><a href="#cb85-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-86"><a href="#cb85-86" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> count_weighted_pairs(pretoken_counts):</span>
+<span id="cb85-87"><a href="#cb85-87" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb85-88"><a href="#cb85-88" aria-hidden="true" tabindex="-1"></a><span class="co">    加权统计所有 pretoken 内部的相邻 token pair。</span></span>
+<span id="cb85-89"><a href="#cb85-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-90"><a href="#cb85-90" aria-hidden="true" tabindex="-1"></a><span class="co">    返回结构：</span></span>
+<span id="cb85-91"><a href="#cb85-91" aria-hidden="true" tabindex="-1"></a><span class="co">        dict[tuple[int, int], int]</span></span>
+<span id="cb85-92"><a href="#cb85-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-93"><a href="#cb85-93" aria-hidden="true" tabindex="-1"></a><span class="co">    注意：</span></span>
+<span id="cb85-94"><a href="#cb85-94" aria-hidden="true" tabindex="-1"></a><span class="co">        不统计两个不同 pretoken 之间的 pair。</span></span>
+<span id="cb85-95"><a href="#cb85-95" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb85-96"><a href="#cb85-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-97"><a href="#cb85-97" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 创建新的 pair 频率字典。</span></span>
+<span id="cb85-98"><a href="#cb85-98" aria-hidden="true" tabindex="-1"></a>    pair_counts <span class="op">=</span> {}</span>
+<span id="cb85-99"><a href="#cb85-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-100"><a href="#cb85-100" aria-hidden="true" tabindex="-1"></a>    <span class="co"># items() 同时取得 pretoken 元组和它的频率。</span></span>
+<span id="cb85-101"><a href="#cb85-101" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> pretoken, frequency <span class="kw">in</span> pretoken_counts.items():</span>
+<span id="cb85-102"><a href="#cb85-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-103"><a href="#cb85-103" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 长度为 n 的 pretoken 中有 n - 1 个相邻位置。</span></span>
+<span id="cb85-104"><a href="#cb85-104" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(pretoken) <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb85-105"><a href="#cb85-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-106"><a href="#cb85-106" aria-hidden="true" tabindex="-1"></a>            <span class="co"># 取当前位置和下一个位置，组成有顺序的二元组。</span></span>
+<span id="cb85-107"><a href="#cb85-107" aria-hidden="true" tabindex="-1"></a>            pair <span class="op">=</span> (pretoken[i], pretoken[i <span class="op">+</span> <span class="dv">1</span>])</span>
+<span id="cb85-108"><a href="#cb85-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-109"><a href="#cb85-109" aria-hidden="true" tabindex="-1"></a>            <span class="co"># 如果该 pair 已经出现过，就增加整个 pretoken 的频率。</span></span>
+<span id="cb85-110"><a href="#cb85-110" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> pair <span class="kw">in</span> pair_counts:</span>
+<span id="cb85-111"><a href="#cb85-111" aria-hidden="true" tabindex="-1"></a>                pair_counts[pair] <span class="op">+=</span> frequency</span>
+<span id="cb85-112"><a href="#cb85-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-113"><a href="#cb85-113" aria-hidden="true" tabindex="-1"></a>            <span class="co"># 第一次遇到时，初始值也应是 pretoken 的频率。</span></span>
+<span id="cb85-114"><a href="#cb85-114" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
+<span id="cb85-115"><a href="#cb85-115" aria-hidden="true" tabindex="-1"></a>                pair_counts[pair] <span class="op">=</span> frequency</span>
+<span id="cb85-116"><a href="#cb85-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-117"><a href="#cb85-117" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 返回全部 pair 的加权频率。</span></span>
+<span id="cb85-118"><a href="#cb85-118" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pair_counts</span>
+<span id="cb85-119"><a href="#cb85-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-120"><a href="#cb85-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-121"><a href="#cb85-121" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> merge_pair(tokens, pair, new_token_id):</span>
+<span id="cb85-122"><a href="#cb85-122" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb85-123"><a href="#cb85-123" aria-hidden="true" tabindex="-1"></a><span class="co">    在一个 token 序列中，从左向右非重叠合并指定 pair。</span></span>
+<span id="cb85-124"><a href="#cb85-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-125"><a href="#cb85-125" aria-hidden="true" tabindex="-1"></a><span class="co">    参数：</span></span>
+<span id="cb85-126"><a href="#cb85-126" aria-hidden="true" tabindex="-1"></a><span class="co">        tokens：list[int]，原 token 序列。</span></span>
+<span id="cb85-127"><a href="#cb85-127" aria-hidden="true" tabindex="-1"></a><span class="co">        pair：tuple[int, int]，需要合并的 token pair。</span></span>
+<span id="cb85-128"><a href="#cb85-128" aria-hidden="true" tabindex="-1"></a><span class="co">        new_token_id：合并后使用的新 token ID。</span></span>
+<span id="cb85-129"><a href="#cb85-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-130"><a href="#cb85-130" aria-hidden="true" tabindex="-1"></a><span class="co">    返回：</span></span>
+<span id="cb85-131"><a href="#cb85-131" aria-hidden="true" tabindex="-1"></a><span class="co">        合并后的新 list[int]。</span></span>
+<span id="cb85-132"><a href="#cb85-132" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb85-133"><a href="#cb85-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-134"><a href="#cb85-134" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 创建新列表，不直接修改传入的原列表。</span></span>
+<span id="cb85-135"><a href="#cb85-135" aria-hidden="true" tabindex="-1"></a>    merged_tokens <span class="op">=</span> []</span>
+<span id="cb85-136"><a href="#cb85-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-137"><a href="#cb85-137" aria-hidden="true" tabindex="-1"></a>    <span class="co"># i 表示当前正在检查的下标。</span></span>
+<span id="cb85-138"><a href="#cb85-138" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb85-139"><a href="#cb85-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-140"><a href="#cb85-140" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 只要 i 没有越过列表末尾，就继续处理。</span></span>
+<span id="cb85-141"><a href="#cb85-141" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> i <span class="op">&lt;</span> <span class="bu">len</span>(tokens):</span>
+<span id="cb85-142"><a href="#cb85-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-143"><a href="#cb85-143" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 首先保证当前位置后面还有一个 token。</span></span>
+<span id="cb85-144"><a href="#cb85-144" aria-hidden="true" tabindex="-1"></a>        has_next_token <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span> <span class="op">&lt;</span> <span class="bu">len</span>(tokens)</span>
+<span id="cb85-145"><a href="#cb85-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-146"><a href="#cb85-146" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 只有存在下一个 token 时，才能组成相邻 pair。</span></span>
+<span id="cb85-147"><a href="#cb85-147" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> has_next_token:</span>
+<span id="cb85-148"><a href="#cb85-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-149"><a href="#cb85-149" aria-hidden="true" tabindex="-1"></a>            <span class="co"># 把当前位置的两个 token 组成二元组。</span></span>
+<span id="cb85-150"><a href="#cb85-150" aria-hidden="true" tabindex="-1"></a>            current_pair <span class="op">=</span> (tokens[i], tokens[i <span class="op">+</span> <span class="dv">1</span>])</span>
+<span id="cb85-151"><a href="#cb85-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-152"><a href="#cb85-152" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 如果当前位置已经是最后一个位置，就无法组成 pair。</span></span>
+<span id="cb85-153"><a href="#cb85-153" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb85-154"><a href="#cb85-154" aria-hidden="true" tabindex="-1"></a>            current_pair <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb85-155"><a href="#cb85-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-156"><a href="#cb85-156" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 如果当前位置恰好匹配指定 pair，就执行合并。</span></span>
+<span id="cb85-157"><a href="#cb85-157" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> current_pair <span class="op">==</span> pair:</span>
+<span id="cb85-158"><a href="#cb85-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-159"><a href="#cb85-159" aria-hidden="true" tabindex="-1"></a>            <span class="co"># 用一个新的 token ID 替换两个旧 token。</span></span>
+<span id="cb85-160"><a href="#cb85-160" aria-hidden="true" tabindex="-1"></a>            merged_tokens.append(new_token_id)</span>
+<span id="cb85-161"><a href="#cb85-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-162"><a href="#cb85-162" aria-hidden="true" tabindex="-1"></a>            <span class="co"># 两个旧 token 都已经被使用，因此跨过两个位置。</span></span>
+<span id="cb85-163"><a href="#cb85-163" aria-hidden="true" tabindex="-1"></a>            i <span class="op">+=</span> <span class="dv">2</span></span>
+<span id="cb85-164"><a href="#cb85-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-165"><a href="#cb85-165" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 如果当前位置不匹配指定 pair，就保留当前 token。</span></span>
+<span id="cb85-166"><a href="#cb85-166" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb85-167"><a href="#cb85-167" aria-hidden="true" tabindex="-1"></a>            merged_tokens.append(tokens[i])</span>
+<span id="cb85-168"><a href="#cb85-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-169"><a href="#cb85-169" aria-hidden="true" tabindex="-1"></a>            <span class="co"># 只处理了一个 token，因此向右移动一个位置。</span></span>
+<span id="cb85-170"><a href="#cb85-170" aria-hidden="true" tabindex="-1"></a>            i <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb85-171"><a href="#cb85-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-172"><a href="#cb85-172" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 返回新列表。</span></span>
+<span id="cb85-173"><a href="#cb85-173" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> merged_tokens</span>
+<span id="cb85-174"><a href="#cb85-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-175"><a href="#cb85-175" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-176"><a href="#cb85-176" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> merge_pair_in_counts(pretoken_counts, pair, new_token_id):</span>
+<span id="cb85-177"><a href="#cb85-177" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb85-178"><a href="#cb85-178" aria-hidden="true" tabindex="-1"></a><span class="co">    将指定 pair 应用于整个 pretoken 频率表。</span></span>
+<span id="cb85-179"><a href="#cb85-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-180"><a href="#cb85-180" aria-hidden="true" tabindex="-1"></a><span class="co">    每个 pretoken 独立合并，不允许跨 pretoken 边界。</span></span>
+<span id="cb85-181"><a href="#cb85-181" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb85-182"><a href="#cb85-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-183"><a href="#cb85-183" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 创建新的频率表，避免在遍历时修改原字典。</span></span>
+<span id="cb85-184"><a href="#cb85-184" aria-hidden="true" tabindex="-1"></a>    new_counts <span class="op">=</span> {}</span>
+<span id="cb85-185"><a href="#cb85-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-186"><a href="#cb85-186" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 遍历每一种唯一 pretoken 及其原频率。</span></span>
+<span id="cb85-187"><a href="#cb85-187" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> pretoken, frequency <span class="kw">in</span> pretoken_counts.items():</span>
+<span id="cb85-188"><a href="#cb85-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-189"><a href="#cb85-189" aria-hidden="true" tabindex="-1"></a>        <span class="co"># merge_pair 接收 list，因此先把 tuple 转换成 list。</span></span>
+<span id="cb85-190"><a href="#cb85-190" aria-hidden="true" tabindex="-1"></a>        token_list <span class="op">=</span> <span class="bu">list</span>(pretoken)</span>
+<span id="cb85-191"><a href="#cb85-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-192"><a href="#cb85-192" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 调用统一的非重叠合并函数。</span></span>
+<span id="cb85-193"><a href="#cb85-193" aria-hidden="true" tabindex="-1"></a>        merged_list <span class="op">=</span> merge_pair(</span>
+<span id="cb85-194"><a href="#cb85-194" aria-hidden="true" tabindex="-1"></a>            token_list,</span>
+<span id="cb85-195"><a href="#cb85-195" aria-hidden="true" tabindex="-1"></a>            pair,</span>
+<span id="cb85-196"><a href="#cb85-196" aria-hidden="true" tabindex="-1"></a>            new_token_id</span>
+<span id="cb85-197"><a href="#cb85-197" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb85-198"><a href="#cb85-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-199"><a href="#cb85-199" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 字典键不能使用 list，因此重新转换成 tuple。</span></span>
+<span id="cb85-200"><a href="#cb85-200" aria-hidden="true" tabindex="-1"></a>        merged_tuple <span class="op">=</span> <span class="bu">tuple</span>(merged_list)</span>
+<span id="cb85-201"><a href="#cb85-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-202"><a href="#cb85-202" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 不同旧 pretoken 可能得到相同的新 tuple。</span></span>
+<span id="cb85-203"><a href="#cb85-203" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 此时应将它们的频率相加。</span></span>
+<span id="cb85-204"><a href="#cb85-204" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> merged_tuple <span class="kw">in</span> new_counts:</span>
+<span id="cb85-205"><a href="#cb85-205" aria-hidden="true" tabindex="-1"></a>            new_counts[merged_tuple] <span class="op">+=</span> frequency</span>
+<span id="cb85-206"><a href="#cb85-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-207"><a href="#cb85-207" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 如果该新 tuple 首次出现，就保留原 pretoken 的频率。</span></span>
+<span id="cb85-208"><a href="#cb85-208" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb85-209"><a href="#cb85-209" aria-hidden="true" tabindex="-1"></a>            new_counts[merged_tuple] <span class="op">=</span> frequency</span>
+<span id="cb85-210"><a href="#cb85-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-211"><a href="#cb85-211" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 返回本轮合并后的新频率表。</span></span>
+<span id="cb85-212"><a href="#cb85-212" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> new_counts</span>
+<span id="cb85-213"><a href="#cb85-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-214"><a href="#cb85-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-215"><a href="#cb85-215" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> choose_best_pair(pair_counts, vocab):</span>
+<span id="cb85-216"><a href="#cb85-216" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb85-217"><a href="#cb85-217" aria-hidden="true" tabindex="-1"></a><span class="co">    选择本轮需要合并的最高频 pair。</span></span>
+<span id="cb85-218"><a href="#cb85-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-219"><a href="#cb85-219" aria-hidden="true" tabindex="-1"></a><span class="co">    并列规则：</span></span>
+<span id="cb85-220"><a href="#cb85-220" aria-hidden="true" tabindex="-1"></a><span class="co">        频率相同时，选择 bytes 二元组字典序更大的 pair。</span></span>
+<span id="cb85-221"><a href="#cb85-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-222"><a href="#cb85-222" aria-hidden="true" tabindex="-1"></a><span class="co">    明确规定并列规则，可以保证相同输入每次得到相同结果。</span></span>
+<span id="cb85-223"><a href="#cb85-223" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb85-224"><a href="#cb85-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-225"><a href="#cb85-225" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 如果频率表为空，说明当前已经没有可合并 pair。</span></span>
+<span id="cb85-226"><a href="#cb85-226" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(pair_counts) <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb85-227"><a href="#cb85-227" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span></span>
+<span id="cb85-228"><a href="#cb85-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-229"><a href="#cb85-229" aria-hidden="true" tabindex="-1"></a>    <span class="co"># best_pair 暂时设为空。</span></span>
+<span id="cb85-230"><a href="#cb85-230" aria-hidden="true" tabindex="-1"></a>    best_pair <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb85-231"><a href="#cb85-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-232"><a href="#cb85-232" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 依次检查每一种 pair。</span></span>
+<span id="cb85-233"><a href="#cb85-233" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> pair <span class="kw">in</span> pair_counts:</span>
+<span id="cb85-234"><a href="#cb85-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-235"><a href="#cb85-235" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 第一次循环时，直接把当前 pair 设为最优 pair。</span></span>
+<span id="cb85-236"><a href="#cb85-236" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> best_pair <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb85-237"><a href="#cb85-237" aria-hidden="true" tabindex="-1"></a>            best_pair <span class="op">=</span> pair</span>
+<span id="cb85-238"><a href="#cb85-238" aria-hidden="true" tabindex="-1"></a>            <span class="cf">continue</span></span>
+<span id="cb85-239"><a href="#cb85-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-240"><a href="#cb85-240" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 取得当前 pair 的频率。</span></span>
+<span id="cb85-241"><a href="#cb85-241" aria-hidden="true" tabindex="-1"></a>        current_frequency <span class="op">=</span> pair_counts[pair]</span>
+<span id="cb85-242"><a href="#cb85-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-243"><a href="#cb85-243" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 取得目前最优 pair 的频率。</span></span>
+<span id="cb85-244"><a href="#cb85-244" aria-hidden="true" tabindex="-1"></a>        best_frequency <span class="op">=</span> pair_counts[best_pair]</span>
+<span id="cb85-245"><a href="#cb85-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-246"><a href="#cb85-246" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 当前 pair 频率更高时，直接更新。</span></span>
+<span id="cb85-247"><a href="#cb85-247" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> current_frequency <span class="op">&gt;</span> best_frequency:</span>
+<span id="cb85-248"><a href="#cb85-248" aria-hidden="true" tabindex="-1"></a>            best_pair <span class="op">=</span> pair</span>
+<span id="cb85-249"><a href="#cb85-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-250"><a href="#cb85-250" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 频率相同时，执行确定性的字节字典序比较。</span></span>
+<span id="cb85-251"><a href="#cb85-251" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> current_frequency <span class="op">==</span> best_frequency:</span>
+<span id="cb85-252"><a href="#cb85-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-253"><a href="#cb85-253" aria-hidden="true" tabindex="-1"></a>            <span class="co"># 找到当前 pair 左 token 代表的 bytes。</span></span>
+<span id="cb85-254"><a href="#cb85-254" aria-hidden="true" tabindex="-1"></a>            current_left <span class="op">=</span> vocab[pair[<span class="dv">0</span>]]</span>
+<span id="cb85-255"><a href="#cb85-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-256"><a href="#cb85-256" aria-hidden="true" tabindex="-1"></a>            <span class="co"># 找到当前 pair 右 token 代表的 bytes。</span></span>
+<span id="cb85-257"><a href="#cb85-257" aria-hidden="true" tabindex="-1"></a>            current_right <span class="op">=</span> vocab[pair[<span class="dv">1</span>]]</span>
+<span id="cb85-258"><a href="#cb85-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-259"><a href="#cb85-259" aria-hidden="true" tabindex="-1"></a>            <span class="co"># 组成当前 pair 的 bytes 二元组。</span></span>
+<span id="cb85-260"><a href="#cb85-260" aria-hidden="true" tabindex="-1"></a>            current_bytes_pair <span class="op">=</span> (current_left, current_right)</span>
+<span id="cb85-261"><a href="#cb85-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-262"><a href="#cb85-262" aria-hidden="true" tabindex="-1"></a>            <span class="co"># 找到目前最优 pair 左 token 代表的 bytes。</span></span>
+<span id="cb85-263"><a href="#cb85-263" aria-hidden="true" tabindex="-1"></a>            best_left <span class="op">=</span> vocab[best_pair[<span class="dv">0</span>]]</span>
+<span id="cb85-264"><a href="#cb85-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-265"><a href="#cb85-265" aria-hidden="true" tabindex="-1"></a>            <span class="co"># 找到目前最优 pair 右 token 代表的 bytes。</span></span>
+<span id="cb85-266"><a href="#cb85-266" aria-hidden="true" tabindex="-1"></a>            best_right <span class="op">=</span> vocab[best_pair[<span class="dv">1</span>]]</span>
+<span id="cb85-267"><a href="#cb85-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-268"><a href="#cb85-268" aria-hidden="true" tabindex="-1"></a>            <span class="co"># 组成目前最优 pair 的 bytes 二元组。</span></span>
+<span id="cb85-269"><a href="#cb85-269" aria-hidden="true" tabindex="-1"></a>            best_bytes_pair <span class="op">=</span> (best_left, best_right)</span>
+<span id="cb85-270"><a href="#cb85-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-271"><a href="#cb85-271" aria-hidden="true" tabindex="-1"></a>            <span class="co"># 字典序更大的 pair 胜出。</span></span>
+<span id="cb85-272"><a href="#cb85-272" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> current_bytes_pair <span class="op">&gt;</span> best_bytes_pair:</span>
+<span id="cb85-273"><a href="#cb85-273" aria-hidden="true" tabindex="-1"></a>                best_pair <span class="op">=</span> pair</span>
+<span id="cb85-274"><a href="#cb85-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-275"><a href="#cb85-275" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 返回最终选中的整数 ID pair。</span></span>
+<span id="cb85-276"><a href="#cb85-276" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> best_pair</span>
+<span id="cb85-277"><a href="#cb85-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-278"><a href="#cb85-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-279"><a href="#cb85-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-280"><a href="#cb85-280" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> show_pretoken_counts(pretoken_counts, vocab):</span>
+<span id="cb85-281"><a href="#cb85-281" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb85-282"><a href="#cb85-282" aria-hidden="true" tabindex="-1"></a><span class="co">    把 pretoken 频率表转换成更容易阅读的形式。</span></span>
+<span id="cb85-283"><a href="#cb85-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-284"><a href="#cb85-284" aria-hidden="true" tabindex="-1"></a><span class="co">    参数：</span></span>
+<span id="cb85-285"><a href="#cb85-285" aria-hidden="true" tabindex="-1"></a><span class="co">        pretoken_counts：</span></span>
+<span id="cb85-286"><a href="#cb85-286" aria-hidden="true" tabindex="-1"></a><span class="co">            dict[tuple[int, ...], int]</span></span>
+<span id="cb85-287"><a href="#cb85-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-288"><a href="#cb85-288" aria-hidden="true" tabindex="-1"></a><span class="co">        vocab：</span></span>
+<span id="cb85-289"><a href="#cb85-289" aria-hidden="true" tabindex="-1"></a><span class="co">            dict[int, bytes]</span></span>
+<span id="cb85-290"><a href="#cb85-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-291"><a href="#cb85-291" aria-hidden="true" tabindex="-1"></a><span class="co">    返回：</span></span>
+<span id="cb85-292"><a href="#cb85-292" aria-hidden="true" tabindex="-1"></a><span class="co">        list[tuple[list[bytes], int]]</span></span>
+<span id="cb85-293"><a href="#cb85-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-294"><a href="#cb85-294" aria-hidden="true" tabindex="-1"></a><span class="co">    贯穿示例第一轮训练前：</span></span>
+<span id="cb85-295"><a href="#cb85-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-296"><a href="#cb85-296" aria-hidden="true" tabindex="-1"></a><span class="co">        pretoken_counts = {</span></span>
+<span id="cb85-297"><a href="#cb85-297" aria-hidden="true" tabindex="-1"></a><span class="co">            (97, 98): 1,</span></span>
+<span id="cb85-298"><a href="#cb85-298" aria-hidden="true" tabindex="-1"></a><span class="co">            (32, 97, 98, 97, 98, 97, 98): 1,</span></span>
+<span id="cb85-299"><a href="#cb85-299" aria-hidden="true" tabindex="-1"></a><span class="co">            (32, 97, 98, 97, 98): 1</span></span>
+<span id="cb85-300"><a href="#cb85-300" aria-hidden="true" tabindex="-1"></a><span class="co">        }</span></span>
+<span id="cb85-301"><a href="#cb85-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-302"><a href="#cb85-302" aria-hidden="true" tabindex="-1"></a><span class="co">    转换后：</span></span>
+<span id="cb85-303"><a href="#cb85-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-304"><a href="#cb85-304" aria-hidden="true" tabindex="-1"></a><span class="co">        [</span></span>
+<span id="cb85-305"><a href="#cb85-305" aria-hidden="true" tabindex="-1"></a><span class="co">            ([b&quot;a&quot;, b&quot;b&quot;], 1),</span></span>
+<span id="cb85-306"><a href="#cb85-306" aria-hidden="true" tabindex="-1"></a><span class="co">            ([b&quot; &quot;, b&quot;a&quot;, b&quot;b&quot;, b&quot;a&quot;, b&quot;b&quot;, b&quot;a&quot;, b&quot;b&quot;], 1),</span></span>
+<span id="cb85-307"><a href="#cb85-307" aria-hidden="true" tabindex="-1"></a><span class="co">            ([b&quot; &quot;, b&quot;a&quot;, b&quot;b&quot;, b&quot;a&quot;, b&quot;b&quot;], 1)</span></span>
+<span id="cb85-308"><a href="#cb85-308" aria-hidden="true" tabindex="-1"></a><span class="co">        ]</span></span>
+<span id="cb85-309"><a href="#cb85-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-310"><a href="#cb85-310" aria-hidden="true" tabindex="-1"></a><span class="co">    这个函数只用于显示训练过程，不修改 vocab 或 pretoken_counts。</span></span>
+<span id="cb85-311"><a href="#cb85-311" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb85-312"><a href="#cb85-312" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-313"><a href="#cb85-313" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 创建结果列表。</span></span>
+<span id="cb85-314"><a href="#cb85-314" aria-hidden="true" tabindex="-1"></a>    readable_counts <span class="op">=</span> []</span>
+<span id="cb85-315"><a href="#cb85-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-316"><a href="#cb85-316" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 遍历每一种 pretoken 及其频率。</span></span>
+<span id="cb85-317"><a href="#cb85-317" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> pretoken, frequency <span class="kw">in</span> pretoken_counts.items():</span>
+<span id="cb85-318"><a href="#cb85-318" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-319"><a href="#cb85-319" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 保存当前 pretoken 中每个 token ID 所代表的 bytes。</span></span>
+<span id="cb85-320"><a href="#cb85-320" aria-hidden="true" tabindex="-1"></a>        byte_parts <span class="op">=</span> []</span>
+<span id="cb85-321"><a href="#cb85-321" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-322"><a href="#cb85-322" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 按照 pretoken 内部的原顺序查找词表。</span></span>
+<span id="cb85-323"><a href="#cb85-323" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> token_id <span class="kw">in</span> pretoken:</span>
+<span id="cb85-324"><a href="#cb85-324" aria-hidden="true" tabindex="-1"></a>            byte_parts.append(vocab[token_id])</span>
+<span id="cb85-325"><a href="#cb85-325" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-326"><a href="#cb85-326" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 把可读的 bytes 列表及其频率加入结果。</span></span>
+<span id="cb85-327"><a href="#cb85-327" aria-hidden="true" tabindex="-1"></a>        readable_counts.append((byte_parts, frequency))</span>
+<span id="cb85-328"><a href="#cb85-328" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-329"><a href="#cb85-329" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 返回仅用于显示的结果。</span></span>
+<span id="cb85-330"><a href="#cb85-330" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> readable_counts</span>
+<span id="cb85-331"><a href="#cb85-331" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-332"><a href="#cb85-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-333"><a href="#cb85-333" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> train_byte_bpe(</span>
+<span id="cb85-334"><a href="#cb85-334" aria-hidden="true" tabindex="-1"></a>    text,</span>
+<span id="cb85-335"><a href="#cb85-335" aria-hidden="true" tabindex="-1"></a>    vocab_size,</span>
+<span id="cb85-336"><a href="#cb85-336" aria-hidden="true" tabindex="-1"></a>    min_frequency<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb85-337"><a href="#cb85-337" aria-hidden="true" tabindex="-1"></a>    show_steps<span class="op">=</span><span class="va">False</span></span>
+<span id="cb85-338"><a href="#cb85-338" aria-hidden="true" tabindex="-1"></a>):</span>
+<span id="cb85-339"><a href="#cb85-339" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb85-340"><a href="#cb85-340" aria-hidden="true" tabindex="-1"></a><span class="co">    训练带预分词边界的 byte-level BPE。</span></span>
+<span id="cb85-341"><a href="#cb85-341" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-342"><a href="#cb85-342" aria-hidden="true" tabindex="-1"></a><span class="co">    贯穿示例：</span></span>
+<span id="cb85-343"><a href="#cb85-343" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-344"><a href="#cb85-344" aria-hidden="true" tabindex="-1"></a><span class="co">        text = &quot;ab ababab abab&quot;</span></span>
+<span id="cb85-345"><a href="#cb85-345" aria-hidden="true" tabindex="-1"></a><span class="co">        vocab_size = 260</span></span>
+<span id="cb85-346"><a href="#cb85-346" aria-hidden="true" tabindex="-1"></a><span class="co">        min_frequency = 1</span></span>
+<span id="cb85-347"><a href="#cb85-347" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-348"><a href="#cb85-348" aria-hidden="true" tabindex="-1"></a><span class="co">    正则预分词结果：</span></span>
+<span id="cb85-349"><a href="#cb85-349" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-350"><a href="#cb85-350" aria-hidden="true" tabindex="-1"></a><span class="co">        [</span></span>
+<span id="cb85-351"><a href="#cb85-351" aria-hidden="true" tabindex="-1"></a><span class="co">            b&quot;ab&quot;,</span></span>
+<span id="cb85-352"><a href="#cb85-352" aria-hidden="true" tabindex="-1"></a><span class="co">            b&quot; ababab&quot;,</span></span>
+<span id="cb85-353"><a href="#cb85-353" aria-hidden="true" tabindex="-1"></a><span class="co">            b&quot; abab&quot;</span></span>
+<span id="cb85-354"><a href="#cb85-354" aria-hidden="true" tabindex="-1"></a><span class="co">        ]</span></span>
+<span id="cb85-355"><a href="#cb85-355" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-356"><a href="#cb85-356" aria-hidden="true" tabindex="-1"></a><span class="co">    转换成初始 token ID 元组：</span></span>
+<span id="cb85-357"><a href="#cb85-357" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-358"><a href="#cb85-358" aria-hidden="true" tabindex="-1"></a><span class="co">        {</span></span>
+<span id="cb85-359"><a href="#cb85-359" aria-hidden="true" tabindex="-1"></a><span class="co">            (97, 98): 1,</span></span>
+<span id="cb85-360"><a href="#cb85-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-361"><a href="#cb85-361" aria-hidden="true" tabindex="-1"></a><span class="co">            (32, 97, 98, 97, 98, 97, 98): 1,</span></span>
+<span id="cb85-362"><a href="#cb85-362" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-363"><a href="#cb85-363" aria-hidden="true" tabindex="-1"></a><span class="co">            (32, 97, 98, 97, 98): 1</span></span>
+<span id="cb85-364"><a href="#cb85-364" aria-hidden="true" tabindex="-1"></a><span class="co">        }</span></span>
+<span id="cb85-365"><a href="#cb85-365" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-366"><a href="#cb85-366" aria-hidden="true" tabindex="-1"></a><span class="co">    其中：</span></span>
+<span id="cb85-367"><a href="#cb85-367" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-368"><a href="#cb85-368" aria-hidden="true" tabindex="-1"></a><span class="co">        32 -&gt; b&quot; &quot;</span></span>
+<span id="cb85-369"><a href="#cb85-369" aria-hidden="true" tabindex="-1"></a><span class="co">        97 -&gt; b&quot;a&quot;</span></span>
+<span id="cb85-370"><a href="#cb85-370" aria-hidden="true" tabindex="-1"></a><span class="co">        98 -&gt; b&quot;b&quot;</span></span>
+<span id="cb85-371"><a href="#cb85-371" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-372"><a href="#cb85-372" aria-hidden="true" tabindex="-1"></a><span class="co">    第一轮：</span></span>
+<span id="cb85-373"><a href="#cb85-373" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-374"><a href="#cb85-374" aria-hidden="true" tabindex="-1"></a><span class="co">        最高频 pair：</span></span>
+<span id="cb85-375"><a href="#cb85-375" aria-hidden="true" tabindex="-1"></a><span class="co">            (97, 98)</span></span>
+<span id="cb85-376"><a href="#cb85-376" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-377"><a href="#cb85-377" aria-hidden="true" tabindex="-1"></a><span class="co">        出现频率：</span></span>
+<span id="cb85-378"><a href="#cb85-378" aria-hidden="true" tabindex="-1"></a><span class="co">            6</span></span>
+<span id="cb85-379"><a href="#cb85-379" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-380"><a href="#cb85-380" aria-hidden="true" tabindex="-1"></a><span class="co">        创建：</span></span>
+<span id="cb85-381"><a href="#cb85-381" aria-hidden="true" tabindex="-1"></a><span class="co">            256 -&gt; b&quot;ab&quot;</span></span>
+<span id="cb85-382"><a href="#cb85-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-383"><a href="#cb85-383" aria-hidden="true" tabindex="-1"></a><span class="co">        频率表变为：</span></span>
+<span id="cb85-384"><a href="#cb85-384" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-385"><a href="#cb85-385" aria-hidden="true" tabindex="-1"></a><span class="co">            {</span></span>
+<span id="cb85-386"><a href="#cb85-386" aria-hidden="true" tabindex="-1"></a><span class="co">                (256,): 1,</span></span>
+<span id="cb85-387"><a href="#cb85-387" aria-hidden="true" tabindex="-1"></a><span class="co">                (32, 256, 256, 256): 1,</span></span>
+<span id="cb85-388"><a href="#cb85-388" aria-hidden="true" tabindex="-1"></a><span class="co">                (32, 256, 256): 1</span></span>
+<span id="cb85-389"><a href="#cb85-389" aria-hidden="true" tabindex="-1"></a><span class="co">            }</span></span>
+<span id="cb85-390"><a href="#cb85-390" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-391"><a href="#cb85-391" aria-hidden="true" tabindex="-1"></a><span class="co">    第二轮：</span></span>
+<span id="cb85-392"><a href="#cb85-392" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-393"><a href="#cb85-393" aria-hidden="true" tabindex="-1"></a><span class="co">        最高频 pair：</span></span>
+<span id="cb85-394"><a href="#cb85-394" aria-hidden="true" tabindex="-1"></a><span class="co">            (256, 256)</span></span>
+<span id="cb85-395"><a href="#cb85-395" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-396"><a href="#cb85-396" aria-hidden="true" tabindex="-1"></a><span class="co">        出现频率：</span></span>
+<span id="cb85-397"><a href="#cb85-397" aria-hidden="true" tabindex="-1"></a><span class="co">            3</span></span>
+<span id="cb85-398"><a href="#cb85-398" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-399"><a href="#cb85-399" aria-hidden="true" tabindex="-1"></a><span class="co">        创建：</span></span>
+<span id="cb85-400"><a href="#cb85-400" aria-hidden="true" tabindex="-1"></a><span class="co">            257 -&gt; b&quot;abab&quot;</span></span>
+<span id="cb85-401"><a href="#cb85-401" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-402"><a href="#cb85-402" aria-hidden="true" tabindex="-1"></a><span class="co">        频率表变为：</span></span>
+<span id="cb85-403"><a href="#cb85-403" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-404"><a href="#cb85-404" aria-hidden="true" tabindex="-1"></a><span class="co">            {</span></span>
+<span id="cb85-405"><a href="#cb85-405" aria-hidden="true" tabindex="-1"></a><span class="co">                (256,): 1,</span></span>
+<span id="cb85-406"><a href="#cb85-406" aria-hidden="true" tabindex="-1"></a><span class="co">                (32, 257, 256): 1,</span></span>
+<span id="cb85-407"><a href="#cb85-407" aria-hidden="true" tabindex="-1"></a><span class="co">                (32, 257): 1</span></span>
+<span id="cb85-408"><a href="#cb85-408" aria-hidden="true" tabindex="-1"></a><span class="co">            }</span></span>
+<span id="cb85-409"><a href="#cb85-409" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-410"><a href="#cb85-410" aria-hidden="true" tabindex="-1"></a><span class="co">    第三轮：</span></span>
+<span id="cb85-411"><a href="#cb85-411" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-412"><a href="#cb85-412" aria-hidden="true" tabindex="-1"></a><span class="co">        最高频 pair：</span></span>
+<span id="cb85-413"><a href="#cb85-413" aria-hidden="true" tabindex="-1"></a><span class="co">            (32, 257)</span></span>
+<span id="cb85-414"><a href="#cb85-414" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-415"><a href="#cb85-415" aria-hidden="true" tabindex="-1"></a><span class="co">        出现频率：</span></span>
+<span id="cb85-416"><a href="#cb85-416" aria-hidden="true" tabindex="-1"></a><span class="co">            2</span></span>
+<span id="cb85-417"><a href="#cb85-417" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-418"><a href="#cb85-418" aria-hidden="true" tabindex="-1"></a><span class="co">        创建：</span></span>
+<span id="cb85-419"><a href="#cb85-419" aria-hidden="true" tabindex="-1"></a><span class="co">            258 -&gt; b&quot; abab&quot;</span></span>
+<span id="cb85-420"><a href="#cb85-420" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-421"><a href="#cb85-421" aria-hidden="true" tabindex="-1"></a><span class="co">        频率表变为：</span></span>
+<span id="cb85-422"><a href="#cb85-422" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-423"><a href="#cb85-423" aria-hidden="true" tabindex="-1"></a><span class="co">            {</span></span>
+<span id="cb85-424"><a href="#cb85-424" aria-hidden="true" tabindex="-1"></a><span class="co">                (256,): 1,</span></span>
+<span id="cb85-425"><a href="#cb85-425" aria-hidden="true" tabindex="-1"></a><span class="co">                (258, 256): 1,</span></span>
+<span id="cb85-426"><a href="#cb85-426" aria-hidden="true" tabindex="-1"></a><span class="co">                (258,): 1</span></span>
+<span id="cb85-427"><a href="#cb85-427" aria-hidden="true" tabindex="-1"></a><span class="co">            }</span></span>
+<span id="cb85-428"><a href="#cb85-428" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-429"><a href="#cb85-429" aria-hidden="true" tabindex="-1"></a><span class="co">    第四轮：</span></span>
+<span id="cb85-430"><a href="#cb85-430" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-431"><a href="#cb85-431" aria-hidden="true" tabindex="-1"></a><span class="co">        最高频 pair：</span></span>
+<span id="cb85-432"><a href="#cb85-432" aria-hidden="true" tabindex="-1"></a><span class="co">            (258, 256)</span></span>
+<span id="cb85-433"><a href="#cb85-433" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-434"><a href="#cb85-434" aria-hidden="true" tabindex="-1"></a><span class="co">        出现频率：</span></span>
+<span id="cb85-435"><a href="#cb85-435" aria-hidden="true" tabindex="-1"></a><span class="co">            1</span></span>
+<span id="cb85-436"><a href="#cb85-436" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-437"><a href="#cb85-437" aria-hidden="true" tabindex="-1"></a><span class="co">        创建：</span></span>
+<span id="cb85-438"><a href="#cb85-438" aria-hidden="true" tabindex="-1"></a><span class="co">            259 -&gt; b&quot; ababab&quot;</span></span>
+<span id="cb85-439"><a href="#cb85-439" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-440"><a href="#cb85-440" aria-hidden="true" tabindex="-1"></a><span class="co">        最终频率表：</span></span>
+<span id="cb85-441"><a href="#cb85-441" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-442"><a href="#cb85-442" aria-hidden="true" tabindex="-1"></a><span class="co">            {</span></span>
+<span id="cb85-443"><a href="#cb85-443" aria-hidden="true" tabindex="-1"></a><span class="co">                (256,): 1,</span></span>
+<span id="cb85-444"><a href="#cb85-444" aria-hidden="true" tabindex="-1"></a><span class="co">                (259,): 1,</span></span>
+<span id="cb85-445"><a href="#cb85-445" aria-hidden="true" tabindex="-1"></a><span class="co">                (258,): 1</span></span>
+<span id="cb85-446"><a href="#cb85-446" aria-hidden="true" tabindex="-1"></a><span class="co">            }</span></span>
+<span id="cb85-447"><a href="#cb85-447" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-448"><a href="#cb85-448" aria-hidden="true" tabindex="-1"></a><span class="co">    最终三个 pretoken 分别表示：</span></span>
+<span id="cb85-449"><a href="#cb85-449" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-450"><a href="#cb85-450" aria-hidden="true" tabindex="-1"></a><span class="co">        256 -&gt; b&quot;ab&quot;</span></span>
+<span id="cb85-451"><a href="#cb85-451" aria-hidden="true" tabindex="-1"></a><span class="co">        259 -&gt; b&quot; ababab&quot;</span></span>
+<span id="cb85-452"><a href="#cb85-452" aria-hidden="true" tabindex="-1"></a><span class="co">        258 -&gt; b&quot; abab&quot;</span></span>
+<span id="cb85-453"><a href="#cb85-453" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-454"><a href="#cb85-454" aria-hidden="true" tabindex="-1"></a><span class="co">    因此，按照原始顺序拼接后仍为：</span></span>
+<span id="cb85-455"><a href="#cb85-455" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-456"><a href="#cb85-456" aria-hidden="true" tabindex="-1"></a><span class="co">        b&quot;ab&quot; + b&quot; ababab&quot; + b&quot; abab&quot;</span></span>
+<span id="cb85-457"><a href="#cb85-457" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-458"><a href="#cb85-458" aria-hidden="true" tabindex="-1"></a><span class="co">        == b&quot;ab ababab abab&quot;</span></span>
+<span id="cb85-459"><a href="#cb85-459" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb85-460"><a href="#cb85-460" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-461"><a href="#cb85-461" aria-hidden="true" tabindex="-1"></a>    <span class="co"># byte-level BPE 至少需要包含 256 个基础字节 token。</span></span>
+<span id="cb85-462"><a href="#cb85-462" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> vocab_size <span class="op">&lt;</span> <span class="dv">256</span>:</span>
+<span id="cb85-463"><a href="#cb85-463" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">&quot;vocab_size 不能小于 256&quot;</span>)</span>
+<span id="cb85-464"><a href="#cb85-464" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-465"><a href="#cb85-465" aria-hidden="true" tabindex="-1"></a>    <span class="co"># pair 的最低合并频率必须至少为 1。</span></span>
+<span id="cb85-466"><a href="#cb85-466" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> min_frequency <span class="op">&lt;</span> <span class="dv">1</span>:</span>
+<span id="cb85-467"><a href="#cb85-467" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">&quot;min_frequency 不能小于 1&quot;</span>)</span>
+<span id="cb85-468"><a href="#cb85-468" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-469"><a href="#cb85-469" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 创建空词表。</span></span>
+<span id="cb85-470"><a href="#cb85-470" aria-hidden="true" tabindex="-1"></a>    vocab <span class="op">=</span> {}</span>
+<span id="cb85-471"><a href="#cb85-471" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-472"><a href="#cb85-472" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 建立 0～255 共 256 个基础 token。</span></span>
+<span id="cb85-473"><a href="#cb85-473" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> token_id <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">256</span>):</span>
+<span id="cb85-474"><a href="#cb85-474" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-475"><a href="#cb85-475" aria-hidden="true" tabindex="-1"></a>        <span class="co"># ID 为 i 的基础 token 对应单字节 bytes([i])。</span></span>
+<span id="cb85-476"><a href="#cb85-476" aria-hidden="true" tabindex="-1"></a>        vocab[token_id] <span class="op">=</span> <span class="bu">bytes</span>([token_id])</span>
+<span id="cb85-477"><a href="#cb85-477" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-478"><a href="#cb85-478" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 示例中：</span></span>
+<span id="cb85-479"><a href="#cb85-479" aria-hidden="true" tabindex="-1"></a>    <span class="co">#</span></span>
+<span id="cb85-480"><a href="#cb85-480" aria-hidden="true" tabindex="-1"></a>    <span class="co"># vocab[32] == b&quot; &quot;</span></span>
+<span id="cb85-481"><a href="#cb85-481" aria-hidden="true" tabindex="-1"></a>    <span class="co"># vocab[97] == b&quot;a&quot;</span></span>
+<span id="cb85-482"><a href="#cb85-482" aria-hidden="true" tabindex="-1"></a>    <span class="co"># vocab[98] == b&quot;b&quot;</span></span>
+<span id="cb85-483"><a href="#cb85-483" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-484"><a href="#cb85-484" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 创建空列表，按顺序保存训练得到的合并规则。</span></span>
+<span id="cb85-485"><a href="#cb85-485" aria-hidden="true" tabindex="-1"></a>    merges <span class="op">=</span> []</span>
+<span id="cb85-486"><a href="#cb85-486" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-487"><a href="#cb85-487" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 对原字符串进行预分词，并聚合相同的 pretoken。</span></span>
+<span id="cb85-488"><a href="#cb85-488" aria-hidden="true" tabindex="-1"></a>    <span class="co">#</span></span>
+<span id="cb85-489"><a href="#cb85-489" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 示例得到：</span></span>
+<span id="cb85-490"><a href="#cb85-490" aria-hidden="true" tabindex="-1"></a>    <span class="co">#</span></span>
+<span id="cb85-491"><a href="#cb85-491" aria-hidden="true" tabindex="-1"></a>    <span class="co"># {</span></span>
+<span id="cb85-492"><a href="#cb85-492" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     (97, 98): 1,</span></span>
+<span id="cb85-493"><a href="#cb85-493" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     (32, 97, 98, 97, 98, 97, 98): 1,</span></span>
+<span id="cb85-494"><a href="#cb85-494" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     (32, 97, 98, 97, 98): 1</span></span>
+<span id="cb85-495"><a href="#cb85-495" aria-hidden="true" tabindex="-1"></a>    <span class="co"># }</span></span>
+<span id="cb85-496"><a href="#cb85-496" aria-hidden="true" tabindex="-1"></a>    pretoken_counts <span class="op">=</span> build_pretoken_counts(text)</span>
+<span id="cb85-497"><a href="#cb85-497" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-498"><a href="#cb85-498" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 第一轮的编号为 1。</span></span>
+<span id="cb85-499"><a href="#cb85-499" aria-hidden="true" tabindex="-1"></a>    round_number <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb85-500"><a href="#cb85-500" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-501"><a href="#cb85-501" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 根据参数决定是否输出训练过程。</span></span>
+<span id="cb85-502"><a href="#cb85-502" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> show_steps:</span>
+<span id="cb85-503"><a href="#cb85-503" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;原字符串：&quot;</span>, text)</span>
+<span id="cb85-504"><a href="#cb85-504" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-505"><a href="#cb85-505" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 示例输出：</span></span>
+<span id="cb85-506"><a href="#cb85-506" aria-hidden="true" tabindex="-1"></a>        <span class="co"># [b&#39;ab&#39;, b&#39; ababab&#39;, b&#39; abab&#39;]</span></span>
+<span id="cb85-507"><a href="#cb85-507" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;预分词结果：&quot;</span>, pretokenize(text))</span>
+<span id="cb85-508"><a href="#cb85-508" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-509"><a href="#cb85-509" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;初始 token 状态：&quot;</span>)</span>
+<span id="cb85-510"><a href="#cb85-510" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(show_pretoken_counts(pretoken_counts, vocab))</span>
+<span id="cb85-511"><a href="#cb85-511" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;-&quot;</span> <span class="op">*</span> <span class="dv">70</span>)</span>
+<span id="cb85-512"><a href="#cb85-512" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-513"><a href="#cb85-513" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 词表未达到目标大小时，继续执行训练。</span></span>
+<span id="cb85-514"><a href="#cb85-514" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="bu">len</span>(vocab) <span class="op">&lt;</span> vocab_size:</span>
+<span id="cb85-515"><a href="#cb85-515" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-516"><a href="#cb85-516" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 每一轮都根据当前 token 状态重新统计相邻 pair。</span></span>
+<span id="cb85-517"><a href="#cb85-517" aria-hidden="true" tabindex="-1"></a>        <span class="co">#</span></span>
+<span id="cb85-518"><a href="#cb85-518" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 示例第一轮得到：</span></span>
+<span id="cb85-519"><a href="#cb85-519" aria-hidden="true" tabindex="-1"></a>        <span class="co">#</span></span>
+<span id="cb85-520"><a href="#cb85-520" aria-hidden="true" tabindex="-1"></a>        <span class="co"># {</span></span>
+<span id="cb85-521"><a href="#cb85-521" aria-hidden="true" tabindex="-1"></a>        <span class="co">#     (97, 98): 6,</span></span>
+<span id="cb85-522"><a href="#cb85-522" aria-hidden="true" tabindex="-1"></a>        <span class="co">#     (98, 97): 3,</span></span>
+<span id="cb85-523"><a href="#cb85-523" aria-hidden="true" tabindex="-1"></a>        <span class="co">#     (32, 97): 2</span></span>
+<span id="cb85-524"><a href="#cb85-524" aria-hidden="true" tabindex="-1"></a>        <span class="co"># }</span></span>
+<span id="cb85-525"><a href="#cb85-525" aria-hidden="true" tabindex="-1"></a>        pair_counts <span class="op">=</span> count_weighted_pairs(pretoken_counts)</span>
+<span id="cb85-526"><a href="#cb85-526" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-527"><a href="#cb85-527" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 从 pair_counts 中选择频率最高的 pair。</span></span>
+<span id="cb85-528"><a href="#cb85-528" aria-hidden="true" tabindex="-1"></a>        <span class="co">#</span></span>
+<span id="cb85-529"><a href="#cb85-529" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 示例第一轮：</span></span>
+<span id="cb85-530"><a href="#cb85-530" aria-hidden="true" tabindex="-1"></a>        <span class="co"># best_pair = (97, 98)</span></span>
+<span id="cb85-531"><a href="#cb85-531" aria-hidden="true" tabindex="-1"></a>        best_pair <span class="op">=</span> choose_best_pair(pair_counts, vocab)</span>
+<span id="cb85-532"><a href="#cb85-532" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-533"><a href="#cb85-533" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 如果不存在相邻 pair，说明所有 pretoken 都只剩一个 token。</span></span>
+<span id="cb85-534"><a href="#cb85-534" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> best_pair <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb85-535"><a href="#cb85-535" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span></span>
+<span id="cb85-536"><a href="#cb85-536" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-537"><a href="#cb85-537" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 读取最高频 pair 的频率。</span></span>
+<span id="cb85-538"><a href="#cb85-538" aria-hidden="true" tabindex="-1"></a>        <span class="co">#</span></span>
+<span id="cb85-539"><a href="#cb85-539" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 示例第一轮：</span></span>
+<span id="cb85-540"><a href="#cb85-540" aria-hidden="true" tabindex="-1"></a>        <span class="co"># best_frequency = 6</span></span>
+<span id="cb85-541"><a href="#cb85-541" aria-hidden="true" tabindex="-1"></a>        best_frequency <span class="op">=</span> pair_counts[best_pair]</span>
+<span id="cb85-542"><a href="#cb85-542" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-543"><a href="#cb85-543" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 最高频 pair 也达不到最低频率时停止训练。</span></span>
+<span id="cb85-544"><a href="#cb85-544" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> best_frequency <span class="op">&lt;</span> min_frequency:</span>
+<span id="cb85-545"><a href="#cb85-545" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span></span>
+<span id="cb85-546"><a href="#cb85-546" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-547"><a href="#cb85-547" aria-hidden="true" tabindex="-1"></a>        <span class="co"># token ID 始终连续，因此当前词表长度就是下一个新 ID。</span></span>
+<span id="cb85-548"><a href="#cb85-548" aria-hidden="true" tabindex="-1"></a>        <span class="co">#</span></span>
+<span id="cb85-549"><a href="#cb85-549" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 四轮中依次得到：</span></span>
+<span id="cb85-550"><a href="#cb85-550" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 256、257、258、259</span></span>
+<span id="cb85-551"><a href="#cb85-551" aria-hidden="true" tabindex="-1"></a>        new_token_id <span class="op">=</span> <span class="bu">len</span>(vocab)</span>
+<span id="cb85-552"><a href="#cb85-552" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-553"><a href="#cb85-553" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 取得最高频 pair 左侧的 token ID。</span></span>
+<span id="cb85-554"><a href="#cb85-554" aria-hidden="true" tabindex="-1"></a>        left_id <span class="op">=</span> best_pair[<span class="dv">0</span>]</span>
+<span id="cb85-555"><a href="#cb85-555" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-556"><a href="#cb85-556" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 取得最高频 pair 右侧的 token ID。</span></span>
+<span id="cb85-557"><a href="#cb85-557" aria-hidden="true" tabindex="-1"></a>        right_id <span class="op">=</span> best_pair[<span class="dv">1</span>]</span>
+<span id="cb85-558"><a href="#cb85-558" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-559"><a href="#cb85-559" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 根据词表查出左 token 实际代表的 bytes。</span></span>
+<span id="cb85-560"><a href="#cb85-560" aria-hidden="true" tabindex="-1"></a>        left_bytes <span class="op">=</span> vocab[left_id]</span>
+<span id="cb85-561"><a href="#cb85-561" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-562"><a href="#cb85-562" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 根据词表查出右 token 实际代表的 bytes。</span></span>
+<span id="cb85-563"><a href="#cb85-563" aria-hidden="true" tabindex="-1"></a>        right_bytes <span class="op">=</span> vocab[right_id]</span>
+<span id="cb85-564"><a href="#cb85-564" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-565"><a href="#cb85-565" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 按照原顺序拼接左右两部分 bytes。</span></span>
+<span id="cb85-566"><a href="#cb85-566" aria-hidden="true" tabindex="-1"></a>        <span class="co">#</span></span>
+<span id="cb85-567"><a href="#cb85-567" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 第一轮：</span></span>
+<span id="cb85-568"><a href="#cb85-568" aria-hidden="true" tabindex="-1"></a>        <span class="co"># b&quot;a&quot; + b&quot;b&quot; == b&quot;ab&quot;</span></span>
+<span id="cb85-569"><a href="#cb85-569" aria-hidden="true" tabindex="-1"></a>        <span class="co">#</span></span>
+<span id="cb85-570"><a href="#cb85-570" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 第二轮：</span></span>
+<span id="cb85-571"><a href="#cb85-571" aria-hidden="true" tabindex="-1"></a>        <span class="co"># b&quot;ab&quot; + b&quot;ab&quot; == b&quot;abab&quot;</span></span>
+<span id="cb85-572"><a href="#cb85-572" aria-hidden="true" tabindex="-1"></a>        <span class="co">#</span></span>
+<span id="cb85-573"><a href="#cb85-573" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 第三轮：</span></span>
+<span id="cb85-574"><a href="#cb85-574" aria-hidden="true" tabindex="-1"></a>        <span class="co"># b&quot; &quot; + b&quot;abab&quot; == b&quot; abab&quot;</span></span>
+<span id="cb85-575"><a href="#cb85-575" aria-hidden="true" tabindex="-1"></a>        <span class="co">#</span></span>
+<span id="cb85-576"><a href="#cb85-576" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 第四轮：</span></span>
+<span id="cb85-577"><a href="#cb85-577" aria-hidden="true" tabindex="-1"></a>        <span class="co"># b&quot; abab&quot; + b&quot;ab&quot; == b&quot; ababab&quot;</span></span>
+<span id="cb85-578"><a href="#cb85-578" aria-hidden="true" tabindex="-1"></a>        new_token_bytes <span class="op">=</span> left_bytes <span class="op">+</span> right_bytes</span>
+<span id="cb85-579"><a href="#cb85-579" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-580"><a href="#cb85-580" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 将新 token 加入词表。</span></span>
+<span id="cb85-581"><a href="#cb85-581" aria-hidden="true" tabindex="-1"></a>        vocab[new_token_id] <span class="op">=</span> new_token_bytes</span>
+<span id="cb85-582"><a href="#cb85-582" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-583"><a href="#cb85-583" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 保存本轮的 bytes pair。</span></span>
+<span id="cb85-584"><a href="#cb85-584" aria-hidden="true" tabindex="-1"></a>        <span class="co">#</span></span>
+<span id="cb85-585"><a href="#cb85-585" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 四轮结束后：</span></span>
+<span id="cb85-586"><a href="#cb85-586" aria-hidden="true" tabindex="-1"></a>        <span class="co">#</span></span>
+<span id="cb85-587"><a href="#cb85-587" aria-hidden="true" tabindex="-1"></a>        <span class="co"># merges = [</span></span>
+<span id="cb85-588"><a href="#cb85-588" aria-hidden="true" tabindex="-1"></a>        <span class="co">#     (b&quot;a&quot;, b&quot;b&quot;),</span></span>
+<span id="cb85-589"><a href="#cb85-589" aria-hidden="true" tabindex="-1"></a>        <span class="co">#     (b&quot;ab&quot;, b&quot;ab&quot;),</span></span>
+<span id="cb85-590"><a href="#cb85-590" aria-hidden="true" tabindex="-1"></a>        <span class="co">#     (b&quot; &quot;, b&quot;abab&quot;),</span></span>
+<span id="cb85-591"><a href="#cb85-591" aria-hidden="true" tabindex="-1"></a>        <span class="co">#     (b&quot; abab&quot;, b&quot;ab&quot;)</span></span>
+<span id="cb85-592"><a href="#cb85-592" aria-hidden="true" tabindex="-1"></a>        <span class="co"># ]</span></span>
+<span id="cb85-593"><a href="#cb85-593" aria-hidden="true" tabindex="-1"></a>        merges.append((left_bytes, right_bytes))</span>
+<span id="cb85-594"><a href="#cb85-594" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-595"><a href="#cb85-595" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 输出本轮选择和创建的新 token。</span></span>
+<span id="cb85-596"><a href="#cb85-596" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> show_steps:</span>
+<span id="cb85-597"><a href="#cb85-597" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">&quot;第&quot;</span>, round_number, <span class="st">&quot;轮&quot;</span>)</span>
+<span id="cb85-598"><a href="#cb85-598" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">&quot;最高频 ID pair：&quot;</span>, best_pair)</span>
+<span id="cb85-599"><a href="#cb85-599" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">&quot;pair 频率：&quot;</span>, best_frequency)</span>
+<span id="cb85-600"><a href="#cb85-600" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">&quot;对应 bytes pair：&quot;</span>, (left_bytes, right_bytes))</span>
+<span id="cb85-601"><a href="#cb85-601" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(</span>
+<span id="cb85-602"><a href="#cb85-602" aria-hidden="true" tabindex="-1"></a>                <span class="st">&quot;创建新 token：&quot;</span>,</span>
+<span id="cb85-603"><a href="#cb85-603" aria-hidden="true" tabindex="-1"></a>                new_token_id,</span>
+<span id="cb85-604"><a href="#cb85-604" aria-hidden="true" tabindex="-1"></a>                <span class="st">&quot;-&gt;&quot;</span>,</span>
+<span id="cb85-605"><a href="#cb85-605" aria-hidden="true" tabindex="-1"></a>                new_token_bytes</span>
+<span id="cb85-606"><a href="#cb85-606" aria-hidden="true" tabindex="-1"></a>            )</span>
+<span id="cb85-607"><a href="#cb85-607" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-608"><a href="#cb85-608" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 在所有 pretoken 内执行本轮非重叠合并。</span></span>
+<span id="cb85-609"><a href="#cb85-609" aria-hidden="true" tabindex="-1"></a>        <span class="co">#</span></span>
+<span id="cb85-610"><a href="#cb85-610" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 第一轮之后：</span></span>
+<span id="cb85-611"><a href="#cb85-611" aria-hidden="true" tabindex="-1"></a>        <span class="co">#</span></span>
+<span id="cb85-612"><a href="#cb85-612" aria-hidden="true" tabindex="-1"></a>        <span class="co"># {</span></span>
+<span id="cb85-613"><a href="#cb85-613" aria-hidden="true" tabindex="-1"></a>        <span class="co">#     (256,): 1,</span></span>
+<span id="cb85-614"><a href="#cb85-614" aria-hidden="true" tabindex="-1"></a>        <span class="co">#     (32, 256, 256, 256): 1,</span></span>
+<span id="cb85-615"><a href="#cb85-615" aria-hidden="true" tabindex="-1"></a>        <span class="co">#     (32, 256, 256): 1</span></span>
+<span id="cb85-616"><a href="#cb85-616" aria-hidden="true" tabindex="-1"></a>        <span class="co"># }</span></span>
+<span id="cb85-617"><a href="#cb85-617" aria-hidden="true" tabindex="-1"></a>        pretoken_counts <span class="op">=</span> merge_pair_in_counts(</span>
+<span id="cb85-618"><a href="#cb85-618" aria-hidden="true" tabindex="-1"></a>            pretoken_counts,</span>
+<span id="cb85-619"><a href="#cb85-619" aria-hidden="true" tabindex="-1"></a>            best_pair,</span>
+<span id="cb85-620"><a href="#cb85-620" aria-hidden="true" tabindex="-1"></a>            new_token_id</span>
+<span id="cb85-621"><a href="#cb85-621" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb85-622"><a href="#cb85-622" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-623"><a href="#cb85-623" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 输出合并后的状态。</span></span>
+<span id="cb85-624"><a href="#cb85-624" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> show_steps:</span>
+<span id="cb85-625"><a href="#cb85-625" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">&quot;合并后的 token 状态：&quot;</span>)</span>
+<span id="cb85-626"><a href="#cb85-626" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(show_pretoken_counts(pretoken_counts, vocab))</span>
+<span id="cb85-627"><a href="#cb85-627" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">&quot;-&quot;</span> <span class="op">*</span> <span class="dv">70</span>)</span>
+<span id="cb85-628"><a href="#cb85-628" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-629"><a href="#cb85-629" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 只有本轮成功创建并应用了新 token 后，轮数才增加。</span></span>
+<span id="cb85-630"><a href="#cb85-630" aria-hidden="true" tabindex="-1"></a>        round_number <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb85-631"><a href="#cb85-631" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-632"><a href="#cb85-632" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 返回最终词表、合并规则和训练后的频率表。</span></span>
+<span id="cb85-633"><a href="#cb85-633" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> vocab, merges, pretoken_counts</span>
+<span id="cb85-634"><a href="#cb85-634" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-635"><a href="#cb85-635" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-636"><a href="#cb85-636" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&quot;__main__&quot;</span>:</span>
+<span id="cb85-637"><a href="#cb85-637" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-638"><a href="#cb85-638" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 使用贯穿整份代码的训练示例。</span></span>
+<span id="cb85-639"><a href="#cb85-639" aria-hidden="true" tabindex="-1"></a>    example_text <span class="op">=</span> <span class="st">&quot;ab ababab abab&quot;</span></span>
+<span id="cb85-640"><a href="#cb85-640" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-641"><a href="#cb85-641" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 初始词表中有 256 个基础 token。</span></span>
+<span id="cb85-642"><a href="#cb85-642" aria-hidden="true" tabindex="-1"></a>    <span class="co">#</span></span>
+<span id="cb85-643"><a href="#cb85-643" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 这个例子最终产生 4 条不同的合并规则：</span></span>
+<span id="cb85-644"><a href="#cb85-644" aria-hidden="true" tabindex="-1"></a>    <span class="co">#</span></span>
+<span id="cb85-645"><a href="#cb85-645" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 256 -&gt; b&quot;ab&quot;</span></span>
+<span id="cb85-646"><a href="#cb85-646" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 257 -&gt; b&quot;abab&quot;</span></span>
+<span id="cb85-647"><a href="#cb85-647" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 258 -&gt; b&quot; abab&quot;</span></span>
+<span id="cb85-648"><a href="#cb85-648" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 259 -&gt; b&quot; ababab&quot;</span></span>
+<span id="cb85-649"><a href="#cb85-649" aria-hidden="true" tabindex="-1"></a>    <span class="co">#</span></span>
+<span id="cb85-650"><a href="#cb85-650" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 因此目标词表大小设为：</span></span>
+<span id="cb85-651"><a href="#cb85-651" aria-hidden="true" tabindex="-1"></a>    <span class="co">#</span></span>
+<span id="cb85-652"><a href="#cb85-652" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 256 + 4 = 260</span></span>
+<span id="cb85-653"><a href="#cb85-653" aria-hidden="true" tabindex="-1"></a>    target_vocab_size <span class="op">=</span> <span class="dv">260</span></span>
+<span id="cb85-654"><a href="#cb85-654" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-655"><a href="#cb85-655" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 最后一轮 pair 的频率为 1。</span></span>
+<span id="cb85-656"><a href="#cb85-656" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 因此最低频率必须设为 1，才能完成全部四轮。</span></span>
+<span id="cb85-657"><a href="#cb85-657" aria-hidden="true" tabindex="-1"></a>    minimum_frequency <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb85-658"><a href="#cb85-658" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-659"><a href="#cb85-659" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 开始训练，并输出每一轮的变化。</span></span>
+<span id="cb85-660"><a href="#cb85-660" aria-hidden="true" tabindex="-1"></a>    vocab, merges, final_counts <span class="op">=</span> train_byte_bpe(</span>
+<span id="cb85-661"><a href="#cb85-661" aria-hidden="true" tabindex="-1"></a>        text<span class="op">=</span>example_text,</span>
+<span id="cb85-662"><a href="#cb85-662" aria-hidden="true" tabindex="-1"></a>        vocab_size<span class="op">=</span>target_vocab_size,</span>
+<span id="cb85-663"><a href="#cb85-663" aria-hidden="true" tabindex="-1"></a>        min_frequency<span class="op">=</span>minimum_frequency,</span>
+<span id="cb85-664"><a href="#cb85-664" aria-hidden="true" tabindex="-1"></a>        show_steps<span class="op">=</span><span class="va">True</span></span>
+<span id="cb85-665"><a href="#cb85-665" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb85-666"><a href="#cb85-666" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-667"><a href="#cb85-667" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 输出训练结束后的整体结果。</span></span>
+<span id="cb85-668"><a href="#cb85-668" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;训练结束&quot;</span>)</span>
+<span id="cb85-669"><a href="#cb85-669" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-670"><a href="#cb85-670" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 预期结果为 260。</span></span>
+<span id="cb85-671"><a href="#cb85-671" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;最终词表大小：&quot;</span>, <span class="bu">len</span>(vocab))</span>
+<span id="cb85-672"><a href="#cb85-672" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-673"><a href="#cb85-673" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 预期结果为 4。</span></span>
+<span id="cb85-674"><a href="#cb85-674" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;实际合并次数：&quot;</span>, <span class="bu">len</span>(merges))</span>
+<span id="cb85-675"><a href="#cb85-675" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-676"><a href="#cb85-676" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 输出四条 bytes 合并规则。</span></span>
+<span id="cb85-677"><a href="#cb85-677" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;合并规则：&quot;</span>, merges)</span>
+<span id="cb85-678"><a href="#cb85-678" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-679"><a href="#cb85-679" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 最终频率表中的每个 pretoken 都只剩一个 token。</span></span>
+<span id="cb85-680"><a href="#cb85-680" aria-hidden="true" tabindex="-1"></a>    <span class="co">#</span></span>
+<span id="cb85-681"><a href="#cb85-681" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 预期：</span></span>
+<span id="cb85-682"><a href="#cb85-682" aria-hidden="true" tabindex="-1"></a>    <span class="co">#</span></span>
+<span id="cb85-683"><a href="#cb85-683" aria-hidden="true" tabindex="-1"></a>    <span class="co"># {</span></span>
+<span id="cb85-684"><a href="#cb85-684" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     (256,): 1,</span></span>
+<span id="cb85-685"><a href="#cb85-685" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     (259,): 1,</span></span>
+<span id="cb85-686"><a href="#cb85-686" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     (258,): 1</span></span>
+<span id="cb85-687"><a href="#cb85-687" aria-hidden="true" tabindex="-1"></a>    <span class="co"># }</span></span>
+<span id="cb85-688"><a href="#cb85-688" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;最终频率表：&quot;</span>, final_counts)</span>
+<span id="cb85-689"><a href="#cb85-689" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-690"><a href="#cb85-690" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 输出训练产生的所有新词表项。</span></span>
+<span id="cb85-691"><a href="#cb85-691" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;新词表项：&quot;</span>)</span>
+<span id="cb85-692"><a href="#cb85-692" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-693"><a href="#cb85-693" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> token_id <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">256</span>, <span class="bu">len</span>(vocab)):</span>
+<span id="cb85-694"><a href="#cb85-694" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(token_id, vocab[token_id])</span>
+<span id="cb85-695"><a href="#cb85-695" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-696"><a href="#cb85-696" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 验证每条成功的 merge 都恰好产生一个新词表项。</span></span>
+<span id="cb85-697"><a href="#cb85-697" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">len</span>(vocab) <span class="op">==</span> <span class="dv">256</span> <span class="op">+</span> <span class="bu">len</span>(merges)</span></code></pre></div>
+        <hr />
+        </section>
+        <section id="总结" class="level2">
+        <h2>8. 总结</h2>
+        <p>完成 CS336 Lecture 1 和这一组 BPE 任务后，我对 tokenizer
+        的理解发生了明显变化。</p>
+        <p>以前我把它看成一个 API：</p>
+        <pre class="text"><code>text -&gt; token IDs</code></pre>
+        <p>现在更准确的理解是：</p>
+        <blockquote>
+        <p>Tokenizer
+        是一个在可逆性、开放词表能力、词表规模和序列长度之间进行折中的表示系统。</p>
+        </blockquote>
+        <p>而 BPE
+        的训练过程，本质上是一种基于语料统计的贪心词表构造：</p>
+        <ol type="1">
+        <li>从足以表示任意文本的基础 bytes 出发；</li>
+        <li>通过预分词限定合法合并边界；</li>
+        <li>聚合相同 pretoken，减少重复计算；</li>
+        <li>加权统计全部相邻 pair；</li>
+        <li>选择最高频 pair；</li>
+        <li>创建代表 bytes 拼接结果的新 token；</li>
+        <li>非重叠地更新所有序列；</li>
+        <li>重新统计并继续下一轮。</li>
+        </ol>
+        <p>算法本身并不复杂，真正容易出错的是数据表示与边界条件：</p>
+        <ul>
+        <li><code>str</code>、<code>bytes</code> 和 token ID
+        不是同一层概念；</li>
+        <li><code>bytes</code> 不能保存 256 以上的新 token ID；</li>
+        <li>pair 统计允许重叠，单轮合并不允许重叠；</li>
+        <li>pretoken 可以聚合，但内部 token 顺序不能丢失；</li>
+        <li>新 token ID 必须唯一；</li>
+        <li>合并后必须重新统计 pair；</li>
+        <li>词表中的 bytes 拼接必须保持原文可逆。</li>
+        </ul>
+        <p>把这些问题逐个实现以后，BPE
+        不再只是“反复合并最高频字符对”这一句定义，而是一个可以实际运行、检查和扩展的
+        tokenizer 训练过程。</p>
+        <hr />
+        </section>
+        <section id="参考资料" class="level2">
+        <h2>参考资料</h2>
+        <ul>
+        <li><a href="https://cs336.stanford.edu/">Stanford CS336:
+        Language Modeling from Scratch</a></li>
+        <li><a
+        href="https://github.com/stanford-cs336/lectures/blob/main/lecture_01.py">CS336
+        Lecture 1 源码</a></li>
+        <li><a href="https://github.com/openai/tiktoken">OpenAI
+        tiktoken</a></li>
+        <li><a
+        href="https://blog.csdn.net/Rabbit_QL/article/details/158386042">CSDN
+        · BPE 中文参考</a></li>
+        <li><a href="https://zhuanlan.zhihu.com/p/424631681">知乎 · BPE
+        中文参考</a></li>
+        </ul>
+        </section>
+      </article>
+    </main>
+
+    <footer class="footer"><span>© 2026 Linyouxue · CS336 Learning Notes</span><a href="../index.html#notes-tab">返回全部 Notes →</a></footer>
+  </div>
+  <button class="to-top" id="to-top" aria-label="返回顶部">↑</button>
+  <script>
+    const progress=document.querySelector('#scroll-progress'),topButton=document.querySelector('#to-top');
+    function syncScroll(){const max=document.documentElement.scrollHeight-innerHeight;progress.style.width=(max?scrollY/max*100:0)+'%';topButton.classList.toggle('show',scrollY>700)}
+    addEventListener('scroll',syncScroll,{passive:true});addEventListener('resize',syncScroll);syncScroll();topButton.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
+    document.querySelectorAll('.level4').forEach(section=>{const heading=section.querySelector(':scope > h4');if(!heading||heading.textContent.trim()!=='Task 问题')return;section.classList.add('task-section');section.querySelectorAll(':scope > .level5').forEach((part,index)=>{const title=part.querySelector(':scope > h5');if(!title)return;const details=document.createElement('details');details.className='qa';if(index===0)details.open=true;const summary=document.createElement('summary');summary.textContent=title.textContent;details.append(summary);[...part.childNodes].forEach(node=>{if(node!==title)details.append(node)});part.replaceWith(details)})});
+    document.querySelectorAll('.sourceCode').forEach(block=>{const code=block.querySelector('code');if(!code)return;const tools=document.createElement('div');tools.className='code-tools';const lang=document.createElement('span');lang.className='code-lang';lang.textContent=[...code.classList].find(name=>name!=='sourceCode')||'code';const button=document.createElement('button');button.className='copy-code';button.type='button';button.textContent='复制';button.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(code.innerText);button.textContent='已复制';setTimeout(()=>button.textContent='复制',1300)}catch{button.textContent='复制失败'}});tools.append(lang,button);block.append(tools)});
+    const tocLinks=[...document.querySelectorAll('.toc a')],sections=[...document.querySelectorAll('.story .level2[id],.story .level3[id]')];const linkFor=id=>tocLinks.find(link=>decodeURIComponent(link.hash.slice(1))===id);if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>{const visible=entries.filter(entry=>entry.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];if(!visible)return;tocLinks.forEach(link=>link.classList.remove('active'));linkFor(visible.target.id)?.classList.add('active')},{rootMargin:'-12% 0px -68% 0px',threshold:[0,.1,.5]});sections.forEach(section=>observer.observe(section))}
+  </script>
+</body>
+</html>
