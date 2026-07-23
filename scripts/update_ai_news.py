@@ -12,6 +12,7 @@ import argparse
 import concurrent.futures
 import hashlib
 import html
+import http.cookiejar
 import json
 import re
 import sys
@@ -31,6 +32,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUTPUT = ROOT / "data" / "ai-news.json"
 NOW = datetime.now(timezone.utc)
 USER_AGENT = "Linyouxue-AI-Signal/1.0 (+https://linyouxue.github.io/ai-news.html)"
+BROWSER_USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/150.0.0.0 Safari/537.36"
 TIMEOUT = 28
 
 CATEGORY_LIMITS = {
@@ -58,9 +60,40 @@ PEOPLE_WATCHLIST = {
     "Dario Amodei / Anthropic": ["dario amodei"],
     "Demis Hassabis / DeepMind": ["demis hassabis"],
     "Yann LeCun / AMI": ["yann lecun", "@ylecun"],
+    "何恺明 / MIT·DeepMind": ["kaiming he", "何恺明"],
+    "姚顺雨 / Agents": ["shunyu yao", "姚顺雨", "@shunyuyao12"],
+    "Ilya Sutskever / SSI": ["ilya sutskever", "@ilyasut"],
+    "Andrej Karpathy / Eureka Labs": ["andrej karpathy", "@karpathy"],
+    "李飞飞 / Stanford·World Labs": ["fei-fei li", "李飞飞", "@drfeifei"],
+    "Noam Brown / Reasoning": ["noam brown", "@polynoamial"],
     "梁文锋 / DeepSeek": ["梁文锋", "liang wenfeng"],
     "杨植麟 / 月之暗面": ["杨植麟", "yang zhilin"],
 }
+
+PEOPLE_BASELINES = [
+    {
+        "id": "kaiming-he-research-watch",
+        "title": "人物雷达：何恺明的视觉表征、生成模型与 AI for Science 研究",
+        "summary": "何恺明现任 MIT EECS 终身副教授，并兼任 Google DeepMind Distinguished Scientist。他的官方主页将研究方向概括为计算机视觉与深度学习；本站将持续追踪其新论文、公开演讲、研究项目及产业合作，而不是只记录媒体转述。",
+        "source": "MIT CSAIL · Kaiming He",
+        "url": "https://people.csail.mit.edu/kaiming/",
+        "published_at": "2026-07-23T00:00:00Z",
+        "tags": ["何恺明", "Computer Vision", "DeepMind"],
+        "importance": 104,
+        "verification": "MIT 官方个人主页基线 · 持续更新",
+    },
+    {
+        "id": "shunyu-yao-agent-watch",
+        "title": "人物雷达：姚顺雨的语言智能体、推理与计算机操作研究",
+        "summary": "姚顺雨的官方主页聚焦语言智能体，并列出 Computer-Using Agent 与 Deep Research 等代表工作。本站将持续追踪他的论文、官方产品研究、公开演讲和一手社交动态，并把个人原帖与机构正式材料交叉核对。",
+        "source": "Shunyu Yao · Official",
+        "url": "https://ysymyth.github.io/",
+        "published_at": "2026-07-23T00:00:00Z",
+        "tags": ["姚顺雨", "AI Agents", "Reasoning"],
+        "importance": 103,
+        "verification": "研究者官方主页基线 · 持续更新",
+    },
+]
 
 PINNED_ITEM_IDS = {
     "jacobian-fable-20260720",
@@ -71,6 +104,8 @@ PINNED_ITEM_IDS = {
     "sam-altman-gpt-live-20260708",
     "bace-gecco-2026",
     "rhb-icml-2026",
+    "kaiming-he-research-watch",
+    "shunyu-yao-agent-watch",
 }
 
 CHINA_WATCHLIST = {
@@ -81,6 +116,45 @@ CHINA_WATCHLIST = {
     "DeepSeek": ["deepseek"],
     "字节豆包 / Seed": ["字节", "bytedance", "doubao", "豆包", "seedance", "seedream", "seed2"],
 }
+
+WECHAT_INDEX_QUERIES = [
+    {
+        "name": "微信公众号 · Kimi",
+        "query": "Kimi 月之暗面 发布",
+        "tags": ["微信公众号", "Kimi", "月之暗面"],
+        "limit": 2,
+    },
+    {
+        "name": "微信公众号 · Qwen",
+        "query": "Qwen 通义千问 发布",
+        "tags": ["微信公众号", "Qwen", "通义千问"],
+        "limit": 2,
+    },
+    {
+        "name": "微信公众号 · DeepSeek",
+        "query": "DeepSeek 发布",
+        "tags": ["微信公众号", "DeepSeek", "模型"],
+        "limit": 2,
+    },
+    {
+        "name": "微信公众号 · 智谱",
+        "query": "智谱 GLM 发布",
+        "tags": ["微信公众号", "智谱", "GLM"],
+        "limit": 2,
+    },
+    {
+        "name": "微信公众号 · 字节",
+        "query": "豆包 字节 发布",
+        "tags": ["微信公众号", "字节", "豆包"],
+        "limit": 2,
+    },
+    {
+        "name": "微信公众号 · 腾讯",
+        "query": "腾讯元宝 混元 发布",
+        "tags": ["微信公众号", "腾讯", "元宝"],
+        "limit": 2,
+    },
+]
 
 OFFICIAL_FEEDS = [
     {
@@ -205,18 +279,46 @@ NEWS_QUERIES = [
         "limit": 10,
     },
     {
-        "name": "Founder & Researcher Posts on X",
+        "name": "Frontier Leaders on X",
         "query": '(site:x.com/elonmusk OR site:x.com/sama OR site:x.com/demishassabis OR site:x.com/ylecun OR site:x.com/__alpoge__) (AI OR model OR research OR Grok OR OpenAI OR DeepMind OR Claude) when:21d',
         "category": "voices",
         "tags": ["X", "Founder Watch", "First-party Post"],
-        "limit": 12,
+        "limit": 10,
+    },
+    {
+        "name": "Core AI Researchers on X",
+        "query": '(site:x.com/ShunyuYao12 OR site:x.com/polynoamial OR site:x.com/karpathy OR site:x.com/ilyasut OR site:x.com/DrFeiFei) (AI OR agent OR model OR research OR paper) when:45d',
+        "category": "voices",
+        "tags": ["X", "Researcher Watch", "First-party Post"],
+        "limit": 10,
+    },
+    {
+        "name": "Vision & World Model Researchers",
+        "query": '("Kaiming He" OR "何恺明" OR "Fei-Fei Li" OR "李飞飞" OR "Yejin Choi") (AI OR model OR research OR paper OR startup) when:60d',
+        "category": "voices",
+        "tags": ["Researcher Watch", "Vision", "World Models"],
+        "limit": 9,
+    },
+    {
+        "name": "Agent & Reasoning Researchers",
+        "query": '("Shunyu Yao" OR "姚顺雨" OR "Noam Brown" OR "Denny Zhou" OR "Jason Wei") (agent OR reasoning OR model OR research OR OpenAI) when:60d',
+        "category": "voices",
+        "tags": ["Researcher Watch", "Agents", "Reasoning"],
+        "limit": 9,
+    },
+    {
+        "name": "Foundation Model Pioneers",
+        "query": '("Ilya Sutskever" OR "Andrej Karpathy" OR "Yann LeCun" OR "Demis Hassabis" OR "Dario Amodei") (AI OR model OR research OR startup) when:45d',
+        "category": "voices",
+        "tags": ["Researcher Watch", "Foundation Models", "Leadership"],
+        "limit": 9,
     },
     {
         "name": "China AI Social Monitor",
-        "query": '(site:weibo.com OR site:mp.weixin.qq.com OR site:zhihu.com) (Kimi OR 月之暗面 OR Qwen OR 通义千问 OR 腾讯元宝 OR 智谱 OR DeepSeek OR 豆包) (模型 OR AI OR 发布 OR 开源) when:30d',
+        "query": '(site:weibo.com OR site:zhihu.com) (Kimi OR 月之暗面 OR Qwen OR 通义千问 OR 腾讯元宝 OR 智谱 OR DeepSeek OR 豆包) (模型 OR AI OR 发布 OR 开源) when:30d',
         "category": "china",
-        "tags": ["中国社交媒体", "公开动态", "China AI"],
-        "limit": 12,
+        "tags": ["微博与知乎", "公开动态", "China AI"],
+        "limit": 10,
     },
 ]
 
@@ -296,6 +398,11 @@ def clean_text(value: Any) -> str:
     text = re.sub(r"<[^>]+>", " ", text)
     text = re.sub(r"\s+", " ", text)
     return text.strip()
+
+
+def clean_url(value: Any) -> str:
+    text = str(value or "").replace("&amp;", "&").strip()
+    return re.sub(r"[\x00-\x20]+", "", text)
 
 
 def shorten(value: str, limit: int = 680) -> str:
@@ -400,7 +507,7 @@ def make_item(
     pdf_url: str = "", license_name: str = "", content_kind: str = "",
     verification: str = "",
 ) -> dict[str, Any] | None:
-    title, url = clean_text(title), clean_text(url)
+    title, url = clean_text(title), clean_url(url)
     if len(title) < 5 or not url.startswith(("http://", "https://")):
         return None
     date_iso = iso_or_now(published_at)
@@ -448,11 +555,185 @@ def load_pinned_items(path: Path) -> list[dict[str, Any]]:
         return []
     pinned = []
     for item in previous.get("items", []):
-        if item.get("id") not in PINNED_ITEM_IDS:
+        published = parse_datetime(item.get("published_at"))
+        recent_wechat = (
+            "搜狗微信公开索引摘要" in item.get("verification", "")
+            and published is not None
+            and NOW - published <= timedelta(days=45)
+        )
+        if item.get("id") not in PINNED_ITEM_IDS and not recent_wechat:
             continue
         item["reader_url"] = f"./reader.html?id={item['id']}"
         pinned.append(item)
     return pinned
+
+
+def people_baseline_items() -> list[dict[str, Any]]:
+    items: list[dict[str, Any]] = []
+    for profile in PEOPLE_BASELINES:
+        item = make_item(
+            title=profile["title"],
+            summary=profile["summary"],
+            source=profile["source"],
+            url=profile["url"],
+            published_at=profile["published_at"],
+            category="voices",
+            tags=profile["tags"],
+            official=True,
+            content_kind="article",
+            verification=profile["verification"],
+        )
+        if not item:
+            continue
+        item["id"] = profile["id"]
+        item["importance"] = profile["importance"]
+        item["reader_url"] = f"./reader.html?id={profile['id']}"
+        items.append(item)
+    return items
+
+
+def strip_publisher_suffix(title: str, publisher: str) -> str:
+    """Remove one or more Google News publisher suffixes without damaging the headline."""
+    title = clean_text(title)
+    publisher = clean_text(publisher)
+    if not publisher:
+        return title
+    suffixes = [f" - {publisher}", f" – {publisher}", f" — {publisher}", f" | {publisher}"]
+    changed = True
+    while changed:
+        changed = False
+        for suffix in suffixes:
+            if title.endswith(suffix):
+                title = title[: -len(suffix)].rstrip()
+                changed = True
+    return title.strip(" -–—|·")
+
+
+def normalized_redirect_url(base_url: str, href: str) -> str:
+    parsed = urllib.parse.urlsplit(urllib.parse.urljoin(base_url, html.unescape(href)))
+    query = urllib.parse.urlencode(urllib.parse.parse_qsl(parsed.query, keep_blank_values=True))
+    return urllib.parse.urlunsplit((parsed.scheme, parsed.netloc, parsed.path, query, parsed.fragment))
+
+
+def resolve_sogou_article(
+    opener: urllib.request.OpenerDirector,
+    search_url: str,
+    href: str,
+) -> str:
+    """Resolve Sogou's public result link to its current WeChat article URL."""
+    redirect_url = normalized_redirect_url(search_url, href)
+    request = urllib.request.Request(
+        redirect_url,
+        headers={
+            "User-Agent": BROWSER_USER_AGENT,
+            "Accept": "text/html,application/xhtml+xml",
+            "Accept-Language": "zh-CN,zh;q=0.9",
+            "Referer": search_url,
+        },
+    )
+    with opener.open(request, timeout=8) as response:
+        raw = response.read(80_000)
+        charset = response.headers.get_content_charset() or "gb18030"
+    page = raw.decode(charset, errors="replace")
+    fragments = re.findall(r"url\s*\+=\s*'([^']*)';", page)
+    resolved = "".join(fragments).replace("&amp;", "&").replace("@", "").strip()
+    if resolved.startswith(("https://mp.weixin.qq.com/", "http://mp.weixin.qq.com/")):
+        return resolved
+    return ""
+
+
+def fetch_sogou_wechat() -> tuple[list[dict[str, Any]], SourceStatus]:
+    """Collect titled public WeChat index snippets instead of empty Google News shells."""
+    source_name = "微信公众号公开索引"
+    def collect_query(query: dict[str, Any]) -> tuple[list[dict[str, Any]], str]:
+        query_items: list[dict[str, Any]] = []
+        cookie_jar = http.cookiejar.CookieJar()
+        opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cookie_jar))
+        search_url = "https://weixin.sogou.com/weixin?" + urllib.parse.urlencode(
+            {"type": 2, "query": query["query"]}
+        )
+        try:
+            request = urllib.request.Request(
+                search_url,
+                headers={
+                    "User-Agent": BROWSER_USER_AGENT,
+                    "Accept": "text/html,application/xhtml+xml",
+                    "Accept-Language": "zh-CN,zh;q=0.9",
+                    "Referer": "https://weixin.sogou.com/",
+                },
+            )
+            with opener.open(request, timeout=12) as response:
+                page = response.read(1_200_000).decode("utf-8", errors="replace")
+            blocks = re.findall(
+                r'<li\s+id="sogou_vr_11002601_box_\d+"[^>]*>(.*?)</li>',
+                page,
+                flags=re.I | re.S,
+            )
+            query_count = 0
+            for block in blocks:
+                title_match = re.search(
+                    r'<h3>\s*<a[^>]*href="([^"]+)"[^>]*>(.*?)</a>\s*</h3>',
+                    block,
+                    flags=re.I | re.S,
+                )
+                summary_match = re.search(
+                    r'<p[^>]*class="txt-info"[^>]*>(.*?)</p>',
+                    block,
+                    flags=re.I | re.S,
+                )
+                account_match = re.search(
+                    r'<span[^>]*class="all-time-y2"[^>]*>(.*?)</span>',
+                    block,
+                    flags=re.I | re.S,
+                )
+                timestamp_match = re.search(r"timeConvert\('(\d+)'\)", block)
+                if not title_match or not summary_match:
+                    continue
+                title = clean_text(title_match.group(2))
+                summary = clean_text(summary_match.group(1))
+                account = clean_text(account_match.group(1)) if account_match else "微信公众号"
+                if len(title) < 6 or len(summary) < 28:
+                    continue
+                article_url = ""
+                try:
+                    article_url = resolve_sogou_article(opener, search_url, title_match.group(1))
+                except Exception:
+                    pass
+                published_at: Any = NOW
+                if timestamp_match:
+                    published_at = datetime.fromtimestamp(int(timestamp_match.group(1)), tz=timezone.utc)
+                item = make_item(
+                    title=title,
+                    summary=summary,
+                    source=f"微信公众号 · {account}",
+                    url=article_url or search_url,
+                    published_at=published_at,
+                    category="china",
+                    tags=query["tags"],
+                    indexed=True,
+                    content_kind="article",
+                    verification="搜狗微信公开索引摘要 · 点击原文核对",
+                )
+                if item:
+                    item["index_url"] = search_url
+                    query_items.append(item)
+                    query_count += 1
+                if query_count >= query.get("limit", 4):
+                    break
+            return query_items, "" if query_count else query["name"]
+        except Exception:
+            return [], query["name"]
+
+    items: list[dict[str, Any]] = []
+    notes: list[str] = []
+    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
+        for query_items, note in executor.map(collect_query, WECHAT_INDEX_QUERIES):
+            items.extend(query_items)
+            if note:
+                notes.append(note)
+    status = "ok" if items else "error"
+    note = f"无可用结果：{'、'.join(notes)}" if notes else ""
+    return items, SourceStatus(source_name, status, len(items), note)
 
 
 def fetch_feed(source: dict[str, Any], use_entry_source: bool = False) -> tuple[list[dict[str, Any]], SourceStatus]:
@@ -467,8 +748,10 @@ def fetch_feed(source: dict[str, Any], use_entry_source: bool = False) -> tuple[
             published = first_child_text(entry, ["pubdate", "published", "updated", "date"])
             entry_source = first_child_text(entry, ["source"]) if use_entry_source else ""
             publisher = clean_text(entry_source) or source["name"]
-            if entry_source and title.endswith(f" - {publisher}"):
-                title = title[: -(len(publisher) + 3)].rstrip()
+            if entry_source:
+                title = strip_publisher_suffix(title, publisher)
+            if publisher == "微信公众平台":
+                continue
             source_tags = source.get("tags", [])
             social_signal = any(tag in {"X", "First-party Post", "中国社交媒体", "公开动态"} for tag in source_tags)
             item = make_item(
@@ -620,10 +903,16 @@ def google_news_url(query: str) -> str:
 
 
 def collect_all() -> tuple[list[dict[str, Any]], list[SourceStatus]]:
-    items: list[dict[str, Any]] = []
-    statuses: list[SourceStatus] = []
+    items = people_baseline_items()
+    statuses: list[SourceStatus] = [
+        SourceStatus("Core researcher official profiles", "ok", len(items))
+    ]
 
-    jobs: list[tuple[Any, tuple[Any, ...]]] = [(fetch_openalex, ()), (fetch_anthropic, ())]
+    jobs: list[tuple[Any, tuple[Any, ...]]] = [
+        (fetch_openalex, ()),
+        (fetch_anthropic, ()),
+        (fetch_sogou_wechat, ()),
+    ]
     jobs.extend((fetch_feed, (source,)) for source in OFFICIAL_FEEDS)
     for query in NEWS_QUERIES:
         source = {**query, "url": google_news_url(query["query"]), "official": False}
