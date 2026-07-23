@@ -51,6 +51,11 @@ def clean_text(value: Any) -> str:
     return text.strip()
 
 
+def clean_url(value: Any) -> str:
+    text = str(value or "").replace("&amp;", "&").strip()
+    return re.sub(r"[\x00-\x20]+", "", text)
+
+
 def shorten(value: str, limit: int) -> str:
     value = clean_text(value)
     if len(value) <= limit:
@@ -74,6 +79,8 @@ class ArticleTextParser(HTMLParser):
         self.buffer: list[str] = []
         self.blocks: list[str] = []
         self.meta: dict[str, str] = {}
+        self.in_title = False
+        self.title_parts: list[str] = []
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         tag = tag.lower()
@@ -81,6 +88,8 @@ class ArticleTextParser(HTMLParser):
         if tag in self.SKIP:
             self.skip_depth += 1
             return
+        if tag == "title":
+            self.in_title = True
         if tag == "meta":
             key = (attrs_map.get("property") or attrs_map.get("name") or "").lower()
             if key and attrs_map.get("content"):
@@ -94,6 +103,11 @@ class ArticleTextParser(HTMLParser):
         if tag in self.SKIP and self.skip_depth:
             self.skip_depth -= 1
             return
+        if tag == "title":
+            self.in_title = False
+            title = clean_text(" ".join(self.title_parts))
+            if title:
+                self.meta["page:title"] = title
         if not self.skip_depth and tag == self.capture_tag:
             block = clean_text(" ".join(self.buffer))
             if 45 <= len(block) <= 5000 and block not in self.blocks:
@@ -102,6 +116,8 @@ class ArticleTextParser(HTMLParser):
             self.buffer = []
 
     def handle_data(self, data: str) -> None:
+        if self.in_title:
+            self.title_parts.append(data)
         if not self.skip_depth and self.capture_tag:
             self.buffer.append(data)
 
@@ -119,10 +135,10 @@ def request_bytes(url: str, max_bytes: int, accept: str) -> tuple[bytes, str, st
 
 
 def derive_pdf_url(item: dict[str, Any]) -> str:
-    existing = clean_text(item.get("pdf_url"))
+    existing = clean_url(item.get("pdf_url"))
     if existing.startswith(("http://", "https://")):
         return existing
-    url = clean_text(item.get("url"))
+    url = clean_url(item.get("url"))
     parsed = urllib.parse.urlparse(url)
     if parsed.netloc.endswith("arxiv.org") and "/abs/" in parsed.path:
         identifier = parsed.path.split("/abs/", 1)[1].strip("/")
@@ -219,6 +235,30 @@ def fetch_article(url: str) -> tuple[list[str], dict[str, str], str]:
     return useful[:24], parser.meta, final_url
 
 
+def decode_google_news_url(url: str) -> str:
+    parsed = urllib.parse.urlparse(clean_url(url))
+    if not parsed.netloc.endswith("news.google.com") or "/articles/" not in parsed.path:
+        return ""
+    try:
+        from googlenewsdecoder import gnewsdecoder
+
+        result = gnewsdecoder(url, interval=0)
+        decoded = clean_url(result.get("decoded_url")) if result.get("status") else ""
+        return decoded if decoded.startswith(("http://", "https://")) else ""
+    except Exception:
+        return ""
+
+
+def placeholder_summary(value: str) -> bool:
+    value = clean_text(value)
+    return value.startswith("来自 ") and "点击查看原始来源" in value
+
+
+def weak_title(value: str) -> bool:
+    normalized = clean_text(value).strip(" -–—|·")
+    return len(normalized) < 6 or normalized in {"微信公众平台", "Google News"}
+
+
 def reading_time(text: str) -> int:
     latin_words = len(re.findall(r"\b[A-Za-z][A-Za-z'-]*\b", text))
     cjk_chars = len(re.findall(r"[\u3400-\u9fff]", text))
@@ -226,7 +266,7 @@ def reading_time(text: str) -> int:
 
 
 def base_record(item: dict[str, Any]) -> dict[str, Any]:
-    url = clean_text(item.get("url"))
+    url = clean_url(item.get("url"))
     host = urllib.parse.urlparse(url).netloc.lower()
     kind = item.get("content_kind") or ("social" if any(domain in host for domain in SOCIAL_HOSTS) else "paper" if item.get("category") == "research" else "article")
     return {
@@ -253,21 +293,36 @@ def build_article_record(item: dict[str, Any], use_network: bool) -> dict[str, A
     if use_network and final_url:
         try:
             blocks, meta, final_url = fetch_article(final_url)
-            record["fetch_status"] = "public-page-excerpt"
+            if blocks or meta.get("og:description") or meta.get("description"):
+                record["fetch_status"] = "public-page-excerpt"
+            elif "索引摘要" in record.get("verification", ""):
+                record["fetch_status"] = "indexed-summary"
+            else:
+                record["fetch_status"] = "summary-only"
         except Exception as error:
-            record["fetch_status"] = "summary-only"
+            record["fetch_status"] = "indexed-summary" if "索引摘要" in record.get("verification", "") else "summary-only"
             record["fetch_note"] = shorten(str(error), 180)
     else:
-        record["fetch_status"] = "summary-only"
-    description = meta.get("og:description") or meta.get("description") or record["summary"]
+        record["fetch_status"] = "indexed-summary" if "索引摘要" in record.get("verification", "") else "summary-only"
+    resolved_title = meta.get("og:title") or meta.get("twitter:title") or meta.get("page:title") or ""
+    description = meta.get("og:description") or meta.get("description") or meta.get("twitter:description") or ""
+    if resolved_title and (weak_title(record["title"]) or len(resolved_title) > len(record["title"]) + 12):
+        record["title"] = shorten(resolved_title, 180)
+    if description and (
+        placeholder_summary(record["summary"])
+        or len(description) > len(record["summary"]) + 80
+    ):
+        record["summary"] = shorten(description, 680)
+    description = description or record["summary"]
     excerpt_blocks = [shorten(block, 720) for block in blocks if len(block) >= 70][:3]
     evidence_text = " ".join(excerpt_blocks) or description
+    section_title = "公开索引摘要" if record["fetch_status"] == "indexed-summary" else "公开页面要点"
     record.update({
         "resolved_url": final_url,
         "key_points": key_points(evidence_text, record["summary"]),
         "sections": [
             {"title": "内容概览", "body": record["summary"]},
-            {"title": "公开页面要点", "bullets": key_points(evidence_text, description)},
+            {"title": section_title, "bullets": key_points(evidence_text, description)},
             {"title": "原文短摘录", "paragraphs": excerpt_blocks},
         ],
         "reading_minutes": reading_time(" ".join([record["summary"], *excerpt_blocks])),
@@ -328,6 +383,24 @@ def main() -> int:
 
     snapshot = json.loads(args.snapshot.read_text(encoding="utf-8"))
     items = snapshot.get("items", [])
+    resolved_count = 0
+    if not args.no_network:
+        google_items = [
+            item
+            for item in items
+            if urllib.parse.urlparse(clean_url(item.get("url"))).netloc.endswith("news.google.com")
+        ]
+
+        def resolve_item(item: dict[str, Any]) -> tuple[dict[str, Any], str]:
+            return item, decode_google_news_url(item.get("url", ""))
+
+        with concurrent.futures.ThreadPoolExecutor(max_workers=4) as resolver:
+            for item, decoded_url in resolver.map(resolve_item, google_items):
+                if not decoded_url:
+                    continue
+                item["index_url"] = item["url"]
+                item["url"] = decoded_url
+                resolved_count += 1
     paper_ids = []
     for item in items:
         pdf_url = derive_pdf_url(item)
@@ -339,7 +412,11 @@ def main() -> int:
     def build(item: dict[str, Any]) -> dict[str, Any]:
         if item.get("category") == "research" or item.get("content_kind") == "paper":
             return build_paper_record(item, args.papers_dir, args.download_pdfs and item.get("id") in selected_papers)
-        return build_article_record(item, not args.no_network)
+        index_only = (
+            "索引摘要" in item.get("verification", "")
+            and item.get("url") == item.get("index_url")
+        )
+        return build_article_record(item, not args.no_network and not index_only)
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=6) as executor:
         records = list(executor.map(build, items))
@@ -356,6 +433,12 @@ def main() -> int:
     for item in items:
         record = index.get(item.get("id"), {})
         item["reader_status"] = record.get("fetch_status", "summary-only")
+        if record.get("resolved_url"):
+            item["url"] = record["resolved_url"]
+        if record.get("title"):
+            item["title"] = record["title"]
+        if record.get("summary"):
+            item["summary"] = record["summary"]
         if record.get("pdf_local"):
             item["cached_pdf"] = record["pdf_local"]
 
@@ -369,7 +452,7 @@ def main() -> int:
     args.output.write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     args.snapshot.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     cached = sum(bool(record.get("pdf_local")) for record in records)
-    print(f"Built {len(records)} readers; cached {cached} open PDFs")
+    print(f"Built {len(records)} readers; resolved {resolved_count} indexed links; cached {cached} open PDFs")
     return 0
 
 
