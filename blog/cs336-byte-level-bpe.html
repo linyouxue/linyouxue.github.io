@@ -430,7 +430,7 @@ token ID：训练过程中用来引用该内容的整数编号</code></pre>
         class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>[<span class="st">b&quot;ab&quot;</span>, <span class="st">b&quot; ababab&quot;</span>, <span class="st">b&quot; abab&quot;</span>]</span></code></pre></div>
         </section>
         <section id="task-问题" class="level4">
-        <h4>Task 问题</h4>
+        <h4>自测问题</h4>
         <section id="为什么先在-str-上使用正则再编码为-bytes"
         class="level5">
         <h5>1. 为什么先在 <code>str</code> 上使用正则，再编码为
@@ -517,7 +517,7 @@ token ID：训练过程中用来引用该内容的整数编号</code></pre>
 <span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
         </section>
         <section id="task-问题-1" class="level4">
-        <h4>Task 问题</h4>
+        <h4>自测问题</h4>
         <section id="为什么不能用-listint-作为字典键" class="level5">
         <h5>1. 为什么不能用 <code>list[int]</code> 作为字典键？</h5>
         <p>Python 字典的键必须可哈希。<code>list</code>
@@ -600,7 +600,7 @@ token ID：训练过程中用来引用该内容的整数编号</code></pre>
         class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>(<span class="st">b&quot;a&quot;</span>, <span class="st">b&quot;b&quot;</span>)</span></code></pre></div>
         </section>
         <section id="task-问题-2" class="level4">
-        <h4>Task 问题</h4>
+        <h4>自测问题</h4>
         <section
         id="为什么每次发现-pair-要增加-pretoken-的频率而不是增加-1"
         class="level5">
@@ -698,7 +698,7 @@ token ID：训练过程中用来引用该内容的整数编号</code></pre>
         <p>而不是两个 <code>257</code>。</p>
         </section>
         <section id="task-问题-3" class="level4">
-        <h4>Task 问题</h4>
+        <h4>自测问题</h4>
         <section id="为什么统计允许重叠合并却不允许重叠" class="level5">
         <h5>1. 为什么统计允许重叠，合并却不允许重叠？</h5>
         <p>统计阶段衡量一种局部模式有多常见；合并阶段则要生成一个合法的新序列。一个旧
@@ -769,7 +769,7 @@ token ID：训练过程中用来引用该内容的整数编号</code></pre>
         <p>频率没有变化，变化的是每种 pretoken 的 token 划分。</p>
         </section>
         <section id="task-问题-4" class="level4">
-        <h4>Task 问题</h4>
+        <h4>自测问题</h4>
         <section id="为什么不能一边遍历原字典一边替换它的键"
         class="level5">
         <h5>1. 为什么不能一边遍历原字典，一边替换它的键？</h5>
@@ -859,7 +859,7 @@ token ID：训练过程中用来引用该内容的整数编号</code></pre>
         merge 列表。</p>
         </section>
         <section id="task-问题-5" class="level4">
-        <h4>Task 问题</h4>
+        <h4>自测问题</h4>
         <section id="为什么不能只写-maxpair_counts-keypair_counts.get"
         class="level5">
         <h5>1. 为什么不能只写
@@ -911,7 +911,7 @@ token ID：训练过程中用来引用该内容的整数编号</code></pre>
         映射回 bytes，方便观察每轮发生了什么。</p>
         </section>
         <section id="task-问题-6" class="level4">
-        <h4>Task 问题</h4>
+        <h4>自测问题</h4>
         <section id="为什么不直接把训练状态存成-bytes" class="level5">
         <h5>1. 为什么不直接把训练状态存成 bytes？</h5>
         <p>训练状态必须保存 256 以上的新 token
@@ -1084,7 +1084,7 @@ token ID：训练过程中用来引用该内容的整数编号</code></pre>
         </section>
         </section>
         <section id="task-问题-7" class="level4">
-        <h4>Task 问题</h4>
+        <h4>自测问题</h4>
         <section id="为什么每轮合并后必须重新统计-pair" class="level5">
         <h5>1. 为什么每轮合并后必须重新统计 pair？</h5>
         <p>一次 merge 会删除旧 pair，也会产生包含新 token 的新
@@ -1946,7 +1946,7 @@ token ID：训练过程中用来引用该内容的整数编号</code></pre>
     const progress=document.querySelector('#scroll-progress'),topButton=document.querySelector('#to-top');
     function syncScroll(){const max=document.documentElement.scrollHeight-innerHeight;progress.style.width=(max?scrollY/max*100:0)+'%';topButton.classList.toggle('show',scrollY>700)}
     addEventListener('scroll',syncScroll,{passive:true});addEventListener('resize',syncScroll);syncScroll();topButton.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
-    document.querySelectorAll('.level4').forEach(section=>{const heading=section.querySelector(':scope > h4');if(!heading||heading.textContent.trim()!=='Task 问题')return;section.classList.add('task-section');section.querySelectorAll(':scope > .level5').forEach((part,index)=>{const title=part.querySelector(':scope > h5');if(!title)return;const details=document.createElement('details');details.className='qa';if(index===0)details.open=true;const summary=document.createElement('summary');summary.textContent=title.textContent;details.append(summary);[...part.childNodes].forEach(node=>{if(node!==title)details.append(node)});part.replaceWith(details)})});
+    document.querySelectorAll('.level4').forEach(section=>{const heading=section.querySelector(':scope > h4');if(!heading||heading.textContent.trim()!=='自测问题')return;section.classList.add('task-section');section.querySelectorAll(':scope > .level5').forEach((part,index)=>{const title=part.querySelector(':scope > h5');if(!title)return;const details=document.createElement('details');details.className='qa';if(index===0)details.open=true;const summary=document.createElement('summary');summary.textContent=title.textContent;details.append(summary);[...part.childNodes].forEach(node=>{if(node!==title)details.append(node)});part.replaceWith(details)})});
     document.querySelectorAll('.story pre').forEach(pre=>{const code=pre.querySelector(':scope > code');if(!code)return;const block=pre.closest('div.sourceCode')||pre;if(block.querySelector(':scope > .code-tools'))return;const tools=document.createElement('div');tools.className='code-tools';const lang=document.createElement('span');lang.className='code-lang';const language=[...code.classList].find(name=>name!=='sourceCode')||'text';lang.textContent=language==='python'?'Python':language;const button=document.createElement('button');button.className='copy-code';button.type='button';button.textContent='复制';button.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(code.innerText);button.textContent='已复制';setTimeout(()=>button.textContent='复制',1300)}catch{button.textContent='复制失败'}});tools.append(lang,button);block.append(tools)});
     const tocLinks=[...document.querySelectorAll('.toc a')],sections=[...document.querySelectorAll('.story .level2[id],.story .level3[id]')];const linkFor=id=>tocLinks.find(link=>decodeURIComponent(link.hash.slice(1))===id);if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>{const visible=entries.filter(entry=>entry.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];if(!visible)return;tocLinks.forEach(link=>link.classList.remove('active'));linkFor(visible.target.id)?.classList.add('active')},{rootMargin:'-12% 0px -68% 0px',threshold:[0,.1,.5]});sections.forEach(section=>observer.observe(section))}
   </script>
