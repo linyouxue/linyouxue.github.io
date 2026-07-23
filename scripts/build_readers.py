@@ -328,7 +328,12 @@ def main() -> int:
 
     snapshot = json.loads(args.snapshot.read_text(encoding="utf-8"))
     items = snapshot.get("items", [])
-    paper_ids = [item["id"] for item in items if (item.get("category") == "research" or item.get("content_kind") == "paper") and derive_pdf_url(item)]
+    paper_ids = []
+    for item in items:
+        pdf_url = derive_pdf_url(item)
+        is_paper = item.get("category") == "research" or item.get("content_kind") == "paper"
+        if is_paper and pdf_url and may_cache_pdf(pdf_url, item):
+            paper_ids.append(item["id"])
     selected_papers = set(paper_ids[: max(0, args.max_papers)])
 
     def build(item: dict[str, Any]) -> dict[str, Any]:
