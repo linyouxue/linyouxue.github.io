@@ -18,7 +18,7 @@ permissions:
 
 concurrency:
   group: update-ai-intelligence
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   update:
@@ -53,4 +53,12 @@ jobs:
           git add data/ai-news.json data/readers.json
           git add -A -- papers 2>/dev/null || true
           git commit -m "chore: refresh AI intelligence"
-          git push
+          for attempt in 1 2 3; do
+            git pull --rebase -X theirs origin main
+            if git push; then
+              exit 0
+            fi
+            echo "The branch moved while publishing; retrying (${attempt}/3)."
+            sleep 4
+          done
+          exit 1
