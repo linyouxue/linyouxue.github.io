@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Build the static AI intelligence snapshot used by ai-news.html.
 
-The script intentionally uses only Python's standard library so it can run on a
-plain GitHub Actions runner. Individual source failures are recorded in the
-output instead of aborting the entire update.
+This collector discovers signals; ``build_readers.py`` then fetches public page
+text and open-access PDFs into the site's reading cache. Individual source
+failures are recorded instead of aborting the entire update.
 """
 
 from __future__ import annotations
@@ -35,12 +35,31 @@ TIMEOUT = 28
 
 CATEGORY_LIMITS = {
     "research": 20,
+    "impact": 16,
     "frontier": 16,
     "china": 16,
+    "voices": 14,
     "bigtech": 14,
     "startups": 14,
     "opensource": 12,
     "policy": 10,
+}
+
+IMPACT_KEYWORDS = {
+    "conjecture", "theorem", "proof", "mathematics", "math problem", "scientific discovery",
+    "protein", "genome", "biology", "drug discovery", "medicine", "medical", "disease",
+    "materials science", "battery material", "chemistry", "physics", "climate", "weather forecast",
+    "数学", "猜想", "定理", "证明", "生物", "蛋白质", "药物", "医疗", "材料", "物理", "气候",
+}
+
+PEOPLE_WATCHLIST = {
+    "Elon Musk / xAI": ["elon musk", "@elonmusk", "xai", "grok"],
+    "Sam Altman / OpenAI": ["sam altman", "@sama"],
+    "Dario Amodei / Anthropic": ["dario amodei"],
+    "Demis Hassabis / DeepMind": ["demis hassabis"],
+    "Yann LeCun / AMI": ["yann lecun", "@ylecun"],
+    "梁文锋 / DeepSeek": ["梁文锋", "liang wenfeng"],
+    "杨植麟 / 月之暗面": ["杨植麟", "yang zhilin"],
 }
 
 CHINA_WATCHLIST = {
@@ -105,6 +124,20 @@ OFFICIAL_FEEDS = [
 
 NEWS_QUERIES = [
     {
+        "name": "AI for Mathematics & Science",
+        "query": '(AI OR "language model") (conjecture OR theorem OR proof OR "scientific discovery" OR mathematics OR physics) when:30d',
+        "category": "impact",
+        "tags": ["AI for Science", "Mathematics", "Discovery"],
+        "limit": 12,
+    },
+    {
+        "name": "AI for Biology, Medicine & Materials",
+        "query": '(AI OR "foundation model") (biology OR protein OR medicine OR "drug discovery" OR materials OR climate) (discovery OR experiment OR breakthrough) when:30d',
+        "category": "impact",
+        "tags": ["AI for Science", "Biology", "Applied AI"],
+        "limit": 12,
+    },
+    {
         "name": "Academic Startup Radar",
         "query": '("AI startup" OR "AI spinout") (professor OR Stanford OR MIT OR Berkeley OR university) when:30d',
         "category": "startups",
@@ -159,6 +192,20 @@ NEWS_QUERIES = [
         "category": "china",
         "tags": ["Tencent", "ByteDance", "China AI"],
         "limit": 10,
+    },
+    {
+        "name": "Founder & Researcher Posts on X",
+        "query": '(site:x.com/elonmusk OR site:x.com/sama OR site:x.com/demishassabis OR site:x.com/ylecun OR site:x.com/__alpoge__) (AI OR model OR research OR Grok OR OpenAI OR DeepMind OR Claude) when:21d',
+        "category": "voices",
+        "tags": ["X", "Founder Watch", "First-party Post"],
+        "limit": 12,
+    },
+    {
+        "name": "China AI Social Monitor",
+        "query": '(site:weibo.com OR site:mp.weixin.qq.com OR site:zhihu.com) (Kimi OR 月之暗面 OR Qwen OR 通义千问 OR 腾讯元宝 OR 智谱 OR DeepSeek OR 豆包) (模型 OR AI OR 发布 OR 开源) when:30d',
+        "category": "china",
+        "tags": ["中国社交媒体", "公开动态", "China AI"],
+        "limit": 12,
     },
 ]
 
@@ -317,8 +364,18 @@ def publisher_priority(source: str) -> int:
     return 8 if any(name in lowered for name in REPUTABLE_PUBLISHERS) else 0
 
 
+def classify_item(default: str, title: str, summary: str, tags: Iterable[str] = ()) -> str:
+    """Promote concrete cross-domain results and first-party posts into their own lanes."""
+    haystack = " ".join([title, summary, *tags]).lower()
+    if default in {"frontier", "bigtech"} and any(keyword in haystack for keyword in IMPACT_KEYWORDS):
+        return "impact"
+    if default == "frontier" and any(marker in haystack for marker in ("site:x.com", "first-party post")):
+        return "voices"
+    return default
+
+
 def score_item(category: str, published_at: str, official: bool = False, indexed: bool = False, source: str = "") -> int:
-    base = {"research": 66, "frontier": 64, "china": 63, "startups": 61, "bigtech": 57, "policy": 54, "opensource": 52}.get(category, 50)
+    base = {"impact": 70, "research": 66, "frontier": 64, "china": 63, "voices": 62, "startups": 61, "bigtech": 57, "policy": 54, "opensource": 52}.get(category, 50)
     date = parse_datetime(published_at)
     age_days = max(0.0, (NOW - date).total_seconds() / 86400) if date else 90
     freshness = max(0, round(18 - min(age_days, 90) / 5))
@@ -329,6 +386,8 @@ def make_item(
     *, title: str, summary: str, source: str, url: str, published_at: Any,
     category: str, tags: list[str] | None = None, official: bool = False,
     indexed: bool = False, authors: list[str] | None = None, venue: str = "",
+    pdf_url: str = "", license_name: str = "", content_kind: str = "",
+    verification: str = "",
 ) -> dict[str, Any] | None:
     title, url = clean_text(title), clean_text(url)
     if len(title) < 5 or not url.startswith(("http://", "https://")):
@@ -337,21 +396,36 @@ def make_item(
     clean_summary = shorten(summary)
     if len(clean_summary) < 32:
         clean_summary = f"来自 {source} 的最新更新。点击查看原始来源、完整内容与上下文。"
+    identifier = item_id(url, title)
+    normalized_tags = [clean_text(tag) for tag in (tags or []) if clean_text(tag)][:4]
+    category = classify_item(category, title, clean_summary, normalized_tags)
+    if not content_kind:
+        social_hosts = ("x.com", "twitter.com", "weibo.com", "zhihu.com", "mp.weixin.qq.com")
+        content_kind = "paper" if category == "research" else "social" if any(host in url.lower() for host in social_hosts) else "article"
+    if not verification:
+        verification = "论文索引" if indexed else "官方来源" if official else "公开社交原帖" if content_kind == "social" else "媒体或公开网页"
     payload = {
-        "id": item_id(url, title),
+        "id": identifier,
         "category": category,
         "title": title,
         "summary": clean_summary,
         "source": clean_text(source) or "Original source",
         "url": url,
         "published_at": date_iso,
-        "tags": [clean_text(tag) for tag in (tags or []) if clean_text(tag)][:4],
+        "tags": normalized_tags,
         "importance": score_item(category, date_iso, official=official, indexed=indexed, source=source),
+        "content_kind": content_kind,
+        "verification": verification,
+        "reader_url": f"./reader.html?id={identifier}",
     }
     if authors:
         payload["authors"] = [clean_text(author) for author in authors if clean_text(author)][:5]
     if venue:
         payload["venue"] = clean_text(venue)
+    if pdf_url.startswith(("http://", "https://")):
+        payload["pdf_url"] = pdf_url
+    if license_name:
+        payload["license"] = clean_text(license_name)
     return payload
 
 
@@ -369,6 +443,8 @@ def fetch_feed(source: dict[str, Any], use_entry_source: bool = False) -> tuple[
             publisher = clean_text(entry_source) or source["name"]
             if entry_source and title.endswith(f" - {publisher}"):
                 title = title[: -(len(publisher) + 3)].rstrip()
+            source_tags = source.get("tags", [])
+            social_signal = any(tag in {"X", "First-party Post", "中国社交媒体", "公开动态"} for tag in source_tags)
             item = make_item(
                 title=title,
                 summary=description,
@@ -376,8 +452,10 @@ def fetch_feed(source: dict[str, Any], use_entry_source: bool = False) -> tuple[
                 url=link,
                 published_at=published,
                 category=source["category"],
-                tags=source.get("tags", []),
+                tags=source_tags,
                 official=bool(source.get("official")),
+                content_kind="social" if social_signal else "",
+                verification="公开平台索引，需查看原帖" if social_signal else "",
             )
             if item:
                 items.append(item)
@@ -409,7 +487,7 @@ def fetch_openalex() -> tuple[list[dict[str, Any]], SourceStatus]:
         "filter": f"primary_location.source.type:conference,primary_topic.subfield.id:1702,from_publication_date:{start_date}",
         "sort": "publication_date:desc",
         "per-page": "30",
-        "select": "id,doi,title,publication_date,primary_location,authorships,abstract_inverted_index,keywords,primary_topic,cited_by_count,type",
+        "select": "id,doi,title,publication_date,primary_location,best_oa_location,open_access,authorships,abstract_inverted_index,keywords,primary_topic,cited_by_count,type",
     }
     url = "https://api.openalex.org/works?" + urllib.parse.urlencode(params)
     try:
@@ -420,6 +498,8 @@ def fetch_openalex() -> tuple[list[dict[str, Any]], SourceStatus]:
             if len(abstract) < 80:
                 continue
             location = work.get("primary_location") or {}
+            best_oa = work.get("best_oa_location") or {}
+            open_access = work.get("open_access") or {}
             venue = clean_text((location.get("source") or {}).get("display_name"))
             destination = work.get("doi") or location.get("landing_page_url") or work.get("id")
             authors = [((entry.get("author") or {}).get("display_name") or "") for entry in work.get("authorships", [])]
@@ -437,6 +517,10 @@ def fetch_openalex() -> tuple[list[dict[str, Any]], SourceStatus]:
                 indexed=True,
                 authors=authors,
                 venue=venue,
+                pdf_url=clean_text(best_oa.get("pdf_url") or location.get("pdf_url")),
+                license_name=clean_text(best_oa.get("license") or open_access.get("oa_status")),
+                content_kind="paper",
+                verification="OpenAlex 收录 · 开放获取状态已标注",
             )
             if item:
                 item["citations"] = int(work.get("cited_by_count") or 0)
@@ -571,19 +655,25 @@ def build_analysis(items: list[dict[str, Any]]) -> dict[str, Any]:
         for company, terms in CHINA_WATCHLIST.items()
     }
     covered = [company for company, count in coverage.items() if count]
+    people_coverage = {
+        person: sum(any(term.lower() in haystack for term in terms) for _, haystack in searchable)
+        for person, terms in PEOPLE_WATCHLIST.items()
+    }
 
     research_titles = "、".join(f"《{shorten(item['title'], 58)}》" for item in grouped["research"][:2]) or "本期会议论文"
     china_titles = "、".join(f"《{shorten(item['title'], 52)}》" for item in grouped["china"][:2]) or "中国模型公司的新动作"
+    impact_titles = "、".join(f"《{shorten(item['title'], 52)}》" for item in grouped["impact"][:2]) or "AI 在数学与科学中的新贡献"
     industry_count = len(grouped["frontier"]) + len(grouped["bigtech"])
     covered_text = "、".join(covered) if covered else "Kimi、Qwen、腾讯元宝/混元、智谱、DeepSeek 与字节豆包/Seed"
 
     paragraphs = [
         f"研究侧共收录 {len(grouped['research'])} 条信号，重点包括 {research_titles}。与只看榜单相比，更值得持续观察的是论文能否把 Agent 的可靠性、评测完整性与推理成本一起向前推进。",
+        f"AI 跨领域贡献收录 {len(grouped['impact'])} 条，代表性事件包括 {impact_titles}。这类结果会区分官方论文、可核验反例、媒体报道与尚待同行评审的社交平台首发，避免把‘可计算验证’和‘完成学术确认’混为一谈。",
         f"中国 AI 板块本期收录 {len(grouped['china'])} 条动态，已覆盖 {covered_text}。代表性变化包括 {china_titles}；竞争正在从单次模型发布延伸到开源策略、Agent 产品入口、国产算力适配和价格体系。",
-        f"产业侧共有 {industry_count} 条前沿实验室与大厂动态，另有 {len(grouped['startups'])} 条创业信号和 {len(grouped['policy'])} 条政策安全更新。把这些信息放在一起看，模型能力、算力供给、产品分发与合规成本正在变成同一个竞争问题。",
+        f"产业侧共有 {industry_count} 条前沿实验室与大厂动态、{len(grouped['voices'])} 条关键人物公开信号，另有 {len(grouped['startups'])} 条创业和 {len(grouped['policy'])} 条政策安全更新。模型能力、算力供给、创始人判断、产品分发与合规成本正在变成同一个竞争问题。",
     ]
     takeaways = [
-        {"title": "技术判断", "body": "Agent 的长程可靠性、工具调用与真实工作流评测，比单一静态 benchmark 更值得跟踪。"},
+        {"title": "科研判断", "body": "优先关注带公开证明、实验或可复核数据的 AI 科研贡献，并持续更新同行验证状态。"},
         {"title": "中国 AI", "body": f"当前重点覆盖 {len(covered)}/{len(CHINA_WATCHLIST)} 组公司；没有新消息的公司仍保留在持续监控名单中。"},
         {"title": "产业判断", "body": "开放权重、低价 API、消费端入口和国产算力适配，正在共同决定模型能否形成规模化使用。"},
     ]
@@ -593,13 +683,14 @@ def build_analysis(items: list[dict[str, Any]]) -> dict[str, Any]:
         "paragraphs": paragraphs,
         "takeaways": takeaways,
         "china_watch_coverage": coverage,
+        "people_watch_coverage": people_coverage,
     }
 
 
 def build_payload(items: list[dict[str, Any]], statuses: list[SourceStatus]) -> dict[str, Any]:
     counts = {category: sum(item["category"] == category for item in items) for category in CATEGORY_LIMITS}
     return {
-        "schema_version": 1,
+        "schema_version": 2,
         "generated_at": NOW.isoformat(timespec="seconds").replace("+00:00", "Z"),
         "item_count": len(items),
         "category_counts": counts,
