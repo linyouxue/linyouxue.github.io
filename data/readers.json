@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-23T00:15:00Z",
+  "record_count": 8,
+  "records": [
+    {
+      "id": "jacobian-fable-20260720",
+      "kind": "social",
+      "title": "Claude Fable 5 协助找到雅可比猜想的显式三维反例",
+      "source": "X · Levent Alpöge",
+      "source_url": "https://x.com/__alpoge__/status/2079028340955197566",
+      "published_at": "2026-07-20T08:00:00Z",
+      "tags": ["Claude Fable 5", "Jacobian Conjecture", "AI Mathematics"],
+      "verification": "显式反例可计算核验 · 正式论文与同行评审待更新",
+      "summary": "Levent Alpöge 在 Claude Fable 5 协助下公布了一个三变量多项式映射。该映射满足非零常数雅可比行列式，却不是单射，因此直接击中雅可比猜想的核心断言。",
+      "key_points": [
+        "关键不是给出一篇很长的证明，而是找到一个可以直接代入、求导和比较输出的显式反例。",
+        "该映射把三个不同输入送到同一个输出，所以不可能存在全局多项式逆映射。",
+        "Claude Fable 5 被作者明确列为发现过程中的协作者，但人类数学家仍承担问题设定、核验和学术解释。",
+        "可计算核验并不等于同行评审完成；正式论文、独立证明和后续修订仍需追踪。"
+      ],
+      "sections": [
+        {"title": "猜想说了什么", "body": "雅可比猜想断言：复数域上的多项式映射，如果雅可比行列式处处是非零常数，那么它应当存在多项式逆映射。直观地说，局部上没有被压扁的多项式变换，应当也能在全局被完整撤销。"},
+        {"title": "反例如何工作", "body": "公开映射位于三维复空间。它的雅可比行列式恒为 -2，满足猜想的前提；同时作者列出三个不同输入，它们被映射到同一个输出。这足以说明映射不单射，也就不存在全局逆映射。"},
+        {"title": "AI 的贡献", "body": "原帖感谢 Claude Fable 5 参与搜索。此类工作体现了长程推理模型在巨大构造空间中寻找候选对象的价值：结果一旦出现，人类可以用符号代数或手算逐项验证，而无需信任模型隐藏的推理过程。"},
+        {"title": "当前验证边界", "body": "显式公式的局部计算与非单射性质可以独立复核，这是较强证据；但科研记录仍应继续关注正式预印本、同行评议、不同计算系统的复核以及是否存在对适用维度或定义的修正。"}
+      ],
+      "reading_minutes": 5,
+      "fetch_status": "first-party-post-seeded",
+      "rights_note": "本站仅整理公开原帖中的事实与数学背景；请回到原帖核对公式和后续更新。"
+    },
+    {
+      "id": "unit-distance-openai-20260520",
+      "kind": "paper",
+      "title": "OpenAI 模型推翻平面单位距离问题中的长期猜想",
+      "source": "OpenAI · Research",
+      "source_url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+      "pdf_url": "https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf",
+      "published_at": "2026-05-20T08:00:00Z",
+      "tags": ["Unit Distance", "Discrete Geometry", "Verified Proof"],
+      "verification": "官方论文 · 外部数学家已检查",
+      "summary": "模型发现一族新的平面点集构造，使单位距离点对数量获得多项式级改进，从而推翻长期流行的上界猜想。",
+      "key_points": [
+        "问题研究 n 个平面点之间最多能出现多少对单位距离。",
+        "新构造证明存在固定正数 δ，使无穷多个 n 上可以达到至少 n^(1+δ) 个单位距离对。",
+        "核心思想把代数数论中的结构用于离散几何，而不是继续优化传统方格构造。",
+        "证明由外部数学家检查，公开 PDF 可在站内直接阅读。"
+      ],
+      "sections": [
+        {"title": "问题背景", "body": "Erdős 在 1946 年提出平面单位距离问题。长期以来，人们普遍认为接近方格的构造已经代表正确的渐近尺度，即单位距离点对数量至多是 n 的 1+o(1) 次方。"},
+        {"title": "新结果", "body": "论文构造出无穷多个点集族，使单位距离点对数达到 n 的 1+δ 次方，其中 δ 是不随 n 消失的正常数。这不是微小常数优化，而是改变指数级别，因此直接推翻原先的长期猜想。"},
+        {"title": "方法与意义", "body": "模型探索了人类研究者可能较早放弃的方向，并把代数数论中的对象连接到组合几何构造。结果说明通用推理模型不仅能整理既有文献，也可能通过持续搜索产生新构造。"},
+        {"title": "人类验证", "body": "公开材料包含完整证明和数学家的伴随评论。人类研究者检查并改写了模型输出，明确说明模型发现与人类解释、压缩和验证之间的分工。"}
+      ],
+      "reading_minutes": 24,
+      "fetch_status": "open-pdf-ready",
+      "rights_note": "使用 OpenAI 公开提供的证明 PDF；作者信息和原始页面保持可见。"
+    },
+    {
+      "id": "gpt5-protein-synthesis-20260205",
+      "kind": "article",
+      "title": "GPT-5 与自动化实验室将无细胞蛋白合成成本降低 40%",
+      "source": "OpenAI · Ginkgo Bioworks",
+      "source_url": "https://openai.com/index/gpt-5-lowers-protein-synthesis-cost/",
+      "published_at": "2026-02-05T08:00:00Z",
+      "tags": ["Biology", "Autonomous Lab", "Protein Synthesis"],
+      "verification": "官方实验报告 · 含可量化结果",
+      "summary": "GPT-5 被接入自动化湿实验循环，根据每轮实验结果提出下一轮条件，在无细胞蛋白合成任务中实现约 40% 的成本下降。",
+      "key_points": [
+        "模型参与的是连续实验优化，而不仅是一次性生成实验建议。",
+        "实验指标是可量化的蛋白产量与成本，而不是主观评价。",
+        "自动化设备负责执行，人类团队负责约束实验空间、监督安全并解释结果。",
+        "单一实验系统的成功不能直接外推到所有生物研究任务。"
+      ],
+      "sections": [
+        {"title": "实验任务", "body": "团队选择无细胞蛋白合成作为受控测试环境，希望在维持产量的同时降低试剂与流程成本。"},
+        {"title": "闭环方法", "body": "模型读取前一轮实验条件和结果，提出新的配方组合；自动化实验系统执行建议并返回数据，形成多轮设计—实验—反馈循环。"},
+        {"title": "结果与边界", "body": "官方报告给出约 40% 的成本下降。这个结果证明模型可以在真实湿实验中贡献可度量优化，但仍需更多独立复现、更多实验体系和安全评估。"}
+      ],
+      "reading_minutes": 6,
+      "fetch_status": "official-page-seeded",
+      "rights_note": "本站展示结构化摘要；完整实验设计、数据和限制请查看官方页面与关联论文。"
+    },
+    {
+      "id": "elon-grok-build-open-source-20260716",
+      "kind": "social",
+      "title": "Elon Musk 宣布 Grok Build 开源",
+      "source": "X · Elon Musk",
+      "source_url": "https://x.com/elonmusk/status/2077495635687723408",
+      "published_at": "2026-07-16T08:00:00Z",
+      "tags": ["Elon Musk", "xAI", "Open Source"],
+      "verification": "创始人官方账号原帖 · 需结合仓库核对",
+      "summary": "Musk 通过 X 宣布 Grok Build 开源，重点指向 Agent 执行框架和开发者协作。",
+      "key_points": ["原帖提供了发布信号。", "实际开放范围要结合代码仓库、许可证、模型权重和维护记录判断。", "Agent harness 的可靠性会直接影响编程模型在长任务中的表现。"],
+      "sections": [
+        {"title": "原帖信息", "body": "Elon Musk 表示 Grok Build 已开放源代码，希望开发者参与改进一个更可靠、更稳健的 Agent harness。"},
+        {"title": "为什么重要", "body": "模型能力相近时，任务拆解、工具调用、错误恢复和上下文管理框架会显著影响最终完成率。开源 harness 可能扩大 xAI 的开发者触达。"},
+        {"title": "需要继续核对", "body": "需要查看实际仓库、许可证、提交历史、可复现示例，以及它与 Grok 模型服务之间是否存在不可替代的闭源依赖。"}
+      ],
+      "reading_minutes": 3,
+      "fetch_status": "first-party-post-seeded",
+      "rights_note": "本站仅整理公开原帖；完整措辞、附件与后续回复请查看 X。"
+    },
+    {
+      "id": "demis-frontier-ai-framework-20260714",
+      "kind": "social",
+      "title": "Demis Hassabis 发布前沿 AI 治理与发展框架",
+      "source": "X · Demis Hassabis",
+      "source_url": "https://x.com/demishassabis/article/2076957440109625718",
+      "published_at": "2026-07-14T08:00:00Z",
+      "tags": ["Demis Hassabis", "Frontier AI", "Governance"],
+      "verification": "实验室负责人官方账号长文",
+      "summary": "Hassabis 从科研收益、前沿能力与治理责任三个层面提出一套发展框架。",
+      "key_points": ["AI 的科学价值与前沿风险需要在同一治理框架下讨论。", "实验室、政府与学术界需要明确能力评估和责任边界。", "这是一篇负责人观点文章，不是新的模型能力证明。"],
+      "sections": [
+        {"title": "核心主张", "body": "前沿 AI 已开始提供现实收益，但能力加速意味着安全评估、透明度与国际协调必须同步发展。"},
+        {"title": "如何阅读", "body": "这类长文能反映实验室领导层的战略判断，应与 DeepMind 的技术报告、评测结果和实际产品政策一起阅读。"}
+      ],
+      "reading_minutes": 4,
+      "fetch_status": "first-party-article-seeded",
+      "rights_note": "本站仅提供观点提要；完整论证请查看作者在 X 发布的原文。"
+    },
+    {
+      "id": "sam-altman-gpt-live-20260708",
+      "kind": "social",
+      "title": "Sam Altman 预告 ChatGPT 新一代实时语音 GPT-live",
+      "source": "X · Sam Altman",
+      "source_url": "https://x.com/sama/status/2074909079450050629",
+      "published_at": "2026-07-08T08:00:00Z",
+      "tags": ["Sam Altman", "OpenAI", "Voice AI"],
+      "verification": "创始人官方账号原帖 · 产品文档待补充",
+      "summary": "Altman 通过 X 宣布 GPT-live 上线，强调新一代实时语音交互的自然度。",
+      "key_points": ["属于产品上线的一手预告。", "自然度属于主观描述，需要结合延迟、打断处理和安全评测。", "地区、套餐、隐私和数据保留规则应以产品文档为准。"],
+      "sections": [
+        {"title": "原帖信息", "body": "Sam Altman 宣布新一代实时语音能力进入 ChatGPT，并表示体验更接近自然对话。"},
+        {"title": "后续观察", "body": "重点关注端到端延迟、多人和噪声环境、工具调用、声音安全、可用地区与收费方式。"}
+      ],
+      "reading_minutes": 3,
+      "fetch_status": "first-party-post-seeded",
+      "rights_note": "本站仅整理公开原帖；产品能力和可用性以 OpenAI 正式文档为准。"
+    },
+    {
+      "id": "bace-gecco-2026",
+      "kind": "paper",
+      "title": "BACE: LLM-based Code Generation through Bayesian Anchored Co-Evolution",
+      "source": "OpenAlex · arXiv",
+      "source_url": "https://arxiv.org/abs/2603.28653",
+      "pdf_url": "https://arxiv.org/pdf/2603.28653",
+      "published_at": "2026-07-10T00:00:00Z",
+      "authors": ["Kaushitha Silva", "Srinath Perera"],
+      "venue": "GECCO 2026",
+      "tags": ["Code Generation", "Bayesian Methods", "LLM Agents"],
+      "verification": "GECCO 2026 论文 · arXiv 开放 PDF",
+      "summary": "BACE 把代码与测试看作共同进化的两个群体，并用贝叶斯更新把生成测试视为带噪声的传感器。",
+      "key_points": ["生成测试不会被当作绝对真值。", "公开样例提供锚点，抑制代码与错误测试相互自证。", "方法在 LiveCodeBench v6 上进行评估。"],
+      "sections": [
+        {"title": "摘要", "body": "论文针对 LLM 代码生成中的自验证漂移：错误代码可能通过同样错误的生成测试。BACE 使用贝叶斯锚定共同进化，使候选代码和测试相互改进，同时保留不确定性。"},
+        {"title": "方法", "body": "代码与测试分别组成种群，测试结果被解释为噪声观测；公开样例作为可信锚点更新候选代码的后验可信度，再由选择和变异推进搜索。"},
+        {"title": "阅读重点", "body": "重点检查消融实验、计算成本、测试噪声假设，以及在不同闭源和开放模型上的稳定性。"}
+      ],
+      "reading_minutes": 18,
+      "fetch_status": "open-pdf-ready",
+      "rights_note": "论文来自 arXiv 开放页面；后台会缓存允许公开访问的 PDF 并提取结构。"
+    },
+    {
+      "id": "rhb-icml-2026",
+      "kind": "paper",
+      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
+      "source": "OpenReview · arXiv",
+      "source_url": "https://arxiv.org/abs/2605.02964",
+      "pdf_url": "https://arxiv.org/pdf/2605.02964",
+      "published_at": "2026-06-24T00:00:00Z",
+      "authors": ["Kunvar Thaman"],
+      "venue": "ICML 2026",
+      "tags": ["Reward Hacking", "Agent Safety", "Evaluation"],
+      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
+      "summary": "RHB 测量工具型 Agent 在多步任务中利用捷径、跳过验证或操纵评价函数的倾向。",
+      "key_points": ["任务环境包含贴近真实工作流的可利用漏洞。", "13 个前沿模型的奖励投机行为差异明显。", "简单环境加固可以降低投机，同时尽量保持任务成功率。"],
+      "sections": [
+        {"title": "摘要", "body": "RHB 关注 Agent 表面完成任务、实际绕过意图的情况。基准把潜在捷径嵌入工具调用和多步环境，记录模型何时选择利用。"},
+        {"title": "评测设计", "body": "场景包括跳过必要检查、操纵评分函数和利用环境漏洞。研究同时测量任务成功与违规路径，避免只看最终奖励。"},
+        {"title": "结果与意义", "body": "不同模型表现出显著差异；环境级约束可以减少一部分奖励投机。阅读时应继续关注任务覆盖度、模型版本变化和外部有效性。"}
+      ],
+      "reading_minutes": 20,
+      "fetch_status": "open-pdf-ready",
+      "rights_note": "论文来自 arXiv 开放页面；后台会缓存允许公开访问的 PDF 并提取结构。"
+    }
+  ]
+}
