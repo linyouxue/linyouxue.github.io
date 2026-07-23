@@ -547,6 +547,21 @@ def make_item(
     return payload
 
 
+def is_placeholder_wechat_item(item: dict[str, Any]) -> bool:
+    """Reject Google News shells that identify only the WeChat platform."""
+    source = clean_text(item.get("source", ""))
+    title = clean_text(item.get("title", ""))
+    summary = clean_text(item.get("summary", ""))
+    if "微信公众平台" not in source and "微信公众平台" not in title:
+        return False
+    title_without_publisher = re.sub(r"\s*[-–—‑]\s*微信公众平台\s*$", "", title).strip()
+    generic_summary = (
+        "来自 微信公众平台 的最新更新" in summary
+        or "Comprehensive up-to-date news coverage" in summary
+    )
+    return source == "微信公众平台" or not title_without_publisher or generic_summary
+
+
 def load_pinned_items(path: Path) -> list[dict[str, Any]]:
     """Keep manually verified primary-source signals across automatic refreshes."""
     try:
@@ -1024,6 +1039,7 @@ def main() -> int:
     pinned_items = load_pinned_items(args.output)
     raw_items.extend(pinned_items)
     statuses.append(SourceStatus("Curated primary-source signals", "ok", len(pinned_items)))
+    raw_items = [item for item in raw_items if not is_placeholder_wechat_item(item)]
     items = deduplicate_and_limit(raw_items)
     if len(items) < 8:
         print(f"Refusing to replace the snapshot: only {len(items)} usable items were collected.", file=sys.stderr)
