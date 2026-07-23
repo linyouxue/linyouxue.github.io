@@ -62,6 +62,17 @@ PEOPLE_WATCHLIST = {
     "杨植麟 / 月之暗面": ["杨植麟", "yang zhilin"],
 }
 
+PINNED_ITEM_IDS = {
+    "jacobian-fable-20260720",
+    "unit-distance-openai-20260520",
+    "gpt5-protein-synthesis-20260205",
+    "elon-grok-build-open-source-20260716",
+    "demis-frontier-ai-framework-20260714",
+    "sam-altman-gpt-live-20260708",
+    "bace-gecco-2026",
+    "rhb-icml-2026",
+}
+
 CHINA_WATCHLIST = {
     "Kimi / 月之暗面": ["kimi", "moonshot", "月之暗面"],
     "Qwen / 通义千问": ["qwen", "通义千问", "阿里云百炼"],
@@ -429,6 +440,21 @@ def make_item(
     return payload
 
 
+def load_pinned_items(path: Path) -> list[dict[str, Any]]:
+    """Keep manually verified primary-source signals across automatic refreshes."""
+    try:
+        previous = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError, TypeError):
+        return []
+    pinned = []
+    for item in previous.get("items", []):
+        if item.get("id") not in PINNED_ITEM_IDS:
+            continue
+        item["reader_url"] = f"./reader.html?id={item['id']}"
+        pinned.append(item)
+    return pinned
+
+
 def fetch_feed(source: dict[str, Any], use_entry_source: bool = False) -> tuple[list[dict[str, Any]], SourceStatus]:
     try:
         root = ET.fromstring(request_bytes(source["url"]))
@@ -706,6 +732,9 @@ def main() -> int:
     args = parser.parse_args()
 
     raw_items, statuses = collect_all()
+    pinned_items = load_pinned_items(args.output)
+    raw_items.extend(pinned_items)
+    statuses.append(SourceStatus("Curated primary-source signals", "ok", len(pinned_items)))
     items = deduplicate_and_limit(raw_items)
     if len(items) < 8:
         print(f"Refusing to replace the snapshot: only {len(items)} usable items were collected.", file=sys.stderr)
