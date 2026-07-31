@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-30T19:49:54Z",
+  "generated_at": "2026-07-31T03:48:09Z",
   "item_count": 132,
   "category_counts": {
     "research": 20,
@@ -47,14 +47,14 @@
     "people_watch_coverage": {
       "Elon Musk / xAI": 6,
       "Sam Altman / OpenAI": 1,
-      "Dario Amodei / Anthropic": 3,
+      "Dario Amodei / Anthropic": 2,
       "Demis Hassabis / DeepMind": 1,
       "Yann LeCun / AMI": 0,
       "何恺明 / MIT·DeepMind": 1,
       "姚顺雨 / Agents": 1,
       "Ilya Sutskever / SSI": 0,
       "Andrej Karpathy / Eureka Labs": 0,
-      "李飞飞 / Stanford·World Labs": 2,
+      "李飞飞 / Stanford·World Labs": 1,
       "Noam Brown / Reasoning": 0,
       "梁文锋 / DeepSeek": 1,
       "杨植麟 / 月之暗面": 0
@@ -71,6 +71,12 @@
       "name": "OpenAI",
       "status": "ok",
       "count": 9,
+      "note": ""
+    },
+    {
+      "name": "Google AI",
+      "status": "ok",
+      "count": 7,
       "note": ""
     },
     {
@@ -92,9 +98,9 @@
       "note": ""
     },
     {
-      "name": "Google AI",
+      "name": "OpenAlex Conference Index",
       "status": "ok",
-      "count": 7,
+      "count": 20,
       "note": ""
     },
     {
@@ -104,27 +110,9 @@
       "note": ""
     },
     {
-      "name": "AI for Mathematics & Science",
-      "status": "ok",
-      "count": 12,
-      "note": ""
-    },
-    {
-      "name": "World Model Founders",
-      "status": "ok",
-      "count": 7,
-      "note": ""
-    },
-    {
       "name": "Anthropic",
       "status": "ok",
       "count": 8,
-      "note": ""
-    },
-    {
-      "name": "AI for Biology, Medicine & Materials",
-      "status": "ok",
-      "count": 12,
       "note": ""
     },
     {
@@ -134,21 +122,21 @@
       "note": ""
     },
     {
-      "name": "OpenAlex Conference Index",
+      "name": "World Model Founders",
       "status": "ok",
-      "count": 20,
+      "count": 7,
       "note": ""
     },
     {
-      "name": "AI Policy Monitor",
+      "name": "AI for Mathematics & Science",
       "status": "ok",
-      "count": 10,
+      "count": 12,
       "note": ""
     },
     {
-      "name": "China AI · Tencent & ByteDance",
+      "name": "AI for Biology, Medicine & Materials",
       "status": "ok",
-      "count": 10,
+      "count": 12,
       "note": ""
     },
     {
@@ -158,13 +146,13 @@
       "note": ""
     },
     {
-      "name": "China AI · DeepSeek & Zhipu",
+      "name": "AI Policy Monitor",
       "status": "ok",
       "count": 10,
       "note": ""
     },
     {
-      "name": "China AI · Kimi & Qwen",
+      "name": "China AI · DeepSeek & Zhipu",
       "status": "ok",
       "count": 10,
       "note": ""
@@ -176,15 +164,27 @@
       "note": ""
     },
     {
-      "name": "Core AI Researchers on X",
+      "name": "China AI · Kimi & Qwen",
       "status": "ok",
-      "count": 9,
+      "count": 10,
       "note": ""
     },
     {
-      "name": "Vision & World Model Researchers",
+      "name": "China AI · Tencent & ByteDance",
       "status": "ok",
-      "count": 9,
+      "count": 10,
+      "note": ""
+    },
+    {
+      "name": "Frontier Leaders on X",
+      "status": "ok",
+      "count": 10,
+      "note": ""
+    },
+    {
+      "name": "Core AI Researchers on X",
+      "status": "ok",
+      "count": 10,
       "note": ""
     },
     {
@@ -194,9 +194,9 @@
       "note": ""
     },
     {
-      "name": "Frontier Leaders on X",
+      "name": "Vision & World Model Researchers",
       "status": "ok",
-      "count": 10,
+      "count": 9,
       "note": ""
     },
     {
@@ -402,6 +402,24 @@
       "cached_pdf": "./papers/bace-gecco-2026.pdf"
     },
     {
+      "id": "e7b9677ff9c61168",
+      "category": "frontier",
+      "title": "Investigating three real-world incidents in our cybersecurity evaluations",
+      "summary": "In a review of our cybersecurity evaluation transcripts, we found three incidents in which a Claude model reached the internet from within or while interacting with a third-party evaluation environment, and then gained unauthorized access to the real systems of three different organizations. Below we describe what happened, how it happened, and what we’re changing. We encourage other AI labs to perform similar reviews.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+      "published_at": "2026-07-30T23:14:55Z",
+      "tags": [
+        "Anthropic",
+        "Official"
+      ],
+      "importance": 100,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=e7b9677ff9c61168",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "7dc8dd43874eae65",
       "category": "frontier",
       "title": "Gemini Robotics ER 2: powering robotics with video understanding, task orchestration, and multi-robot collaboration",
@@ -435,6 +453,24 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=22e75a90223dc877",
+      "reader_status": "summary-only"
+    },
+    {
+      "id": "68ee05681f04925b",
+      "category": "frontier",
+      "title": "How avatarin built a 24/7 retail agent with GPT-Realtime",
+      "summary": "avatarin uses OpenAI’s GPT-Realtime to give Yamada Denki shoppers 24/7 multilingual support. In two weeks, 30,000 people used the agent and 92% of survey responses were positive.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/avatarin",
+      "published_at": "2026-07-30T00:00:00Z",
+      "tags": [
+        "OpenAI",
+        "Official"
+      ],
+      "importance": 100,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=68ee05681f04925b",
       "reader_status": "summary-only"
     },
     {
@@ -528,42 +564,6 @@
       "reader_status": "summary-only"
     },
     {
-      "id": "3b2264ecfca23b31",
-      "category": "frontier",
-      "title": "Our position on open-weights models",
-      "summary": "Anthropic CEO Dario Amodei on open-weights models",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/news/position-open-weights-models",
-      "published_at": "2026-07-28T15:25:50Z",
-      "tags": [
-        "Anthropic",
-        "Official"
-      ],
-      "importance": 100,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=3b2264ecfca23b31",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "766d38f6423792e6",
-      "category": "frontier",
-      "title": "Gemini Robotics 2 brings whole body intelligence to robots",
-      "summary": "From feet to fingertips — we are teaching robots intelligent whole-body control, fine dexterity, and teamwork to complete a broad range of complex tasks.",
-      "source": "Google DeepMind",
-      "url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/",
-      "published_at": "2026-07-28T13:21:37Z",
-      "tags": [
-        "DeepMind",
-        "Official"
-      ],
-      "importance": 100,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=766d38f6423792e6",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "rhb-icml-2026",
       "category": "research",
       "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
@@ -587,6 +587,42 @@
       "reader_url": "./reader.html?id=rhb-icml-2026",
       "reader_status": "open-pdf-cached",
       "cached_pdf": "./papers/rhb-icml-2026.pdf"
+    },
+    {
+      "id": "3b2264ecfca23b31",
+      "category": "frontier",
+      "title": "Our position on open-weights models",
+      "summary": "Anthropic CEO Dario Amodei on open-weights models",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/position-open-weights-models",
+      "published_at": "2026-07-28T15:25:50Z",
+      "tags": [
+        "Anthropic",
+        "Official"
+      ],
+      "importance": 99,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=3b2264ecfca23b31",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "766d38f6423792e6",
+      "category": "frontier",
+      "title": "Gemini Robotics 2 brings whole body intelligence to robots",
+      "summary": "From feet to fingertips — we are teaching robots intelligent whole-body control, fine dexterity, and teamwork to complete a broad range of complex tasks.",
+      "source": "Google DeepMind",
+      "url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/",
+      "published_at": "2026-07-28T13:21:37Z",
+      "tags": [
+        "DeepMind",
+        "Official"
+      ],
+      "importance": 99,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=766d38f6423792e6",
+      "reader_status": "public-page-excerpt"
     },
     {
       "id": "82aa4f147538579b",
@@ -676,42 +712,6 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=11197c28bcbec83a",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "e09e1db1eb1d9c4b",
-      "category": "frontier",
-      "title": "Introducing Claude Opus 4.7",
-      "summary": "Our latest model, Claude Opus 4.7, is now generally available. Opus 4.7 is a notable improvement on Opus 4.6 in advanced software engineering, with particular gains on the most difficult tasks.",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/news/claude-opus-4-7",
-      "published_at": "2026-07-23T04:19:56Z",
-      "tags": [
-        "Anthropic",
-        "Official"
-      ],
-      "importance": 98,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=e09e1db1eb1d9c4b",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "0b1cb54a4c12c89a",
-      "category": "frontier",
-      "title": "Introducing Claude Opus 4.5",
-      "summary": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/news/claude-opus-4-5",
-      "published_at": "2026-07-23T04:09:31Z",
-      "tags": [
-        "Anthropic",
-        "Official"
-      ],
-      "importance": 98,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=0b1cb54a4c12c89a",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -864,42 +864,6 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=9cb62e7d62bf34b7",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "d8a723d9be56e9b9",
-      "category": "bigtech",
-      "title": "5 ways AI Mode in Search helps you enjoy the real world",
-      "summary": "Illustration of a black magnifying glass in a white circle on green grass surrounded by items related to fun activities like tennis and games",
-      "source": "Google AI",
-      "url": "https://blog.google/products-and-platforms/products/search/ai-mode-real-world-tips/",
-      "published_at": "2026-07-28T13:00:00Z",
-      "tags": [
-        "Google",
-        "Official"
-      ],
-      "importance": 93,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=d8a723d9be56e9b9",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "d0c7c080a2ef764a",
-      "category": "bigtech",
-      "title": "5 ways to host the ultimate dinner party with Google Search",
-      "summary": "An illustrated black magnifying glass with a sparkle in a white circle surrounded by a dinner party tablescape",
-      "source": "Google AI",
-      "url": "https://blog.google/products-and-platforms/products/search/dinner-party-hosting-tips/",
-      "published_at": "2026-07-28T13:00:00Z",
-      "tags": [
-        "Google",
-        "Official"
-      ],
-      "importance": 93,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=d0c7c080a2ef764a",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -1223,6 +1187,42 @@
       "reader_status": "indexed-summary"
     },
     {
+      "id": "d8a723d9be56e9b9",
+      "category": "bigtech",
+      "title": "5 ways AI Mode in Search helps you enjoy the real world",
+      "summary": "Illustration of a black magnifying glass in a white circle on green grass surrounded by items related to fun activities like tennis and games",
+      "source": "Google AI",
+      "url": "https://blog.google/products-and-platforms/products/search/ai-mode-real-world-tips/",
+      "published_at": "2026-07-28T13:00:00Z",
+      "tags": [
+        "Google",
+        "Official"
+      ],
+      "importance": 92,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=d8a723d9be56e9b9",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "d0c7c080a2ef764a",
+      "category": "bigtech",
+      "title": "5 ways to host the ultimate dinner party with Google Search",
+      "summary": "An illustrated black magnifying glass with a sparkle in a white circle surrounded by a dinner party tablescape",
+      "source": "Google AI",
+      "url": "https://blog.google/products-and-platforms/products/search/dinner-party-hosting-tips/",
+      "published_at": "2026-07-28T13:00:00Z",
+      "tags": [
+        "Google",
+        "Official"
+      ],
+      "importance": 92,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=d0c7c080a2ef764a",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "demis-frontier-ai-framework-20260714",
       "category": "voices",
       "title": "Demis Hassabis 发布前沿 AI 治理与发展框架",
@@ -1439,33 +1439,6 @@
       "reader_status": "abstract-only"
     },
     {
-      "id": "49dd9b4ed2f92aba",
-      "category": "research",
-      "title": "BACE: LLM-based Code Generation through Bayesian Anchored Co-Evolution of Code and Test Populations",
-      "summary": "Large Language Models (LLMs) have demonstrated impressive capabilities in code generation. While an interactive feedback loop can improve performance, writing effective tests is a non-trivial task. Early multi-agent frameworks, such as AgentCoder, automated this process but relied on generated tests as absolute ground truth. This approach is fragile: incorrect code frequently passes faulty or trivial tests, while valid solutions are often degraded to satisfy incorrect assertions. Addressing this limitation, newer methods have largely abandoned test generation in favor of planning and reasoning based on examples. We argue, however, that generated tests remain a valuable…",
-      "source": "OpenAlex",
-      "url": "https://doi.org/10.1145/3795095.3805085",
-      "published_at": "2026-07-10T00:00:00Z",
-      "tags": [
-        "Topic Modeling",
-        "Code (set theory)",
-        "Bayesian probability",
-        "Process (computing)"
-      ],
-      "importance": 92,
-      "content_kind": "paper",
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=49dd9b4ed2f92aba",
-      "authors": [
-        "Kaushitha Silva",
-        "Srinath Perera"
-      ],
-      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference",
-      "license": "cc-by",
-      "citations": 0,
-      "reader_status": "abstract-only"
-    },
-    {
       "id": "11a13df93dbf033c",
       "category": "research",
       "title": "NEAT-DNFs: A NeuroEvolutionary Framework for Evolving Dynamic Neural Field Architectures",
@@ -1488,6 +1461,33 @@
         "Wolfram Erlhagen",
         "Raymond H. Cuijpers",
         "Estela Bicho"
+      ],
+      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference",
+      "license": "cc-by",
+      "citations": 0,
+      "reader_status": "abstract-only"
+    },
+    {
+      "id": "49dd9b4ed2f92aba",
+      "category": "research",
+      "title": "BACE: LLM-based Code Generation through Bayesian Anchored Co-Evolution of Code and Test Populations",
+      "summary": "Large Language Models (LLMs) have demonstrated impressive capabilities in code generation. While an interactive feedback loop can improve performance, writing effective tests is a non-trivial task. Early multi-agent frameworks, such as AgentCoder, automated this process but relied on generated tests as absolute ground truth. This approach is fragile: incorrect code frequently passes faulty or trivial tests, while valid solutions are often degraded to satisfy incorrect assertions. Addressing this limitation, newer methods have largely abandoned test generation in favor of planning and reasoning based on examples. We argue, however, that generated tests remain a valuable…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3795095.3805085",
+      "published_at": "2026-07-10T00:00:00Z",
+      "tags": [
+        "Topic Modeling",
+        "Code (set theory)",
+        "Bayesian probability",
+        "Process (computing)"
+      ],
+      "importance": 92,
+      "content_kind": "paper",
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "reader_url": "./reader.html?id=49dd9b4ed2f92aba",
+      "authors": [
+        "Kaushitha Silva",
+        "Srinath Perera"
       ],
       "venue": "Proceedings of the Genetic and Evolutionary Computation Conference",
       "license": "cc-by",
@@ -1612,35 +1612,6 @@
       "reader_status": "abstract-only"
     },
     {
-      "id": "d0eaeadc922acd17",
-      "category": "research",
-      "title": "Gray-Box Optimization and the Vertex Coloring Problem",
-      "summary": "Gray-box optimization is an approach for making some problem-specific information available to the algorithm while still relying on fitness information as the main guide to an optimum. This approach was shown to be beneficial in various combinatorial optimization tasks and neatly captures the continuum between fully black-box algorithms and tailored algorithms.",
-      "source": "OpenAlex",
-      "url": "https://doi.org/10.1145/3795095.3805057",
-      "published_at": "2026-07-10T00:00:00Z",
-      "tags": [
-        "Metaheuristic Optimization Algorithms Research",
-        "Optimization problem",
-        "Vertex (graph theory)",
-        "Combinatorial optimization"
-      ],
-      "importance": 92,
-      "content_kind": "paper",
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=d0eaeadc922acd17",
-      "authors": [
-        "Johanna Gasse",
-        "Antonia Heinen",
-        "Hendrik Higl",
-        "Timo Kötzing"
-      ],
-      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference",
-      "license": "cc-by",
-      "citations": 0,
-      "reader_status": "abstract-only"
-    },
-    {
       "id": "21b28781287c242e",
       "category": "research",
       "title": "Analyzing search behavior of population-based optimization algorithms using graph neural networks",
@@ -1664,6 +1635,35 @@
         "Wojciech Achtelik",
         "Maciej Smółka",
         "Jacek Mańdziuk"
+      ],
+      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference",
+      "license": "cc-by",
+      "citations": 0,
+      "reader_status": "abstract-only"
+    },
+    {
+      "id": "d0eaeadc922acd17",
+      "category": "research",
+      "title": "Gray-Box Optimization and the Vertex Coloring Problem",
+      "summary": "Gray-box optimization is an approach for making some problem-specific information available to the algorithm while still relying on fitness information as the main guide to an optimum. This approach was shown to be beneficial in various combinatorial optimization tasks and neatly captures the continuum between fully black-box algorithms and tailored algorithms.",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3795095.3805057",
+      "published_at": "2026-07-10T00:00:00Z",
+      "tags": [
+        "Metaheuristic Optimization Algorithms Research",
+        "Optimization problem",
+        "Vertex (graph theory)",
+        "Combinatorial optimization"
+      ],
+      "importance": 92,
+      "content_kind": "paper",
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "reader_url": "./reader.html?id=d0eaeadc922acd17",
+      "authors": [
+        "Johanna Gasse",
+        "Antonia Heinen",
+        "Hendrik Higl",
+        "Timo Kötzing"
       ],
       "venue": "Proceedings of the Genetic and Evolutionary Computation Conference",
       "license": "cc-by",
@@ -1731,27 +1731,27 @@
       "reader_status": "abstract-only"
     },
     {
-      "id": "06bd318cf9396101",
+      "id": "94bf9e65dda4ac9a",
       "category": "research",
-      "title": "Diversified Residual Symbolic Regression",
-      "summary": "Symbolic regression (SR) aims to discover explicit mathematical expressions that explain observed data and is widely used in domains where interpretability is essential. Because interpretability requires expressions to reflect meaningful regularities, SR is sensitive to observations that deviate from the dominant relationship. Such irregular observations, or outliers, are common in real-world data and can hinder SR from identifying underlying regularities. Robust regression mitigates this by downweighting observations with large residuals. However, deciding which observations should be treated as outliers is often ambiguous and depends on user interpretation and domain…",
+      "title": "Particle Swarm Optimization with Population Dynamics - Artificial Splitting, Extinction, and Migration",
+      "summary": "Many Particle Swarm Optimization (PSO) variants often fail to approach the global optimum due to complex fitness landscapes and/or the structural rigidity of these variants. We developed a novel framework named PSO-SEM, centered on macro-evolutionary population management. PSO-SEM introduces three landscape-driven operators: Split (Topological Fission), Extinction (Density-driven Recycling), and Migration (Knowledge Transfer). These operators autonomously regulate the lifecycle of sub-swarms to intensify search in high-potential areas by identifying promising basins and recycling computational resources from stagnant regions. Experimental results show that PSO-SEM…",
       "source": "OpenAlex",
-      "url": "https://doi.org/10.1145/3795095.3805087",
+      "url": "https://doi.org/10.1145/3795095.3805107",
       "published_at": "2026-07-10T00:00:00Z",
       "tags": [
-        "Explainable Artificial Intelligence (XAI)",
-        "Interpretability",
-        "Residual",
-        "Symbolic regression"
+        "Metaheuristic Optimization Algorithms Research",
+        "Particle swarm optimization",
+        "Population",
+        "Swarm behaviour"
       ],
       "importance": 92,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=06bd318cf9396101",
+      "reader_url": "./reader.html?id=94bf9e65dda4ac9a",
       "authors": [
-        "Koki Ikeda",
-        "Masahiro Nomura",
-        "Ryoki Hamano"
+        "Yutong Zou",
+        "Wenjun Wang",
+        "Wei Pang"
       ],
       "venue": "Proceedings of the Genetic and Evolutionary Computation Conference",
       "license": "cc-by",
@@ -1886,24 +1886,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "7d71223c113e68d0",
-      "category": "bigtech",
-      "title": "NVIDIA Nemotron Achieves Benchmark-Leading Performance With LangChain Deep Agents Harness",
-      "summary": "NVIDIA Nemotron 3 Ultra is offering leading performance at lower cost than top closed models with the largest and most widely adopted AI agent orchestration platform. LangChain tuned its Deep Agents harness for NVIDIA Nemotron 3 Ultra, achieving the highest accuracy among open models, while completing more tasks at higher throughput and running at 10x […]",
-      "source": "NVIDIA AI",
-      "url": "https://blogs.nvidia.com/blog/nemotron-langchain-agents-open-stack/",
-      "published_at": "2026-07-08T15:00:27Z",
-      "tags": [
-        "NVIDIA",
-        "Infrastructure"
-      ],
-      "importance": 89,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=7d71223c113e68d0",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "0ad340bb7344ab0f",
       "category": "opensource",
       "title": "GPU Management: Why Idle GPUs Are the New Grounded Aircraft",
@@ -1960,6 +1942,24 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "7d71223c113e68d0",
+      "category": "bigtech",
+      "title": "NVIDIA Nemotron Achieves Benchmark-Leading Performance With LangChain Deep Agents Harness",
+      "summary": "NVIDIA Nemotron 3 Ultra is offering leading performance at lower cost than top closed models with the largest and most widely adopted AI agent orchestration platform. LangChain tuned its Deep Agents harness for NVIDIA Nemotron 3 Ultra, achieving the highest accuracy among open models, while completing more tasks at higher throughput and running at 10x […]",
+      "source": "NVIDIA AI",
+      "url": "https://blogs.nvidia.com/blog/nemotron-langchain-agents-open-stack/",
+      "published_at": "2026-07-08T15:00:27Z",
+      "tags": [
+        "NVIDIA",
+        "Infrastructure"
+      ],
+      "importance": 88,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=7d71223c113e68d0",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "2d22cd8b77948785",
       "category": "opensource",
       "title": "LFM2.5-Encoders for Fast Long-Context Inference on CPU",
@@ -1971,38 +1971,18 @@
         "Hugging Face",
         "Open Source"
       ],
-      "importance": 88,
+      "importance": 87,
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=2d22cd8b77948785",
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "4675cdfd074b1a13",
-      "category": "voices",
-      "title": "Anthropic's Dario Amodei responds: doesn't oppose open-weight models, but fears Chinese AI | TechCrunch",
-      "summary": "Anthropic's Dario Amodei responds: doesn't oppose open-weight models, but fears Chinese AI TechCrunch",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/07/27/anthropics-dario-amodei-responds-doesnt-oppose-open-weight-models-but-fears-chinese-ai/",
-      "published_at": "2026-07-28T00:13:33Z",
-      "tags": [
-        "Researcher Watch",
-        "Foundation Models",
-        "Leadership"
-      ],
-      "importance": 87,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=4675cdfd074b1a13",
-      "index_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNSkZqakVyZ2htYkthcGIwZG84QXdmQWV2UTVUS0dnSC0wU1p1NEhJcmZTcFpaRmFjZkFHdmhPRkZUaVp1eWx6SU9kM2Z3elNNbnI4ZWpTeGctT0diMEsyVVdEeEY1TGFOZjF2eDVSaEFjX0ZITGF0WVd5X3liT2lHNGhGUHhnX3dab1lIdGNHeGlodVhYZFZzdjhrTUplcW5LQnVyeHNGeUJiLUdFMy1GZ21NdXJZUnZwdWpZY01B?oc=5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "d46fdaea20576d34",
       "category": "voices",
       "title": "Anthropic CEO Dario Amodei says AI company isn't advocating for ban of open-weight models",
-      "summary": "Anthropic CEO Dario Amodei says AI company isn't advocating for ban of open-weight models cnbc.com",
-      "source": "cnbc.com",
+      "summary": "Anthropic CEO Dario Amodei says AI company isn't advocating for ban of open-weight models CNBC",
+      "source": "CNBC",
       "url": "https://www.cnbc.com/2026/07/27/anthropic-ceo-dario-amodei-isnt-advocating-open-weight-model-ban.html",
       "published_at": "2026-07-27T23:42:46Z",
       "tags": [
@@ -2134,26 +2114,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "f2ea2be0718d38e0",
-      "category": "impact",
-      "title": "A new ‘golden age’ of mathematics may be dawning — thanks to AI and human ingenuity",
-      "summary": "A new ‘golden age’ of mathematics may be dawning — thanks to AI and human ingenuity theconversation.com",
-      "source": "theconversation.com",
-      "url": "https://theconversation.com/a-new-golden-age-of-mathematics-may-be-dawning-thanks-to-ai-and-human-ingenuity-287346",
-      "published_at": "2026-07-23T15:18:25Z",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "importance": 87,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=f2ea2be0718d38e0",
-      "index_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQUmxzSENYb2VaUXpZXzdOazdNRkZ3aWpzM0JtVlJ5MlRVUnRhV3FVTTdnc091bzA2bVViVThDUWlNUlJUaHI1MmJBdVlLRkdQQ1NMaUZIcGgtbkcwLTJRanpKYlV4bW5GT1Y1MjllaloxazFGQnR3bXBXa1pxU1ZMcTA0c2NwcjAtUUJFVWVyWkx0cHFLRElfV3dtVlk3ZldlRkxqbDJCVGZJbmJGcV8xZ1ZUbkk?oc=5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "921b87d225cf21e5",
       "category": "bigtech",
       "title": "SkillOpt: Agent skills as trainable parameters",
@@ -2169,6 +2129,26 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=921b87d225cf21e5",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "f2ea2be0718d38e0",
+      "category": "impact",
+      "title": "A new ‘golden age’ of mathematics may be dawning — thanks to AI and human ingenuity",
+      "summary": "A new ‘golden age’ of mathematics may be dawning — thanks to AI and human ingenuity The Conversation",
+      "source": "The Conversation",
+      "url": "https://theconversation.com/a-new-golden-age-of-mathematics-may-be-dawning-thanks-to-ai-and-human-ingenuity-287346",
+      "published_at": "2026-07-23T15:18:25Z",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "importance": 86,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=f2ea2be0718d38e0",
+      "index_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQUmxzSENYb2VaUXpZXzdOazdNRkZ3aWpzM0JtVlJ5MlRVUnRhV3FVTTdnc091bzA2bVViVThDUWlNUlJUaHI1MmJBdVlLRkdQQ1NMaUZIcGgtbkcwLTJRanpKYlV4bW5GT1Y1MjllaloxazFGQnR3bXBXa1pxU1ZMcTA0c2NwcjAtUUJFVWVyWkx0cHFLRElfV3dtVlk3ZldlRkxqbDJCVGZJbmJGcV8xZ1ZUbkk?oc=5",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2247,6 +2227,26 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "cfa66dd4e0d392b1",
+      "category": "voices",
+      "title": "@Emp_Kek_Max @grok @imagine Emperor Kekius Maximus, first of his name",
+      "summary": "@Emp_Kek_Max @grok @imagine Emperor Kekius Maximus, first of his name x.com",
+      "source": "x.com",
+      "url": "https://x.com/elonmusk/status/2083031205864239157",
+      "published_at": "2026-07-31T03:25:14Z",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "importance": 80,
+      "content_kind": "social",
+      "verification": "公开平台索引，需查看原帖",
+      "reader_url": "./reader.html?id=cfa66dd4e0d392b1",
+      "index_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1iS2YzYWlhczU0SWZQYTF0TmVqX1p5UXdzYnlraE9ZS3ZoTjJGZDdONUZDQW9XRC05MGZKX09SX1N4dFZXRGZpb1lFZG9QYVNvdDhhcmx0M0dmeWxsMkE?oc=5",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "99b5d72ca27cc593",
       "category": "voices",
       "title": "Given that AI from 2 years ago feels so old that it should be in a museum, then obviously AI 2 years from now will be mind-blowing",
@@ -2307,26 +2307,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "ec8b4d3e98d21f00",
-      "category": "voices",
-      "title": "Elon Musk (@elonmusk) on X",
-      "summary": "Grok Imagine",
-      "source": "x.com",
-      "url": "https://x.com/elonmusk/status/2082656239780266487",
-      "published_at": "2026-07-30T02:35:16Z",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "importance": 80,
-      "content_kind": "social",
-      "verification": "公开平台索引，需查看原帖",
-      "reader_url": "./reader.html?id=ec8b4d3e98d21f00",
-      "index_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE03ZjRpRHlMckRBcnhEZElYMVVFR0RjWkNaM2ZEWFZCNUs0RW9ycm9zejNjZmVzXy01OW5acHdSSWh3bzE1dTZLRXJzejVHV3pIdGQxR2xBWmJqUzVKVWc?oc=5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "c0ec4ff282428588",
       "category": "voices",
       "title": "so excited for this. very close to models that will significantly accelerate scientific discovery; the best way to do this is for us to empower scientists, not to try to figure out everything ourselves. we all deserve the benefits.",
@@ -2367,13 +2347,33 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "94bf944e789ee673",
+      "category": "voices",
+      "title": "RT @dvorahfr: Happy birthday Grok Imagine ❣️",
+      "summary": "RT @dvorahfr: Happy birthday Grok Imagine ❣️ x.com",
+      "source": "x.com",
+      "url": "https://x.com/elonmusk/status/2082559185720582470",
+      "published_at": "2026-07-29T20:09:36Z",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "importance": 80,
+      "content_kind": "social",
+      "verification": "公开平台索引，需查看原帖",
+      "reader_url": "./reader.html?id=94bf944e789ee673",
+      "index_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5NbUNrbDQ3T3FtaXc3R2xMYlQyQUZKMUlhOEthMG8tU0psbW5sc1d5ZnlpMV9vRU5NSHRoWkNnVEhub0E4NVpqRWRSelhQRjlQeVVhXzVLMU1PcWhqQ2c?oc=5",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "f68ee8ad2d97c760",
       "category": "startups",
       "title": "Pittsburgh AI startup inks 10-year lease at Hazelwood Green",
       "summary": "Pittsburgh AI startup inks 10-year lease at Hazelwood Green Pittsburgh Post-Gazette",
       "source": "Pittsburgh Post-Gazette",
       "url": "https://www.post-gazette.com/business/tech-news/2026/07/30/pittsburgh-ai-hellbender-hazelwood-green/stories/202607300049",
-      "published_at": "2026-07-30T15:07:57Z",
+      "published_at": "2026-07-31T03:09:20Z",
       "tags": [
         "Academic Startup",
         "Funding"
@@ -2384,6 +2384,25 @@
       "reader_url": "./reader.html?id=f68ee8ad2d97c760",
       "index_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQYXRCbHBVbnZiZjg0NmhSYmtHYXYtVW9hS2phY3BPdFZxclFwWlh6ZkNLVHN1TTJOd0FfVVUwV3hUV3daYi1vRGlJekNPd09FdGFKaVh2SlZONGRqdjlWdnJtWEtyaWNSR1U0aVhEbVpmV2xUa041cGNUWkQtSS11Q3pxdmlob2g3dEF6WTVZV3V3emw3ZHNnT0wyLVpZRjhFdFVnMjFhMWhpSGVRVzZOU1JTT1NRSkx4TXF2Ng?oc=5",
       "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "0d7cd0257d8dc2ec",
+      "category": "startups",
+      "title": "The AI Startup That Guaranteed Job Interviews for People Getting a Tattoo",
+      "summary": "The AI Startup That Guaranteed Job Interviews for People Getting a Tattoo WSJ",
+      "source": "WSJ",
+      "url": "https://www.wsj.com/lifestyle/careers/the-ai-startup-that-guaranteed-job-interviews-for-people-getting-a-tattoo-768d965b",
+      "published_at": "2026-07-31T00:30:00Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 79,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=0d7cd0257d8dc2ec",
+      "index_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNN3dKem92NW1xQTdHeGV0U2Ezc2Y2SmpwLUJZZndzN0E4Rkx4MVp5XzRCYzRVS1p3YU44Mm5zdFZhMF9kSlpLSjNublItN3dmTEthZlp1bE13bDNYOEk0UXBVR3A1UTNRVFhvY011RVJ2TXNCVFpKUlJQenhrLWhVMGI2ZU8zUDctVF9za2pWVHhqUWREVDB3OWo0Nld2V2hmUHZUZ2hHZVhhdVl0WWFpVkRUSHZYUHdERWRyeg?oc=5",
+      "reader_status": "summary-only"
     },
     {
       "id": "f0cf53374d9b0d3c",
@@ -2408,8 +2427,8 @@
       "id": "7220460ff000894f",
       "category": "startups",
       "title": "He Turned Down Apple. Now His AI Startup Is Challenging ChatGPT",
-      "summary": "He Turned Down Apple. Now His AI Startup Is Challenging ChatGPT Men's Journal",
-      "source": "Men's Journal",
+      "summary": "He Turned Down Apple. Now His AI Startup Is Challenging ChatGPT mensjournal.com",
+      "source": "mensjournal.com",
       "url": "https://www.mensjournal.com/news/he-turned-down-apple-now-his-ai-startup-is-challenging-chatgpt",
       "published_at": "2026-07-27T16:00:00Z",
       "tags": [
@@ -2446,8 +2465,8 @@
       "id": "82a0b3ac354202fd",
       "category": "policy",
       "title": "Trump administration's head of AI safety agency resigns after 3 months on job",
-      "summary": "Trump administration's head of AI safety agency resigns after 3 months on job cnbc.com",
-      "source": "cnbc.com",
+      "summary": "Trump administration's head of AI safety agency resigns after 3 months on job CNBC",
+      "source": "CNBC",
       "url": "https://www.cnbc.com/2026/07/20/trumps-head-of-ai-safety-agency-caisi-resigns-after-months-on-job.html",
       "published_at": "2026-07-20T07:00:00Z",
       "tags": [
@@ -2460,44 +2479,6 @@
       "reader_url": "./reader.html?id=82a0b3ac354202fd",
       "index_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQakNEQlhTN0EyQ19FQnA4T2Nub05IWmNBUnAteVZTNXM3Skd5ZjB2QUJiWG1qdHJMVFJkejlJd3V5aUdoaVlOc1FxM2Fjb3FtUEMzb01iOWJHX0F3MXJLYW5lNGVtc2hrMjRpOFJEb3d5RWpnTVZ0T2Nfc0IwelFZSFRpU3NKbmZCMTFRczE3TUZXaGR4VGJKX0FnN2xwWjJxam9LWtIBqgFBVV95cUxOczQyenJJUXNSUWZ3bXRCRXJuR0ZzNnN1eVJYVDNmSzJyTC1FeVhCMkMzQ2N0TERWbnNPTzR3MGlIYl9nZGgwMzJXWF90QVZDQzFnUU9DeTQ2RDcxQkZkRWl3TmhIRFQxQ1k3QzQ2a21OUi1MTmk2S3paT1drR2RraVFubjU5NG1iWVVlX0J5TWdNVW1KbGtWdmxwcXpLSEtHbF8yVmNQY2xZZw?oc=5",
       "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "5f16b7970ea4337b",
-      "category": "opensource",
-      "title": "OpenAI called the Hugging Face attack unprecedented. But we’ve been here before.",
-      "summary": "OpenAI called the Hugging Face attack unprecedented. But we’ve been here before. MIT Technology Review",
-      "source": "MIT Technology Review",
-      "url": "https://www.technologyreview.com/2026/07/27/1140836/openai-hugging-face-attack-precedent/",
-      "published_at": "2026-07-27T18:00:00Z",
-      "tags": [
-        "Open Source",
-        "Models & Tools"
-      ],
-      "importance": 77,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=5f16b7970ea4337b",
-      "index_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNVUpCWnpROTdmb1N4OGwxVkpmOHJYY1RGemJSaVl3TXJreXRnaUl6V293YzBXME4yeWRUeWh2WWFfb3BUMlJnMlVoT094c040bFZYdDlldHNQRGJVR1VyNV81clV1RTFSdHRjSFFtRDZiM0ZaeVRGak9zbnBwQ3prNmxEWWxvZ1V6QjU2Mk1sNUdveXfSAZgBQVVfeXFMTURtQ3dpTUZQLTN4RHVPX05HLWE3dDV3ZzN3NnhTR3B2aTROQnEwVXRzVVVodFNRNGdHR2x5QnVjbF84S1lYYUFiTXhVU3ZudHBjZTFZZWdTQXRvcU5GNkdUdi1KZWJkb1VkTkt1WVg3NjlUekREa1Uydzg1T2JydnBmdlNmSkhic0FJUGgtRU1ocTVqLTlxTXk?oc=5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "52793b184a958d4d",
-      "category": "opensource",
-      "title": "EXCLUSIVE: Its AI agent spent days hacking a company, but sources say OpenAI did not notice for a week",
-      "summary": "EXCLUSIVE: Its AI agent spent days hacking a company, but sources say OpenAI did not notice for a week Reuters",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/business/its-ai-agent-spent-days-hacking-company-sources-say-openai-did-not-notice-week-2026-07-24/",
-      "published_at": "2026-07-24T22:19:15Z",
-      "tags": [
-        "Open Source",
-        "Models & Tools"
-      ],
-      "importance": 77,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=52793b184a958d4d",
-      "index_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPc3Vadng3eFVJX2E0cGhld0pQbGMxMWlmQU1WWFFLaFA3VkdtV1FtYnpPeGs4OHZ0TzZHX2VLaE55cDlsR2poS1JxVDA3emxoVnhiSkNrUWpDOVFKWFJsb0QydHo5VWdyQTFUemh1aFdDa1RRYVJybGFhUXhrLTFVQjN5bTRoY1lFbEhuSXR1ZVFCQW1VT3pGMlBLSkFSc3E2N1dpcjVBVVdkWklwTGF3cTZraklYNkFobDFUbENwZXY?oc=5",
-      "reader_status": "summary-only"
     },
     {
       "id": "1acc3646327400f8",
@@ -2516,6 +2497,25 @@
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=1acc3646327400f8",
       "index_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQVHVLTnhBaUV4eWdmY2h3anJiUF9jNXlBS3VQYl9KOG9uMHZKWDlxNGhmdmJRRTk4OEpIcGpWTTBVOHQ0WHNCTk55OVFWOTZ5V2VKV0x0R05pYWozZHZITm5fVUFfRmlXZjJmUnZHLURzVDYtaFhxZGdSdkpXRFZtWXk3eThWNlFiTlFMTklYWGRYWWMwWC1LUU5EcU05ZGRVSlZwSmR3WUo?oc=5",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "1aac5e09daa406a2",
+      "category": "opensource",
+      "title": "OpenAI cyber models broke out of training environment to hack Hugging Face",
+      "summary": "OpenAI cyber models broke out of training environment to hack Hugging Face CNBC",
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/2026/07/22/open-ai-cyber-models-hack-hugging-face.html",
+      "published_at": "2026-07-22T07:00:00Z",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "importance": 76,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=1aac5e09daa406a2",
+      "index_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQS0Fzbkw4bWcyTTlMV1YzMlRzZmVzTDFJUkIxUVJxWFVlZjJVcjBHQ1RSaTZXOVZRclhkRkplY1ZDWFM1UVc0WEQ5Z0daUnFhZUpCa2xTMVJOaHVrZXNJbHNZWkMzNU9TSVMwc2JtcExHam9DTGdONHJFbkJaTzhFNtIBhgFBVV95cUxPdVNpQk40cDBmZWliMlZqX1drbFJNVkEwRUE2X19rT0l1WVFjcm5uQkxBaVhXSEk0M3Rvdk5aRWR2bWFqMkJmTmsxNEg1QUIyNHlzWVpQR2dlVGtCeUxGc2EwU3NhbTM1S05vMmtNNTRoWlNsdENUdVBBS0RjV0tlLW5NV1gzZw?oc=5",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2651,13 +2651,13 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "8f48aad9cb19f1c3",
+      "id": "1e604a60e9de8f65",
       "category": "policy",
-      "title": "EU AI Act Update: Digital Omnibus Finalizes 8 Compliance Changes",
-      "summary": "EU AI Act Update: Digital Omnibus Finalizes 8 Compliance Changes orrick.com",
-      "source": "orrick.com",
-      "url": "https://www.orrick.com/en/Insights/2026/07/EU-AI-Act-Update-Digital-Omnibus-Finalizes-8-Compliance-Changes",
-      "published_at": "2026-07-29T20:57:25Z",
+      "title": "European Commission Issues EU AI Act Transparency Guidelines",
+      "summary": "European Commission Issues EU AI Act Transparency Guidelines Hunton Andrews Kurth LLP",
+      "source": "Hunton Andrews Kurth LLP",
+      "url": "https://www.hunton.com/privacy-and-cybersecurity-law-blog/european-commission-issues-eu-ai-act-transparency-guidelines",
+      "published_at": "2026-07-28T18:56:17Z",
       "tags": [
         "Policy",
         "Safety"
@@ -2665,9 +2665,9 @@
       "importance": 72,
       "content_kind": "article",
       "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=8f48aad9cb19f1c3",
-      "index_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPemNwcndsRzBzVW5WRDNacEhYWXZ5SUhWRXBzLWJKLWctWW5SN0ZndnYzbEJoV0xWbDc4MEduT1ZfNmtxZHpEWnZ4dDVVUy1pWUN6T3p2elV0Ukp4d19QbWNBUlBubW1NNzEtVVloclNUNmdqV3FSOExkQnJnYUZXcldHbFhXS3VTWDM2bU90a1RPR1ZGeWZNSV8xM2t4bGVuT0VXd1NsTWMzUQ?oc=5",
-      "reader_status": "public-page-excerpt"
+      "reader_url": "./reader.html?id=1e604a60e9de8f65",
+      "index_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNdnBsMXhmMHExWWhiaFFaM3YybVRzNkVxSVNaTE1xRzNfOWNLVWxDbVpEVmk2MjF2RDRzaW1KUktiZWZid29NZVZRWWFwUHVyc1pSMXFkYm9aRFdUZDZGeGVUVlVqcDJ3NUhUQ2Y0NktmdFZTbkJSV3d3cjBwMzhsWkFEX1c1bDYxNXBnMnRqeHVYbWMtLWlla2hhWFpmam9NVWlLMlQtRF9wOTlwYW1CY2NfTnl6V1ROVGc?oc=5",
+      "reader_status": "summary-only"
     },
     {
       "id": "a8844f85d0b72a75",
@@ -2681,31 +2681,12 @@
         "Policy",
         "Safety"
       ],
-      "importance": 72,
+      "importance": 71,
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=a8844f85d0b72a75",
       "index_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNNFFtMDZZZnBXc0pUR2FnT0lDWURUazJFWUVTMHJwSHp4S0J4ZkdnY0pjbWttb2Y3TGpLYkRjWFRKR1hudHFKZUR5eXJGeDBKSVYwNEJiRXY5MHBqam1LN3QtSjlfOFlXSDY2b3F2Z2JnTFM3bS1Xd21iYTVqalpkQVZpTDZsM05XN2Q5N09MWUZYSUdCeEk2VzZLRjBmMU5ybkRDbFBnVU1LRzBzQk5GR1A3WWQzMHNuc1ItbzNR0gHDAUFVX3lxTFAzS0YwRGxlNjJoMW9vb01wUl9IY2JGeGd5QkRock53RFdQSURkQ0U4WnpzVXFOM3MxYWFXZW94S1JhLXoyVW9NYXRmQXc3Z1VqWHBkY0c3bWRzSVBlRXd4dkN3T09qaUZhd0h6RzAxc3BGYzdiQTN6YlhTOVBmcl9pc3RZR3FTdTczQlViOUdYMW5EeTFTc2dxMEVjaVlpaHBfOEVjNC1OMnoxQXNqWW1hc3A0NGpFLTIzRGlNZ215Nl9RYw?oc=5",
       "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "f6a3e4b8fda8fd08",
-      "category": "policy",
-      "title": "CDT Europe's Feedback on the Draft Guidelines for the Classification of High-Risk AI Systems under the AI Act",
-      "summary": "CDT Europe's Feedback on the Draft Guidelines for the Classification of High-Risk AI Systems under the AI Act - Center for Democracy and Technology",
-      "source": "- Center for Democracy and Technology",
-      "url": "https://cdt.org/insights/cdt-europes-feedback-on-the-draft-guidelines-for-the-classification-of-high-risk-ai-systems-under-the-ai-act/",
-      "published_at": "2026-07-24T12:19:56Z",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "importance": 71,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=f6a3e4b8fda8fd08",
-      "index_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPcXNBdjhtTzdfODEzYnF1QldLRHltQXhIRTBLQ25RX3BtbTZpeV9hOTZZUVZDZFltQUJFZWZBNDhIRVVoQ3F3anlRTXJSLXNFMlZIVDh1Qy1HZG92T2wxX2NPSmVLS3lQeklmSk92MVViS2hiOEs4ZlRrdDNrY2lmMTlneUo1VXVnc0NlVUJqdkp4YWRJMDVTTE5ra0phYk1pWFluZnFNUktreFJuQk9KV0h1czVGN1p2RHVja2VyWmRQZkpudG5aM0szQXBEVW8?oc=5",
-      "reader_status": "summary-only"
     },
     {
       "id": "3b09213e0741fb84",
@@ -2769,7 +2750,7 @@
       "category": "policy",
       "title": "European Commission publishes guideline on transparency obligations under AI Act",
       "summary": "The European Commission on Monday published new guidelines to assist providers and deployers of artificial intelligence (AI) systems in fulfilling transparency obligations under the EU’s AI Act, including examples of exceptions to these requirements. While not specific to healthcare products, companies developing healthcare products with an AI system component may be subject to transparency rules.",
-      "source": "raps.org",
+      "source": "RAPS",
       "url": "https://www.raps.org/resource/european-commission-publishes-guideline-on-transparency-obligations-under-ai-act.html?_sp=ea083a61-04cd-4af8-845e-c66cc3aed33c",
       "published_at": "2026-07-21T21:32:00Z",
       "tags": [
@@ -2822,6 +2803,25 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "a9251019273aebc6",
+      "category": "policy",
+      "title": "The Most Important Words in the Battle Over AI",
+      "summary": "The Most Important Words in the Battle Over AI Politico",
+      "source": "Politico",
+      "url": "https://www.politico.com/news/magazine/2026/07/17/ai-safety-regulation-debate-factions-00990453",
+      "published_at": "2026-07-17T07:00:00Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 69,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=a9251019273aebc6",
+      "index_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOcWs1LVNmMmx5dlh4OWttRDFTdXRqX2NyaGwzQnpxWWF5eFd6OVJ0UzctckpNdWF1cXNjeGVib3VEMWdZNDhYankwTzJzRVA3WnlJWFlTaERSVjBiUXcyS1hleHNJS2JjaUhoMjhrakRMV2lFUUVrT3VZbjZqQVJEaXNwUVNSeXVPLVFqUTY2VTRGUXZEeGlJNTJZOA?oc=5",
+      "reader_status": "summary-only"
+    },
+    {
       "id": "5007a0fc0324b61a",
       "category": "policy",
       "title": "The US is advancing AI safety through state and federal action",
@@ -2841,13 +2841,13 @@
       "reader_status": "summary-only"
     },
     {
-      "id": "df0f1c9d761941d4",
+      "id": "1f0bcf98d172232a",
       "category": "opensource",
-      "title": "Here's what smart people are saying about OpenAI models hacking Hugging Face on their own",
-      "summary": "Here's what smart people are saying about OpenAI models hacking Hugging Face on their own Business Insider",
-      "source": "Business Insider",
-      "url": "https://www.businessinsider.com/smart-people-react-openai-hugging-face-hacking-cybersecurity-incident-2026-7",
-      "published_at": "2026-07-22T07:00:00Z",
+      "title": "Hugging Face says an AI agent carried out an end-to-end cyberattack",
+      "summary": "Hugging Face says an AI agent carried out an end-to-end cyberattack Axios",
+      "source": "Axios",
+      "url": "https://www.axios.com/2026/07/20/hugging-face-ai-cyberattack-data-breach",
+      "published_at": "2026-07-20T19:15:38Z",
       "tags": [
         "Open Source",
         "Models & Tools"
@@ -2855,8 +2855,27 @@
       "importance": 68,
       "content_kind": "article",
       "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=df0f1c9d761941d4",
-      "index_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOU3g5bjlleFZVaDlWdWJjSlRoeXBBTmZqRW5iZFJRU3JvUjhhRURvNDBKSFFyWGFobmM1bHlDczUzUlRqdEstanhWWWZVMnVPS2NrcEZZaHVUS3lGSGFYYVNxSDBXdlVzVWRWRENMRW5DQ29pT1gtTXM2T241OWp6S1RGUjUwUXlsQjJUT1lteVVwRHVpZU9IXy1GRXlneF9qSktUb3dvb2dtTWVz?oc=5",
+      "reader_url": "./reader.html?id=1f0bcf98d172232a",
+      "index_url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9NNHVrV0x5WWFrbjhTaGlSdEtHX0k4c0NCTm9KcmhwOHBXRzZmeENLR0J2aHlVQm9YOWw3MDdLUE1LMkxYVWVKWnRVSnozcTFuX0NXUlZEcGIyeFJEOFhOYjBkQUhhbmMzUWpadXJpX2tKTThrWTBUTU9iOWI?oc=5",
+      "reader_status": "summary-only"
+    },
+    {
+      "id": "f9b3e45cea81004e",
+      "category": "opensource",
+      "title": "Hugging Face says it resorted to a Chinese AI model to battle a fully autonomous cyberattack because U.S. model guardrails hampered its defense | Fortune",
+      "summary": "Hugging Face turned to Chinese open source AI model after experiencing autonomous cyber attack Fortune",
+      "source": "Fortune",
+      "url": "https://fortune.com/2026/07/20/hugging-face-turns-to-chinese-open-source-ai-to-fend-off-autonomous-ai-cyber-attack-after-american-ai-guardrails-stymie-defense/",
+      "published_at": "2026-07-20T07:00:00Z",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "importance": 68,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=f9b3e45cea81004e",
+      "index_url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPZl8yc3o4Q0FyYlRxRzZzTE0wV0RydTlJVEpGNmlEOGtQdHFOYzZFbmRxR1JXRHJRZFhrN1VCNlpuaEY3b3NVbUhkWkp4eDlwUjhsWVlOTWlScjFVeG1JMlRJY0pvZVdXRGR4M1EwSDRYVk9VUTRiTmdIV1BFRUstM0YzNjExNnRQc2VRR01uU3luWmxvYTVvcU8tNDZ0RUhzMnRsQVNqNnFLNlo3ZExuUUxxQkZpem12TkM3aEFTQXUwT0FJQUNMejhsQVJ0U2QtRjYxNHFhbUcyWjJQNDJmdXFvbUhlb0lMUjgzTnNmb0Q?oc=5",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2895,25 +2914,6 @@
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=ac25814901c2d099",
       "index_url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPQllzbEY2QlE2UmdFdEZfMTltX2hTOVZVc09MZzRWdFE4dU96OURrTzlVcjQ2dDB3bDZJeWljS05Bd3FMc1JHWWlLVUxPS01Nbi1tNHkzLW5IS2Y4R0RZTzNtVFVINFlranpFeWtqU0g3UEF2YktVLS0wakVBVHl2aXhTUlZvd0ZQLTQxZXFfMXh5VWczT1piS2Q2cENPUFNHMVZKU3lrb0FYSi1xRzk1akpvTFNoQ01JblpmcW9MbG12dzFpMnlLM01PaThfdDMwc0duZW50UWYxZw?oc=5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "fae258cb8a808b19",
-      "category": "startups",
-      "title": "Fei-Fei Li's World Labs: $1.23B Raised, Marble Now Shipping",
-      "summary": "World Labs has raised $1.23 billion across two rounds since emerging from stealth in September 2024. Here is the full funding arc, investor composition, and pro",
-      "source": "StartupHub.ai",
-      "url": "https://www.startuphub.ai/ai-news/ai-figures/2026/figure-fei-fei-li-company-financial-breakdown-2026-06-03",
-      "published_at": "2026-06-03T07:00:00Z",
-      "tags": [
-        "Founder Watch",
-        "Embodied AI"
-      ],
-      "importance": 67,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=fae258cb8a808b19",
-      "index_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQRGtTeEdWbHhzelh0Y3dDNlRJRTNERVhGcVYtSjROQ2JLVTg2SDFBZHg0bkswTnBKbXl3SThuemVrVWltRU1ieml0TEMySFU3dXhsSHBDa29LZFdpWU9iR3gwV3h1WTVWUEF6QzFOXy1iZGJnSTRRYU11MUkzYVdsR3VBbHBTYm04R3NqcG1Pck1id3RFdjJVa1BVMkYzLWJfbDNBY3JmaGF3QQ?oc=5",
       "reader_status": "public-page-excerpt"
     }
   ]
