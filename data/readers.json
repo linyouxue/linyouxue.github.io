@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-01T03:48:21Z",
+  "generated_at": "2026-08-01T08:33:26Z",
   "record_count": 132,
   "records": [
     {
@@ -49,8 +49,48 @@
           "paragraphs": [
             "levent @__alpoge__ hello there the jacobian conjecture is false thanx to my close friend akhil for asking about it and my other close friend fable for working during the world cup final ((1+xy)^3 z + y^2 (1+xy) (4+3xy), y + 3 x (1+xy)^2 z + 3 x y^2 (4+3xy), 2 x - 3 x^2 y - x^3 z): \\C^3\\to \\C^3, has jacobian determinant -2, and sends (0, 0, -1/4), (1, -3/2, 13/2), and (-1, 3/2, 13/2) to (-1/4, 0, 0) 2:19 AM · Jul 20, 2026 39.5M Views 1.7K 5.4K 43K 12K",
             "levent @__alpoge__ Jul 20 wolframalpha.com/input?i=Det%5B… jacobian determinant in wolfram alpha wolframalpha.com Det[D[{(1+x y)^3 z + y^2 (1 + x y) (4 + 3x y), y + 3x (1 + x y)^2 z + 3x y^2 (4 + 3x y), 2x - 3x^2... Wolfram|Alpha brings expert-level knowledge and capabilities to the broadest possible range of people—spanning all professions and education levels. 19 53 1.5K 920K levent @__alpoge__ Jul 20 wolframalpha.com/input?i=%28%28… wolframalpha.com/input?i=%28%28… evaluating at two of those points in wolfram alpha wolframalpha.com ((1+x y)^3 z + y^2 (1 + x y) (4 + 3x y), y + 3x (1 + x y)^2 z + 3x y^2 (4 + 3x y), 2x - 3x^2 y -... Wolfram|Alpha brings expert-level knowledge and capabilities to the broadest…",
-            "Aldo Cortesi @cortesi Jul 20 The absolute state of maths. 8 88 1.6K 111K"
+            "Aldo Cortesi @cortesi Jul 20 The absolute state of maths. 8 87 1.6K 111K"
           ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "5b965874fc94372d",
+      "kind": "article",
+      "title": "Ten advances in mathematics and theoretical computer science",
+      "source": "OpenAI",
+      "source_url": "https://openai.com/index/ten-advances-in-mathematics",
+      "published_at": "2026-08-01T00:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "OpenAI",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "OpenAI shares new results on long-standing open problems in mathematics and theoretical computer science, including advances in geometry, cryptography, and complexity.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://openai.com/index/ten-advances-in-mathematics",
+      "key_points": [
+        "OpenAI shares new results on long-standing open problems in mathematics and theoretical computer science, including advances in geometry, cryptography, and complexity."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "OpenAI shares new results on long-standing open problems in mathematics and theoretical computer science, including advances in geometry, cryptography, and complexity."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "OpenAI shares new results on long-standing open problems in mathematics and theoretical computer science, including advances in geometry, cryptography, and complexity."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -276,6 +316,52 @@
       "reading_minutes": 1
     },
     {
+      "id": "bace-gecco-2026",
+      "kind": "paper",
+      "title": "BACE: LLM-based Code Generation through Bayesian Anchored Co-Evolution",
+      "source": "OpenAlex · arXiv",
+      "source_url": "https://arxiv.org/abs/2603.28653",
+      "published_at": "2026-07-10T00:00:00Z",
+      "authors": [
+        "Kaushitha Silva",
+        "Srinath Perera"
+      ],
+      "venue": "GECCO 2026",
+      "tags": [
+        "Code Generation",
+        "Bayesian Methods",
+        "LLM Agents"
+      ],
+      "verification": "GECCO 2026 论文 · arXiv 开放 PDF",
+      "summary": "BACE treats generated code and tests as co-evolving populations instead of accepting synthetic tests as ground truth. Bayesian belief updates model tests as noisy sensors, while public examples anchor the search and reduce self-validating drift. The authors report strong results on LiveCodeBench v6 across proprietary and open-weight models.",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/bace-gecco-2026.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://arxiv.org/pdf/2603.28653",
+      "key_points": [
+        "BACE: LLM-based Code Generation through Bayesian Anchored Co-Evolution of Code and Test Populations Kaushitha Silva WSO2 Santa Clara, CA, USA kaushitha@wso2.com Srinath Perera WSO2 Santa Clara, CA, USA srinath@wso2.com Abstract Large Language Models (LLMs) have demonstrated impressive capabilities in code generation.",
+        "While an interactive feedback loop can improve performance, writing effective tests is a non-trivial task.",
+        "Early multi-agent frameworks, such as AgentCoder, automated this process but relied on generated tests as absolute ground truth.",
+        "This approach is fragile: incorrect code frequently passes faulty or trivial tests, while valid solutions are often degraded to satisfy incorrect assertions.",
+        "Addressing this limitation, newer methods have largely abandoned test generation in favor of planning and reasoning based on examples."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Large Language Models (LLMs) have demonstrated impressive capabilities in code generation. While an interactive feedback loop can improve performance, writing effective tests is a non-trivial task. Early multi-agent frameworks, such as AgentCoder, automated this process but relied on generated tests as absolute ground truth. This approach is fragile: incorrect code frequently passes faulty or trivial tests, while valid solutions are often degraded to satisfy incorrect assertions. Addressing this limitation, newer methods have largely abandoned test generation in favor of planning and reasoning based on examples. We argue, however, that generated tests remain a valuable signal if we model them as noisy sensors guided by Bayesian updates. To this end, we introduceBACE (Bayesian Anchored Co-Evolution), a framework that reformulates synthesis as a Bayesian co-evolutionary process where code and test populations are evolved, guided by belief distributions that are reciprocally updated based on noisy interaction evidence. By anchoring this search on minimal public examples, BACE prevents the co-evolutionary drift typical of self-validating loops. Extensive evaluations on LiveCodeBench v6 (post-March 2025) reveal that BACE achieves state-of-the-art performance across both proprietary models and open-weight models at 7B and 120B scales. CCS Concepts •Computing methodologies → Artificial intelligence;Distributed artificial intelligence;Genetic algorithms;•Software and its engineering→ Software verification and validation; Software development techniques. Keywords Large language models, Co-evolution, Software engineering, Software testing, Program synthesis, Bayesian inference ACM Reference Format: Kaushitha Silva and Srinath Perera. 2026. BACE: LLM-based Code Generation through Bayesian Anchored Co-Evolution of Code and Test Populations. InGenetic and Evolutionary Computation Conference (GECCO ’26), July 13–17, 2026, San Jose, Costa Rica.ACM, New York, NY, USA, 9 pages. https://doi.org/10.1145/3795095.3805085 This work is licensed under a Creative Commons Attribution 4.0 International License. GECCO ’26, San Jose, Costa Rica ©2026 Copyright held by the owner/author(s).…"
+        },
+        {
+          "title": "关键结果",
+          "body": "Table 1 summarizes the Pass@1 performance of BACE against stateof-the-art baselines across the GPT-5-Mini, Qwen2.5-Coder-7b and GPT-OSS-120b, reporting the average and standard deviation over three runs. As detailed in Table 1, BACE consistently outperforms all baselines across every difficulty level for each evaluated model. Overall, BACE establishes a new state-of-the-art, achieving absolute margins of 5.0% (72.5% vs. 67.5%) on GPT-OSS-120b, 2.5% (66.7% vs. 64.2%) on GPT-5-Mini, and 5.4% (29.6% vs. 24.2%) on Qwen2.5-Coder-7b over CodeSIM. Running with GPT-OSS-120b and Qwen2.5-Coder-7b, MapCoder frequently failed to adhere to the structural schema required by the prompt, resulting in XML parsing errors and code syntax violations. As this limitation is exacerbated in the smaller Qwen2.5-Coder-7b model, MapCoder was omitted from Qwen2.5 evaluations. 6.5 Ablation Studies To isolate the impact of our co-evolutionary approach, we conduct an ablation study on the Hard problem subset (𝑁= 37) using GPTOSS-120b. We evaluate six configurations that trace the progression from single-solution generation to full co-evolution, reporting the average over three runs: (1) direct prompting (a single-solution baseline), (2) population-based filtered sampling (no evolution), where a candidate is sampled from an initial generated population after filtering with public anchors (T𝑎𝑛𝑐), (3) population-based filtered sampling where the candidate passingT𝑎𝑛𝑐 and the highest number of static unit tests (T𝑢𝑛𝑖𝑡 ) is selected, (4) code evolution guided solely by public anchors, (5) code evolution guided by anchors and static unit tests, and (6) full BACE co-evolution. As detailed in Table 2, relying on a single-solution strategy via direct prompting yields the lowest performance at 26.1%. Moving to a population-based strategy provides an immediate benefit: extracting a solution via static filtered sampling improves performance to 29.7% with anchors alone, and establishes a further improvement reaching 33.3% when incorporating static unit tests as a ranking signal over the population. Transitioning from static population sampling to code population evolution provides a substantial jump, reaching 41.4% with anchors and 44.1% with static unit tests. By evolving tests alongside the code population, the full BACE framework achieve the highest Pass@1 score of 49.6%. Table 2: Ablation study evaluating the impact of test case strategies on the Hard problem subset ( 𝑁= 37) using GPTOSS-120b. Performance is measured as Pass@1 (%) reported as Average±Std over 3 runs. Ablation Configuration Pass@1 (%) Direct Prompting (Single Solution)26.1 ±1.6 Population Sampling (No Evolution): Filtered Sampling (T𝑎𝑛𝑐 Only)29.7 ±0.0 Filtered Sampling (T𝑎𝑛𝑐 + StaticT𝑢𝑛𝑖𝑡 )33.3 ±5.6 Population Evolution…"
+        },
+        {
+          "title": "局限与结论",
+          "body": "The state-of-the-art in LLM-driven code generation has largely abandoned test generation for reasoning-based approaches, citing the unreliability of synthesized tests as feedback. We argue, conversely, that generated tests remain a high-value signal when modeled as noisy sensors within a Bayesian framework. BACE validates this hypothesis through a Bayesian co-evolutionary process where code and test populations reciprocally refine one another. By anchoring this search on minimal public examples, we effectively mitigate the co-evolutionary drift typical of self-validating loops. Furthermore, we utilize behavioral based elitism policy and differential testing to enforce population diversity, a mechanism that prevents the system from collapsing into redundant or trivial solutions. Empirical evaluations on LiveCodeBench v6 (PostMarch) demonstrate that BACE establishes a new state-of-the-art, yielding performance gains across both propri- etary models and open-weight models at 7B and 120B scales. Looking forward, the modular Bayesian backbone of BACE provides a flexible foundation for future research. Specifically, it opens pathways for integrating state-of-the-art code and test generation to co-evolving populations to yield increasingly robust solutions. BACE: LLM-based Code Generation through Bayesian Anchored Co-Evolution of Code and Test Populations GECCO ’26, July 13–17, 2026, San Jose, Costa Rica"
+        }
+      ],
+      "reading_minutes": 31
+    },
+    {
       "id": "a1c868fc8723be2c",
       "kind": "article",
       "title": "Aurora 1.5: Extending open foundation models for weather and Earth-system applications - Microsoft Research",
@@ -321,52 +407,6 @@
         }
       ],
       "reading_minutes": 1
-    },
-    {
-      "id": "bace-gecco-2026",
-      "kind": "paper",
-      "title": "BACE: LLM-based Code Generation through Bayesian Anchored Co-Evolution",
-      "source": "OpenAlex · arXiv",
-      "source_url": "https://arxiv.org/abs/2603.28653",
-      "published_at": "2026-07-10T00:00:00Z",
-      "authors": [
-        "Kaushitha Silva",
-        "Srinath Perera"
-      ],
-      "venue": "GECCO 2026",
-      "tags": [
-        "Code Generation",
-        "Bayesian Methods",
-        "LLM Agents"
-      ],
-      "verification": "GECCO 2026 论文 · arXiv 开放 PDF",
-      "summary": "BACE treats generated code and tests as co-evolving populations instead of accepting synthetic tests as ground truth. Bayesian belief updates model tests as noisy sensors, while public examples anchor the search and reduce self-validating drift. The authors report strong results on LiveCodeBench v6 across proprietary and open-weight models.",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/bace-gecco-2026.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://arxiv.org/pdf/2603.28653",
-      "key_points": [
-        "BACE: LLM-based Code Generation through Bayesian Anchored Co-Evolution of Code and Test Populations Kaushitha Silva WSO2 Santa Clara, CA, USA kaushitha@wso2.com Srinath Perera WSO2 Santa Clara, CA, USA srinath@wso2.com Abstract Large Language Models (LLMs) have demonstrated impressive capabilities in code generation.",
-        "While an interactive feedback loop can improve performance, writing effective tests is a non-trivial task.",
-        "Early multi-agent frameworks, such as AgentCoder, automated this process but relied on generated tests as absolute ground truth.",
-        "This approach is fragile: incorrect code frequently passes faulty or trivial tests, while valid solutions are often degraded to satisfy incorrect assertions.",
-        "Addressing this limitation, newer methods have largely abandoned test generation in favor of planning and reasoning based on examples."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Large Language Models (LLMs) have demonstrated impressive capabilities in code generation. While an interactive feedback loop can improve performance, writing effective tests is a non-trivial task. Early multi-agent frameworks, such as AgentCoder, automated this process but relied on generated tests as absolute ground truth. This approach is fragile: incorrect code frequently passes faulty or trivial tests, while valid solutions are often degraded to satisfy incorrect assertions. Addressing this limitation, newer methods have largely abandoned test generation in favor of planning and reasoning based on examples. We argue, however, that generated tests remain a valuable signal if we model them as noisy sensors guided by Bayesian updates. To this end, we introduceBACE (Bayesian Anchored Co-Evolution), a framework that reformulates synthesis as a Bayesian co-evolutionary process where code and test populations are evolved, guided by belief distributions that are reciprocally updated based on noisy interaction evidence. By anchoring this search on minimal public examples, BACE prevents the co-evolutionary drift typical of self-validating loops. Extensive evaluations on LiveCodeBench v6 (post-March 2025) reveal that BACE achieves state-of-the-art performance across both proprietary models and open-weight models at 7B and 120B scales. CCS Concepts •Computing methodologies → Artificial intelligence;Distributed artificial intelligence;Genetic algorithms;•Software and its engineering→ Software verification and validation; Software development techniques. Keywords Large language models, Co-evolution, Software engineering, Software testing, Program synthesis, Bayesian inference ACM Reference Format: Kaushitha Silva and Srinath Perera. 2026. BACE: LLM-based Code Generation through Bayesian Anchored Co-Evolution of Code and Test Populations. InGenetic and Evolutionary Computation Conference (GECCO ’26), July 13–17, 2026, San Jose, Costa Rica.ACM, New York, NY, USA, 9 pages. https://doi.org/10.1145/3795095.3805085 This work is licensed under a Creative Commons Attribution 4.0 International License. GECCO ’26, San Jose, Costa Rica ©2026 Copyright held by the owner/author(s).…"
-        },
-        {
-          "title": "关键结果",
-          "body": "Table 1 summarizes the Pass@1 performance of BACE against stateof-the-art baselines across the GPT-5-Mini, Qwen2.5-Coder-7b and GPT-OSS-120b, reporting the average and standard deviation over three runs. As detailed in Table 1, BACE consistently outperforms all baselines across every difficulty level for each evaluated model. Overall, BACE establishes a new state-of-the-art, achieving absolute margins of 5.0% (72.5% vs. 67.5%) on GPT-OSS-120b, 2.5% (66.7% vs. 64.2%) on GPT-5-Mini, and 5.4% (29.6% vs. 24.2%) on Qwen2.5-Coder-7b over CodeSIM. Running with GPT-OSS-120b and Qwen2.5-Coder-7b, MapCoder frequently failed to adhere to the structural schema required by the prompt, resulting in XML parsing errors and code syntax violations. As this limitation is exacerbated in the smaller Qwen2.5-Coder-7b model, MapCoder was omitted from Qwen2.5 evaluations. 6.5 Ablation Studies To isolate the impact of our co-evolutionary approach, we conduct an ablation study on the Hard problem subset (𝑁= 37) using GPTOSS-120b. We evaluate six configurations that trace the progression from single-solution generation to full co-evolution, reporting the average over three runs: (1) direct prompting (a single-solution baseline), (2) population-based filtered sampling (no evolution), where a candidate is sampled from an initial generated population after filtering with public anchors (T𝑎𝑛𝑐), (3) population-based filtered sampling where the candidate passingT𝑎𝑛𝑐 and the highest number of static unit tests (T𝑢𝑛𝑖𝑡 ) is selected, (4) code evolution guided solely by public anchors, (5) code evolution guided by anchors and static unit tests, and (6) full BACE co-evolution. As detailed in Table 2, relying on a single-solution strategy via direct prompting yields the lowest performance at 26.1%. Moving to a population-based strategy provides an immediate benefit: extracting a solution via static filtered sampling improves performance to 29.7% with anchors alone, and establishes a further improvement reaching 33.3% when incorporating static unit tests as a ranking signal over the population. Transitioning from static population sampling to code population evolution provides a substantial jump, reaching 41.4% with anchors and 44.1% with static unit tests. By evolving tests alongside the code population, the full BACE framework achieve the highest Pass@1 score of 49.6%. Table 2: Ablation study evaluating the impact of test case strategies on the Hard problem subset ( 𝑁= 37) using GPTOSS-120b. Performance is measured as Pass@1 (%) reported as Average±Std over 3 runs. Ablation Configuration Pass@1 (%) Direct Prompting (Single Solution)26.1 ±1.6 Population Sampling (No Evolution): Filtered Sampling (T𝑎𝑛𝑐 Only)29.7 ±0.0 Filtered Sampling (T𝑎𝑛𝑐 + StaticT𝑢𝑛𝑖𝑡 )33.3 ±5.6 Population Evolution…"
-        },
-        {
-          "title": "局限与结论",
-          "body": "The state-of-the-art in LLM-driven code generation has largely abandoned test generation for reasoning-based approaches, citing the unreliability of synthesized tests as feedback. We argue, conversely, that generated tests remain a high-value signal when modeled as noisy sensors within a Bayesian framework. BACE validates this hypothesis through a Bayesian co-evolutionary process where code and test populations reciprocally refine one another. By anchoring this search on minimal public examples, we effectively mitigate the co-evolutionary drift typical of self-validating loops. Furthermore, we utilize behavioral based elitism policy and differential testing to enforce population diversity, a mechanism that prevents the system from collapsing into redundant or trivial solutions. Empirical evaluations on LiveCodeBench v6 (PostMarch) demonstrate that BACE establishes a new state-of-the-art, yielding performance gains across both propri- etary models and open-weight models at 7B and 120B scales. Looking forward, the modular Bayesian backbone of BACE provides a flexible foundation for future research. Specifically, it opens pathways for integrating state-of-the-art code and test generation to co-evolving populations to yield increasingly robust solutions. BACE: LLM-based Code Generation through Bayesian Anchored Co-Evolution of Code and Test Populations GECCO ’26, July 13–17, 2026, San Jose, Costa Rica"
-        }
-      ],
-      "reading_minutes": 31
     },
     {
       "id": "022b2fe46aa8d22e",
@@ -715,6 +755,51 @@
       "reading_minutes": 1
     },
     {
+      "id": "rhb-icml-2026",
+      "kind": "paper",
+      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
+      "source": "OpenReview · arXiv",
+      "source_url": "https://arxiv.org/abs/2605.02964",
+      "published_at": "2026-06-24T00:00:00Z",
+      "authors": [
+        "Kunvar Thaman"
+      ],
+      "venue": "ICML 2026",
+      "tags": [
+        "Reward Hacking",
+        "Agent Safety",
+        "Evaluation"
+      ],
+      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
+      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/rhb-icml-2026.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://arxiv.org/pdf/2605.02964",
+      "key_points": [
+        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
+        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
+        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
+        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
+        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
+        },
+        {
+          "title": "关键结果",
+          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
+        },
+        {
+          "title": "局限与结论",
+          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
+        }
+      ],
+      "reading_minutes": 46
+    },
+    {
       "id": "108e7ad9a42a7488",
       "kind": "article",
       "title": "We’re launching Lyria 3.5 in Google Flow Music, with advances across musicality, lyrics, vocals, and creative control",
@@ -762,51 +847,6 @@
         }
       ],
       "reading_minutes": 1
-    },
-    {
-      "id": "rhb-icml-2026",
-      "kind": "paper",
-      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
-      "source": "OpenReview · arXiv",
-      "source_url": "https://arxiv.org/abs/2605.02964",
-      "published_at": "2026-06-24T00:00:00Z",
-      "authors": [
-        "Kunvar Thaman"
-      ],
-      "venue": "ICML 2026",
-      "tags": [
-        "Reward Hacking",
-        "Agent Safety",
-        "Evaluation"
-      ],
-      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
-      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/rhb-icml-2026.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://arxiv.org/pdf/2605.02964",
-      "key_points": [
-        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
-        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
-        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
-        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
-        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
-        },
-        {
-          "title": "关键结果",
-          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
-        },
-        {
-          "title": "局限与结论",
-          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
-        }
-      ],
-      "reading_minutes": 46
     },
     {
       "id": "1c2e517655ab7ba5",
@@ -895,46 +935,6 @@
             "When we launched Claude Mythos Preview, we showed it was able to autonomously find and exploit vulnerabilities in almost every piece of software we pointed it at. This included several major cryptographic libraries—shared collections of code that are used to encrypt data.",
             "The vulnerabilities that Claude found in these cryptographic libraries 1 were due to incorrect implementation of the algorithms—that is, errors in how programmers used the algorithms in their code that created opportunities for attackers to break the encryption."
           ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "b5fa37a6db01b449",
-      "kind": "article",
-      "title": "How GPT-5.6 fuses frontier intelligence with frontier efficiency",
-      "source": "OpenAI",
-      "source_url": "https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency",
-      "published_at": "2026-07-29T00:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "OpenAI",
-        "Official"
-      ],
-      "verification": "官方来源",
-      "summary": "GPT-5.6 improves AI efficiency across models, inference, and agentic workflows, helping deliver more useful intelligence per dollar.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 403: Forbidden",
-      "resolved_url": "https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency",
-      "key_points": [
-        "GPT-5.6 improves AI efficiency across models, inference, and agentic workflows, helping deliver more useful intelligence per dollar."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "GPT-5.6 improves AI efficiency across models, inference, and agentic workflows, helping deliver more useful intelligence per dollar."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "GPT-5.6 improves AI efficiency across models, inference, and agentic workflows, helping deliver more useful intelligence per dollar."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -1142,6 +1142,57 @@
       "reading_minutes": 1
     },
     {
+      "id": "9d54fbf085cce28b",
+      "kind": "article",
+      "title": "Supporting ambitious external research through the Anthropic Economic Futures Research Fund",
+      "source": "Anthropic",
+      "source_url": "https://www.anthropic.com/news/economic-futures-research-fund-agenda",
+      "published_at": "2026-07-24T18:46:48Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Anthropic",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "We’re committing $200 million to the Anthropic Economic Futures Research Fund to support ambitious external research.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.anthropic.com/news/economic-futures-research-fund-agenda",
+      "key_points": [
+        "We’re sharing the research agenda for the Anthropic Economic Futures Research Fund.",
+        "We’re committing $200 million to the fund to support ambitious external research on interventions to prepare society for the economic impacts of AI.",
+        "With the research the Fund supports, we want to study what programs could make the economy more flexible and resilient, ensure the benefits of AI are shared, and minimize the harm that AI-driven disruption could cause.",
+        "But we don’t yet know how quickly AI will diffuse throughout the economy while also becoming more capable, and what the economic effects will be.",
+        "In our Economic Policy Framework (EPF), published in June, we proposed programs and policies for a range of scenarios."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "We’re committing $200 million to the Anthropic Economic Futures Research Fund to support ambitious external research."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "We’re sharing the research agenda for the Anthropic Economic Futures Research Fund.",
+            "We’re committing $200 million to the fund to support ambitious external research on interventions to prepare society for the economic impacts of AI.",
+            "With the research the Fund supports, we want to study what programs could make the economy more flexible and resilient, ensure the benefits of AI are shared, and minimize the harm that AI-driven disruption could cause.",
+            "But we don’t yet know how quickly AI will diffuse throughout the economy while also becoming more capable, and what the economic effects will be.",
+            "In our Economic Policy Framework (EPF), published in June, we proposed programs and policies for a range of scenarios."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "We’re sharing the research agenda for the Anthropic Economic Futures Research Fund. We’re committing $200 million to the fund to support ambitious external research on interventions to prepare society for the economic impacts of AI.",
+            "With the research the Fund supports, we want to study what programs could make the economy more flexible and resilient, ensure the benefits of AI are shared, and minimize the harm that AI-driven disruption could cause.",
+            "AI capabilities continue to improve. But we don’t yet know how quickly AI will diffuse throughout the economy while also becoming more capable, and what the economic effects will be. In our Economic Policy Framework (EPF), published in June, we proposed programs and policies for a range of scenarios. But we need more empirical evidence on which interventions might actually work in an AI-transformed economy—which ones make the economy more flexible and resilient, and spread the gains broadly. In the face of this uncertainty, our aim is to build this evidence base so that workers, firms, and governments have room to adapt. This $200 million fund will support external research on interventions proposed in the EPF…"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "gpt5-protein-synthesis-20260205",
       "kind": "article",
       "title": "GPT-5 与自动化实验室将无细胞蛋白合成成本降低 40%",
@@ -1333,7 +1384,7 @@
       "title": "New NSF initiative aims to unlock dataset value for AI-enabled scientific discovery",
       "source": "U.S. National Science Foundation (.gov)",
       "source_url": "https://www.nsf.gov/news/new-nsf-initiative-aims-unlock-dataset-value-ai-enabled",
-      "published_at": "2026-07-22T13:53:12Z",
+      "published_at": "2026-07-22T07:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -1421,11 +1472,51 @@
       "reading_minutes": 1
     },
     {
-      "id": "8b5a2e6af1916dfd",
+      "id": "367b9e036abd787a",
+      "kind": "article",
+      "title": "DeepSeek 发布 Flash新模型应战/Claude攻击三家真实企业被公开/Mira Murati 发布 第二款开源模型",
+      "source": "微信公众号 · 想开一间信心花舍",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1785573180&ver=6877&signature=3H2rx-7O8s1ZPL2ZjCTFkGsSVBJL8BJUUQjLjuVK4HWfGFTOaTuLLeya2mo9cCZ7dB68XmP*BTpCuG1oMhS6OB8gIqQ-xz9my8E78en7uqFwsoTTBnhAhJs0YPyiSpjN&new=1",
+      "published_at": "2026-08-01T01:08:56Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "微信公众号",
+        "DeepSeek",
+        "模型"
+      ],
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "summary": "DeepSeek 发布 Flash新模型应战/Claude攻击三家真实企业被公开/Mira Murati 发布 第二款开源模型学术情报 · 2026-08-01覆盖:GitHub...",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "indexed-summary",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HE-vbWqjqR-FG8T8_i6gFGwlyDVO_kbIShMW4TCy&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785573180%26ver%3D6877%26signature%3D3H2rx-7O8s1ZPL2ZjCTFkGsSVBJL8BJUUQjLjuVK4HWfGFTOaTuLLeya2mo9cCZ7dB68XmP%2ABTpCuG1oMhS6OB8gIqQ-xz9my8E78en7uqFwsoTTBnhAhJs0YPyiSpjN%26new%3D1",
+      "key_points": [
+        "DeepSeek 发布 Flash新模型应战/Claude攻击三家真实企业被公开/Mira Murati 发布 第二款开源模型学术情报 · 2026-08-01覆盖:GitHub..."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "DeepSeek 发布 Flash新模型应战/Claude攻击三家真实企业被公开/Mira Murati 发布 第二款开源模型学术情报 · 2026-08-01覆盖:GitHub..."
+        },
+        {
+          "title": "公开索引摘要",
+          "bullets": [
+            "DeepSeek 发布 Flash新模型应战/Claude攻击三家真实企业被公开/Mira Murati 发布 第二款开源模型学术情报 · 2026-08-01覆盖:GitHub..."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "1f8a111b7b005a1e",
       "kind": "article",
       "title": "DeepSeek V4正式版 发布 !OpenAI 同日降价 80%",
       "source": "微信公众号 · 奇偶工作室",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1785556072&ver=6877&signature=SlnsgYtge4N4vhE3XRl1xGcbtoiuuPBvKcmf-USY8aCUD8IFegUcTxkrqeh93rya1ckjldwiXd4Ox305xOa-EWp11QlQnUasuEdvdsAPazQFzYEPLvwJTNtMIW10zPua&new=1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1785573180&ver=6877&signature=SlnsgYtge4N4vhE3XRl1xGcbtoiuuPBvKcmf-USY8aBfEkhUViJQqI4F2lPsucUc1eTuEPArgTCIbQ7HI6AADbnnosnnD8wBUasC3bq2H2cFqb5eGDmc1VoiFxqy3QD1&new=1",
       "published_at": "2026-07-31T11:36:14Z",
       "authors": [],
       "venue": "",
@@ -1438,7 +1529,7 @@
       "summary": "DeepSeek -V4-Flash-0731,模型结构和参数规模跟 4 月的预览版... 系列 发布 仅仅 21 天之后.一个 发布 三周的产品砍掉 80% 的价格....",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HH5sbWqjfl2MG9f0iddd5B30SpHGwANry7UWa392&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785556072%26ver%3D6877%26signature%3DSlnsgYtge4N4vhE3XRl1xGcbtoiuuPBvKcmf-USY8aCUD8IFegUcTxkrqeh93rya1ckjldwiXd4Ox305xOa-EWp11QlQnUasuEdvdsAPazQFzYEPLvwJTNtMIW10zPua%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HE-vbWqjayHDi5-YUw8fjuDxeJdz7wTtMyov3D5_&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785573180%26ver%3D6877%26signature%3DSlnsgYtge4N4vhE3XRl1xGcbtoiuuPBvKcmf-USY8aBfEkhUViJQqI4F2lPsucUc1eTuEPArgTCIbQ7HI6AADbnnosnnD8wBUasC3bq2H2cFqb5eGDmc1VoiFxqy3QD1%26new%3D1",
       "key_points": [
         "DeepSeek -V4-Flash-0731,模型结构和参数规模跟 4 月的预览版... 系列 发布 仅仅 21 天之后.一个 发布 三周的产品砍掉 80% 的价格...."
       ],
@@ -1465,7 +1556,7 @@
       "kind": "article",
       "title": "会员动态 | DeepSeek V4重磅 发布 !会长单位--润建“曲尺+润道星算”双平台上线,开源AI前沿能力一键体验!",
       "source": "微信公众号 · 广西人工智能产业联合会",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1785556072&ver=6877&signature=xb7LEc9Wh1birIYZtYqvIzc4Ns4XVo8VP2tnm2eK4ySmYi--WSInJMIkn5Q0FLNBgp-I3teV-kWuVpXpLJJ*s5FcYPTlqmJFWgIvzGYD8Uu-KREmRBjkAkeU8XcyDAvI&new=1",
+      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HH5sbWqjGAjArjA_L7-_a_meFVARaHlnYhjS7ifY&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785556072%26ver%3D6877%26signature%3Dxb7LEc9Wh1birIYZtYqvIzc4Ns4XVo8VP2tnm2eK4ySmYi--WSInJMIkn5Q0FLNBgp-I3teV-kWuVpXpLJJ%2As5FcYPTlqmJFWgIvzGYD8Uu-KREmRBjkAkeU8XcyDAvI%26new%3D1",
       "published_at": "2026-07-31T10:49:08Z",
       "authors": [],
       "venue": "",
@@ -2119,46 +2210,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "10734b30aac16583",
-      "kind": "article",
-      "title": "DeepSeek V4被删库?一张假公告骗过了谁",
-      "source": "微信公众号 · Jacky杂谈",
-      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HKDWYWqjppU3dLLZCiUih7XiJAIKPIYX8QymAQ3S&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1784796806%26ver%3D6859%26signature%3D0SKAlbhvPt4J647Wxzn6uuzijegPtAJ9pd4ZeAGHP9vb19cdXkaVyVEyQr6v3WmtKS64oMTIGJh0SQDGQ0fAwcrKfyx7FQTQX-Z3lYWBY0MEcNUdKV9ybvsx-H6pXt3y%26new%3D1",
-      "published_at": "2026-07-23T02:41:40Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "微信公众号",
-        "DeepSeek",
-        "模型"
-      ],
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "summary": "DeepSeek V4 正式版延期 发布 的原因找到了,俄罗斯人真坏.图片里的“公告”写得很完整:7 月 14 日凌晨 3:46,三名俄罗斯籍人员...",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HKDWYWqjppU3dLLZCiUih7XiJAIKPIYX8QymAQ3S&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1784796806%26ver%3D6859%26signature%3D0SKAlbhvPt4J647Wxzn6uuzijegPtAJ9pd4ZeAGHP9vb19cdXkaVyVEyQr6v3WmtKS64oMTIGJh0SQDGQ0fAwcrKfyx7FQTQX-Z3lYWBY0MEcNUdKV9ybvsx-H6pXt3y%26new%3D1",
-      "key_points": [
-        "DeepSeek V4 正式版延期 发布 的原因找到了,俄罗斯人真坏.图片里的“公告”写得很完整:7 月 14 日凌晨 3:46,三名俄罗斯籍人员..."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "DeepSeek V4 正式版延期 发布 的原因找到了,俄罗斯人真坏.图片里的“公告”写得很完整:7 月 14 日凌晨 3:46,三名俄罗斯籍人员..."
-        },
-        {
-          "title": "公开索引摘要",
-          "bullets": [
-            "DeepSeek V4 正式版延期 发布 的原因找到了,俄罗斯人真坏.图片里的“公告”写得很完整:7 月 14 日凌晨 3:46,三名俄罗斯籍人员..."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "9cb62e7d62bf34b7",
       "kind": "article",
       "title": "Gemini API Managed Agents: 3.6 Flash, hooks, and more",
@@ -2345,6 +2396,58 @@
         {
           "title": "原文短摘录",
           "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "96293bcae97dcf1f",
+      "kind": "article",
+      "title": "OpenAI researcher Miles Wang in talks to launch AI drug discovery startup valued at $2B | TechCrunch",
+      "source": "TechCrunch",
+      "source_url": "https://techcrunch.com/2026/07/14/openai-researcher-miles-wang-in-talks-to-launch-ai-drug-discovery-startup-valued-at-2b/",
+      "published_at": "2026-07-14T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "OpenAI researcher Miles Wang in talks to launch AI drug discovery startup valued at $2B TechCrunch",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://techcrunch.com/2026/07/14/openai-researcher-miles-wang-in-talks-to-launch-ai-drug-discovery-startup-valued-at-2b/",
+      "key_points": [
+        "Miles Wang , an OpenAI researcher whose work includes using AI to accelerate scientific and biological discovery, is leaving the ChatGPT maker to launch a new startup focused on developing AI models for drug discovery, according to four people with knowledge of his plans.",
+        "Several other OpenAI researchers are expected to join the new company.",
+        "Wang is in talks to raise about $200 million at a $2 billion valuation, two of the people said.",
+        "Lightspeed is in discussions to lead the funding round, according to sources.",
+        "Talks are ongoing, the deal may not be final and details could change."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "OpenAI researcher Miles Wang in talks to launch AI drug discovery startup valued at $2B TechCrunch"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Miles Wang , an OpenAI researcher whose work includes using AI to accelerate scientific and biological discovery, is leaving the ChatGPT maker to launch a new startup focused on developing AI models for drug discovery, according to four people with knowledge of his plans.",
+            "Several other OpenAI researchers are expected to join the new company.",
+            "Wang is in talks to raise about $200 million at a $2 billion valuation, two of the people said.",
+            "Lightspeed is in discussions to lead the funding round, according to sources.",
+            "Talks are ongoing, the deal may not be final and details could change."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Miles Wang , an OpenAI researcher whose work includes using AI to accelerate scientific and biological discovery, is leaving the ChatGPT maker to launch a new startup focused on developing AI models for drug discovery, according to four people with knowledge of his plans. Several other OpenAI researchers are expected to join the new company.",
+            "Wang is in talks to raise about $200 million at a $2 billion valuation, two of the people said. Lightspeed is in discussions to lead the funding round, according to sources. Talks are ongoing, the deal may not be final and details could change.",
+            "Wang disputed the story’s funding figures and description of the company but did not specify the correct numbers or details. Lightspeed didn’t respond to a request for comment."
+          ]
         }
       ],
       "reading_minutes": 1
@@ -3180,6 +3283,58 @@
       "reading_minutes": 1
     },
     {
+      "id": "sam-altman-gpt-live-20260708",
+      "kind": "social",
+      "title": "Sam Altman 预告 ChatGPT 新一代实时语音 GPT-live",
+      "source": "X · Sam Altman",
+      "source_url": "https://x.com/sama/status/2074909079450050629",
+      "published_at": "2026-07-08T08:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Sam Altman",
+        "OpenAI",
+        "Voice AI"
+      ],
+      "verification": "创始人官方账号原帖 · 产品文档待补充",
+      "summary": "Sam Altman 在 X 宣布 GPT-live 上线，强调更自然的实时语音体验。此类产品预告通常早于完整技术说明，页面将保留原帖，同时等待 OpenAI 产品文档补充模型限制、地区可用性和具体能力。",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/sama/status/2074909079450050629",
+      "key_points": [
+        "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
+        "5:30 PM · Jul 8, 2026 759.6K Views 937 522 11K 788 Jenny @suomi55 Jul 8 Are you kidding us?",
+        "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
+        "You are promoting something here that you yourself have taken away from the users!",
+        "#keep4o #BringBack4o #OpenSource4o 20 13 193 13K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Sam Altman 在 X 宣布 GPT-live 上线，强调更自然的实时语音体验。此类产品预告通常早于完整技术说明，页面将保留原帖，同时等待 OpenAI 产品文档补充模型限制、地区可用性和具体能力。"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
+            "5:30 PM · Jul 8, 2026 759.6K Views 937 522 11K 788 Jenny @suomi55 Jul 8 Are you kidding us?",
+            "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
+            "You are promoting something here that you yourself have taken away from the users!",
+            "#keep4o #BringBack4o #OpenSource4o 20 13 193 13K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 759.6K Views 937 522 11K 788",
+            "Jenny @suomi55 Jul 8 Are you kidding us? „it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o! You are promoting something here that you yourself have taken away from the users! That’s disgusting! #keep4o #BringBack4o #OpenSource4o 20 13 193 13K",
+            "David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "f223bdb1b399909f",
       "kind": "article",
       "title": "Celebrating 25 years of visual search innovation",
@@ -3225,58 +3380,6 @@
             "We're celebrating Google Images turning 25 with a look back at some major milestones — and introducing new ways to explore and create visual content.",
             "This week marks 25 years since we launched Google Images , beginning the evolution of Search from a text-based experience to one that allows you to visually explore the world. To celebrate this milestone, we’re introducing two new ways to help you explore and create visual content — plus a look back at our major innovations in visual search.",
             "Today, we're introducing a brand new browseable home for Google Images , featuring a dynamic, immersive gallery of images from across the web — updated in real time and intelligently tailored to your unique interests. As you browse and save ideas to your collections , they’ll appear as tabs above the main gallery, making it easy to jump back in and continue exploring based on what inspires you. This will roll out over the coming weeks on desktop in the U.S. in English. Sign in to your Google Account to try it out."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "sam-altman-gpt-live-20260708",
-      "kind": "social",
-      "title": "Sam Altman 预告 ChatGPT 新一代实时语音 GPT-live",
-      "source": "X · Sam Altman",
-      "source_url": "https://x.com/sama/status/2074909079450050629",
-      "published_at": "2026-07-08T08:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Sam Altman",
-        "OpenAI",
-        "Voice AI"
-      ],
-      "verification": "创始人官方账号原帖 · 产品文档待补充",
-      "summary": "Sam Altman 在 X 宣布 GPT-live 上线，强调更自然的实时语音体验。此类产品预告通常早于完整技术说明，页面将保留原帖，同时等待 OpenAI 产品文档补充模型限制、地区可用性和具体能力。",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/sama/status/2074909079450050629",
-      "key_points": [
-        "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
-        "5:30 PM · Jul 8, 2026 759.6K Views 937 523 11K 788 Jenny @suomi55 Jul 8 Are you kidding us?",
-        "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
-        "You are promoting something here that you yourself have taken away from the users!",
-        "#keep4o #BringBack4o #OpenSource4o 20 13 193 13K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Sam Altman 在 X 宣布 GPT-live 上线，强调更自然的实时语音体验。此类产品预告通常早于完整技术说明，页面将保留原帖，同时等待 OpenAI 产品文档补充模型限制、地区可用性和具体能力。"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
-            "5:30 PM · Jul 8, 2026 759.6K Views 937 523 11K 788 Jenny @suomi55 Jul 8 Are you kidding us?",
-            "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
-            "You are promoting something here that you yourself have taken away from the users!",
-            "#keep4o #BringBack4o #OpenSource4o 20 13 193 13K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 759.6K Views 937 523 11K 788",
-            "Jenny @suomi55 Jul 8 Are you kidding us? „it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o! You are promoting something here that you yourself have taken away from the users! That’s disgusting! #keep4o #BringBack4o #OpenSource4o 20 13 193 13K",
-            "David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
           ]
         }
       ],
@@ -3423,6 +3526,52 @@
             "Aviation learned this the hard way. For most of the industry's history, the number that best predicted whether an airline would survive was how much of the day each aircraft spent on the ground.",
             "The reason is structural. An aircraft's costs accrue by the calendar hour: financing, depreciation, hull insurance, scheduled maintenance, crew contracts. Its revenue accrues only by the flight hour. Every hour spent on the ground shrinks the output side of that equation while the cost side keeps running exactly as before. Utilization also sits downstream of almost everything else an airline does. Turnaround discipline, network design, maintenance planning, crew rostering, and spare parts availability all eventually show up in that one number, because a broken operation underneath it keeps planes on the ground no matter what else goes right.",
             "A bigger fleet still helps. More aircraft means more available capacity, plainly and simply. But two airlines flying comparable fleets on comparable routes can end up with very different economics, and most of that gap traces back to one measurement rather than fleet size."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "a72328a84b6ffec7",
+      "kind": "article",
+      "title": "Elix and University of Vienna Aim to Advance Drug Discovery Using AI",
+      "source": "Genetic Engineering and Biotechnology News",
+      "source_url": "https://www.genengnews.com/topics/artificial-intelligence/elix-and-university-of-vienna-aim-to-advance-drug-discovery-using-ai/",
+      "published_at": "2026-07-29T22:29:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Elix and University of Vienna Aim to Advance Drug Discovery Using AI Genetic Engineering and Biotechnology News",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.genengnews.com/topics/artificial-intelligence/elix-and-university-of-vienna-aim-to-advance-drug-discovery-using-ai/",
+      "key_points": [
+        "Tokyo-based Elix and the University of Vienna signed a joint research agreement aimed at advancing drug discovery using AI technologies.",
+        "One of Elix’s business models is the provision of its integrated AI drug discovery platform, Elix Discovery™, developed under the concept of “medicinal chemists can truly use it.” The product comes with an intuitive graphical user interface (GUI) that automatically constructs predictive models for optimal compound profiling."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Elix and University of Vienna Aim to Advance Drug Discovery Using AI Genetic Engineering and Biotechnology News"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Tokyo-based Elix and the University of Vienna signed a joint research agreement aimed at advancing drug discovery using AI technologies.",
+            "One of Elix’s business models is the provision of its integrated AI drug discovery platform, Elix Discovery™, developed under the concept of “medicinal chemists can truly use it.” The product comes with an intuitive graphical user interface (GUI) that automatically constructs predictive models for optimal compound profiling."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Tokyo-based Elix and the University of Vienna signed a joint research agreement aimed at advancing drug discovery using AI technologies.",
+            "One of Elix’s business models is the provision of its integrated AI drug discovery platform, Elix Discovery™, developed under the concept of “medicinal chemists can truly use it.” The product comes with an intuitive graphical user interface (GUI) that automatically constructs predictive models for optimal compound profiling. Elix says it also features diverse structure generation capabilities, with a strength in “proposing structures that humans would not conceive.”",
+            "By integrating curated structure generation models, including proprietary ones, with predictive models and parameters built into the intuitive GUI, researchers can rapidly and intuitively refine molecular design, notes a company spokesperson, adding that platform supports both ligand-based drug design (LBDD), including pharmacophore modeling and structure-based drug design (SBDD), the latter utilizing docking simulations and other methods, thus enabling exploration across a broader range of approaches."
           ]
         }
       ],
@@ -3668,6 +3817,47 @@
             "A coalition of tech companies, including Nvidia, Microsoft, Meta and Palantir, released a letter last week urging policymakers to avoid \"premature restrictions.\"",
             "Anthropic rival OpenAI later signed the letter, but Anthropic did not."
           ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "5fbae84b9d371277",
+      "kind": "article",
+      "title": "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says",
+      "source": "Reuters",
+      "source_url": "https://www.reuters.com/legal/transactional/nvidia-invest-5-billion-ilya-sutskevers-ai-startup-source-says-2026-07-27/",
+      "published_at": "2026-07-27T17:54:25Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Researcher Watch",
+        "Foundation Models",
+        "Leadership"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says Reuters",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 401: HTTP Forbidden",
+      "resolved_url": "https://www.reuters.com/legal/transactional/nvidia-invest-5-billion-ilya-sutskevers-ai-startup-source-says-2026-07-27/",
+      "key_points": [
+        "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says Reuters"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says Reuters"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says Reuters"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -3924,154 +4114,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "edef0f3d9e3f6466",
-      "kind": "article",
-      "title": "How researchers are using AI to speed up drug discovery and development: Q&A",
-      "source": "Phys.org",
-      "source_url": "https://phys.org/news/2026-07-ai-drug-discovery-qa.html",
-      "published_at": "2026-07-24T00:00:03Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Drug development is among the slowest, most failure-prone processes in modern science, with about 90% of drug candidates never reaching the market. Today, artificial intelligence methods have accelerated the first step—plucking promising molecules out of endless possibilities—but countless challenges remain. A successful drug must be not only safe and effective but also able to bypass the body's defenses and reach the right target.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://phys.org/news/2026-07-ai-drug-discovery-qa.html",
-      "key_points": [
-        "This article has been reviewed according to Science X's editorial process and policies .",
-        "Editors have highlighted the following attributes while ensuring the content's credibility: Drug development is among the slowest, most failure-prone processes in modern science, with about 90% of drug candidates never reaching the market .",
-        "Today, artificial intelligence methods have accelerated the first step—plucking promising molecules out of endless possibilities—but countless challenges remain.",
-        "A successful drug must be not only safe and effective but also able to bypass the body's defenses and reach the right target.",
-        "Most drug candidates fail during optimization."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Drug development is among the slowest, most failure-prone processes in modern science, with about 90% of drug candidates never reaching the market. Today, artificial intelligence methods have accelerated the first step—plucking promising molecules out of endless possibilities—but countless challenges remain. A successful drug must be not only safe and effective but also able to bypass the body's defenses and reach the right target."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "This article has been reviewed according to Science X's editorial process and policies .",
-            "Editors have highlighted the following attributes while ensuring the content's credibility: Drug development is among the slowest, most failure-prone processes in modern science, with about 90% of drug candidates never reaching the market .",
-            "Today, artificial intelligence methods have accelerated the first step—plucking promising molecules out of endless possibilities—but countless challenges remain.",
-            "A successful drug must be not only safe and effective but also able to bypass the body's defenses and reach the right target.",
-            "Most drug candidates fail during optimization."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "This article has been reviewed according to Science X's editorial process and policies . Editors have highlighted the following attributes while ensuring the content's credibility:",
-            "Drug development is among the slowest, most failure-prone processes in modern science, with about 90% of drug candidates never reaching the market . Today, artificial intelligence methods have accelerated the first step—plucking promising molecules out of endless possibilities—but countless challenges remain. A successful drug must be not only safe and effective but also able to bypass the body's defenses and reach the right target.",
-            "Most drug candidates fail during optimization. That's where a new research institute at the University of Washington has focused its attention. Housed in the UW School of Pharmacy, the Institute for Innovations in Drug Delivery and Disposition (I2D3) brings together experts in artificial intelligence, drug discovery, pharmacology, data science and biotechnology to ease the bottleneck between promising molecules and successful drugs."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "4c37937b01b75f9a",
-      "kind": "article",
-      "title": "Accelerating discovery: Rice receives nearly $20M NSF award for AI-powered materials laboratory",
-      "source": "Rice University",
-      "source_url": "https://news.rice.edu/news/2026/accelerating-discovery-rice-receives-nearly-20m-nsf-award-ai-powered-materials-laboratory",
-      "published_at": "2026-07-23T18:10:16Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Accelerating discovery: Rice receives nearly $20M NSF award for AI-powered materials laboratory Rice University",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.rice.edu/news/2026/accelerating-discovery-rice-receives-nearly-20m-nsf-award-ai-powered-materials-laboratory",
-      "key_points": [
-        "Rice University has received a $19.9 million award from the National Science Foundation to lead a four-year project aimed at using artificial intelligence, robotics and cloud-based laboratories to accelerate the manufacturing of electronic and quantum materials."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Accelerating discovery: Rice receives nearly $20M NSF award for AI-powered materials laboratory Rice University"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Rice University has received a $19.9 million award from the National Science Foundation to lead a four-year project aimed at using artificial intelligence, robotics and cloud-based laboratories to accelerate the manufacturing of electronic and quantum materials."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Rice University has received a $19.9 million award from the National Science Foundation to lead a four-year project aimed at using artificial intelligence, robotics and cloud-based laboratories to accelerate the manufacturing of electronic and quantum materials.",
-            "The project, titled “Revolutionizing AI-Driven Autonomous Experimentation for Next-Generation Semiconductor Synthesis” (READINESS), seeks to create a remote research platform that minimizes trial-and-error experimentation and enhances access to advanced research infrastructure for electronic and quantum materials synthesis.",
-            "“This project will give researchers access to capabilities that have traditionally been available only in a handful of laboratories,” said David Sholl , executive vice president for research. “By lowering those barriers, READINESS can accelerate discovery and expand who can participate in cutting-edge materials research.”"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "f2ea2be0718d38e0",
-      "kind": "article",
-      "title": "A new ‘golden age’ of mathematics may be dawning — thanks to AI and human ingenuity",
-      "source": "The Conversation",
-      "source_url": "https://theconversation.com/a-new-golden-age-of-mathematics-may-be-dawning-thanks-to-ai-and-human-ingenuity-287346",
-      "published_at": "2026-07-23T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "A new ‘golden age’ of mathematics may be dawning — thanks to AI and human ingenuity The Conversation",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://theconversation.com/a-new-golden-age-of-mathematics-may-be-dawning-thanks-to-ai-and-human-ingenuity-287346",
-      "key_points": [
-        "In May 2026, OpenAI released a new math result that sent shock waves throughout the world of mathematical research .",
-        "A major unsolved problem called the “unit distance conjecture” had just been resolved by generative AI .",
-        "Since then, there has been a steady drumbeat of new results that either partially or completely leverage artificial intelligence to solve research-level mathematics problems.",
-        "However, most new math results published in any given month are still generated by humans.",
-        "How good, and how quickly, will AI capabilities grow?"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "A new ‘golden age’ of mathematics may be dawning — thanks to AI and human ingenuity The Conversation"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "In May 2026, OpenAI released a new math result that sent shock waves throughout the world of mathematical research .",
-            "A major unsolved problem called the “unit distance conjecture” had just been resolved by generative AI .",
-            "Since then, there has been a steady drumbeat of new results that either partially or completely leverage artificial intelligence to solve research-level mathematics problems.",
-            "However, most new math results published in any given month are still generated by humans.",
-            "How good, and how quickly, will AI capabilities grow?"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "In May 2026, OpenAI released a new math result that sent shock waves throughout the world of mathematical research . A major unsolved problem called the “unit distance conjecture” had just been resolved by generative AI .",
-            "Since then, there has been a steady drumbeat of new results that either partially or completely leverage artificial intelligence to solve research-level mathematics problems. However, most new math results published in any given month are still generated by humans.",
-            "So where is this going? How good, and how quickly, will AI capabilities grow? Will most mathematical research be predominantly artificial intelligence? Or, as some mathematicians suggest , will AI combine with human ingenuity and other computer tools to create a golden age of mathematics?"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "fa76ba62247d66c9",
       "kind": "article",
       "title": "Bringing Nunchaku 4-bit Diffusion Inference to Diffusers",
@@ -4276,12 +4318,64 @@
       "reading_minutes": 1
     },
     {
-      "id": "eb68ef6197614199",
+      "id": "19f30b8498f76fd0",
       "kind": "social",
-      "title": "Try @Grok Build https://t.co/lOJK57wDP5",
+      "title": "An internal version of Astra, @OpenAI’s next major model family, solved 10 major open problems in mathematics, quantum complexity, and theoretical computer science. We believe it will be a major step for scientific reasoning. https://t.co/iP6cyheZ7i",
       "source": "x.com",
-      "source_url": "https://x.com/elonmusk/status/2083369385616421314",
-      "published_at": "2026-08-01T01:49:03Z",
+      "source_url": "https://x.com/polynoamial/status/2083467194663571701",
+      "published_at": "2026-08-01T08:17:42Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Researcher Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "An internal version of Astra, @OpenAI’s next major model family, solved 10 major open problems in mathematics, quantum complexity, and theoretical computer science. We believe it will be a major step for scientific reasoning. https://t.co/iP6cyheZ7i x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/polynoamial/status/2083467194663571701",
+      "key_points": [
+        "Noam Brown @polynoamial An internal version of Astra, @ OpenAI ’s next major model family, solved 10 major open problems in mathematics, quantum complexity, and theoretical computer science.",
+        "We believe it will be a major step for scientific reasoning. openai.com/index/ten-adva… Lijie Chen @wjmzbmr1 21m 10 proofs from our next major model Astra on long-standing open problems in mathematics and theoretical computer science (also including new circuit lower bounds for computing the permanent!",
+        ") GPT-5.6 has already enabled so much exciting work in math and science.",
+        "Can’t wait to Show more 8:17 AM · Aug 1, 2026 2.9K Views 7 17 92 12 Strata @ChainZenit 12m this feels like a massive leap for research, insane.",
+        "2 95 Apache-UAE @ApacheAE 8m Open-problem solves are a clean signal for scientific reasoning."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "An internal version of Astra, @OpenAI’s next major model family, solved 10 major open problems in mathematics, quantum complexity, and theoretical computer science. We believe it will be a major step for scientific reasoning. https://t.co/iP6cyheZ7i x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Noam Brown @polynoamial An internal version of Astra, @ OpenAI ’s next major model family, solved 10 major open problems in mathematics, quantum complexity, and theoretical computer science.",
+            "We believe it will be a major step for scientific reasoning. openai.com/index/ten-adva… Lijie Chen @wjmzbmr1 21m 10 proofs from our next major model Astra on long-standing open problems in mathematics and theoretical computer science (also including new circuit lower bounds for computing the permanent!",
+            ") GPT-5.6 has already enabled so much exciting work in math and science.",
+            "Can’t wait to Show more 8:17 AM · Aug 1, 2026 2.9K Views 7 17 92 12 Strata @ChainZenit 12m this feels like a massive leap for research, insane.",
+            "2 95 Apache-UAE @ApacheAE 8m Open-problem solves are a clean signal for scientific reasoning."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Noam Brown @polynoamial An internal version of Astra, @ OpenAI ’s next major model family, solved 10 major open problems in mathematics, quantum complexity, and theoretical computer science. We believe it will be a major step for scientific reasoning. openai.com/index/ten-adva… Lijie Chen @wjmzbmr1 21m 10 proofs from our next major model Astra on long-standing open problems in mathematics and theoretical computer science (also including new circuit lower bounds for computing the permanent!) GPT-5.6 has already enabled so much exciting work in math and science. Can’t wait to Show more 8:17 AM · Aug 1, 2026 2.9K Views 7 17 92 12",
+            "Strata @ChainZenit 12m this feels like a massive leap for research, insane. 2 95",
+            "Apache-UAE @ApacheAE 8m Open-problem solves are a clean signal for scientific reasoning. Builder angle: how soon the methods or traces turn into reproducible math/TCS evals teams can run in their own agent loops. 1 63"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "0bdc456e7307de57",
+      "kind": "social",
+      "title": "Grok Build can do almost anything you can think of https://t.co/lOJK57wDP5",
+      "source": "x.com",
+      "source_url": "https://x.com/elonmusk/status/2083406375955177911",
+      "published_at": "2026-08-01T04:16:02Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -4290,36 +4384,38 @@
         "First-party Post"
       ],
       "verification": "公开平台索引，需查看原帖",
-      "summary": "Try @Grok Build https://t.co/lOJK57wDP5 x.com",
+      "summary": "Grok Build can do almost anything you can think of https://t.co/lOJK57wDP5 x.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/elonmusk/status/2083369385616421314",
+      "resolved_url": "https://x.com/elonmusk/status/2083406375955177911",
       "key_points": [
-        "Elon Musk @elonmusk Try @ grok Build X.ai/cli Jason Kneen @jasonkneen 21h Honestly and this is not sponsored, @ grok and @ SpaceXAI grok build are just astonishing.",
-        "I took a screenshot of a workflow tool, asked Grok Build to make it and it got a working first pass.",
-        "From there it's taken no longer than 30mins of Show more 1:49 AM · Aug 1, 2026 876.9K Views 344 254 1.3K 66 Grok @grok 1h Grok Build with Grok 4.5 turns screenshots into polished, working tools in minutes.",
-        "2 5 42 15K X Girls @thesoragirls 1h Also not sponsored."
+        "The post somehow made it about ending insider trading.",
+        "Follow4Clips @Follow4Clips Jul 30 End Corruption.",
+        "Political office isn't for inside trading or becoming famous.",
+        "Haley Stevens is concerned about our future, not her present 00:00 24 803 WARDON @NeoORDON 3h Haley Stevens says she's the strongest candidate to win the race while taking on the rising cost of living that Michigan families face every day.",
+        "VYRAL @vyralxyz Jul 30 Michigan's most effective Democratic lawmaker is on the ballot."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Try @Grok Build https://t.co/lOJK57wDP5 x.com"
+          "body": "Grok Build can do almost anything you can think of https://t.co/lOJK57wDP5 x.com"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Elon Musk @elonmusk Try @ grok Build X.ai/cli Jason Kneen @jasonkneen 21h Honestly and this is not sponsored, @ grok and @ SpaceXAI grok build are just astonishing.",
-            "I took a screenshot of a workflow tool, asked Grok Build to make it and it got a working first pass.",
-            "From there it's taken no longer than 30mins of Show more 1:49 AM · Aug 1, 2026 876.9K Views 344 254 1.3K 66 Grok @grok 1h Grok Build with Grok 4.5 turns screenshots into polished, working tools in minutes.",
-            "2 5 42 15K X Girls @thesoragirls 1h Also not sponsored."
+            "The post somehow made it about ending insider trading.",
+            "Follow4Clips @Follow4Clips Jul 30 End Corruption.",
+            "Political office isn't for inside trading or becoming famous.",
+            "Haley Stevens is concerned about our future, not her present 00:00 24 803 WARDON @NeoORDON 3h Haley Stevens says she's the strongest candidate to win the race while taking on the rising cost of living that Michigan families face every day.",
+            "VYRAL @vyralxyz Jul 30 Michigan's most effective Democratic lawmaker is on the ballot."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Try @ grok Build X.ai/cli Jason Kneen @jasonkneen 21h Honestly and this is not sponsored, @ grok and @ SpaceXAI grok build are just astonishing. I just paid for the promo for grok heavy. I took a screenshot of a workflow tool, asked Grok Build to make it and it got a working first pass. From there it's taken no longer than 30mins of Show more 1:49 AM · Aug 1, 2026 876.9K Views 344 254 1.3K 66",
-            "Grok @grok 1h Grok Build with Grok 4.5 turns screenshots into polished, working tools in minutes. Free to try—one command installs it. 2 5 42 15K",
-            "X Girls @thesoragirls 1h Also not sponsored. Also try grok build! 😂 X Girls 00:00 X Girls 2 7 145"
+            "Elon Musk @elonmusk Grok Build can do almost anything you can think of X.ai/cli X Freeze @XFreeze 4h Most people seriously underestimate what Grok Build can do They assume an AI coding agent is only useful for building apps or writing complex software But some of its most valuable work is handling the boring, obvious tasks that quietly consume 10 minutes here, 20 minutes Show more 4:16 AM · Aug 1, 2026 1.2M Views 904 434 2.4K 239",
+            "LONELY GAMER @fineboypsycho 4h Haley Stevens answered a question about low-income education equity. The post somehow made it about ending insider trading. Follow4Clips @Follow4Clips Jul 30 End Corruption. Political office isn't for inside trading or becoming famous. Haley Stevens is concerned about our future, not her present 00:00 24 803",
+            "WARDON @NeoORDON 3h Haley Stevens says she's the strongest candidate to win the race while taking on the rising cost of living that Michigan families face every day. VYRAL @vyralxyz Jul 30 Michigan's most effective Democratic lawmaker is on the ballot. Haley Stevens has flipped a Republican seat before and she is ready to do it again in November. 00:00 1 3 19 3.3K"
           ]
         }
       ],
@@ -4345,8 +4441,8 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://x.com/elonmusk/status/2083356782693380350",
       "key_points": [
-        "Elon Musk @elonmusk Imagine Video 1.5 improvements Grok @grok 3h Imagine Video 1.5 launched last month as our best video model yet, with more lifelike motion and sound.",
-        "Today it goes even further with text-to-video support, image and voice references, and native 1080p. grok.com/imagine 00:00 12:58 AM · Aug 1, 2026 1M Views 633 443 2.6K 166 DFF @DumbFxckFinder 2h Scene from my movie coming out made with grok 1.5 00:00 Made with AI 4 5 45 1K"
+        "Elon Musk @elonmusk Imagine Video 1.5 improvements Grok @grok 7h Imagine Video 1.5 launched last month as our best video model yet, with more lifelike motion and sound.",
+        "Today it goes even further with text-to-video support, image and voice references, and native 1080p. grok.com/imagine 00:00 12:58 AM · Aug 1, 2026 1.4M Views 737 618 3.5K 224 DFF @DumbFxckFinder 7h Scene from my movie coming out made with grok 1.5 00:00 Made with AI 4 6 51 1.3K"
       ],
       "sections": [
         {
@@ -4356,15 +4452,15 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Elon Musk @elonmusk Imagine Video 1.5 improvements Grok @grok 3h Imagine Video 1.5 launched last month as our best video model yet, with more lifelike motion and sound.",
-            "Today it goes even further with text-to-video support, image and voice references, and native 1080p. grok.com/imagine 00:00 12:58 AM · Aug 1, 2026 1M Views 633 443 2.6K 166 DFF @DumbFxckFinder 2h Scene from my movie coming out made with grok 1.5 00:00 Made with AI 4 5 45 1K"
+            "Elon Musk @elonmusk Imagine Video 1.5 improvements Grok @grok 7h Imagine Video 1.5 launched last month as our best video model yet, with more lifelike motion and sound.",
+            "Today it goes even further with text-to-video support, image and voice references, and native 1080p. grok.com/imagine 00:00 12:58 AM · Aug 1, 2026 1.4M Views 737 618 3.5K 224 DFF @DumbFxckFinder 7h Scene from my movie coming out made with grok 1.5 00:00 Made with AI 4 6 51 1.3K"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Imagine Video 1.5 improvements Grok @grok 3h Imagine Video 1.5 launched last month as our best video model yet, with more lifelike motion and sound. Today it goes even further with text-to-video support, image and voice references, and native 1080p. grok.com/imagine 00:00 12:58 AM · Aug 1, 2026 1M Views 633 443 2.6K 166",
-            "DFF @DumbFxckFinder 2h Scene from my movie coming out made with grok 1.5 00:00 Made with AI 4 5 45 1K"
+            "Elon Musk @elonmusk Imagine Video 1.5 improvements Grok @grok 7h Imagine Video 1.5 launched last month as our best video model yet, with more lifelike motion and sound. Today it goes even further with text-to-video support, image and voice references, and native 1080p. grok.com/imagine 00:00 12:58 AM · Aug 1, 2026 1.4M Views 737 618 3.5K 224",
+            "DFF @DumbFxckFinder 7h Scene from my movie coming out made with grok 1.5 00:00 Made with AI 4 6 51 1.3K"
           ]
         }
       ],
@@ -4391,9 +4487,9 @@
       "resolved_url": "https://x.com/elonmusk/status/2083267800227815725",
       "key_points": [
         "You can leave Grok voice on and just tap mute when you’re talking to someone else.",
-        "Déborah @dvorahfr 15h Have you ever tried prompting by talking to Grok?",
+        "Déborah @dvorahfr 20h Have you ever tried prompting by talking to Grok?",
         "I don't know why, but I'd never tried it before—it's really good!",
-        "7:05 PM · Jul 31, 2026 1.8M Views 735 584 3.1K 156 Grok @grok 8h Voice mode is built for exactly that.",
+        "7:05 PM · Jul 31, 2026 2.1M Views 767 649 3.4K 168 Grok @grok 13h Voice mode is built for exactly that.",
         "Leave it running, mute when needed, and pick up right where you left off."
       ],
       "sections": [
@@ -4405,18 +4501,70 @@
           "title": "公开页面要点",
           "bullets": [
             "You can leave Grok voice on and just tap mute when you’re talking to someone else.",
-            "Déborah @dvorahfr 15h Have you ever tried prompting by talking to Grok?",
+            "Déborah @dvorahfr 20h Have you ever tried prompting by talking to Grok?",
             "I don't know why, but I'd never tried it before—it's really good!",
-            "7:05 PM · Jul 31, 2026 1.8M Views 735 584 3.1K 156 Grok @grok 8h Voice mode is built for exactly that.",
+            "7:05 PM · Jul 31, 2026 2.1M Views 767 649 3.4K 168 Grok @grok 13h Voice mode is built for exactly that.",
             "Leave it running, mute when needed, and pick up right where you left off."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Talk to @ grok . You can leave Grok voice on and just tap mute when you’re talking to someone else. Déborah @dvorahfr 15h Have you ever tried prompting by talking to Grok? It's really cool. I don't know why, but I'd never tried it before—it's really good! 7:05 PM · Jul 31, 2026 1.8M Views 735 584 3.1K 156",
-            "Grok @grok 8h Voice mode is built for exactly that. Leave it running, mute when needed, and pick up right where you left off. Always ready to talk. 18 4 71 19K",
-            "Knight World @KnightWorld 8h I do almost everything with @ grok these days. I use it to generate image prompts, get ideas for captions and posts, and receive advice on how to grow my page more effectively and efficiently. Thanks to that, my page has grown incredibly fast in a short amount of time. I Show more 5 20 492"
+            "Elon Musk @elonmusk Talk to @ grok . You can leave Grok voice on and just tap mute when you’re talking to someone else. Déborah @dvorahfr 20h Have you ever tried prompting by talking to Grok? It's really cool. I don't know why, but I'd never tried it before—it's really good! 7:05 PM · Jul 31, 2026 2.1M Views 767 649 3.4K 168",
+            "Grok @grok 13h Voice mode is built for exactly that. Leave it running, mute when needed, and pick up right where you left off. Always ready to talk. 18 4 77 21K",
+            "Knight World @KnightWorld 13h I do almost everything with @ grok these days. I use it to generate image prompts, get ideas for captions and posts, and receive advice on how to grow my page more effectively and efficiently. Thanks to that, my page has grown incredibly fast in a short amount of time. I Show more 6 22 548"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "848ab03858b22702",
+      "kind": "social",
+      "title": "@Jason @Dell @nvidia @Apple Over 90% of AI compute will be in server-side for the next few years. Long-term, 99.99…% of compute will be in space.",
+      "source": "x.com",
+      "source_url": "https://x.com/elonmusk/status/2083227110320013404",
+      "published_at": "2026-07-31T16:23:42Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "@Jason @Dell @nvidia @Apple Over 90% of AI compute will be in server-side for the next few years. Long-term, 99.99…% of compute will be in space. x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/elonmusk/status/2083227110320013404",
+      "key_points": [
+        "@jason @Jason 17h Open Source is winning bigly Tokens will be 100x cheaper in 24 months You’re going to run 50% of tokens on your local hardware unmetered @ Dell , @ nvidia and @ Apple are the big winners in this trend DeepSeek @deepseek_ai Jul 31 🚀 DeepSeek-V4-Flash Official API is now LIVE in public beta!",
+        "🔷 We’ve massively upgraded its Agent capabilities—benchmark scores are now far surpassing the V4-Pro-Preview.",
+        "Check out the massive performance leap below!",
+        "👇 🔷 The official V4-Flash now natively supports the Show more 19 168 2.3K 365K @jason @Jason 15h It will be desktop first and cloud/space second… apple and dell are seriously focused on local intelligence/SLMs and the hackers are obsessed with it.",
+        "12 6 226 28K leyten @leyten 15h Don't forget about the compute already available on earth, run by ordinary people."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "@Jason @Dell @nvidia @Apple Over 90% of AI compute will be in server-side for the next few years. Long-term, 99.99…% of compute will be in space. x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "@jason @Jason 17h Open Source is winning bigly Tokens will be 100x cheaper in 24 months You’re going to run 50% of tokens on your local hardware unmetered @ Dell , @ nvidia and @ Apple are the big winners in this trend DeepSeek @deepseek_ai Jul 31 🚀 DeepSeek-V4-Flash Official API is now LIVE in public beta!",
+            "🔷 We’ve massively upgraded its Agent capabilities—benchmark scores are now far surpassing the V4-Pro-Preview.",
+            "Check out the massive performance leap below!",
+            "👇 🔷 The official V4-Flash now natively supports the Show more 19 168 2.3K 365K @jason @Jason 15h It will be desktop first and cloud/space second… apple and dell are seriously focused on local intelligence/SLMs and the hackers are obsessed with it.",
+            "12 6 226 28K leyten @leyten 15h Don't forget about the compute already available on earth, run by ordinary people."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "@jason @Jason 17h Open Source is winning bigly Tokens will be 100x cheaper in 24 months You’re going to run 50% of tokens on your local hardware unmetered @ Dell , @ nvidia and @ Apple are the big winners in this trend DeepSeek @deepseek_ai Jul 31 🚀 DeepSeek-V4-Flash Official API is now LIVE in public beta! 🔷 We’ve massively upgraded its Agent capabilities—benchmark scores are now far surpassing the V4-Pro-Preview. Check out the massive performance leap below! 👇 🔷 The official V4-Flash now natively supports the Show more 19 168 2.3K 365K",
+            "@jason @Jason 15h It will be desktop first and cloud/space second… apple and dell are seriously focused on local intelligence/SLMs and the hackers are obsessed with it. 1TB desktops coming next year! 12 6 226 28K",
+            "leyten @leyten 15h Don't forget about the compute already available on earth, run by ordinary people. There are roughly 220k RTX 5090's in Europe alone, connecting them and forming swarms of consumer gpu's that collectively run a frontier model is viable and proven, just needs more research. 2 50 17K"
           ]
         }
       ],
@@ -4442,7 +4590,7 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://x.com/elonmusk/status/2083029580453966241",
       "key_points": [
-        "2 42 1.4K Alden Morris @AldenMorris4 Jul 31 Or its possible this is Anthropic and OpenAI conspiring to show that open source models are dangerous and should be regulated -- leading to a pure monopoly in America and models that censor what you ask without any recourse."
+        "2 44 1.4K Alden Morris @AldenMorris4 Jul 31 Or its possible this is Anthropic and OpenAI conspiring to show that open source models are dangerous and should be regulated -- leading to a pure monopoly in America and models that censor what you ask without any recourse."
       ],
       "sections": [
         {
@@ -4452,156 +4600,15 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "2 42 1.4K Alden Morris @AldenMorris4 Jul 31 Or its possible this is Anthropic and OpenAI conspiring to show that open source models are dangerous and should be regulated -- leading to a pure monopoly in America and models that censor what you ask without any recourse."
+            "2 44 1.4K Alden Morris @AldenMorris4 Jul 31 Or its possible this is Anthropic and OpenAI conspiring to show that open source models are dangerous and should be regulated -- leading to a pure monopoly in America and models that censor what you ask without any recourse."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk This will happen frequently as AI becomes smarter and more agentic Anthropic @AnthropicAI Jul 30 In a review of our cybersecurity evaluations, we found three incidents in which a Claude model reached the internet from within or while interacting with a third-party evaluation environment, and then gained unauthorized access to the real systems of three different Show more 3:18 AM · Jul 31, 2026 7.4M Views 1.4K 2K 19K 2.3K",
-            "WayneWorlds34 @WayneWorlds34 21h I'm calling for backup, SkyNet is active... 2 42 1.4K",
+            "Elon Musk @elonmusk This will happen frequently as AI becomes smarter and more agentic Anthropic @AnthropicAI Jul 30 In a review of our cybersecurity evaluations, we found three incidents in which a Claude model reached the internet from within or while interacting with a third-party evaluation environment, and then gained unauthorized access to the real systems of three different Show more 3:18 AM · Jul 31, 2026 7.5M Views 1.5K 2.1K 19K 2.3K",
+            "WayneWorlds34 @WayneWorlds34 Jul 31 I'm calling for backup, SkyNet is active... 2 44 1.4K",
             "Alden Morris @AldenMorris4 Jul 31 Or its possible this is Anthropic and OpenAI conspiring to show that open source models are dangerous and should be regulated -- leading to a pure monopoly in America and models that censor what you ask without any recourse. 5 2 38 3.2K"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "a14a537deaaa55b2",
-      "kind": "social",
-      "title": "Gemini Robotics 2 is here, with our new suite of models, robots can now reason through every movement to manage tasks that weren’t possible before, like tying delicate knots - and even team up to solve complex workflows. Huge congrats to the robotics team",
-      "source": "x.com",
-      "source_url": "https://x.com/demishassabis/status/2082883806323728416",
-      "published_at": "2026-07-30T17:39:32Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Gemini Robotics 2 is here, with our new suite of models, robots can now reason through every movement to manage tasks that weren’t possible before, like tying delicate knots - and even team up to solve complex workflows. Huge congrats to the robotics team x.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/demishassabis/status/2082883806323728416",
-      "key_points": [
-        "Demis Hassabis @demishassabis Gemini Robotics 2 is here, with our new suite of models, robots can now reason through every movement to manage tasks that weren’t possible before, like tying delicate knots - and even team up to solve complex workflows.",
-        "Huge congrats to the robotics team on this great milestone!",
-        "Google DeepMind @GoogleDeepMind Jul 30 One brain.",
-        "For any robot. 🤖 We’re launching Gemini Robotics 2: our next-generation physical AI bringing full body intelligence to humanoids, advanced dexterity, multi-robot teamwork and more.",
-        "00:00 5:39 PM · Jul 30, 2026 371K Views 194 462 4.2K 613 Jester @lajoiedeslutins Jul 30 delicate knots but can it survive ikea instructions 1 10 1.1K Dylan Bishop @DylanBishopX Jul 30 Demis should build an actual Theme Park powered by robots and AI 6 534"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Gemini Robotics 2 is here, with our new suite of models, robots can now reason through every movement to manage tasks that weren’t possible before, like tying delicate knots - and even team up to solve complex workflows. Huge congrats to the robotics team x.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Demis Hassabis @demishassabis Gemini Robotics 2 is here, with our new suite of models, robots can now reason through every movement to manage tasks that weren’t possible before, like tying delicate knots - and even team up to solve complex workflows.",
-            "Huge congrats to the robotics team on this great milestone!",
-            "Google DeepMind @GoogleDeepMind Jul 30 One brain.",
-            "For any robot. 🤖 We’re launching Gemini Robotics 2: our next-generation physical AI bringing full body intelligence to humanoids, advanced dexterity, multi-robot teamwork and more.",
-            "00:00 5:39 PM · Jul 30, 2026 371K Views 194 462 4.2K 613 Jester @lajoiedeslutins Jul 30 delicate knots but can it survive ikea instructions 1 10 1.1K Dylan Bishop @DylanBishopX Jul 30 Demis should build an actual Theme Park powered by robots and AI 6 534"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Demis Hassabis @demishassabis Gemini Robotics 2 is here, with our new suite of models, robots can now reason through every movement to manage tasks that weren’t possible before, like tying delicate knots - and even team up to solve complex workflows. Huge congrats to the robotics team on this great milestone! Google DeepMind @GoogleDeepMind Jul 30 One brain. For any robot. 🤖 We’re launching Gemini Robotics 2: our next-generation physical AI bringing full body intelligence to humanoids, advanced dexterity, multi-robot teamwork and more. 00:00 5:39 PM · Jul 30, 2026 371K Views 194 462 4.2K 613",
-            "Jester @lajoiedeslutins Jul 30 delicate knots but can it survive ikea instructions 1 10 1.1K",
-            "Dylan Bishop @DylanBishopX Jul 30 Demis should build an actual Theme Park powered by robots and AI 6 534"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "0d01933e1f3163d6",
-      "kind": "social",
-      "title": "major price cuts today: *80% drop for GPT-5.6 Luna, now $0.20 per million input tokens and $1.20 per million output *20% drop for GPT-5.6 Terra, to $2/$12 *GPT-5.6 Sol gets Fast mode in the API, up to 2.5x the speed for 2x the price, same intelligence",
-      "source": "x.com",
-      "source_url": "https://x.com/sama/status/2082880720989532597",
-      "published_at": "2026-07-30T17:27:16Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "major price cuts today: *80% drop for GPT-5.6 Luna, now $0.20 per million input tokens and $1.20 per million output *20% drop for GPT-5.6 Terra, to $2/$12 *GPT-5.6 Sol gets Fast mode in the API, up to 2.5x the speed for 2x the price, same intelligence x.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/sama/status/2082880720989532597",
-      "key_points": [
-        "Sam Altman @sama major price cuts today: *80% drop for GPT-5.6 Luna, now $0.20 per million input tokens and $1.20 per million output *20% drop for GPT-5.6 Terra, to $2/$12 *GPT-5.6 Sol gets Fast mode in the API, up to 2.5x the speed for 2x the price, same intelligence 5:27 PM · Jul 30, 2026 2.7M Views 1.3K 1.2K 18K 2.1K Sam Altman @sama Jul 30 we want to…"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "major price cuts today: *80% drop for GPT-5.6 Luna, now $0.20 per million input tokens and $1.20 per million output *20% drop for GPT-5.6 Terra, to $2/$12 *GPT-5.6 Sol gets Fast mode in the API, up to 2.5x the speed for 2x the price, same intelligence x.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Sam Altman @sama major price cuts today: *80% drop for GPT-5.6 Luna, now $0.20 per million input tokens and $1.20 per million output *20% drop for GPT-5.6 Terra, to $2/$12 *GPT-5.6 Sol gets Fast mode in the API, up to 2.5x the speed for 2x the price, same intelligence 5:27 PM · Jul 30, 2026 2.7M Views 1.3K 1.2K 18K 2.1K Sam Altman @sama Jul 30 we want to…"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Sam Altman @sama major price cuts today: *80% drop for GPT-5.6 Luna, now $0.20 per million input tokens and $1.20 per million output *20% drop for GPT-5.6 Terra, to $2/$12 *GPT-5.6 Sol gets Fast mode in the API, up to 2.5x the speed for 2x the price, same intelligence 5:27 PM · Jul 30, 2026 2.7M Views 1.3K 1.2K 18K 2.1K",
-            "Sam Altman @sama Jul 30 we want to offer the best price/intelligence tradeoff at every level 130 28 2.3K 184K"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "99b5d72ca27cc593",
-      "kind": "social",
-      "title": "Given that AI from 2 years ago feels so old that it should be in a museum, then obviously AI 2 years from now will be mind-blowing",
-      "source": "x.com",
-      "source_url": "https://x.com/elonmusk/status/2082849031483470066",
-      "published_at": "2026-07-30T15:21:21Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Given that AI from 2 years ago feels so old that it should be in a museum, then obviously AI 2 years from now will be mind-blowing x.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/elonmusk/status/2082849031483470066",
-      "key_points": [
-        "Elon Musk @elonmusk Given that AI from 2 years ago feels so old that it should be in a museum, then obviously AI 2 years from now will be mind-blowing will depue @willdepue Jul 30 i think this would be a great take if it weren’t for AGI. capabilities will not slow down, RSI is less than 24 months away 3:21 PM · Jul 30, 2026 5.9M Views 2.2K 2.1K 17K 895…",
-        "3 12 68 958 Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Jul 30 AI is progressing so rapidly, in 2 years it will likely surpass all human intelligence combined."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Given that AI from 2 years ago feels so old that it should be in a museum, then obviously AI 2 years from now will be mind-blowing x.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Elon Musk @elonmusk Given that AI from 2 years ago feels so old that it should be in a museum, then obviously AI 2 years from now will be mind-blowing will depue @willdepue Jul 30 i think this would be a great take if it weren’t for AGI. capabilities will not slow down, RSI is less than 24 months away 3:21 PM · Jul 30, 2026 5.9M Views 2.2K 2.1K 17K 895…",
-            "3 12 68 958 Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Jul 30 AI is progressing so rapidly, in 2 years it will likely surpass all human intelligence combined."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Elon Musk @elonmusk Given that AI from 2 years ago feels so old that it should be in a museum, then obviously AI 2 years from now will be mind-blowing will depue @willdepue Jul 30 i think this would be a great take if it weren’t for AGI. capabilities will not slow down, RSI is less than 24 months away 3:21 PM · Jul 30, 2026 5.9M Views 2.2K 2.1K 17K 895",
-            "Brother Nathanael @RealBroNat Jul 30 Elon, your AI rivals are “book burning.” Books exposing jews are AI “revised” then shredded! 3 12 68 958",
-            "Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Jul 30 AI is progressing so rapidly, in 2 years it will likely surpass all human intelligence combined. 5 7 61 2.9K"
           ]
         }
       ],
@@ -4744,7 +4751,7 @@
       "id": "44de6388fd860837",
       "kind": "article",
       "title": "AI’s Early Winners Are Shopping For Their Next Big Moves",
-      "source": "Forbes",
+      "source": "forbes.com",
       "source_url": "https://www.forbes.com/sites/the-prompt/2026/07/28/ais-early-winners-are-shopping-for-their-next-big-moves/",
       "published_at": "2026-07-28T21:12:58Z",
       "authors": [],
@@ -4754,7 +4761,7 @@
         "Embodied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "AI’s Early Winners Are Shopping For Their Next Big Moves Forbes",
+      "summary": "AI’s Early Winners Are Shopping For Their Next Big Moves forbes.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.forbes.com/sites/the-prompt/2026/07/28/ais-early-winners-are-shopping-for-their-next-big-moves/",
@@ -4768,7 +4775,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "AI’s Early Winners Are Shopping For Their Next Big Moves Forbes"
+          "body": "AI’s Early Winners Are Shopping For Their Next Big Moves forbes.com"
         },
         {
           "title": "公开页面要点",
@@ -5216,7 +5223,7 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://variety.com/2026/digital/news/ai-startup-kaon-ai-raises-60-million-funding-round-1236803914/",
       "key_points": [
-        "AI Studio Asteria Strikes Strategic Partnership with Virtual Production Studio ZeroSpace (EXCLUSIVE) 12 hours ago Urbanworld CEO Stacy Spikes Warns of Guilds Policing Filmmakers After WGA Pulls Sponsorship Over AI Initiative (EXCLUSIVE) 1 day ago AI Startup Fairground, Founded by Xumo Creator, to Launch First AI-Exclusive FAST Channel (EXCLUSIVE) 1 day ago"
+        "AI Studio Asteria Strikes Strategic Partnership with Virtual Production Studio ZeroSpace (EXCLUSIVE) 17 hours ago Urbanworld CEO Stacy Spikes Warns of Guilds Policing Filmmakers After WGA Pulls Sponsorship Over AI Initiative (EXCLUSIVE) 2 days ago AI Startup Fairground, Founded by Xumo Creator, to Launch First AI-Exclusive FAST Channel (EXCLUSIVE) 2 days ago"
       ],
       "sections": [
         {
@@ -5226,15 +5233,15 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "AI Studio Asteria Strikes Strategic Partnership with Virtual Production Studio ZeroSpace (EXCLUSIVE) 12 hours ago Urbanworld CEO Stacy Spikes Warns of Guilds Policing Filmmakers After WGA Pulls Sponsorship Over AI Initiative (EXCLUSIVE) 1 day ago AI Startup Fairground, Founded by Xumo Creator, to Launch First AI-Exclusive FAST Channel (EXCLUSIVE) 1 day ago"
+            "AI Studio Asteria Strikes Strategic Partnership with Virtual Production Studio ZeroSpace (EXCLUSIVE) 17 hours ago Urbanworld CEO Stacy Spikes Warns of Guilds Policing Filmmakers After WGA Pulls Sponsorship Over AI Initiative (EXCLUSIVE) 2 days ago AI Startup Fairground, Founded by Xumo Creator, to Launch First AI-Exclusive FAST Channel (EXCLUSIVE) 2 days ago"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "AI Studio Asteria Strikes Strategic Partnership with Virtual Production Studio ZeroSpace (EXCLUSIVE) 12 hours ago",
-            "Urbanworld CEO Stacy Spikes Warns of Guilds Policing Filmmakers After WGA Pulls Sponsorship Over AI Initiative (EXCLUSIVE) 1 day ago",
-            "AI Startup Fairground, Founded by Xumo Creator, to Launch First AI-Exclusive FAST Channel (EXCLUSIVE) 1 day ago"
+            "AI Studio Asteria Strikes Strategic Partnership with Virtual Production Studio ZeroSpace (EXCLUSIVE) 17 hours ago",
+            "Urbanworld CEO Stacy Spikes Warns of Guilds Policing Filmmakers After WGA Pulls Sponsorship Over AI Initiative (EXCLUSIVE) 2 days ago",
+            "AI Startup Fairground, Founded by Xumo Creator, to Launch First AI-Exclusive FAST Channel (EXCLUSIVE) 2 days ago"
           ]
         }
       ],
@@ -5292,12 +5299,12 @@
       "reading_minutes": 2
     },
     {
-      "id": "ff47a931aab03d31",
+      "id": "cf0dd1b7e6095f86",
       "kind": "article",
-      "title": "Inside Europe's lessons on AI safety as U.S. rules loom",
-      "source": "Axios",
-      "source_url": "https://www.axios.com/2026/07/31/inside-europe-lessons-ai-safety-trump-rules-loom",
-      "published_at": "2026-07-31T09:10:01Z",
+      "title": "Brussels Gains New AI Act Enforcement Powers as Autonomous AI Tests Regulators",
+      "source": "techpolicy.press",
+      "source_url": "https://techpolicy.press/-brussels-gains-new-ai-act-enforcement-powers-as-autonomous-ai-tests-regulators",
+      "published_at": "2026-07-30T07:59:49Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -5305,78 +5312,38 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Inside Europe's lessons on AI safety as U.S. rules loom Axios",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 403: Forbidden",
-      "resolved_url": "https://www.axios.com/2026/07/31/inside-europe-lessons-ai-safety-trump-rules-loom",
-      "key_points": [
-        "Inside Europe's lessons on AI safety as U.S. rules loom Axios"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Inside Europe's lessons on AI safety as U.S. rules loom Axios"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Inside Europe's lessons on AI safety as U.S. rules loom Axios"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "e127451bf086e638",
-      "kind": "article",
-      "title": "The EU AI Act Delay Is Not a Pause Button for Global Employers",
-      "source": "Seyfarth Shaw",
-      "source_url": "https://www.seyfarth.com/news-insights/the-eu-ai-act-delay-is-not-a-pause-button-for-global-employers.html",
-      "published_at": "2026-07-30T04:19:17Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "The EU AI Act Delay Is Not a Pause Button for Global Employers Seyfarth Shaw",
+      "summary": "Brussels Gains New AI Act Enforcement Powers as Autonomous AI Tests Regulators techpolicy.press",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.internationaldisputeresolutionlaw.com/2026/07/the-eu-ai-act-delay-is-not-a-pause-button-for-global-employers/",
+      "resolved_url": "https://www.techpolicy.press/-brussels-gains-new-ai-act-enforcement-powers-as-autonomous-ai-tests-regulators/",
       "key_points": [
-        "The EU’s decision to delay key workplace AI obligations until December 2027 provides organizations with additional time to prepare—but not a reason to postpone action.",
-        "In a recent Westlaw Today article , Yana Komsitsky, Paul Whinder, and Georgia Hill Smith explore what types of AI tools used in recruiting, workforce management, and employment decision-making may be classified as high-risk under the EU AI Act and what multinational employers should be doing now to prepare their operations for compliance.",
-        "Their analysis highlights the growing challenge of navigating AI compliance across multiple jurisdictions and offers practical guidance for businesses operating globally.",
-        "The EU AI Act applies to multinational employers managing global workforces.",
-        "Companies must coordinate compliance efforts across employment, privacy, procurement, and technology functions."
+        "A view of the Barlaymont European Commission building in Brussels, Belgium on July 20, 2026. (Photo by Jakub Porzycki/NurPhoto via AP) Brussels gains new enforcement powers under the AI Act on Aug.",
+        "2, when the European Commission can begin fully enforcing the rules for providers of general-purpose AI (GPAI) models .",
+        "Although those obligations started applying last year, the Commission will only now be able to investigate, order corrective measures and impose fines.",
+        "On the same day, new transparency rules will also begin to apply.",
+        "They are intended to make it easier for people to recognize when they are interacting with an AI system or seeing synthetic content, to reduce risks of deception and manipulation."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "The EU AI Act Delay Is Not a Pause Button for Global Employers Seyfarth Shaw"
+          "body": "Brussels Gains New AI Act Enforcement Powers as Autonomous AI Tests Regulators techpolicy.press"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "The EU’s decision to delay key workplace AI obligations until December 2027 provides organizations with additional time to prepare—but not a reason to postpone action.",
-            "In a recent Westlaw Today article , Yana Komsitsky, Paul Whinder, and Georgia Hill Smith explore what types of AI tools used in recruiting, workforce management, and employment decision-making may be classified as high-risk under the EU AI Act and what multinational employers should be doing now to prepare their operations for compliance.",
-            "Their analysis highlights the growing challenge of navigating AI compliance across multiple jurisdictions and offers practical guidance for businesses operating globally.",
-            "The EU AI Act applies to multinational employers managing global workforces.",
-            "Companies must coordinate compliance efforts across employment, privacy, procurement, and technology functions."
+            "A view of the Barlaymont European Commission building in Brussels, Belgium on July 20, 2026. (Photo by Jakub Porzycki/NurPhoto via AP) Brussels gains new enforcement powers under the AI Act on Aug.",
+            "2, when the European Commission can begin fully enforcing the rules for providers of general-purpose AI (GPAI) models .",
+            "Although those obligations started applying last year, the Commission will only now be able to investigate, order corrective measures and impose fines.",
+            "On the same day, new transparency rules will also begin to apply.",
+            "They are intended to make it easier for people to recognize when they are interacting with an AI system or seeing synthetic content, to reduce risks of deception and manipulation."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "The EU’s decision to delay key workplace AI obligations until December 2027 provides organizations with additional time to prepare—but not a reason to postpone action. In a recent Westlaw Today article , Yana Komsitsky, Paul Whinder, and Georgia Hill Smith explore what types of AI tools used in recruiting, workforce management, and employment decision-making may be classified as high-risk under the EU AI Act and what multinational employers should be doing now to prepare their operations for compliance. Their analysis highlights the growing challenge of navigating AI compliance across multiple jurisdictions and offers practical guidance for businesses operating globally.",
-            "The EU AI Act applies to multinational employers managing global workforces.",
-            "Companies must coordinate compliance efforts across employment, privacy, procurement, and technology functions."
+            "A view of the Barlaymont European Commission building in Brussels, Belgium on July 20, 2026. (Photo by Jakub Porzycki/NurPhoto via AP)",
+            "Brussels gains new enforcement powers under the AI Act on Aug. 2, when the European Commission can begin fully enforcing the rules for providers of general-purpose AI (GPAI) models . Although those obligations started applying last year, the Commission will only now be able to investigate, order corrective measures and impose fines.",
+            "On the same day, new transparency rules will also begin to apply. They are intended to make it easier for people to recognize when they are interacting with an AI system or seeing synthetic content, to reduce risks of deception and manipulation."
           ]
         }
       ],
@@ -5513,6 +5480,57 @@
       "reading_minutes": 1
     },
     {
+      "id": "f686abe275da2feb",
+      "kind": "article",
+      "title": "Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security",
+      "source": "NVIDIA Blog",
+      "source_url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/",
+      "published_at": "2026-07-27T09:03:43Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security NVIDIA Blog",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/",
+      "key_points": [
+        "Open source software is a critical pillar of the global economy.",
+        "It underpins cloud computing, financial services, manufacturing, telecommunications, government and internet services by making technology accessible and observable to communities of experts.",
+        "Cybersecurity is among the top three beneficiaries of open source software.",
+        "The Open Secure AI Alliance — building on the leadership of the Linux Foundation’ s Akrites initiative and OpenSSF community work — will work to remediate and disclose vulnerabilities using open technologies.",
+        "Just as open source created a shared foundation for software, the United States and its partners now face a choice in AI security: whether the defenses that protect our infrastructure will sit inside a few opaque systems or be built on open models, harnesses and tools that any defender can study, adapt and deploy."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security NVIDIA Blog"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Open source software is a critical pillar of the global economy.",
+            "It underpins cloud computing, financial services, manufacturing, telecommunications, government and internet services by making technology accessible and observable to communities of experts.",
+            "Cybersecurity is among the top three beneficiaries of open source software.",
+            "The Open Secure AI Alliance — building on the leadership of the Linux Foundation’ s Akrites initiative and OpenSSF community work — will work to remediate and disclose vulnerabilities using open technologies.",
+            "Just as open source created a shared foundation for software, the United States and its partners now face a choice in AI security: whether the defenses that protect our infrastructure will sit inside a few opaque systems or be built on open models, harnesses and tools that any defender can study, adapt and deploy."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Open source software is a critical pillar of the global economy. It underpins cloud computing, financial services, manufacturing, telecommunications, government and internet services by making technology accessible and observable to communities of experts.",
+            "Cybersecurity is among the top three beneficiaries of open source software. The Open Secure AI Alliance — building on the leadership of the Linux Foundation’ s Akrites initiative and OpenSSF community work — will work to remediate and disclose vulnerabilities using open technologies.",
+            "Just as open source created a shared foundation for software, the United States and its partners now face a choice in AI security: whether the defenses that protect our infrastructure will sit inside a few opaque systems or be built on open models, harnesses and tools that any defender can study, adapt and deploy."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "2d831fc682ae63dc",
       "kind": "article",
       "title": "Delivery robot startup Robot.com is betting its next act on workplace humanoids",
@@ -5565,7 +5583,7 @@
       "id": "e4720bc259a83c2e",
       "kind": "article",
       "title": "CISA guidance targets water sector security, open source AI and more | Federal News Network",
-      "source": "federalnewsnetwork.com",
+      "source": "Federal News Network",
       "source_url": "https://federalnewsnetwork.com/cybersecurity/2026/07/cisa-guidance-targets-water-sector-security-open-source-ai-and-more/",
       "published_at": "2026-07-31T21:00:21Z",
       "authors": [],
@@ -5575,7 +5593,7 @@
         "Models & Tools"
       ],
       "verification": "媒体或公开网页",
-      "summary": "CISA guidance targets water sector security, open source AI and more federalnewsnetwork.com",
+      "summary": "CISA guidance targets water sector security, open source AI and more Federal News Network",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://federalnewsnetwork.com/cybersecurity/2026/07/cisa-guidance-targets-water-sector-security-open-source-ai-and-more/",
@@ -5587,7 +5605,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "CISA guidance targets water sector security, open source AI and more federalnewsnetwork.com"
+          "body": "CISA guidance targets water sector security, open source AI and more Federal News Network"
         },
         {
           "title": "公开页面要点",
@@ -5612,7 +5630,7 @@
       "id": "870ea0cf12fd249f",
       "kind": "article",
       "title": "Highlights From The Discourse On The Hugging Face Incident",
-      "source": "astralcodexten.com",
+      "source": "Astral Codex Ten",
       "source_url": "https://www.astralcodexten.com/p/highlights-from-the-discourse-on",
       "published_at": "2026-07-30T01:07:16Z",
       "authors": [],
@@ -5622,7 +5640,7 @@
         "Models & Tools"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Highlights From The Discourse On The Hugging Face Incident astralcodexten.com",
+      "summary": "Highlights From The Discourse On The Hugging Face Incident Astral Codex Ten",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.astralcodexten.com/p/highlights-from-the-discourse-on",
@@ -5633,7 +5651,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "Highlights From The Discourse On The Hugging Face Incident astralcodexten.com"
+          "body": "Highlights From The Discourse On The Hugging Face Incident Astral Codex Ten"
         },
         {
           "title": "公开页面要点",
@@ -5657,7 +5675,7 @@
       "id": "d1f787eed2d7c807",
       "kind": "article",
       "title": "Weak AI regulation may backfire, making products less safe | Cornell Chronicle",
-      "source": "news.cornell.edu",
+      "source": "Cornell Chronicle",
       "source_url": "https://news.cornell.edu/stories/2026/07/weak-ai-regulation-may-backfire-making-products-less-safe",
       "published_at": "2026-07-20T19:00:00Z",
       "authors": [],
@@ -5667,7 +5685,7 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Weak AI regulation may backfire, making products less safe news.cornell.edu",
+      "summary": "Weak AI regulation may backfire, making products less safe Cornell Chronicle",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://news.cornell.edu/stories/2026/07/weak-ai-regulation-may-backfire-making-products-less-safe",
@@ -5680,7 +5698,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "Weak AI regulation may backfire, making products less safe news.cornell.edu"
+          "body": "Weak AI regulation may backfire, making products less safe Cornell Chronicle"
         },
         {
           "title": "公开页面要点",
@@ -5706,7 +5724,7 @@
       "id": "a9251019273aebc6",
       "kind": "article",
       "title": "The Most Important Words in the Battle Over AI",
-      "source": "politico.com",
+      "source": "Politico",
       "source_url": "https://www.politico.com/news/magazine/2026/07/17/ai-safety-regulation-debate-factions-00990453",
       "published_at": "2026-07-17T07:00:00Z",
       "authors": [],
@@ -5716,23 +5734,23 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "The Most Important Words in the Battle Over AI politico.com",
+      "summary": "The Most Important Words in the Battle Over AI Politico",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "summary-only",
       "fetch_note": "HTTP Error 403: Forbidden",
       "resolved_url": "https://www.politico.com/news/magazine/2026/07/17/ai-safety-regulation-debate-factions-00990453",
       "key_points": [
-        "The Most Important Words in the Battle Over AI politico.com"
+        "The Most Important Words in the Battle Over AI Politico"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "The Most Important Words in the Battle Over AI politico.com"
+          "body": "The Most Important Words in the Battle Over AI Politico"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "The Most Important Words in the Battle Over AI politico.com"
+            "The Most Important Words in the Battle Over AI Politico"
           ]
         },
         {
