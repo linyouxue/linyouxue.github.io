@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-03T10:07:12Z",
+  "generated_at": "2026-08-03T15:14:32Z",
   "record_count": 130,
   "records": [
     {
@@ -56,6 +56,41 @@
       "reading_minutes": 1
     },
     {
+      "id": "unit-distance-openai-20260520",
+      "kind": "paper",
+      "title": "OpenAI 模型推翻平面单位距离问题中的长期猜想",
+      "source": "OpenAI · Research",
+      "source_url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+      "published_at": "2026-05-20T08:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Unit Distance",
+        "Discrete Geometry",
+        "Verified Proof"
+      ],
+      "verification": "官方论文 · 外部数学家已检查",
+      "summary": "OpenAI 的通用推理模型找到一族新的点集构造，证明单位距离对数可以达到 n 的 1+δ 次方，从而推翻长期流行的 n 的 1+o(1) 上界猜想。证明已由外部数学家检查，并有公开证明 PDF 与多位数学家的伴随评论。",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/unit-distance-openai-20260520.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf",
+      "key_points": [
+        "Planar Point Sets with Many Unit Distances OpenAI Abstract For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets.",
+        "We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n.",
+        "This disproves the well-known unit distance conjecture from [ Erd46].",
+        "The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely.",
+        "After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets. We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n. This disproves the well-known unit distance conjecture from [ Erd46]. The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely. After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1. Golod–Shafarevich theory ensures existence of an inﬁnite such tower, even after a quotient step making the prescribed Frobenius classes trivial. A crucial property of the construction is that all resulting discriminants and class numbers are at most exponential in the extension degree. 1 Main Result For a ﬁnite set P ⊂ R2, let ν(P ) = # {{x,y } ⊂ P : |x −y|= 1} andν(n) = max |P |=nν(P ). The planar unit-distance problem goes back to Erdős [ Erd46], who conjectured that there should be an absolute constant C such that, for all suﬃciently large n, ν(n) ≤ n1+C/ log logn. (1) The same 1946 paper also introduced the distinct-distances problem, later resolved up to logarithmic factors by Guth–Katz [ GK15]. An elementary upper bound is ν(n) = O(n3/ 2): the Euclidean unit-distance graph is K2, 3-free, since two unit circles meet in at most two points, and the Kővári–Sós–Turán theorem applies [ KST54]. The best known upper bound ν(n) = O(n4/ 3) is due to Spencer–Szemerédi–Trotter [ SST84]; Székely later gave a short crossing-number proof of this incidence bound [ Sze97]. It is useful to compare this with the same question for other norms on R2, a direction studied systematically by Brass [ Bra96]. If the unit ball has a ﬂat segment, one can arrange quadratically many unit distances, so the interesting normed-plane analogues usually impose strict convexity or genericity. Székely’s crossing-number argument extends to strictly convex norms, again giving O(n4/ 3), and Valtr constructed a strictly convex norm for which this exponent is…"
+        }
+      ],
+      "reading_minutes": 32
+    },
+    {
       "id": "5b965874fc94372d",
       "kind": "article",
       "title": "Ten advances in mathematics and theoretical computer science",
@@ -94,41 +129,6 @@
         }
       ],
       "reading_minutes": 1
-    },
-    {
-      "id": "unit-distance-openai-20260520",
-      "kind": "paper",
-      "title": "OpenAI 模型推翻平面单位距离问题中的长期猜想",
-      "source": "OpenAI · Research",
-      "source_url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
-      "published_at": "2026-05-20T08:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Unit Distance",
-        "Discrete Geometry",
-        "Verified Proof"
-      ],
-      "verification": "官方论文 · 外部数学家已检查",
-      "summary": "OpenAI 的通用推理模型找到一族新的点集构造，证明单位距离对数可以达到 n 的 1+δ 次方，从而推翻长期流行的 n 的 1+o(1) 上界猜想。证明已由外部数学家检查，并有公开证明 PDF 与多位数学家的伴随评论。",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/unit-distance-openai-20260520.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf",
-      "key_points": [
-        "Planar Point Sets with Many Unit Distances OpenAI Abstract For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets.",
-        "We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n.",
-        "This disproves the well-known unit distance conjecture from [ Erd46].",
-        "The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely.",
-        "After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets. We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n. This disproves the well-known unit distance conjecture from [ Erd46]. The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely. After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1. Golod–Shafarevich theory ensures existence of an inﬁnite such tower, even after a quotient step making the prescribed Frobenius classes trivial. A crucial property of the construction is that all resulting discriminants and class numbers are at most exponential in the extension degree. 1 Main Result For a ﬁnite set P ⊂ R2, let ν(P ) = # {{x,y } ⊂ P : |x −y|= 1} andν(n) = max |P |=nν(P ). The planar unit-distance problem goes back to Erdős [ Erd46], who conjectured that there should be an absolute constant C such that, for all suﬃciently large n, ν(n) ≤ n1+C/ log logn. (1) The same 1946 paper also introduced the distinct-distances problem, later resolved up to logarithmic factors by Guth–Katz [ GK15]. An elementary upper bound is ν(n) = O(n3/ 2): the Euclidean unit-distance graph is K2, 3-free, since two unit circles meet in at most two points, and the Kővári–Sós–Turán theorem applies [ KST54]. The best known upper bound ν(n) = O(n4/ 3) is due to Spencer–Szemerédi–Trotter [ SST84]; Székely later gave a short crossing-number proof of this incidence bound [ Sze97]. It is useful to compare this with the same question for other norms on R2, a direction studied systematically by Brass [ Bra96]. If the unit ball has a ﬂat segment, one can arrange quadratically many unit distances, so the interesting normed-plane analogues usually impose strict convexity or genericity. Székely’s crossing-number argument extends to strictly convex norms, again giving O(n4/ 3), and Valtr constructed a strictly convex norm for which this exponent is…"
-        }
-      ],
-      "reading_minutes": 32
     },
     {
       "id": "f52f1d258a2fdfc3",
@@ -409,6 +409,57 @@
       "reading_minutes": 1
     },
     {
+      "id": "e7b9677ff9c61168",
+      "kind": "article",
+      "title": "Investigating three real-world incidents in our cybersecurity evaluations",
+      "source": "Anthropic",
+      "source_url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+      "published_at": "2026-08-03T14:36:32Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Anthropic",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "In a review of our cybersecurity evaluation transcripts, we found three incidents in which a Claude model reached the internet from within or while interacting with a third-party evaluation environment, and then gained unauthorized access to the real systems of three different organizations. Below we describe what happened, how it happened, and what we’re changing. We encourage other AI labs to perform similar reviews.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+      "key_points": [
+        "In a review of our cybersecurity evaluation transcripts, we found three incidents in which a Claude model reached the internet from within or while interacting with a third-party evaluation environment, and then gained unauthorized access to the real systems of three different organizations.",
+        "Below we describe what happened, how it happened, and what we’re changing.",
+        "We encourage other AI labs to perform similar reviews.",
+        "This post reflects our current understanding; we'll update it if any details change.",
+        "On July 21, OpenAI disclosed that several of their models had broken out of an isolated test environment by exploiting a previously unknown (“zero-day”) vulnerability."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "In a review of our cybersecurity evaluation transcripts, we found three incidents in which a Claude model reached the internet from within or while interacting with a third-party evaluation environment, and then gained unauthorized access to the real systems of three different organizations. Below we describe what happened, how it happened, and what we’re changing. We encourage other AI labs to perform similar reviews."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "In a review of our cybersecurity evaluation transcripts, we found three incidents in which a Claude model reached the internet from within or while interacting with a third-party evaluation environment, and then gained unauthorized access to the real systems of three different organizations.",
+            "Below we describe what happened, how it happened, and what we’re changing.",
+            "We encourage other AI labs to perform similar reviews.",
+            "This post reflects our current understanding; we'll update it if any details change.",
+            "On July 21, OpenAI disclosed that several of their models had broken out of an isolated test environment by exploiting a previously unknown (“zero-day”) vulnerability."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "In a review of our cybersecurity evaluation transcripts, we found three incidents in which a Claude model reached the internet from within or while interacting with a third-party evaluation environment, and then gained unauthorized access to the real systems of three different organizations.",
+            "Below we describe what happened, how it happened, and what we’re changing. We encourage other AI labs to perform similar reviews. This post reflects our current understanding; we'll update it if any details change.",
+            "On July 21, OpenAI disclosed that several of their models had broken out of an isolated test environment by exploiting a previously unknown (“zero-day”) vulnerability. The models went on to access the production infrastructure of Hugging Face, a platform for open-source machine learning models and AI datasets."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "rhb-icml-2026",
       "kind": "paper",
       "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
@@ -611,57 +662,6 @@
         {
           "title": "原文短摘录",
           "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "e7b9677ff9c61168",
-      "kind": "article",
-      "title": "Investigating three real-world incidents in our cybersecurity evaluations",
-      "source": "Anthropic",
-      "source_url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
-      "published_at": "2026-07-30T23:14:55Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Anthropic",
-        "Official"
-      ],
-      "verification": "官方来源",
-      "summary": "In a review of our cybersecurity evaluation transcripts, we found three incidents in which a Claude model reached the internet from within or while interacting with a third-party evaluation environment, and then gained unauthorized access to the real systems of three different organizations. Below we describe what happened, how it happened, and what we’re changing. We encourage other AI labs to perform similar reviews.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
-      "key_points": [
-        "In a review of our cybersecurity evaluation transcripts, we found three incidents in which a Claude model reached the internet from within or while interacting with a third-party evaluation environment, and then gained unauthorized access to the real systems of three different organizations.",
-        "Below we describe what happened, how it happened, and what we’re changing.",
-        "We encourage other AI labs to perform similar reviews.",
-        "This post reflects our current understanding; we'll update it if any details change.",
-        "On July 21, OpenAI disclosed that several of their models had broken out of an isolated test environment by exploiting a previously unknown (“zero-day”) vulnerability."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "In a review of our cybersecurity evaluation transcripts, we found three incidents in which a Claude model reached the internet from within or while interacting with a third-party evaluation environment, and then gained unauthorized access to the real systems of three different organizations. Below we describe what happened, how it happened, and what we’re changing. We encourage other AI labs to perform similar reviews."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "In a review of our cybersecurity evaluation transcripts, we found three incidents in which a Claude model reached the internet from within or while interacting with a third-party evaluation environment, and then gained unauthorized access to the real systems of three different organizations.",
-            "Below we describe what happened, how it happened, and what we’re changing.",
-            "We encourage other AI labs to perform similar reviews.",
-            "This post reflects our current understanding; we'll update it if any details change.",
-            "On July 21, OpenAI disclosed that several of their models had broken out of an isolated test environment by exploiting a previously unknown (“zero-day”) vulnerability."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "In a review of our cybersecurity evaluation transcripts, we found three incidents in which a Claude model reached the internet from within or while interacting with a third-party evaluation environment, and then gained unauthorized access to the real systems of three different organizations.",
-            "Below we describe what happened, how it happened, and what we’re changing. We encourage other AI labs to perform similar reviews. This post reflects our current understanding; we'll update it if any details change.",
-            "On July 21, OpenAI disclosed that several of their models had broken out of an isolated test environment by exploiting a previously unknown (“zero-day”) vulnerability. The models went on to access the production infrastructure of Hugging Face, a platform for open-source machine learning models and AI datasets."
-          ]
         }
       ],
       "reading_minutes": 1
@@ -1431,6 +1431,86 @@
       "reading_minutes": 1
     },
     {
+      "id": "0ea74fcf44348671",
+      "kind": "article",
+      "title": "印度 发布 新AI号称超越 Deepseek ?我扒完笑了",
+      "source": "微信公众号 · 索隐随笔",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1785770039&ver=6882&signature=jjkKqFvsnzfJJ7ubdslE4cPNA93M66tLpTxMSWMF41jQ3UsKFCv35BSwEEyHM0Ik3K5AMxb--ojJhwyDLQJs70Pa1tW3aRx8ujraBm9BcrnTh9iDKaWPFDM3c9z5RiWC&new=1",
+      "published_at": "2026-08-03T06:43:53Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "微信公众号",
+        "DeepSeek",
+        "模型"
+      ],
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "summary": "2026年7月31日, DeepSeek V4-Flash正式版 发布 .这次的升级,还是那个熟悉的节奏——预期内的超预期.性能逼近全球顶级模型,...",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "indexed-summary",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HFKwcGqjvXrVq_FR6OugZSTSQ8XP7L-g0_FDriHr&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785770039%26ver%3D6882%26signature%3DjjkKqFvsnzfJJ7ubdslE4cPNA93M66tLpTxMSWMF41jQ3UsKFCv35BSwEEyHM0Ik3K5AMxb--ojJhwyDLQJs70Pa1tW3aRx8ujraBm9BcrnTh9iDKaWPFDM3c9z5RiWC%26new%3D1",
+      "key_points": [
+        "2026年7月31日, DeepSeek V4-Flash正式版 发布 .这次的升级,还是那个熟悉的节奏——预期内的超预期.性能逼近全球顶级模型,..."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "2026年7月31日, DeepSeek V4-Flash正式版 发布 .这次的升级,还是那个熟悉的节奏——预期内的超预期.性能逼近全球顶级模型,..."
+        },
+        {
+          "title": "公开索引摘要",
+          "bullets": [
+            "2026年7月31日, DeepSeek V4-Flash正式版 发布 .这次的升级,还是那个熟悉的节奏——预期内的超预期.性能逼近全球顶级模型,..."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "dbc10f5b11dd9f0f",
+      "kind": "article",
+      "title": "DeepSeek 发布 V4 Flash正式版,性能远超V4 Pro预览版;儿童的说话方式可以预示他们未来出现心理健康问题的风险 | 环球科学要闻",
+      "source": "微信公众号 · 环球科学",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1785770039&ver=6882&signature=f2T07FJ7EbxwpuOaZe9kvawBrbGw6JFPVqwe2iPdDjmnqrnB-6TIKop6zSHZZH2g9qZz9Y3KYlAXHseETvcr3Xx1PhT52Ey3A-4fkqzylplMeb3pp-7rm7kJPWx-1noi&new=1",
+      "published_at": "2026-08-03T04:04:46Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "微信公众号",
+        "DeepSeek",
+        "模型"
+      ],
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "summary": "将环球科学设为星标周一至周五第一时间掌握最新鲜的全球科技资讯· 人工智能 · DeepSeek 发布 V4 Flash正式版,性能远超V4 Pro预...",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "indexed-summary",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HFKwcGqj_DEJS-2jJj-XZoYw2jSBinJmBMJEfB6l&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785770039%26ver%3D6882%26signature%3Df2T07FJ7EbxwpuOaZe9kvawBrbGw6JFPVqwe2iPdDjmnqrnB-6TIKop6zSHZZH2g9qZz9Y3KYlAXHseETvcr3Xx1PhT52Ey3A-4fkqzylplMeb3pp-7rm7kJPWx-1noi%26new%3D1",
+      "key_points": [
+        "将环球科学设为星标周一至周五第一时间掌握最新鲜的全球科技资讯· 人工智能 · DeepSeek 发布 V4 Flash正式版,性能远超V4 Pro预..."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "将环球科学设为星标周一至周五第一时间掌握最新鲜的全球科技资讯· 人工智能 · DeepSeek 发布 V4 Flash正式版,性能远超V4 Pro预..."
+        },
+        {
+          "title": "公开索引摘要",
+          "bullets": [
+            "将环球科学设为星标周一至周五第一时间掌握最新鲜的全球科技资讯· 人工智能 · DeepSeek 发布 V4 Flash正式版,性能远超V4 Pro预..."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "8b828f75d78c9cf3",
       "kind": "article",
       "title": "白菜价,旗舰芯: DeepSeek V4正式版 发布",
@@ -1448,7 +1528,6 @@
       "summary": "DeepSeek 的＂后训练＂奇迹7月31日, DeepSeek 发布 了V4-Flash正式版.这次 发布 有一个反直觉的地方:架构没变,参数没动,性能...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "fetch_note": "<urlopen error [Errno 101] Network is unreachable>",
       "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HIsQcGqjV9x4wMcC5c3J0QqzNRDhqJRIPHMca29I&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785729149%26ver%3D6881%26signature%3Dy34w2%2AB3kDHzy9OaE%2AFa-TcUbq%2ACVPyAnVctWvlaEP%2Ahxh8twtFrYedMnbnZVfy7Sgxf151zUkIKS7QV755cFxJNsgU1feF6rZYasMP4au2AYbC1V7-L8TQvhmbuqBRg%26new%3D1",
       "key_points": [
         "DeepSeek 的＂后训练＂奇迹7月31日, DeepSeek 发布 了V4-Flash正式版.这次 发布 有一个反直觉的地方:架构没变,参数没动,性能..."
@@ -1489,7 +1568,6 @@
       "summary": "评测2026.08.2 DeepSeek V4-Flash 正式版一份来自合同审查基准... 4 月 发布 的 V4-Pro 预览版: 终端操作 Terminal Bench 2.1 得分从...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "fetch_note": "<urlopen error [Errno 101] Network is unreachable>",
       "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HE-bb2qjhXHd9GRhCnevXQ5yW4DoxPLfkwcBLlwL&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785699137%26ver%3D6880%26signature%3DvH3GpS3lO1IQv2SttDViBnloopsGWcG0U9R8zthRTyark6HFgsA-ghY9vGQfk%2AtKrnxX3kzaNtMElhAGFC7Zn1qehldkPRjzNKm1t-bHq3WmuEO7aMpFdBHcrUk-wxq%2A%26new%3D1",
       "key_points": [
         "评测2026.08.2 DeepSeek V4-Flash 正式版一份来自合同审查基准...",
@@ -1532,7 +1610,6 @@
       "summary": "发布 仅一天即入驻国家超算互联网, DeepSeek -V4-Flash-0731 专属增强版上线��️ 十万卡底座: 依托全国首个十万卡级超智融合...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "fetch_note": "<urlopen error [Errno 101] Network is unreachable>",
       "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HKtLb2qjbJjhIQTERW7yDTJjWViUEFx-7JQS0VJx&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785678742%26ver%3D6880%26signature%3DxoBpfTn24Md5M9kXd9LTm66EUKITsbBCwdwxGseZVQDpRPbvrNT0SWE8Bn4io57ps1sMCYvkoYccQ9a15sz%2A87CtCQ2F5MqY5qXvTm1sXTYtqwlQBT6E0Tstc7Sbs43s%26new%3D1",
       "key_points": [
         "发布 仅一天即入驻国家超算互联网, DeepSeek -V4-Flash-0731 专属增强版上线��️ 十万卡底座: 依托全国首个十万卡级超智融合..."
@@ -1573,7 +1650,6 @@
       "summary": "DeepSeek V4 Flash正式API版如期上线,凭借亮眼的代码与Agent... 同时 发布 策略进一步拉低大众口碑:新版本仅开放API接口,官网...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "fetch_note": "<urlopen error [Errno 101] Network is unreachable>",
       "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HIsQcGqjzwIX8keMf7r-HZWwTt0OJVsKVJJ3dvz2&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785729149%26ver%3D6881%26signature%3DwnIuOU2LVYHERbWdgVSRUeZe9QJFqZ7Znnjj-fKPDMIoYkFGLqTq9ZbZniJ494cevQEJQtzEKEMktdVRz1brEcJI6d%2AlEuJBS0jefe6bE9zunYCn58-2qs-3kkSRNUTB%26new%3D1",
       "key_points": [
         "DeepSeek V4 Flash正式API版如期上线,凭借亮眼的代码与Agent... 同时 发布 策略进一步拉低大众口碑:新版本仅开放API接口,官网..."
@@ -1614,7 +1690,6 @@
       "summary": "深度测评 · 2026 DeepSeek 新模型拆解:便宜得不像旗舰,跑起来却像搬家V4-Flash-0731究竟是开放权重的新王,还是又一台擅长刷...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "fetch_note": "<urlopen error [Errno 101] Network is unreachable>",
       "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HE-bb2qjuX5V2zquvDeEwju75dpnTWhdmUXG0Jp9&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785699137%26ver%3D6880%26signature%3DyrwtFOiW0mKUjOUgjfcMx8jILkSqRgHILE2-1uMLTXO1JEgub4Lm%2Acm4QQ0Yqi%2AQ0CkF9v0P9x7i%2AfwQYqx1gHnhkLXdfvsWFYGTdkNPTE9jqE7lYY5O-KxkzzlCHdN4%26new%3D1",
       "key_points": [
         "深度测评 · 2026 DeepSeek 新模型拆解:便宜得不像旗舰,跑起来却像搬家V4-Flash-0731究竟是开放权重的新王,还是又一台擅长刷..."
@@ -1655,7 +1730,6 @@
       "summary": "适配,以及更激进的 API 价格.1这次到底 发布 了什么?根据 DeepSeek 官方更新日志,V4-Flash-0731 与此前 Preview 版本保持相同...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "fetch_note": "<urlopen error [Errno 101] Network is unreachable>",
       "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HLdJbmqj2Eylj7jIJunWVraWwF9jZFgK5aa19U_q&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785612712%26ver%3D6878%26signature%3DrCQUdpksUsEnuuwhLbz3PMM5g-Eo3swMkArMqPz8HB36uv1z9qScqbOul7iwZ%2AZFjRlpOeym8eut-kVzBZQvqr5aKt6j8KWltePzYnwvGJoWQqzoWgxrLZOopnAXN4K4%26new%3D1",
       "key_points": [
         "根据 DeepSeek 官方更新日志,V4-Flash-0731 与此前 Preview 版本保持相同..."
@@ -1696,7 +1770,6 @@
       "summary": "大家好,我是李新新 DeepSeek -V4 正式版 发布 了.但这次升级,暂时和大多数普通用户没什么关系.你现在打开 DeepSeek App,或...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "fetch_note": "<urlopen error [Errno 101] Network is unreachable>",
       "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HCX6bWqjap_899x4CzxrcPmRXFu99DqJMWI_Qjq9&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785592343%26ver%3D6878%26signature%3DzCKhpIh1bOQ6p3kyMSvwJiruljRE9RMsWjRv-B6817UOyaFtB7bHYX9BC-RWXJs84oDbyMLio3z3xIfmHS1cJpnYr6dyOqb3M7SuHwblVupKt49HfNSOOD4Vay19vcMJ%26new%3D1",
       "key_points": [
         "大家好,我是李新新 DeepSeek -V4 正式版 发布 了.但这次升级,暂时和大多数普通用户没什么关系.你现在打开 DeepSeek App,或..."
@@ -1737,7 +1810,6 @@
       "summary": "DeepSeek 发布 Flash新模型应战/Claude攻击三家真实企业被公开/Mira Murati 发布 第二款开源模型学术情报 · 2026-08-01覆盖:GitHub...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "fetch_note": "<urlopen error [Errno 101] Network is unreachable>",
       "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HCX6bWqjrk0OoNH663V_jGMx-rd06dODYJBsTwui&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785592343%26ver%3D6878%26signature%3DIa1gJbTGCToVgP8h7iojAcibFAKQmgAN2UgRmzAVBySzlCNEXbJ0%2AkAnFhiu9RRYl9Hta5DFdMDgKXZvVe7UM%2AlgwFO7QslXLU8lCVbUg9fkORJDGjIx1vcyHnTl%2ACFl%26new%3D1",
       "key_points": [
         "DeepSeek 发布 Flash新模型应战/Claude攻击三家真实企业被公开/Mira Murati 发布 第二款开源模型学术情报 · 2026-08-01覆盖:GitHub..."
@@ -1778,7 +1850,6 @@
       "summary": "DeepSeek V4 flash 正式版 发布 了.评论区两极分化——一半在说国产之光,一半在说跟GPT5.6 luna比还是差一截.我用了两天,说句...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "fetch_note": "<urlopen error [Errno 101] Network is unreachable>",
       "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HLdJbmqjqY4Xprm4qpHXS30MaRgvKHGk9gXtze0c&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785612712%26ver%3D6878%26signature%3DtuiOfNFD68jgQuocdTjDsbQ4xi8pKwFJC5TogQAVNh8YBD7ti043BTI0ruEu9fxHLcD4sUzWAYYXOfIYI5KmThyrcESI9IYP15U9ezZy1xEv62ENTfyGXzpVDLFm-lNv%26new%3D1",
       "key_points": [
         "DeepSeek V4 flash 正式版 发布 了.评论区两极分化——一半在说国产之光,一半在说跟GPT5.6 luna比还是差一截.我用了两天,说句..."
@@ -1819,7 +1890,6 @@
       "summary": "DeepSeek -V4-Flash-0731,模型结构和参数规模跟 4 月的预览版... 系列 发布 仅仅 21 天之后.一个 发布 三周的产品砍掉 80% 的价格....",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "fetch_note": "<urlopen error [Errno 101] Network is unreachable>",
       "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HJABb2qjJljZa_VXfEcL-T9JY7WTSDHeOOkxrOuM&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785659771%26ver%3D6879%26signature%3Dda7Lc0CAmmGeE1nLq9LYSHxhWa4-O3vLFPgyTaJQyAjEvRErwZfC0oikx8HkyhbwA2BXbZps9fYvh%2AAeJiCp4HlxzmJLMRU1aCRBgh9FbSH%2AYwXoQ15PIQhUiX9bQN1Z%26new%3D1",
       "key_points": [
         "DeepSeek -V4-Flash-0731,模型结构和参数规模跟 4 月的预览版... 系列 发布 仅仅 21 天之后.一个 发布 三周的产品砍掉 80% 的价格...."
@@ -1860,7 +1930,6 @@
       "summary": "DeepSeek -V4 释放出的信号很明确:AI 不只是更强了,也正在变... * 本公众号所 发布 内容仅为公司业务宣传及介绍,不构成任何投资...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "fetch_note": "<urlopen error [Errno 101] Network is unreachable>",
       "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HH5sbWqjGAjArjA_L7-_a_meFVARaHlnYhjS7ifY&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785556072%26ver%3D6877%26signature%3Dxb7LEc9Wh1birIYZtYqvIzc4Ns4XVo8VP2tnm2eK4ySmYi--WSInJMIkn5Q0FLNBgp-I3teV-kWuVpXpLJJ%2As5FcYPTlqmJFWgIvzGYD8Uu-KREmRBjkAkeU8XcyDAvI%26new%3D1",
       "key_points": [
         "DeepSeek -V4 释放出的信号很明确:AI 不只是更强了,也正在变... * 本公众号所 发布 内容仅为公司业务宣传及介绍,不构成任何投资..."
@@ -1901,7 +1970,6 @@
       "summary": "7月27日晚, 月之暗面 官方正式开源 Kimi K3模型.官方 发布 了 Kimi K3的模型权重、技术报告,并开源支撑 Kimi K3模型训练的关键Infra...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "fetch_note": "<urlopen error [Errno 101] Network is unreachable>",
       "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HPBfa2qjDnA2EZBrmaqj0mSkMDv9rEkC2zA82z3N&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785421790%26ver%3D6874%26signature%3DJV3fd4NKIptvRpZawcePuhy8FWJYdbmmtO2rly3lyD3YKdfB2AkA090vzTcBOEoQ%2AcQAZhLEKPJnlYnWIJSsfbiMGvrvPxa%2Ab5774XNdwKGeJmTwqGI0pSOWXV6zpp7C%26new%3D1",
       "key_points": [
         "7月27日晚, 月之暗面 官方正式开源 Kimi K3模型.官方 发布 了 Kimi K3的模型权重、技术报告,并开源支撑 Kimi K3模型训练的关键Infra..."
@@ -1942,7 +2010,6 @@
       "summary": "21CTO导读: 月之暗面 发布 Kimi K3 的模型权重、技术报告,并开源支撑 Kimi K3 模型训练的关键 Infra 技术:MoonEP、FlashKDA和...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "fetch_note": "<urlopen error [Errno 101] Network is unreachable>",
       "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HPBfa2qjafLnsILxkJURgp9Xo578ZwdQ3rjQ1SxD&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785421790%26ver%3D6874%26signature%3D5Kl9agkxuMv-uhC2B7F17AVYWKAerpobblHkIbnocOJXPt9V1wyZha42NdFyT12tF4j-xURFro7vyxwkKep5ia4I1hUFLOYTkxilIv35JR3ti6fZju1%2AJ9%2AzrN6uhmWp%26new%3D1",
       "key_points": [
         "21CTO导读: 月之暗面 发布 Kimi K3 的模型权重、技术报告,并开源支撑 Kimi K3 模型训练的关键 Infra 技术:MoonEP、FlashKDA和..."
@@ -1983,7 +2050,6 @@
       "summary": "4月24日, DeepSeek -V4 预览版正式上线并同步开源.模型按大小分为两个版本:快速模式和专家模式.V4-Pro:性能比肩顶级闭源...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "fetch_note": "<urlopen error [Errno 101] Network is unreachable>",
       "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HA5hZmqjMgvhhQls3_KvoVdFS5jZQTPET50Khlhd&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785094400%26ver%3D6866%26signature%3DzKPxetC7pR9h1-P5OAqhuYVOgLNPNuksZipNJsZVBcfSA6ZlJ5%2AqyDN0SWqEl9w087MzBnS8WW0A9CPE%2AenBjVgJVfRFErO6BFoMfAH2kHgBnoQFHwWCXb9DHb1tTThz%26new%3D1",
       "key_points": [
         "4月24日, DeepSeek -V4 预览版正式上线并同步开源.模型按大小分为两个版本:快速模式和专家模式.V4-Pro:性能比肩顶级闭源..."
@@ -1997,88 +2063,6 @@
           "title": "公开索引摘要",
           "bullets": [
             "4月24日, DeepSeek -V4 预览版正式上线并同步开源.模型按大小分为两个版本:快速模式和专家模式.V4-Pro:性能比肩顶级闭源..."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "6e68931a97ca0649",
-      "kind": "article",
-      "title": "DeepSeek 发表 重磅论文!大模型推理最高提速85%,2026年人工智能训练师报考指南(广州市紧缺急需职业)",
-      "source": "微信公众号 · CPDA数据分析大师",
-      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HMSEZWqjsAXD2Yq-dUk648_ula5nQLaAPdqfAcLm&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785038008%26ver%3D6865%26signature%3DdE90KPMRIA1u%2AS-hrjtLHbnGT38YAGG8wcNlNy0eZPKJSAW33nelI2K7o-ekWQwxqDRpV3HZBSHXp%2AMER8FiL3ntVnFAIq6sdvBepdNV6CX1o8WjKbDqlOHF9%2AdFTO1O%26new%3D1",
-      "published_at": "2026-07-26T03:30:29Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "微信公众号",
-        "DeepSeek",
-        "模型"
-      ],
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "summary": "在6月中旬获得500亿融资后仅十几天,6月27日, DeepSeek 团队联合北京大学 发布 论文《DSpark: Confidence-Scheduled Speculative ...",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "indexed-summary",
-      "fetch_note": "<urlopen error [Errno 101] Network is unreachable>",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HMSEZWqjsAXD2Yq-dUk648_ula5nQLaAPdqfAcLm&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785038008%26ver%3D6865%26signature%3DdE90KPMRIA1u%2AS-hrjtLHbnGT38YAGG8wcNlNy0eZPKJSAW33nelI2K7o-ekWQwxqDRpV3HZBSHXp%2AMER8FiL3ntVnFAIq6sdvBepdNV6CX1o8WjKbDqlOHF9%2AdFTO1O%26new%3D1",
-      "key_points": [
-        "在6月中旬获得500亿融资后仅十几天,6月27日, DeepSeek 团队联合北京大学 发布 论文《DSpark: Confidence-Scheduled Speculative ..."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "在6月中旬获得500亿融资后仅十几天,6月27日, DeepSeek 团队联合北京大学 发布 论文《DSpark: Confidence-Scheduled Speculative ..."
-        },
-        {
-          "title": "公开索引摘要",
-          "bullets": [
-            "在6月中旬获得500亿融资后仅十几天,6月27日, DeepSeek 团队联合北京大学 发布 论文《DSpark: Confidence-Scheduled Speculative ..."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "1f3bf23fb8988594",
-      "kind": "article",
-      "title": "腾讯 混元 Hy3 发布 :这次不比参数,比谁更好用",
-      "source": "微信公众号 · 算法知识共享",
-      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HMSEZWqj6eN4Dzn2h9UTAZCa_fXwZaUiWgtXUPoe&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785038011%26ver%3D6865%26signature%3DTC7DZ0rRpglNCU9dJZA52rKRAfhr01PnlWj%2AZ7cqyRGV%2Al6AkGWji63zgY8RJ%2A9s-utl5zC67bsqBoKjN%2AJ77Oc%2A3ZvbEB%2AHUfNAR-ZBz-2wU3anOjhsEC1rzoSvtVKR%26new%3D1",
-      "published_at": "2026-07-25T01:30:55Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "微信公众号",
-        "腾讯",
-        "元宝"
-      ],
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "summary": "腾讯 混元 Hy3 发布 :这次不比参数,比谁更好用7月6日, 腾讯 混元 正式 发布 Hy3.4月底先放了 preview 版本,在 50 多个业务里灰度...",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "indexed-summary",
-      "fetch_note": "<urlopen error [Errno 101] Network is unreachable>",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HMSEZWqj6eN4Dzn2h9UTAZCa_fXwZaUiWgtXUPoe&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785038011%26ver%3D6865%26signature%3DTC7DZ0rRpglNCU9dJZA52rKRAfhr01PnlWj%2AZ7cqyRGV%2Al6AkGWji63zgY8RJ%2A9s-utl5zC67bsqBoKjN%2AJ77Oc%2A3ZvbEB%2AHUfNAR-ZBz-2wU3anOjhsEC1rzoSvtVKR%26new%3D1",
-      "key_points": [
-        "腾讯 混元 Hy3 发布 :这次不比参数,比谁更好用7月6日, 腾讯 混元 正式 发布 Hy3.4月底先放了 preview 版本,在 50 多个业务里灰度..."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "腾讯 混元 Hy3 发布 :这次不比参数,比谁更好用7月6日, 腾讯 混元 正式 发布 Hy3.4月底先放了 preview 版本,在 50 多个业务里灰度..."
-        },
-        {
-          "title": "公开索引摘要",
-          "bullets": [
-            "腾讯 混元 Hy3 发布 :这次不比参数,比谁更好用7月6日, 腾讯 混元 正式 发布 Hy3.4月底先放了 preview 版本,在 50 多个业务里灰度..."
           ]
         },
         {
@@ -3169,7 +3153,7 @@
       "resolved_url": "https://x.com/sama/status/2074909079450050629",
       "key_points": [
         "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
-        "5:30 PM · Jul 8, 2026 760K Views 937 520 11K 787 Jenny @suomi55 Jul 8 Are you kidding us?",
+        "5:30 PM · Jul 8, 2026 760.1K Views 937 522 11K 786 Jenny @suomi55 Jul 8 Are you kidding us?",
         "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
         "You are promoting something here that you yourself have taken away from the users!",
         "#keep4o #BringBack4o #OpenSource4o 20 13 193 13K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
@@ -3183,7 +3167,7 @@
           "title": "公开页面要点",
           "bullets": [
             "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
-            "5:30 PM · Jul 8, 2026 760K Views 937 520 11K 787 Jenny @suomi55 Jul 8 Are you kidding us?",
+            "5:30 PM · Jul 8, 2026 760.1K Views 937 522 11K 786 Jenny @suomi55 Jul 8 Are you kidding us?",
             "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
             "You are promoting something here that you yourself have taken away from the users!",
             "#keep4o #BringBack4o #OpenSource4o 20 13 193 13K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
@@ -3192,7 +3176,7 @@
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 760K Views 937 520 11K 787",
+            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 760.1K Views 937 522 11K 786",
             "Jenny @suomi55 Jul 8 Are you kidding us? „it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o! You are promoting something here that you yourself have taken away from the users! That’s disgusting! #keep4o #BringBack4o #OpenSource4o 20 13 193 13K",
             "David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
           ]
@@ -3840,6 +3824,47 @@
       "reading_minutes": 1
     },
     {
+      "id": "5fbae84b9d371277",
+      "kind": "article",
+      "title": "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says",
+      "source": "Reuters",
+      "source_url": "https://www.reuters.com/legal/transactional/nvidia-invest-5-billion-ilya-sutskevers-ai-startup-source-says-2026-07-27/",
+      "published_at": "2026-07-27T17:54:25Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Researcher Watch",
+        "Foundation Models",
+        "Leadership"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says Reuters",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 401: HTTP Forbidden",
+      "resolved_url": "https://www.reuters.com/legal/transactional/nvidia-invest-5-billion-ilya-sutskevers-ai-startup-source-says-2026-07-27/",
+      "key_points": [
+        "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says Reuters"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says Reuters"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says Reuters"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "6d2bd7fe1150170f",
       "kind": "article",
       "title": "A.I. Disproves a Decades-Old Mathematical Idea, the 'Biggest Conjecture' That the Tech Has Played a Role in Yet",
@@ -4044,6 +4069,57 @@
       "reading_minutes": 1
     },
     {
+      "id": "9943969fce7ee83e",
+      "kind": "article",
+      "title": "Fei-Fei Li",
+      "source": "American Academy of Arts and Sciences",
+      "source_url": "https://www.amacad.org/person/fei-fei-li",
+      "published_at": "2026-07-24T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Researcher Watch",
+        "Vision",
+        "World Models"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Dr. Fei-Fei Li is the inaugural Sequoia Professor in the Computer Science Department at Stanford University, and Co-Director of Stanford’s Human-Centered AI Institute. She served as the Director of Stanford’s AI Lab from 2013 to 2018. And during her sabbatical from Stanford from January 2017 to September 2018, she was Vice President at Google and served as Chief Scientist of AI/ML at Google Cloud. Dr. Fei-Fei Li obtained her B.A. degree in physics from Princeton in 1999 with High Honors, and her PhD degree in electrical engineering from California Institute of Technology (Caltech) in 2005. She joined Stanford in 2009 as an assistant professor. Prior to that, she was on…",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.amacad.org/person/fei-fei-li",
+      "key_points": [
+        "Fei-Fei Li is the inaugural Sequoia Professor in the Computer Science Department at Stanford University, and Co-Director of Stanford’s Human-Centered AI Institute.",
+        "She served as the Director of Stanford’s AI Lab from 2013 to 2018.",
+        "And during her sabbatical from Stanford from January 2017 to September 2018, she was Vice President at Google and served as Chief Scientist of AI/ML at Google Cloud.",
+        "Fei-Fei Li obtained her B.A. degree in physics from Princeton in 1999 with High Honors, and her PhD degree in electrical engineering from California Institute of Technology (Caltech) in 2005.",
+        "She joined Stanford in 2009 as an assistant professor."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Dr. Fei-Fei Li is the inaugural Sequoia Professor in the Computer Science Department at Stanford University, and Co-Director of Stanford’s Human-Centered AI Institute. She served as the Director of Stanford’s AI Lab from 2013 to 2018. And during her sabbatical from Stanford from January 2017 to September 2018, she was Vice President at Google and served as Chief Scientist of AI/ML at Google Cloud. Dr. Fei-Fei Li obtained her B.A. degree in physics from Princeton in 1999 with High Honors, and her PhD degree in electrical engineering from California Institute of Technology (Caltech) in 2005. She joined Stanford in 2009 as an assistant professor. Prior to that, she was on…"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Fei-Fei Li is the inaugural Sequoia Professor in the Computer Science Department at Stanford University, and Co-Director of Stanford’s Human-Centered AI Institute.",
+            "She served as the Director of Stanford’s AI Lab from 2013 to 2018.",
+            "And during her sabbatical from Stanford from January 2017 to September 2018, she was Vice President at Google and served as Chief Scientist of AI/ML at Google Cloud.",
+            "Fei-Fei Li obtained her B.A. degree in physics from Princeton in 1999 with High Honors, and her PhD degree in electrical engineering from California Institute of Technology (Caltech) in 2005.",
+            "She joined Stanford in 2009 as an assistant professor."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Dr. Fei-Fei Li is the inaugural Sequoia Professor in the Computer Science Department at Stanford University, and Co-Director of Stanford’s Human-Centered AI Institute. She served as the Director of Stanford’s AI Lab from 2013 to 2018. And during her sabbatical from Stanford from January 2017 to September 2018, she was Vice President at Google and served as Chief Scientist of AI/ML at Google Cloud. Dr. Fei-Fei Li obtained her B.A. degree in physics from Princeton in 1999 with High Honors, and her PhD degree in electrical engineering from California Institute of Technology (Caltech) in 2005. She joined Stanford in 2009 as an assistant professor. Prior to that, she was on faculty at Princeton University…",
+            "Dr. Fei-Fei Li’s current research interests include cognitively inspired AI, machine learning, deep learning, computer vision and AI+healthcare especially ambient intelligent systems for healthcare delivery. In the past she has also worked on cognitive and computational neuroscience. Dr. Li has published more than 200 scientific articles in top-tier journals and conferences, including Nature, PNAS, Journal of Neuroscience, CVPR, ICCV, NIPS, ECCV, ICRA, IROS, RSS, IJCV, IEEE-PAMI, New England Journal of Medicine, Nature Digital Medicine, etc. Dr. Li is the inventor of ImageNet and the ImageNet Challenge, a critical large-scale dataset and benchmarking effort that has contributed to the latest developments in…"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "fa76ba62247d66c9",
       "kind": "article",
       "title": "Bringing Nunchaku 4-bit Diffusion Inference to Diffusers",
@@ -4198,7 +4274,7 @@
       "id": "d0eec51a702fc422",
       "kind": "article",
       "title": "The Anthropic-Physical Intelligence rumor roiling AI Twitter | TechCrunch",
-      "source": "techcrunch.com",
+      "source": "TechCrunch",
       "source_url": "https://techcrunch.com/2026/07/21/the-anthropic-physical-intelligence-rumor-roiling-ai-twitter/",
       "published_at": "2026-07-21T07:00:00Z",
       "authors": [],
@@ -4208,7 +4284,7 @@
         "Embodied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "The Anthropic-Physical Intelligence rumor roiling AI Twitter techcrunch.com",
+      "summary": "The Anthropic-Physical Intelligence rumor roiling AI Twitter TechCrunch",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://techcrunch.com/2026/07/21/the-anthropic-physical-intelligence-rumor-roiling-ai-twitter/",
@@ -4222,7 +4298,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "The Anthropic-Physical Intelligence rumor roiling AI Twitter techcrunch.com"
+          "body": "The Anthropic-Physical Intelligence rumor roiling AI Twitter TechCrunch"
         },
         {
           "title": "公开页面要点",
@@ -4246,63 +4322,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "9943969fce7ee83e",
-      "kind": "article",
-      "title": "Fei-Fei Li",
-      "source": "American Academy of Arts and Sciences",
-      "source_url": "https://www.amacad.org/person/fei-fei-li",
-      "published_at": "2026-07-01T12:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Researcher Watch",
-        "Vision",
-        "World Models"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Dr. Fei-Fei Li is the inaugural Sequoia Professor in the Computer Science Department at Stanford University, and Co-Director of Stanford’s Human-Centered AI Institute. She served as the Director of Stanford’s AI Lab from 2013 to 2018. And during her sabbatical from Stanford from January 2017 to September 2018, she was Vice President at Google and served as Chief Scientist of AI/ML at Google Cloud. Dr. Fei-Fei Li obtained her B.A. degree in physics from Princeton in 1999 with High Honors, and her PhD degree in electrical engineering from California Institute of Technology (Caltech) in 2005. She joined Stanford in 2009 as an assistant professor. Prior to that, she was on…",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.amacad.org/person/fei-fei-li",
-      "key_points": [
-        "Fei-Fei Li is the inaugural Sequoia Professor in the Computer Science Department at Stanford University, and Co-Director of Stanford’s Human-Centered AI Institute.",
-        "She served as the Director of Stanford’s AI Lab from 2013 to 2018.",
-        "And during her sabbatical from Stanford from January 2017 to September 2018, she was Vice President at Google and served as Chief Scientist of AI/ML at Google Cloud.",
-        "Fei-Fei Li obtained her B.A. degree in physics from Princeton in 1999 with High Honors, and her PhD degree in electrical engineering from California Institute of Technology (Caltech) in 2005.",
-        "She joined Stanford in 2009 as an assistant professor."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Dr. Fei-Fei Li is the inaugural Sequoia Professor in the Computer Science Department at Stanford University, and Co-Director of Stanford’s Human-Centered AI Institute. She served as the Director of Stanford’s AI Lab from 2013 to 2018. And during her sabbatical from Stanford from January 2017 to September 2018, she was Vice President at Google and served as Chief Scientist of AI/ML at Google Cloud. Dr. Fei-Fei Li obtained her B.A. degree in physics from Princeton in 1999 with High Honors, and her PhD degree in electrical engineering from California Institute of Technology (Caltech) in 2005. She joined Stanford in 2009 as an assistant professor. Prior to that, she was on…"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Fei-Fei Li is the inaugural Sequoia Professor in the Computer Science Department at Stanford University, and Co-Director of Stanford’s Human-Centered AI Institute.",
-            "She served as the Director of Stanford’s AI Lab from 2013 to 2018.",
-            "And during her sabbatical from Stanford from January 2017 to September 2018, she was Vice President at Google and served as Chief Scientist of AI/ML at Google Cloud.",
-            "Fei-Fei Li obtained her B.A. degree in physics from Princeton in 1999 with High Honors, and her PhD degree in electrical engineering from California Institute of Technology (Caltech) in 2005.",
-            "She joined Stanford in 2009 as an assistant professor."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Dr. Fei-Fei Li is the inaugural Sequoia Professor in the Computer Science Department at Stanford University, and Co-Director of Stanford’s Human-Centered AI Institute. She served as the Director of Stanford’s AI Lab from 2013 to 2018. And during her sabbatical from Stanford from January 2017 to September 2018, she was Vice President at Google and served as Chief Scientist of AI/ML at Google Cloud. Dr. Fei-Fei Li obtained her B.A. degree in physics from Princeton in 1999 with High Honors, and her PhD degree in electrical engineering from California Institute of Technology (Caltech) in 2005. She joined Stanford in 2009 as an assistant professor. Prior to that, she was on faculty at Princeton University…",
-            "Dr. Fei-Fei Li’s current research interests include cognitively inspired AI, machine learning, deep learning, computer vision and AI+healthcare especially ambient intelligent systems for healthcare delivery. In the past she has also worked on cognitive and computational neuroscience. Dr. Li has published more than 200 scientific articles in top-tier journals and conferences, including Nature, PNAS, Journal of Neuroscience, CVPR, ICCV, NIPS, ECCV, ICRA, IROS, RSS, IJCV, IEEE-PAMI, New England Journal of Medicine, Nature Digital Medicine, etc. Dr. Li is the inventor of ImageNet and the ImageNet Challenge, a critical large-scale dataset and benchmarking effort that has contributed to the latest developments in…"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "92df914214bbc75d",
       "kind": "article",
       "title": "How OpenAI Announced Its Next Frontier Model 'Astra'",
       "source": "AI Magazine",
       "source_url": "https://aimagazine.com/articles/openai-new-model-astra-solves-long-standing-maths-problems",
-      "published_at": "2026-08-03T09:55:48Z",
+      "published_at": "2026-08-03T13:49:41Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -4345,6 +4370,54 @@
       "reading_minutes": 1
     },
     {
+      "id": "a85f76c9ebf81810",
+      "kind": "article",
+      "title": "OpenAI’s Astra Model Solves 10 Major Mathematic Problems",
+      "source": "Technology Magazine",
+      "source_url": "https://technologymagazine.com/news/openais-astra-model-solves-10-major-mathematic-problems",
+      "published_at": "2026-08-03T12:01:37Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Researcher Watch",
+        "Agents",
+        "Reasoning"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "OpenAI’s Astra Model Solves 10 Major Mathematic Problems Technology Magazine",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://technologymagazine.com/news/openais-astra-model-solves-10-major-mathematic-problems",
+      "key_points": [
+        "The US firm claims the system has resolved or made progress on 10 open problems in mathematics and theoretical computer science.",
+        "The problems cover high-dimensional geometry, coding theory, arithmetic circuit complexity, group theory, operator algebras, quantum complexity, lattice cryptography and extremal combinatorics.",
+        "Sam Altman , CEO of OpenAI, visited Washington D.C. last week to demonstrate Astra to US politicians, according to reporting from The Telegraph."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "OpenAI’s Astra Model Solves 10 Major Mathematic Problems Technology Magazine"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "The US firm claims the system has resolved or made progress on 10 open problems in mathematics and theoretical computer science.",
+            "The problems cover high-dimensional geometry, coding theory, arithmetic circuit complexity, group theory, operator algebras, quantum complexity, lattice cryptography and extremal combinatorics.",
+            "Sam Altman , CEO of OpenAI, visited Washington D.C. last week to demonstrate Astra to US politicians, according to reporting from The Telegraph."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "The US firm claims the system has resolved or made progress on 10 open problems in mathematics and theoretical computer science.",
+            "The problems cover high-dimensional geometry, coding theory, arithmetic circuit complexity, group theory, operator algebras, quantum complexity, lattice cryptography and extremal combinatorics.",
+            "Sam Altman , CEO of OpenAI, visited Washington D.C. last week to demonstrate Astra to US politicians, according to reporting from The Telegraph."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "f980491edc18086b",
       "kind": "social",
       "title": "AI is a supersonic tsunami",
@@ -4364,7 +4437,7 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://x.com/elonmusk/status/2084108995980108154",
       "key_points": [
-        "Elon Musk @elonmusk AI is a supersonic tsunami 2:48 AM · Aug 3, 2026 4M Views 2.2K 2.1K 22K 2.1K Luddite Design @LudditeDesign 7h since there's no label, I'll just assume it's a measure of your shitposts 5 380 15K"
+        "Elon Musk @elonmusk AI is a supersonic tsunami 2:48 AM · Aug 3, 2026 5.7M Views 2.8K 3K 31K 2.8K Luddite Design @LudditeDesign 12h since there's no label, I'll just assume it's a measure of your shitposts 5 1 635 30K"
       ],
       "sections": [
         {
@@ -4374,14 +4447,14 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Elon Musk @elonmusk AI is a supersonic tsunami 2:48 AM · Aug 3, 2026 4M Views 2.2K 2.1K 22K 2.1K Luddite Design @LudditeDesign 7h since there's no label, I'll just assume it's a measure of your shitposts 5 380 15K"
+            "Elon Musk @elonmusk AI is a supersonic tsunami 2:48 AM · Aug 3, 2026 5.7M Views 2.8K 3K 31K 2.8K Luddite Design @LudditeDesign 12h since there's no label, I'll just assume it's a measure of your shitposts 5 1 635 30K"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk AI is a supersonic tsunami 2:48 AM · Aug 3, 2026 4M Views 2.2K 2.1K 22K 2.1K",
-            "Luddite Design @LudditeDesign 7h since there's no label, I'll just assume it's a measure of your shitposts 5 380 15K"
+            "Elon Musk @elonmusk AI is a supersonic tsunami 2:48 AM · Aug 3, 2026 5.7M Views 2.8K 3K 31K 2.8K",
+            "Luddite Design @LudditeDesign 12h since there's no label, I'll just assume it's a measure of your shitposts 5 1 635 30K"
           ]
         }
       ],
@@ -4423,9 +4496,55 @@
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Andrej Karpathy @karpathy Aug 2 We're starting to leave the territory where you'd test an LLM by e.g. \"create an svg of pelican on a bicycle\". As one idea to generalize it, I was interested what Opus 5 would do if I gave it the first paragraph of the Lord of the Rings, a 1M token budget (~$10) and asked for Show more 00:00 1.3K 1.9K 25K 3.3M",
-            "Andrej Karpathy @karpathy More on the pelican on the bicycle test from @ simonw : simonwillison.net/2025/Jun/6/six… I uploaded the source here so it's playable in the browser, forkable etc. karpathy.ai/lotr-movie/ Look out for GTA Hobbiton dropping before GTA VI :) 4:10 PM · Aug 2, 2026 105.4K Views 41 17 414 118",
-            "john pera @isweepyou 17h the pelican test is just \"does it work when there's no reddit thread to copy from.\" gta hobbiton beating gta vi would be the funniest benchmark result of all time GIF 4 2.1K"
+            "Andrej Karpathy @karpathy Aug 2 We're starting to leave the territory where you'd test an LLM by e.g. \"create an svg of pelican on a bicycle\". As one idea to generalize it, I was interested what Opus 5 would do if I gave it the first paragraph of the Lord of the Rings, a 1M token budget (~$10) and asked for Show more 00:00 1.3K 2K 26K 3.5M",
+            "Andrej Karpathy @karpathy More on the pelican on the bicycle test from @ simonw : simonwillison.net/2025/Jun/6/six… I uploaded the source here so it's playable in the browser, forkable etc. karpathy.ai/lotr-movie/ Look out for GTA Hobbiton dropping before GTA VI :) 4:10 PM · Aug 2, 2026 114.4K Views 48 19 443 129",
+            "john pera @isweepyou 23h the pelican test is just \"does it work when there's no reddit thread to copy from.\" gta hobbiton beating gta vi would be the funniest benchmark result of all time GIF 4 2.1K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "49dfcf5cd8d49a8a",
+      "kind": "social",
+      "title": "Grok can analyze any video",
+      "source": "x.com",
+      "source_url": "https://x.com/elonmusk/status/2083800942927839307",
+      "published_at": "2026-08-02T06:23:54Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "Grok can analyze any video x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/elonmusk/status/2083800942927839307",
+      "key_points": [
+        "Elon Musk @elonmusk Grok can analyze any video Kobe Bryant pitches Grok 4.5 | Shared Grok Conversation From grok.com 6:23 AM · Aug 2, 2026 6.4M Views 2.3K 1.9K 10K 775 Orly @orly____ Aug 2 Wonder if grok could analyze this one.",
+        "Space x during the medieval times Knight Core 00:00 Knight Core 9 13 49 2.4K Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Aug 2 Hey @ grok analyze this video 🔥 00:00 5 9 41 5K"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Grok can analyze any video x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Elon Musk @elonmusk Grok can analyze any video Kobe Bryant pitches Grok 4.5 | Shared Grok Conversation From grok.com 6:23 AM · Aug 2, 2026 6.4M Views 2.3K 1.9K 10K 775 Orly @orly____ Aug 2 Wonder if grok could analyze this one.",
+            "Space x during the medieval times Knight Core 00:00 Knight Core 9 13 49 2.4K Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Aug 2 Hey @ grok analyze this video 🔥 00:00 5 9 41 5K"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Elon Musk @elonmusk Grok can analyze any video Kobe Bryant pitches Grok 4.5 | Shared Grok Conversation From grok.com 6:23 AM · Aug 2, 2026 6.4M Views 2.3K 1.9K 10K 775",
+            "Orly @orly____ Aug 2 Wonder if grok could analyze this one. Space x during the medieval times Knight Core 00:00 Knight Core 9 13 49 2.4K",
+            "Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Aug 2 Hey @ grok analyze this video 🔥 00:00 5 9 41 5K"
           ]
         }
       ],
@@ -4455,7 +4574,7 @@
         "As one idea to generalize it, I was interested what Opus 5 would do if I gave it the first paragraph of the Lord of the Rings, a 1M token budget (~$10) and asked for three js render of it.",
         "Opus went off for ~2 hours and wrote 5500 lines of code that (procedurally) rendered the story.",
         "But it's a bit mindboggling that the LLM has to place and orchestrate various polygon assets in (x,y,z) coordinates and write code that animates it all, and that it even does anything at all.",
-        "I also like this kind of examples because no one in their right mind would… Andrej Karpathy @karpathy 17h More on the pelican on the bicycle test from @ simonw : simonwillison.net/2025/Jun/6/six… I uploaded the source here so it's playable in the browser, forkable etc. karpathy.ai/lotr-movie/ Look out for GTA Hobbiton dropping before GTA VI :) 41 17 414 105K"
+        "I also like this kind of examples because no one in their right mind would… Andrej Karpathy @karpathy 23h More on the pelican on the bicycle test from @ simonw : simonwillison.net/2025/Jun/6/six… I uploaded the source here so it's playable in the browser, forkable etc. karpathy.ai/lotr-movie/ Look out for GTA Hobbiton dropping before GTA VI :) 48 19 443 114K"
       ],
       "sections": [
         {
@@ -4469,147 +4588,14 @@
             "As one idea to generalize it, I was interested what Opus 5 would do if I gave it the first paragraph of the Lord of the Rings, a 1M token budget (~$10) and asked for three js render of it.",
             "Opus went off for ~2 hours and wrote 5500 lines of code that (procedurally) rendered the story.",
             "But it's a bit mindboggling that the LLM has to place and orchestrate various polygon assets in (x,y,z) coordinates and write code that animates it all, and that it even does anything at all.",
-            "I also like this kind of examples because no one in their right mind would… Andrej Karpathy @karpathy 17h More on the pelican on the bicycle test from @ simonw : simonwillison.net/2025/Jun/6/six… I uploaded the source here so it's playable in the browser, forkable etc. karpathy.ai/lotr-movie/ Look out for GTA Hobbiton dropping before GTA VI :) 41 17 414 105K"
+            "I also like this kind of examples because no one in their right mind would… Andrej Karpathy @karpathy 23h More on the pelican on the bicycle test from @ simonw : simonwillison.net/2025/Jun/6/six… I uploaded the source here so it's playable in the browser, forkable etc. karpathy.ai/lotr-movie/ Look out for GTA Hobbiton dropping before GTA VI :) 48 19 443 114K"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
             "Andrej Karpathy @karpathy We're starting to leave the territory where you'd test an LLM by e.g. \"create an svg of pelican on a bicycle\". As one idea to generalize it, I was interested what Opus 5 would do if I gave it the first paragraph of the Lord of the Rings, a 1M token budget (~$10) and asked for three js render of it. Opus went off for ~2 hours and wrote 5500 lines of code that (procedurally) rendered the story. It's kind of janky but fun. But it's a bit mindboggling that the LLM has to place and orchestrate various polygon assets in (x,y,z) coordinates and write code that animates it all, and that it even does anything at all. I also like this kind of examples because no one in their right mind would…",
-            "Andrej Karpathy @karpathy 17h More on the pelican on the bicycle test from @ simonw : simonwillison.net/2025/Jun/6/six… I uploaded the source here so it's playable in the browser, forkable etc. karpathy.ai/lotr-movie/ Look out for GTA Hobbiton dropping before GTA VI :) 41 17 414 105K"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "62df1f9b40b19392",
-      "kind": "social",
-      "title": "@icreatelife From Grok:",
-      "source": "x.com",
-      "source_url": "https://x.com/elonmusk/status/2083731654846140670",
-      "published_at": "2026-08-02T01:48:35Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "@icreatelife From Grok:",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/elonmusk/status/2083731654846140670",
-      "key_points": [
-        "Kris Kashtanova @icreatelife Aug 1 Ask ChatGPT to create the most awkward image ever created in the history of AI.",
-        "Here’s mine: Made with AI 280 56 640 134K Elon Musk @elonmusk From Grok: Made with AI 1:48 AM · Aug 2, 2026 149K Views 390 149 1.4K 60 Elon Musk @elonmusk Aug 2 Now using Grok Build via iOS Grok app: 00:00 Made with AI 109 99 824 88K"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "@icreatelife From Grok:"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Kris Kashtanova @icreatelife Aug 1 Ask ChatGPT to create the most awkward image ever created in the history of AI.",
-            "Here’s mine: Made with AI 280 56 640 134K Elon Musk @elonmusk From Grok: Made with AI 1:48 AM · Aug 2, 2026 149K Views 390 149 1.4K 60 Elon Musk @elonmusk Aug 2 Now using Grok Build via iOS Grok app: 00:00 Made with AI 109 99 824 88K"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Kris Kashtanova @icreatelife Aug 1 Ask ChatGPT to create the most awkward image ever created in the history of AI. I’d love to see what you get. Here’s mine: Made with AI 280 56 640 134K",
-            "Elon Musk @elonmusk From Grok: Made with AI 1:48 AM · Aug 2, 2026 149K Views 390 149 1.4K 60",
-            "Elon Musk @elonmusk Aug 2 Now using Grok Build via iOS Grok app: 00:00 Made with AI 109 99 824 88K"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "c4b9360d5c10a2d6",
-      "kind": "social",
-      "title": "Made with Grok Imagine",
-      "source": "x.com",
-      "source_url": "https://x.com/elonmusk/status/2083709924236751300",
-      "published_at": "2026-08-02T00:22:14Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Made with Grok Imagine",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/elonmusk/status/2083709924236751300",
-      "key_points": [
-        "Elon Musk @elonmusk Made with Grok Imagine Heavy Pulp 00:00 Heavy Pulp 12:22 AM · Aug 2, 2026 8.1M Views 3.5K 2.5K 21K 3.5K zeemonk @zeeFloatingMonk Aug 2 congrats you have reached levels of cringe heretofore thought not possible. 🥇 3 1.7K 22K"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Made with Grok Imagine"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Elon Musk @elonmusk Made with Grok Imagine Heavy Pulp 00:00 Heavy Pulp 12:22 AM · Aug 2, 2026 8.1M Views 3.5K 2.5K 21K 3.5K zeemonk @zeeFloatingMonk Aug 2 congrats you have reached levels of cringe heretofore thought not possible. 🥇 3 1.7K 22K"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Elon Musk @elonmusk Made with Grok Imagine Heavy Pulp 00:00 Heavy Pulp 12:22 AM · Aug 2, 2026 8.1M Views 3.5K 2.5K 21K 3.5K",
-            "zeemonk @zeeFloatingMonk Aug 2 congrats you have reached levels of cringe heretofore thought not possible. 🥇 3 1.7K 22K"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "a3b561a6e2990b64",
-      "kind": "social",
-      "title": "Elon Musk (@elonmusk) on X",
-      "source": "x.com",
-      "source_url": "https://x.com/elonmusk/status/2083706250370449572",
-      "published_at": "2026-08-02T00:07:38Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Grok Imagine",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/elonmusk/status/2083706250370449572",
-      "key_points": [
-        "Elon Musk @elonmusk Grok Imagine Déborah 00:00 Déborah 12:07 AM · Aug 2, 2026 4.5M Views 2K 1.7K 9.5K 426 Three Year Letterman @3YearLetterman Aug 2 Let’s don’t and say we did 4 85 5.4K Jenga @jengaxnl Aug 2 Using Grok Imagine @ elonmusk how did i do with kekius dancing with tesla.?"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Grok Imagine"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Elon Musk @elonmusk Grok Imagine Déborah 00:00 Déborah 12:07 AM · Aug 2, 2026 4.5M Views 2K 1.7K 9.5K 426 Three Year Letterman @3YearLetterman Aug 2 Let’s don’t and say we did 4 85 5.4K Jenga @jengaxnl Aug 2 Using Grok Imagine @ elonmusk how did i do with kekius dancing with tesla.?"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Elon Musk @elonmusk Grok Imagine Déborah 00:00 Déborah 12:07 AM · Aug 2, 2026 4.5M Views 2K 1.7K 9.5K 426",
-            "Three Year Letterman @3YearLetterman Aug 2 Let’s don’t and say we did 4 85 5.4K",
-            "Jenga @jengaxnl Aug 2 Using Grok Imagine @ elonmusk how did i do with kekius dancing with tesla.? 00:00 Made with AI 6 11 32 1.7K"
+            "Andrej Karpathy @karpathy 23h More on the pelican on the bicycle test from @ simonw : simonwillison.net/2025/Jun/6/six… I uploaded the source here so it's playable in the browser, forkable etc. karpathy.ai/lotr-movie/ Look out for GTA Hobbiton dropping before GTA VI :) 48 19 443 114K"
           ]
         }
       ],
@@ -4892,7 +4878,7 @@
       "id": "26cd40c9fa67f749",
       "kind": "article",
       "title": "This MBA Student’s AI Startup Is Making Healthcare Processes More Efficient",
-      "source": "poetsandquants.com",
+      "source": "Poets&Quants",
       "source_url": "https://poetsandquants.com/2026/07/25/this-mba-students-ai-startup-is-making-healthcare-processes-more-efficient/",
       "published_at": "2026-07-26T03:37:28Z",
       "authors": [],
@@ -4902,7 +4888,7 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "This MBA Student’s AI Startup Is Making Healthcare Processes More Efficient poetsandquants.com",
+      "summary": "This MBA Student’s AI Startup Is Making Healthcare Processes More Efficient Poets&Quants",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://poetsandquants.com/2026/07/25/this-mba-students-ai-startup-is-making-healthcare-processes-more-efficient/",
@@ -4916,7 +4902,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "This MBA Student’s AI Startup Is Making Healthcare Processes More Efficient poetsandquants.com"
+          "body": "This MBA Student’s AI Startup Is Making Healthcare Processes More Efficient Poets&Quants"
         },
         {
           "title": "公开页面要点",
@@ -5120,7 +5106,7 @@
       "id": "5f5a89efbd09f340",
       "kind": "article",
       "title": "'I have a chip on my shoulder.' Phoebe Gates wants her $185 million AI startup Phia to succeed with 'no ties to my privilege or my last name'",
-      "source": "fortune.com",
+      "source": "Fortune",
       "source_url": "https://fortune.com/article/phoebe-gates-startup-phia-succeed-without-parents-help-bill-gates-melinda-french-gates/",
       "published_at": "2026-07-11T07:00:00Z",
       "authors": [],
@@ -5130,7 +5116,7 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "'I have a chip on my shoulder.' Phoebe Gates wants her $185 million AI startup Phia to succeed with 'no ties to my privilege or my last name' fortune.com",
+      "summary": "'I have a chip on my shoulder.' Phoebe Gates wants her $185 million AI startup Phia to succeed with 'no ties to my privilege or my last name' Fortune",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://fortune.com/article/phoebe-gates-startup-phia-succeed-without-parents-help-bill-gates-melinda-french-gates/",
@@ -5142,7 +5128,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "'I have a chip on my shoulder.' Phoebe Gates wants her $185 million AI startup Phia to succeed with 'no ties to my privilege or my last name' fortune.com"
+          "body": "'I have a chip on my shoulder.' Phoebe Gates wants her $185 million AI startup Phia to succeed with 'no ties to my privilege or my last name' Fortune"
         },
         {
           "title": "公开页面要点",
@@ -5388,7 +5374,7 @@
       "id": "f686abe275da2feb",
       "kind": "article",
       "title": "Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security",
-      "source": "blogs.nvidia.com",
+      "source": "NVIDIA Blog",
       "source_url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/",
       "published_at": "2026-07-27T09:03:43Z",
       "authors": [],
@@ -5398,7 +5384,7 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security blogs.nvidia.com",
+      "summary": "Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security NVIDIA Blog",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/",
@@ -5412,7 +5398,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security blogs.nvidia.com"
+          "body": "Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security NVIDIA Blog"
         },
         {
           "title": "公开页面要点",
@@ -5488,7 +5474,7 @@
       "id": "870ea0cf12fd249f",
       "kind": "article",
       "title": "Highlights From The Discourse On The Hugging Face Incident",
-      "source": "Astral Codex Ten",
+      "source": "astralcodexten.com",
       "source_url": "https://www.astralcodexten.com/p/highlights-from-the-discourse-on",
       "published_at": "2026-07-30T01:07:16Z",
       "authors": [],
@@ -5498,7 +5484,7 @@
         "Models & Tools"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Highlights From The Discourse On The Hugging Face Incident Astral Codex Ten",
+      "summary": "Highlights From The Discourse On The Hugging Face Incident astralcodexten.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.astralcodexten.com/p/highlights-from-the-discourse-on",
@@ -5509,7 +5495,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "Highlights From The Discourse On The Hugging Face Incident Astral Codex Ten"
+          "body": "Highlights From The Discourse On The Hugging Face Incident astralcodexten.com"
         },
         {
           "title": "公开页面要点",
@@ -5796,7 +5782,7 @@
       "id": "f9b3e45cea81004e",
       "kind": "article",
       "title": "Hugging Face says it resorted to a Chinese AI model to battle a fully autonomous cyberattack because U.S. model guardrails hampered its defense | Fortune",
-      "source": "fortune.com",
+      "source": "Fortune",
       "source_url": "https://fortune.com/2026/07/20/hugging-face-turns-to-chinese-open-source-ai-to-fend-off-autonomous-ai-cyber-attack-after-american-ai-guardrails-stymie-defense/",
       "published_at": "2026-07-20T07:00:00Z",
       "authors": [],
@@ -5806,7 +5792,7 @@
         "Models & Tools"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Hugging Face turned to Chinese open source AI model after experiencing autonomous cyber attack fortune.com",
+      "summary": "Hugging Face turned to Chinese open source AI model after experiencing autonomous cyber attack Fortune",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://fortune.com/2026/07/20/hugging-face-turns-to-chinese-open-source-ai-to-fend-off-autonomous-ai-cyber-attack-after-american-ai-guardrails-stymie-defense/",
@@ -5820,7 +5806,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "Hugging Face turned to Chinese open source AI model after experiencing autonomous cyber attack fortune.com"
+          "body": "Hugging Face turned to Chinese open source AI model after experiencing autonomous cyber attack Fortune"
         },
         {
           "title": "公开页面要点",
