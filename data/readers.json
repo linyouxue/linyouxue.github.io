@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-02T19:32:37Z",
-  "record_count": 132,
+  "generated_at": "2026-08-03T03:52:50Z",
+  "record_count": 130,
   "records": [
     {
       "id": "jacobian-fable-20260720",
@@ -49,7 +49,7 @@
           "paragraphs": [
             "levent @__alpoge__ hello there the jacobian conjecture is false thanx to my close friend akhil for asking about it and my other close friend fable for working during the world cup final ((1+xy)^3 z + y^2 (1+xy) (4+3xy), y + 3 x (1+xy)^2 z + 3 x y^2 (4+3xy), 2 x - 3 x^2 y - x^3 z): \\C^3\\to \\C^3, has jacobian determinant -2, and sends (0, 0, -1/4), (1, -3/2, 13/2), and (-1, 3/2, 13/2) to (-1/4, 0, 0) 2:19 AM · Jul 20, 2026 39.6M Views 1.7K 5.4K 43K 12K",
             "levent @__alpoge__ Jul 20 wolframalpha.com/input?i=Det%5B… jacobian determinant in wolfram alpha wolframalpha.com Det[D[{(1+x y)^3 z + y^2 (1 + x y) (4 + 3x y), y + 3x (1 + x y)^2 z + 3x y^2 (4 + 3x y), 2x - 3x^2... Wolfram|Alpha brings expert-level knowledge and capabilities to the broadest possible range of people—spanning all professions and education levels. 19 53 1.5K 922K levent @__alpoge__ Jul 20 wolframalpha.com/input?i=%28%28… wolframalpha.com/input?i=%28%28… evaluating at two of those points in wolfram alpha wolframalpha.com ((1+x y)^3 z + y^2 (1 + x y) (4 + 3x y), y + 3x (1 + x y)^2 z + 3x y^2 (4 + 3x y), 2x - 3x^2 y -... Wolfram|Alpha brings expert-level knowledge and capabilities to the broadest…",
-            "Aldo Cortesi @cortesi Jul 20 The absolute state of maths. 8 90 1.6K 112K"
+            "Aldo Cortesi @cortesi Jul 20 The absolute state of maths. 8 89 1.6K 112K"
           ]
         }
       ],
@@ -409,6 +409,51 @@
       "reading_minutes": 1
     },
     {
+      "id": "rhb-icml-2026",
+      "kind": "paper",
+      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
+      "source": "OpenReview · arXiv",
+      "source_url": "https://arxiv.org/abs/2605.02964",
+      "published_at": "2026-06-24T00:00:00Z",
+      "authors": [
+        "Kunvar Thaman"
+      ],
+      "venue": "ICML 2026",
+      "tags": [
+        "Reward Hacking",
+        "Agent Safety",
+        "Evaluation"
+      ],
+      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
+      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/rhb-icml-2026.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://arxiv.org/pdf/2605.02964",
+      "key_points": [
+        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
+        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
+        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
+        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
+        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
+        },
+        {
+          "title": "关键结果",
+          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
+        },
+        {
+          "title": "局限与结论",
+          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
+        }
+      ],
+      "reading_minutes": 46
+    },
+    {
       "id": "022b2fe46aa8d22e",
       "kind": "article",
       "title": "Advancing responsible AI across Europe",
@@ -489,51 +534,6 @@
         }
       ],
       "reading_minutes": 1
-    },
-    {
-      "id": "rhb-icml-2026",
-      "kind": "paper",
-      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
-      "source": "OpenReview · arXiv",
-      "source_url": "https://arxiv.org/abs/2605.02964",
-      "published_at": "2026-06-24T00:00:00Z",
-      "authors": [
-        "Kunvar Thaman"
-      ],
-      "venue": "ICML 2026",
-      "tags": [
-        "Reward Hacking",
-        "Agent Safety",
-        "Evaluation"
-      ],
-      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
-      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/rhb-icml-2026.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://arxiv.org/pdf/2605.02964",
-      "key_points": [
-        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
-        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
-        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
-        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
-        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
-        },
-        {
-          "title": "关键结果",
-          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
-        },
-        {
-          "title": "局限与结论",
-          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
-        }
-      ],
-      "reading_minutes": 46
     },
     {
       "id": "08e88a5a28653bd8",
@@ -1379,11 +1379,103 @@
       "reading_minutes": 1
     },
     {
+      "id": "8b7a5efb6f2407ae",
+      "kind": "article",
+      "title": "New NSF initiative aims to unlock dataset value for AI-enabled scientific discovery",
+      "source": "U.S. National Science Foundation (.gov)",
+      "source_url": "https://www.nsf.gov/news/new-nsf-initiative-aims-unlock-dataset-value-ai-enabled",
+      "published_at": "2026-07-22T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "New NSF initiative aims to unlock dataset value for AI-enabled scientific discovery U.S. National Science Foundation (.gov)",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.nsf.gov/news/new-nsf-initiative-aims-unlock-dataset-value-ai-enabled",
+      "key_points": [
+        "National Science Foundation announced the NSF Unlocking Dataset Value for AI-Enabled Scientific Discovery program , a new investment to advance scientific community datasets and enable discovery and innovation using artificial intelligence and other methods in national priority areas.",
+        "Across science and engineering, researchers have built valuable datasets through prior research.",
+        "However, many datasets have the potential to be used for new inquiries outside of the initial scope of data collection, but are not accessible, interoperable or ready to be used by automated AI systems.",
+        "Many existing datasets also lack a way for a broad array of researchers to contribute and benefit.",
+        "The new program will help research communities unlock more value from datasets to ask new questions, test new ideas and extend the value of prior scientific investments."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "New NSF initiative aims to unlock dataset value for AI-enabled scientific discovery U.S. National Science Foundation (.gov)"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "National Science Foundation announced the NSF Unlocking Dataset Value for AI-Enabled Scientific Discovery program , a new investment to advance scientific community datasets and enable discovery and innovation using artificial intelligence and other methods in national priority areas.",
+            "Across science and engineering, researchers have built valuable datasets through prior research.",
+            "However, many datasets have the potential to be used for new inquiries outside of the initial scope of data collection, but are not accessible, interoperable or ready to be used by automated AI systems.",
+            "Many existing datasets also lack a way for a broad array of researchers to contribute and benefit.",
+            "The new program will help research communities unlock more value from datasets to ask new questions, test new ideas and extend the value of prior scientific investments."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "The U.S. National Science Foundation announced the NSF Unlocking Dataset Value for AI-Enabled Scientific Discovery program , a new investment to advance scientific community datasets and enable discovery and innovation using artificial intelligence and other methods in national priority areas.",
+            "Across science and engineering, researchers have built valuable datasets through prior research. However, many datasets have the potential to be used for new inquiries outside of the initial scope of data collection, but are not accessible, interoperable or ready to be used by automated AI systems. Many existing datasets also lack a way for a broad array of researchers to contribute and benefit. The new program will help research communities unlock more value from datasets to ask new questions, test new ideas and extend the value of prior scientific investments.",
+            "AI enables data processing and analysis at scales and speeds beyond human capacity, helping researchers identify previously hidden patterns and relationships. When paired with scientific datasets that are trusted, accessible, fit for their scientific purpose and curated, AI can advance scientific research and connect previously siloed disciplines."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "8b828f75d78c9cf3",
+      "kind": "article",
+      "title": "白菜价,旗舰芯: DeepSeek V4正式版 发布",
+      "source": "微信公众号 · 数智手札",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1785729149&ver=6881&signature=y34w2*B3kDHzy9OaE*Fa-TcUbq*CVPyAnVctWvlaEP*hxh8twtFrYedMnbnZVfy7Sgxf151zUkIKS7QV755cFxJNsgU1feF6rZYasMP4au2AYbC1V7-L8TQvhmbuqBRg&new=1",
+      "published_at": "2026-08-03T02:57:37Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "微信公众号",
+        "DeepSeek",
+        "模型"
+      ],
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "summary": "DeepSeek 的＂后训练＂奇迹7月31日, DeepSeek 发布 了V4-Flash正式版.这次 发布 有一个反直觉的地方:架构没变,参数没动,性能...",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "indexed-summary",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HIsQcGqjV9x4wMcC5c3J0QqzNRDhqJRIPHMca29I&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785729149%26ver%3D6881%26signature%3Dy34w2%2AB3kDHzy9OaE%2AFa-TcUbq%2ACVPyAnVctWvlaEP%2Ahxh8twtFrYedMnbnZVfy7Sgxf151zUkIKS7QV755cFxJNsgU1feF6rZYasMP4au2AYbC1V7-L8TQvhmbuqBRg%26new%3D1",
+      "key_points": [
+        "DeepSeek 的＂后训练＂奇迹7月31日, DeepSeek 发布 了V4-Flash正式版.这次 发布 有一个反直觉的地方:架构没变,参数没动,性能..."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "DeepSeek 的＂后训练＂奇迹7月31日, DeepSeek 发布 了V4-Flash正式版.这次 发布 有一个反直觉的地方:架构没变,参数没动,性能..."
+        },
+        {
+          "title": "公开索引摘要",
+          "bullets": [
+            "DeepSeek 的＂后训练＂奇迹7月31日, DeepSeek 发布 了V4-Flash正式版.这次 发布 有一个反直觉的地方:架构没变,参数没动,性能..."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "622ad842673b5e43",
       "kind": "article",
       "title": "[首发] DeepSeek V4-Flash 正式版合同审查测评,结果你猜不到.",
       "source": "微信公众号 · AI王律",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1785699137&ver=6880&signature=vH3GpS3lO1IQv2SttDViBnloopsGWcG0U9R8zthRTyark6HFgsA-ghY9vGQfk*tKrnxX3kzaNtMElhAGFC7Zn1qehldkPRjzNKm1t-bHq3WmuEO7aMpFdBHcrUk-wxq*&new=1",
+      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HE-bb2qjhXHd9GRhCnevXQ5yW4DoxPLfkwcBLlwL&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785699137%26ver%3D6880%26signature%3DvH3GpS3lO1IQv2SttDViBnloopsGWcG0U9R8zthRTyark6HFgsA-ghY9vGQfk%2AtKrnxX3kzaNtMElhAGFC7Zn1qehldkPRjzNKm1t-bHq3WmuEO7aMpFdBHcrUk-wxq%2A%26new%3D1",
       "published_at": "2026-08-02T16:00:41Z",
       "authors": [],
       "venue": "",
@@ -1461,11 +1553,51 @@
       "reading_minutes": 1
     },
     {
+      "id": "9561ef58f5ab7d09",
+      "kind": "article",
+      "title": "DeepSeek V4 Flash正式版 发布 ,为何市场反馈不及预期?",
+      "source": "微信公众号 · 田信君投",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1785729149&ver=6881&signature=wnIuOU2LVYHERbWdgVSRUeZe9QJFqZ7Znnjj-fKPDMIoYkFGLqTq9ZbZniJ494cevQEJQtzEKEMktdVRz1brEcJI6d*lEuJBS0jefe6bE9zunYCn58-2qs-3kkSRNUTB&new=1",
+      "published_at": "2026-08-02T04:48:26Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "微信公众号",
+        "DeepSeek",
+        "模型"
+      ],
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "summary": "DeepSeek V4 Flash正式API版如期上线,凭借亮眼的代码与Agent... 同时 发布 策略进一步拉低大众口碑:新版本仅开放API接口,官网...",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "indexed-summary",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HIsQcGqjzwIX8keMf7r-HZWwTt0OJVsKVJJ3dvz2&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785729149%26ver%3D6881%26signature%3DwnIuOU2LVYHERbWdgVSRUeZe9QJFqZ7Znnjj-fKPDMIoYkFGLqTq9ZbZniJ494cevQEJQtzEKEMktdVRz1brEcJI6d%2AlEuJBS0jefe6bE9zunYCn58-2qs-3kkSRNUTB%26new%3D1",
+      "key_points": [
+        "DeepSeek V4 Flash正式API版如期上线,凭借亮眼的代码与Agent... 同时 发布 策略进一步拉低大众口碑:新版本仅开放API接口,官网..."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "DeepSeek V4 Flash正式API版如期上线,凭借亮眼的代码与Agent... 同时 发布 策略进一步拉低大众口碑:新版本仅开放API接口,官网..."
+        },
+        {
+          "title": "公开索引摘要",
+          "bullets": [
+            "DeepSeek V4 Flash正式API版如期上线,凭借亮眼的代码与Agent... 同时 发布 策略进一步拉低大众口碑:新版本仅开放API接口,官网..."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "031336d8d2864b20",
       "kind": "article",
       "title": "DeepSeek 最新开源模型 发布 !",
       "source": "微信公众号 · 云小虾",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1785699137&ver=6880&signature=yrwtFOiW0mKUjOUgjfcMx8jILkSqRgHILE2-1uMLTXO1JEgub4Lm*cm4QQ0Yqi*Q0CkF9v0P9x7i*fwQYqx1gHnhkLXdfvsWFYGTdkNPTE9jqE7lYY5O-KxkzzlCHdN4&new=1",
+      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HE-bb2qjuX5V2zquvDeEwju75dpnTWhdmUXG0Jp9&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785699137%26ver%3D6880%26signature%3DyrwtFOiW0mKUjOUgjfcMx8jILkSqRgHILE2-1uMLTXO1JEgub4Lm%2Acm4QQ0Yqi%2AQ0CkF9v0P9x7i%2AfwQYqx1gHnhkLXdfvsWFYGTdkNPTE9jqE7lYY5O-KxkzzlCHdN4%26new%3D1",
       "published_at": "2026-08-02T01:37:14Z",
       "authors": [],
       "venue": "",
@@ -1931,86 +2063,6 @@
           "title": "公开索引摘要",
           "bullets": [
             "腾讯 混元 Hy3 发布 :这次不比参数,比谁更好用7月6日, 腾讯 混元 正式 发布 Hy3.4月底先放了 preview 版本,在 50 多个业务里灰度..."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "072bce0a067538ba",
-      "kind": "article",
-      "title": "DeepSeek V4正式版实测曝光,有望下周 发布",
-      "source": "微信公众号 · 互联网er的早读课",
-      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HA5hZmqj9ViQn9ctJLyzyN2knfg-TvVwoIlAv20U&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785094400%26ver%3D6866%26signature%3DA851Aml2ZEP0kxbZ%2Anhog5gFsH3d0Fy-8XP%2A5W1JUVgrP8jgN8-SpqwYKHrmELep-LDGXQUI-RCekPSy26f1o3FkWBJ7ID%2A9cIVLvcU8CiIAz1JaPpwECEfcBX1taHS2%26new%3D1",
-      "published_at": "2026-07-25T00:06:08Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "微信公众号",
-        "DeepSeek",
-        "模型"
-      ],
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "summary": "Kimi K3在全球AI圈掀起的热度还没散去, DeepSeek V4正式版测试视频曝光.有消息称, DeepSeek 可能在下周一 发布 该模型.时间...",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HA5hZmqj9ViQn9ctJLyzyN2knfg-TvVwoIlAv20U&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785094400%26ver%3D6866%26signature%3DA851Aml2ZEP0kxbZ%2Anhog5gFsH3d0Fy-8XP%2A5W1JUVgrP8jgN8-SpqwYKHrmELep-LDGXQUI-RCekPSy26f1o3FkWBJ7ID%2A9cIVLvcU8CiIAz1JaPpwECEfcBX1taHS2%26new%3D1",
-      "key_points": [
-        "Kimi K3在全球AI圈掀起的热度还没散去, DeepSeek V4正式版测试视频曝光.有消息称, DeepSeek 可能在下周一 发布 该模型.时间..."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Kimi K3在全球AI圈掀起的热度还没散去, DeepSeek V4正式版测试视频曝光.有消息称, DeepSeek 可能在下周一 发布 该模型.时间..."
-        },
-        {
-          "title": "公开索引摘要",
-          "bullets": [
-            "Kimi K3在全球AI圈掀起的热度还没散去, DeepSeek V4正式版测试视频曝光.有消息称, DeepSeek 可能在下周一 发布 该模型.时间..."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "550fbdd5292da698",
-      "kind": "article",
-      "title": "DeepSeek V4正式版 发布 :百万Token+免费+1/500价格,AI门槛彻底拉下来了",
-      "source": "微信公众号 · 财务数据分析",
-      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HIoPZWqj4Vnbts-HRyBWxU1APWv-FPPaWxj_JlCN&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785007995%26ver%3D6864%26signature%3DnT12-6OdI41%2AWyRzWOuwNncXWALYyPGaBCt7Ce8DbHI%2AnRtGSQ9r-d7UUMhaMlZoo7fqgTl2WlULy7-%2Ayqa01I-2ZaH6JO3ud7JihZEFIoJyBqFVFMreWqywnD4PFVcS%26new%3D1",
-      "published_at": "2026-07-24T05:23:54Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "微信公众号",
-        "DeepSeek",
-        "模型"
-      ],
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "summary": "AI百宝箱Pro · AI工具测评 · 提效技巧 · 副业变现这周AI圈炸了—— DeepSeek V4正式版 发布 .不是4月那个预览版,是经过3个月打...",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HIoPZWqj4Vnbts-HRyBWxU1APWv-FPPaWxj_JlCN&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785007995%26ver%3D6864%26signature%3DnT12-6OdI41%2AWyRzWOuwNncXWALYyPGaBCt7Ce8DbHI%2AnRtGSQ9r-d7UUMhaMlZoo7fqgTl2WlULy7-%2Ayqa01I-2ZaH6JO3ud7JihZEFIoJyBqFVFMreWqywnD4PFVcS%26new%3D1",
-      "key_points": [
-        "AI百宝箱Pro · AI工具测评 · 提效技巧 · 副业变现这周AI圈炸了—— DeepSeek V4正式版 发布 .不是4月那个预览版,是经过3个月打..."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "AI百宝箱Pro · AI工具测评 · 提效技巧 · 副业变现这周AI圈炸了—— DeepSeek V4正式版 发布 .不是4月那个预览版,是经过3个月打..."
-        },
-        {
-          "title": "公开索引摘要",
-          "bullets": [
-            "AI百宝箱Pro · AI工具测评 · 提效技巧 · 副业变现这周AI圈炸了—— DeepSeek V4正式版 发布 .不是4月那个预览版,是经过3个月打..."
           ]
         },
         {
@@ -3331,54 +3383,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "296547c2667374af",
-      "kind": "article",
-      "title": "Insilico Medicine launches AI drug discovery benchmarking platform",
-      "source": "Drug Target Review",
-      "source_url": "https://www.drugtargetreview.com/insilico-medicine-launches-ai-drug-discovery-benchmarking-platform/2136128.article",
-      "published_at": "2026-07-31T12:44:51Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Insilico Medicine has unveiled a benchmarking platform designed to assess whether AI models can perform genuine drug discovery tasks, using decontaminated real-world datasets and proprietary validated programmes to move beyond inflated benchmark scores.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.drugtargetreview.com/insilico-medicine-launches-ai-drug-discovery-benchmarking-platform/2136128.article",
-      "key_points": [
-        "Insilico Medicine have announced their Drug Discovery and Development (DDD) Benchmarks as a Service (BaaS) platform offers a standardised framework for evaluating frontier AI and foundation models across medicinal chemistry, disease biology, clinical development and end-to-end drug candidate programmes.",
-        "Insilico Medicine has launched a new benchmarking platform designed to measure whether artificial intelligence models can genuinely support drug discovery rather than simply perform well on existing tests.",
-        "The clinical-stage biotechnology company said its new Drug Discovery and Development (DDD) Benchmarks as a Service (BaaS) provides a standardised framework for evaluating AI models using carefully decontaminated real-world datasets and proprietary validated programmes."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Insilico Medicine has unveiled a benchmarking platform designed to assess whether AI models can perform genuine drug discovery tasks, using decontaminated real-world datasets and proprietary validated programmes to move beyond inflated benchmark scores."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Insilico Medicine have announced their Drug Discovery and Development (DDD) Benchmarks as a Service (BaaS) platform offers a standardised framework for evaluating frontier AI and foundation models across medicinal chemistry, disease biology, clinical development and end-to-end drug candidate programmes.",
-            "Insilico Medicine has launched a new benchmarking platform designed to measure whether artificial intelligence models can genuinely support drug discovery rather than simply perform well on existing tests.",
-            "The clinical-stage biotechnology company said its new Drug Discovery and Development (DDD) Benchmarks as a Service (BaaS) provides a standardised framework for evaluating AI models using carefully decontaminated real-world datasets and proprietary validated programmes."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Insilico Medicine have announced their Drug Discovery and Development (DDD) Benchmarks as a Service (BaaS) platform offers a standardised framework for evaluating frontier AI and foundation models across medicinal chemistry, disease biology, clinical development and end-to-end drug candidate programmes.",
-            "Insilico Medicine has launched a new benchmarking platform designed to measure whether artificial intelligence models can genuinely support drug discovery rather than simply perform well on existing tests.",
-            "The clinical-stage biotechnology company said its new Drug Discovery and Development (DDD) Benchmarks as a Service (BaaS) provides a standardised framework for evaluating AI models using carefully decontaminated real-world datasets and proprietary validated programmes."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "a5b4c473bff32527",
       "kind": "article",
       "title": "Flint: A visualization language for the AI era",
@@ -3477,6 +3481,54 @@
       "reading_minutes": 1
     },
     {
+      "id": "296547c2667374af",
+      "kind": "article",
+      "title": "Insilico Medicine launches AI drug discovery benchmarking platform",
+      "source": "Drug Target Review",
+      "source_url": "https://www.drugtargetreview.com/insilico-medicine-launches-ai-drug-discovery-benchmarking-platform/2136128.article",
+      "published_at": "2026-07-31T12:44:51Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Insilico Medicine has unveiled a benchmarking platform designed to assess whether AI models can perform genuine drug discovery tasks, using decontaminated real-world datasets and proprietary validated programmes to move beyond inflated benchmark scores.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.drugtargetreview.com/insilico-medicine-launches-ai-drug-discovery-benchmarking-platform/2136128.article",
+      "key_points": [
+        "Insilico Medicine have announced their Drug Discovery and Development (DDD) Benchmarks as a Service (BaaS) platform offers a standardised framework for evaluating frontier AI and foundation models across medicinal chemistry, disease biology, clinical development and end-to-end drug candidate programmes.",
+        "Insilico Medicine has launched a new benchmarking platform designed to measure whether artificial intelligence models can genuinely support drug discovery rather than simply perform well on existing tests.",
+        "The clinical-stage biotechnology company said its new Drug Discovery and Development (DDD) Benchmarks as a Service (BaaS) provides a standardised framework for evaluating AI models using carefully decontaminated real-world datasets and proprietary validated programmes."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Insilico Medicine has unveiled a benchmarking platform designed to assess whether AI models can perform genuine drug discovery tasks, using decontaminated real-world datasets and proprietary validated programmes to move beyond inflated benchmark scores."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Insilico Medicine have announced their Drug Discovery and Development (DDD) Benchmarks as a Service (BaaS) platform offers a standardised framework for evaluating frontier AI and foundation models across medicinal chemistry, disease biology, clinical development and end-to-end drug candidate programmes.",
+            "Insilico Medicine has launched a new benchmarking platform designed to measure whether artificial intelligence models can genuinely support drug discovery rather than simply perform well on existing tests.",
+            "The clinical-stage biotechnology company said its new Drug Discovery and Development (DDD) Benchmarks as a Service (BaaS) provides a standardised framework for evaluating AI models using carefully decontaminated real-world datasets and proprietary validated programmes."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Insilico Medicine have announced their Drug Discovery and Development (DDD) Benchmarks as a Service (BaaS) platform offers a standardised framework for evaluating frontier AI and foundation models across medicinal chemistry, disease biology, clinical development and end-to-end drug candidate programmes.",
+            "Insilico Medicine has launched a new benchmarking platform designed to measure whether artificial intelligence models can genuinely support drug discovery rather than simply perform well on existing tests.",
+            "The clinical-stage biotechnology company said its new Drug Discovery and Development (DDD) Benchmarks as a Service (BaaS) provides a standardised framework for evaluating AI models using carefully decontaminated real-world datasets and proprietary validated programmes."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "0ad340bb7344ab0f",
       "kind": "article",
       "title": "GPU Management: Why Idle GPUs Are the New Grounded Aircraft",
@@ -3568,6 +3620,58 @@
             "Tokyo-based Elix and the University of Vienna signed a joint research agreement aimed at advancing drug discovery using AI technologies.",
             "One of Elix’s business models is the provision of its integrated AI drug discovery platform, Elix Discovery™, developed under the concept of “medicinal chemists can truly use it.” The product comes with an intuitive graphical user interface (GUI) that automatically constructs predictive models for optimal compound profiling. Elix says it also features diverse structure generation capabilities, with a strength in “proposing structures that humans would not conceive.”",
             "By integrating curated structure generation models, including proprietary ones, with predictive models and parameters built into the intuitive GUI, researchers can rapidly and intuitively refine molecular design, notes a company spokesperson, adding that platform supports both ligand-based drug design (LBDD), including pharmacophore modeling and structure-based drug design (SBDD), the latter utilizing docking simulations and other methods, thus enabling exploration across a broader range of approaches."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "96495d7406e7fead",
+      "kind": "article",
+      "title": "Mathematicians are buzzing about AI’s solution to a math mystery",
+      "source": "The Week",
+      "source_url": "https://theweek.com/tech/mathematicians-are-buzzing-about-an-ai-solution-to-a-math-mystery",
+      "published_at": "2026-07-29T18:31:14Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Mathematicians are buzzing about AI’s solution to a math mystery The Week",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://theweek.com/tech/mathematicians-are-buzzing-about-an-ai-solution-to-a-math-mystery",
+      "key_points": [
+        "A mathematician has somewhat unceremoniously announced that he has disproven an almost 90-year-old problem — with the help of Anthropic’s artificial intelligence model.",
+        "The announcement sent waves through social media and the inner circles of mathematics, as the latest in a series of AI-driven mathematical achievements that shook the field and called future math into question.",
+        "The Jacobian conjecture is “false,” Harvard University mathematician and Anthropic employee Levent Alpoge said on X , thanking his “close friend Akhil for asking about it” and his “other close friend Fable” for “working during the World Cup final.” Attached was a mathematical formula, a counterexample to the decades-old problem.",
+        "Despite the fact the problem “bedeviled highly accomplished mathematicians for almost 90 years,” the conjecture “proved no obstacle” for Anthropic’s “latest frontier AI model,” said Mashable .",
+        "A conjecture is an “idea that some mathematicians believe is true,” but nobody has been “able to prove or disprove,” said mathematician Melissa Lee at The Conversation ."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Mathematicians are buzzing about AI’s solution to a math mystery The Week"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "A mathematician has somewhat unceremoniously announced that he has disproven an almost 90-year-old problem — with the help of Anthropic’s artificial intelligence model.",
+            "The announcement sent waves through social media and the inner circles of mathematics, as the latest in a series of AI-driven mathematical achievements that shook the field and called future math into question.",
+            "The Jacobian conjecture is “false,” Harvard University mathematician and Anthropic employee Levent Alpoge said on X , thanking his “close friend Akhil for asking about it” and his “other close friend Fable” for “working during the World Cup final.” Attached was a mathematical formula, a counterexample to the decades-old problem.",
+            "Despite the fact the problem “bedeviled highly accomplished mathematicians for almost 90 years,” the conjecture “proved no obstacle” for Anthropic’s “latest frontier AI model,” said Mashable .",
+            "A conjecture is an “idea that some mathematicians believe is true,” but nobody has been “able to prove or disprove,” said mathematician Melissa Lee at The Conversation ."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "A mathematician has somewhat unceremoniously announced that he has disproven an almost 90-year-old problem — with the help of Anthropic’s artificial intelligence model. The announcement sent waves through social media and the inner circles of mathematics, as the latest in a series of AI-driven mathematical achievements that shook the field and called future math into question.",
+            "The Jacobian conjecture is “false,” Harvard University mathematician and Anthropic employee Levent Alpoge said on X , thanking his “close friend Akhil for asking about it” and his “other close friend Fable” for “working during the World Cup final.” Attached was a mathematical formula, a counterexample to the decades-old problem. Despite the fact the problem “bedeviled highly accomplished mathematicians for almost 90 years,” the conjecture “proved no obstacle” for Anthropic’s “latest frontier AI model,” said Mashable .",
+            "A conjecture is an “idea that some mathematicians believe is true,” but nobody has been “able to prove or disprove,” said mathematician Melissa Lee at The Conversation . This algebraic geometry theory suggests that a “certain type of mathematical function would also work in reverse” and was “formally set out” by Ott-Heinrich Keller in 1939, said New Scientist . It was one of 18 “fiendishly difficult problems for mathematicians to tackle in the 21st century,” according to a list curated by mathematician Stephen Smale in 1998."
           ]
         }
       ],
@@ -3864,54 +3968,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "dc724426982832f7",
-      "kind": "article",
-      "title": "NVIDIA Expands NVIDIA Agent Toolkit With NVIDIA PhysicsNeMo and CUDA-X Libraries to Transform How the World Engineers, Designs and Builds",
-      "source": "NVIDIA Newsroom",
-      "source_url": "https://nvidianews.nvidia.com/news/nvidia-expands-nvidia-agent-toolkit-with-nvidia-physicsnemo-and-cuda-x-libraries-to-transform-how-the-world-engineers-designs-and-builds",
-      "published_at": "2026-07-27T00:54:56Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "NVIDIA Expands NVIDIA Agent Toolkit With NVIDIA PhysicsNeMo and CUDA-X Libraries to Transform How the World Engineers, Designs and Builds NVIDIA Newsroom",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://nvidianews.nvidia.com/news/nvidia-expands-nvidia-agent-toolkit-with-nvidia-physicsnemo-and-cuda-x-libraries-to-transform-how-the-world-engineers-designs-and-builds",
-      "key_points": [
-        "NVIDIA expands NVIDIA Agent Toolkit with re-architected NVIDIA PhysicsNeMo libraries and updated NVIDIA CUDA-X libraries, enabling software developers to build autonomous AI engineers with AI physics skills, accelerated solvers and quantum chemistry capabilities.",
-        "NVIDIA Nemotron 3 Ultra leads among open models in agentic register-transfer level coding with the ACE-RTL agent from NVIDIA Research, helping enterprises build customizable AI agents for chip design and verification.",
-        "Cadence, Siemens, Synopsys and other industry leaders are using NVIDIA accelerated computing and agentic AI technologies to advance autonomous engineering workflows across chip design, verification, packaging and systems."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "NVIDIA Expands NVIDIA Agent Toolkit With NVIDIA PhysicsNeMo and CUDA-X Libraries to Transform How the World Engineers, Designs and Builds NVIDIA Newsroom"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "NVIDIA expands NVIDIA Agent Toolkit with re-architected NVIDIA PhysicsNeMo libraries and updated NVIDIA CUDA-X libraries, enabling software developers to build autonomous AI engineers with AI physics skills, accelerated solvers and quantum chemistry capabilities.",
-            "NVIDIA Nemotron 3 Ultra leads among open models in agentic register-transfer level coding with the ACE-RTL agent from NVIDIA Research, helping enterprises build customizable AI agents for chip design and verification.",
-            "Cadence, Siemens, Synopsys and other industry leaders are using NVIDIA accelerated computing and agentic AI technologies to advance autonomous engineering workflows across chip design, verification, packaging and systems."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "NVIDIA expands NVIDIA Agent Toolkit with re-architected NVIDIA PhysicsNeMo libraries and updated NVIDIA CUDA-X libraries, enabling software developers to build autonomous AI engineers with AI physics skills, accelerated solvers and quantum chemistry capabilities.",
-            "NVIDIA Nemotron 3 Ultra leads among open models in agentic register-transfer level coding with the ACE-RTL agent from NVIDIA Research, helping enterprises build customizable AI agents for chip design and verification.",
-            "Cadence, Siemens, Synopsys and other industry leaders are using NVIDIA accelerated computing and agentic AI technologies to advance autonomous engineering workflows across chip design, verification, packaging and systems."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "8ada8c6f1b1acc4c",
       "kind": "article",
       "title": "Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident",
@@ -3957,58 +4013,6 @@
             "A companion technical writeup to our incident disclosure . This post walks through how the intrusion actually worked: the two initial-access vectors, how the agent pivoted and moved laterally, representative examples of the commands that were run and how we investigated with GLM 5.2 (an open-source model). Live credentials, internal hostnames, and specific indicators have been redacted or genericized, while the techniques are described exactly as observed by Hugging Face.",
             "We are publishing this level of detail because the technique matters more than the incident, as it reveals the emerging attack capabilities of the frontier agents, how they could be used by rogue actors, and how everyone should be prepared as defenders.",
             "Below is an interactive replay of the intrusion - a step-by-step visualization of the 4.5-day campaign: the attack chain across trust boundaries, phase activity, and the commands as they were recorded."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "1801588b04a7d207",
-      "kind": "article",
-      "title": "AI cracked the conjecture. Humans called the play.",
-      "source": "IBM",
-      "source_url": "https://www.ibm.com/think/news/ai-cracked-jacobian-conjecture-humans-called-play",
-      "published_at": "2026-07-24T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "AI cracked the conjecture. Humans called the play. IBM",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.ibm.com/think/news/ai-cracked-jacobian-conjecture-humans-called-play",
-      "key_points": [
-        "Anthropic’s Fable disproved a decades-old math problem, but mathematicians need not worry.",
-        "As the World Cup final kept the world on the edge of its seat, AI nonchalantly scored a victory of its own against a mathematical problem that had been undefeated since 1939.",
-        "An Anthropic employee used “his close friend Fable,” as he described Anthropic’s Claude Fable 5 in a tweet while he watched the World Cup, to disprove the Jacobian conjecture , a famous open question about polynomial functions.",
-        "It’s the latest in a string of AI-driven discoveries on decades-old math and science puzzles this year (remember the Erdős unit distance problem that OpenAI solved in May?",
-        "), with the stories going viral as people worry what this signals for job losses."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "AI cracked the conjecture. Humans called the play. IBM"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Anthropic’s Fable disproved a decades-old math problem, but mathematicians need not worry.",
-            "As the World Cup final kept the world on the edge of its seat, AI nonchalantly scored a victory of its own against a mathematical problem that had been undefeated since 1939.",
-            "An Anthropic employee used “his close friend Fable,” as he described Anthropic’s Claude Fable 5 in a tweet while he watched the World Cup, to disprove the Jacobian conjecture , a famous open question about polynomial functions.",
-            "It’s the latest in a string of AI-driven discoveries on decades-old math and science puzzles this year (remember the Erdős unit distance problem that OpenAI solved in May?",
-            "), with the stories going viral as people worry what this signals for job losses."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Anthropic’s Fable disproved a decades-old math problem, but mathematicians need not worry.",
-            "As the World Cup final kept the world on the edge of its seat, AI nonchalantly scored a victory of its own against a mathematical problem that had been undefeated since 1939. An Anthropic employee used “his close friend Fable,” as he described Anthropic’s Claude Fable 5 in a tweet while he watched the World Cup, to disprove the Jacobian conjecture , a famous open question about polynomial functions.",
-            "It’s the latest in a string of AI-driven discoveries on decades-old math and science puzzles this year (remember the Erdős unit distance problem that OpenAI solved in May?), with the stories going viral as people worry what this signals for job losses. But experts say these breakthroughs are no reason to despair."
           ]
         }
       ],
@@ -4320,6 +4324,93 @@
       "reading_minutes": 1
     },
     {
+      "id": "f980491edc18086b",
+      "kind": "social",
+      "title": "AI is a supersonic tsunami",
+      "source": "x.com",
+      "source_url": "https://x.com/elonmusk/status/2084108995980108154",
+      "published_at": "2026-08-03T02:48:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "AI is a supersonic tsunami x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/elonmusk/status/2084108995980108154",
+      "key_points": [
+        "Elon Musk @elonmusk AI is a supersonic tsunami 2:48 AM · Aug 3, 2026 769.1K Views 1K 682 5.7K 464 Luddite Design @LudditeDesign 1h since there's no label, I'll just assume it's a measure of your shitposts 3 39 1.6K"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AI is a supersonic tsunami x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Elon Musk @elonmusk AI is a supersonic tsunami 2:48 AM · Aug 3, 2026 769.1K Views 1K 682 5.7K 464 Luddite Design @LudditeDesign 1h since there's no label, I'll just assume it's a measure of your shitposts 3 39 1.6K"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Elon Musk @elonmusk AI is a supersonic tsunami 2:48 AM · Aug 3, 2026 769.1K Views 1K 682 5.7K 464",
+            "Luddite Design @LudditeDesign 1h since there's no label, I'll just assume it's a measure of your shitposts 3 39 1.6K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "567a1c4840b8e7f5",
+      "kind": "social",
+      "title": "More on the pelican on the bicycle test from @simonw: https://t.co/OXmtODyTKj I uploaded the source here so it's playable in the browser, forkable etc. https://t.co/w3Nctc888d Look out for GTA Hobbiton dropping before GTA VI :)",
+      "source": "x.com",
+      "source_url": "https://x.com/karpathy/status/2083948654377996480",
+      "published_at": "2026-08-02T16:10:51Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Researcher Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "More on the pelican on the bicycle test from @simonw: https://t.co/OXmtODyTKj I uploaded the source here so it's playable in the browser, forkable etc. https://t.co/w3Nctc888d Look out for GTA Hobbiton dropping before GTA VI :) x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/karpathy/status/2083948654377996480",
+      "key_points": [
+        "Andrej Karpathy @karpathy Aug 2 We're starting to leave the territory where you'd test an LLM by e.g. \"create an svg of pelican on a bicycle\"."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "More on the pelican on the bicycle test from @simonw: https://t.co/OXmtODyTKj I uploaded the source here so it's playable in the browser, forkable etc. https://t.co/w3Nctc888d Look out for GTA Hobbiton dropping before GTA VI :) x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Andrej Karpathy @karpathy Aug 2 We're starting to leave the territory where you'd test an LLM by e.g. \"create an svg of pelican on a bicycle\"."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Andrej Karpathy @karpathy Aug 2 We're starting to leave the territory where you'd test an LLM by e.g. \"create an svg of pelican on a bicycle\". As one idea to generalize it, I was interested what Opus 5 would do if I gave it the first paragraph of the Lord of the Rings, a 1M token budget (~$10) and asked for Show more 00:00 1.3K 1.8K 24K 3M",
+            "Andrej Karpathy @karpathy More on the pelican on the bicycle test from @ simonw : simonwillison.net/2025/Jun/6/six… I uploaded the source here so it's playable in the browser, forkable etc. karpathy.ai/lotr-movie/ Look out for GTA Hobbiton dropping before GTA VI :) 4:10 PM · Aug 2, 2026 88.1K Views 35 11 352 99",
+            "john pera @isweepyou 11h the pelican test is just \"does it work when there's no reddit thread to copy from.\" gta hobbiton beating gta vi would be the funniest benchmark result of all time GIF 4 1.9K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "a7161cd6401235da",
       "kind": "social",
       "title": "We're starting to leave the territory where you'd test an LLM by e.g. \"create an svg of pelican on a bicycle\". As one idea to generalize it, I was interested what Opus 5 would do if I gave it the first paragraph of the Lord of the Rings, a 1M token budget (~$10) and a",
@@ -4343,7 +4434,7 @@
         "As one idea to generalize it, I was interested what Opus 5 would do if I gave it the first paragraph of the Lord of the Rings, a 1M token budget (~$10) and asked for three js render of it.",
         "Opus went off for ~2 hours and wrote 5500 lines of code that (procedurally) rendered the story.",
         "But it's a bit mindboggling that the LLM has to place and orchestrate various polygon assets in (x,y,z) coordinates and write code that animates it all, and that it even does anything at all.",
-        "I also like this kind of examples because no one in their right mind would… Andrej Karpathy @karpathy 3h More on the pelican on the bicycle test from @ simonw : simonwillison.net/2025/Jun/6/six… I uploaded the source here so it's playable in the browser, forkable etc. karpathy.ai/lotr-movie/ Look out for GTA Hobbiton dropping before GTA VI :) 26 7 191 48K"
+        "I also like this kind of examples because no one in their right mind would… Andrej Karpathy @karpathy 11h More on the pelican on the bicycle test from @ simonw : simonwillison.net/2025/Jun/6/six… I uploaded the source here so it's playable in the browser, forkable etc. karpathy.ai/lotr-movie/ Look out for GTA Hobbiton dropping before GTA VI :) 35 11 352 88K"
       ],
       "sections": [
         {
@@ -4357,14 +4448,14 @@
             "As one idea to generalize it, I was interested what Opus 5 would do if I gave it the first paragraph of the Lord of the Rings, a 1M token budget (~$10) and asked for three js render of it.",
             "Opus went off for ~2 hours and wrote 5500 lines of code that (procedurally) rendered the story.",
             "But it's a bit mindboggling that the LLM has to place and orchestrate various polygon assets in (x,y,z) coordinates and write code that animates it all, and that it even does anything at all.",
-            "I also like this kind of examples because no one in their right mind would… Andrej Karpathy @karpathy 3h More on the pelican on the bicycle test from @ simonw : simonwillison.net/2025/Jun/6/six… I uploaded the source here so it's playable in the browser, forkable etc. karpathy.ai/lotr-movie/ Look out for GTA Hobbiton dropping before GTA VI :) 26 7 191 48K"
+            "I also like this kind of examples because no one in their right mind would… Andrej Karpathy @karpathy 11h More on the pelican on the bicycle test from @ simonw : simonwillison.net/2025/Jun/6/six… I uploaded the source here so it's playable in the browser, forkable etc. karpathy.ai/lotr-movie/ Look out for GTA Hobbiton dropping before GTA VI :) 35 11 352 88K"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
             "Andrej Karpathy @karpathy We're starting to leave the territory where you'd test an LLM by e.g. \"create an svg of pelican on a bicycle\". As one idea to generalize it, I was interested what Opus 5 would do if I gave it the first paragraph of the Lord of the Rings, a 1M token budget (~$10) and asked for three js render of it. Opus went off for ~2 hours and wrote 5500 lines of code that (procedurally) rendered the story. It's kind of janky but fun. But it's a bit mindboggling that the LLM has to place and orchestrate various polygon assets in (x,y,z) coordinates and write code that animates it all, and that it even does anything at all. I also like this kind of examples because no one in their right mind would…",
-            "Andrej Karpathy @karpathy 3h More on the pelican on the bicycle test from @ simonw : simonwillison.net/2025/Jun/6/six… I uploaded the source here so it's playable in the browser, forkable etc. karpathy.ai/lotr-movie/ Look out for GTA Hobbiton dropping before GTA VI :) 26 7 191 48K"
+            "Andrej Karpathy @karpathy 11h More on the pelican on the bicycle test from @ simonw : simonwillison.net/2025/Jun/6/six… I uploaded the source here so it's playable in the browser, forkable etc. karpathy.ai/lotr-movie/ Look out for GTA Hobbiton dropping before GTA VI :) 35 11 352 88K"
           ]
         }
       ],
@@ -4390,8 +4481,8 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://x.com/elonmusk/status/2083731654846140670",
       "key_points": [
-        "Kris Kashtanova @icreatelife 22h Ask ChatGPT to create the most awkward image ever created in the history of AI.",
-        "Here’s mine: Made with AI 258 53 575 107K Elon Musk @elonmusk From Grok: Made with AI 1:48 AM · Aug 2, 2026 127.2K Views 383 136 1.3K 51 Elon Musk @elonmusk 17h Now using Grok Build via iOS Grok app: 00:00 Made with AI 103 88 745 76K"
+        "Kris Kashtanova @icreatelife Aug 1 Ask ChatGPT to create the most awkward image ever created in the history of AI.",
+        "Here’s mine: Made with AI 267 54 625 128K Elon Musk @elonmusk From Grok: Made with AI 1:48 AM · Aug 2, 2026 144K Views 388 146 1.4K 55 Elon Musk @elonmusk Aug 2 Now using Grok Build via iOS Grok app: 00:00 Made with AI 108 97 802 85K"
       ],
       "sections": [
         {
@@ -4401,16 +4492,16 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Kris Kashtanova @icreatelife 22h Ask ChatGPT to create the most awkward image ever created in the history of AI.",
-            "Here’s mine: Made with AI 258 53 575 107K Elon Musk @elonmusk From Grok: Made with AI 1:48 AM · Aug 2, 2026 127.2K Views 383 136 1.3K 51 Elon Musk @elonmusk 17h Now using Grok Build via iOS Grok app: 00:00 Made with AI 103 88 745 76K"
+            "Kris Kashtanova @icreatelife Aug 1 Ask ChatGPT to create the most awkward image ever created in the history of AI.",
+            "Here’s mine: Made with AI 267 54 625 128K Elon Musk @elonmusk From Grok: Made with AI 1:48 AM · Aug 2, 2026 144K Views 388 146 1.4K 55 Elon Musk @elonmusk Aug 2 Now using Grok Build via iOS Grok app: 00:00 Made with AI 108 97 802 85K"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Kris Kashtanova @icreatelife 22h Ask ChatGPT to create the most awkward image ever created in the history of AI. I’d love to see what you get. Here’s mine: Made with AI 258 53 575 107K",
-            "Elon Musk @elonmusk From Grok: Made with AI 1:48 AM · Aug 2, 2026 127.2K Views 383 136 1.3K 51",
-            "Elon Musk @elonmusk 17h Now using Grok Build via iOS Grok app: 00:00 Made with AI 103 88 745 76K"
+            "Kris Kashtanova @icreatelife Aug 1 Ask ChatGPT to create the most awkward image ever created in the history of AI. I’d love to see what you get. Here’s mine: Made with AI 267 54 625 128K",
+            "Elon Musk @elonmusk From Grok: Made with AI 1:48 AM · Aug 2, 2026 144K Views 388 146 1.4K 55",
+            "Elon Musk @elonmusk Aug 2 Now using Grok Build via iOS Grok app: 00:00 Made with AI 108 97 802 85K"
           ]
         }
       ],
@@ -4436,10 +4527,9 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://x.com/elonmusk/status/2083706250370449572",
       "key_points": [
-        "Elon Musk @elonmusk Grok Imagine Déborah 00:00 Déborah 12:07 AM · Aug 2, 2026 3.9M Views 1.8K 1.4K 8.1K 362 Three Year Letterman @3YearLetterman 17h Let’s don’t and say we did 3 73 4.9K Rick and Morty @Arveloo_com 19h Look at this.",
-        "One side of the app is generating cinematic, high-detail beauty from pure text.",
-        "The other side is still stuck on the same tax slogans from 2016.",
-        "Grok Imagine isn’t just a feature… it’s a quiet demonstration of where the real leverage is moving 😏 Creativity Show more 34 13K"
+        "Elon Musk @elonmusk Grok Imagine Déborah 00:00 Déborah 12:07 AM · Aug 2, 2026 4.4M Views 1.9K 1.6K 9.1K 418 Three Year Letterman @3YearLetterman Aug 2 Let’s don’t and say we did 4 84 5.3K LONELY GAMER @fineboypsycho Aug 2 Haley Stevens just called herself an honest broker while prices climb and the outside money keeps flowing.",
+        "Monkey Clips @monkeyclipper Jul 30 Rising prices aren't a talking point for Haley Stevens.",
+        "And she has no regrets standing up for Michigan values while she does it."
       ],
       "sections": [
         {
@@ -4449,18 +4539,17 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Elon Musk @elonmusk Grok Imagine Déborah 00:00 Déborah 12:07 AM · Aug 2, 2026 3.9M Views 1.8K 1.4K 8.1K 362 Three Year Letterman @3YearLetterman 17h Let’s don’t and say we did 3 73 4.9K Rick and Morty @Arveloo_com 19h Look at this.",
-            "One side of the app is generating cinematic, high-detail beauty from pure text.",
-            "The other side is still stuck on the same tax slogans from 2016.",
-            "Grok Imagine isn’t just a feature… it’s a quiet demonstration of where the real leverage is moving 😏 Creativity Show more 34 13K"
+            "Elon Musk @elonmusk Grok Imagine Déborah 00:00 Déborah 12:07 AM · Aug 2, 2026 4.4M Views 1.9K 1.6K 9.1K 418 Three Year Letterman @3YearLetterman Aug 2 Let’s don’t and say we did 4 84 5.3K LONELY GAMER @fineboypsycho Aug 2 Haley Stevens just called herself an honest broker while prices climb and the outside money keeps flowing.",
+            "Monkey Clips @monkeyclipper Jul 30 Rising prices aren't a talking point for Haley Stevens.",
+            "And she has no regrets standing up for Michigan values while she does it."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok Imagine Déborah 00:00 Déborah 12:07 AM · Aug 2, 2026 3.9M Views 1.8K 1.4K 8.1K 362",
-            "Three Year Letterman @3YearLetterman 17h Let’s don’t and say we did 3 73 4.9K",
-            "Rick and Morty @Arveloo_com 19h Look at this. One side of the app is generating cinematic, high-detail beauty from pure text. The other side is still stuck on the same tax slogans from 2016. Grok Imagine isn’t just a feature… it’s a quiet demonstration of where the real leverage is moving 😏 Creativity Show more 34 13K"
+            "Elon Musk @elonmusk Grok Imagine Déborah 00:00 Déborah 12:07 AM · Aug 2, 2026 4.4M Views 1.9K 1.6K 9.1K 418",
+            "Three Year Letterman @3YearLetterman Aug 2 Let’s don’t and say we did 4 84 5.3K",
+            "LONELY GAMER @fineboypsycho Aug 2 Haley Stevens just called herself an honest broker while prices climb and the outside money keeps flowing. Monkey Clips @monkeyclipper Jul 30 Rising prices aren't a talking point for Haley Stevens. They're the reason she's fighting. And she has no regrets standing up for Michigan values while she does it. 00:00 2 36 2.2K"
           ]
         }
       ],
@@ -4503,108 +4592,6 @@
         {
           "title": "原文短摘录",
           "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "c0c47a2e9c0f1128",
-      "kind": "social",
-      "title": "Grok 4.5 is Pareto #1 when considering speed & cost",
-      "source": "x.com",
-      "source_url": "https://x.com/elonmusk/status/2083568773294911788",
-      "published_at": "2026-08-01T15:01:21Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Grok 4.5 is Pareto #1 when considering speed & cost x.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/elonmusk/status/2083568773294911788",
-      "key_points": [
-        "Elon Musk @elonmusk Grok 4.5 is Pareto #1 when considering speed & cost Gavin Baker @GavinSBaker Aug 1 Replying to @GavinSBaker Also happy to see that that Grok 4.5 was the best frontier model in their testing.",
-        "3:01 PM · Aug 1, 2026 3.2M Views 1.2K 1.2K 5.6K 194 Ardullo 🏆 @RafelineK Aug 1 Also grok is truthful.",
-        "21 33 60 360 Yess Ubah🐐l Clipur.com @Enyioma_Ifeanyi Aug 1 Does Haley Stevens ever answer an education question without name-dropping her father teaching first grade in Detroit?",
-        "CLIPUR NEWS DAILY @ClipurNewsDaily Jul 30 Haley Stevens called herself a warrior for public education and pointed straight to her father teaching first grade in Detroit \"i consider myself a warrior for public education. my father was a first grade teacher in the city of detroit doing reading recovery in addition to Show more 00:00 2 1 28 3.3K"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Grok 4.5 is Pareto #1 when considering speed & cost x.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Elon Musk @elonmusk Grok 4.5 is Pareto #1 when considering speed & cost Gavin Baker @GavinSBaker Aug 1 Replying to @GavinSBaker Also happy to see that that Grok 4.5 was the best frontier model in their testing.",
-            "3:01 PM · Aug 1, 2026 3.2M Views 1.2K 1.2K 5.6K 194 Ardullo 🏆 @RafelineK Aug 1 Also grok is truthful.",
-            "21 33 60 360 Yess Ubah🐐l Clipur.com @Enyioma_Ifeanyi Aug 1 Does Haley Stevens ever answer an education question without name-dropping her father teaching first grade in Detroit?",
-            "CLIPUR NEWS DAILY @ClipurNewsDaily Jul 30 Haley Stevens called herself a warrior for public education and pointed straight to her father teaching first grade in Detroit \"i consider myself a warrior for public education. my father was a first grade teacher in the city of detroit doing reading recovery in addition to Show more 00:00 2 1 28 3.3K"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Elon Musk @elonmusk Grok 4.5 is Pareto #1 when considering speed & cost Gavin Baker @GavinSBaker Aug 1 Replying to @GavinSBaker Also happy to see that that Grok 4.5 was the best frontier model in their testing. 3:01 PM · Aug 1, 2026 3.2M Views 1.2K 1.2K 5.6K 194",
-            "Ardullo 🏆 @RafelineK Aug 1 Also grok is truthful. Grok is anti matrix. 21 33 60 360",
-            "Yess Ubah🐐l Clipur.com @Enyioma_Ifeanyi Aug 1 Does Haley Stevens ever answer an education question without name-dropping her father teaching first grade in Detroit? CLIPUR NEWS DAILY @ClipurNewsDaily Jul 30 Haley Stevens called herself a warrior for public education and pointed straight to her father teaching first grade in Detroit \"i consider myself a warrior for public education. my father was a first grade teacher in the city of detroit doing reading recovery in addition to Show more 00:00 2 1 28 3.3K"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "fee5e556dc6009e5",
-      "kind": "social",
-      "title": "And yes we did try other major problems without success. Sadly no Millennium Prize problems (yet). But also, we didn’t spend a lot on each problem. It’s possible to push test-time compute much further.",
-      "source": "x.com",
-      "source_url": "https://x.com/polynoamial/status/2083478171975082334",
-      "published_at": "2026-08-01T09:01:20Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Researcher Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "And yes we did try other major problems without success. Sadly no Millennium Prize problems (yet). But also, we didn’t spend a lot on each problem. It’s possible to push test-time compute much further. x.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/polynoamial/status/2083478171975082334",
-      "key_points": [
-        "Noam Brown @polynoamial Aug 1 The cost of generating the proofs for all 10 of these breakthroughs combined was under $2,000 at Sol API prices.",
-        "We’re excited to see what scientists and researchers are able to create with our upcoming Astra models!",
-        "Noam Brown @polynoamial Aug 1 An internal version of Astra, @ OpenAI ’s next major model family, solved 10 major open problems in mathematics, quantum complexity, and theoretical computer science.",
-        "We believe it will be a major step for scientific reasoning. openai.com/index/ten-adva… 134 274 3.2K 687K Noam Brown @polynoamial And yes we did try other major problems without success.",
-        "But also, we didn’t spend a lot on each problem."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "And yes we did try other major problems without success. Sadly no Millennium Prize problems (yet). But also, we didn’t spend a lot on each problem. It’s possible to push test-time compute much further. x.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Noam Brown @polynoamial Aug 1 The cost of generating the proofs for all 10 of these breakthroughs combined was under $2,000 at Sol API prices.",
-            "We’re excited to see what scientists and researchers are able to create with our upcoming Astra models!",
-            "Noam Brown @polynoamial Aug 1 An internal version of Astra, @ OpenAI ’s next major model family, solved 10 major open problems in mathematics, quantum complexity, and theoretical computer science.",
-            "We believe it will be a major step for scientific reasoning. openai.com/index/ten-adva… 134 274 3.2K 687K Noam Brown @polynoamial And yes we did try other major problems without success.",
-            "But also, we didn’t spend a lot on each problem."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Noam Brown @polynoamial Aug 1 The cost of generating the proofs for all 10 of these breakthroughs combined was under $2,000 at Sol API prices. We’re excited to see what scientists and researchers are able to create with our upcoming Astra models! Noam Brown @polynoamial Aug 1 An internal version of Astra, @ OpenAI ’s next major model family, solved 10 major open problems in mathematics, quantum complexity, and theoretical computer science. We believe it will be a major step for scientific reasoning. openai.com/index/ten-adva… 134 274 3.2K 687K",
-            "Noam Brown @polynoamial And yes we did try other major problems without success. Sadly no Millennium Prize problems (yet). But also, we didn’t spend a lot on each problem. It’s possible to push test-time compute much further. 9:01 AM · Aug 1, 2026 251.6K Views 64 81 1.9K 227",
-            "𝕱𝖚𝖑𝖑 𝕶𝖊𝖑𝖑𝖞 @full_kelly_ Aug 1 These problems are important enough you should probably have a large team which pushes as hard as possible to solve them. 2 2 137 21K"
-          ]
         }
       ],
       "reading_minutes": 1
@@ -4750,7 +4737,7 @@
       "id": "f0cf53374d9b0d3c",
       "kind": "article",
       "title": "This AI startup has roughly 50 employees, no product and has never published a word of research. It's worth $32 billion",
-      "source": "finance.yahoo.com",
+      "source": "Yahoo Finance",
       "source_url": "https://finance.yahoo.com/technology/ai/articles/ai-startup-roughly-50-employees-133000150.html",
       "published_at": "2026-07-29T13:30:00Z",
       "authors": [],
@@ -4760,7 +4747,7 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "This AI startup has roughly 50 employees, no product and has never published a word of research. It's worth $32 billion finance.yahoo.com",
+      "summary": "This AI startup has roughly 50 employees, no product and has never published a word of research. It's worth $32 billion Yahoo Finance",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://finance.yahoo.com/technology/ai/articles/ai-startup-roughly-50-employees-133000150.html",
@@ -4771,7 +4758,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "This AI startup has roughly 50 employees, no product and has never published a word of research. It's worth $32 billion finance.yahoo.com"
+          "body": "This AI startup has roughly 50 employees, no product and has never published a word of research. It's worth $32 billion Yahoo Finance"
         },
         {
           "title": "公开页面要点",
@@ -4886,7 +4873,7 @@
       "id": "26cd40c9fa67f749",
       "kind": "article",
       "title": "This MBA Student’s AI Startup Is Making Healthcare Processes More Efficient",
-      "source": "Poets&Quants",
+      "source": "poetsandquants.com",
       "source_url": "https://poetsandquants.com/2026/07/25/this-mba-students-ai-startup-is-making-healthcare-processes-more-efficient/",
       "published_at": "2026-07-26T03:37:28Z",
       "authors": [],
@@ -4896,7 +4883,7 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "This MBA Student’s AI Startup Is Making Healthcare Processes More Efficient Poets&Quants",
+      "summary": "This MBA Student’s AI Startup Is Making Healthcare Processes More Efficient poetsandquants.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://poetsandquants.com/2026/07/25/this-mba-students-ai-startup-is-making-healthcare-processes-more-efficient/",
@@ -4910,7 +4897,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "This MBA Student’s AI Startup Is Making Healthcare Processes More Efficient Poets&Quants"
+          "body": "This MBA Student’s AI Startup Is Making Healthcare Processes More Efficient poetsandquants.com"
         },
         {
           "title": "公开页面要点",
@@ -5022,57 +5009,6 @@
             "Artificial intelligence is creating yet another legal risk for developers — corporate shareholders are taking to the courts to accuse tech executives of concealing illicit AI practices like scraping copyrighted material to train their models.",
             "Three shareholder derivative suits have been filed in recent months aiming to hold top brass at Microsoft Corp. and Adobe Inc. responsible for allegedly providing false information about AI strategies and failing to disclose their training methods.",
             "The lawsuits say these practices have exposed the companies to legal risks and contributed to stock price dives."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "1acc3646327400f8",
-      "kind": "article",
-      "title": "Chinese CEO leaves US to launch successful AI startup despite ‘many opportunities’",
-      "source": "The American Bazaar",
-      "source_url": "https://americanbazaaronline.com/2026/07/20/chinese-ceo-leaves-us-to-launch-successful-ai-startup-484864/",
-      "published_at": "2026-07-20T17:44:28Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Chinese CEO leaves US to launch successful AI startup despite ‘many opportunities’ The American Bazaar",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://americanbazaaronline.com/2026/07/20/chinese-ceo-leaves-us-to-launch-successful-ai-startup-484864/",
-      "key_points": [
-        "Chinese artificial intelligence startup Moonshot AI has temporarily suspended new subscriptions for its flagship Kimi K3 model after an overwhelming surge in demand strained its computing capacity.",
-        "This highlights the growing appetite for advanced AI tools as the company moves toward a planned Hong Kong initial public offering (IPO).",
-        "The subscription pause underscores one of the biggest challenges facing the AI industry: balancing explosive user demand with the enormous computing power required to run increasingly sophisticated models.",
-        "Chinese AI companies, in particular, have been racing to secure high-end graphics processing units (GPUs) while navigating U.S. export restrictions on advanced AI chips.",
-        "READ: Indian American AI startup Noon acquires Bengaluru FinalRun (June 30, 2026)"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Chinese CEO leaves US to launch successful AI startup despite ‘many opportunities’ The American Bazaar"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Chinese artificial intelligence startup Moonshot AI has temporarily suspended new subscriptions for its flagship Kimi K3 model after an overwhelming surge in demand strained its computing capacity.",
-            "This highlights the growing appetite for advanced AI tools as the company moves toward a planned Hong Kong initial public offering (IPO).",
-            "The subscription pause underscores one of the biggest challenges facing the AI industry: balancing explosive user demand with the enormous computing power required to run increasingly sophisticated models.",
-            "Chinese AI companies, in particular, have been racing to secure high-end graphics processing units (GPUs) while navigating U.S. export restrictions on advanced AI chips.",
-            "READ: Indian American AI startup Noon acquires Bengaluru FinalRun (June 30, 2026)"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Chinese artificial intelligence startup Moonshot AI has temporarily suspended new subscriptions for its flagship Kimi K3 model after an overwhelming surge in demand strained its computing capacity. This highlights the growing appetite for advanced AI tools as the company moves toward a planned Hong Kong initial public offering (IPO).",
-            "The subscription pause underscores one of the biggest challenges facing the AI industry: balancing explosive user demand with the enormous computing power required to run increasingly sophisticated models. Chinese AI companies, in particular, have been racing to secure high-end graphics processing units (GPUs) while navigating U.S. export restrictions on advanced AI chips.",
-            "READ: Indian American AI startup Noon acquires Bengaluru FinalRun (June 30, 2026)"
           ]
         }
       ],
@@ -5457,10 +5393,14 @@
       "verification": "媒体或公开网页",
       "summary": "European Commission Issues EU AI Act Transparency Guidelines Hunton Andrews Kurth LLP",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
+      "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.hunton.com/privacy-and-cybersecurity-law-blog/european-commission-issues-eu-ai-act-transparency-guidelines",
       "key_points": [
-        "European Commission Issues EU AI Act Transparency Guidelines Hunton Andrews Kurth LLP"
+        "On July 20, 2026, the European Commission issued guidelines intended to assist providers and deployers of artificial intelligence (“AI”) systems in complying with the transparency requirements of the EU Artificial Intelligence Act (“AI Act”).",
+        "The guidelines are intended to clarify how certain disclosure and labelling requirements should operate in practice as the AI Act begins to take effect.",
+        "The guidelines address which organizations are subject to the AI Act’s transparency rules and explain several key concepts relevant to compliance, including directly interactive AI systems such as chatbots, synthetic content such as text that is fully or partly generated by AI, and deepfakes.",
+        "Under the AI Act, providers of AI systems intended to interact directly with individuals must design and develop those systems in such a way that individuals can be informed that they are interacting with an AI system.",
+        "Providers must also incorporate machine-readable markings into AI-generated or manipulated content so that the content can be identified as such."
       ],
       "sections": [
         {
@@ -5470,12 +5410,20 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "European Commission Issues EU AI Act Transparency Guidelines Hunton Andrews Kurth LLP"
+            "On July 20, 2026, the European Commission issued guidelines intended to assist providers and deployers of artificial intelligence (“AI”) systems in complying with the transparency requirements of the EU Artificial Intelligence Act (“AI Act”).",
+            "The guidelines are intended to clarify how certain disclosure and labelling requirements should operate in practice as the AI Act begins to take effect.",
+            "The guidelines address which organizations are subject to the AI Act’s transparency rules and explain several key concepts relevant to compliance, including directly interactive AI systems such as chatbots, synthetic content such as text that is fully or partly generated by AI, and deepfakes.",
+            "Under the AI Act, providers of AI systems intended to interact directly with individuals must design and develop those systems in such a way that individuals can be informed that they are interacting with an AI system.",
+            "Providers must also incorporate machine-readable markings into AI-generated or manipulated content so that the content can be identified as such."
           ]
         },
         {
           "title": "原文短摘录",
-          "paragraphs": []
+          "paragraphs": [
+            "On July 20, 2026, the European Commission issued guidelines intended to assist providers and deployers of artificial intelligence (“AI”) systems in complying with the transparency requirements of the EU Artificial Intelligence Act (“AI Act”). The guidelines are intended to clarify how certain disclosure and labelling requirements should operate in practice as the AI Act begins to take effect.",
+            "The guidelines address which organizations are subject to the AI Act’s transparency rules and explain several key concepts relevant to compliance, including directly interactive AI systems such as chatbots, synthetic content such as text that is fully or partly generated by AI, and deepfakes.",
+            "Under the AI Act, providers of AI systems intended to interact directly with individuals must design and develop those systems in such a way that individuals can be informed that they are interacting with an AI system. Providers must also incorporate machine-readable markings into AI-generated or manipulated content so that the content can be identified as such. These technical measures are intended to support the detection of AI-generated material, including where the content is shared or distributed through digital services."
+          ]
         }
       ],
       "reading_minutes": 1
@@ -5484,7 +5432,7 @@
       "id": "f686abe275da2feb",
       "kind": "article",
       "title": "Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security",
-      "source": "blogs.nvidia.com",
+      "source": "NVIDIA Blog",
       "source_url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/",
       "published_at": "2026-07-27T09:03:43Z",
       "authors": [],
@@ -5494,7 +5442,7 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security blogs.nvidia.com",
+      "summary": "Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security NVIDIA Blog",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/",
@@ -5508,7 +5456,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security blogs.nvidia.com"
+          "body": "Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security NVIDIA Blog"
         },
         {
           "title": "公开页面要点",
@@ -5575,6 +5523,51 @@
             "Delivery robot startup Robot.com is expanding into workplace humanoids, targeting industrial, food services, and logistics customers with a new robot designed to complete repetitive tasks.",
             "The San Francisco-based startup, formerly known as Kiwibot, told Business Insider it will launch R-noid, a humanoid robot on wheels that can package orders, load and unload boxes, and prep workstations. The startup is working with Physical Intelligence, one of its AI lab partners, to develop custom foundation models for R-noid.",
             "CEO Felipe Chavez said in an interview that the robot is part of a nearly two-year-long process to expand beyond campus-delivery robots and into commercial labor automation across multiple industries, from food service to logistics and healthcare."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "870ea0cf12fd249f",
+      "kind": "article",
+      "title": "Highlights From The Discourse On The Hugging Face Incident",
+      "source": "Astral Codex Ten",
+      "source_url": "https://www.astralcodexten.com/p/highlights-from-the-discourse-on",
+      "published_at": "2026-07-30T01:07:16Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Highlights From The Discourse On The Hugging Face Incident Astral Codex Ten",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.astralcodexten.com/p/highlights-from-the-discourse-on",
+      "key_points": [
+        "Like a Highlights From The Comments post, but including discussion from around the Internet.] Roon is an OpenAI researcher whose popular Twitter presence has catapulted him to the status of extremely-unofficial company representative.",
+        "He seems spooked: …leading to a conversation with Geoffrey Irving, formerly of the UK’s AI Security Institute:"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Highlights From The Discourse On The Hugging Face Incident Astral Codex Ten"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Like a Highlights From The Comments post, but including discussion from around the Internet.] Roon is an OpenAI researcher whose popular Twitter presence has catapulted him to the status of extremely-unofficial company representative.",
+            "He seems spooked: …leading to a conversation with Geoffrey Irving, formerly of the UK’s AI Security Institute:"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "[Original here . Like a Highlights From The Comments post, but including discussion from around the Internet.]",
+            "Roon is an OpenAI researcher whose popular Twitter presence has catapulted him to the status of extremely-unofficial company representative. He seems spooked:",
+            "…leading to a conversation with Geoffrey Irving, formerly of the UK’s AI Security Institute:"
           ]
         }
       ],
@@ -5849,102 +5842,6 @@
             "A blogpost from Hugging Face, a company that hosts open source AI models and leaderboards, has stirred up the AI world for two reasons. First, the company said it had come under a cyber attack from a fully autonomous AI agent that swarmed its system with “tens of thousands of automated actions.” Experts have been warning that AI agents are quickly becoming capable enough to carry these sorts of autonomous attacks—but the Hugging Face hack appears to be among the first real world examples. That disclosure would normally be news-worthy in and of itself. But what Hugging Face said it did next has received even more attention: the company fought AI with AI, using a Chinese-built open-source model to detect the…",
             "That claim was bound to generate a lot of buzz at a time when many in Silicon Valley and Washington, D.C., are deeply worried about the speed of Chinese AI advances. These concerns have been heightened by last week’s debut of Kimi K3, an advanced open-source AI model from Chinese AI startup Moonshot. Some venture capitalists and AI policy analysts who want to see the U.S. do everything possible to accelerate American AI progress in order to stay ahead of China worry that too much emphasis on AI safety, both within the leading U.S. labs and in policy circles, is holding back U.S. progress. In June, the Trump administration used export controls to block the distribution of Anthropic’s Fable 5 and Mythos 5 models…",
             "Although the lack of guardrails on some AI systems may seem risky, Delangue argues it’s necessary to meet attackers on their level."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "844ac90990efac26",
-      "kind": "article",
-      "title": "Hugging Face hacked: Turned to Chinese LLM for help after US models blocked Blue Team",
-      "source": "thestack.technology",
-      "source_url": "https://www.thestack.technology/hugging-face-hacked-turned-to-chinese-llm-for-help-after-us-models-blocked-blue-team/",
-      "published_at": "2026-07-19T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Open Source",
-        "Models & Tools"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Hugging Face hacked: Turned to Chinese LLM for help after US models blocked Blue Team thestack.technology",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.thestack.technology/hugging-face-hacked-turned-to-chinese-llm-for-help-after-us-models-blocked-blue-team/",
-      "key_points": [
-        "See also our updated July 22 story: \" OpenAI has tough questions to answer on rogue model's Hugging Face attack \" Hugging Face said its production infrastructure was breached by an “autonomous” AI agent system early last week (w/c Monday July 13).",
-        "The platform’s security team were initially stymied in their incident response (IR) by unnamed US LLM frontier model guardrails “which cannot distinguish an incident responder from an attacker,\" they said."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Hugging Face hacked: Turned to Chinese LLM for help after US models blocked Blue Team thestack.technology"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "See also our updated July 22 story: \" OpenAI has tough questions to answer on rogue model's Hugging Face attack \" Hugging Face said its production infrastructure was breached by an “autonomous” AI agent system early last week (w/c Monday July 13).",
-            "The platform’s security team were initially stymied in their incident response (IR) by unnamed US LLM frontier model guardrails “which cannot distinguish an incident responder from an attacker,\" they said."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "See also our updated July 22 story: \" OpenAI has tough questions to answer on rogue model's Hugging Face attack \"",
-            "Hugging Face said its production infrastructure was breached by an “autonomous” AI agent system early last week (w/c Monday July 13).",
-            "The platform’s security team were initially stymied in their incident response (IR) by unnamed US LLM frontier model guardrails “which cannot distinguish an incident responder from an attacker,\" they said."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "ac25814901c2d099",
-      "kind": "article",
-      "title": "Feifei Li's World Labs Splits World Model Into Three Types: Marble Targets Simulation Linchpin",
-      "source": "Tech Times",
-      "source_url": "https://www.techtimes.com/articles/317927/20260606/feifei-lis-world-labs-splits-world-model-three-types-marble-targets-simulation-linchpin.htm",
-      "published_at": "2026-06-06T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Founder Watch",
-        "Embodied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "World Labs, the spatial-intelligence company co-founded by Stanford computer scientist Fei-Fei Li, published an essay on June 3, 2026 that tries to impose order on one of the most overloaded terms in artificial intelligence.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.techtimes.com/articles/317927/20260606/feifei-lis-world-labs-splits-world-model-three-types-marble-targets-simulation-linchpin.htm",
-      "key_points": [
-        "World Labs, the spatial-intelligence company co-founded by Stanford computer scientist Fei-Fei Li, published an essay on June 3, 2026 that tries to impose order on one of the most overloaded terms in artificial intelligence.",
-        "The piece, written by Li and the World Labs team, argues that the phrase \"world model\" now covers three fundamentally different kinds of system, and stakes out where the company's first product, Marble, fits among them.",
-        "The answer matters to anyone building with these tools.",
-        "If you are a game studio, a visual-effects house, an architect, or a robotics team weighing which generative-3D system to adopt, the taxonomy is a buying guide in disguise: it tells you which jobs each class of \"world model\" can actually do, and which it only appears to do.",
-        "World Labs' bet is that the hardest and most valuable category — the physically faithful simulator — is the one the rest of the industry is underbuilding."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "World Labs, the spatial-intelligence company co-founded by Stanford computer scientist Fei-Fei Li, published an essay on June 3, 2026 that tries to impose order on one of the most overloaded terms in artificial intelligence."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "World Labs, the spatial-intelligence company co-founded by Stanford computer scientist Fei-Fei Li, published an essay on June 3, 2026 that tries to impose order on one of the most overloaded terms in artificial intelligence.",
-            "The piece, written by Li and the World Labs team, argues that the phrase \"world model\" now covers three fundamentally different kinds of system, and stakes out where the company's first product, Marble, fits among them.",
-            "The answer matters to anyone building with these tools.",
-            "If you are a game studio, a visual-effects house, an architect, or a robotics team weighing which generative-3D system to adopt, the taxonomy is a buying guide in disguise: it tells you which jobs each class of \"world model\" can actually do, and which it only appears to do.",
-            "World Labs' bet is that the hardest and most valuable category — the physically faithful simulator — is the one the rest of the industry is underbuilding."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "World Labs, the spatial-intelligence company co-founded by Stanford computer scientist Fei-Fei Li, published an essay on June 3, 2026 that tries to impose order on one of the most overloaded terms in artificial intelligence. The piece, written by Li and the World Labs team, argues that the phrase \"world model\" now covers three fundamentally different kinds of system, and stakes out where the company's first product, Marble, fits among them.",
-            "The answer matters to anyone building with these tools. If you are a game studio, a visual-effects house, an architect, or a robotics team weighing which generative-3D system to adopt, the taxonomy is a buying guide in disguise: it tells you which jobs each class of \"world model\" can actually do, and which it only appears to do. World Labs' bet is that the hardest and most valuable category — the physically faithful simulator — is the one the rest of the industry is underbuilding.",
-            "The essay lands months after World Labs converted Li's research conviction into a heavily funded business, shipping Marble and closing a $1 billion round anchored by design-software maker Autodesk."
           ]
         }
       ],
