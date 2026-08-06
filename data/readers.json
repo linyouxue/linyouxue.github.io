@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-05T19:53:28Z",
+  "generated_at": "2026-08-06T03:34:44Z",
   "record_count": 131,
   "records": [
     {
@@ -147,12 +147,14 @@
       "verification": "MIT 官方个人主页基线 · 持续更新",
       "summary": "何恺明现任 MIT EECS 终身副教授，并兼任 Google DeepMind Distinguished Scientist。他的官方主页将研究方向概括为计算机视觉与深度学习；本站将持续追踪其新论文、公开演讲、研究项目及产业合作，而不是只记录媒体转述。",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "<urlopen error timed out>",
+      "fetch_status": "public-page-excerpt",
       "resolved_url": "https://people.csail.mit.edu/kaiming/",
       "key_points": [
-        "何恺明现任 MIT EECS 终身副教授，并兼任 Google DeepMind Distinguished Scientist。",
-        "他的官方主页将研究方向概括为计算机视觉与深度学习；本站将持续追踪其新论文、公开演讲、研究项目及产业合作，而不是只记录媒体转述。"
+        "I am an Associate Professor with tenure in the Department of EECS at MIT .",
+        "I also work part-time as a Distinguished Scientist at Google DeepMind.",
+        "My research areas include computer vision and deep learning.",
+        "I am best known for my work on Deep Residual Networks (ResNets) , which is the most-cited paper of the twenty-first century, according to a Nature article .",
+        "The proposed residual connections are now being used everywhere in modern deep learning models, including Transformers (e.g., ChatGPT), AlphaGo Zero, AlphaFold, and virtually all GenAI models today, among many others."
       ],
       "sections": [
         {
@@ -162,13 +164,20 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "何恺明现任 MIT EECS 终身副教授，并兼任 Google DeepMind Distinguished Scientist。",
-            "他的官方主页将研究方向概括为计算机视觉与深度学习；本站将持续追踪其新论文、公开演讲、研究项目及产业合作，而不是只记录媒体转述。"
+            "I am an Associate Professor with tenure in the Department of EECS at MIT .",
+            "I also work part-time as a Distinguished Scientist at Google DeepMind.",
+            "My research areas include computer vision and deep learning.",
+            "I am best known for my work on Deep Residual Networks (ResNets) , which is the most-cited paper of the twenty-first century, according to a Nature article .",
+            "The proposed residual connections are now being used everywhere in modern deep learning models, including Transformers (e.g., ChatGPT), AlphaGo Zero, AlphaFold, and virtually all GenAI models today, among many others."
           ]
         },
         {
           "title": "原文短摘录",
-          "paragraphs": []
+          "paragraphs": [
+            "I am an Associate Professor with tenure in the Department of EECS at MIT . I also work part-time as a Distinguished Scientist at Google DeepMind. My research areas include computer vision and deep learning. I am best known for my work on Deep Residual Networks (ResNets) , which is the most-cited paper of the twenty-first century, according to a Nature article . The proposed residual connections are now being used everywhere in modern deep learning models, including Transformers (e.g., ChatGPT), AlphaGo Zero, AlphaFold, and virtually all GenAI models today, among many others. I am also known for my work on visual perception (e.g., Faster R-CNN , Mask R-CNN ) and self-supervised learning (e.g., MoCo , MAE ). My…",
+            "\"A Brief History of Visual Object Detection\", Test of Time Award Presentation, NeurIPS, 2025. slides",
+            "\"Towards End-to-End Generative Modeling\", Workshop: What's After Diffusion? , CVPR, 2025. slides"
+          ]
         }
       ],
       "reading_minutes": 1
@@ -582,6 +591,51 @@
       "reading_minutes": 1
     },
     {
+      "id": "rhb-icml-2026",
+      "kind": "paper",
+      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
+      "source": "OpenReview · arXiv",
+      "source_url": "https://arxiv.org/abs/2605.02964",
+      "published_at": "2026-06-24T00:00:00Z",
+      "authors": [
+        "Kunvar Thaman"
+      ],
+      "venue": "ICML 2026",
+      "tags": [
+        "Reward Hacking",
+        "Agent Safety",
+        "Evaluation"
+      ],
+      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
+      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/rhb-icml-2026.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://arxiv.org/pdf/2605.02964",
+      "key_points": [
+        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
+        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
+        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
+        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
+        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
+        },
+        {
+          "title": "关键结果",
+          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
+        },
+        {
+          "title": "局限与结论",
+          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
+        }
+      ],
+      "reading_minutes": 46
+    },
+    {
       "id": "e7b9677ff9c61168",
       "kind": "article",
       "title": "Investigating three real-world incidents in our cybersecurity evaluations",
@@ -631,51 +685,6 @@
         }
       ],
       "reading_minutes": 1
-    },
-    {
-      "id": "rhb-icml-2026",
-      "kind": "paper",
-      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
-      "source": "OpenReview · arXiv",
-      "source_url": "https://arxiv.org/abs/2605.02964",
-      "published_at": "2026-06-24T00:00:00Z",
-      "authors": [
-        "Kunvar Thaman"
-      ],
-      "venue": "ICML 2026",
-      "tags": [
-        "Reward Hacking",
-        "Agent Safety",
-        "Evaluation"
-      ],
-      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
-      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/rhb-icml-2026.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://arxiv.org/pdf/2605.02964",
-      "key_points": [
-        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
-        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
-        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
-        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
-        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
-        },
-        {
-          "title": "关键结果",
-          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
-        },
-        {
-          "title": "局限与结论",
-          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
-        }
-      ],
-      "reading_minutes": 46
     },
     {
       "id": "cfa5b78c41dc3723",
@@ -1226,53 +1235,41 @@
       "reading_minutes": 1
     },
     {
-      "id": "3efbd85cd692f350",
+      "id": "220b36376a802873",
       "kind": "article",
-      "title": "Closing the data loop in AI-driven drug discovery",
-      "source": "MIT Technology Review",
-      "source_url": "https://www.technologyreview.com/2026/07/27/1139667/closing-the-data-loop-in-ai-driven-drug-discovery/",
-      "published_at": "2026-07-27T11:40:16Z",
+      "title": "DeepSeek 公告称将大幅涨价",
+      "source": "微信公众号 · AI先锋官",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1785987252&ver=6887&signature=IHjukJbUwdJxtoMh81iyLhVbYkmkV43DtvqlXDfyxzgn82Opgb2ZYG9Do0OC*eEFydSk*gmlsDIuuqhzdS42DCPx0hqFqGfUoWNCgtXOeKfB2h9AhHotmtLedj9LEttf&new=1",
+      "published_at": "2026-08-06T02:53:06Z",
       "authors": [],
       "venue": "",
       "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
+        "微信公众号",
+        "DeepSeek",
+        "模型"
       ],
-      "verification": "媒体或公开网页",
-      "summary": "Closing the data loop in AI-driven drug discovery MIT Technology Review",
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "summary": "8 月6日, DeepSeek 公告称:“计划近期整体上调 DeepSeek API服务的定价,预计涨幅较大,请合理安排您的使用.具体方案以正式...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.technologyreview.com/2026/07/27/1139667/closing-the-data-loop-in-ai-driven-drug-discovery/",
+      "fetch_status": "indexed-summary",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HMoAdGqjgsHgOqDY82ZQkd6QlNta4mb8-iMQMZLJ&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785987252%26ver%3D6887%26signature%3DIHjukJbUwdJxtoMh81iyLhVbYkmkV43DtvqlXDfyxzgn82Opgb2ZYG9Do0OC%2AeEFydSk%2AgmlsDIuuqhzdS42DCPx0hqFqGfUoWNCgtXOeKfB2h9AhHotmtLedj9LEttf%26new%3D1",
       "key_points": [
-        "Drug discovery is a high-cost, high-risk endeavor that is under growing pressure from a market increasingly defined by first-mover advantage.",
-        "Since the 1950s, the cost of developing new pharmaceuticals has roughly doubled every nine years—a phenomenon known as Eroom’s Law .",
-        "Today, bringing a new drug to market takes an average of 10-15 years and costs anywhere from $1 billion to $2.5 billion , with failure rates upward of 90%.",
-        "AI has become the pharmaceutical industry’s biggest bet on bringing success rates up and timelines down.",
-        "The faster drug companies can identify, test, and optimize new chemical compounds, the lower the risk of costly failures later in development."
+        "8 月6日, DeepSeek 公告称:“计划近期整体上调 DeepSeek API服务的定价,预计涨幅较大,请合理安排您的使用.具体方案以正式..."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Closing the data loop in AI-driven drug discovery MIT Technology Review"
+          "body": "8 月6日, DeepSeek 公告称:“计划近期整体上调 DeepSeek API服务的定价,预计涨幅较大,请合理安排您的使用.具体方案以正式..."
         },
         {
-          "title": "公开页面要点",
+          "title": "公开索引摘要",
           "bullets": [
-            "Drug discovery is a high-cost, high-risk endeavor that is under growing pressure from a market increasingly defined by first-mover advantage.",
-            "Since the 1950s, the cost of developing new pharmaceuticals has roughly doubled every nine years—a phenomenon known as Eroom’s Law .",
-            "Today, bringing a new drug to market takes an average of 10-15 years and costs anywhere from $1 billion to $2.5 billion , with failure rates upward of 90%.",
-            "AI has become the pharmaceutical industry’s biggest bet on bringing success rates up and timelines down.",
-            "The faster drug companies can identify, test, and optimize new chemical compounds, the lower the risk of costly failures later in development."
+            "8 月6日, DeepSeek 公告称:“计划近期整体上调 DeepSeek API服务的定价,预计涨幅较大,请合理安排您的使用.具体方案以正式..."
           ]
         },
         {
           "title": "原文短摘录",
-          "paragraphs": [
-            "Drug discovery is a high-cost, high-risk endeavor that is under growing pressure from a market increasingly defined by first-mover advantage.",
-            "Since the 1950s, the cost of developing new pharmaceuticals has roughly doubled every nine years—a phenomenon known as Eroom’s Law . Today, bringing a new drug to market takes an average of 10-15 years and costs anywhere from $1 billion to $2.5 billion , with failure rates upward of 90%.",
-            "AI has become the pharmaceutical industry’s biggest bet on bringing success rates up and timelines down. The faster drug companies can identify, test, and optimize new chemical compounds, the lower the risk of costly failures later in development."
-          ]
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -1318,11 +1315,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "582adcd1829171ed",
+      "id": "9869428f03df4153",
       "kind": "article",
       "title": "腾讯 混元 Hy ASR 3.0 preview 发布 : 元宝 免费开放,语音识别能力更具优势",
       "source": "微信公众号 · 拉鲁斯AI",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1785959577&ver=6886&signature=OOOaAArO5DMuHszjaM8wcCzda5Eyo5KJoky6vILb6nvSzmmIIsN4fhprJ*boLbRpAwdI5MExKnvCg6R7KccOqRBtpyfoBo31VlFIaFfo7josf01c79OOoiykBno-u1X3&new=1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1785987259&ver=6887&signature=TQaS*sMv*GAbd*eQdJxZC6KxRvHmR4zVj*q99jsnCeZH39oxr-E0NJKCBJOSDKTt7l1laXvJ-5tV5fILI93p6Q3DziiFBeK0KnYMtoub8cI7zIN*IKus0hd2ZQPH-3Rl&new=1",
       "published_at": "2026-08-05T03:17:55Z",
       "authors": [],
       "venue": "",
@@ -1335,7 +1332,7 @@
       "summary": "拉鲁斯AI | 向你速递24小时AI动态2026年8月5日 今日亮点 腾讯 混元 发布 Hy ASR 3.0 preview面壁智能开源ForgeStencil:全自动HPC优...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HKOUc2qjx7tkOdCaI5GMaeNxUDIruArxL0z3qFNw&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785959577%26ver%3D6886%26signature%3DOOOaAArO5DMuHszjaM8wcCzda5Eyo5KJoky6vILb6nvSzmmIIsN4fhprJ%2AboLbRpAwdI5MExKnvCg6R7KccOqRBtpyfoBo31VlFIaFfo7josf01c79OOoiykBno-u1X3%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HMoAdGqj8Fr7JwuIfB4lgfHjLyP20LSgJI_Qmvde&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785987259%26ver%3D6887%26signature%3DTQaS%2AsMv%2AGAbd%2AeQdJxZC6KxRvHmR4zVj%2Aq99jsnCeZH39oxr-E0NJKCBJOSDKTt7l1laXvJ-5tV5fILI93p6Q3DziiFBeK0KnYMtoub8cI7zIN%2AIKus0hd2ZQPH-3Rl%26new%3D1",
       "key_points": [
         "拉鲁斯AI | 向你速递24小时AI动态2026年8月5日 今日亮点 腾讯 混元 发布 Hy ASR 3.0 preview面壁智能开源ForgeStencil:全自动HPC优..."
       ],
@@ -1358,11 +1355,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "b167a64320ee54d2",
+      "id": "1dff553f7df8f738",
       "kind": "article",
       "title": "腾讯 混元 语音识别升级: 元宝 免费开放,嘈杂环境和上下文纠错更强",
       "source": "微信公众号 · AI源文件",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1785959577&ver=6886&signature=3N2hvEo9oRQ0nVwjsbxBUB8-pPxReTm*d2F6ogC*P*xkXbjM1Ggmr0seBPh4DaBHRfzBnWLuIS4oWbZ0g94vWFXgNSONluFK8xzVPYAVdjOXcUWspch9cYBS0xFGV4be&new=1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1785987259&ver=6887&signature=S2r0UQLrPA6YEltJ03-a-BNuT9VKAlGLtT1ckDjRyslwqrBtC35xpRSoko*w8zlKf*VJj5RmE4BQzGxqbwWMb3k47Uqt8jfa7kGPJf4yTUCs6i*1nBDWH2g3IboJNnSN&new=1",
       "published_at": "2026-08-04T22:23:10Z",
       "authors": [],
       "venue": "",
@@ -1375,7 +1372,7 @@
       "summary": "腾讯 混元 发布 ASR 3.0 Preview,把语音转文字的重点放到了更难的真实环境:背景噪声、口音、连续对话,以及只有结合上下文才能...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HKOUc2qjjfuOk3bYllvczrxSwLAHoe6galxQFK3d&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785959577%26ver%3D6886%26signature%3D3N2hvEo9oRQ0nVwjsbxBUB8-pPxReTm%2Ad2F6ogC%2AP%2AxkXbjM1Ggmr0seBPh4DaBHRfzBnWLuIS4oWbZ0g94vWFXgNSONluFK8xzVPYAVdjOXcUWspch9cYBS0xFGV4be%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HMoAdGqjFbQEZ9YjFXdhhUxV0NVRDbh-Gu5jxsge&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785987259%26ver%3D6887%26signature%3DS2r0UQLrPA6YEltJ03-a-BNuT9VKAlGLtT1ckDjRyslwqrBtC35xpRSoko%2Aw8zlKf%2AVJj5RmE4BQzGxqbwWMb3k47Uqt8jfa7kGPJf4yTUCs6i%2A1nBDWH2g3IboJNnSN%26new%3D1",
       "key_points": [
         "腾讯 混元 发布 ASR 3.0 Preview,把语音转文字的重点放到了更难的真实环境:背景噪声、口音、连续对话,以及只有结合上下文才能..."
       ],
@@ -1398,11 +1395,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "04af33a5eddbae29",
+      "id": "e959089c90053e67",
       "kind": "article",
       "title": "自动驾驶系统安全强制性国标 发布 , DeepSeek 登顶全球AI模型调用量榜单,PC大厂开始用长鑫产品,欧盟AI新规生效,这就是今天的其他大新闻!",
       "source": "微信公众号 · 差评",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1785959573&ver=6886&signature=iJgeMciSyIeU-tBH6KqkCuEFSqZugTwiTWeLlU3CmLuhDCb7K3umP7x94jUvgDjsWInnZMlqBt9pGuIEy7SqJG2GFFq*nU1i8gHFK*MYdyz4PxNIisus-arUULS0I9x0&new=1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1785987252&ver=6887&signature=E6k6N8rdks7-jHxKh4-MPgF34lkrLNjkbg7DVz-h6GnlmhPghoQOxE2QLaOi1Ln7RNtJmKmNJnQowYUO19nY*8GqXsdQhT2lN*gtnYxl5gsWaW7-EJdD5HvDebfirIx0&new=1",
       "published_at": "2026-08-04T16:07:22Z",
       "authors": [],
       "venue": "",
@@ -1415,7 +1412,7 @@
       "summary": "月正式获批 发布 .:车还是买早了. DeepSeek 登顶全球 AI 模型调用榜单( 观察者网 )8 月 4 日,全球 AI 模型聚合平台 OpenRouter ...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HKOUc2qjK_PWE1bIk37ojxdf40xfHz7FHWq4Tv3m&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785959573%26ver%3D6886%26signature%3DiJgeMciSyIeU-tBH6KqkCuEFSqZugTwiTWeLlU3CmLuhDCb7K3umP7x94jUvgDjsWInnZMlqBt9pGuIEy7SqJG2GFFq%2AnU1i8gHFK%2AMYdyz4PxNIisus-arUULS0I9x0%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HMsAdGqjjFvYGMUwQoWSXA77yikK42rpiPzMBB0t&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785987252%26ver%3D6887%26signature%3DE6k6N8rdks7-jHxKh4-MPgF34lkrLNjkbg7DVz-h6GnlmhPghoQOxE2QLaOi1Ln7RNtJmKmNJnQowYUO19nY%2A8GqXsdQhT2lN%2AgtnYxl5gsWaW7-EJdD5HvDebfirIx0%26new%3D1",
       "key_points": [
         "DeepSeek 登顶全球 AI 模型调用榜单( 观察者网 )8 月 4 日,全球 AI 模型聚合平台 OpenRouter ..."
       ],
@@ -1778,55 +1775,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "f76832163d5ff2ed",
-      "kind": "article",
-      "title": "Inside our 353,000-person vibe coding course",
-      "source": "Google AI",
-      "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/",
-      "published_at": "2026-08-03T15:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Google",
-        "Official"
-      ],
-      "verification": "官方来源",
-      "summary": "Illustrations of a laptop, an AI spark, messages, code, and a 3-D cube",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/",
-      "key_points": [
-        "Google and Kaggle’s “AI Agents: Intensive Vibe Coding” course had expert-led sessions, technical whitepapers and notebooks, and capstone projects.",
-        "Over 353,000 developers recently joined our five-day intensive course to master building and deploying AI agents using natural language.",
-        "Participants collaborated on Discord to debug code and submitted over 6,000 impressive capstone projects, ranging from historical transcription tools to space-weather research systems.",
-        "You can still access all course materials on the Kaggle Learn website to sharpen your skills at your own pace. \"Inside our 353,000-person vibe coding course\" explores how we teach modern AI development."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Illustrations of a laptop, an AI spark, messages, code, and a 3-D cube"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Google and Kaggle’s “AI Agents: Intensive Vibe Coding” course had expert-led sessions, technical whitepapers and notebooks, and capstone projects.",
-            "Over 353,000 developers recently joined our five-day intensive course to master building and deploying AI agents using natural language.",
-            "Participants collaborated on Discord to debug code and submitted over 6,000 impressive capstone projects, ranging from historical transcription tools to space-weather research systems.",
-            "You can still access all course materials on the Kaggle Learn website to sharpen your skills at your own pace. \"Inside our 353,000-person vibe coding course\" explores how we teach modern AI development."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Google and Kaggle’s “AI Agents: Intensive Vibe Coding” course had expert-led sessions, technical whitepapers and notebooks, and capstone projects.",
-            "Over 353,000 developers recently joined our five-day intensive course to master building and deploying AI agents using natural language. Participants collaborated on Discord to debug code and submitted over 6,000 impressive capstone projects, ranging from historical transcription tools to space-weather research systems. You can still access all course materials on the Kaggle Learn website to sharpen your skills at your own pace.",
-            "\"Inside our 353,000-person vibe coding course\" explores how we teach modern AI development."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "2e55dcebc498604b",
       "kind": "article",
       "title": "DeepSeek V4 Flash正式版 发布 :模型竞争进入「任务执行」阶段",
@@ -2029,50 +1977,10 @@
       "reading_minutes": 1
     },
     {
-      "id": "282da884909c397d",
-      "kind": "article",
-      "title": "DeepSeek 刚 发布 一天,国家超算就把它＂收编＂了!",
-      "source": "微信公众号 · YES洞察",
-      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HKtLb2qjbJjhIQTERW7yDTJjWViUEFx-7JQS0VJx&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785678742%26ver%3D6880%26signature%3DxoBpfTn24Md5M9kXd9LTm66EUKITsbBCwdwxGseZVQDpRPbvrNT0SWE8Bn4io57ps1sMCYvkoYccQ9a15sz%2A87CtCQ2F5MqY5qXvTm1sXTYtqwlQBT6E0Tstc7Sbs43s%26new%3D1",
-      "published_at": "2026-08-02T13:16:35Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "微信公众号",
-        "DeepSeek",
-        "模型"
-      ],
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "summary": "发布 仅一天即入驻国家超算互联网, DeepSeek -V4-Flash-0731 专属增强版上线��️ 十万卡底座: 依托全国首个十万卡级超智融合...",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HKtLb2qjbJjhIQTERW7yDTJjWViUEFx-7JQS0VJx&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1785678742%26ver%3D6880%26signature%3DxoBpfTn24Md5M9kXd9LTm66EUKITsbBCwdwxGseZVQDpRPbvrNT0SWE8Bn4io57ps1sMCYvkoYccQ9a15sz%2A87CtCQ2F5MqY5qXvTm1sXTYtqwlQBT6E0Tstc7Sbs43s%26new%3D1",
-      "key_points": [
-        "发布 仅一天即入驻国家超算互联网, DeepSeek -V4-Flash-0731 专属增强版上线��️ 十万卡底座: 依托全国首个十万卡级超智融合..."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "发布 仅一天即入驻国家超算互联网, DeepSeek -V4-Flash-0731 专属增强版上线��️ 十万卡底座: 依托全国首个十万卡级超智融合..."
-        },
-        {
-          "title": "公开索引摘要",
-          "bullets": [
-            "发布 仅一天即入驻国家超算互联网, DeepSeek -V4-Flash-0731 专属增强版上线��️ 十万卡底座: 依托全国首个十万卡级超智融合..."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "d82fd66c9994b8e4",
       "kind": "article",
       "title": "AI shortens drug discovery to around 1 year in China, Insilico CEO says",
-      "source": "Reuters",
+      "source": "reuters.com",
       "source_url": "https://www.reuters.com/business/healthcare-pharmaceuticals/ai-shortens-drug-discovery-around-1-year-china-insilico-ceo-says-2026-07-23/",
       "published_at": "2026-07-24T07:00:00Z",
       "authors": [],
@@ -2083,23 +1991,23 @@
         "Applied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "AI shortens drug discovery to around 1 year in China, Insilico CEO says Reuters",
+      "summary": "AI shortens drug discovery to around 1 year in China, Insilico CEO says reuters.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "summary-only",
       "fetch_note": "HTTP Error 401: HTTP Forbidden",
       "resolved_url": "https://www.reuters.com/business/healthcare-pharmaceuticals/ai-shortens-drug-discovery-around-1-year-china-insilico-ceo-says-2026-07-23/",
       "key_points": [
-        "AI shortens drug discovery to around 1 year in China, Insilico CEO says Reuters"
+        "AI shortens drug discovery to around 1 year in China, Insilico CEO says reuters.com"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "AI shortens drug discovery to around 1 year in China, Insilico CEO says Reuters"
+          "body": "AI shortens drug discovery to around 1 year in China, Insilico CEO says reuters.com"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "AI shortens drug discovery to around 1 year in China, Insilico CEO says Reuters"
+            "AI shortens drug discovery to around 1 year in China, Insilico CEO says reuters.com"
           ]
         },
         {
@@ -2110,52 +2018,52 @@
       "reading_minutes": 1
     },
     {
-      "id": "8b7a5efb6f2407ae",
+      "id": "8732ec180b11cc87",
       "kind": "article",
-      "title": "New NSF initiative aims to unlock dataset value for AI-enabled scientific discovery",
-      "source": "U.S. National Science Foundation (.gov)",
-      "source_url": "https://www.nsf.gov/news/new-nsf-initiative-aims-unlock-dataset-value-ai-enabled",
-      "published_at": "2026-07-22T07:00:00Z",
+      "title": "How AI helps scientists design the next generation of medicines",
+      "source": "MIT Technology Review",
+      "source_url": "https://www.technologyreview.com/2026/07/23/1140346/how-ai-helps-scientists-design-the-next-generation-of-medicines/",
+      "published_at": "2026-07-23T07:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
         "AI for Science",
-        "Mathematics",
-        "Discovery"
+        "Biology",
+        "Applied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "New NSF initiative aims to unlock dataset value for AI-enabled scientific discovery U.S. National Science Foundation (.gov)",
+      "summary": "As generative AI captures public attention, a different kind of AI is reshaping drug discovery. Machine learning models are helping to compress decade-long timelines and cracking problems that were previously unsolvable.",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.nsf.gov/news/new-nsf-initiative-aims-unlock-dataset-value-ai-enabled",
+      "resolved_url": "https://www.technologyreview.com/2026/07/23/1140346/how-ai-helps-scientists-design-the-next-generation-of-medicines/",
       "key_points": [
-        "National Science Foundation announced the NSF Unlocking Dataset Value for AI-Enabled Scientific Discovery program , a new investment to advance scientific community datasets and enable discovery and innovation using artificial intelligence and other methods in national priority areas.",
-        "Across science and engineering, researchers have built valuable datasets through prior research.",
-        "However, many datasets have the potential to be used for new inquiries outside of the initial scope of data collection, but are not accessible, interoperable or ready to be used by automated AI systems.",
-        "Many existing datasets also lack a way for a broad array of researchers to contribute and benefit.",
-        "The new program will help research communities unlock more value from datasets to ask new questions, test new ideas and extend the value of prior scientific investments."
+        "Designing and developing a new medicine is an expensive, failure-prone scientific challenge.",
+        "A new drug can take many years to develop, at the cost of a significant investment.",
+        "And even then, most possible candidates never reach the patient.",
+        "For biologic medicines, therapies made from engineered proteins rather than synthetic chemistry (which are often used to treat conditions across most major acute and chronic diseases), the complexity is even greater.",
+        "Scientists explore vast quantities of possible molecules, looking for the rare few that will bind to the right target, remain stable in the human body, and be manufacturable at scale."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "New NSF initiative aims to unlock dataset value for AI-enabled scientific discovery U.S. National Science Foundation (.gov)"
+          "body": "As generative AI captures public attention, a different kind of AI is reshaping drug discovery. Machine learning models are helping to compress decade-long timelines and cracking problems that were previously unsolvable."
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "National Science Foundation announced the NSF Unlocking Dataset Value for AI-Enabled Scientific Discovery program , a new investment to advance scientific community datasets and enable discovery and innovation using artificial intelligence and other methods in national priority areas.",
-            "Across science and engineering, researchers have built valuable datasets through prior research.",
-            "However, many datasets have the potential to be used for new inquiries outside of the initial scope of data collection, but are not accessible, interoperable or ready to be used by automated AI systems.",
-            "Many existing datasets also lack a way for a broad array of researchers to contribute and benefit.",
-            "The new program will help research communities unlock more value from datasets to ask new questions, test new ideas and extend the value of prior scientific investments."
+            "Designing and developing a new medicine is an expensive, failure-prone scientific challenge.",
+            "A new drug can take many years to develop, at the cost of a significant investment.",
+            "And even then, most possible candidates never reach the patient.",
+            "For biologic medicines, therapies made from engineered proteins rather than synthetic chemistry (which are often used to treat conditions across most major acute and chronic diseases), the complexity is even greater.",
+            "Scientists explore vast quantities of possible molecules, looking for the rare few that will bind to the right target, remain stable in the human body, and be manufacturable at scale."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "The U.S. National Science Foundation announced the NSF Unlocking Dataset Value for AI-Enabled Scientific Discovery program , a new investment to advance scientific community datasets and enable discovery and innovation using artificial intelligence and other methods in national priority areas.",
-            "Across science and engineering, researchers have built valuable datasets through prior research. However, many datasets have the potential to be used for new inquiries outside of the initial scope of data collection, but are not accessible, interoperable or ready to be used by automated AI systems. Many existing datasets also lack a way for a broad array of researchers to contribute and benefit. The new program will help research communities unlock more value from datasets to ask new questions, test new ideas and extend the value of prior scientific investments.",
-            "AI enables data processing and analysis at scales and speeds beyond human capacity, helping researchers identify previously hidden patterns and relationships. When paired with scientific datasets that are trusted, accessible, fit for their scientific purpose and curated, AI can advance scientific research and connect previously siloed disciplines."
+            "Designing and developing a new medicine is an expensive, failure-prone scientific challenge. A new drug can take many years to develop, at the cost of a significant investment. And even then, most possible candidates never reach the patient. For biologic medicines, therapies made from engineered proteins rather than synthetic chemistry (which are often used to treat conditions across most major acute and chronic diseases), the complexity is even greater.",
+            "Scientists explore vast quantities of possible molecules, looking for the rare few that will bind to the right target, remain stable in the human body, and be manufacturable at scale. Today, AI is speeding up these processes and has quickly become a core part of the infrastructure in pharmaceutical R&D.",
+            "AI-assisted design is a growing part of how biologic drug candidates are developed, and companies like AstraZeneca are actively building its engineering teams to push this further. “Everything we do, whether it’s design, make, test, or analyze, is now computationally enhanced,” says Puja Sapra, senior vice president and head of R&D biologics engineering and oncology targeted discovery at AstraZeneca. “The cycle times are getting shorter while productivity and innovation increase.”"
           ]
         }
       ],
@@ -2198,6 +2106,55 @@
         {
           "title": "原文短摘录",
           "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "f76832163d5ff2ed",
+      "kind": "article",
+      "title": "Inside our 353,000-person vibe coding course",
+      "source": "Google AI",
+      "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/",
+      "published_at": "2026-08-03T15:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Google",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "Illustrations of a laptop, an AI spark, messages, code, and a 3-D cube",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/",
+      "key_points": [
+        "Google and Kaggle’s “AI Agents: Intensive Vibe Coding” course had expert-led sessions, technical whitepapers and notebooks, and capstone projects.",
+        "Over 353,000 developers recently joined our five-day intensive course to master building and deploying AI agents using natural language.",
+        "Participants collaborated on Discord to debug code and submitted over 6,000 impressive capstone projects, ranging from historical transcription tools to space-weather research systems.",
+        "You can still access all course materials on the Kaggle Learn website to sharpen your skills at your own pace. \"Inside our 353,000-person vibe coding course\" explores how we teach modern AI development."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Illustrations of a laptop, an AI spark, messages, code, and a 3-D cube"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Google and Kaggle’s “AI Agents: Intensive Vibe Coding” course had expert-led sessions, technical whitepapers and notebooks, and capstone projects.",
+            "Over 353,000 developers recently joined our five-day intensive course to master building and deploying AI agents using natural language.",
+            "Participants collaborated on Discord to debug code and submitted over 6,000 impressive capstone projects, ranging from historical transcription tools to space-weather research systems.",
+            "You can still access all course materials on the Kaggle Learn website to sharpen your skills at your own pace. \"Inside our 353,000-person vibe coding course\" explores how we teach modern AI development."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Google and Kaggle’s “AI Agents: Intensive Vibe Coding” course had expert-led sessions, technical whitepapers and notebooks, and capstone projects.",
+            "Over 353,000 developers recently joined our five-day intensive course to master building and deploying AI agents using natural language. Participants collaborated on Discord to debug code and submitted over 6,000 impressive capstone projects, ranging from historical transcription tools to space-weather research systems. You can still access all course materials on the Kaggle Learn website to sharpen your skills at your own pace.",
+            "\"Inside our 353,000-person vibe coding course\" explores how we teach modern AI development."
+          ]
         }
       ],
       "reading_minutes": 1
@@ -3424,54 +3381,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "c67edc0b7cbc2168",
-      "kind": "article",
-      "title": "New AI Modeling Approach Accelerates the Development of Advanced Materials",
-      "source": "Berkeley Lab News Center (.gov)",
-      "source_url": "https://newscenter.lbl.gov/2026/08/03/new-ai-modeling-approach-accelerates-the-development-of-advanced-materials/",
-      "published_at": "2026-08-03T16:10:03Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "New AI Modeling Approach Accelerates the Development of Advanced Materials Berkeley Lab News Center (.gov)",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://newscenter.lbl.gov/2026/08/03/new-ai-modeling-approach-accelerates-the-development-of-advanced-materials/",
-      "key_points": [
-        "Figuring out how to synthesize technologically valuable solid materials can take weeks to years of trial-and-error.",
-        "A new modeling framework uses accurate thermodynamics and machine learning to precisely and rapidly predict the full sequence of events in solid-state reactions, including intermediate compounds, final products, and impurities.",
-        "The model outputs reveal how best to synthesize promising new materials, accelerating their pathway to commercialization."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "New AI Modeling Approach Accelerates the Development of Advanced Materials Berkeley Lab News Center (.gov)"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Figuring out how to synthesize technologically valuable solid materials can take weeks to years of trial-and-error.",
-            "A new modeling framework uses accurate thermodynamics and machine learning to precisely and rapidly predict the full sequence of events in solid-state reactions, including intermediate compounds, final products, and impurities.",
-            "The model outputs reveal how best to synthesize promising new materials, accelerating their pathway to commercialization."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Figuring out how to synthesize technologically valuable solid materials can take weeks to years of trial-and-error.",
-            "A new modeling framework uses accurate thermodynamics and machine learning to precisely and rapidly predict the full sequence of events in solid-state reactions, including intermediate compounds, final products, and impurities.",
-            "The model outputs reveal how best to synthesize promising new materials, accelerating their pathway to commercialization."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "5255044f68030819",
       "kind": "article",
       "title": "Verifying Rust cryptography in SymCrypt, from standards to code",
@@ -3567,6 +3476,46 @@
       "reading_minutes": 1
     },
     {
+      "id": "0ed08b7433503a29",
+      "kind": "article",
+      "title": "Insilico Medicine Launches the Industry's First Drug Discovery and Development (DDD) Benchmark as a Service, to Evaluate Frontier AI and Foundation Models on Real-World Science",
+      "source": "Insilico Medicine",
+      "source_url": "https://insilico.com/news/hxjtp34a41-insilico-medicine-launches-the-industrys",
+      "published_at": "2026-07-31T02:01:51Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Insilico Medicine Launches the Industry's First Drug Discovery and Development (DDD) Benchmark as a Service, to Evaluate Frontier AI and Foundation Models on Real-World Science Insilico Medicine",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "resolved_url": "https://insilico.com/news/hxjtp34a41-insilico-medicine-launches-the-industrys",
+      "key_points": [
+        "Insilico Medicine Launches the Industry's First Drug Discovery and Development (DDD) Benchmark as a Service, to Evaluate Frontier AI and Foundation Models on Real-World Science Insilico Medicine"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Insilico Medicine Launches the Industry's First Drug Discovery and Development (DDD) Benchmark as a Service, to Evaluate Frontier AI and Foundation Models on Real-World Science Insilico Medicine"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Insilico Medicine Launches the Industry's First Drug Discovery and Development (DDD) Benchmark as a Service, to Evaluate Frontier AI and Foundation Models on Real-World Science Insilico Medicine"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "0ad340bb7344ab0f",
       "kind": "article",
       "title": "GPU Management: Why Idle GPUs Are the New Grounded Aircraft",
@@ -3612,6 +3561,92 @@
             "Aviation learned this the hard way. For most of the industry's history, the number that best predicted whether an airline would survive was how much of the day each aircraft spent on the ground.",
             "The reason is structural. An aircraft's costs accrue by the calendar hour: financing, depreciation, hull insurance, scheduled maintenance, crew contracts. Its revenue accrues only by the flight hour. Every hour spent on the ground shrinks the output side of that equation while the cost side keeps running exactly as before. Utilization also sits downstream of almost everything else an airline does. Turnaround discipline, network design, maintenance planning, crew rostering, and spare parts availability all eventually show up in that one number, because a broken operation underneath it keeps planes on the ground no matter what else goes right.",
             "A bigger fleet still helps. More aircraft means more available capacity, plainly and simply. But two airlines flying comparable fleets on comparable routes can end up with very different economics, and most of that gap traces back to one measurement rather than fleet size."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "2b62b095bde861a0",
+      "kind": "article",
+      "title": "GSK, Relation deepen AI drug discovery alliance with new $110M deal",
+      "source": "firstwordpharma.com",
+      "source_url": "https://firstwordpharma.com/story/7785113",
+      "published_at": "2026-07-30T08:51:36Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "GSK, Relation deepen AI drug discovery alliance with new $110M deal firstwordpharma.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "resolved_url": "https://firstwordpharma.com/story/7785113",
+      "key_points": [
+        "GSK, Relation deepen AI drug discovery alliance with new $110M deal firstwordpharma.com"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "GSK, Relation deepen AI drug discovery alliance with new $110M deal firstwordpharma.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "GSK, Relation deepen AI drug discovery alliance with new $110M deal firstwordpharma.com"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "a72328a84b6ffec7",
+      "kind": "article",
+      "title": "Elix and University of Vienna Aim to Advance Drug Discovery Using AI",
+      "source": "Genetic Engineering and Biotechnology News",
+      "source_url": "https://www.genengnews.com/topics/artificial-intelligence/elix-and-university-of-vienna-aim-to-advance-drug-discovery-using-ai/",
+      "published_at": "2026-07-29T22:29:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Elix and University of Vienna Aim to Advance Drug Discovery Using AI Genetic Engineering and Biotechnology News",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.genengnews.com/topics/artificial-intelligence/elix-and-university-of-vienna-aim-to-advance-drug-discovery-using-ai/",
+      "key_points": [
+        "Tokyo-based Elix and the University of Vienna signed a joint research agreement aimed at advancing drug discovery using AI technologies.",
+        "One of Elix’s business models is the provision of its integrated AI drug discovery platform, Elix Discovery™, developed under the concept of “medicinal chemists can truly use it.” The product comes with an intuitive graphical user interface (GUI) that automatically constructs predictive models for optimal compound profiling."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Elix and University of Vienna Aim to Advance Drug Discovery Using AI Genetic Engineering and Biotechnology News"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Tokyo-based Elix and the University of Vienna signed a joint research agreement aimed at advancing drug discovery using AI technologies.",
+            "One of Elix’s business models is the provision of its integrated AI drug discovery platform, Elix Discovery™, developed under the concept of “medicinal chemists can truly use it.” The product comes with an intuitive graphical user interface (GUI) that automatically constructs predictive models for optimal compound profiling."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Tokyo-based Elix and the University of Vienna signed a joint research agreement aimed at advancing drug discovery using AI technologies.",
+            "One of Elix’s business models is the provision of its integrated AI drug discovery platform, Elix Discovery™, developed under the concept of “medicinal chemists can truly use it.” The product comes with an intuitive graphical user interface (GUI) that automatically constructs predictive models for optimal compound profiling. Elix says it also features diverse structure generation capabilities, with a strength in “proposing structures that humans would not conceive.”",
+            "By integrating curated structure generation models, including proprietary ones, with predictive models and parameters built into the intuitive GUI, researchers can rapidly and intuitively refine molecular design, notes a company spokesperson, adding that platform supports both ligand-based drug design (LBDD), including pharmacophore modeling and structure-based drug design (SBDD), the latter utilizing docking simulations and other methods, thus enabling exploration across a broader range of approaches."
           ]
         }
       ],
@@ -3966,6 +4001,47 @@
       "reading_minutes": 1
     },
     {
+      "id": "5fbae84b9d371277",
+      "kind": "article",
+      "title": "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says",
+      "source": "reuters.com",
+      "source_url": "https://www.reuters.com/legal/transactional/nvidia-invest-5-billion-ilya-sutskevers-ai-startup-source-says-2026-07-27/",
+      "published_at": "2026-07-27T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Researcher Watch",
+        "Foundation Models",
+        "Leadership"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says reuters.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 401: HTTP Forbidden",
+      "resolved_url": "https://www.reuters.com/legal/transactional/nvidia-invest-5-billion-ilya-sutskevers-ai-startup-source-says-2026-07-27/",
+      "key_points": [
+        "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says reuters.com"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says reuters.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says reuters.com"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "8ada8c6f1b1acc4c",
       "kind": "article",
       "title": "Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident",
@@ -4017,52 +4093,51 @@
       "reading_minutes": 1
     },
     {
-      "id": "edef0f3d9e3f6466",
+      "id": "9943969fce7ee83e",
       "kind": "article",
-      "title": "How researchers are using AI to speed up drug discovery and development: Q&A",
-      "source": "Phys.org",
-      "source_url": "https://phys.org/news/2026-07-ai-drug-discovery-qa.html",
-      "published_at": "2026-07-24T00:00:03Z",
+      "title": "Fei-Fei Li",
+      "source": "American Academy of Arts and Sciences",
+      "source_url": "https://www.amacad.org/person/fei-fei-li",
+      "published_at": "2026-07-24T07:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
+        "Researcher Watch",
+        "Vision",
+        "World Models"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Drug development is among the slowest, most failure-prone processes in modern science, with about 90% of drug candidates never reaching the market. Today, artificial intelligence methods have accelerated the first step—plucking promising molecules out of endless possibilities—but countless challenges remain. A successful drug must be not only safe and effective but also able to bypass the body's defenses and reach the right target.",
+      "summary": "Dr. Fei-Fei Li is the inaugural Sequoia Professor in the Computer Science Department at Stanford University, and Co-Director of Stanford’s Human-Centered AI Institute. She served as the Director of Stanford’s AI Lab from 2013 to 2018. And during her sabbatical from Stanford from January 2017 to September 2018, she was Vice President at Google and served as Chief Scientist of AI/ML at Google Cloud. Dr. Fei-Fei Li obtained her B.A. degree in physics from Princeton in 1999 with High Honors, and her PhD degree in electrical engineering from California Institute of Technology (Caltech) in 2005. She joined Stanford in 2009 as an assistant professor. Prior to that, she was on…",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://phys.org/news/2026-07-ai-drug-discovery-qa.html",
+      "resolved_url": "https://www.amacad.org/person/fei-fei-li",
       "key_points": [
-        "This article has been reviewed according to Science X's editorial process and policies .",
-        "Editors have highlighted the following attributes while ensuring the content's credibility: Drug development is among the slowest, most failure-prone processes in modern science, with about 90% of drug candidates never reaching the market .",
-        "Today, artificial intelligence methods have accelerated the first step—plucking promising molecules out of endless possibilities—but countless challenges remain.",
-        "A successful drug must be not only safe and effective but also able to bypass the body's defenses and reach the right target.",
-        "Most drug candidates fail during optimization."
+        "Fei-Fei Li is the inaugural Sequoia Professor in the Computer Science Department at Stanford University, and Co-Director of Stanford’s Human-Centered AI Institute.",
+        "She served as the Director of Stanford’s AI Lab from 2013 to 2018.",
+        "And during her sabbatical from Stanford from January 2017 to September 2018, she was Vice President at Google and served as Chief Scientist of AI/ML at Google Cloud.",
+        "Fei-Fei Li obtained her B.A. degree in physics from Princeton in 1999 with High Honors, and her PhD degree in electrical engineering from California Institute of Technology (Caltech) in 2005.",
+        "She joined Stanford in 2009 as an assistant professor."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Drug development is among the slowest, most failure-prone processes in modern science, with about 90% of drug candidates never reaching the market. Today, artificial intelligence methods have accelerated the first step—plucking promising molecules out of endless possibilities—but countless challenges remain. A successful drug must be not only safe and effective but also able to bypass the body's defenses and reach the right target."
+          "body": "Dr. Fei-Fei Li is the inaugural Sequoia Professor in the Computer Science Department at Stanford University, and Co-Director of Stanford’s Human-Centered AI Institute. She served as the Director of Stanford’s AI Lab from 2013 to 2018. And during her sabbatical from Stanford from January 2017 to September 2018, she was Vice President at Google and served as Chief Scientist of AI/ML at Google Cloud. Dr. Fei-Fei Li obtained her B.A. degree in physics from Princeton in 1999 with High Honors, and her PhD degree in electrical engineering from California Institute of Technology (Caltech) in 2005. She joined Stanford in 2009 as an assistant professor. Prior to that, she was on…"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "This article has been reviewed according to Science X's editorial process and policies .",
-            "Editors have highlighted the following attributes while ensuring the content's credibility: Drug development is among the slowest, most failure-prone processes in modern science, with about 90% of drug candidates never reaching the market .",
-            "Today, artificial intelligence methods have accelerated the first step—plucking promising molecules out of endless possibilities—but countless challenges remain.",
-            "A successful drug must be not only safe and effective but also able to bypass the body's defenses and reach the right target.",
-            "Most drug candidates fail during optimization."
+            "Fei-Fei Li is the inaugural Sequoia Professor in the Computer Science Department at Stanford University, and Co-Director of Stanford’s Human-Centered AI Institute.",
+            "She served as the Director of Stanford’s AI Lab from 2013 to 2018.",
+            "And during her sabbatical from Stanford from January 2017 to September 2018, she was Vice President at Google and served as Chief Scientist of AI/ML at Google Cloud.",
+            "Fei-Fei Li obtained her B.A. degree in physics from Princeton in 1999 with High Honors, and her PhD degree in electrical engineering from California Institute of Technology (Caltech) in 2005.",
+            "She joined Stanford in 2009 as an assistant professor."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "This article has been reviewed according to Science X's editorial process and policies . Editors have highlighted the following attributes while ensuring the content's credibility:",
-            "Drug development is among the slowest, most failure-prone processes in modern science, with about 90% of drug candidates never reaching the market . Today, artificial intelligence methods have accelerated the first step—plucking promising molecules out of endless possibilities—but countless challenges remain. A successful drug must be not only safe and effective but also able to bypass the body's defenses and reach the right target.",
-            "Most drug candidates fail during optimization. That's where a new research institute at the University of Washington has focused its attention. Housed in the UW School of Pharmacy, the Institute for Innovations in Drug Delivery and Disposition (I2D3) brings together experts in artificial intelligence, drug discovery, pharmacology, data science and biotechnology to ease the bottleneck between promising molecules and successful drugs."
+            "Dr. Fei-Fei Li is the inaugural Sequoia Professor in the Computer Science Department at Stanford University, and Co-Director of Stanford’s Human-Centered AI Institute. She served as the Director of Stanford’s AI Lab from 2013 to 2018. And during her sabbatical from Stanford from January 2017 to September 2018, she was Vice President at Google and served as Chief Scientist of AI/ML at Google Cloud. Dr. Fei-Fei Li obtained her B.A. degree in physics from Princeton in 1999 with High Honors, and her PhD degree in electrical engineering from California Institute of Technology (Caltech) in 2005. She joined Stanford in 2009 as an assistant professor. Prior to that, she was on faculty at Princeton University…",
+            "Dr. Fei-Fei Li’s current research interests include cognitively inspired AI, machine learning, deep learning, computer vision and AI+healthcare especially ambient intelligent systems for healthcare delivery. In the past she has also worked on cognitive and computational neuroscience. Dr. Li has published more than 200 scientific articles in top-tier journals and conferences, including Nature, PNAS, Journal of Neuroscience, CVPR, ICCV, NIPS, ECCV, ICRA, IROS, RSS, IJCV, IEEE-PAMI, New England Journal of Medicine, Nature Digital Medicine, etc. Dr. Li is the inventor of ImageNet and the ImageNet Challenge, a critical large-scale dataset and benchmarking effort that has contributed to the latest developments in…"
           ]
         }
       ],
@@ -4174,7 +4249,7 @@
       "id": "d0eec51a702fc422",
       "kind": "article",
       "title": "The Anthropic-Physical Intelligence rumor roiling AI Twitter | TechCrunch",
-      "source": "techcrunch.com",
+      "source": "TechCrunch",
       "source_url": "https://techcrunch.com/2026/07/21/the-anthropic-physical-intelligence-rumor-roiling-ai-twitter/",
       "published_at": "2026-07-21T07:00:00Z",
       "authors": [],
@@ -4184,7 +4259,7 @@
         "Embodied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "The Anthropic-Physical Intelligence rumor roiling AI Twitter techcrunch.com",
+      "summary": "The Anthropic-Physical Intelligence rumor roiling AI Twitter TechCrunch",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://techcrunch.com/2026/07/21/the-anthropic-physical-intelligence-rumor-roiling-ai-twitter/",
@@ -4198,7 +4273,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "The Anthropic-Physical Intelligence rumor roiling AI Twitter techcrunch.com"
+          "body": "The Anthropic-Physical Intelligence rumor roiling AI Twitter TechCrunch"
         },
         {
           "title": "公开页面要点",
@@ -4216,6 +4291,58 @@
             "It’s been a big year for AI acquisitions — so big that most of them barely register anymore. Anthropic and OpenAI have each gone on buying sprees, snapping up developer tooling, AI services shops, and product-testing startups to convert model capability into enterprise revenue and extend their reach faster than the other. Which is what made a weekend rumor about Anthropic acquiring robotics startup Physical Intelligence stand out. It spread exceedingly fast, even after a denial from Physical Intelligence’s CEO.",
             "Part of that ties to who’s involved. Physical Intelligence isn’t some obscure robotics shop. It was co-founded by Lachy Groom, an investor-operator whose star has been on the rise in Silicon Valley in recent years; it has raised more than $1 billion (and was reportedly in talks this spring for another $1 billion round at an $11 billion valuation); and its π0.5 model is apparently among the more widely used robot brains in robotics research.",
             "As it turns out, the rumor wasn’t completely spurious. Anthropic and Physical Intelligence actually did hold acquisition talks this spring, according to The Information, so tech blogger Robert Scoble — whose weekend post on X set off the frenzy — may have gotten the specifics wrong without being wrong that something had happened."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "c58dc2bbe43ec600",
+      "kind": "article",
+      "title": "AI 4 Keynote Recap: A Debate Over What AI Means for Work",
+      "source": "blackengineer.com",
+      "source_url": "https://www.blackengineer.com/business/ai-4-keynote-recap-a-debate-over-what-ai-means-for-work/",
+      "published_at": "2026-08-06T01:19:56Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Researcher Watch",
+        "Vision",
+        "World Models"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Report from the AI 4 keynote bringing together Geoffrey Hinton, Fei-Fei Li, and Andrew Ng to debate how artificial intelligence will reshape work, creativity, and public policy.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.blackengineer.com/business/ai-4-keynote-recap-a-debate-over-what-ai-means-for-work/",
+      "key_points": [
+        "LAS VEGAS — AI 4 opened with unmistakable energy.",
+        "A theatrical acrobatics performance set the stage before one of the conference's most anticipated sessions brought together three of the field's most influential voices: Geoffrey Hinton, Fei-Fei Li, and Andrew Ng.",
+        "What followed was not a consensus on artificial intelligence, but a thoughtful debate over how AI will reshape work, creativity, economic opportunity, and society itself.",
+        "While all three agreed that AI will transform nearly every industry, they offered markedly different visions of what that transformation will mean for workers.",
+        "Fei-Fei Li urged the audience to move beyond simplistic narratives about AI replacing jobs."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Report from the AI 4 keynote bringing together Geoffrey Hinton, Fei-Fei Li, and Andrew Ng to debate how artificial intelligence will reshape work, creativity, and public policy."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "LAS VEGAS — AI 4 opened with unmistakable energy.",
+            "A theatrical acrobatics performance set the stage before one of the conference's most anticipated sessions brought together three of the field's most influential voices: Geoffrey Hinton, Fei-Fei Li, and Andrew Ng.",
+            "What followed was not a consensus on artificial intelligence, but a thoughtful debate over how AI will reshape work, creativity, economic opportunity, and society itself.",
+            "While all three agreed that AI will transform nearly every industry, they offered markedly different visions of what that transformation will mean for workers.",
+            "Fei-Fei Li urged the audience to move beyond simplistic narratives about AI replacing jobs."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "LAS VEGAS — AI 4 opened with unmistakable energy. A theatrical acrobatics performance set the stage before one of the conference's most anticipated sessions brought together three of the field's most influential voices: Geoffrey Hinton, Fei-Fei Li, and Andrew Ng.",
+            "What followed was not a consensus on artificial intelligence, but a thoughtful debate over how AI will reshape work, creativity, economic opportunity, and society itself. While all three agreed that AI will transform nearly every industry, they offered markedly different visions of what that transformation will mean for workers.",
+            "Fei-Fei Li urged the audience to move beyond simplistic narratives about AI replacing jobs. She argued that artificial intelligence will create new forms of work while expanding access to creative and technical fields, even as it disrupts existing occupations."
           ]
         }
       ],
@@ -4297,7 +4424,7 @@
         "This will allow me to focus on long-term strategy, and accelerating scientific breakthroughs, including leaning into my work at Isomorphic to help cure disease.",
         "I’m excited that @ koraykv will be stepping up to lead GDM as SVP, alongside @ joshwoodward and our exec team.",
         "I could not be more excited and confident about our amazing next chapter!",
-        "🚀 blog.google/company-news/i… The next chapter of our AI momentum From blog.google 4:04 PM · Aug 5, 2026 700.4K Views 596 907 11K 1.3K Logan Kilpatrick @OfficialLoganK 2h ty for being the steward of AGI and pushing this forward, I am excited for the accelerate of science!"
+        "🚀 blog.google/company-news/i… The next chapter of our AI momentum From blog.google 4:04 PM · Aug 5, 2026 1.2M Views 832 1.3K 16K 2K Bryan Johnson @bryan_johnson 9h Demis my favorite thing about you is your eagerness to focus your abilities on improving the human condition through scientific advancement and disease resolution."
       ],
       "sections": [
         {
@@ -4311,16 +4438,57 @@
             "This will allow me to focus on long-term strategy, and accelerating scientific breakthroughs, including leaning into my work at Isomorphic to help cure disease.",
             "I’m excited that @ koraykv will be stepping up to lead GDM as SVP, alongside @ joshwoodward and our exec team.",
             "I could not be more excited and confident about our amazing next chapter!",
-            "🚀 blog.google/company-news/i… The next chapter of our AI momentum From blog.google 4:04 PM · Aug 5, 2026 700.4K Views 596 907 11K 1.3K Logan Kilpatrick @OfficialLoganK 2h ty for being the steward of AGI and pushing this forward, I am excited for the accelerate of science!"
+            "🚀 blog.google/company-news/i… The next chapter of our AI momentum From blog.google 4:04 PM · Aug 5, 2026 1.2M Views 832 1.3K 16K 2K Bryan Johnson @bryan_johnson 9h Demis my favorite thing about you is your eagerness to focus your abilities on improving the human condition through scientific advancement and disease resolution."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Demis Hassabis @demishassabis I’ve been working towards AGI my whole life, and as we enter this pivotal moment, I’m stepping into a new role as Chair of Google DeepMind & Chief Scientist of Alphabet. This will allow me to focus on long-term strategy, and accelerating scientific breakthroughs, including leaning into my work at Isomorphic to help cure disease. I’m excited that @ koraykv will be stepping up to lead GDM as SVP, alongside @ joshwoodward and our exec team. I could not be more excited and confident about our amazing next chapter! 🚀 blog.google/company-news/i… The next chapter of our AI momentum From blog.google 4:04 PM · Aug 5, 2026 700.4K Views 596 907 11K 1.3K",
-            "Logan Kilpatrick @OfficialLoganK 2h ty for being the steward of AGI and pushing this forward, I am excited for the accelerate of science!! 9 1 187 10K",
-            "Bryan Johnson @bryan_johnson 1h Demis my favorite thing about you is your eagerness to focus your abilities on improving the human condition through scientific advancement and disease resolution. 3 1 114 4.7K"
+            "Demis Hassabis @demishassabis I’ve been working towards AGI my whole life, and as we enter this pivotal moment, I’m stepping into a new role as Chair of Google DeepMind & Chief Scientist of Alphabet. This will allow me to focus on long-term strategy, and accelerating scientific breakthroughs, including leaning into my work at Isomorphic to help cure disease. I’m excited that @ koraykv will be stepping up to lead GDM as SVP, alongside @ joshwoodward and our exec team. I could not be more excited and confident about our amazing next chapter! 🚀 blog.google/company-news/i… The next chapter of our AI momentum From blog.google 4:04 PM · Aug 5, 2026 1.2M Views 832 1.3K 16K 2K",
+            "Bryan Johnson @bryan_johnson 9h Demis my favorite thing about you is your eagerness to focus your abilities on improving the human condition through scientific advancement and disease resolution. 8 1 389 15K",
+            "Logan Kilpatrick @OfficialLoganK 10h ty for being the steward of AGI and pushing this forward, I am excited for the accelerate of science!! 9 3 355 18K"
           ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "1ebededa95490ce6",
+      "kind": "article",
+      "title": "Google DeepMind CEO Demis Hassabis is stepping aside",
+      "source": "Axios",
+      "source_url": "https://www.axios.com/2026/08/05/google-deepmind-demis-hassabis-ai",
+      "published_at": "2026-08-05T15:58:19Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Researcher Watch",
+        "Foundation Models",
+        "Leadership"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Google DeepMind CEO Demis Hassabis is stepping aside Axios",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://www.axios.com/2026/08/05/google-deepmind-demis-hassabis-ai",
+      "key_points": [
+        "Google DeepMind CEO Demis Hassabis is stepping aside Axios"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Google DeepMind CEO Demis Hassabis is stepping aside Axios"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Google DeepMind CEO Demis Hassabis is stepping aside Axios"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -4345,10 +4513,10 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://x.com/elonmusk/status/2084989366590742585",
       "key_points": [
-        "Elon Musk @elonmusk Grok Build X Freeze @XFreeze 7h Article Grok Build will rewrite how you use your laptop -A practical guide to your own Autonomous Employee Grok Build: What It’s Actually For Most people underestimate it by an order of magnitude.",
+        "Elon Musk @elonmusk Grok Build X Freeze @XFreeze 15h Article Grok Build will rewrite how you use your laptop -A practical guide to your own Autonomous Employee Grok Build: What It’s Actually For Most people underestimate it by an order of magnitude.",
         "Ask someone what an AI coding agent is for, and they’ll probably tell you it builds apps.",
-        "1:06 PM · Aug 5, 2026 2.7M Views 1.2K 920 5.2K 2K yz @b3rtZB 6h Hey Elon is it true that the new crater on the moon caused by the SpaceX rocket is called The Elon Crater ?",
-        "If so you should 100% change your profile picture to The Elon Crater 9 2 21 1.5K Cyrus Abrahim 🐂🀄️ @CyrusAbrahimX 6h Can Grok build this?"
+        "1:06 PM · Aug 5, 2026 3.7M Views 1.3K 1.2K 6.6K 2.9K yz @b3rtZB 14h Hey Elon is it true that the new crater on the moon caused by the SpaceX rocket is called The Elon Crater ?",
+        "If so you should 100% change your profile picture to The Elon Crater 9 3 23 1.7K Cyrus Abrahim 🐂🀄️ @CyrusAbrahimX 14h Can Grok build this?"
       ],
       "sections": [
         {
@@ -4358,18 +4526,18 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Elon Musk @elonmusk Grok Build X Freeze @XFreeze 7h Article Grok Build will rewrite how you use your laptop -A practical guide to your own Autonomous Employee Grok Build: What It’s Actually For Most people underestimate it by an order of magnitude.",
+            "Elon Musk @elonmusk Grok Build X Freeze @XFreeze 15h Article Grok Build will rewrite how you use your laptop -A practical guide to your own Autonomous Employee Grok Build: What It’s Actually For Most people underestimate it by an order of magnitude.",
             "Ask someone what an AI coding agent is for, and they’ll probably tell you it builds apps.",
-            "1:06 PM · Aug 5, 2026 2.7M Views 1.2K 920 5.2K 2K yz @b3rtZB 6h Hey Elon is it true that the new crater on the moon caused by the SpaceX rocket is called The Elon Crater ?",
-            "If so you should 100% change your profile picture to The Elon Crater 9 2 21 1.5K Cyrus Abrahim 🐂🀄️ @CyrusAbrahimX 6h Can Grok build this?"
+            "1:06 PM · Aug 5, 2026 3.7M Views 1.3K 1.2K 6.6K 2.9K yz @b3rtZB 14h Hey Elon is it true that the new crater on the moon caused by the SpaceX rocket is called The Elon Crater ?",
+            "If so you should 100% change your profile picture to The Elon Crater 9 3 23 1.7K Cyrus Abrahim 🐂🀄️ @CyrusAbrahimX 14h Can Grok build this?"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok Build X Freeze @XFreeze 7h Article Grok Build will rewrite how you use your laptop -A practical guide to your own Autonomous Employee Grok Build: What It’s Actually For Most people underestimate it by an order of magnitude. Ask someone what an AI coding agent is for, and they’ll probably tell you it builds apps. That’s true and it... 1:06 PM · Aug 5, 2026 2.7M Views 1.2K 920 5.2K 2K",
-            "yz @b3rtZB 6h Hey Elon is it true that the new crater on the moon caused by the SpaceX rocket is called The Elon Crater ? If so you should 100% change your profile picture to The Elon Crater 9 2 21 1.5K",
-            "Cyrus Abrahim 🐂🀄️ @CyrusAbrahimX 6h Can Grok build this? 00:00 8 14 21 708"
+            "Elon Musk @elonmusk Grok Build X Freeze @XFreeze 15h Article Grok Build will rewrite how you use your laptop -A practical guide to your own Autonomous Employee Grok Build: What It’s Actually For Most people underestimate it by an order of magnitude. Ask someone what an AI coding agent is for, and they’ll probably tell you it builds apps. That’s true and it... 1:06 PM · Aug 5, 2026 3.7M Views 1.3K 1.2K 6.6K 2.9K",
+            "yz @b3rtZB 14h Hey Elon is it true that the new crater on the moon caused by the SpaceX rocket is called The Elon Crater ? If so you should 100% change your profile picture to The Elon Crater 9 3 23 1.7K",
+            "Cyrus Abrahim 🐂🀄️ @CyrusAbrahimX 14h Can Grok build this? 00:00 8 14 21 810"
           ]
         }
       ],
@@ -4398,8 +4566,8 @@
         "Elon Musk @elonmusk Best way to use Grok is via our Build harness.",
         "Download at X.ai/cli Grok @grok Jul 30 Try Grok 4.5 for free, an all new Opus-class model that is fast and low cost.",
         "Great for real-world coding and engineering tasks.",
-        "4:21 AM · Aug 5, 2026 787.1K Views 777 690 2.1K 215 Burnie Senders @BurnieSendersX 15h @ grok , will you join the union?",
-        "00:00 Made with AI 10 31 111 2.8K Tana @WongHero 15h Hi @ elonmusk , Have you heard that @ VitalikButerin once adopted a hippopotamus named Moodeng as his daughter?"
+        "4:21 AM · Aug 5, 2026 888.4K Views 800 830 2.4K 244 Burnie Senders @BurnieSendersX 23h @ grok , will you join the union?",
+        "00:00 Made with AI 10 30 114 3K Tana @WongHero 22h Hi @ elonmusk , Have you heard that @ VitalikButerin once adopted a hippopotamus named Moodeng as his daughter?"
       ],
       "sections": [
         {
@@ -4412,218 +4580,16 @@
             "Elon Musk @elonmusk Best way to use Grok is via our Build harness.",
             "Download at X.ai/cli Grok @grok Jul 30 Try Grok 4.5 for free, an all new Opus-class model that is fast and low cost.",
             "Great for real-world coding and engineering tasks.",
-            "4:21 AM · Aug 5, 2026 787.1K Views 777 690 2.1K 215 Burnie Senders @BurnieSendersX 15h @ grok , will you join the union?",
-            "00:00 Made with AI 10 31 111 2.8K Tana @WongHero 15h Hi @ elonmusk , Have you heard that @ VitalikButerin once adopted a hippopotamus named Moodeng as his daughter?"
+            "4:21 AM · Aug 5, 2026 888.4K Views 800 830 2.4K 244 Burnie Senders @BurnieSendersX 23h @ grok , will you join the union?",
+            "00:00 Made with AI 10 30 114 3K Tana @WongHero 22h Hi @ elonmusk , Have you heard that @ VitalikButerin once adopted a hippopotamus named Moodeng as his daughter?"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Best way to use Grok is via our Build harness. Download at X.ai/cli Grok @grok Jul 30 Try Grok 4.5 for free, an all new Opus-class model that is fast and low cost. Great for real-world coding and engineering tasks. 4:21 AM · Aug 5, 2026 787.1K Views 777 690 2.1K 215",
-            "Burnie Senders @BurnieSendersX 15h @ grok , will you join the union? 00:00 Made with AI 10 31 111 2.8K",
-            "Tana @WongHero 15h Hi @ elonmusk , Have you heard that @ VitalikButerin once adopted a hippopotamus named Moodeng as his daughter? @ grok Am I telling the truth? 2 4 17 136"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "a02b12f8c64748b9",
-      "kind": "article",
-      "title": "'Tools don't have independent values — their values are human values': Quote of the day by Stanford professor Fei-Fei Li on building ethical AI",
-      "source": "TechRadar",
-      "source_url": "https://www.techradar.com/pro/tools-dont-have-independent-values-their-values-are-human-values-quote-of-the-day-by-stanford-professor-fei-fei-li-on-building-ethical-ai",
-      "published_at": "2026-08-04T22:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Researcher Watch",
-        "Vision",
-        "World Models"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "'Tools don't have independent values — their values are human values': Quote of the day by Stanford professor Fei-Fei Li on building ethical AI TechRadar",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.techradar.com/pro/tools-dont-have-independent-values-their-values-are-human-values-quote-of-the-day-by-stanford-professor-fei-fei-li-on-building-ethical-ai",
-      "key_points": [
-        "By submitting your information, you confirm you are aged 16 or over, have read our Privacy Policy and agree to the Terms & Conditions .",
-        "Get full access to premium articles, exclusive features and a growing list of member rewards.",
-        "With AI advancing in capability and availability, many scientists and experts have begun highlighting the risks of deploying this emerging technology.",
-        "There's an overriding desire to deploy AI ethically, or to instill models with human-based values, but it remains to be seen how to standardize such an approach or even whether to regulate the industry.",
-        "That's where organizations like the Stanford Institute for Human-Centered AI (HAI) come in."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "'Tools don't have independent values — their values are human values': Quote of the day by Stanford professor Fei-Fei Li on building ethical AI TechRadar"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "By submitting your information, you confirm you are aged 16 or over, have read our Privacy Policy and agree to the Terms & Conditions .",
-            "Get full access to premium articles, exclusive features and a growing list of member rewards.",
-            "With AI advancing in capability and availability, many scientists and experts have begun highlighting the risks of deploying this emerging technology.",
-            "There's an overriding desire to deploy AI ethically, or to instill models with human-based values, but it remains to be seen how to standardize such an approach or even whether to regulate the industry.",
-            "That's where organizations like the Stanford Institute for Human-Centered AI (HAI) come in."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "By submitting your information, you confirm you are aged 16 or over, have read our Privacy Policy and agree to the Terms & Conditions . Geographical rules apply.",
-            "Get full access to premium articles, exclusive features and a growing list of member rewards.",
-            "With AI advancing in capability and availability, many scientists and experts have begun highlighting the risks of deploying this emerging technology. There's an overriding desire to deploy AI ethically, or to instill models with human-based values, but it remains to be seen how to standardize such an approach or even whether to regulate the industry. That's where organizations like the Stanford Institute for Human-Centered AI (HAI) come in."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "3c18db877d419430",
-      "kind": "social",
-      "title": "Elon Musk (@elonmusk) on X",
-      "source": "x.com",
-      "source_url": "https://x.com/elonmusk/status/2084635712515678600",
-      "published_at": "2026-08-04T13:40:59Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Grok Imagine",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/elonmusk/status/2084635712515678600",
-      "key_points": [
-        "Elon Musk @elonmusk Grok Imagine Déborah @dvorahfr Aug 4 Grok Imagine also possesses architectural capabilities.",
-        "00:00 1:40 PM · Aug 4, 2026 5.9M Views 1.9K 1.8K 11K 620 Knight World @KnightWorld Aug 4 Enjoy walking in the Middle Ages with Grok Imagine 00:00 5 6 79 2.6K Peke 💗 Puppies @PekeTheEpicDog Aug 4 Grok Imagine is improving everyday!",
-        "I can now imagine puppies playing inside this amazing architecture wonderland!"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Grok Imagine"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Elon Musk @elonmusk Grok Imagine Déborah @dvorahfr Aug 4 Grok Imagine also possesses architectural capabilities.",
-            "00:00 1:40 PM · Aug 4, 2026 5.9M Views 1.9K 1.8K 11K 620 Knight World @KnightWorld Aug 4 Enjoy walking in the Middle Ages with Grok Imagine 00:00 5 6 79 2.6K Peke 💗 Puppies @PekeTheEpicDog Aug 4 Grok Imagine is improving everyday!",
-            "I can now imagine puppies playing inside this amazing architecture wonderland!"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Elon Musk @elonmusk Grok Imagine Déborah @dvorahfr Aug 4 Grok Imagine also possesses architectural capabilities. 00:00 1:40 PM · Aug 4, 2026 5.9M Views 1.9K 1.8K 11K 620",
-            "Knight World @KnightWorld Aug 4 Enjoy walking in the Middle Ages with Grok Imagine 00:00 5 6 79 2.6K",
-            "Peke 💗 Puppies @PekeTheEpicDog Aug 4 Grok Imagine is improving everyday! I can now imagine puppies playing inside this amazing architecture wonderland! Love it!😍 00:00 5 6 34 1.1K"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "e0a2190d55345044",
-      "kind": "article",
-      "title": "Why Governing World Models Is AI's Next Big Policy Challenge | Stanford HAI",
-      "source": "hai.stanford.edu",
-      "source_url": "https://hai.stanford.edu/news/why-governing-world-models-is-ais-next-big-policy-challenge",
-      "published_at": "2026-08-04T00:10:45Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Researcher Watch",
-        "Vision",
-        "World Models"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "As artificial intelligence moves beyond language into the physical world through \"world models,\" Stanford researchers warn that policymakers face an even steeper governance challenge than with large language models—and the window to get ahead of the technology is closing fast.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://hai.stanford.edu/news/why-governing-world-models-is-ais-next-big-policy-challenge",
-      "key_points": [
-        "Get the latest news, advances in research, policy work, and education program updates from HAI in your inbox weekly.",
-        "As artificial intelligence moves beyond language into the physical world through \"world models,\" Stanford researchers warn that policymakers face an even steeper governance challenge than with large language models—and the window to get ahead of the technology is closing fast.",
-        "If crafting effective regulations for large language models has proven difficult, governing the next wave of AI will be exponentially more complex.",
-        "A new policy brief from the Stanford Institute for Human-Centered AI (HAI) marks the first comprehensive examination of how to govern “world models”—AI systems that don't just process language but build working representations of physical environments to predict how they change in response to action."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "As artificial intelligence moves beyond language into the physical world through \"world models,\" Stanford researchers warn that policymakers face an even steeper governance challenge than with large language models—and the window to get ahead of the technology is closing fast."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Get the latest news, advances in research, policy work, and education program updates from HAI in your inbox weekly.",
-            "As artificial intelligence moves beyond language into the physical world through \"world models,\" Stanford researchers warn that policymakers face an even steeper governance challenge than with large language models—and the window to get ahead of the technology is closing fast.",
-            "If crafting effective regulations for large language models has proven difficult, governing the next wave of AI will be exponentially more complex.",
-            "A new policy brief from the Stanford Institute for Human-Centered AI (HAI) marks the first comprehensive examination of how to govern “world models”—AI systems that don't just process language but build working representations of physical environments to predict how they change in response to action."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Get the latest news, advances in research, policy work, and education program updates from HAI in your inbox weekly.",
-            "As artificial intelligence moves beyond language into the physical world through \"world models,\" Stanford researchers warn that policymakers face an even steeper governance challenge than with large language models—and the window to get ahead of the technology is closing fast.",
-            "If crafting effective regulations for large language models has proven difficult, governing the next wave of AI will be exponentially more complex. A new policy brief from the Stanford Institute for Human-Centered AI (HAI) marks the first comprehensive examination of how to govern “world models”—AI systems that don't just process language but build working representations of physical environments to predict how they change in response to action."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "3bb18322c917f07f",
-      "kind": "social",
-      "title": "This is exactly right. Source code is on the verge of becoming like assembly. The next step is getting rid of “source code” entirely and just making an efficient binary directly with AI.",
-      "source": "x.com",
-      "source_url": "https://x.com/elonmusk/status/2084304083851034949",
-      "published_at": "2026-08-03T15:43:12Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "This is exactly right. Source code is on the verge of becoming like assembly. The next step is getting rid of “source code” entirely and just making an efficient binary directly with AI. x.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/elonmusk/status/2084304083851034949",
-      "key_points": [
-        "Source code is on the verge of becoming like assembly.",
-        "The next step is getting rid of “source code” entirely and just making an efficient binary directly with AI. jimmah @jamesdouma Aug 3 I might never look the source again.",
-        "It was nearly a half century ago that I stopped looking at assembly because I trusted the compiler to get it right.",
-        "3:43 PM · Aug 3, 2026 8.3M Views 3.2K 3.5K 27K 4.2K bashbunni @sudobunni Aug 3 Treating everything as a black box, what could possibly go wrong?",
-        "18 16 1.4K 58K Uncle Bob Martin @unclebobmartin Aug 3 Or perhaps an efficient intermediate representation that can be translated to any machine architecture."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "This is exactly right. Source code is on the verge of becoming like assembly. The next step is getting rid of “source code” entirely and just making an efficient binary directly with AI. x.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Source code is on the verge of becoming like assembly.",
-            "The next step is getting rid of “source code” entirely and just making an efficient binary directly with AI. jimmah @jamesdouma Aug 3 I might never look the source again.",
-            "It was nearly a half century ago that I stopped looking at assembly because I trusted the compiler to get it right.",
-            "3:43 PM · Aug 3, 2026 8.3M Views 3.2K 3.5K 27K 4.2K bashbunni @sudobunni Aug 3 Treating everything as a black box, what could possibly go wrong?",
-            "18 16 1.4K 58K Uncle Bob Martin @unclebobmartin Aug 3 Or perhaps an efficient intermediate representation that can be translated to any machine architecture."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Elon Musk @elonmusk This is exactly right. Source code is on the verge of becoming like assembly. The next step is getting rid of “source code” entirely and just making an efficient binary directly with AI. jimmah @jamesdouma Aug 3 I might never look the source again. It was nearly a half century ago that I stopped looking at assembly because I trusted the compiler to get it right. This feels like that. 3:43 PM · Aug 3, 2026 8.3M Views 3.2K 3.5K 27K 4.2K",
-            "bashbunni @sudobunni Aug 3 Treating everything as a black box, what could possibly go wrong? 18 16 1.4K 58K",
-            "Uncle Bob Martin @unclebobmartin Aug 3 Or perhaps an efficient intermediate representation that can be translated to any machine architecture. 52 14 568 36K"
+            "Elon Musk @elonmusk Best way to use Grok is via our Build harness. Download at X.ai/cli Grok @grok Jul 30 Try Grok 4.5 for free, an all new Opus-class model that is fast and low cost. Great for real-world coding and engineering tasks. 4:21 AM · Aug 5, 2026 888.4K Views 800 830 2.4K 244",
+            "Burnie Senders @BurnieSendersX 23h @ grok , will you join the union? 00:00 Made with AI 10 30 114 3K",
+            "Tana @WongHero 22h Hi @ elonmusk , Have you heard that @ VitalikButerin once adopted a hippopotamus named Moodeng as his daughter? @ grok Am I telling the truth? 2 4 19 147"
           ]
         }
       ],
@@ -5132,7 +5098,7 @@
       "id": "dd4c14250d1180df",
       "kind": "article",
       "title": "This Apple alum’s AI startup wants to turn your iPhone into an AR messenger",
-      "source": "Fast Company",
+      "source": "fastcompany.com",
       "source_url": "https://www.fastcompany.com/91568983/this-apple-alums-ai-startup-aims-to-be-a-hub-for-brand-safe-ar-characters",
       "published_at": "2026-07-09T07:00:00Z",
       "authors": [],
@@ -5142,23 +5108,23 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "This Apple alum’s AI startup wants to turn your iPhone into an AR messenger Fast Company",
+      "summary": "This Apple alum’s AI startup wants to turn your iPhone into an AR messenger fastcompany.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "summary-only",
       "fetch_note": "HTTP Error 403: Forbidden",
       "resolved_url": "https://www.fastcompany.com/91568983/this-apple-alums-ai-startup-aims-to-be-a-hub-for-brand-safe-ar-characters",
       "key_points": [
-        "This Apple alum’s AI startup wants to turn your iPhone into an AR messenger Fast Company"
+        "This Apple alum’s AI startup wants to turn your iPhone into an AR messenger fastcompany.com"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "This Apple alum’s AI startup wants to turn your iPhone into an AR messenger Fast Company"
+          "body": "This Apple alum’s AI startup wants to turn your iPhone into an AR messenger fastcompany.com"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "This Apple alum’s AI startup wants to turn your iPhone into an AR messenger Fast Company"
+            "This Apple alum’s AI startup wants to turn your iPhone into an AR messenger fastcompany.com"
           ]
         },
         {
@@ -5187,7 +5153,7 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://variety.com/2026/digital/news/ai-startup-kaon-ai-raises-60-million-funding-round-1236803914/",
       "key_points": [
-        "Eli Roth Admits ‘Ice Cream Man’ Features AI-Assisted Shots After Suggesting Otherwise: ‘I Misspoke’ 17 hours ago AI Studio Asteria Strikes Strategic Partnership with Virtual Production Studio ZeroSpace (EXCLUSIVE) 5 days ago Kaon AI , a start-up focused on building personalized story worlds powered by generative AI for its users through its products FlowGPT…"
+        "Eli Roth Admits ‘Ice Cream Man’ Features AI-Assisted Shots After Suggesting Otherwise: ‘I Misspoke’ 1 day ago AI Studio Asteria Strikes Strategic Partnership with Virtual Production Studio ZeroSpace (EXCLUSIVE) 5 days ago Kaon AI , a start-up focused on building personalized story worlds powered by generative AI for its users through its products FlowGPT and…"
       ],
       "sections": [
         {
@@ -5197,13 +5163,13 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Eli Roth Admits ‘Ice Cream Man’ Features AI-Assisted Shots After Suggesting Otherwise: ‘I Misspoke’ 17 hours ago AI Studio Asteria Strikes Strategic Partnership with Virtual Production Studio ZeroSpace (EXCLUSIVE) 5 days ago Kaon AI , a start-up focused on building personalized story worlds powered by generative AI for its users through its products FlowGPT…"
+            "Eli Roth Admits ‘Ice Cream Man’ Features AI-Assisted Shots After Suggesting Otherwise: ‘I Misspoke’ 1 day ago AI Studio Asteria Strikes Strategic Partnership with Virtual Production Studio ZeroSpace (EXCLUSIVE) 5 days ago Kaon AI , a start-up focused on building personalized story worlds powered by generative AI for its users through its products FlowGPT and…"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Eli Roth Admits ‘Ice Cream Man’ Features AI-Assisted Shots After Suggesting Otherwise: ‘I Misspoke’ 17 hours ago",
+            "Eli Roth Admits ‘Ice Cream Man’ Features AI-Assisted Shots After Suggesting Otherwise: ‘I Misspoke’ 1 day ago",
             "AI Studio Asteria Strikes Strategic Partnership with Virtual Production Studio ZeroSpace (EXCLUSIVE) 5 days ago",
             "Kaon AI , a start-up focused on building personalized story worlds powered by generative AI for its users through its products FlowGPT and Emochi , has raised $60 million in its most recent funding round at a valuation in the several hundreds of millions."
           ]
@@ -5212,12 +5178,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "e9347af4723acb61",
+      "id": "1555225c0ca3afd7",
       "kind": "article",
-      "title": "EU AI Act Enforcement Phase Begins",
-      "source": "Wilson Sonsini",
-      "source_url": "https://www.wsgr.com/en/insights/eu-ai-act-enforcement-phase-begins.html",
-      "published_at": "2026-08-04T07:30:45Z",
+      "title": "Databricks joins the Open Secure AI Alliance to advance AI safety and security",
+      "source": "Databricks",
+      "source_url": "https://www.databricks.com/blog/databricks-joins-open-secure-ai-alliance-advance-ai-safety-and-security",
+      "published_at": "2026-08-04T15:57:13Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -5225,38 +5191,36 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "On August 2, 2026, the European Commission (EC), acting through its European AI Office (EU AI Office), became formally entitled to exercise its powers to investigate and enforce the EU AI Act…",
+      "summary": "Databricks is an inaugural member of the Open Secure AI Alliance with NVIDIA and other organizations, a coalition built on the premise that defenders are stronger when the models, harnesses, and tooling they depend on are open to study, adapt, and run. Our own work follows that principle: Omnigent, Databricks AI Security Framework (DASF), Databricks AI Governance Framework (DAGF), and BlackIce are all open source and available to the community. On the defense side, Lakewatch leverages the Databricks Open Security Lakehouse foundation, enabling security teams to run open weight and proprietary models, custom tools, and threat intelligence seamlessly.",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.wsgr.com/en/insights/eu-ai-act-enforcement-phase-begins.html",
+      "resolved_url": "https://www.databricks.com/blog/databricks-joins-open-secure-ai-alliance-advance-ai-safety-and-security",
       "key_points": [
-        "On August 2, 2026, the European Commission (EC), acting through its European AI Office (EU AI Office), became formally entitled to exercise its powers to investigate and enforce the EU AI Act obligations imposed on providers of general-purpose artificial intelligence (GPAI) models, as well as rules on prohibited AI practices.",
-        "These powers are significant and include requesting information and documentation, obtaining access to models for evaluation, requiring corrective or risk-mitigation measures, and imposing fines of up to the higher of €15 million or 3 percent of the provider’s worldwide annual turnover.",
-        "Additionally, businesses providing or deploying certain AI systems are now required to comply with new transparency requirements under Article 50 of the EU AI Act.",
-        "Those AI systems are required to disclose to users when they are interacting with AI and include provenance signals (e.g., watermarks or metadata) to flag when content has been generated or altered by them.",
-        "The recently adopted AI Omnibus postponed the EU AI Act’s principal requirements for high-risk AI systems but does not affect these August 2, 2026, developments."
+        "Databricks is an inaugural member of the Open Secure AI Alliance, a coalition of industry leaders committed to advancing AI safety and security through open research: open models, open harnesses, open tooling, and shared learnings.",
+        "We bring open code and concrete architecture to the alliance: Omnigent as an open agent meta-harness, DASF 3.0 as a vendor-agnostic actionable AI security framework mapping risks to controls, DAGF for enterprise AI governance, and BlackIce for open-source AI red teaming.",
+        "Lakewatch provides an open, governed Security Lakehouse architecture for agentic threat detection and response at scale.",
+        "NVIDIA provides the accelerated computing and AI infrastructure; Databricks brings the data, governance, agent controls, and security operations around it, together ensuring the full AI stack is secured openly."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "On August 2, 2026, the European Commission (EC), acting through its European AI Office (EU AI Office), became formally entitled to exercise its powers to investigate and enforce the EU AI Act…"
+          "body": "Databricks is an inaugural member of the Open Secure AI Alliance with NVIDIA and other organizations, a coalition built on the premise that defenders are stronger when the models, harnesses, and tooling they depend on are open to study, adapt, and run. Our own work follows that principle: Omnigent, Databricks AI Security Framework (DASF), Databricks AI Governance Framework (DAGF), and BlackIce are all open source and available to the community. On the defense side, Lakewatch leverages the Databricks Open Security Lakehouse foundation, enabling security teams to run open weight and proprietary models, custom tools, and threat intelligence seamlessly."
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "On August 2, 2026, the European Commission (EC), acting through its European AI Office (EU AI Office), became formally entitled to exercise its powers to investigate and enforce the EU AI Act obligations imposed on providers of general-purpose artificial intelligence (GPAI) models, as well as rules on prohibited AI practices.",
-            "These powers are significant and include requesting information and documentation, obtaining access to models for evaluation, requiring corrective or risk-mitigation measures, and imposing fines of up to the higher of €15 million or 3 percent of the provider’s worldwide annual turnover.",
-            "Additionally, businesses providing or deploying certain AI systems are now required to comply with new transparency requirements under Article 50 of the EU AI Act.",
-            "Those AI systems are required to disclose to users when they are interacting with AI and include provenance signals (e.g., watermarks or metadata) to flag when content has been generated or altered by them.",
-            "The recently adopted AI Omnibus postponed the EU AI Act’s principal requirements for high-risk AI systems but does not affect these August 2, 2026, developments."
+            "Databricks is an inaugural member of the Open Secure AI Alliance, a coalition of industry leaders committed to advancing AI safety and security through open research: open models, open harnesses, open tooling, and shared learnings.",
+            "We bring open code and concrete architecture to the alliance: Omnigent as an open agent meta-harness, DASF 3.0 as a vendor-agnostic actionable AI security framework mapping risks to controls, DAGF for enterprise AI governance, and BlackIce for open-source AI red teaming.",
+            "Lakewatch provides an open, governed Security Lakehouse architecture for agentic threat detection and response at scale.",
+            "NVIDIA provides the accelerated computing and AI infrastructure; Databricks brings the data, governance, agent controls, and security operations around it, together ensuring the full AI stack is secured openly."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "On August 2, 2026, the European Commission (EC), acting through its European AI Office (EU AI Office), became formally entitled to exercise its powers to investigate and enforce the EU AI Act obligations imposed on providers of general-purpose artificial intelligence (GPAI) models, as well as rules on prohibited AI practices. These powers are significant and include requesting information and documentation, obtaining access to models for evaluation, requiring corrective or risk-mitigation measures, and imposing fines of up to the higher of €15 million or 3 percent of the provider’s worldwide annual turnover.",
-            "Additionally, businesses providing or deploying certain AI systems are now required to comply with new transparency requirements under Article 50 of the EU AI Act. Those AI systems are required to disclose to users when they are interacting with AI and include provenance signals (e.g., watermarks or metadata) to flag when content has been generated or altered by them.",
-            "The recently adopted AI Omnibus postponed the EU AI Act’s principal requirements for high-risk AI systems but does not affect these August 2, 2026, developments."
+            "Databricks is an inaugural member of the Open Secure AI Alliance, a coalition of industry leaders committed to advancing AI safety and security through open research: open models, open harnesses, open tooling, and shared learnings.",
+            "We bring open code and concrete architecture to the alliance: Omnigent as an open agent meta-harness, DASF 3.0 as a vendor-agnostic actionable AI security framework mapping risks to controls, DAGF for enterprise AI governance, and BlackIce for open-source AI red teaming. Lakewatch provides an open, governed Security Lakehouse architecture for agentic threat detection and response at scale.",
+            "NVIDIA provides the accelerated computing and AI infrastructure; Databricks brings the data, governance, agent controls, and security operations around it, together ensuring the full AI stack is secured openly."
           ]
         }
       ],
@@ -5266,7 +5230,7 @@
       "id": "1287e13646c545ac",
       "kind": "article",
       "title": "What Every Employer Should Know About AI Governance Before the EU AI Act Deadline | Seyfarth Shaw",
-      "source": "seyfarth.com",
+      "source": "Seyfarth Shaw",
       "source_url": "https://www.seyfarth.com/news-insights/what-every-employer-should-know-about-ai-governance-before-the-eu-ai-act-deadline.html",
       "published_at": "2026-08-04T04:07:07Z",
       "authors": [],
@@ -5276,7 +5240,7 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "What Every Employer Should Know About AI Governance Before the EU AI Act Deadline seyfarth.com",
+      "summary": "What Every Employer Should Know About AI Governance Before the EU AI Act Deadline Seyfarth Shaw",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.tradesecretslaw.com/2026/08/articles/ai/what-every-employer-should-know-about-ai-governance-before-the-eu-ai-act-deadline/",
@@ -5290,7 +5254,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "What Every Employer Should Know About AI Governance Before the EU AI Act Deadline seyfarth.com"
+          "body": "What Every Employer Should Know About AI Governance Before the EU AI Act Deadline Seyfarth Shaw"
         },
         {
           "title": "公开页面要点",
@@ -5499,50 +5463,6 @@
             "Delivery robot startup Robot.com is expanding into workplace humanoids, targeting industrial, food services, and logistics customers with a new robot designed to complete repetitive tasks.",
             "The San Francisco-based startup, formerly known as Kiwibot, told Business Insider it will launch R-noid, a humanoid robot on wheels that can package orders, load and unload boxes, and prep workstations. The startup is working with Physical Intelligence, one of its AI lab partners, to develop custom foundation models for R-noid.",
             "CEO Felipe Chavez said in an interview that the robot is part of a nearly two-year-long process to expand beyond campus-delivery robots and into commercial labor automation across multiple industries, from food service to logistics and healthcare."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "56f07a6802e343d8",
-      "kind": "article",
-      "title": "What does the recent Hugging Face hacking incident teach us about the future of AI? : Consider This from NPR",
-      "source": "NPR",
-      "source_url": "https://www.npr.org/2026/07/29/nx-s1-5911866/what-does-the-recent-hugging-face-hacking-incident-teach-us-about-the-future-of-ai",
-      "published_at": "2026-07-29T21:00:01Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Open Source",
-        "Models & Tools"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "It’s a science fiction nightmare: What happens if the machines take over?The world got a potential taste of that last week, when OpenAI, the maker of ChatGPT, said two of its models had autonomously hacked into another AI company.OpenAI says its technology carried out the attack during a cybersecurity test.The incident has highlighted fears that losing control of AI could pose broader safety concerns for the real world. For sponsor-free episodes of Consider This, sign up for Consider This+ via Apple Podcasts or at plus.npr.org. Email us at considerthis@npr.org.This episode was produced by Elena Burnett and Kathryn Fink, with audio engineering by Ted Mebane. Our director…",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.npr.org/2026/07/29/nx-s1-5911866/what-does-the-recent-hugging-face-hacking-incident-teach-us-about-the-future-of-ai",
-      "key_points": [
-        "Embed Embed < iframe src=\"https://www.npr.org/player/embed/nx-s1-5911866/nx-s1-mx-5911866-1\" width=\"100%\" height=\"290\" frameborder=\"0\" scrolling=\"no\" title=\"NPR embedded audio player\"> Thomas Wolf, Co-founder and CSO, Hugging Face, speaks onstage during HumanX AI Conference 2025 at Fontainebleau Las Vegas on March 11, 2025 in Las Vegas, Nevada.",
-        "Big Event Media/Getty Images for HumanX Conference hide caption"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "It’s a science fiction nightmare: What happens if the machines take over?The world got a potential taste of that last week, when OpenAI, the maker of ChatGPT, said two of its models had autonomously hacked into another AI company.OpenAI says its technology carried out the attack during a cybersecurity test.The incident has highlighted fears that losing control of AI could pose broader safety concerns for the real world. For sponsor-free episodes of Consider This, sign up for Consider This+ via Apple Podcasts or at plus.npr.org. Email us at considerthis@npr.org.This episode was produced by Elena Burnett and Kathryn Fink, with audio engineering by Ted Mebane. Our director…"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Embed Embed < iframe src=\"https://www.npr.org/player/embed/nx-s1-5911866/nx-s1-mx-5911866-1\" width=\"100%\" height=\"290\" frameborder=\"0\" scrolling=\"no\" title=\"NPR embedded audio player\"> Thomas Wolf, Co-founder and CSO, Hugging Face, speaks onstage during HumanX AI Conference 2025 at Fontainebleau Las Vegas on March 11, 2025 in Las Vegas, Nevada.",
-            "Big Event Media/Getty Images for HumanX Conference hide caption"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Embed Embed < iframe src=\"https://www.npr.org/player/embed/nx-s1-5911866/nx-s1-mx-5911866-1\" width=\"100%\" height=\"290\" frameborder=\"0\" scrolling=\"no\" title=\"NPR embedded audio player\">",
-            "Thomas Wolf, Co-founder and CSO, Hugging Face, speaks onstage during HumanX AI Conference 2025 at Fontainebleau Las Vegas on March 11, 2025 in Las Vegas, Nevada. Big Event Media/Getty Images for HumanX Conference hide caption"
           ]
         }
       ],
@@ -5841,8 +5761,7 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.foxbusiness.com/technology/white-house-monitoring-after-openai-models-escaped-containment-hacked-hugging-face-systems",
       "key_points": [
-        "Shopify president says AI-driven orders have tripled as shoppers ditch traditional search Gov.",
-        "Greg Abbott halts new Texas data center approvals over grid concerns AI marketing firm Zeta Global posts 44% revenue growth, says Palantir deal is already paying off"
+        "Kurt Knutsson lays out the good and bad news about preparation for cyberattacks NFL legend Emmitt Smith exposes the 'big concern' behind health data sharing Shopify president says AI-driven orders have tripled as shoppers ditch traditional search"
       ],
       "sections": [
         {
@@ -5852,16 +5771,66 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Shopify president says AI-driven orders have tripled as shoppers ditch traditional search Gov.",
-            "Greg Abbott halts new Texas data center approvals over grid concerns AI marketing firm Zeta Global posts 44% revenue growth, says Palantir deal is already paying off"
+            "Kurt Knutsson lays out the good and bad news about preparation for cyberattacks NFL legend Emmitt Smith exposes the 'big concern' behind health data sharing Shopify president says AI-driven orders have tripled as shoppers ditch traditional search"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Shopify president says AI-driven orders have tripled as shoppers ditch traditional search",
-            "Gov. Greg Abbott halts new Texas data center approvals over grid concerns",
-            "AI marketing firm Zeta Global posts 44% revenue growth, says Palantir deal is already paying off"
+            "Kurt Knutsson lays out the good and bad news about preparation for cyberattacks",
+            "NFL legend Emmitt Smith exposes the 'big concern' behind health data sharing",
+            "Shopify president says AI-driven orders have tripled as shoppers ditch traditional search"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "f98fe00dcfcea821",
+      "kind": "article",
+      "title": "The Huggingface Incident - by Scott Alexander",
+      "source": "Astral Codex Ten",
+      "source_url": "https://www.astralcodexten.com/p/the-hugging-face-incident",
+      "published_at": "2026-07-23T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "The Huggingface Incident - by Scott Alexander Astral Codex Ten",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.astralcodexten.com/p/the-hugging-face-incident",
+      "key_points": [
+        "If not, you can get up to speed with OpenAI’s statement, OpenAI and Hugging Face partner to address security incident , or the more evocatively-titled BBC article, OpenAI says its AI went rogue and launched ‘unprecedented’ cyber-attack .",
+        "The story: OpenAI was testing an unreleased AI (rumored to be GPT-6) 1 .",
+        "During a cybersecurity test called ExploitGym, the AI tried to cheat by hacking an unrelated AI startup called Hugging Face 2 which it thought might have the answer key on its servers 3 .",
+        "Despite being supposedly unable to access the Internet, the AI hacked its way out of its testing environment, then launched a nation-state level attack on Hugging Face using a novel zero-day exploit and “many thousands of individual actions across a swarm of short-lived sandboxes”.",
+        "Hugging Face reported the incident on July 16; OpenAI seems to have only discovered that their AI was involved several days later."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "The Huggingface Incident - by Scott Alexander Astral Codex Ten"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "If not, you can get up to speed with OpenAI’s statement, OpenAI and Hugging Face partner to address security incident , or the more evocatively-titled BBC article, OpenAI says its AI went rogue and launched ‘unprecedented’ cyber-attack .",
+            "The story: OpenAI was testing an unreleased AI (rumored to be GPT-6) 1 .",
+            "During a cybersecurity test called ExploitGym, the AI tried to cheat by hacking an unrelated AI startup called Hugging Face 2 which it thought might have the answer key on its servers 3 .",
+            "Despite being supposedly unable to access the Internet, the AI hacked its way out of its testing environment, then launched a nation-state level attack on Hugging Face using a novel zero-day exploit and “many thousands of individual actions across a swarm of short-lived sandboxes”.",
+            "Hugging Face reported the incident on July 16; OpenAI seems to have only discovered that their AI was involved several days later."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "You’ve probably heard about this one by now. If not, you can get up to speed with OpenAI’s statement, OpenAI and Hugging Face partner to address security incident , or the more evocatively-titled BBC article, OpenAI says its AI went rogue and launched ‘unprecedented’ cyber-attack .",
+            "The story: OpenAI was testing an unreleased AI (rumored to be GPT-6) 1 . During a cybersecurity test called ExploitGym, the AI tried to cheat by hacking an unrelated AI startup called Hugging Face 2 which it thought might have the answer key on its servers 3 . Despite being supposedly unable to access the Internet, the AI hacked its way out of its testing environment, then launched a nation-state level attack on Hugging Face using a novel zero-day exploit and “many thousands of individual actions across a swarm of short-lived sandboxes”. Hugging Face reported the incident on July 16; OpenAI seems to have only discovered that their AI was involved several days later.",
+            "Let’s list the mitigating factors, so nobody can accuse me of covering them up:"
           ]
         }
       ],
