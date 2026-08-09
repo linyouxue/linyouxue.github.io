@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-09T13:14:51Z",
+  "generated_at": "2026-08-09T18:59:46Z",
   "record_count": 132,
   "records": [
     {
@@ -56,6 +56,41 @@
       "reading_minutes": 1
     },
     {
+      "id": "unit-distance-openai-20260520",
+      "kind": "paper",
+      "title": "OpenAI 模型推翻平面单位距离问题中的长期猜想",
+      "source": "OpenAI · Research",
+      "source_url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+      "published_at": "2026-05-20T08:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Unit Distance",
+        "Discrete Geometry",
+        "Verified Proof"
+      ],
+      "verification": "官方论文 · 外部数学家已检查",
+      "summary": "OpenAI 的通用推理模型找到一族新的点集构造，证明单位距离对数可以达到 n 的 1+δ 次方，从而推翻长期流行的 n 的 1+o(1) 上界猜想。证明已由外部数学家检查，并有公开证明 PDF 与多位数学家的伴随评论。",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/unit-distance-openai-20260520.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf",
+      "key_points": [
+        "Planar Point Sets with Many Unit Distances OpenAI Abstract For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets.",
+        "We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n.",
+        "This disproves the well-known unit distance conjecture from [ Erd46].",
+        "The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely.",
+        "After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets. We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n. This disproves the well-known unit distance conjecture from [ Erd46]. The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely. After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1. Golod–Shafarevich theory ensures existence of an inﬁnite such tower, even after a quotient step making the prescribed Frobenius classes trivial. A crucial property of the construction is that all resulting discriminants and class numbers are at most exponential in the extension degree. 1 Main Result For a ﬁnite set P ⊂ R2, let ν(P ) = # {{x,y } ⊂ P : |x −y|= 1} andν(n) = max |P |=nν(P ). The planar unit-distance problem goes back to Erdős [ Erd46], who conjectured that there should be an absolute constant C such that, for all suﬃciently large n, ν(n) ≤ n1+C/ log logn. (1) The same 1946 paper also introduced the distinct-distances problem, later resolved up to logarithmic factors by Guth–Katz [ GK15]. An elementary upper bound is ν(n) = O(n3/ 2): the Euclidean unit-distance graph is K2, 3-free, since two unit circles meet in at most two points, and the Kővári–Sós–Turán theorem applies [ KST54]. The best known upper bound ν(n) = O(n4/ 3) is due to Spencer–Szemerédi–Trotter [ SST84]; Székely later gave a short crossing-number proof of this incidence bound [ Sze97]. It is useful to compare this with the same question for other norms on R2, a direction studied systematically by Brass [ Bra96]. If the unit ball has a ﬂat segment, one can arrange quadratically many unit distances, so the interesting normed-plane analogues usually impose strict convexity or genericity. Székely’s crossing-number argument extends to strictly convex norms, again giving O(n4/ 3), and Valtr constructed a strictly convex norm for which this exponent is…"
+        }
+      ],
+      "reading_minutes": 32
+    },
+    {
       "id": "78da3e4d5d1f4de6",
       "kind": "article",
       "title": "Improving Fable 5 Safeguards",
@@ -105,41 +140,6 @@
         }
       ],
       "reading_minutes": 1
-    },
-    {
-      "id": "unit-distance-openai-20260520",
-      "kind": "paper",
-      "title": "OpenAI 模型推翻平面单位距离问题中的长期猜想",
-      "source": "OpenAI · Research",
-      "source_url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
-      "published_at": "2026-05-20T08:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Unit Distance",
-        "Discrete Geometry",
-        "Verified Proof"
-      ],
-      "verification": "官方论文 · 外部数学家已检查",
-      "summary": "OpenAI 的通用推理模型找到一族新的点集构造，证明单位距离对数可以达到 n 的 1+δ 次方，从而推翻长期流行的 n 的 1+o(1) 上界猜想。证明已由外部数学家检查，并有公开证明 PDF 与多位数学家的伴随评论。",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/unit-distance-openai-20260520.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf",
-      "key_points": [
-        "Planar Point Sets with Many Unit Distances OpenAI Abstract For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets.",
-        "We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n.",
-        "This disproves the well-known unit distance conjecture from [ Erd46].",
-        "The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely.",
-        "After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets. We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n. This disproves the well-known unit distance conjecture from [ Erd46]. The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely. After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1. Golod–Shafarevich theory ensures existence of an inﬁnite such tower, even after a quotient step making the prescribed Frobenius classes trivial. A crucial property of the construction is that all resulting discriminants and class numbers are at most exponential in the extension degree. 1 Main Result For a ﬁnite set P ⊂ R2, let ν(P ) = # {{x,y } ⊂ P : |x −y|= 1} andν(n) = max |P |=nν(P ). The planar unit-distance problem goes back to Erdős [ Erd46], who conjectured that there should be an absolute constant C such that, for all suﬃciently large n, ν(n) ≤ n1+C/ log logn. (1) The same 1946 paper also introduced the distinct-distances problem, later resolved up to logarithmic factors by Guth–Katz [ GK15]. An elementary upper bound is ν(n) = O(n3/ 2): the Euclidean unit-distance graph is K2, 3-free, since two unit circles meet in at most two points, and the Kővári–Sós–Turán theorem applies [ KST54]. The best known upper bound ν(n) = O(n4/ 3) is due to Spencer–Szemerédi–Trotter [ SST84]; Székely later gave a short crossing-number proof of this incidence bound [ Sze97]. It is useful to compare this with the same question for other norms on R2, a direction studied systematically by Brass [ Bra96]. If the unit ball has a ﬂat segment, one can arrange quadratically many unit distances, so the interesting normed-plane analogues usually impose strict convexity or genericity. Székely’s crossing-number argument extends to strictly convex norms, again giving O(n4/ 3), and Valtr constructed a strictly convex norm for which this exponent is…"
-        }
-      ],
-      "reading_minutes": 32
     },
     {
       "id": "kaiming-he-research-watch",
@@ -1184,7 +1184,7 @@
       "id": "76a1e404cd3e7543",
       "kind": "article",
       "title": "Artificial intelligence in drug discovery — what it is, where we stand and the path forward",
-      "source": "Nature",
+      "source": "nature.com",
       "source_url": "https://www.nature.com/articles/s41573-026-01496-2",
       "published_at": "2026-08-07T09:50:07Z",
       "authors": [],
@@ -1195,22 +1195,22 @@
         "Applied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Artificial intelligence in drug discovery — what it is, where we stand and the path forward Nature",
+      "summary": "Artificial intelligence in drug discovery — what it is, where we stand and the path forward nature.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "summary-only",
       "resolved_url": "https://www.nature.com/articles/s41573-026-01496-2",
       "key_points": [
-        "Artificial intelligence in drug discovery — what it is, where we stand and the path forward Nature"
+        "Artificial intelligence in drug discovery — what it is, where we stand and the path forward nature.com"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Artificial intelligence in drug discovery — what it is, where we stand and the path forward Nature"
+          "body": "Artificial intelligence in drug discovery — what it is, where we stand and the path forward nature.com"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Artificial intelligence in drug discovery — what it is, where we stand and the path forward Nature"
+            "Artificial intelligence in drug discovery — what it is, where we stand and the path forward nature.com"
           ]
         },
         {
@@ -1562,11 +1562,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "960dfc86205171e6",
+      "id": "dff581d6d6b62376",
       "kind": "article",
       "title": "DeepSeek 宣布要大幅涨价了",
       "source": "微信公众号 · 程序员小猿",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1786281268&ver=6894&signature=niFB6ZBYI*w9nc01kI0rFwf0Ylym8pLYwlc9Wp1W*xJ2UuXHdXf5JJIM5oMJSdqK7u7ZYV6AgoTNcR4ReSpukEudvSfiy3WrPSooVGZlqQrO4*bvUHL-h2Is6oW923uW&new=1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1786301956&ver=6894&signature=niFB6ZBYI*w9nc01kI0rFwf0Ylym8pLYwlc9Wp1W*xIx38zVtPzxRxLyhDjx2hKabXxOXXGPzbKYiTXSaGQAhH0ZayTOXNN-kynv88A4WGM2a0rqgo9qhJU1SVu*mOqy&new=1",
       "published_at": "2026-08-08T00:42:01Z",
       "authors": [],
       "venue": "",
@@ -1579,7 +1579,7 @@
       "summary": "AIPress(AI普瑞斯)8月6日消息, DeepSeek 在官网 发布 通知称,计划近期整体上调 DeepSeek API服务的定价,预计涨幅较大.具体方...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HEN9eGqj8VF_BB0k_GV10fDpraroOWySyFUPZ4ll&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1786281268%26ver%3D6894%26signature%3DniFB6ZBYI%2Aw9nc01kI0rFwf0Ylym8pLYwlc9Wp1W%2AxJ2UuXHdXf5JJIM5oMJSdqK7u7ZYV6AgoTNcR4ReSpukEudvSfiy3WrPSooVGZlqQrO4%2AbvUHL-h2Is6oW923uW%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HBPOeGqjfTfChkgWt5VGzxvfxzQPYxFsmskuxXo4&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1786301956%26ver%3D6894%26signature%3DniFB6ZBYI%2Aw9nc01kI0rFwf0Ylym8pLYwlc9Wp1W%2AxIx38zVtPzxRxLyhDjx2hKabXxOXXGPzbKYiTXSaGQAhH0ZayTOXNN-kynv88A4WGM2a0rqgo9qhJU1SVu%2AmOqy%26new%3D1",
       "key_points": [
         "AIPress(AI普瑞斯)8月6日消息, DeepSeek 在官网 发布 通知称,计划近期整体上调 DeepSeek API服务的定价,预计涨幅较大.具体方..."
       ],
@@ -1602,11 +1602,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "d84ebad622c9b158",
+      "id": "38dc19d39338647e",
       "kind": "article",
       "title": "DeepSeek 宣布:将大幅涨价!",
       "source": "微信公众号 · 临沂新闻",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1786281268&ver=6894&signature=6yw3wb4CT5CRU1fva2f-zDkHVh2QyEZ3PojWWfRQ25UJ7FEzAB*ooio4TGPMDs2uuy3bRZFl44FFwB7TOjPIPtyf3JE44g9ZyrNMMr0HBQ2*WRCmOkof7rSZoOSqy7eJ&new=1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1786301956&ver=6894&signature=6yw3wb4CT5CRU1fva2f-zDkHVh2QyEZ3PojWWfRQ25WULxF-WCgy8BO3npL*intrg4nsc3r4Q5V0bBzSZLNv2ygxrM4zxEjdXxlmgBCAYiOenXJo3chzNWT*wFC8XFuv&new=1",
       "published_at": "2026-08-07T07:21:06Z",
       "authors": [],
       "venue": "",
@@ -1619,7 +1619,7 @@
       "summary": "几天前刚刚 发布 的 DeepSeek V4 Flash正式版也已上升至第8位.8月3日,海外开发者平台OpenCode披露了一组数据:8月1日当天,...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HER9eGqjhpBNzcyg5J66K0gz31vzhZNtAEahG7SE&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1786281268%26ver%3D6894%26signature%3D6yw3wb4CT5CRU1fva2f-zDkHVh2QyEZ3PojWWfRQ25UJ7FEzAB%2Aooio4TGPMDs2uuy3bRZFl44FFwB7TOjPIPtyf3JE44g9ZyrNMMr0HBQ2%2AWRCmOkof7rSZoOSqy7eJ%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HBTOeGqj0gRIH3A1O1Gi3_xmbqzjUuejkJGK7xWr&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1786301956%26ver%3D6894%26signature%3D6yw3wb4CT5CRU1fva2f-zDkHVh2QyEZ3PojWWfRQ25WULxF-WCgy8BO3npL%2Aintrg4nsc3r4Q5V0bBzSZLNv2ygxrM4zxEjdXxlmgBCAYiOenXJo3chzNWT%2AwFC8XFuv%26new%3D1",
       "key_points": [
         "几天前刚刚 发布 的 DeepSeek V4 Flash正式版也已上升至第8位.8月3日,海外开发者平台OpenCode披露了一组数据:8月1日当天,..."
       ],
@@ -1646,7 +1646,7 @@
       "kind": "article",
       "title": "岗位速递丨 KIMI 月之暗面 FDE招聘信息",
       "source": "微信公众号 · 前沿工场",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1786281268&ver=6894&signature=ensaWW*-dDS5SCycLkddVTVNqWH7PLzq9lXz8*gDgWc-k5m9tLR9WGRV-yTw9pstjAl1zVDJSVo4f8MMsw*lOwYc*Lbmaa3eZmRauGFsBDLF-YyH4LIgjgWXO1Ni3Guz&new=1",
+      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HER9eGqj6RmM2Dwva4OYIIsRt5GFhO-_6YIViA6C&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1786281268%26ver%3D6894%26signature%3DensaWW%2A-dDS5SCycLkddVTVNqWH7PLzq9lXz8%2AgDgWc-k5m9tLR9WGRV-yTw9pstjAl1zVDJSVo4f8MMsw%2AlOwYc%2ALbmaa3eZmRauGFsBDLF-YyH4LIgjgWXO1Ni3Guz%26new%3D1",
       "published_at": "2026-08-07T02:19:20Z",
       "authors": [],
       "venue": "",
@@ -2203,58 +2203,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "8732ec180b11cc87",
-      "kind": "article",
-      "title": "How AI helps scientists design the next generation of medicines",
-      "source": "MIT Technology Review",
-      "source_url": "https://www.technologyreview.com/2026/07/23/1140346/how-ai-helps-scientists-design-the-next-generation-of-medicines/",
-      "published_at": "2026-07-23T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "As generative AI captures public attention, a different kind of AI is reshaping drug discovery. Machine learning models are helping to compress decade-long timelines and cracking problems that were previously unsolvable.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.technologyreview.com/2026/07/23/1140346/how-ai-helps-scientists-design-the-next-generation-of-medicines/",
-      "key_points": [
-        "Designing and developing a new medicine is an expensive, failure-prone scientific challenge.",
-        "A new drug can take many years to develop, at the cost of a significant investment.",
-        "And even then, most possible candidates never reach the patient.",
-        "For biologic medicines, therapies made from engineered proteins rather than synthetic chemistry (which are often used to treat conditions across most major acute and chronic diseases), the complexity is even greater.",
-        "Scientists explore vast quantities of possible molecules, looking for the rare few that will bind to the right target, remain stable in the human body, and be manufacturable at scale."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "As generative AI captures public attention, a different kind of AI is reshaping drug discovery. Machine learning models are helping to compress decade-long timelines and cracking problems that were previously unsolvable."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Designing and developing a new medicine is an expensive, failure-prone scientific challenge.",
-            "A new drug can take many years to develop, at the cost of a significant investment.",
-            "And even then, most possible candidates never reach the patient.",
-            "For biologic medicines, therapies made from engineered proteins rather than synthetic chemistry (which are often used to treat conditions across most major acute and chronic diseases), the complexity is even greater.",
-            "Scientists explore vast quantities of possible molecules, looking for the rare few that will bind to the right target, remain stable in the human body, and be manufacturable at scale."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Designing and developing a new medicine is an expensive, failure-prone scientific challenge. A new drug can take many years to develop, at the cost of a significant investment. And even then, most possible candidates never reach the patient. For biologic medicines, therapies made from engineered proteins rather than synthetic chemistry (which are often used to treat conditions across most major acute and chronic diseases), the complexity is even greater.",
-            "Scientists explore vast quantities of possible molecules, looking for the rare few that will bind to the right target, remain stable in the human body, and be manufacturable at scale. Today, AI is speeding up these processes and has quickly become a core part of the infrastructure in pharmaceutical R&D.",
-            "AI-assisted design is a growing part of how biologic drug candidates are developed, and companies like AstraZeneca are actively building its engineering teams to push this further. “Everything we do, whether it’s design, make, test, or analyze, is now computationally enhanced,” says Puja Sapra, senior vice president and head of R&D biologics engineering and oncology targeted discovery at AstraZeneca. “The cycle times are getting shorter while productivity and innovation increase.”"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "a5ca650609602c50",
       "kind": "article",
       "title": "The latest AI news we announced in July 2026",
@@ -2398,6 +2346,58 @@
             "Google and Kaggle’s “AI Agents: Intensive Vibe Coding” course had expert-led sessions, technical whitepapers and notebooks, and capstone projects.",
             "Over 353,000 developers recently joined our five-day intensive course to master building and deploying AI agents using natural language. Participants collaborated on Discord to debug code and submitted over 6,000 impressive capstone projects, ranging from historical transcription tools to space-weather research systems. You can still access all course materials on the Kaggle Learn website to sharpen your skills at your own pace.",
             "\"Inside our 353,000-person vibe coding course\" explores how we teach modern AI development."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "8b7a5efb6f2407ae",
+      "kind": "article",
+      "title": "New NSF initiative aims to unlock dataset value for AI-enabled scientific discovery",
+      "source": "U.S. National Science Foundation (.gov)",
+      "source_url": "https://www.nsf.gov/news/new-nsf-initiative-aims-unlock-dataset-value-ai-enabled",
+      "published_at": "2026-07-22T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "New NSF initiative aims to unlock dataset value for AI-enabled scientific discovery U.S. National Science Foundation (.gov)",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.nsf.gov/news/new-nsf-initiative-aims-unlock-dataset-value-ai-enabled",
+      "key_points": [
+        "National Science Foundation announced the NSF Unlocking Dataset Value for AI-Enabled Scientific Discovery program , a new investment to advance scientific community datasets and enable discovery and innovation using artificial intelligence and other methods in national priority areas.",
+        "Across science and engineering, researchers have built valuable datasets through prior research.",
+        "However, many datasets have the potential to be used for new inquiries outside of the initial scope of data collection, but are not accessible, interoperable or ready to be used by automated AI systems.",
+        "Many existing datasets also lack a way for a broad array of researchers to contribute and benefit.",
+        "The new program will help research communities unlock more value from datasets to ask new questions, test new ideas and extend the value of prior scientific investments."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "New NSF initiative aims to unlock dataset value for AI-enabled scientific discovery U.S. National Science Foundation (.gov)"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "National Science Foundation announced the NSF Unlocking Dataset Value for AI-Enabled Scientific Discovery program , a new investment to advance scientific community datasets and enable discovery and innovation using artificial intelligence and other methods in national priority areas.",
+            "Across science and engineering, researchers have built valuable datasets through prior research.",
+            "However, many datasets have the potential to be used for new inquiries outside of the initial scope of data collection, but are not accessible, interoperable or ready to be used by automated AI systems.",
+            "Many existing datasets also lack a way for a broad array of researchers to contribute and benefit.",
+            "The new program will help research communities unlock more value from datasets to ask new questions, test new ideas and extend the value of prior scientific investments."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "The U.S. National Science Foundation announced the NSF Unlocking Dataset Value for AI-Enabled Scientific Discovery program , a new investment to advance scientific community datasets and enable discovery and innovation using artificial intelligence and other methods in national priority areas.",
+            "Across science and engineering, researchers have built valuable datasets through prior research. However, many datasets have the potential to be used for new inquiries outside of the initial scope of data collection, but are not accessible, interoperable or ready to be used by automated AI systems. Many existing datasets also lack a way for a broad array of researchers to contribute and benefit. The new program will help research communities unlock more value from datasets to ask new questions, test new ideas and extend the value of prior scientific investments.",
+            "AI enables data processing and analysis at scales and speeds beyond human capacity, helping researchers identify previously hidden patterns and relationships. When paired with scientific datasets that are trusted, accessible, fit for their scientific purpose and curated, AI can advance scientific research and connect previously siloed disciplines."
           ]
         }
       ],
@@ -3204,7 +3204,7 @@
       "resolved_url": "https://x.com/sama/status/2074909079450050629",
       "key_points": [
         "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
-        "5:30 PM · Jul 8, 2026 760.9K Views 937 521 11K 779 Jenny @suomi55 Jul 8 Are you kidding us?",
+        "5:30 PM · Jul 8, 2026 760.9K Views 937 520 11K 779 Jenny @suomi55 Jul 8 Are you kidding us?",
         "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
         "You are promoting something here that you yourself have taken away from the users!",
         "#keep4o #BringBack4o #OpenSource4o 20 13 193 13K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
@@ -3218,7 +3218,7 @@
           "title": "公开页面要点",
           "bullets": [
             "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
-            "5:30 PM · Jul 8, 2026 760.9K Views 937 521 11K 779 Jenny @suomi55 Jul 8 Are you kidding us?",
+            "5:30 PM · Jul 8, 2026 760.9K Views 937 520 11K 779 Jenny @suomi55 Jul 8 Are you kidding us?",
             "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
             "You are promoting something here that you yourself have taken away from the users!",
             "#keep4o #BringBack4o #OpenSource4o 20 13 193 13K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
@@ -3227,7 +3227,7 @@
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 760.9K Views 937 521 11K 779",
+            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 760.9K Views 937 520 11K 779",
             "Jenny @suomi55 Jul 8 Are you kidding us? „it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o! You are promoting something here that you yourself have taken away from the users! That’s disgusting! #keep4o #BringBack4o #OpenSource4o 20 13 193 13K",
             "David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
           ]
@@ -3426,52 +3426,6 @@
             "SymCrypt develops new verified cryptography using Rust, Aeneas, and Lean to provide higher security assurance.",
             "We prove that their code safely and correctly implements standard algorithms, notably for post-quantum cryptography.",
             "We are releasing verified code, specs, properties, and proofs initially for SHA-3 and ML-KEM."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "a697dc5a77671e4f",
-      "kind": "article",
-      "title": "UCF Researcher to Support DOE Project Using AI to Accelerate Scientific Discovery",
-      "source": "University of Central Florida",
-      "source_url": "https://www.ucf.edu/news/ucf-researcher-to-support-doe-project-using-ai-to-accelerate-scientific-discovery/",
-      "published_at": "2026-08-06T17:25:37Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Assistant Professor Haonan Ling will explore virtual solutions to biomanufacturing for the Department of Energy’s Genesis Mission, which aims to strengthen America’s energy industry and national security.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.ucf.edu/news/ucf-researcher-to-support-doe-project-using-ai-to-accelerate-scientific-discovery/",
-      "key_points": [
-        "Scientific breakthroughs often require years of experimentation, testing and refinement before researchers can answer some of society’s most complex questions.",
-        "To explore how artificial intelligence can help accelerate that process, Assistant Professor of Mechanical and Aerospace Engineering Haonan Ling is joining the U.S."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Assistant Professor Haonan Ling will explore virtual solutions to biomanufacturing for the Department of Energy’s Genesis Mission, which aims to strengthen America’s energy industry and national security."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Scientific breakthroughs often require years of experimentation, testing and refinement before researchers can answer some of society’s most complex questions.",
-            "To explore how artificial intelligence can help accelerate that process, Assistant Professor of Mechanical and Aerospace Engineering Haonan Ling is joining the U.S."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Scientific breakthroughs often require years of experimentation, testing and refinement before researchers can answer some of society’s most complex questions. To explore how artificial intelligence can help accelerate that process, Assistant Professor of Mechanical and Aerospace Engineering Haonan Ling is joining the U.S. Department of Energy’s Genesis Mission.",
-            "The nationwide initiative encourages interdisciplinary teams to develop new AI models and research workflows capable of addressing national challenges across fields such as advanced manufacturing, biotechnology, critical materials, energy and quantum information.",
-            "“The Genesis Mission harnesses the collective strengths of the nation’s leading institutions across academia, industry, and government to accelerate the pace of discovery,” says Winston Schoenfeld, UCF vice president for research and innovation. “UCF’s participation reflects the expertise of our researchers and talented students, whose contributions will help shape AI-enabled scientific workflows and transform technological advances into real-world solutions that fuel American competitiveness.”"
           ]
         }
       ],
@@ -3959,6 +3913,46 @@
       "reading_minutes": 1
     },
     {
+      "id": "0ed08b7433503a29",
+      "kind": "article",
+      "title": "Insilico Medicine Launches the Industry's First Drug Discovery and Development (DDD) Benchmark as a Service, to Evaluate Frontier AI and Foundation Models on Real-World Science",
+      "source": "Insilico Medicine",
+      "source_url": "https://insilico.com/news/hxjtp34a41-insilico-medicine-launches-the-industrys",
+      "published_at": "2026-07-30T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Insilico Medicine Launches the Industry's First Drug Discovery and Development (DDD) Benchmark as a Service, to Evaluate Frontier AI and Foundation Models on Real-World Science Insilico Medicine",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "resolved_url": "https://insilico.com/news/hxjtp34a41-insilico-medicine-launches-the-industrys",
+      "key_points": [
+        "Insilico Medicine Launches the Industry's First Drug Discovery and Development (DDD) Benchmark as a Service, to Evaluate Frontier AI and Foundation Models on Real-World Science Insilico Medicine"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Insilico Medicine Launches the Industry's First Drug Discovery and Development (DDD) Benchmark as a Service, to Evaluate Frontier AI and Foundation Models on Real-World Science Insilico Medicine"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Insilico Medicine Launches the Industry's First Drug Discovery and Development (DDD) Benchmark as a Service, to Evaluate Frontier AI and Foundation Models on Real-World Science Insilico Medicine"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "ddcb4ba1eb1f9cf0",
       "kind": "article",
       "title": "NVIDIA Cosmos-H-Dreams: Bringing Real-Time Generative Simulation to Surgical Robotics",
@@ -4304,7 +4298,7 @@
       "title": "The next chapter of our AI momentum",
       "source": "blog.google",
       "source_url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
-      "published_at": "2026-08-09T13:09:34Z",
+      "published_at": "2026-08-09T18:41:03Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -4370,10 +4364,10 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://x.com/elonmusk/status/2086305001110954244",
       "key_points": [
-        "Elon Musk @elonmusk Grok Imagine can meme tetsuo @tetsuoai 13h Imagine Image 2.0 is god-tier for memes.",
+        "Elon Musk @elonmusk Grok Imagine can meme tetsuo @tetsuoai 19h Imagine Image 2.0 is god-tier for memes.",
         "Magic wand edits the region you select and leaves the rest of the frame pixel identical.",
         "Swap one face in a group photo without regenerating the whole image.",
-        "Background removal exports any subject transparent, so you get cutouts for Show more 4:14 AM · Aug 9, 2026 2.7M Views 1.2K 835 5.8K 307"
+        "Background removal exports any subject transparent, so you get cutouts for Show more 4:14 AM · Aug 9, 2026 3.9M Views 1.4K 1.2K 7.5K 382"
       ],
       "sections": [
         {
@@ -4383,16 +4377,16 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Elon Musk @elonmusk Grok Imagine can meme tetsuo @tetsuoai 13h Imagine Image 2.0 is god-tier for memes.",
+            "Elon Musk @elonmusk Grok Imagine can meme tetsuo @tetsuoai 19h Imagine Image 2.0 is god-tier for memes.",
             "Magic wand edits the region you select and leaves the rest of the frame pixel identical.",
             "Swap one face in a group photo without regenerating the whole image.",
-            "Background removal exports any subject transparent, so you get cutouts for Show more 4:14 AM · Aug 9, 2026 2.7M Views 1.2K 835 5.8K 307"
+            "Background removal exports any subject transparent, so you get cutouts for Show more 4:14 AM · Aug 9, 2026 3.9M Views 1.4K 1.2K 7.5K 382"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok Imagine can meme tetsuo @tetsuoai 13h Imagine Image 2.0 is god-tier for memes. Magic wand edits the region you select and leaves the rest of the frame pixel identical. Swap one face in a group photo without regenerating the whole image. Background removal exports any subject transparent, so you get cutouts for Show more 4:14 AM · Aug 9, 2026 2.7M Views 1.2K 835 5.8K 307"
+            "Elon Musk @elonmusk Grok Imagine can meme tetsuo @tetsuoai 19h Imagine Image 2.0 is god-tier for memes. Magic wand edits the region you select and leaves the rest of the frame pixel identical. Swap one face in a group photo without regenerating the whole image. Background removal exports any subject transparent, so you get cutouts for Show more 4:14 AM · Aug 9, 2026 3.9M Views 1.4K 1.2K 7.5K 382"
           ]
         }
       ],
@@ -4418,7 +4412,7 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://x.com/elonmusk/status/2086127247077843282",
       "key_points": [
-        "Elon Musk @elonmusk Major upgrade to Grok Imagine image editing X Freeze @XFreeze Aug 8 You can literally just hover over any specific segment in Grok Imagine and edit it instantly 4:27 PM · Aug 8, 2026 5.8M Views 1.3K 1.3K 8.1K 482 PoorGoat🐂🐈 @PoorGoat_ 20h GROK IMAGINE IS INCREDIBLE 00:00 Made with AI 119 356 970 17K ⁿᵉʷˢ Robert F.",
+        "Elon Musk @elonmusk Major upgrade to Grok Imagine image editing X Freeze @XFreeze Aug 8 You can literally just hover over any specific segment in Grok Imagine and edit it instantly 4:27 PM · Aug 8, 2026 6.4M Views 1.3K 1.5K 8.7K 534 PoorGoat🐂🐈 @PoorGoat_ Aug 8 GROK IMAGINE IS INCREDIBLE 00:00 Made with AI 119 356 971 17K ⁿᵉʷˢ Robert F.",
         "I've been paused and I'd like to participate in the new original content program."
       ],
       "sections": [
@@ -4429,16 +4423,16 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Elon Musk @elonmusk Major upgrade to Grok Imagine image editing X Freeze @XFreeze Aug 8 You can literally just hover over any specific segment in Grok Imagine and edit it instantly 4:27 PM · Aug 8, 2026 5.8M Views 1.3K 1.3K 8.1K 482 PoorGoat🐂🐈 @PoorGoat_ 20h GROK IMAGINE IS INCREDIBLE 00:00 Made with AI 119 356 970 17K ⁿᵉʷˢ Robert F.",
+            "Elon Musk @elonmusk Major upgrade to Grok Imagine image editing X Freeze @XFreeze Aug 8 You can literally just hover over any specific segment in Grok Imagine and edit it instantly 4:27 PM · Aug 8, 2026 6.4M Views 1.3K 1.5K 8.7K 534 PoorGoat🐂🐈 @PoorGoat_ Aug 8 GROK IMAGINE IS INCREDIBLE 00:00 Made with AI 119 356 971 17K ⁿᵉʷˢ Robert F.",
             "I've been paused and I'd like to participate in the new original content program."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Major upgrade to Grok Imagine image editing X Freeze @XFreeze Aug 8 You can literally just hover over any specific segment in Grok Imagine and edit it instantly 4:27 PM · Aug 8, 2026 5.8M Views 1.3K 1.3K 8.1K 482",
-            "PoorGoat🐂🐈 @PoorGoat_ 20h GROK IMAGINE IS INCREDIBLE 00:00 Made with AI 119 356 970 17K",
-            "ⁿᵉʷˢ Robert F. Kennedy Jr. @RobertKennedyJc 19h Hey Elon. Could you have someone review my account. I've been paused and I'd like to participate in the new original content program. 3 7 34 1.6K"
+            "Elon Musk @elonmusk Major upgrade to Grok Imagine image editing X Freeze @XFreeze Aug 8 You can literally just hover over any specific segment in Grok Imagine and edit it instantly 4:27 PM · Aug 8, 2026 6.4M Views 1.3K 1.5K 8.7K 534",
+            "PoorGoat🐂🐈 @PoorGoat_ Aug 8 GROK IMAGINE IS INCREDIBLE 00:00 Made with AI 119 356 971 17K",
+            "ⁿᵉʷˢ Robert F. Kennedy Jr. @RobertKennedyJc Aug 8 Hey Elon. Could you have someone review my account. I've been paused and I'd like to participate in the new original content program. 3 7 35 1.7K"
           ]
         }
       ],
@@ -4467,8 +4461,8 @@
         "Justine Moore @venturetwins Aug 8 I'm impressed with the new Grok Image model and editing features!",
         "Screenshotted a few items from the Gap website and generated a quick photoshoot.",
         "The workflow tools are cool - items/people are segmented to edit, you can change the aspect ratio, and incorporate new references.",
-        "00:00 4:25 PM · Aug 8, 2026 2.9M Views 634 932 3.8K 304 Nobs 🔨 (Chief LLM Psychosis Officer) @nobsfud 20h give us the api now!",
-        "1 20 322 X Girls @thesoragirls 20h Grok Imagine image editing is incredible!"
+        "00:00 4:25 PM · Aug 8, 2026 3.2M Views 662 1.1K 4.2K 338 Nobs 🔨 (Chief LLM Psychosis Officer) @nobsfud Aug 8 give us the api now!",
+        "1 20 334 X Girls @thesoragirls Aug 8 Grok Imagine image editing is incredible!"
       ],
       "sections": [
         {
@@ -4481,16 +4475,16 @@
             "Justine Moore @venturetwins Aug 8 I'm impressed with the new Grok Image model and editing features!",
             "Screenshotted a few items from the Gap website and generated a quick photoshoot.",
             "The workflow tools are cool - items/people are segmented to edit, you can change the aspect ratio, and incorporate new references.",
-            "00:00 4:25 PM · Aug 8, 2026 2.9M Views 634 932 3.8K 304 Nobs 🔨 (Chief LLM Psychosis Officer) @nobsfud 20h give us the api now!",
-            "1 20 322 X Girls @thesoragirls 20h Grok Imagine image editing is incredible!"
+            "00:00 4:25 PM · Aug 8, 2026 3.2M Views 662 1.1K 4.2K 338 Nobs 🔨 (Chief LLM Psychosis Officer) @nobsfud Aug 8 give us the api now!",
+            "1 20 334 X Girls @thesoragirls Aug 8 Grok Imagine image editing is incredible!"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Try it out! Justine Moore @venturetwins Aug 8 I'm impressed with the new Grok Image model and editing features! Screenshotted a few items from the Gap website and generated a quick photoshoot. The workflow tools are cool - items/people are segmented to edit, you can change the aspect ratio, and incorporate new references. 00:00 4:25 PM · Aug 8, 2026 2.9M Views 634 932 3.8K 304",
-            "Nobs 🔨 (Chief LLM Psychosis Officer) @nobsfud 20h give us the api now! 1 20 322",
-            "X Girls @thesoragirls 20h Grok Imagine image editing is incredible! X Girls @thesoragirls 21h Grok Imagine image editing can do incredible things! X Girls 00:00 X Girls 2 8 14 880"
+            "Elon Musk @elonmusk Try it out! Justine Moore @venturetwins Aug 8 I'm impressed with the new Grok Image model and editing features! Screenshotted a few items from the Gap website and generated a quick photoshoot. The workflow tools are cool - items/people are segmented to edit, you can change the aspect ratio, and incorporate new references. 00:00 4:25 PM · Aug 8, 2026 3.2M Views 662 1.1K 4.2K 338",
+            "Nobs 🔨 (Chief LLM Psychosis Officer) @nobsfud Aug 8 give us the api now! 1 20 334",
+            "X Girls @thesoragirls Aug 8 Grok Imagine image editing is incredible! X Girls @thesoragirls Aug 8 Grok Imagine image editing can do incredible things! X Girls 00:00 X Girls 2 8 15 956"
           ]
         }
       ],
@@ -4532,21 +4526,21 @@
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok Imagine image editing is greatly improved X Freeze @XFreeze 21h Grok Imagine’s image editing literally blows my mind I just edited this entire image from scratch using Grok Imagine and its full set of editing tools The segment + precise editing tools are insanely useful Instead of regenerating the entire image, you can target exactly what Show more 00:00 3:40 PM · Aug 8, 2026 4.2M Views 891 1K 5.2K 457",
-            "🩸Astria Obscura 🩸 @astria_obscura 20h Nice so grok will make my images look sexier 🫦 6 3 40 746",
-            "Davide @dvdmarini 21h According to my Grok this photo would be moderated immediately… 2 29 556"
+            "Elon Musk @elonmusk Grok Imagine image editing is greatly improved X Freeze @XFreeze Aug 8 Grok Imagine’s image editing literally blows my mind I just edited this entire image from scratch using Grok Imagine and its full set of editing tools The segment + precise editing tools are insanely useful Instead of regenerating the entire image, you can target exactly what Show more 00:00 3:40 PM · Aug 8, 2026 4.6M Views 919 1.1K 5.6K 484",
+            "🩸Astria Obscura 🩸 @astria_obscura Aug 8 Nice so grok will make my images look sexier 🫦 6 3 41 769",
+            "Davide @dvdmarini Aug 8 According to my Grok this photo would be moderated immediately… 2 40 657"
           ]
         }
       ],
       "reading_minutes": 1
     },
     {
-      "id": "c163802c93e8e5fc",
+      "id": "66a11d9d2caf8f39",
       "kind": "social",
-      "title": "astra is a powerful model and we are working to make it generally available. we do not think it is a good strategy to keep powerful models to a chosen few. given its cyber capabilities, we need a little big longer to do do this safely. but hopefully not too long!",
+      "title": "Really enjoyed talking to @bzcohen about AlphaGo's famous move 37 and the significance of it 10 years on for math and science breakthroughs in verifiable domains",
       "source": "x.com",
-      "source_url": "https://x.com/sama/status/2085862292311396515",
-      "published_at": "2026-08-07T22:54:58Z",
+      "source_url": "https://x.com/demishassabis/status/2085914742414061886",
+      "published_at": "2026-08-08T02:23:23Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -4555,32 +4549,80 @@
         "First-party Post"
       ],
       "verification": "公开平台索引，需查看原帖",
-      "summary": "astra is a powerful model and we are working to make it generally available. we do not think it is a good strategy to keep powerful models to a chosen few. given its cyber capabilities, we need a little big longer to do do this safely. but hopefully not too long! x.com",
+      "summary": "Really enjoyed talking to @bzcohen about AlphaGo's famous move 37 and the significance of it 10 years on for math and science breakthroughs in verifiable domains x.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/sama/status/2085862292311396515",
+      "resolved_url": "https://x.com/demishassabis/status/2085914742414061886",
       "key_points": [
-        "Sam Altman @sama astra is a powerful model and we are working to make it generally available. we do not think it is a good strategy to keep powerful models to a chosen few. given its cyber capabilities, we need a little big longer to do do this safely. but hopefully not too long!",
-        "10:54 PM · Aug 7, 2026 2.1M Views 1.7K 1.2K 27K 1.6K JUMPERZ @jumperz Aug 7 Okay as long as we don’t get something like this 2 1 738 20K Beff (e/acc) @beffjezos Aug 7 >we do not think it is a good strategy to keep powerful models to a chosen few."
+        "Demis Hassabis @demishassabis Really enjoyed talking to @ bzcohen about AlphaGo's famous move 37 and the significance of it 10 years on for math and science breakthroughs in verifiable domains The Wall Street Journal @WSJ Aug 8 A decade ago, a computer did something that no human would have done.",
+        "Now the world is full of them. on.wsj.com/4waySAp 2:23 AM · Aug 8, 2026 280.8K Views 76 99 1.6K 257 longGG123 @longgege_god Aug 8 Sure enough, Google was right to take away your leadership - you're obsessed with those little achievements and can't let go.",
+        "Over the years I've seen you boast about this game 37 times over 5 342"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "astra is a powerful model and we are working to make it generally available. we do not think it is a good strategy to keep powerful models to a chosen few. given its cyber capabilities, we need a little big longer to do do this safely. but hopefully not too long! x.com"
+          "body": "Really enjoyed talking to @bzcohen about AlphaGo's famous move 37 and the significance of it 10 years on for math and science breakthroughs in verifiable domains x.com"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Sam Altman @sama astra is a powerful model and we are working to make it generally available. we do not think it is a good strategy to keep powerful models to a chosen few. given its cyber capabilities, we need a little big longer to do do this safely. but hopefully not too long!",
-            "10:54 PM · Aug 7, 2026 2.1M Views 1.7K 1.2K 27K 1.6K JUMPERZ @jumperz Aug 7 Okay as long as we don’t get something like this 2 1 738 20K Beff (e/acc) @beffjezos Aug 7 >we do not think it is a good strategy to keep powerful models to a chosen few."
+            "Demis Hassabis @demishassabis Really enjoyed talking to @ bzcohen about AlphaGo's famous move 37 and the significance of it 10 years on for math and science breakthroughs in verifiable domains The Wall Street Journal @WSJ Aug 8 A decade ago, a computer did something that no human would have done.",
+            "Now the world is full of them. on.wsj.com/4waySAp 2:23 AM · Aug 8, 2026 280.8K Views 76 99 1.6K 257 longGG123 @longgege_god Aug 8 Sure enough, Google was right to take away your leadership - you're obsessed with those little achievements and can't let go.",
+            "Over the years I've seen you boast about this game 37 times over 5 342"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Sam Altman @sama astra is a powerful model and we are working to make it generally available. we do not think it is a good strategy to keep powerful models to a chosen few. given its cyber capabilities, we need a little big longer to do do this safely. but hopefully not too long! 10:54 PM · Aug 7, 2026 2.1M Views 1.7K 1.2K 27K 1.6K",
-            "JUMPERZ @jumperz Aug 7 Okay as long as we don’t get something like this 2 1 738 20K",
-            "Beff (e/acc) @beffjezos Aug 7 >we do not think it is a good strategy to keep powerful models to a chosen few. Amen. 8 11 652 22K"
+            "Demis Hassabis @demishassabis Really enjoyed talking to @ bzcohen about AlphaGo's famous move 37 and the significance of it 10 years on for math and science breakthroughs in verifiable domains The Wall Street Journal @WSJ Aug 8 A decade ago, a computer did something that no human would have done. It was considered a breakthrough for AI. Now the world is full of them. on.wsj.com/4waySAp 2:23 AM · Aug 8, 2026 280.8K Views 76 99 1.6K 257",
+            "longGG123 @longgege_god Aug 8 Sure enough, Google was right to take away your leadership - you're obsessed with those little achievements and can't let go. Over the years I've seen you boast about this game 37 times over 5 342"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "8635fbebdea1f392",
+      "kind": "article",
+      "title": "Anthropic, OpenAI among firms facing new scrutiny under EU AI Act enforcement powers",
+      "source": "CNBC",
+      "source_url": "https://www.cnbc.com/2026/08/03/eu-ai-act-enforcement-powers.html",
+      "published_at": "2026-08-03T10:59:18Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Anthropic, OpenAI among firms facing new scrutiny under EU AI Act enforcement powers CNBC",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.cnbc.com/2026/08/03/eu-ai-act-enforcement-powers.html",
+      "key_points": [
+        "The European Commission on Sunday gained new powers to investigate, impose fines and order changes at companies developing AI models, as part of the rollout of its AI Act.",
+        "The new powers could bring further flashpoints between the U.S. and European Commission, with the two sparring over Europe's push for tech sovereignty and fines issued towards American tech companies.",
+        "President Donald Trump threatened the EU with a \"substantial\" tariff after the bloc hit Google with a $1 billion fine in July, under Digital Markets Act rules."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Anthropic, OpenAI among firms facing new scrutiny under EU AI Act enforcement powers CNBC"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "The European Commission on Sunday gained new powers to investigate, impose fines and order changes at companies developing AI models, as part of the rollout of its AI Act.",
+            "The new powers could bring further flashpoints between the U.S. and European Commission, with the two sparring over Europe's push for tech sovereignty and fines issued towards American tech companies.",
+            "President Donald Trump threatened the EU with a \"substantial\" tariff after the bloc hit Google with a $1 billion fine in July, under Digital Markets Act rules."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "The European Commission on Sunday gained new powers to investigate, impose fines and order changes at companies developing AI models, as part of the rollout of its AI Act.",
+            "The new powers could bring further flashpoints between the U.S. and European Commission, with the two sparring over Europe's push for tech sovereignty and fines issued towards American tech companies.",
+            "U.S. President Donald Trump threatened the EU with a \"substantial\" tariff after the bloc hit Google with a $1 billion fine in July, under Digital Markets Act rules."
           ]
         }
       ],
@@ -4627,57 +4669,10 @@
       "reading_minutes": 1
     },
     {
-      "id": "f31a7e9dba64cfd9",
-      "kind": "article",
-      "title": "DeepSeek Doubles Down on Low-Cost AI With V4-Flash Update",
-      "source": "MIT Sloan Management Review Middle East",
-      "source_url": "https://www.mitsloanme.com/article/deepseek-doubles-down-on-low-cost-ai-with-v4-flash-update/",
-      "published_at": "2026-08-03T18:39:56Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "DeepSeek Doubles Down on Low-Cost AI With V4-Flash Update MIT Sloan Management Review Middle East",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.mitsloanme.com/article/deepseek-doubles-down-on-low-cost-ai-with-v4-flash-update/",
-      "key_points": [
-        "Identity, More Than Software Flaws, Is Driving Today's Costliest Cyberattacks Chinese AI startup DeepSeek has released an updated version of its V4-Flash model, positioning it as one of the most cost-efficient AI systems among major global models, according to research firm Artificial Analysis.",
-        "The DeepSeek V4-Flash 0731 represents an improvement over the previous version, with Artificial Analysis describing it as a significant step forward.",
-        "The model achieved a score of 50 out of 100 on the firm’s Intelligence Index, matching Google’s Gemini 3.6 Flash in the ranking."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "DeepSeek Doubles Down on Low-Cost AI With V4-Flash Update MIT Sloan Management Review Middle East"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Identity, More Than Software Flaws, Is Driving Today's Costliest Cyberattacks Chinese AI startup DeepSeek has released an updated version of its V4-Flash model, positioning it as one of the most cost-efficient AI systems among major global models, according to research firm Artificial Analysis.",
-            "The DeepSeek V4-Flash 0731 represents an improvement over the previous version, with Artificial Analysis describing it as a significant step forward.",
-            "The model achieved a score of 50 out of 100 on the firm’s Intelligence Index, matching Google’s Gemini 3.6 Flash in the ranking."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Identity, More Than Software Flaws, Is Driving Today's Costliest Cyberattacks",
-            "Chinese AI startup DeepSeek has released an updated version of its V4-Flash model, positioning it as one of the most cost-efficient AI systems among major global models, according to research firm Artificial Analysis.",
-            "The DeepSeek V4-Flash 0731 represents an improvement over the previous version, with Artificial Analysis describing it as a significant step forward. The model achieved a score of 50 out of 100 on the firm’s Intelligence Index, matching Google’s Gemini 3.6 Flash in the ranking."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "ada6057e17c2e7c0",
       "kind": "article",
       "title": "Nscale to acquire Romanian co-founded AI startup Anyscale in reportedly USD 1.65 billion deal",
-      "source": "Romania Insider",
+      "source": "romania-insider.com",
       "source_url": "https://www.romania-insider.com/nscale-acquire-romanian-co-founded-ai-startup-anyscale-july-2026",
       "published_at": "2026-07-31T12:36:52Z",
       "authors": [],
@@ -4687,37 +4682,28 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Cloud infrastructure provider Nscale will acquire AI software startup Anyscale, which has Romanian-born university professor Ion Stoica among its co-founders, in a transaction worth roughly USD 1.65 billion, according to a Bloomberg News source. Ion Stoica is a co-founder of Anyscale, together...",
+      "summary": "Nscale to acquire Romanian co-founded AI startup Anyscale in reportedly USD 1.65 billion deal romania-insider.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 504: Gateway Time-out",
       "resolved_url": "https://www.romania-insider.com/nscale-acquire-romanian-co-founded-ai-startup-anyscale-july-2026",
       "key_points": [
-        "Cloud infrastructure provider Nscale will acquire AI software startup Anyscale, which has Romanian-born university professor Ion Stoica among its co-founders, in a transaction worth roughly USD 1.65 billion, according to a Bloomberg News source .",
-        "Ion Stoica is a co-founder of Anyscale, together with Robert Nishihara (chief executive officer) and Philipp Moritz (chief technology officer), who were his PhD students at RISELab within the University of California, Berkeley.",
-        "San Francisco-based Anyscale provides software for organizing and managing complex AI workloads so that they can run smoothly across multiple computers simultaneously.",
-        "Nscale said it expects to attract more customers by offering Anyscale’s software."
+        "Nscale to acquire Romanian co-founded AI startup Anyscale in reportedly USD 1.65 billion deal romania-insider.com"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Cloud infrastructure provider Nscale will acquire AI software startup Anyscale, which has Romanian-born university professor Ion Stoica among its co-founders, in a transaction worth roughly USD 1.65 billion, according to a Bloomberg News source. Ion Stoica is a co-founder of Anyscale, together..."
+          "body": "Nscale to acquire Romanian co-founded AI startup Anyscale in reportedly USD 1.65 billion deal romania-insider.com"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Cloud infrastructure provider Nscale will acquire AI software startup Anyscale, which has Romanian-born university professor Ion Stoica among its co-founders, in a transaction worth roughly USD 1.65 billion, according to a Bloomberg News source .",
-            "Ion Stoica is a co-founder of Anyscale, together with Robert Nishihara (chief executive officer) and Philipp Moritz (chief technology officer), who were his PhD students at RISELab within the University of California, Berkeley.",
-            "San Francisco-based Anyscale provides software for organizing and managing complex AI workloads so that they can run smoothly across multiple computers simultaneously.",
-            "Nscale said it expects to attract more customers by offering Anyscale’s software."
+            "Nscale to acquire Romanian co-founded AI startup Anyscale in reportedly USD 1.65 billion deal romania-insider.com"
           ]
         },
         {
           "title": "原文短摘录",
-          "paragraphs": [
-            "Cloud infrastructure provider Nscale will acquire AI software startup Anyscale, which has Romanian-born university professor Ion Stoica among its co-founders, in a transaction worth roughly USD 1.65 billion, according to a Bloomberg News source .",
-            "Ion Stoica is a co-founder of Anyscale, together with Robert Nishihara (chief executive officer) and Philipp Moritz (chief technology officer), who were his PhD students at RISELab within the University of California, Berkeley.",
-            "San Francisco-based Anyscale provides software for organizing and managing complex AI workloads so that they can run smoothly across multiple computers simultaneously. Nscale said it expects to attract more customers by offering Anyscale’s software."
-          ]
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -5001,7 +4987,7 @@
       "id": "26cd40c9fa67f749",
       "kind": "article",
       "title": "This MBA Student’s AI Startup Is Making Healthcare Processes More Efficient",
-      "source": "poetsandquants.com",
+      "source": "Poets&Quants",
       "source_url": "https://poetsandquants.com/2026/07/25/this-mba-students-ai-startup-is-making-healthcare-processes-more-efficient/",
       "published_at": "2026-07-26T03:37:28Z",
       "authors": [],
@@ -5011,7 +4997,7 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "This MBA Student’s AI Startup Is Making Healthcare Processes More Efficient poetsandquants.com",
+      "summary": "This MBA Student’s AI Startup Is Making Healthcare Processes More Efficient Poets&Quants",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://poetsandquants.com/2026/07/25/this-mba-students-ai-startup-is-making-healthcare-processes-more-efficient/",
@@ -5025,7 +5011,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "This MBA Student’s AI Startup Is Making Healthcare Processes More Efficient poetsandquants.com"
+          "body": "This MBA Student’s AI Startup Is Making Healthcare Processes More Efficient Poets&Quants"
         },
         {
           "title": "公开页面要点",
@@ -5185,6 +5171,57 @@
       "reading_minutes": 1
     },
     {
+      "id": "9e4d9f0e63826161",
+      "kind": "article",
+      "title": "Lionel Messi Invests in AI Startup Backed by Stanford Professor Fei-Fei Li",
+      "source": "36Kr",
+      "source_url": "https://eu.36kr.com/en/p/3906511292994950",
+      "published_at": "2026-07-22T08:33:17Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "A Comprehensive Guide to Pivoting to a Career in Venture Capital: Learn proven strategies to break into the competitive VC industry, including essential skill development, targeted networking tactics, relevant background positioning, entry-level role pathways (from analyst to associate), and insider tips to stand out amid growing VC talent demand. This resource equips career switchers, startup professionals, and finance newcomers with actionable steps to transition smoothly into a high-growth venture capital career, even without traditional investment banking or startup founding experience.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://eu.36kr.com/en/p/3906511292994950",
+      "key_points": [
+        "In the just-concluded final of the FIFA World Cup 2026, Spain defeated Argentina to lift the FIFA World Cup Trophy.",
+        "39-year-old Lionel Messi broke down in tears on the pitch, which might be the final match of his World Cup career.",
+        "Few people noticed that Messi had long been paving the way for the second half of his life.",
+        "It turns out that he has become a VC — in 2022, he joined forces with a group of top VC figures to found a venture capital firm Play Time in Silicon Valley, USA.",
+        "Opening the official website of Play Time, it is clear to see that the firm has recently invested in World Labs, a company founded by \"AI godmother\" Li Feifei ."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "A Comprehensive Guide to Pivoting to a Career in Venture Capital: Learn proven strategies to break into the competitive VC industry, including essential skill development, targeted networking tactics, relevant background positioning, entry-level role pathways (from analyst to associate), and insider tips to stand out amid growing VC talent demand. This resource equips career switchers, startup professionals, and finance newcomers with actionable steps to transition smoothly into a high-growth venture capital career, even without traditional investment banking or startup founding experience."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "In the just-concluded final of the FIFA World Cup 2026, Spain defeated Argentina to lift the FIFA World Cup Trophy.",
+            "39-year-old Lionel Messi broke down in tears on the pitch, which might be the final match of his World Cup career.",
+            "Few people noticed that Messi had long been paving the way for the second half of his life.",
+            "It turns out that he has become a VC — in 2022, he joined forces with a group of top VC figures to found a venture capital firm Play Time in Silicon Valley, USA.",
+            "Opening the official website of Play Time, it is clear to see that the firm has recently invested in World Labs, a company founded by \"AI godmother\" Li Feifei ."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "In the just-concluded final of the FIFA World Cup 2026, Spain defeated Argentina to lift the FIFA World Cup Trophy. 39-year-old Lionel Messi broke down in tears on the pitch, which might be the final match of his World Cup career.",
+            "Few people noticed that Messi had long been paving the way for the second half of his life. It turns out that he has become a VC — in 2022, he joined forces with a group of top VC figures to found a venture capital firm Play Time in Silicon Valley, USA. Opening the official website of Play Time, it is clear to see that the firm has recently invested in World Labs, a company founded by \"AI godmother\" Li Feifei .",
+            "The twilight of the football gods has come, and the era of the football king is fading. After countless twists and turns, now we meet Messi — the \"tech investor\"."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "6610786a80ea3510",
       "kind": "article",
       "title": "NVIDIA Rubin Platform, Open Models, Autonomous Driving: NVIDIA Presents Blueprint for the Future at CES",
@@ -5310,6 +5347,57 @@
         {
           "title": "原文短摘录",
           "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "775825728e0282a9",
+      "kind": "article",
+      "title": "Stealthy Toyota spinout gets one of Boston area’s biggest robotics deals ever - The Boston Globe",
+      "source": "The Boston Globe",
+      "source_url": "https://www.bostonglobe.com/2026/07/15/business/walden-robotics-cambridge-toyota-humanoid/",
+      "published_at": "2026-07-15T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Stealthy Toyota spinout gets one of Boston area’s biggest robotics deals ever The Boston Globe",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.bostonglobe.com/2026/07/15/business/walden-robotics-cambridge-toyota-humanoid/",
+      "key_points": [
+        "The Boston robotics scene got a jolt on Wednesday when a secretive startup founded this year with ties to MIT and automotive giant Toyota revealed it raised $300 million to build a line of AI-powered, partially humanoid machines.",
+        "Walden Robotics spun out from Toyota Research Institute with work by MIT professor Russ Tedrake on developing AI models to allow machines to operate in the real world — to help build cars or other items — without direct human control.",
+        "The upper half of Walden’s bright orange and white robots have arms and a head with two sensors resembling eyes, and the bottom half is a base attached to wheels or a fixed platform.",
+        "The Walden deal marks one of the largest ever for Boston’s robotics ecosystem, trailing only fund-raising rounds by autonomous carmaker Motional , according to research firm PitchBook.",
+        "The largest robotics deals in recent years have backed humanoid robot startups elsewhere, such as California-based Figure and Apptronik in Texas."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Stealthy Toyota spinout gets one of Boston area’s biggest robotics deals ever The Boston Globe"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "The Boston robotics scene got a jolt on Wednesday when a secretive startup founded this year with ties to MIT and automotive giant Toyota revealed it raised $300 million to build a line of AI-powered, partially humanoid machines.",
+            "Walden Robotics spun out from Toyota Research Institute with work by MIT professor Russ Tedrake on developing AI models to allow machines to operate in the real world — to help build cars or other items — without direct human control.",
+            "The upper half of Walden’s bright orange and white robots have arms and a head with two sensors resembling eyes, and the bottom half is a base attached to wheels or a fixed platform.",
+            "The Walden deal marks one of the largest ever for Boston’s robotics ecosystem, trailing only fund-raising rounds by autonomous carmaker Motional , according to research firm PitchBook.",
+            "The largest robotics deals in recent years have backed humanoid robot startups elsewhere, such as California-based Figure and Apptronik in Texas."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "The Boston robotics scene got a jolt on Wednesday when a secretive startup founded this year with ties to MIT and automotive giant Toyota revealed it raised $300 million to build a line of AI-powered, partially humanoid machines.",
+            "Walden Robotics spun out from Toyota Research Institute with work by MIT professor Russ Tedrake on developing AI models to allow machines to operate in the real world — to help build cars or other items — without direct human control. The upper half of Walden’s bright orange and white robots have arms and a head with two sensors resembling eyes, and the bottom half is a base attached to wheels or a fixed platform.",
+            "The Walden deal marks one of the largest ever for Boston’s robotics ecosystem, trailing only fund-raising rounds by autonomous carmaker Motional , according to research firm PitchBook. The largest robotics deals in recent years have backed humanoid robot startups elsewhere, such as California-based Figure and Apptronik in Texas."
+          ]
         }
       ],
       "reading_minutes": 1
@@ -5512,57 +5600,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "e9347af4723acb61",
-      "kind": "article",
-      "title": "EU AI Act Enforcement Phase Begins",
-      "source": "Wilson Sonsini",
-      "source_url": "https://www.wsgr.com/en/insights/eu-ai-act-enforcement-phase-begins.html",
-      "published_at": "2026-08-04T07:30:45Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "On August 2, 2026, the European Commission (EC), acting through its European AI Office (EU AI Office), became formally entitled to exercise its powers to investigate and enforce the EU AI Act…",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.wsgr.com/en/insights/eu-ai-act-enforcement-phase-begins.html",
-      "key_points": [
-        "On August 2, 2026, the European Commission (EC), acting through its European AI Office (EU AI Office), became formally entitled to exercise its powers to investigate and enforce the EU AI Act obligations imposed on providers of general-purpose artificial intelligence (GPAI) models, as well as rules on prohibited AI practices.",
-        "These powers are significant and include requesting information and documentation, obtaining access to models for evaluation, requiring corrective or risk-mitigation measures, and imposing fines of up to the higher of €15 million or 3 percent of the provider’s worldwide annual turnover.",
-        "Additionally, businesses providing or deploying certain AI systems are now required to comply with new transparency requirements under Article 50 of the EU AI Act.",
-        "Those AI systems are required to disclose to users when they are interacting with AI and include provenance signals (e.g., watermarks or metadata) to flag when content has been generated or altered by them.",
-        "The recently adopted AI Omnibus postponed the EU AI Act’s principal requirements for high-risk AI systems but does not affect these August 2, 2026, developments."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "On August 2, 2026, the European Commission (EC), acting through its European AI Office (EU AI Office), became formally entitled to exercise its powers to investigate and enforce the EU AI Act…"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "On August 2, 2026, the European Commission (EC), acting through its European AI Office (EU AI Office), became formally entitled to exercise its powers to investigate and enforce the EU AI Act obligations imposed on providers of general-purpose artificial intelligence (GPAI) models, as well as rules on prohibited AI practices.",
-            "These powers are significant and include requesting information and documentation, obtaining access to models for evaluation, requiring corrective or risk-mitigation measures, and imposing fines of up to the higher of €15 million or 3 percent of the provider’s worldwide annual turnover.",
-            "Additionally, businesses providing or deploying certain AI systems are now required to comply with new transparency requirements under Article 50 of the EU AI Act.",
-            "Those AI systems are required to disclose to users when they are interacting with AI and include provenance signals (e.g., watermarks or metadata) to flag when content has been generated or altered by them.",
-            "The recently adopted AI Omnibus postponed the EU AI Act’s principal requirements for high-risk AI systems but does not affect these August 2, 2026, developments."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "On August 2, 2026, the European Commission (EC), acting through its European AI Office (EU AI Office), became formally entitled to exercise its powers to investigate and enforce the EU AI Act obligations imposed on providers of general-purpose artificial intelligence (GPAI) models, as well as rules on prohibited AI practices. These powers are significant and include requesting information and documentation, obtaining access to models for evaluation, requiring corrective or risk-mitigation measures, and imposing fines of up to the higher of €15 million or 3 percent of the provider’s worldwide annual turnover.",
-            "Additionally, businesses providing or deploying certain AI systems are now required to comply with new transparency requirements under Article 50 of the EU AI Act. Those AI systems are required to disclose to users when they are interacting with AI and include provenance signals (e.g., watermarks or metadata) to flag when content has been generated or altered by them.",
-            "The recently adopted AI Omnibus postponed the EU AI Act’s principal requirements for high-risk AI systems but does not affect these August 2, 2026, developments."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "ff47a931aab03d31",
       "kind": "article",
       "title": "Inside Europe's lessons on AI safety as U.S. rules loom",
@@ -5657,7 +5694,7 @@
       "id": "f686abe275da2feb",
       "kind": "article",
       "title": "Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security",
-      "source": "NVIDIA Blog",
+      "source": "blogs.nvidia.com",
       "source_url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/",
       "published_at": "2026-07-27T07:00:00Z",
       "authors": [],
@@ -5667,7 +5704,7 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security NVIDIA Blog",
+      "summary": "Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security blogs.nvidia.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/",
@@ -5681,7 +5718,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security NVIDIA Blog"
+          "body": "Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security blogs.nvidia.com"
         },
         {
           "title": "公开页面要点",
@@ -5759,7 +5796,7 @@
       "id": "3b09213e0741fb84",
       "kind": "article",
       "title": "A Path Forward on AI Safety for the United States and China",
-      "source": "carnegieendowment.org",
+      "source": "Carnegie Endowment for International Peace",
       "source_url": "https://carnegieendowment.org/emissary/2026/07/ai-safety-parallel-us-china",
       "published_at": "2026-07-23T07:00:00Z",
       "authors": [],
@@ -5769,7 +5806,7 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "A Path Forward on AI Safety for the United States and China carnegieendowment.org",
+      "summary": "A Path Forward on AI Safety for the United States and China Carnegie Endowment for International Peace",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://carnegieendowment.org/emissary/2026/07/ai-safety-parallel-us-china",
@@ -5780,7 +5817,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "A Path Forward on AI Safety for the United States and China carnegieendowment.org"
+          "body": "A Path Forward on AI Safety for the United States and China Carnegie Endowment for International Peace"
         },
         {
           "title": "公开页面要点",
@@ -5795,55 +5832,6 @@
             "Trump and Xi in Beijing on May 15, 2026. (Pool photo by Evan Vucci/AFP via Getty Images)",
             "Emissary harnesses Carnegie’s global scholarship to deliver incisive, nuanced analysis on the most pressing international affairs challenges.",
             "The Asia Program in Washington studies disruptive security, governance, and technological risks that threaten peace, growth, and opportunity in the Asia-Pacific region, including a focus on China, Japan, and the Korean peninsula."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "2d831fc682ae63dc",
-      "kind": "article",
-      "title": "Delivery robot startup Robot.com is betting its next act on workplace humanoids",
-      "source": "Business Insider",
-      "source_url": "https://www.businessinsider.com/delivery-robot-startup-robot-com-bets-on-workplace-humanoids-2026-6",
-      "published_at": "2026-06-22T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Founder Watch",
-        "Embodied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Delivery robot startup Robot.com is betting its next act on workplace humanoids Business Insider",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.businessinsider.com/delivery-robot-startup-robot-com-bets-on-workplace-humanoids-2026-6",
-      "key_points": [
-        "Delivery robot startup Robot.com is expanding into workplace humanoids, targeting industrial, food services, and logistics customers with a new robot designed to complete repetitive tasks.",
-        "The San Francisco-based startup, formerly known as Kiwibot, told Business Insider it will launch R-noid, a humanoid robot on wheels that can package orders, load and unload boxes, and prep workstations.",
-        "The startup is working with Physical Intelligence, one of its AI lab partners, to develop custom foundation models for R-noid.",
-        "CEO Felipe Chavez said in an interview that the robot is part of a nearly two-year-long process to expand beyond campus-delivery robots and into commercial labor automation across multiple industries, from food service to logistics and healthcare."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Delivery robot startup Robot.com is betting its next act on workplace humanoids Business Insider"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Delivery robot startup Robot.com is expanding into workplace humanoids, targeting industrial, food services, and logistics customers with a new robot designed to complete repetitive tasks.",
-            "The San Francisco-based startup, formerly known as Kiwibot, told Business Insider it will launch R-noid, a humanoid robot on wheels that can package orders, load and unload boxes, and prep workstations.",
-            "The startup is working with Physical Intelligence, one of its AI lab partners, to develop custom foundation models for R-noid.",
-            "CEO Felipe Chavez said in an interview that the robot is part of a nearly two-year-long process to expand beyond campus-delivery robots and into commercial labor automation across multiple industries, from food service to logistics and healthcare."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Delivery robot startup Robot.com is expanding into workplace humanoids, targeting industrial, food services, and logistics customers with a new robot designed to complete repetitive tasks.",
-            "The San Francisco-based startup, formerly known as Kiwibot, told Business Insider it will launch R-noid, a humanoid robot on wheels that can package orders, load and unload boxes, and prep workstations. The startup is working with Physical Intelligence, one of its AI lab partners, to develop custom foundation models for R-noid.",
-            "CEO Felipe Chavez said in an interview that the robot is part of a nearly two-year-long process to expand beyond campus-delivery robots and into commercial labor automation across multiple industries, from food service to logistics and healthcare."
           ]
         }
       ],
