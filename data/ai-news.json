@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-09T18:59:15Z",
+  "generated_at": "2026-08-10T02:32:33Z",
   "item_count": 132,
   "category_counts": {
     "research": 20,
@@ -41,7 +41,7 @@
       "Qwen / 通义千问": 0,
       "腾讯元宝 / 混元": 3,
       "智谱 / Z.ai": 1,
-      "DeepSeek": 12,
+      "DeepSeek": 13,
       "字节豆包 / Seed": 0
     },
     "people_watch_coverage": {
@@ -68,25 +68,31 @@
       "note": ""
     },
     {
-      "name": "NVIDIA AI",
-      "status": "ok",
-      "count": 6,
-      "note": ""
-    },
-    {
       "name": "OpenAI",
       "status": "ok",
       "count": 9,
       "note": ""
     },
     {
-      "name": "Hugging Face",
+      "name": "Google AI",
       "status": "ok",
       "count": 7,
       "note": ""
     },
     {
-      "name": "Google AI",
+      "name": "NVIDIA AI",
+      "status": "ok",
+      "count": 6,
+      "note": ""
+    },
+    {
+      "name": "OpenAlex Conference Index",
+      "status": "ok",
+      "count": 20,
+      "note": ""
+    },
+    {
+      "name": "Hugging Face",
       "status": "ok",
       "count": 7,
       "note": ""
@@ -98,15 +104,9 @@
       "note": ""
     },
     {
-      "name": "OpenAlex Conference Index",
+      "name": "World Model Founders",
       "status": "ok",
-      "count": 20,
-      "note": ""
-    },
-    {
-      "name": "Microsoft Research",
-      "status": "ok",
-      "count": 6,
+      "count": 7,
       "note": ""
     },
     {
@@ -122,33 +122,27 @@
       "note": ""
     },
     {
+      "name": "Microsoft Research",
+      "status": "ok",
+      "count": 6,
+      "note": ""
+    },
+    {
       "name": "AI for Biology, Medicine & Materials",
       "status": "ok",
       "count": 12,
       "note": ""
     },
     {
-      "name": "Anthropic",
+      "name": "Frontier Lab Monitor",
       "status": "ok",
-      "count": 8,
-      "note": ""
-    },
-    {
-      "name": "World Model Founders",
-      "status": "ok",
-      "count": 7,
+      "count": 9,
       "note": ""
     },
     {
       "name": "AI Policy Monitor",
       "status": "ok",
       "count": 10,
-      "note": ""
-    },
-    {
-      "name": "Frontier Lab Monitor",
-      "status": "ok",
-      "count": 9,
       "note": ""
     },
     {
@@ -170,13 +164,13 @@
       "note": ""
     },
     {
-      "name": "China AI · Kimi & Qwen",
+      "name": "Anthropic",
       "status": "ok",
-      "count": 10,
+      "count": 8,
       "note": ""
     },
     {
-      "name": "Frontier Leaders on X",
+      "name": "China AI · Kimi & Qwen",
       "status": "ok",
       "count": 10,
       "note": ""
@@ -194,15 +188,21 @@
       "note": ""
     },
     {
+      "name": "China AI Social Monitor",
+      "status": "ok",
+      "count": 5,
+      "note": ""
+    },
+    {
       "name": "Vision & World Model Researchers",
       "status": "ok",
       "count": 9,
       "note": ""
     },
     {
-      "name": "China AI Social Monitor",
+      "name": "Frontier Leaders on X",
       "status": "ok",
-      "count": 4,
+      "count": 10,
       "note": ""
     },
     {
@@ -384,24 +384,6 @@
       "reader_status": "summary-only"
     },
     {
-      "id": "b7d2981f9d572cb8",
-      "category": "frontier",
-      "title": "How HSP GRUPPE builds AI capabilities for tax advisory",
-      "summary": "Discover how HSP GRUPPE uses ChatGPT Enterprise to boost productivity, improve work quality, and create more capacity for tax advisory and client service.",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/hsp-gruppe",
-      "published_at": "2026-08-07T09:00:00Z",
-      "tags": [
-        "OpenAI",
-        "Official"
-      ],
-      "importance": 100,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=b7d2981f9d572cb8",
-      "reader_status": "summary-only"
-    },
-    {
       "id": "a1c868fc8723be2c",
       "category": "impact",
       "title": "Aurora 1.5: Extending open foundation models for weather and Earth-system applications - Microsoft Research",
@@ -443,6 +425,24 @@
       "reader_url": "./reader.html?id=rhb-icml-2026",
       "reader_status": "open-pdf-cached",
       "cached_pdf": "./papers/rhb-icml-2026.pdf"
+    },
+    {
+      "id": "b7d2981f9d572cb8",
+      "category": "frontier",
+      "title": "How HSP GRUPPE builds AI capabilities for tax advisory",
+      "summary": "Discover how HSP GRUPPE uses ChatGPT Enterprise to boost productivity, improve work quality, and create more capacity for tax advisory and client service.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/hsp-gruppe",
+      "published_at": "2026-08-07T09:00:00Z",
+      "tags": [
+        "OpenAI",
+        "Official"
+      ],
+      "importance": 99,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=b7d2981f9d572cb8",
+      "reader_status": "summary-only"
     },
     {
       "id": "c83f5eea5a353b71",
@@ -719,8 +719,8 @@
       "id": "76a1e404cd3e7543",
       "category": "impact",
       "title": "Artificial intelligence in drug discovery — what it is, where we stand and the path forward",
-      "summary": "Artificial intelligence in drug discovery — what it is, where we stand and the path forward nature.com",
-      "source": "nature.com",
+      "summary": "Artificial intelligence in drug discovery — what it is, where we stand and the path forward Nature",
+      "source": "Nature",
       "url": "https://www.nature.com/articles/s41573-026-01496-2",
       "published_at": "2026-08-07T09:50:07Z",
       "tags": [
@@ -728,7 +728,7 @@
         "Biology",
         "Applied AI"
       ],
-      "importance": 96,
+      "importance": 95,
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=76a1e404cd3e7543",
@@ -951,12 +951,12 @@
       "reader_status": "indexed-summary"
     },
     {
-      "id": "dff581d6d6b62376",
+      "id": "d991ffe49c9d14c1",
       "category": "china",
       "title": "DeepSeek 宣布要大幅涨价了",
       "summary": "AIPress(AI普瑞斯)8月6日消息, DeepSeek 在官网 发布 通知称,计划近期整体上调 DeepSeek API服务的定价,预计涨幅较大.具体方...",
       "source": "微信公众号 · 程序员小猿",
-      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HBPOeGqjfTfChkgWt5VGzxvfxzQPYxFsmskuxXo4&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1786301956%26ver%3D6894%26signature%3DniFB6ZBYI%2Aw9nc01kI0rFwf0Ylym8pLYwlc9Wp1W%2AxIx38zVtPzxRxLyhDjx2hKabXxOXXGPzbKYiTXSaGQAhH0ZayTOXNN-kynv88A4WGM2a0rqgo9qhJU1SVu%2AmOqy%26new%3D1",
+      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HFI4eWqjElZtLdSqeCu2YJbSePByBeK4uTZDH0V3&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1786329154%26ver%3D6895%26signature%3DxVeNl0Ju9uGDs8eoYfWTBBtuYWn7ncYMZosI8WzbjfaMtKKv3gifSz52sr5EbirF9JOa4XfJVLqSQwKigWgMYEHeV-Q7mVkOsc0Wsvcrxn1CBFwGfwslpMxR5Ll9cXlQ%26new%3D1",
       "published_at": "2026-08-08T00:42:01Z",
       "tags": [
         "微信公众号",
@@ -966,7 +966,7 @@
       "importance": 93,
       "content_kind": "article",
       "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "reader_url": "./reader.html?id=dff581d6d6b62376",
+      "reader_url": "./reader.html?id=d991ffe49c9d14c1",
       "index_url": "https://weixin.sogou.com/weixin?type=2&query=DeepSeek+%E5%8F%91%E5%B8%83",
       "reader_status": "indexed-summary"
     },
@@ -1254,8 +1254,8 @@
       "id": "d82fd66c9994b8e4",
       "category": "impact",
       "title": "AI shortens drug discovery to around 1 year in China, Insilico CEO says",
-      "summary": "AI shortens drug discovery to around 1 year in China, Insilico CEO says Reuters",
-      "source": "Reuters",
+      "summary": "AI shortens drug discovery to around 1 year in China, Insilico CEO says reuters.com",
+      "source": "reuters.com",
       "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/ai-shortens-drug-discovery-around-1-year-china-insilico-ceo-says-2026-07-23/",
       "published_at": "2026-07-24T07:00:00Z",
       "tags": [
@@ -1325,23 +1325,23 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "8b7a5efb6f2407ae",
+      "id": "8732ec180b11cc87",
       "category": "impact",
-      "title": "New NSF initiative aims to unlock dataset value for AI-enabled scientific discovery",
-      "summary": "New NSF initiative aims to unlock dataset value for AI-enabled scientific discovery U.S. National Science Foundation (.gov)",
-      "source": "U.S. National Science Foundation (.gov)",
-      "url": "https://www.nsf.gov/news/new-nsf-initiative-aims-unlock-dataset-value-ai-enabled",
-      "published_at": "2026-07-22T07:00:00Z",
+      "title": "How AI helps scientists design the next generation of medicines",
+      "summary": "As generative AI captures public attention, a different kind of AI is reshaping drug discovery. Machine learning models are helping to compress decade-long timelines and cracking problems that were previously unsolvable.",
+      "source": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/07/23/1140346/how-ai-helps-scientists-design-the-next-generation-of-medicines/",
+      "published_at": "2026-07-23T07:00:00Z",
       "tags": [
         "AI for Science",
-        "Mathematics",
-        "Discovery"
+        "Biology",
+        "Applied AI"
       ],
       "importance": 92,
       "content_kind": "article",
       "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=8b7a5efb6f2407ae",
-      "index_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQTWVoWFdFREl4QUpnU1drZE82Sk9LMGZVSXVReHlzUXdsRUxVTzZHNmRQay1fQV9LazRIc2Z3TFFyaW16Yk9mZ2IxS2p2V2RFYlBHT1JIdGJwM1RMTnczVjBzSWxlNk0yZW1HeUJXUVAtanpHa1FQZjNxZGctclgwN2pVSl9Sb0U?oc=5",
+      "reader_url": "./reader.html?id=8732ec180b11cc87",
+      "index_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOZWw4WHBJQ1NiUEpQLXVLWU8wMkcydW5FdkgwRmN1U1lrV05yZjBEaEcxMDdCc0c1MGd6RnY5TS1ROV9ZMnFleDloeXc4S3pod0JPTmtna0hiX1ZldVdLaHdOR3NmUEdRRjFZTzA2V1JtZXBId1ZSQlNRN2V1Y0dCNXdvd2gtU3JqelItR0hCb2ozOTBlcEp5QUt5M2JUNllobzQyMjZCMnQ2Wi1VMWlVUHlKWHlwWTDSAbwBQVVfeXFMUEJkMURrLWdYMHFFNS1VeU8zcEdYZFkxWVBqdHRQSEs1amo2X0tOSUhsNVByeDYyemlCclRObkJSR3BGejhYVE4ta0NlVTk3dFhiTTFPOHNFWmFxWVlScGRNZjhZQlV1cjI5WjdaVnh3R0tOYXY0dDJmN3NmV2VVREVGV3JhT2d5T3NHLWNfVURxaTBYSGZ0Z1Bqa2p4dkRFdEswamVxcGtPeExhSHR1STFaem9MM2IxbVQ5di0?oc=5",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -1449,7 +1449,7 @@
         "Google",
         "Official"
       ],
-      "importance": 91,
+      "importance": 90,
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=d8a723d9be56e9b9",
@@ -1467,7 +1467,7 @@
         "Google",
         "Official"
       ],
-      "importance": 91,
+      "importance": 90,
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=d0c7c080a2ef764a",
@@ -2002,26 +2002,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "c67edc0b7cbc2168",
-      "category": "impact",
-      "title": "New AI Modeling Approach Accelerates the Development of Advanced Materials",
-      "summary": "New AI Modeling Approach Accelerates the Development of Advanced Materials Berkeley Lab News Center (.gov)",
-      "source": "Berkeley Lab News Center (.gov)",
-      "url": "https://newscenter.lbl.gov/2026/08/03/new-ai-modeling-approach-accelerates-the-development-of-advanced-materials/",
-      "published_at": "2026-08-03T16:10:03Z",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "importance": 87,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=c67edc0b7cbc2168",
-      "index_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNUl9mUnZ6N2pUZlVwejVxcXMtbFhfQ3ZDY2ZQa0pBTWZtNWV6ODh1WlVVajlMNUZCMTRzQzN3dlB2RUdzOFhoeWFKYS1wMHFIc3A0OWl3T3Y5SHF4a2pWZ0RZd0xnQlVpU0RESHpPRUFiRklqN1BjNXhMQmdiUUFwRVhFdXJWakM4eFVERHE5dDY3bXNqOXF3bjVpVjBhczhvQWFvZXJBTVN6akdDUW9VT2hFQQ?oc=5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "a5b4c473bff32527",
       "category": "bigtech",
       "title": "Flint: A visualization language for the AI era",
@@ -2076,6 +2056,26 @@
       "reader_url": "./reader.html?id=82affbbcb7606420",
       "index_url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wTU5ZbnQ5NlZCOEg4YXlhTFFPTmVIdlE2bUt3OTBnanFvSWRCX04zeUN2VVd0NV9pSklyb3ZwSDBZejFwTmpqYUg3TmV2YmtsZXQ1dkppQ0p3ckFCdk45NnFZZw?oc=5",
       "reader_status": "summary-only"
+    },
+    {
+      "id": "296547c2667374af",
+      "category": "impact",
+      "title": "Insilico Medicine launches AI drug discovery benchmarking platform",
+      "summary": "Insilico Medicine has unveiled a benchmarking platform designed to assess whether AI models can perform genuine drug discovery tasks, using decontaminated real-world datasets and proprietary validated programmes to move beyond inflated benchmark scores.",
+      "source": "Drug Target Review",
+      "url": "https://www.drugtargetreview.com/insilico-medicine-launches-ai-drug-discovery-benchmarking-platform/2136128.article",
+      "published_at": "2026-07-31T07:00:00Z",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "importance": 86,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=296547c2667374af",
+      "index_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOc1dwdklzOXdqUGg0cTVQSC1PRWU5Y3QxcnlZek1BaF9ZSTRndVUybHpJYUNWZ1kzQTZFSUFlV1JCdEVnem5WSko1OEtUSjFTeEQ2NXpjWEtpbjZTXy1PeldoLV83NWtxVXRJVFY1NTNqc0dHS2tCZzExUTNOQTNBVXFIYnk0YmlpZWZNcFJpd1VKYWo1MnJYcWdJR2dyOW1FblZJQk8tV2pBc2RiaTY5ZGxqZnlFUQ?oc=5",
+      "reader_status": "public-page-excerpt"
     },
     {
       "id": "0ad340bb7344ab0f",
@@ -2137,8 +2137,8 @@
       "id": "5fbae84b9d371277",
       "category": "voices",
       "title": "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says",
-      "summary": "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says Reuters",
-      "source": "Reuters",
+      "summary": "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says reuters.com",
+      "source": "reuters.com",
       "url": "https://www.reuters.com/legal/transactional/nvidia-invest-5-billion-ilya-sutskevers-ai-startup-source-says-2026-07-27/",
       "published_at": "2026-07-27T07:00:00Z",
       "tags": [
@@ -2255,7 +2255,7 @@
       "summary": "The next chapter of our AI momentum blog.google",
       "source": "blog.google",
       "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
-      "published_at": "2026-08-09T18:41:03Z",
+      "published_at": "2026-08-10T02:23:58Z",
       "tags": [
         "Researcher Watch",
         "Foundation Models",
@@ -2266,6 +2266,46 @@
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=755e821fa621c499",
       "index_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQcFZsVmdKNHhSVnQ0VDZwRXY1VmZWQno1V3MwUzMxM2VJMW5UeFFmODZXa1VDcXVBS0dOMldjY0dwcTI1V05Pc0hHUzJWcGFzMnhVMnlVLW96U0J1ZjJFQWpQVENFdnRvd0dNUFpMU003dlFlbWhSQUJDNG9qX3ZkdmJFeWloYnQ4VmNVeQ?oc=5",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "8dad591d5c8cb0b1",
+      "category": "voices",
+      "title": "AI agentic Internet traffic will obviously VASTLY exceed human usage. Not a close call at all. Cloudflare’s forecast is accurate.",
+      "summary": "AI agentic Internet traffic will obviously VASTLY exceed human usage. Not a close call at all. Cloudflare’s forecast is accurate. x.com",
+      "source": "x.com",
+      "url": "https://x.com/elonmusk/status/2086554608348873008",
+      "published_at": "2026-08-09T20:45:59Z",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "importance": 80,
+      "content_kind": "social",
+      "verification": "公开平台索引，需查看原帖",
+      "reader_url": "./reader.html?id=8dad591d5c8cb0b1",
+      "index_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5KLTNmaTlrcHlLT2NFVmpEaV9Wa2NLRUhwTFlTajNEd1o3T1piNU91ODFQU0M0TmtMS0RfR2F4dlRnWl8wLWhsV2toMmpxdlo2aDdQLTIxY2dDUi1lOEE?oc=5",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "aad1256db0dfa544",
+      "category": "voices",
+      "title": "lol another one of the things i like most about openai is tibo",
+      "summary": "lol another one of the things i like most about openai is tibo x.com",
+      "source": "x.com",
+      "url": "https://x.com/sama/status/2086470022772457950",
+      "published_at": "2026-08-09T15:09:52Z",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "importance": 80,
+      "content_kind": "social",
+      "verification": "公开平台索引，需查看原帖",
+      "reader_url": "./reader.html?id=aad1256db0dfa544",
+      "index_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9iMzRMcmExNkduOTFVR2pNc0M4S0hOZmd1dDhwamI5NWdBUjA3QUdxZ0lzRnNPOEpUajFJTmNwXzh1cDYyV3dTNXBvQ0RZUzc4dUZKSUpEdEc?oc=5",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2309,26 +2349,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "c1ce240d73268e70",
-      "category": "voices",
-      "title": "Elon Musk (@elonmusk) on X",
-      "summary": "Try it out!",
-      "source": "x.com",
-      "url": "https://x.com/elonmusk/status/2086126679248740517",
-      "published_at": "2026-08-08T16:25:33Z",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "importance": 80,
-      "content_kind": "social",
-      "verification": "公开平台索引，需查看原帖",
-      "reader_url": "./reader.html?id=c1ce240d73268e70",
-      "index_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5Ta2Y1SnI2UHhQN0dKOG96SkducnF6clU3cDZSc1A3MXlIWU0ycEd2Qi1PeWp3SnNRQ1o4cXBZTDJGZ000cWM5dVVUNUdZeExpTkhCbmQ5MXQwV1RVdVE?oc=5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "f1478e12df414e15",
       "category": "voices",
       "title": "Grok Imagine image editing is greatly improved",
@@ -2349,42 +2369,22 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "66a11d9d2caf8f39",
-      "category": "voices",
-      "title": "Really enjoyed talking to @bzcohen about AlphaGo's famous move 37 and the significance of it 10 years on for math and science breakthroughs in verifiable domains",
-      "summary": "Really enjoyed talking to @bzcohen about AlphaGo's famous move 37 and the significance of it 10 years on for math and science breakthroughs in verifiable domains x.com",
-      "source": "x.com",
-      "url": "https://x.com/demishassabis/status/2085914742414061886",
-      "published_at": "2026-08-08T02:23:23Z",
+      "id": "4e74d581a515c9e1",
+      "category": "startups",
+      "title": "Meet Ditto: the AI startup trying to reinvent college dating",
+      "summary": "Meet Ditto: the AI startup trying to reinvent college dating Mashable",
+      "source": "Mashable",
+      "url": "https://mashable.com/life/ditto-ai-matchmaker-for-college-students",
+      "published_at": "2026-08-09T20:36:47Z",
       "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "importance": 80,
-      "content_kind": "social",
-      "verification": "公开平台索引，需查看原帖",
-      "reader_url": "./reader.html?id=66a11d9d2caf8f39",
-      "index_url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5uU3FtMEFDaFJHcTdZQjFBMWpUbzFmZE40aDFvX0c5ZEYyVi1XTWZRei1ua2pVQVc2TmhkeXVFTl9FYlpnR0IyRXFNNXR5M1lqUEkybU9jVk5DcjFIQnZiNldmSVA?oc=5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "8635fbebdea1f392",
-      "category": "policy",
-      "title": "Anthropic, OpenAI among firms facing new scrutiny under EU AI Act enforcement powers",
-      "summary": "Anthropic, OpenAI among firms facing new scrutiny under EU AI Act enforcement powers CNBC",
-      "source": "CNBC",
-      "url": "https://www.cnbc.com/2026/08/03/eu-ai-act-enforcement-powers.html",
-      "published_at": "2026-08-03T10:59:18Z",
-      "tags": [
-        "Policy",
-        "Safety"
+        "Academic Startup",
+        "Funding"
       ],
       "importance": 79,
       "content_kind": "article",
       "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=8635fbebdea1f392",
-      "index_url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9ZSjkyZXhrLU11dksxVTNxUFlkZEhKdUtQU2dDMUpNUExTNG9PdGFGZFAxY05UamxEWFNlcGYwSWJQOERRV3FwN2F2ZXRHc014bDkwUTh5SktKekgzVFlseWh0WXRfUlBMTkpEMnR6dlp1YWPSAXhBVV95cUxNMFJrbWFkYTFaNGxpVVpScmJ5dVdrZGhMZ0NmZFU4dmdNSnlLa0dVaU1scllBOThZcjFQUXBuazFmMEJNZi1laGVPQjBFZ2UzZ1E3QjQwSE1fa0M2WjM4bUx4N1RKQ2NGMi1RdklGMzh1bTBLR01Ba3Q?oc=5",
+      "reader_url": "./reader.html?id=4e74d581a515c9e1",
+      "index_url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1KZ2kzMzItRHpRZXc0RDFJMmVodEJLTjlNQkRaVGRMMlllQTR2c3VETjNCWUlhWlJvUWNFTlE3c0ZTWmh2b2tQU2ZmX0tvTjl4andjbm1yLUoxSThZOVRGLWRFS0VBS2JXTWNadXRIeEQxRWVr?oc=5",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2407,11 +2407,30 @@
       "reader_status": "summary-only"
     },
     {
+      "id": "f31a7e9dba64cfd9",
+      "category": "startups",
+      "title": "DeepSeek Doubles Down on Low-Cost AI With V4-Flash Update",
+      "summary": "DeepSeek Doubles Down on Low-Cost AI With V4-Flash Update MIT Sloan Management Review Middle East",
+      "source": "MIT Sloan Management Review Middle East",
+      "url": "https://www.mitsloanme.com/article/deepseek-doubles-down-on-low-cost-ai-with-v4-flash-update/",
+      "published_at": "2026-08-03T18:39:56Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 78,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=f31a7e9dba64cfd9",
+      "index_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPdVhSLTYyRW5zNkJodjN2X1lyOUNVMmpNSlpwd1c2cGx3MFN6N0hNeDVqTmFxMDRfallwWUdJWk5PYjFkeElhSFQwTDFoV0V1UUxkREh3RnFzQUpNYm5IRnV5SUctaW9yNTlVc28yaTRwd2RzMVdCU19TWHBnWEt2WkptWFVLbGRPZ2NXbDM0a2JWbzl3ZVA1VQ?oc=5",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "ada6057e17c2e7c0",
       "category": "startups",
       "title": "Nscale to acquire Romanian co-founded AI startup Anyscale in reportedly USD 1.65 billion deal",
-      "summary": "Nscale to acquire Romanian co-founded AI startup Anyscale in reportedly USD 1.65 billion deal romania-insider.com",
-      "source": "romania-insider.com",
+      "summary": "Cloud infrastructure provider Nscale will acquire AI software startup Anyscale, which has Romanian-born university professor Ion Stoica among its co-founders, in a transaction worth roughly USD 1.65 billion, according to a Bloomberg News source. Ion Stoica is a co-founder of Anyscale, together...",
+      "source": "Romania Insider",
       "url": "https://www.romania-insider.com/nscale-acquire-romanian-co-founded-ai-startup-anyscale-july-2026",
       "published_at": "2026-07-31T12:36:52Z",
       "tags": [
@@ -2423,7 +2442,7 @@
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=ada6057e17c2e7c0",
       "index_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPV0kzS0M2QmwxZ2ctaFBGQlNTb2NBOHBkTHRxMTVtMDlKWjVHaFUxbU9lcVhWOU01NW1vdGNOSUszMmdGbjdQZUZKRFJDUHFsUHZuRG90Tl82TnJnVUR2c0pncUtQOFRXb2pOMUZxNTE2N0dtMTJ3S2s1dXhvQ3JfSFdUZDBSWEQtVE5vSlFiR0lEaDYzd2x3WEVvbTjSAaIBQVVfeXFMTVVaWE9XN1Rua1NRUks3ckU5bmNleWxiT19xTFVSUmlrRXRybS1ETUZrYnl5bzQ5eFRZTmEzUEVDQWZPTzZ6dEFpR2FEN3BoWFpJS09jZmY4TjJWNEdhc3dmTVVKeEt3dGg2ajJuQ3lUcnJBMHdhZGVMOHpwR2U5VlVfMUMteVUxWlNHOHhsaGFLOXlRb1h1RWxGajlQWVRMVW53?oc=5",
-      "reader_status": "summary-only"
+      "reader_status": "public-page-excerpt"
     },
     {
       "id": "c4a9be7dd4c03a60",
@@ -2513,31 +2532,12 @@
         "Founder Watch",
         "Embodied AI"
       ],
-      "importance": 77,
+      "importance": 76,
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=44de6388fd860837",
       "index_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOZFBBSmdkbjNfbk91YWhMTS1zbTZ4Q0dRTDRvZlZDX2hGbHdzN2ptaVAxWE1uMF90amQwZFF2VUhzc1BzS1YyUE5aQmpUNEdVeVJnb2NnZENVc3dfd2xqOFRjWmxvOXZHQ0pGM2RNVFpZOUd6ZS03NGtZak9VMEZJeng1Y3l3b1IzYTNkUlRJdVBieG43cVQ1aVVhUkpQZTcyZHdESkdObEstejQ?oc=5",
       "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "7220460ff000894f",
-      "category": "startups",
-      "title": "He Turned Down Apple. Now His AI Startup Is Challenging ChatGPT",
-      "summary": "He Turned Down Apple. Now His AI Startup Is Challenging ChatGPT Men's Journal",
-      "source": "Men's Journal",
-      "url": "https://www.mensjournal.com/news/he-turned-down-apple-now-his-ai-startup-is-challenging-chatgpt",
-      "published_at": "2026-07-27T07:00:00Z",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "importance": 76,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=7220460ff000894f",
-      "index_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNTmJZMGtsRXFsMmt1dmdqdENuR09TRUJENWoxWHBHZWZVbUVOb29uelB1YjBiZkZnU3V3N3VnU0NPYTJUbWJ5azNGN2kzWkl0WGxQeE9PREZmSkphY2p6SlZaQXo5eUVmV3N4MExkZTZ1ZUl2X2otbDJJY3BNbGxLV1JOa1hxVTBMV1UzbjY1LVplZktySFkydndDTQ?oc=5",
-      "reader_status": "summary-only"
     },
     {
       "id": "26cd40c9fa67f749",
@@ -2600,8 +2600,8 @@
       "id": "17d1c2703142e7d9",
       "category": "opensource",
       "title": "Nvidia, Microsoft and other tech giants back open-source AI models",
-      "summary": "Nvidia, Microsoft and other tech giants back open-source AI models Reuters",
-      "source": "Reuters",
+      "summary": "Nvidia, Microsoft and other tech giants back open-source AI models reuters.com",
+      "source": "reuters.com",
       "url": "https://www.reuters.com/world/asia-pacific/nvidia-microsoft-other-tech-giants-back-open-source-ai-models-2026-07-24/",
       "published_at": "2026-07-24T07:00:00Z",
       "tags": [
@@ -2620,7 +2620,7 @@
       "category": "startups",
       "title": "Lionel Messi Invests in AI Startup Backed by Stanford Professor Fei-Fei Li",
       "summary": "A Comprehensive Guide to Pivoting to a Career in Venture Capital: Learn proven strategies to break into the competitive VC industry, including essential skill development, targeted networking tactics, relevant background positioning, entry-level role pathways (from analyst to associate), and insider tips to stand out amid growing VC talent demand. This resource equips career switchers, startup professionals, and finance newcomers with actionable steps to transition smoothly into a high-growth venture capital career, even without traditional investment banking or startup founding experience.",
-      "source": "36Kr",
+      "source": "36 Kr",
       "url": "https://eu.36kr.com/en/p/3906511292994950",
       "published_at": "2026-07-22T08:33:17Z",
       "tags": [
@@ -2675,8 +2675,8 @@
       "id": "55ed513ca4bd2d03",
       "category": "startups",
       "title": "The East Bay hunts for its own AI startup boom with plenty of space to offer",
-      "summary": "The East Bay hunts for its own AI startup boom with plenty of space to offer The Business Journals",
-      "source": "The Business Journals",
+      "summary": "The East Bay hunts for its own AI startup boom with plenty of space to offer bizjournals.com",
+      "source": "bizjournals.com",
       "url": "https://www.bizjournals.com/sanfrancisco/news/2026/07/16/berkeley-emeryville-richmond-innovation-economy.html",
       "published_at": "2026-07-16T07:00:00Z",
       "tags": [
@@ -2691,29 +2691,10 @@
       "reader_status": "summary-only"
     },
     {
-      "id": "775825728e0282a9",
+      "id": "bf343c5e41ea7a92",
       "category": "startups",
-      "title": "Stealthy Toyota spinout gets one of Boston area’s biggest robotics deals ever - The Boston Globe",
-      "summary": "Stealthy Toyota spinout gets one of Boston area’s biggest robotics deals ever The Boston Globe",
-      "source": "The Boston Globe",
-      "url": "https://www.bostonglobe.com/2026/07/15/business/walden-robotics-cambridge-toyota-humanoid/",
-      "published_at": "2026-07-15T07:00:00Z",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "importance": 74,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=775825728e0282a9",
-      "index_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPcFZIdlJKenhTblVlUWZyaHZrSHo0MXFVNWQ5Wmg0S280R3FRckhMSHdCVWhkWlpSTGszY0JENm81TXBCX1JNbEdqbjVFYjJmR1QxSlhuYUd1UjdaSFdBY1ZiWmNOTTJoLVNJV3FfS2RLSk9KYWhHbnJNa3MwNXFLX0p2aFJnYjV2YmtuZ1NjV0dadHBM?oc=5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "5f5a89efbd09f340",
-      "category": "startups",
-      "title": "'I have a chip on my shoulder.' Phoebe Gates wants her $185 million AI startup Phia to succeed with 'no ties to my privilege or my last name'",
-      "summary": "'I have a chip on my shoulder.' Phoebe Gates wants her $185 million AI startup Phia to succeed with 'no ties to my privilege or my last name' Fortune",
+      "title": "'I have a chip on my shoulder.' Phoebe Gates wants her $185 million AI startup Phia to succeed with 'no ties to my privilege or my last name' | Fortune",
+      "summary": "Phoebe Gates wants her $185M AI startup to succeed with 'no ties to my privilege or my last name' Fortune",
       "source": "Fortune",
       "url": "https://fortune.com/article/phoebe-gates-startup-phia-succeed-without-parents-help-bill-gates-melinda-french-gates/",
       "published_at": "2026-07-11T07:00:00Z",
@@ -2724,7 +2705,7 @@
       "importance": 73,
       "content_kind": "article",
       "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=5f5a89efbd09f340",
+      "reader_url": "./reader.html?id=bf343c5e41ea7a92",
       "index_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNQjRhdXBZMk5jNzBXQWttTzlVbDBKT3Q0X19KWFJEcnhHZExqM0g4bk8xNXktQVBEWXhvYWZrSndvTTAzTEl6NVNjRWJ6TXF1RkFyY2ZBcTRDc00zVVpnT1ZoZDBkQTdQLXU1eUlqUks4TDhCZnQxRUMzcVBFRWptTEttaWVJYVhRampITlZlZGsyYlRrQjVNR1JSejdjMDJuVWI3aEhTenEyUHpqYWNoUTA2ZkotQQ?oc=5",
       "reader_status": "public-page-excerpt"
     },
@@ -2786,6 +2767,25 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "e9347af4723acb61",
+      "category": "policy",
+      "title": "EU AI Act Enforcement Phase Begins",
+      "summary": "On August 2, 2026, the European Commission (EC), acting through its European AI Office (EU AI Office), became formally entitled to exercise its powers to investigate and enforce the EU AI Act…",
+      "source": "Wilson Sonsini",
+      "url": "https://www.wsgr.com/en/insights/eu-ai-act-enforcement-phase-begins.html",
+      "published_at": "2026-08-04T07:30:45Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 71,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=e9347af4723acb61",
+      "index_url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5TczVSWlJhQnJMWHBhXzROV1g2V1E5ZTRRcXdPQTNoTUlBbXotTmRvTklJWlYwTW5DUmFuWGR4UkJ4VzlfM2c4SmJNSm9LTXk0dXpHWGctbzFUY05TRVdzakdVU2FlRmdVY2ZzUnd3MUJOVktuMFVURE0xLXo?oc=5",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "ff47a931aab03d31",
       "category": "policy",
       "title": "Inside Europe's lessons on AI safety as U.S. rules loom",
@@ -2805,13 +2805,13 @@
       "reader_status": "summary-only"
     },
     {
-      "id": "602f52bb1b57f705",
+      "id": "79fe1664f45900d7",
       "category": "opensource",
-      "title": "Ai2 expands collaboration with Hugging Face to accelerate open science",
-      "summary": "Ai2 is expanding its partnership with Hugging Face to give its growing portfolio of fully open models, datasets, benchmarks, and applications the storage, bandwidth, and integrations needed to reach more researchers and developers.",
-      "source": "Allen AI",
-      "url": "https://allenai.org/blog/hugging-face-partnership",
-      "published_at": "2026-08-05T07:00:00Z",
+      "title": "Public interest coalition urges Congress to investigate OpenAI, Hugging Face hack",
+      "summary": "Public interest coalition urges Congress to investigate OpenAI, Hugging Face hack FedScoop",
+      "source": "FedScoop",
+      "url": "https://fedscoop.com/public-interest-coalition-urges-congress-investigate-openai-hugging-face-hack/",
+      "published_at": "2026-08-03T21:39:13Z",
       "tags": [
         "Open Source",
         "Models & Tools"
@@ -2819,18 +2819,18 @@
       "importance": 69,
       "content_kind": "article",
       "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=602f52bb1b57f705",
-      "index_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5UdHJFc3k0TWlhbDZIdXZtNm41Y0QwUWtYRTlrcVhKaGFTVEZRTldoTXRmYU1MSEJMeGo4UTJQYTEzUVkzQkExTmtNR0J5NkpoZUJkVHhjS2Q3VnBHNWc?oc=5",
+      "reader_url": "./reader.html?id=79fe1664f45900d7",
+      "index_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQbmZsdWpIYy15VlpiNTRQRlNsM0Uxcmd5dDkybGpaRTZ2NE5hczhiTFJxeTJLTC1nS282d25nSlBnMmdIU3l2RmFZMl9fYzByWkMxQUU2WUVYenpQbGplem1FNFllUnVpTkV4MFRjTGNaZmVjSWFvWHZRN0lOY2lZdS1GUnUxelowMVlsTDY4RFhadVZZbDZZa1F0UlR2aUNY?oc=5",
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "f686abe275da2feb",
+      "id": "477136f88f8edde8",
       "category": "policy",
-      "title": "Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security",
-      "summary": "Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security blogs.nvidia.com",
-      "source": "blogs.nvidia.com",
-      "url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/",
-      "published_at": "2026-07-27T07:00:00Z",
+      "title": "The EU AI Act – when does it become enforceable now?",
+      "summary": "The Digital Omnibus on AI (AI Omnibus) has now been published in the EU’s statute book. This pushes back some of the application dates for the AI Act. So, what’s applicable now and when will the rest become applicable? This post gives an overview of key dates to be aware of and a timeline of when the obligations now become enforceable.",
+      "source": "Data Protection Report",
+      "url": "https://www.dataprotectionreport.com/2026/07/the-eu-ai-act-when-does-it-become-enforceable-now/",
+      "published_at": "2026-07-24T07:00:00Z",
       "tags": [
         "Policy",
         "Safety"
@@ -2838,8 +2838,8 @@
       "importance": 69,
       "content_kind": "article",
       "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=f686abe275da2feb",
-      "index_url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1jbERSYTYzMDlvaExvNHBYWTZrU2Zfd210S2U0NHAyMDBqWG5DS0hkenZPaUgxVDcxcEtPUUhrbVhObUpvQzV2b0VKSzRjOF9sMW9WdW03ZVhyUC1TaG5XVGdHS3Q?oc=5",
+      "reader_url": "./reader.html?id=477136f88f8edde8",
+      "index_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOZHdxZk5uR2pNT2tkdE9TQXF6VU1ELVUtZDE5MWZDLXl6VXhKRm5RNmVEdWE5QXhxd0xobzQ3YmFIQUxsd3pNMEpLRnBabmFFcm9sSVlmVWwzSVpsUnh1SWVhaGtSUzA1SmplWlZLbEh2c0xjYklDSTlBdnJkWV9GYk1oQTV0eV9NZkw0YlVLaFkwM3ZHSHBaWl9nTQ?oc=5",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2873,7 +2873,7 @@
         "Policy",
         "Safety"
       ],
-      "importance": 69,
+      "importance": 68,
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=3b09213e0741fb84",
