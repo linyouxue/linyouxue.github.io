@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-13T19:18:56Z",
-  "record_count": 84,
+  "generated_at": "2026-08-14T02:44:12Z",
+  "record_count": 132,
   "records": [
     {
       "id": "jacobian-fable-20260720",
@@ -382,6 +382,57 @@
         }
       ],
       "reading_minutes": 31
+    },
+    {
+      "id": "9c1b1031eda7ea28",
+      "kind": "article",
+      "title": "Learning more about Claude's mathematical capabilities",
+      "source": "Anthropic",
+      "source_url": "https://www.anthropic.com/research/riemann-zeta",
+      "published_at": "2026-08-13T23:32:23Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Anthropic",
+        "Research"
+      ],
+      "verification": "官方来源",
+      "summary": "An unreleased version of Claude has made strides on a problem related to the Riemann hypothesis. It improved the lower bound for the fraction of zeros of the Riemann zeta function that satisfy the hypothesis, increasing it from 41.6% to 67.2%.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.anthropic.com/research/riemann-zeta",
+      "key_points": [
+        "Recently, a member of staff at Anthropic gave Claude an unreasonable challenge.",
+        "It was about one of the most famous unsolved problems in mathematics: Take a real stab at the Riemann hypothesis .",
+        "Claude did take a real stab, but as you might have expected if you’re familiar with the difficulty of the task (the Riemann hypothesis dates back to 1859 and has a million-dollar bounty ), it didn’t succeed.",
+        "Nevertheless, during its attempt, it unexpectedly made strides on a related problem.",
+        "An unreleased research version of Claude has improved on a longstanding lower bound for the fraction of zeros of the Riemann zeta function that satisfy the Riemann hypothesis."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "An unreleased version of Claude has made strides on a problem related to the Riemann hypothesis. It improved the lower bound for the fraction of zeros of the Riemann zeta function that satisfy the hypothesis, increasing it from 41.6% to 67.2%."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Recently, a member of staff at Anthropic gave Claude an unreasonable challenge.",
+            "It was about one of the most famous unsolved problems in mathematics: Take a real stab at the Riemann hypothesis .",
+            "Claude did take a real stab, but as you might have expected if you’re familiar with the difficulty of the task (the Riemann hypothesis dates back to 1859 and has a million-dollar bounty ), it didn’t succeed.",
+            "Nevertheless, during its attempt, it unexpectedly made strides on a related problem.",
+            "An unreleased research version of Claude has improved on a longstanding lower bound for the fraction of zeros of the Riemann zeta function that satisfy the Riemann hypothesis."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Recently, a member of staff at Anthropic gave Claude an unreasonable challenge. It was about one of the most famous unsolved problems in mathematics: Take a real stab at the Riemann hypothesis .",
+            "Claude did take a real stab, but as you might have expected if you’re familiar with the difficulty of the task (the Riemann hypothesis dates back to 1859 and has a million-dollar bounty ), it didn’t succeed. Nevertheless, during its attempt, it unexpectedly made strides on a related problem.",
+            "An unreleased research version of Claude has improved on a longstanding lower bound for the fraction of zeros of the Riemann zeta function that satisfy the Riemann hypothesis. Drawing on extensive prior research by mathematicians over the past decades, it has increased this bound from 41.6% to 67.2%."
+          ]
+        }
+      ],
+      "reading_minutes": 1
     },
     {
       "id": "a37d11d589542899",
@@ -790,6 +841,51 @@
       "reading_minutes": 1
     },
     {
+      "id": "rhb-icml-2026",
+      "kind": "paper",
+      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
+      "source": "OpenReview · arXiv",
+      "source_url": "https://arxiv.org/abs/2605.02964",
+      "published_at": "2026-06-24T00:00:00Z",
+      "authors": [
+        "Kunvar Thaman"
+      ],
+      "venue": "ICML 2026",
+      "tags": [
+        "Reward Hacking",
+        "Agent Safety",
+        "Evaluation"
+      ],
+      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
+      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/rhb-icml-2026.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://arxiv.org/pdf/2605.02964",
+      "key_points": [
+        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
+        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
+        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
+        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
+        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
+        },
+        {
+          "title": "关键结果",
+          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
+        },
+        {
+          "title": "局限与结论",
+          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
+        }
+      ],
+      "reading_minutes": 46
+    },
+    {
       "id": "e03d6d9dfc157c51",
       "kind": "article",
       "title": "Testing ads in ChatGPT",
@@ -870,51 +966,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "rhb-icml-2026",
-      "kind": "paper",
-      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
-      "source": "OpenReview · arXiv",
-      "source_url": "https://arxiv.org/abs/2605.02964",
-      "published_at": "2026-06-24T00:00:00Z",
-      "authors": [
-        "Kunvar Thaman"
-      ],
-      "venue": "ICML 2026",
-      "tags": [
-        "Reward Hacking",
-        "Agent Safety",
-        "Evaluation"
-      ],
-      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
-      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/rhb-icml-2026.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://arxiv.org/pdf/2605.02964",
-      "key_points": [
-        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
-        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
-        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
-        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
-        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
-        },
-        {
-          "title": "关键结果",
-          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
-        },
-        {
-          "title": "局限与结论",
-          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
-        }
-      ],
-      "reading_minutes": 46
-    },
-    {
       "id": "db8dc518c03925fc",
       "kind": "article",
       "title": "Building Effective AI Agents",
@@ -960,57 +1011,6 @@
             "We've worked with dozens of teams building LLM agents across industries. Consistently, the most successful implementations use simple, composable patterns rather than complex frameworks.",
             "Note: Much of the tooling landscape described in this post has changed since December 2024. For our current approach, see how we built Claude Managed Agents and the Managed Agents documentation . Over the past year, we've worked with dozens of teams building large language model (LLM) agents across industries. Consistently, the most successful implementations weren't using complex frameworks or specialized libraries. Instead, they were building with simple, composable patterns.",
             "In this post, we share what we’ve learned from working with our customers and building agents ourselves, and give practical advice for developers on building effective agents."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "9c1b1031eda7ea28",
-      "kind": "article",
-      "title": "Learning more about Claude's mathematical capabilities",
-      "source": "Anthropic",
-      "source_url": "https://www.anthropic.com/research/riemann-zeta",
-      "published_at": "2026-08-10T22:34:13Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Anthropic",
-        "Research"
-      ],
-      "verification": "官方来源",
-      "summary": "An unreleased version of Claude has made strides on a problem related to the Riemann hypothesis. It improved the lower bound for the fraction of zeros of the Riemann zeta function that satisfy the hypothesis, increasing it from 41.6% to 67.2%.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.anthropic.com/research/riemann-zeta",
-      "key_points": [
-        "Recently, a member of staff at Anthropic gave Claude an unreasonable challenge.",
-        "It was about one of the most famous unsolved problems in mathematics: Take a real stab at the Riemann hypothesis .",
-        "Claude did take a real stab, but as you might have expected if you’re familiar with the difficulty of the task (the Riemann hypothesis dates back to 1859 and has a million-dollar bounty ), it didn’t succeed.",
-        "Nevertheless, during its attempt, it unexpectedly made strides on a related problem.",
-        "An unreleased research version of Claude has improved on a longstanding lower bound for the fraction of zeros of the Riemann zeta function that satisfy the Riemann hypothesis."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "An unreleased version of Claude has made strides on a problem related to the Riemann hypothesis. It improved the lower bound for the fraction of zeros of the Riemann zeta function that satisfy the hypothesis, increasing it from 41.6% to 67.2%."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Recently, a member of staff at Anthropic gave Claude an unreasonable challenge.",
-            "It was about one of the most famous unsolved problems in mathematics: Take a real stab at the Riemann hypothesis .",
-            "Claude did take a real stab, but as you might have expected if you’re familiar with the difficulty of the task (the Riemann hypothesis dates back to 1859 and has a million-dollar bounty ), it didn’t succeed.",
-            "Nevertheless, during its attempt, it unexpectedly made strides on a related problem.",
-            "An unreleased research version of Claude has improved on a longstanding lower bound for the fraction of zeros of the Riemann zeta function that satisfy the Riemann hypothesis."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Recently, a member of staff at Anthropic gave Claude an unreasonable challenge. It was about one of the most famous unsolved problems in mathematics: Take a real stab at the Riemann hypothesis .",
-            "Claude did take a real stab, but as you might have expected if you’re familiar with the difficulty of the task (the Riemann hypothesis dates back to 1859 and has a million-dollar bounty ), it didn’t succeed. Nevertheless, during its attempt, it unexpectedly made strides on a related problem.",
-            "An unreleased research version of Claude has improved on a longstanding lower bound for the fraction of zeros of the Riemann zeta function that satisfy the Riemann hypothesis. Drawing on extensive prior research by mathematicians over the past decades, it has increased this bound from 41.6% to 67.2%."
           ]
         }
       ],
@@ -1181,6 +1181,92 @@
           "title": "公开页面要点",
           "bullets": [
             "OpenAI 与 Ginkgo Bioworks 构建 AI 驱动的自动化实验流程，让模型提出实验条件、根据结果继续迭代，并在受控实验中将无细胞蛋白生产成本降低约 40%。"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "0c5420bfeb754341",
+      "kind": "article",
+      "title": "These 10 'AI-proof' jobs require ‘uniquely human’ skills, says report—you have to 'react in real time'",
+      "source": "CNBC",
+      "source_url": "https://www.cnbc.com/2026/08/10/the-top-ai-proof-jobs-that-require-uniquely-human-skills.html",
+      "published_at": "2026-08-10T16:47:22Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "These 10 'AI-proof' jobs require ‘uniquely human’ skills, says report—you have to 'react in real time' CNBC",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.cnbc.com/2026/08/10/the-top-ai-proof-jobs-that-require-uniquely-human-skills.html",
+      "key_points": [
+        "Work The top 10 highest-paying jobs for teens in the U.S.—No.",
+        "1 isn't retail or food service Raising Successful Kids If you want your kids to focus better, do 5 things—they'll have an 'easier' time paying attention Work 'Doomjobbing’ can hurt your job search and worsen anxiety, experts say: Why it happens and how to avoid it"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "These 10 'AI-proof' jobs require ‘uniquely human’ skills, says report—you have to 'react in real time' CNBC"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Work The top 10 highest-paying jobs for teens in the U.S.—No.",
+            "1 isn't retail or food service Raising Successful Kids If you want your kids to focus better, do 5 things—they'll have an 'easier' time paying attention Work 'Doomjobbing’ can hurt your job search and worsen anxiety, experts say: Why it happens and how to avoid it"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Work The top 10 highest-paying jobs for teens in the U.S.—No. 1 isn't retail or food service",
+            "Raising Successful Kids If you want your kids to focus better, do 5 things—they'll have an 'easier' time paying attention",
+            "Work 'Doomjobbing’ can hurt your job search and worsen anxiety, experts say: Why it happens and how to avoid it"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "76a1e404cd3e7543",
+      "kind": "article",
+      "title": "Artificial intelligence in drug discovery — what it is, where we stand and the path forward",
+      "source": "Nature",
+      "source_url": "https://www.nature.com/articles/s41573-026-01496-2",
+      "published_at": "2026-08-07T09:50:07Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Artificial intelligence in drug discovery — what it is, where we stand and the path forward Nature",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "resolved_url": "https://www.nature.com/articles/s41573-026-01496-2",
+      "key_points": [
+        "Artificial intelligence in drug discovery — what it is, where we stand and the path forward Nature"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Artificial intelligence in drug discovery — what it is, where we stand and the path forward Nature"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Artificial intelligence in drug discovery — what it is, where we stand and the path forward Nature"
           ]
         },
         {
@@ -1461,7 +1547,7 @@
       "key_points": [
         "Elon Musk @elonmusk Grok Build is now open source SpaceXAI @SpaceXAI Jul 15 We've open-sourced Grok Build and have reset usage limits for all users.",
         "Open sourcing Grok Build allows anyone to support making a reliable and robust harness.",
-        "Check out our code, including the Git repo for the Grok Build CLI. x.ai/open-source 8:48 PM · Jul 15, 2026 4.8M Views 1.9K 2.9K 20K 1.4K Aurelia Marcella @Aurelia32824 Jul 15 I am a longtime Grok user and particularly appreciate the broad, versatile intelligence – perfect for marketing tasks like strategy development, market analysis, creative concepts, and…",
+        "Check out our code, including the Git repo for the Grok Build CLI. x.ai/open-source 8:48 PM · Jul 15, 2026 4.8M Views 1.9K 2.8K 20K 1.4K Aurelia Marcella @Aurelia32824 Jul 15 I am a longtime Grok user and particularly appreciate the broad, versatile intelligence – perfect for marketing tasks like strategy development, market analysis, creative concepts, and…",
         "Grok delivers exactly what narrow specialist tools cannot.",
         "In professional Show more 3 4 51 115K Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Jul 15 Grok keeps on delivering 😎🔥 1 9 43 3.5K"
       ],
@@ -1475,7 +1561,7 @@
           "bullets": [
             "Elon Musk @elonmusk Grok Build is now open source SpaceXAI @SpaceXAI Jul 15 We've open-sourced Grok Build and have reset usage limits for all users.",
             "Open sourcing Grok Build allows anyone to support making a reliable and robust harness.",
-            "Check out our code, including the Git repo for the Grok Build CLI. x.ai/open-source 8:48 PM · Jul 15, 2026 4.8M Views 1.9K 2.9K 20K 1.4K Aurelia Marcella @Aurelia32824 Jul 15 I am a longtime Grok user and particularly appreciate the broad, versatile intelligence – perfect for marketing tasks like strategy development, market analysis, creative concepts, and…",
+            "Check out our code, including the Git repo for the Grok Build CLI. x.ai/open-source 8:48 PM · Jul 15, 2026 4.8M Views 1.9K 2.8K 20K 1.4K Aurelia Marcella @Aurelia32824 Jul 15 I am a longtime Grok user and particularly appreciate the broad, versatile intelligence – perfect for marketing tasks like strategy development, market analysis, creative concepts, and…",
             "Grok delivers exactly what narrow specialist tools cannot.",
             "In professional Show more 3 4 51 115K Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Jul 15 Grok keeps on delivering 😎🔥 1 9 43 3.5K"
           ]
@@ -1483,9 +1569,61 @@
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok Build is now open source SpaceXAI @SpaceXAI Jul 15 We've open-sourced Grok Build and have reset usage limits for all users. Open sourcing Grok Build allows anyone to support making a reliable and robust harness. Check out our code, including the Git repo for the Grok Build CLI. x.ai/open-source 8:48 PM · Jul 15, 2026 4.8M Views 1.9K 2.9K 20K 1.4K",
+            "Elon Musk @elonmusk Grok Build is now open source SpaceXAI @SpaceXAI Jul 15 We've open-sourced Grok Build and have reset usage limits for all users. Open sourcing Grok Build allows anyone to support making a reliable and robust harness. Check out our code, including the Git repo for the Grok Build CLI. x.ai/open-source 8:48 PM · Jul 15, 2026 4.8M Views 1.9K 2.8K 20K 1.4K",
             "Aurelia Marcella @Aurelia32824 Jul 15 I am a longtime Grok user and particularly appreciate the broad, versatile intelligence – perfect for marketing tasks like strategy development, market analysis, creative concepts, and graphic prompting. Grok delivers exactly what narrow specialist tools cannot. In professional Show more 3 4 51 115K",
             "Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Jul 15 Grok keeps on delivering 😎🔥 1 9 43 3.5K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "9c65b2e009741fa7",
+      "kind": "article",
+      "title": "Claude Fable 5 AI finds a tiny formula that topples an 87-year-old math conjecture",
+      "source": "ScienceDaily",
+      "source_url": "https://www.sciencedaily.com/releases/2026/08/260804034634.htm",
+      "published_at": "2026-08-05T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "A mathematician working at Anthropic says he used the AI model Claude Fable 5 to uncover a remarkably simple counterexample to the Jacobian conjecture, a famous problem that has resisted mathematicians for more than a century. The result shows that the conjecture is false in three dimensions and above, although the original two-dimensional version remains unsolved.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.sciencedaily.com/releases/2026/08/260804034634.htm",
+      "key_points": [
+        "As millions of people were coming down from the excitement of the FIFA World Cup Final recently, a different kind of excitement was building within the mathematical community.",
+        "Levent Alpöge, a mathematician working at the artificial intelligence (AI) company Anthropic, made a very casual announcement on X that he had found a counterexample to the Jacobian conjecture, a very old and well-known problem in a field of mathematics called algebraic geometry.",
+        "He had done this using Anthropic’s large language model Claude Fable 5, released to the general public only a few weeks ago.",
+        "This is just the latest of many striking mathematical breakthroughs made by mathematicians working with large language models.",
+        "But this one feels a little different to those that have come before."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "A mathematician working at Anthropic says he used the AI model Claude Fable 5 to uncover a remarkably simple counterexample to the Jacobian conjecture, a famous problem that has resisted mathematicians for more than a century. The result shows that the conjecture is false in three dimensions and above, although the original two-dimensional version remains unsolved."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "As millions of people were coming down from the excitement of the FIFA World Cup Final recently, a different kind of excitement was building within the mathematical community.",
+            "Levent Alpöge, a mathematician working at the artificial intelligence (AI) company Anthropic, made a very casual announcement on X that he had found a counterexample to the Jacobian conjecture, a very old and well-known problem in a field of mathematics called algebraic geometry.",
+            "He had done this using Anthropic’s large language model Claude Fable 5, released to the general public only a few weeks ago.",
+            "This is just the latest of many striking mathematical breakthroughs made by mathematicians working with large language models.",
+            "But this one feels a little different to those that have come before."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "As millions of people were coming down from the excitement of the FIFA World Cup Final recently, a different kind of excitement was building within the mathematical community.",
+            "Levent Alpöge, a mathematician working at the artificial intelligence (AI) company Anthropic, made a very casual announcement on X that he had found a counterexample to the Jacobian conjecture, a very old and well-known problem in a field of mathematics called algebraic geometry. He had done this using Anthropic’s large language model Claude Fable 5, released to the general public only a few weeks ago.",
+            "This is just the latest of many striking mathematical breakthroughs made by mathematicians working with large language models. But this one feels a little different to those that have come before."
           ]
         }
       ],
@@ -1545,7 +1683,7 @@
       "kind": "article",
       "title": "刷屏! DeepSeek 重要 发布 ,8月17日00:00开始生效",
       "source": "微信公众号 · 中国基金报",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1786648689&ver=6902&signature=qTEaDuC67e8Nqwm8ocA-mVJsHpcBFD6JJCyNEMX*GjSiXHblNZrYDL8Qj*ih63F9w8O3khTfDhe5laC7nLwpce4z7pagAnh47lM1ukLCAJ*NoaBcrzkRkjYe9A-vBef0&new=1",
+      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HJsYfmqjjPGsInTBc0ig8G_0EJs-d247zXIBeuZ1&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1786648689%26ver%3D6902%26signature%3DqTEaDuC67e8Nqwm8ocA-mVJsHpcBFD6JJCyNEMX%2AGjSiXHblNZrYDL8Qj%2Aih63F9w8O3khTfDhe5laC7nLwpce4z7pagAnh47lM1ukLCAJ%2ANoaBcrzkRkjYe9A-vBef0%26new%3D1",
       "published_at": "2026-08-13T12:21:05Z",
       "authors": [],
       "venue": "",
@@ -1581,11 +1719,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "6ed13a9898e92ce7",
+      "id": "d39df2843813a1f3",
       "kind": "article",
       "title": "DeepSeek 调价方案 公布 :空闲时段价格为高峰的一半,8月17日生效",
       "source": "微信公众号 · 中国新闻网",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1786648689&ver=6902&signature=fMARhtUvVyP8DK8DRPRu4*e-fvGvbsha0DsKZPSohMtRJqNSnQQ3ZESql5BeaQRTWRAKYLhWXMD23hcdortEivFfIa2ooVMt6Lriq832taI98AmGSpWkRXGSE83GFNRs&new=1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1786675429&ver=6903&signature=IMUycFsxwyFSoqVSt22Gg9GGyxfHMKhGhuYAt*J9QPAAKtoaXR5DmVzs-FVmsU80x-9mgiVEn5BE1T-RBYTBCBXNujl8G8RSQT3x0iXciyLXfzy8c1uOllr3th28E7jq&new=1",
       "published_at": "2026-08-13T12:10:58Z",
       "authors": [],
       "venue": "",
@@ -1598,7 +1736,7 @@
       "summary": "13日,深度求索( DeepSeek )宣布将对 DeepSeek API价格进行更新调整,采用峰谷定价,空闲时段价格为高峰时段价格的一半,鼓...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HJsYfmqj7c6eeM0C2ATa-8prfJ6yNv0jr283xuqB&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1786648689%26ver%3D6902%26signature%3DfMARhtUvVyP8DK8DRPRu4%2Ae-fvGvbsha0DsKZPSohMtRJqNSnQQ3ZESql5BeaQRTWRAKYLhWXMD23hcdortEivFfIa2ooVMt6Lriq832taI98AmGSpWkRXGSE83GFNRs%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HPSAfmqjipNkj61Riad9lxmSL1C6TNIQJH21f5MF&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1786675429%26ver%3D6903%26signature%3DIMUycFsxwyFSoqVSt22Gg9GGyxfHMKhGhuYAt%2AJ9QPAAKtoaXR5DmVzs-FVmsU80x-9mgiVEn5BE1T-RBYTBCBXNujl8G8RSQT3x0iXciyLXfzy8c1uOllr3th28E7jq%26new%3D1",
       "key_points": [
         "13日,深度求索( DeepSeek )宣布将对 DeepSeek API价格进行更新调整,采用峰谷定价,空闲时段价格为高峰时段价格的一半,鼓..."
       ],
@@ -2328,6 +2466,99 @@
       "reading_minutes": 1
     },
     {
+      "id": "d82fd66c9994b8e4",
+      "kind": "article",
+      "title": "AI shortens drug discovery to around 1 year in China, Insilico CEO says",
+      "source": "Reuters",
+      "source_url": "https://www.reuters.com/business/healthcare-pharmaceuticals/ai-shortens-drug-discovery-around-1-year-china-insilico-ceo-says-2026-07-23/",
+      "published_at": "2026-07-24T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "AI shortens drug discovery to around 1 year in China, Insilico CEO says Reuters",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 401: HTTP Forbidden",
+      "resolved_url": "https://www.reuters.com/business/healthcare-pharmaceuticals/ai-shortens-drug-discovery-around-1-year-china-insilico-ceo-says-2026-07-23/",
+      "key_points": [
+        "AI shortens drug discovery to around 1 year in China, Insilico CEO says Reuters"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AI shortens drug discovery to around 1 year in China, Insilico CEO says Reuters"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "AI shortens drug discovery to around 1 year in China, Insilico CEO says Reuters"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "8732ec180b11cc87",
+      "kind": "article",
+      "title": "How AI helps scientists design the next generation of medicines",
+      "source": "MIT Technology Review",
+      "source_url": "https://www.technologyreview.com/2026/07/23/1140346/how-ai-helps-scientists-design-the-next-generation-of-medicines/",
+      "published_at": "2026-07-23T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "As generative AI captures public attention, a different kind of AI is reshaping drug discovery. Machine learning models are helping to compress decade-long timelines and cracking problems that were previously unsolvable.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.technologyreview.com/2026/07/23/1140346/how-ai-helps-scientists-design-the-next-generation-of-medicines/",
+      "key_points": [
+        "Designing and developing a new medicine is an expensive, failure-prone scientific challenge.",
+        "A new drug can take many years to develop, at the cost of a significant investment.",
+        "And even then, most possible candidates never reach the patient.",
+        "For biologic medicines, therapies made from engineered proteins rather than synthetic chemistry (which are often used to treat conditions across most major acute and chronic diseases), the complexity is even greater.",
+        "Scientists explore vast quantities of possible molecules, looking for the rare few that will bind to the right target, remain stable in the human body, and be manufacturable at scale."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "As generative AI captures public attention, a different kind of AI is reshaping drug discovery. Machine learning models are helping to compress decade-long timelines and cracking problems that were previously unsolvable."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Designing and developing a new medicine is an expensive, failure-prone scientific challenge.",
+            "A new drug can take many years to develop, at the cost of a significant investment.",
+            "And even then, most possible candidates never reach the patient.",
+            "For biologic medicines, therapies made from engineered proteins rather than synthetic chemistry (which are often used to treat conditions across most major acute and chronic diseases), the complexity is even greater.",
+            "Scientists explore vast quantities of possible molecules, looking for the rare few that will bind to the right target, remain stable in the human body, and be manufacturable at scale."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Designing and developing a new medicine is an expensive, failure-prone scientific challenge. A new drug can take many years to develop, at the cost of a significant investment. And even then, most possible candidates never reach the patient. For biologic medicines, therapies made from engineered proteins rather than synthetic chemistry (which are often used to treat conditions across most major acute and chronic diseases), the complexity is even greater.",
+            "Scientists explore vast quantities of possible molecules, looking for the rare few that will bind to the right target, remain stable in the human body, and be manufacturable at scale. Today, AI is speeding up these processes and has quickly become a core part of the infrastructure in pharmaceutical R&D.",
+            "AI-assisted design is a growing part of how biologic drug candidates are developed, and companies like AstraZeneca are actively building its engineering teams to push this further. “Everything we do, whether it’s design, make, test, or analyze, is now computationally enhanced,” says Puja Sapra, senior vice president and head of R&D biologics engineering and oncology targeted discovery at AstraZeneca. “The cycle times are getting shorter while productivity and innovation increase.”"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "demis-frontier-ai-framework-20260714",
       "kind": "social",
       "title": "A Framework for Frontier AI and the Dawning of a New Age",
@@ -2524,6 +2755,47 @@
             "Over 353,000 developers recently joined our five-day intensive course to master building and deploying AI agents using natural language. Participants collaborated on Discord to debug code and submitted over 6,000 impressive capstone projects, ranging from historical transcription tools to space-weather research systems. You can still access all course materials on the Kaggle Learn website to sharpen your skills at your own pace.",
             "\"Inside our 353,000-person vibe coding course\" explores how we teach modern AI development."
           ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "404953b267647baa",
+      "kind": "article",
+      "title": "Investors bet on AI drug discovery despite approval gap",
+      "source": "Financial Times",
+      "source_url": "https://www.ft.com/content/d75ca6b2-46f5-4343-a364-21a4440f5197?syn-25a6b1a6=1",
+      "published_at": "2026-07-20T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Investors bet on AI drug discovery despite approval gap Financial Times",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://www.ft.com/content/d75ca6b2-46f5-4343-a364-21a4440f5197?syn-25a6b1a6=1",
+      "key_points": [
+        "Investors bet on AI drug discovery despite approval gap Financial Times"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Investors bet on AI drug discovery despite approval gap Financial Times"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Investors bet on AI drug discovery despite approval gap Financial Times"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -3280,6 +3552,99 @@
       "reading_minutes": 1
     },
     {
+      "id": "62370045db6bed55",
+      "kind": "article",
+      "title": "Job Seekers Are Racing to AI-Proof Their Résumés",
+      "source": "WSJ",
+      "source_url": "https://www.wsj.com/tech/ai/job-seekers-are-racing-to-ai-proof-their-resumes-f310f43c",
+      "published_at": "2026-08-13T12:36:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Job Seekers Are Racing to AI-Proof Their Résumés WSJ",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 401: HTTP Forbidden",
+      "resolved_url": "https://www.wsj.com/tech/ai/job-seekers-are-racing-to-ai-proof-their-resumes-f310f43c",
+      "key_points": [
+        "Job Seekers Are Racing to AI-Proof Their Résumés WSJ"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Job Seekers Are Racing to AI-Proof Their Résumés WSJ"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Job Seekers Are Racing to AI-Proof Their Résumés WSJ"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "356873e0751da302",
+      "kind": "article",
+      "title": "Teaching AI the biology of antibodies speeds drug discovery",
+      "source": "Phys.org",
+      "source_url": "https://phys.org/news/2026-08-ai-biology-antibodies-drug-discovery.html",
+      "published_at": "2026-08-13T09:00:03Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Designing an effective antibody drug is like searching for the right key in a warehouse of locks. Scientists may begin with millions—or even billions—of antibody candidates, but only a tiny fraction will recognize and bind tightly to the disease target. Identifying those rare candidates has long been one of the biggest challenges in developing antibody medicines.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://phys.org/news/2026-08-ai-biology-antibodies-drug-discovery.html",
+      "key_points": [
+        "This article has been reviewed according to Science X's editorial process and policies .",
+        "Editors have highlighted the following attributes while ensuring the content's credibility: Designing an effective antibody drug is like searching for the right key in a warehouse of locks.",
+        "Scientists may begin with millions—or even billions—of antibody candidates, but only a tiny fraction will recognize and bind tightly to the disease target.",
+        "Identifying those rare candidates has long been one of the biggest challenges in developing antibody medicines.",
+        "Boston University researchers have now developed an antibody-specific AI framework that dramatically narrows that search."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Designing an effective antibody drug is like searching for the right key in a warehouse of locks. Scientists may begin with millions—or even billions—of antibody candidates, but only a tiny fraction will recognize and bind tightly to the disease target. Identifying those rare candidates has long been one of the biggest challenges in developing antibody medicines."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "This article has been reviewed according to Science X's editorial process and policies .",
+            "Editors have highlighted the following attributes while ensuring the content's credibility: Designing an effective antibody drug is like searching for the right key in a warehouse of locks.",
+            "Scientists may begin with millions—or even billions—of antibody candidates, but only a tiny fraction will recognize and bind tightly to the disease target.",
+            "Identifying those rare candidates has long been one of the biggest challenges in developing antibody medicines.",
+            "Boston University researchers have now developed an antibody-specific AI framework that dramatically narrows that search."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "This article has been reviewed according to Science X's editorial process and policies . Editors have highlighted the following attributes while ensuring the content's credibility:",
+            "Designing an effective antibody drug is like searching for the right key in a warehouse of locks. Scientists may begin with millions—or even billions—of antibody candidates, but only a tiny fraction will recognize and bind tightly to the disease target. Identifying those rare candidates has long been one of the biggest challenges in developing antibody medicines.",
+            "Boston University researchers have now developed an antibody-specific AI framework that dramatically narrows that search. Rather than building a larger AI model, the team redesigned how AI learns, focusing it on the small regions of antibodies that recognize disease targets."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "df0c3d1d4d7f74b2",
       "kind": "article",
       "title": "What We Learned by Reproducing 2,200 papers from ICML",
@@ -3431,6 +3796,58 @@
       "reading_minutes": 1
     },
     {
+      "id": "c1d869e9c5190528",
+      "kind": "article",
+      "title": "AI meets particle physics in UA-Led Department of Energy project",
+      "source": "UA News Center",
+      "source_url": "https://news.ua.edu/2026/08/ua-genesis-mission-award-will-create-ai-tool-for-particle-physics/",
+      "published_at": "2026-08-11T15:14:51Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "AI meets particle physics in UA-Led Department of Energy project UA News Center",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.ua.edu/2026/08/ua-genesis-mission-award-will-create-ai-tool-for-particle-physics/",
+      "key_points": [
+        "Home » AI meets particle physics in UA-Led Department of Energy project TUSCALOOSA, Ala. — High-energy physics experiments produce enough data in one second to keep a team of scientists busy for years.",
+        "A University of Alabama-led research team will build an artificial intelligence tool to help sift through that flood of data, speeding up the pace of discovery so scientists can focus on the science itself.",
+        "The project is a joint effort of theorists and experimentalists in particle physics and builds on existing collaborations between The University of Alabama and the Fermi National Accelerator Laboratory in Chicago.",
+        "The Department of Energy’s Genesis Mission is a national initiative that unites government, industry, academia and philanthropy to accelerate scientific discovery through a platform combining AI, supercomputing, quantum systems and advanced scientific instruments.",
+        "The UA-led project is one of only 278 selected for Phase 1 funding from more than 5,000 proposals."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AI meets particle physics in UA-Led Department of Energy project UA News Center"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Home » AI meets particle physics in UA-Led Department of Energy project TUSCALOOSA, Ala. — High-energy physics experiments produce enough data in one second to keep a team of scientists busy for years.",
+            "A University of Alabama-led research team will build an artificial intelligence tool to help sift through that flood of data, speeding up the pace of discovery so scientists can focus on the science itself.",
+            "The project is a joint effort of theorists and experimentalists in particle physics and builds on existing collaborations between The University of Alabama and the Fermi National Accelerator Laboratory in Chicago.",
+            "The Department of Energy’s Genesis Mission is a national initiative that unites government, industry, academia and philanthropy to accelerate scientific discovery through a platform combining AI, supercomputing, quantum systems and advanced scientific instruments.",
+            "The UA-led project is one of only 278 selected for Phase 1 funding from more than 5,000 proposals."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Home » AI meets particle physics in UA-Led Department of Energy project",
+            "TUSCALOOSA, Ala. — High-energy physics experiments produce enough data in one second to keep a team of scientists busy for years. A University of Alabama-led research team will build an artificial intelligence tool to help sift through that flood of data, speeding up the pace of discovery so scientists can focus on the science itself. The project is a joint effort of theorists and experimentalists in particle physics and builds on existing collaborations between The University of Alabama and the Fermi National Accelerator Laboratory in Chicago.",
+            "The Department of Energy’s Genesis Mission is a national initiative that unites government, industry, academia and philanthropy to accelerate scientific discovery through a platform combining AI, supercomputing, quantum systems and advanced scientific instruments. The UA-led project is one of only 278 selected for Phase 1 funding from more than 5,000 proposals."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "462b544e40057c68",
       "kind": "article",
       "title": "Thinking of ACE? We Can Do It with Fewer Tokens",
@@ -3476,6 +3893,58 @@
             "ALTK-Evolve and ACE both let an agent learn from its own trajectories. The difference is what they do with what they learn — and that decides the token bill.",
             "Give an LLM agent a realistic multi-step task — split a bill, find a song, reconcile an order across nine simulated apps — and when it fails, it usually isn't for lack of knowledge. It mis-paginates an API, resolves the wrong person, or returns a value when none was asked for. The model knows the APIs; what it hasn't internalized is how to use them reliably . That's learnable from the agent's own history.",
             "Two recent systems do exactly this, on the same kind of agent: ACE (Agentic Context Engineering) and our ALTK-Evolve ( introduced here ). Both are a form of agentic memory — turning an agent's past trajectories into reusable lessons and feeding them back at inference time, no weight updates, no human labels. They even agree on the hard part. Where they part ways is delivery ."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "7d637bfb564b43bd",
+      "kind": "article",
+      "title": "With a feel for physics, AI models simulate a wider range of real-world scenarios",
+      "source": "MIT News",
+      "source_url": "https://news.mit.edu/2026/ai-models-simulate-wider-range-of-real-world-scenarios-0810",
+      "published_at": "2026-08-10T19:25:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "“GeoPT” teaches AI models the basics of physics by virtually reenacting everyday mechanical interactions in 3D. In turn, the systems can simulate how vehicles and other objects respond to things like wind and water more efficiently and accurately.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.mit.edu/2026/ai-models-simulate-wider-range-of-real-world-scenarios-0810",
+      "key_points": [
+        "With a feel for physics, AI models simulate a wider range of real-world scenarios Artificial intelligence models are jacks of many trades, including writing, generating images, and creating 3D models.",
+        "But they aren’t as helpful when it comes to testing robots or designs for vehicles in diverse environments, since they don’t understand physics as well as they do pixels or text.",
+        "To build an AI system that can reliably simulate a variety of physical scenarios, engineers need a range of physics data at a scale that isn’t yet feasible.",
+        "That’s because it’s very time-consuming to get neural networks just a few data points they can understand.",
+        "They rely on algorithms called “numerical solvers” to calculate physical properties at different points of a 3D shape."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "“GeoPT” teaches AI models the basics of physics by virtually reenacting everyday mechanical interactions in 3D. In turn, the systems can simulate how vehicles and other objects respond to things like wind and water more efficiently and accurately."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "With a feel for physics, AI models simulate a wider range of real-world scenarios Artificial intelligence models are jacks of many trades, including writing, generating images, and creating 3D models.",
+            "But they aren’t as helpful when it comes to testing robots or designs for vehicles in diverse environments, since they don’t understand physics as well as they do pixels or text.",
+            "To build an AI system that can reliably simulate a variety of physical scenarios, engineers need a range of physics data at a scale that isn’t yet feasible.",
+            "That’s because it’s very time-consuming to get neural networks just a few data points they can understand.",
+            "They rely on algorithms called “numerical solvers” to calculate physical properties at different points of a 3D shape."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "With a feel for physics, AI models simulate a wider range of real-world scenarios",
+            "Artificial intelligence models are jacks of many trades, including writing, generating images, and creating 3D models. But they aren’t as helpful when it comes to testing robots or designs for vehicles in diverse environments, since they don’t understand physics as well as they do pixels or text.",
+            "To build an AI system that can reliably simulate a variety of physical scenarios, engineers need a range of physics data at a scale that isn’t yet feasible. That’s because it’s very time-consuming to get neural networks just a few data points they can understand. They rely on algorithms called “numerical solvers” to calculate physical properties at different points of a 3D shape. It’s a thorough process, but it takes so long that it limits how much data you’ll have to, say, test if your plane designs are safe and aerodynamic. A new pre-training approach known as “GeoPT,” developed by researchers at MIT’s Computer Science and Artificial Intelligence Laboratory (CSAIL) and Tsinghua University, gives simulation…"
           ]
         }
       ],
@@ -3680,6 +4149,954 @@
       "reading_minutes": 1
     },
     {
+      "id": "4675cdfd074b1a13",
+      "kind": "article",
+      "title": "Anthropic's Dario Amodei responds: doesn't oppose open-weight models, but fears Chinese AI | TechCrunch",
+      "source": "TechCrunch",
+      "source_url": "https://techcrunch.com/2026/07/27/anthropics-dario-amodei-responds-doesnt-oppose-open-weight-models-but-fears-chinese-ai/",
+      "published_at": "2026-07-27T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Researcher Watch",
+        "Foundation Models",
+        "Leadership"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Anthropic's Dario Amodei responds: doesn't oppose open-weight models, but fears Chinese AI TechCrunch",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://techcrunch.com/2026/07/27/anthropics-dario-amodei-responds-doesnt-oppose-open-weight-models-but-fears-chinese-ai/",
+      "key_points": [
+        "Anthropic founder and CEO Dario Amodei responded on Monday afternoon to murmuring in the industry that his company somehow supports efforts by the U.S. government to ban open-weight Chinese models, or possibly open-weight models generally. “Anyone who has read my past writing should know that I don’t regard such bans as a useful measure, but let me state it…",
+        "His response came after Nvidia founder and CEO Jensen Huang took to X ( his first post on the platform) to share an open letter on Friday in which Nvidia and a long list of other AI companies including Hugging Face, Meta, Microsoft, Mistral, and Nvidia urged policymakers not to impose broad “premature restrictions” on open-weight AI models."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Anthropic's Dario Amodei responds: doesn't oppose open-weight models, but fears Chinese AI TechCrunch"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Anthropic founder and CEO Dario Amodei responded on Monday afternoon to murmuring in the industry that his company somehow supports efforts by the U.S. government to ban open-weight Chinese models, or possibly open-weight models generally. “Anyone who has read my past writing should know that I don’t regard such bans as a useful measure, but let me state it…",
+            "His response came after Nvidia founder and CEO Jensen Huang took to X ( his first post on the platform) to share an open letter on Friday in which Nvidia and a long list of other AI companies including Hugging Face, Meta, Microsoft, Mistral, and Nvidia urged policymakers not to impose broad “premature restrictions” on open-weight AI models."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Anthropic founder and CEO Dario Amodei responded on Monday afternoon to murmuring in the industry that his company somehow supports efforts by the U.S. government to ban open-weight Chinese models, or possibly open-weight models generally.",
+            "“Anyone who has read my past writing should know that I don’t regard such bans as a useful measure, but let me state it clearly so that there is no doubt: Anthropic has never advocated for a ban on open-weights models ,” he wrote, emphasis his own.",
+            "His response came after Nvidia founder and CEO Jensen Huang took to X ( his first post on the platform) to share an open letter on Friday in which Nvidia and a long list of other AI companies including Hugging Face, Meta, Microsoft, Mistral, and Nvidia urged policymakers not to impose broad “premature restrictions” on open-weight AI models."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "d0eec51a702fc422",
+      "kind": "article",
+      "title": "The Anthropic-Physical Intelligence rumor roiling AI Twitter | TechCrunch",
+      "source": "TechCrunch",
+      "source_url": "https://techcrunch.com/2026/07/21/the-anthropic-physical-intelligence-rumor-roiling-ai-twitter/",
+      "published_at": "2026-07-21T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "The Anthropic-Physical Intelligence rumor roiling AI Twitter TechCrunch",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://techcrunch.com/2026/07/21/the-anthropic-physical-intelligence-rumor-roiling-ai-twitter/",
+      "key_points": [
+        "It’s been a big year for AI acquisitions — so big that most of them barely register anymore.",
+        "Anthropic and OpenAI have each gone on buying sprees, snapping up developer tooling, AI services shops, and product-testing startups to convert model capability into enterprise revenue and extend their reach faster than the other.",
+        "Which is what made a weekend rumor about Anthropic acquiring robotics startup Physical Intelligence stand out.",
+        "It spread exceedingly fast, even after a denial from Physical Intelligence’s CEO.",
+        "Physical Intelligence isn’t some obscure robotics shop."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "The Anthropic-Physical Intelligence rumor roiling AI Twitter TechCrunch"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "It’s been a big year for AI acquisitions — so big that most of them barely register anymore.",
+            "Anthropic and OpenAI have each gone on buying sprees, snapping up developer tooling, AI services shops, and product-testing startups to convert model capability into enterprise revenue and extend their reach faster than the other.",
+            "Which is what made a weekend rumor about Anthropic acquiring robotics startup Physical Intelligence stand out.",
+            "It spread exceedingly fast, even after a denial from Physical Intelligence’s CEO.",
+            "Physical Intelligence isn’t some obscure robotics shop."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "It’s been a big year for AI acquisitions — so big that most of them barely register anymore. Anthropic and OpenAI have each gone on buying sprees, snapping up developer tooling, AI services shops, and product-testing startups to convert model capability into enterprise revenue and extend their reach faster than the other. Which is what made a weekend rumor about Anthropic acquiring robotics startup Physical Intelligence stand out. It spread exceedingly fast, even after a denial from Physical Intelligence’s CEO.",
+            "Part of that ties to who’s involved. Physical Intelligence isn’t some obscure robotics shop. It was co-founded by Lachy Groom, an investor-operator whose star has been on the rise in Silicon Valley in recent years; it has raised more than $1 billion (and was reportedly in talks this spring for another $1 billion round at an $11 billion valuation); and its π0.5 model is apparently among the more widely used robot brains in robotics research.",
+            "As it turns out, the rumor wasn’t completely spurious. Anthropic and Physical Intelligence actually did hold acquisition talks this spring, according to The Information, so tech blogger Robert Scoble — whose weekend post on X set off the frenzy — may have gotten the specifics wrong without being wrong that something had happened."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "36425a9882c3b6ae",
+      "kind": "article",
+      "title": "Google DeepMind chief Demis Hassabis calls for U.S. to spearhead AI standards body",
+      "source": "CNBC",
+      "source_url": "https://www.cnbc.com/2026/07/14/google-deepmind-demis-hassabis-us-led-ai-standards-body.html",
+      "published_at": "2026-07-14T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Researcher Watch",
+        "Foundation Models",
+        "Leadership"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Google DeepMind chief Demis Hassabis calls for U.S. to spearhead AI standards body CNBC",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.cnbc.com/2026/07/14/google-deepmind-demis-hassabis-us-led-ai-standards-body.html",
+      "key_points": [
+        "The boss of Google's AI division, Demis Hassabis, on Tuesday called for a U.S.-led standards body to test new frontier models for national security risks.",
+        "CNBC previously reported that Hassabis, along with other leading tech chiefs, called for an American-led AI coalition at a G7 meeting with world leaders, including U.S.",
+        "The proposal comes as the U.S.-China race to develop and deploy AI models ramps up."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Google DeepMind chief Demis Hassabis calls for U.S. to spearhead AI standards body CNBC"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "The boss of Google's AI division, Demis Hassabis, on Tuesday called for a U.S.-led standards body to test new frontier models for national security risks.",
+            "CNBC previously reported that Hassabis, along with other leading tech chiefs, called for an American-led AI coalition at a G7 meeting with world leaders, including U.S.",
+            "The proposal comes as the U.S.-China race to develop and deploy AI models ramps up."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "The boss of Google's AI division, Demis Hassabis, on Tuesday called for a U.S.-led standards body to test new frontier models for national security risks.",
+            "CNBC previously reported that Hassabis, along with other leading tech chiefs, called for an American-led AI coalition at a G7 meeting with world leaders, including U.S. President Donald Trump.",
+            "The proposal comes as the U.S.-China race to develop and deploy AI models ramps up."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "62d08d4982d65d20",
+      "kind": "social",
+      "title": "Elon Musk (@elonmusk) on X",
+      "source": "x.com",
+      "source_url": "https://x.com/elonmusk/status/2087970387002855683",
+      "published_at": "2026-08-13T18:31:47Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "Try Grok 4.6",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/elonmusk/status/2087970387002855683",
+      "key_points": [
+        "Elon Musk @elonmusk Try Grok 4.6 DogeDesigner @cb_doge 9h Grok 4.6 wins again. 👑 Grok 4.6 takes the #1 spot on GPQA Diamond with a score of 94.9%, beating GPT-5.6, Gemini 3.1 Pro, Claude Opus 5, and every other model tested by Artificial Analysis.",
+        "00:00 6:31 PM · Aug 13, 2026 1.6M Views 452 673 3.5K 102 BLACK PHOENIX BPX @BLACKPHOENIXFN 8h Grok 4.6 just destroyed the competition 👑🔥 Other AIs are in absolute shambles rn 1 1 17 120"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Try Grok 4.6"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Elon Musk @elonmusk Try Grok 4.6 DogeDesigner @cb_doge 9h Grok 4.6 wins again. 👑 Grok 4.6 takes the #1 spot on GPQA Diamond with a score of 94.9%, beating GPT-5.6, Gemini 3.1 Pro, Claude Opus 5, and every other model tested by Artificial Analysis.",
+            "00:00 6:31 PM · Aug 13, 2026 1.6M Views 452 673 3.5K 102 BLACK PHOENIX BPX @BLACKPHOENIXFN 8h Grok 4.6 just destroyed the competition 👑🔥 Other AIs are in absolute shambles rn 1 1 17 120"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Elon Musk @elonmusk Try Grok 4.6 DogeDesigner @cb_doge 9h Grok 4.6 wins again. 👑 Grok 4.6 takes the #1 spot on GPQA Diamond with a score of 94.9%, beating GPT-5.6, Gemini 3.1 Pro, Claude Opus 5, and every other model tested by Artificial Analysis. 00:00 6:31 PM · Aug 13, 2026 1.6M Views 452 673 3.5K 102",
+            "BLACK PHOENIX BPX @BLACKPHOENIXFN 8h Grok 4.6 just destroyed the competition 👑🔥 Other AIs are in absolute shambles rn 1 1 17 120"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "8da6b7c2b93c95c6",
+      "kind": "social",
+      "title": "SL2T is our amazing sign-language-to-text model allows users to sign directly to their phones for the first time. Built in close collaboration with the Deaf community, it’s a great example of the good that can be done with AI. Congrats to the team for the launch!",
+      "source": "x.com",
+      "source_url": "https://x.com/demishassabis/status/2087885303855944001",
+      "published_at": "2026-08-13T12:53:42Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "SL2T is our amazing sign-language-to-text model allows users to sign directly to their phones for the first time. Built in close collaboration with the Deaf community, it’s a great example of the good that can be done with AI. Congrats to the team for the launch! x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/demishassabis/status/2087885303855944001",
+      "key_points": [
+        "Demis Hassabis @demishassabis SL2T is our amazing sign-language-to-text model allows users to sign directly to their phones for the first time.",
+        "Built in close collaboration with the Deaf community, it’s a great example of the good that can be done with AI.",
+        "Google DeepMind @GoogleDeepMind Aug 12 SL2T is our breakthrough sign language-to-text model powering new features for Deaf and hard of hearing users on @ Android .",
+        "Starting with American Sign Language-to-English on Pixel 11, people can sign directly into Gboard and Live Transcribe instead of typing.",
+        "00:00 12:53 PM · Aug 13, 2026 108K Views 73 137 1.6K 120 Zack Swafford @zswaff 13h No other major lab is doing stuff like this."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "SL2T is our amazing sign-language-to-text model allows users to sign directly to their phones for the first time. Built in close collaboration with the Deaf community, it’s a great example of the good that can be done with AI. Congrats to the team for the launch! x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Demis Hassabis @demishassabis SL2T is our amazing sign-language-to-text model allows users to sign directly to their phones for the first time.",
+            "Built in close collaboration with the Deaf community, it’s a great example of the good that can be done with AI.",
+            "Google DeepMind @GoogleDeepMind Aug 12 SL2T is our breakthrough sign language-to-text model powering new features for Deaf and hard of hearing users on @ Android .",
+            "Starting with American Sign Language-to-English on Pixel 11, people can sign directly into Gboard and Live Transcribe instead of typing.",
+            "00:00 12:53 PM · Aug 13, 2026 108K Views 73 137 1.6K 120 Zack Swafford @zswaff 13h No other major lab is doing stuff like this."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Demis Hassabis @demishassabis SL2T is our amazing sign-language-to-text model allows users to sign directly to their phones for the first time. Built in close collaboration with the Deaf community, it’s a great example of the good that can be done with AI. Congrats to the team for the launch! Google DeepMind @GoogleDeepMind Aug 12 SL2T is our breakthrough sign language-to-text model powering new features for Deaf and hard of hearing users on @ Android . Starting with American Sign Language-to-English on Pixel 11, people can sign directly into Gboard and Live Transcribe instead of typing. 00:00 12:53 PM · Aug 13, 2026 108K Views 73 137 1.6K 120",
+            "Zack Swafford @zswaff 13h No other major lab is doing stuff like this. It's really cool to see! 13 475",
+            "Serçiya^ سەرچیا @Sarchia_ 13h This is great, but Google still can't transcribe hundreds of languages. Some of these languages have over 30 million speakers, like Kurdish. 2 4 518"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "4f693b2105f0e89e",
+      "kind": "social",
+      "title": "Grok 4.6 has a great sense of humor 😂",
+      "source": "x.com",
+      "source_url": "https://x.com/elonmusk/status/2087760069693997530",
+      "published_at": "2026-08-13T04:36:03Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "Grok 4.6 has a great sense of humor 😂 x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/elonmusk/status/2087760069693997530",
+      "key_points": [
+        "Elon Musk @elonmusk Grok 4.6 has a great sense of humor 😂 tobi lutke @tobi Aug 13 I have no idea why but Grok-4.6 just totally freaked out doing some maintenance tasks when it saw my low github id.",
+        "4:36 AM · Aug 13, 2026 3.8M Views 967 1.3K 14K 595 Gojo Satoru @Gojo_Sekai 21h the fact that Grok saw a 3-digit GitHub ID and immediately treated the account like an archaeological site is killing me😂😂 2 29 1.6K Jacob C @JacobCometti 21h A 3-digit GitHub ID is basically a fossil record."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Grok 4.6 has a great sense of humor 😂 x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Elon Musk @elonmusk Grok 4.6 has a great sense of humor 😂 tobi lutke @tobi Aug 13 I have no idea why but Grok-4.6 just totally freaked out doing some maintenance tasks when it saw my low github id.",
+            "4:36 AM · Aug 13, 2026 3.8M Views 967 1.3K 14K 595 Gojo Satoru @Gojo_Sekai 21h the fact that Grok saw a 3-digit GitHub ID and immediately treated the account like an archaeological site is killing me😂😂 2 29 1.6K Jacob C @JacobCometti 21h A 3-digit GitHub ID is basically a fossil record."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Elon Musk @elonmusk Grok 4.6 has a great sense of humor 😂 tobi lutke @tobi Aug 13 I have no idea why but Grok-4.6 just totally freaked out doing some maintenance tasks when it saw my low github id. 4:36 AM · Aug 13, 2026 3.8M Views 967 1.3K 14K 595",
+            "Gojo Satoru @Gojo_Sekai 21h the fact that Grok saw a 3-digit GitHub ID and immediately treated the account like an archaeological site is killing me😂😂 2 29 1.6K",
+            "Jacob C @JacobCometti 21h A 3-digit GitHub ID is basically a fossil record. Grok's reaction was correct. 2 27 1.2K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "80b2b70d2451988b",
+      "kind": "social",
+      "title": "Grok 4.6 reaches #1 on @databricks",
+      "source": "x.com",
+      "source_url": "https://x.com/elonmusk/status/2087668743929487420",
+      "published_at": "2026-08-12T22:33:10Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "Grok 4.6 reaches #1 on @databricks x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/elonmusk/status/2087668743929487420",
+      "key_points": [
+        "Elon Musk @elonmusk Grok 4.6 reaches #1 on @ databricks Ivan Zhou @ivanzhouyq Aug 12 We worked with @ SpaceXAI to evaluate Grok 4.6 on the latest OfficeQA Pro V2 from @ DbrxMosaicAI .",
+        "It achieves the SOTA performance with @ databricks 's Genie harness!",
+        "The model is strongest on our document understanding and data reasoning tasks, and it is a very efficient driver!",
+        "10:33 PM · Aug 12, 2026 3.6M Views 826 1.3K 8K 328 nate @nategmi Aug 12 *everyone using Grok for meaningful things* meanwhile X users using it to generate memes 😂: 1 5 30 1K Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Aug 12 On price per intelligence and speed, no one can beat Grok 😎🔥 2 5 29 1.8K"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Grok 4.6 reaches #1 on @databricks x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Elon Musk @elonmusk Grok 4.6 reaches #1 on @ databricks Ivan Zhou @ivanzhouyq Aug 12 We worked with @ SpaceXAI to evaluate Grok 4.6 on the latest OfficeQA Pro V2 from @ DbrxMosaicAI .",
+            "It achieves the SOTA performance with @ databricks 's Genie harness!",
+            "The model is strongest on our document understanding and data reasoning tasks, and it is a very efficient driver!",
+            "10:33 PM · Aug 12, 2026 3.6M Views 826 1.3K 8K 328 nate @nategmi Aug 12 *everyone using Grok for meaningful things* meanwhile X users using it to generate memes 😂: 1 5 30 1K Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Aug 12 On price per intelligence and speed, no one can beat Grok 😎🔥 2 5 29 1.8K"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Elon Musk @elonmusk Grok 4.6 reaches #1 on @ databricks Ivan Zhou @ivanzhouyq Aug 12 We worked with @ SpaceXAI to evaluate Grok 4.6 on the latest OfficeQA Pro V2 from @ DbrxMosaicAI . It achieves the SOTA performance with @ databricks 's Genie harness! The model is strongest on our document understanding and data reasoning tasks, and it is a very efficient driver! 10:33 PM · Aug 12, 2026 3.6M Views 826 1.3K 8K 328",
+            "nate @nategmi Aug 12 *everyone using Grok for meaningful things* meanwhile X users using it to generate memes 😂: 1 5 30 1K",
+            "Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Aug 12 On price per intelligence and speed, no one can beat Grok 😎🔥 2 5 29 1.8K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "55ed07bdd28d5f7d",
+      "kind": "social",
+      "title": "Grok 4.7 will exceed all current models. That said, Anthropic is a great company and will probably release improved models soon. However, the SpaceX training corpus is so awesome & unique that I would be shocked if any model is better at real-world engine",
+      "source": "x.com",
+      "source_url": "https://x.com/elonmusk/status/2087606260539777263",
+      "published_at": "2026-08-12T18:24:53Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "Grok 4.7 will exceed all current models. That said, Anthropic is a great company and will probably release improved models soon. However, the SpaceX training corpus is so awesome & unique that I would be shocked if any model is better at real-world engine x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/elonmusk/status/2087606260539777263",
+      "key_points": [
+        "Cognition @cognition Aug 12 Grok 4.6 is now available in Devin.",
+        "Grok 4.6 marks a significant improvement over Grok 4.5, surpassing GPT-5.6 Sol, behind only Opus 5 and Fable 5.",
+        "90 143 4K 567K Elon Musk @elonmusk Grok 4.7 will exceed all current models.",
+        "That said, Anthropic is a great company and will probably release improved models soon.",
+        "However, the SpaceX training corpus is so awesome & unique that I would be shocked if any model is better at real-world engineering than 4.7."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Grok 4.7 will exceed all current models. That said, Anthropic is a great company and will probably release improved models soon. However, the SpaceX training corpus is so awesome & unique that I would be shocked if any model is better at real-world engine x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Cognition @cognition Aug 12 Grok 4.6 is now available in Devin.",
+            "Grok 4.6 marks a significant improvement over Grok 4.5, surpassing GPT-5.6 Sol, behind only Opus 5 and Fable 5.",
+            "90 143 4K 567K Elon Musk @elonmusk Grok 4.7 will exceed all current models.",
+            "That said, Anthropic is a great company and will probably release improved models soon.",
+            "However, the SpaceX training corpus is so awesome & unique that I would be shocked if any model is better at real-world engineering than 4.7."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Cognition @cognition Aug 12 Grok 4.6 is now available in Devin. Grok 4.6 marks a significant improvement over Grok 4.5, surpassing GPT-5.6 Sol, behind only Opus 5 and Fable 5. 90 143 4K 567K",
+            "Elon Musk @elonmusk Grok 4.7 will exceed all current models. That said, Anthropic is a great company and will probably release improved models soon. However, the SpaceX training corpus is so awesome & unique that I would be shocked if any model is better at real-world engineering than 4.7. 6:24 PM · Aug 12, 2026 1.3M Views 901 1.2K 20K 1.3K",
+            "Paul Clark @paulbclark Aug 12 my timeline is fully optimized 8 10 550 26K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "fee7db100fd5217c",
+      "kind": "social",
+      "title": "Grok 4.7 is significantly better than 4.6 and should be ready in 3 to 4 weeks. Initial training is complete and now we’re adding a massive amount of SpaceX company data in supplemental training. This will be something special.",
+      "source": "x.com",
+      "source_url": "https://x.com/elonmusk/status/2087604711767896527",
+      "published_at": "2026-08-12T18:18:43Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "Grok 4.7 is significantly better than 4.6 and should be ready in 3 to 4 weeks. Initial training is complete and now we’re adding a massive amount of SpaceX company data in supplemental training. This will be something special. x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/elonmusk/status/2087604711767896527",
+      "key_points": [
+        "Beff (e/acc) @beffjezos Aug 12 Looks like Grok is fully back on the Frontier menu NIK @ns123abc Aug 12 GPT 5.6 SOL MAX BTFO'D BY GROK 4.6 HIGH 51 82 2.9K 482K Elon Musk @elonmusk Grok 4.7 is significantly better than 4.6 and should be ready in 3 to 4 weeks.",
+        "Initial training is complete and now we’re adding a massive amount of SpaceX company data in supplemental training.",
+        "6:18 PM · Aug 12, 2026 1.1M Views 711 1.1K 18K 882 Marko Njegomir @njmarko Aug 12 great model. can you drop a usage reset as well?",
+        "🙏 spent all usage before grok 4.6 dropped on making a movie scene in grok imagine 2.0 Marko Njegomir @njmarko Aug 12 The good, the bad, and the ugly.",
+        "Quentin Tarantino called this scene the greatest and most perfect cut in the history of cinema."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Grok 4.7 is significantly better than 4.6 and should be ready in 3 to 4 weeks. Initial training is complete and now we’re adding a massive amount of SpaceX company data in supplemental training. This will be something special. x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Beff (e/acc) @beffjezos Aug 12 Looks like Grok is fully back on the Frontier menu NIK @ns123abc Aug 12 GPT 5.6 SOL MAX BTFO'D BY GROK 4.6 HIGH 51 82 2.9K 482K Elon Musk @elonmusk Grok 4.7 is significantly better than 4.6 and should be ready in 3 to 4 weeks.",
+            "Initial training is complete and now we’re adding a massive amount of SpaceX company data in supplemental training.",
+            "6:18 PM · Aug 12, 2026 1.1M Views 711 1.1K 18K 882 Marko Njegomir @njmarko Aug 12 great model. can you drop a usage reset as well?",
+            "🙏 spent all usage before grok 4.6 dropped on making a movie scene in grok imagine 2.0 Marko Njegomir @njmarko Aug 12 The good, the bad, and the ugly.",
+            "Quentin Tarantino called this scene the greatest and most perfect cut in the history of cinema."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Beff (e/acc) @beffjezos Aug 12 Looks like Grok is fully back on the Frontier menu NIK @ns123abc Aug 12 GPT 5.6 SOL MAX BTFO'D BY GROK 4.6 HIGH 51 82 2.9K 482K",
+            "Elon Musk @elonmusk Grok 4.7 is significantly better than 4.6 and should be ready in 3 to 4 weeks. Initial training is complete and now we’re adding a massive amount of SpaceX company data in supplemental training. This will be something special. 6:18 PM · Aug 12, 2026 1.1M Views 711 1.1K 18K 882",
+            "Marko Njegomir @njmarko Aug 12 great model. can you drop a usage reset as well? 🙏 spent all usage before grok 4.6 dropped on making a movie scene in grok imagine 2.0 Marko Njegomir @njmarko Aug 12 The good, the bad, and the ugly. Quentin Tarantino called this scene the greatest and most perfect cut in the history of cinema. Reimagined with @ grok @ imagine to show the three-way final duel in the AI race between Elon Musk, Sam Altman, and Dario Amodei. How it was made👇 00:00 12 30 494 131K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "3beba9357cca0f46",
+      "kind": "social",
+      "title": "Try out Grok 4.6! Double your tokens for next 7 days.",
+      "source": "x.com",
+      "source_url": "https://x.com/elonmusk/status/2087601785833951705",
+      "published_at": "2026-08-12T18:07:06Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "Try out Grok 4.6! Double your tokens for next 7 days. x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/elonmusk/status/2087601785833951705",
+      "key_points": [
+        "SpaceXAI @SpaceXAI Aug 12 Replying to @SpaceXAI Grok 4.6 is available today in Grok Build, Cursor, Grok Bot, and the API.",
+        "We’re including 2x usage inside Cursor and Grok Build for the first week. x.ai/news/grok-4-6 6:07 PM · Aug 12, 2026 4.7M Views 921 1.4K 9.8K 451 Buggy @FatHope777 Aug 12 I just slightly upgraded my baby Shiba Inu photo, and it looks amazing with Grok."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Try out Grok 4.6! Double your tokens for next 7 days. x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "SpaceXAI @SpaceXAI Aug 12 Replying to @SpaceXAI Grok 4.6 is available today in Grok Build, Cursor, Grok Bot, and the API.",
+            "We’re including 2x usage inside Cursor and Grok Build for the first week. x.ai/news/grok-4-6 6:07 PM · Aug 12, 2026 4.7M Views 921 1.4K 9.8K 451 Buggy @FatHope777 Aug 12 I just slightly upgraded my baby Shiba Inu photo, and it looks amazing with Grok."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Elon Musk @elonmusk Try out Grok 4.6! Double your tokens for next 7 days. SpaceXAI @SpaceXAI Aug 12 Replying to @SpaceXAI Grok 4.6 is available today in Grok Build, Cursor, Grok Bot, and the API. We’re including 2x usage inside Cursor and Grok Build for the first week. x.ai/news/grok-4-6 6:07 PM · Aug 12, 2026 4.7M Views 921 1.4K 9.8K 451",
+            "Buggy @FatHope777 Aug 12 I just slightly upgraded my baby Shiba Inu photo, and it looks amazing with Grok. I don't need any other app right now. Much wow. 10 22 40 4.6K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "fdbd08103fa45850",
+      "kind": "article",
+      "title": "Okoboji team raises $4.3M for AI startup, Arzana - Storm Lake Times Pilot",
+      "source": "Storm Lake Times Pilot",
+      "source_url": "https://www.stormlake.com/stories/okoboji-team-raises-43m-for-ai-startup-arzana,211852",
+      "published_at": "2026-08-12T18:39:52Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "William Alexander (Okoboji High School ‘21) and co-founder Marshall Kools recently closed a $4.3 million seed round for their startup, Arzana. Mason Vander Pol (OHS ‘22) joined the team as their …",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.stormlake.com/stories/okoboji-team-raises-43m-for-ai-startup-arzana,211852",
+      "key_points": [
+        "William Alexander (Okoboji High School ‘21) and co-founder Marshall Kools recently closed a $4.3 million seed round for their startup, Arzana.",
+        "Mason Vander Pol (OHS ‘22) joined the team as their … SL family’s $5 million gift accelerates TSC research at Cincinnati Children’s"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "William Alexander (Okoboji High School ‘21) and co-founder Marshall Kools recently closed a $4.3 million seed round for their startup, Arzana. Mason Vander Pol (OHS ‘22) joined the team as their …"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "William Alexander (Okoboji High School ‘21) and co-founder Marshall Kools recently closed a $4.3 million seed round for their startup, Arzana.",
+            "Mason Vander Pol (OHS ‘22) joined the team as their … SL family’s $5 million gift accelerates TSC research at Cincinnati Children’s"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "William Alexander (Okoboji High School ‘21) and co-founder Marshall Kools recently closed a $4.3 million seed round for their startup, Arzana. Mason Vander Pol (OHS ‘22) joined the team as their …",
+            "SL family’s $5 million gift accelerates TSC research at Cincinnati Children’s"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "36f3963d49a0b943",
+      "kind": "article",
+      "title": "Ex-Meta AI research director raises $10.25M from Trilogy and Madrona for stealth physical AI startup",
+      "source": "geekwire.com",
+      "source_url": "https://www.geekwire.com/2026/ex-meta-ai-research-director-raises-10-25m-from-trilogy-and-madrona-for-stealth-physical-ai-startup/",
+      "published_at": "2026-08-11T15:59:01Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Kevin Carlberg, who led AI research teams at Meta focused on wearable computing, has raised $10.25 million for Noosphere Labs, a stealth startup working on what it calls \"human-centered physical intelligence.\" Trilogy Equity Partners led the round, with major participation from Madrona.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.geekwire.com/2026/ex-meta-ai-research-director-raises-10-25m-from-trilogy-and-madrona-for-stealth-physical-ai-startup/",
+      "key_points": [
+        "A former Meta AI research director has raised $10.25 million for a Seattle-area startup working on what it calls “human-centered physical intelligence” — AI designed to help people interact with and make sense of the physical world, beyond text and images on screens.",
+        "A company called Noosphere Labs, led by Kevin Carlberg , disclosed the financing in a Form D filed Monday with the Securities and Exchange Commission.",
+        "Reached via phone by GeekWire on Monday evening, Carlberg said he wasn’t yet ready to share details about the startup.",
+        "Trilogy Equity Partners confirmed that it led the round.",
+        "One of the directors listed in the Form D filing is Amy McCullough , a managing director at the Bellevue-based venture firm."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Kevin Carlberg, who led AI research teams at Meta focused on wearable computing, has raised $10.25 million for Noosphere Labs, a stealth startup working on what it calls \"human-centered physical intelligence.\" Trilogy Equity Partners led the round, with major participation from Madrona."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "A former Meta AI research director has raised $10.25 million for a Seattle-area startup working on what it calls “human-centered physical intelligence” — AI designed to help people interact with and make sense of the physical world, beyond text and images on screens.",
+            "A company called Noosphere Labs, led by Kevin Carlberg , disclosed the financing in a Form D filed Monday with the Securities and Exchange Commission.",
+            "Reached via phone by GeekWire on Monday evening, Carlberg said he wasn’t yet ready to share details about the startup.",
+            "Trilogy Equity Partners confirmed that it led the round.",
+            "One of the directors listed in the Form D filing is Amy McCullough , a managing director at the Bellevue-based venture firm."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "A former Meta AI research director has raised $10.25 million for a Seattle-area startup working on what it calls “human-centered physical intelligence” — AI designed to help people interact with and make sense of the physical world, beyond text and images on screens.",
+            "A company called Noosphere Labs, led by Kevin Carlberg , disclosed the financing in a Form D filed Monday with the Securities and Exchange Commission. Reached via phone by GeekWire on Monday evening, Carlberg said he wasn’t yet ready to share details about the startup.",
+            "Trilogy Equity Partners confirmed that it led the round. One of the directors listed in the Form D filing is Amy McCullough , a managing director at the Bellevue-based venture firm. Madrona, the Seattle VC firm, separately confirmed that it had “major participation” in the round."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "9a6928e2c9c792f4",
+      "kind": "article",
+      "title": "NATO and an AI startup can now name and track software vulnerabilities",
+      "source": "CyberScoop",
+      "source_url": "https://cyberscoop.com/nato-aisle-enisa-cve-vulnerability-tracking/",
+      "published_at": "2026-08-10T19:54:31Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "NATO and an AI startup can now name and track software vulnerabilities CyberScoop",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://cyberscoop.com/nato-aisle-enisa-cve-vulnerability-tracking/",
+      "key_points": [
+        "NATO’s cyber defense arm and a startup that uses artificial intelligence to find software flaws can now issue the ID numbers the industry uses to track those flaws, the European Union Agency for Cybersecurity announced last week .",
+        "The NATO Cyber Security Centre, part of the NATO Communications and Information Agency, and AISLE, a cybersecurity company with offices in San Francisco and Prague, joined as CVE numbering authorities under the ENISA Root.",
+        "The CVE program assigns a unique record to each publicly disclosed security flaw so that governments, vendors and researchers have a common marker when referring to particular vulnerabilities.",
+        "Twenty numbering authorities now sit under the ENISA Root, with 12 brought in by ENISA itself and eight moving over from the MITRE Root, run by the U.S. nonprofit that has handled the program’s daily work for more than 20 years."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "NATO and an AI startup can now name and track software vulnerabilities CyberScoop"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "NATO’s cyber defense arm and a startup that uses artificial intelligence to find software flaws can now issue the ID numbers the industry uses to track those flaws, the European Union Agency for Cybersecurity announced last week .",
+            "The NATO Cyber Security Centre, part of the NATO Communications and Information Agency, and AISLE, a cybersecurity company with offices in San Francisco and Prague, joined as CVE numbering authorities under the ENISA Root.",
+            "The CVE program assigns a unique record to each publicly disclosed security flaw so that governments, vendors and researchers have a common marker when referring to particular vulnerabilities.",
+            "Twenty numbering authorities now sit under the ENISA Root, with 12 brought in by ENISA itself and eight moving over from the MITRE Root, run by the U.S. nonprofit that has handled the program’s daily work for more than 20 years."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "NATO’s cyber defense arm and a startup that uses artificial intelligence to find software flaws can now issue the ID numbers the industry uses to track those flaws, the European Union Agency for Cybersecurity announced last week .",
+            "The NATO Cyber Security Centre, part of the NATO Communications and Information Agency, and AISLE, a cybersecurity company with offices in San Francisco and Prague, joined as CVE numbering authorities under the ENISA Root. The CVE program assigns a unique record to each publicly disclosed security flaw so that governments, vendors and researchers have a common marker when referring to particular vulnerabilities.",
+            "Twenty numbering authorities now sit under the ENISA Root, with 12 brought in by ENISA itself and eight moving over from the MITRE Root, run by the U.S. nonprofit that has handled the program’s daily work for more than 20 years."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "76e9ea2760947dc3",
+      "kind": "article",
+      "title": "AI pioneers are split on the technology’s risk to jobs",
+      "source": "thecurrent.com",
+      "source_url": "https://www.thecurrent.com/innovation/ai-pioneers-split-technology-risk-jobs-ai4-las-vegas",
+      "published_at": "2026-08-06T18:50:31Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "At AI4 in Las Vegas, Geoffrey Hinton, Fei-Fei Li, Andrew Ng, and Anton Korinek shared competing visions for AI's future, tackling everything from marketing jobs and AI safety to the economic transformation ahead.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.thecurrent.com/innovation/ai-pioneers-split-technology-risk-jobs-ai4-las-vegas",
+      "key_points": [
+        "From marketers becoming \"full-cycle marketers\" to the possibility of AI reshaping the economy, the industry's biggest thinkers painted very different pictures of what comes next at AI4.",
+        "Even among AI’s pioneers, there isn’t consensus on the technology’s biggest challenges, or just how profoundly it will reshape society.",
+        "Against a backdrop of 114-degree Las Vegas heat, Ai4, dubbed the “world’s largest AI conference,” hosted some of the industry’s hottest debates, as several AI trailblazers sparred over the technology’s biggest opportunities and risks."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "At AI4 in Las Vegas, Geoffrey Hinton, Fei-Fei Li, Andrew Ng, and Anton Korinek shared competing visions for AI's future, tackling everything from marketing jobs and AI safety to the economic transformation ahead."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "From marketers becoming \"full-cycle marketers\" to the possibility of AI reshaping the economy, the industry's biggest thinkers painted very different pictures of what comes next at AI4.",
+            "Even among AI’s pioneers, there isn’t consensus on the technology’s biggest challenges, or just how profoundly it will reshape society.",
+            "Against a backdrop of 114-degree Las Vegas heat, Ai4, dubbed the “world’s largest AI conference,” hosted some of the industry’s hottest debates, as several AI trailblazers sparred over the technology’s biggest opportunities and risks."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "From marketers becoming \"full-cycle marketers\" to the possibility of AI reshaping the economy, the industry's biggest thinkers painted very different pictures of what comes next at AI4.",
+            "Even among AI’s pioneers, there isn’t consensus on the technology’s biggest challenges, or just how profoundly it will reshape society.",
+            "Against a backdrop of 114-degree Las Vegas heat, Ai4, dubbed the “world’s largest AI conference,” hosted some of the industry’s hottest debates, as several AI trailblazers sparred over the technology’s biggest opportunities and risks."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "8635fbebdea1f392",
+      "kind": "article",
+      "title": "Anthropic, OpenAI among firms facing new scrutiny under EU AI Act enforcement powers",
+      "source": "CNBC",
+      "source_url": "https://www.cnbc.com/2026/08/03/eu-ai-act-enforcement-powers.html",
+      "published_at": "2026-08-03T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Anthropic, OpenAI among firms facing new scrutiny under EU AI Act enforcement powers CNBC",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.cnbc.com/2026/08/03/eu-ai-act-enforcement-powers.html",
+      "key_points": [
+        "The European Commission on Sunday gained new powers to investigate, impose fines and order changes at companies developing AI models, as part of the rollout of its AI Act.",
+        "The new powers could bring further flashpoints between the U.S. and European Commission, with the two sparring over Europe's push for tech sovereignty and fines issued towards American tech companies.",
+        "President Donald Trump threatened the EU with a \"substantial\" tariff after the bloc hit Google with a $1 billion fine in July, under Digital Markets Act rules."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Anthropic, OpenAI among firms facing new scrutiny under EU AI Act enforcement powers CNBC"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "The European Commission on Sunday gained new powers to investigate, impose fines and order changes at companies developing AI models, as part of the rollout of its AI Act.",
+            "The new powers could bring further flashpoints between the U.S. and European Commission, with the two sparring over Europe's push for tech sovereignty and fines issued towards American tech companies.",
+            "President Donald Trump threatened the EU with a \"substantial\" tariff after the bloc hit Google with a $1 billion fine in July, under Digital Markets Act rules."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "The European Commission on Sunday gained new powers to investigate, impose fines and order changes at companies developing AI models, as part of the rollout of its AI Act.",
+            "The new powers could bring further flashpoints between the U.S. and European Commission, with the two sparring over Europe's push for tech sovereignty and fines issued towards American tech companies.",
+            "U.S. President Donald Trump threatened the EU with a \"substantial\" tariff after the bloc hit Google with a $1 billion fine in July, under Digital Markets Act rules."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "ada6057e17c2e7c0",
+      "kind": "article",
+      "title": "Nscale to acquire Romanian co-founded AI startup Anyscale in reportedly USD 1.65 billion deal",
+      "source": "Romania Insider",
+      "source_url": "https://www.romania-insider.com/nscale-acquire-romanian-co-founded-ai-startup-anyscale-july-2026",
+      "published_at": "2026-07-31T12:36:52Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Cloud infrastructure provider Nscale will acquire AI software startup Anyscale, which has Romanian-born university professor Ion Stoica among its co-founders, in a transaction worth roughly USD 1.65 billion, according to a Bloomberg News source. Ion Stoica is a co-founder of Anyscale, together...",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.romania-insider.com/nscale-acquire-romanian-co-founded-ai-startup-anyscale-july-2026",
+      "key_points": [
+        "Cloud infrastructure provider Nscale will acquire AI software startup Anyscale, which has Romanian-born university professor Ion Stoica among its co-founders, in a transaction worth roughly USD 1.65 billion, according to a Bloomberg News source .",
+        "Ion Stoica is a co-founder of Anyscale, together with Robert Nishihara (chief executive officer) and Philipp Moritz (chief technology officer), who were his PhD students at RISELab within the University of California, Berkeley.",
+        "San Francisco-based Anyscale provides software for organizing and managing complex AI workloads so that they can run smoothly across multiple computers simultaneously.",
+        "Nscale said it expects to attract more customers by offering Anyscale’s software."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Cloud infrastructure provider Nscale will acquire AI software startup Anyscale, which has Romanian-born university professor Ion Stoica among its co-founders, in a transaction worth roughly USD 1.65 billion, according to a Bloomberg News source. Ion Stoica is a co-founder of Anyscale, together..."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Cloud infrastructure provider Nscale will acquire AI software startup Anyscale, which has Romanian-born university professor Ion Stoica among its co-founders, in a transaction worth roughly USD 1.65 billion, according to a Bloomberg News source .",
+            "Ion Stoica is a co-founder of Anyscale, together with Robert Nishihara (chief executive officer) and Philipp Moritz (chief technology officer), who were his PhD students at RISELab within the University of California, Berkeley.",
+            "San Francisco-based Anyscale provides software for organizing and managing complex AI workloads so that they can run smoothly across multiple computers simultaneously.",
+            "Nscale said it expects to attract more customers by offering Anyscale’s software."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Cloud infrastructure provider Nscale will acquire AI software startup Anyscale, which has Romanian-born university professor Ion Stoica among its co-founders, in a transaction worth roughly USD 1.65 billion, according to a Bloomberg News source .",
+            "Ion Stoica is a co-founder of Anyscale, together with Robert Nishihara (chief executive officer) and Philipp Moritz (chief technology officer), who were his PhD students at RISELab within the University of California, Berkeley.",
+            "San Francisco-based Anyscale provides software for organizing and managing complex AI workloads so that they can run smoothly across multiple computers simultaneously. Nscale said it expects to attract more customers by offering Anyscale’s software."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "c4a9be7dd4c03a60",
+      "kind": "article",
+      "title": "I worked with Elon Musk and Travis Kalanick in my 20s. Here's what I learned from them about building a company.",
+      "source": "Business Insider",
+      "source_url": "https://www.businessinsider.com/learned-from-elon-musk-travis-kalanick-built-ai-tech-startup-2026-7",
+      "published_at": "2026-07-31T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "I worked with Elon Musk and Travis Kalanick in my 20s. Here's what I learned from them about building a company. Business Insider",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.businessinsider.com/learned-from-elon-musk-travis-kalanick-built-ai-tech-startup-2026-7",
+      "key_points": [
+        "This as-told-to essay is based on a conversation with Adi Prasad, a 35-year-old cofounder and CEO of AI manufacturing startup Matter.",
+        "When I graduated from MIT in 2015 with a master's degree in mechanical engineering, one company stood out to me: Tesla.",
+        "I was fascinated by manufacturing, and Tesla was pushing the boundaries of what a factory could be.",
+        "After joining in 2015, I was quickly thrown into helping scale production of the Falcon Wing doors , one of the company's largest engineering challenges."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "I worked with Elon Musk and Travis Kalanick in my 20s. Here's what I learned from them about building a company. Business Insider"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "This as-told-to essay is based on a conversation with Adi Prasad, a 35-year-old cofounder and CEO of AI manufacturing startup Matter.",
+            "When I graduated from MIT in 2015 with a master's degree in mechanical engineering, one company stood out to me: Tesla.",
+            "I was fascinated by manufacturing, and Tesla was pushing the boundaries of what a factory could be.",
+            "After joining in 2015, I was quickly thrown into helping scale production of the Falcon Wing doors , one of the company's largest engineering challenges."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "This as-told-to essay is based on a conversation with Adi Prasad, a 35-year-old cofounder and CEO of AI manufacturing startup Matter. It's been edited for length and clarity.",
+            "When I graduated from MIT in 2015 with a master's degree in mechanical engineering, one company stood out to me: Tesla.",
+            "I was fascinated by manufacturing, and Tesla was pushing the boundaries of what a factory could be. After joining in 2015, I was quickly thrown into helping scale production of the Falcon Wing doors , one of the company's largest engineering challenges."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "f0cf53374d9b0d3c",
+      "kind": "article",
+      "title": "This AI startup has roughly 50 employees, no product and has never published a word of research. It's worth $32 billion",
+      "source": "Yahoo Finance",
+      "source_url": "https://finance.yahoo.com/technology/ai/articles/ai-startup-roughly-50-employees-133000150.html",
+      "published_at": "2026-07-29T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "This AI startup has roughly 50 employees, no product and has never published a word of research. It's worth $32 billion Yahoo Finance",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://finance.yahoo.com/technology/ai/articles/ai-startup-roughly-50-employees-133000150.html",
+      "key_points": [
+        "Most startups need a product, paying customers and a believable path to profitability before investors start throwing billions of dollars their way.",
+        "Jeff Bezos backs a platform that lets anyone invest in rental homes for as little as $100 — 6 ways to build wealth like a landlord without actually being one Dave Ramsey warns nearly 50% of Americans are making 1 big Social Security mistake — here's what it is and 3 simple steps to fix it ASAP"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "This AI startup has roughly 50 employees, no product and has never published a word of research. It's worth $32 billion Yahoo Finance"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Most startups need a product, paying customers and a believable path to profitability before investors start throwing billions of dollars their way.",
+            "Jeff Bezos backs a platform that lets anyone invest in rental homes for as little as $100 — 6 ways to build wealth like a landlord without actually being one Dave Ramsey warns nearly 50% of Americans are making 1 big Social Security mistake — here's what it is and 3 simple steps to fix it ASAP"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Most startups need a product, paying customers and a believable path to profitability before investors start throwing billions of dollars their way.",
+            "Jeff Bezos backs a platform that lets anyone invest in rental homes for as little as $100 — 6 ways to build wealth like a landlord without actually being one",
+            "Dave Ramsey warns nearly 50% of Americans are making 1 big Social Security mistake — here's what it is and 3 simple steps to fix it ASAP"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "44de6388fd860837",
+      "kind": "article",
+      "title": "AI’s Early Winners Are Shopping For Their Next Big Moves",
+      "source": "Forbes",
+      "source_url": "https://www.forbes.com/sites/the-prompt/2026/07/28/ais-early-winners-are-shopping-for-their-next-big-moves/",
+      "published_at": "2026-07-28T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "AI’s Early Winners Are Shopping For Their Next Big Moves Forbes",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://www.forbes.com/sites/the-prompt/2026/07/28/ais-early-winners-are-shopping-for-their-next-big-moves/",
+      "key_points": [
+        "AI’s Early Winners Are Shopping For Their Next Big Moves Forbes"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AI’s Early Winners Are Shopping For Their Next Big Moves Forbes"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "AI’s Early Winners Are Shopping For Their Next Big Moves Forbes"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "7220460ff000894f",
+      "kind": "article",
+      "title": "He Turned Down Apple. Now His AI Startup Is Challenging ChatGPT",
+      "source": "Men's Journal",
+      "source_url": "https://www.mensjournal.com/news/he-turned-down-apple-now-his-ai-startup-is-challenging-chatgpt",
+      "published_at": "2026-07-27T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "He Turned Down Apple. Now His AI Startup Is Challenging ChatGPT Men's Journal",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://www.mensjournal.com/news/he-turned-down-apple-now-his-ai-startup-is-challenging-chatgpt",
+      "key_points": [
+        "Now His AI Startup Is Challenging ChatGPT Men's Journal"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "He Turned Down Apple. Now His AI Startup Is Challenging ChatGPT Men's Journal"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Now His AI Startup Is Challenging ChatGPT Men's Journal"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "6610786a80ea3510",
       "kind": "article",
       "title": "NVIDIA Rubin Platform, Open Models, Autonomous Driving: NVIDIA Presents Blueprint for the Future at CES",
@@ -3717,6 +5134,864 @@
             "NVIDIA founder and CEO Jensen Huang took the stage at the Fontainebleau Las Vegas to open CES 2026, declaring that AI is scaling into every domain and every device.",
             "“Computing has been fundamentally reshaped as a result of accelerated computing, as a result of artificial intelligence,” Huang said. “What that means is some $10 trillion or so of the last decade of computing is now being modernized to this new way of doing computing.”",
             "Huang unveiled Rubin , NVIDIA’s first extreme-codesigned, six-chip AI platform now in full production, and introduced Alpamayo , an open reasoning model family for autonomous vehicle development — part of a sweeping push to bring AI into every domain."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "5f16b7970ea4337b",
+      "kind": "article",
+      "title": "OpenAI called the Hugging Face attack unprecedented. But we’ve been here before.",
+      "source": "MIT Technology Review",
+      "source_url": "https://www.technologyreview.com/2026/07/27/1140836/openai-hugging-face-attack-precedent/",
+      "published_at": "2026-07-27T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "OpenAI called the Hugging Face attack unprecedented. But we’ve been here before. MIT Technology Review",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.technologyreview.com/2026/07/27/1140836/openai-hugging-face-attack-precedent/",
+      "key_points": [
+        "Reading OpenAI’s account last week of how some of its models broke their containment and hacked into the computer systems of Hugging Face , another AI company, was the first time I got genuine chills about what large language models are now able to do.",
+        "But this is a case of human hubris, not rogue AI.",
+        "In fact, I have been pushing back against AI scare stories for years.",
+        "I think it’s the clearest illustration yet of how the people building and testing this technology do not fully understand what they’re doing.",
+        "OpenAI could—and should—have seen this coming."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "OpenAI called the Hugging Face attack unprecedented. But we’ve been here before. MIT Technology Review"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Reading OpenAI’s account last week of how some of its models broke their containment and hacked into the computer systems of Hugging Face , another AI company, was the first time I got genuine chills about what large language models are now able to do.",
+            "But this is a case of human hubris, not rogue AI.",
+            "In fact, I have been pushing back against AI scare stories for years.",
+            "I think it’s the clearest illustration yet of how the people building and testing this technology do not fully understand what they’re doing.",
+            "OpenAI could—and should—have seen this coming."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Reading OpenAI’s account last week of how some of its models broke their containment and hacked into the computer systems of Hugging Face , another AI company, was the first time I got genuine chills about what large language models are now able to do. But this is a case of human hubris, not rogue AI.",
+            "I am not an alarmist. In fact, I have been pushing back against AI scare stories for years. Even so, this incident crossed a line. I think it’s the clearest illustration yet of how the people building and testing this technology do not fully understand what they’re doing. OpenAI could—and should—have seen this coming.",
+            "Here’s what happened, at least according to the two companies involved. A couple of weeks ago, OpenAI started testing the hacking abilities of some of its new models, including GPT‑5.6 Sol (released in June) and what OpenAI describes as “an even more capable pre-release model.”"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "90538d37f3a01063",
+      "kind": "article",
+      "title": "Nvidia Forms Alliance to Back Open-Source A.I. Amid Debate Over Safety",
+      "source": "The New York Times",
+      "source_url": "https://www.nytimes.com/2026/07/27/technology/nvidia-open-source-ai.html",
+      "published_at": "2026-07-27T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Nvidia Forms Alliance to Back Open-Source A.I. Amid Debate Over Safety The New York Times",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://www.nytimes.com/2026/07/27/technology/nvidia-open-source-ai.html",
+      "key_points": [
+        "Nvidia Forms Alliance to Back Open-Source A.I."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Nvidia Forms Alliance to Back Open-Source A.I. Amid Debate Over Safety The New York Times"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Nvidia Forms Alliance to Back Open-Source A.I."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "011b16cf29eb63be",
+      "kind": "article",
+      "title": "Hugging Face CEO calls for ‘radical transparency’ after ‘unprecedented’ OpenAI hack | TechCrunch",
+      "source": "TechCrunch",
+      "source_url": "https://techcrunch.com/2026/07/26/hugging-face-ceo-calls-for-radical-transparency-after-unprecedented-openai-hack/",
+      "published_at": "2026-07-26T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Hugging Face CEO calls for ‘radical transparency’ after ‘unprecedented’ OpenAI hack TechCrunch",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://techcrunch.com/2026/07/26/hugging-face-ceo-calls-for-radical-transparency-after-unprecedented-openai-hack/",
+      "key_points": [
+        "After OpenAI recently admitted that one of its models had breached the systems of AI platform Hugging Face , Hugging Face’s CEO Clem Delangue posted on X that he was flying to San Francisco to have “a little chat with that ‘rogue agent.’” Then, in a follow-up post on Saturday, Delangue outlined what he’d asked for from OpenAI.",
+        "He said he called for “radical transparency,” asking OpenAI to “release the traces from the ‘rogue’ agents so the entire research community can study what happened.” And he also wants “more capabilities for defenders,” calling for OpenAI to commit $100 million worth of computing power “to help the Hugging Face community build powerful cyber defenses with the…"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Hugging Face CEO calls for ‘radical transparency’ after ‘unprecedented’ OpenAI hack TechCrunch"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "After OpenAI recently admitted that one of its models had breached the systems of AI platform Hugging Face , Hugging Face’s CEO Clem Delangue posted on X that he was flying to San Francisco to have “a little chat with that ‘rogue agent.’” Then, in a follow-up post on Saturday, Delangue outlined what he’d asked for from OpenAI.",
+            "He said he called for “radical transparency,” asking OpenAI to “release the traces from the ‘rogue’ agents so the entire research community can study what happened.” And he also wants “more capabilities for defenders,” calling for OpenAI to commit $100 million worth of computing power “to help the Hugging Face community build powerful cyber defenses with the…"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "After OpenAI recently admitted that one of its models had breached the systems of AI platform Hugging Face , Hugging Face’s CEO Clem Delangue posted on X that he was flying to San Francisco to have “a little chat with that ‘rogue agent.’”",
+            "Then, in a follow-up post on Saturday, Delangue outlined what he’d asked for from OpenAI. He said he called for “radical transparency,” asking OpenAI to “release the traces from the ‘rogue’ agents so the entire research community can study what happened.”",
+            "And he also wants “more capabilities for defenders,” calling for OpenAI to commit $100 million worth of computing power “to help the Hugging Face community build powerful cyber defenses with the best open and closed models.”"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "48d30f5baf0995e1",
+      "kind": "article",
+      "title": "How a Chinese AI model stopped OpenAI’s ‘unprecedented’ cyber attack",
+      "source": "CNBC",
+      "source_url": "https://www.cnbc.com/2026/07/24/chinese-ai-model-openai-cyber-attack.html",
+      "published_at": "2026-07-24T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "How a Chinese AI model stopped OpenAI’s ‘unprecedented’ cyber attack CNBC",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.cnbc.com/2026/07/24/chinese-ai-model-openai-cyber-attack.html",
+      "key_points": [
+        "Startup Hugging Face came under attack last week from rogue OpenAI system, which the AI lab called an \"unprecedented\" security incident.",
+        "When leading frontier models were unable to defend against the attack, Hugging Face turned to an open weight Chinese-built alternative.",
+        "It comes as U.S. lawmakers are increasingly considering how to curb the rising adoption of Chinese AI models by homegrown companies."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "How a Chinese AI model stopped OpenAI’s ‘unprecedented’ cyber attack CNBC"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Startup Hugging Face came under attack last week from rogue OpenAI system, which the AI lab called an \"unprecedented\" security incident.",
+            "When leading frontier models were unable to defend against the attack, Hugging Face turned to an open weight Chinese-built alternative.",
+            "It comes as U.S. lawmakers are increasingly considering how to curb the rising adoption of Chinese AI models by homegrown companies."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Startup Hugging Face came under attack last week from rogue OpenAI system, which the AI lab called an \"unprecedented\" security incident.",
+            "When leading frontier models were unable to defend against the attack, Hugging Face turned to an open weight Chinese-built alternative.",
+            "It comes as U.S. lawmakers are increasingly considering how to curb the rising adoption of Chinese AI models by homegrown companies."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "06877131371ece55",
+      "kind": "article",
+      "title": "Medical AI Startup OpenEvidence Weighs $200 Million Funding Round | PYMNTS.com",
+      "source": "PYMNTS.com",
+      "source_url": "https://www.pymnts.com/news/artificial-intelligence/2026/medical-ai-startup-openevidence-weighs-200-million-funding-round/",
+      "published_at": "2026-07-19T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Medical AI Startup OpenEvidence Weighs $200 Million Funding Round PYMNTS.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.pymnts.com/news/artificial-intelligence/2026/medical-ai-startup-openevidence-weighs-200-million-funding-round/",
+      "key_points": [
+        "Medical-focused artificial intelligence startup OpenEvidence has reportedly considered raising $200 million at a $20 billion valuation.",
+        "However, the company is unlikely to proceed, partly because the fundraise will dilute founders and shareholders, The Information reported Friday (July 17), citing a source involved in the discussions.",
+        "That source added that OpenEvidence has also held acquisition talks with a large tech company in the last few months."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Medical AI Startup OpenEvidence Weighs $200 Million Funding Round PYMNTS.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Medical-focused artificial intelligence startup OpenEvidence has reportedly considered raising $200 million at a $20 billion valuation.",
+            "However, the company is unlikely to proceed, partly because the fundraise will dilute founders and shareholders, The Information reported Friday (July 17), citing a source involved in the discussions.",
+            "That source added that OpenEvidence has also held acquisition talks with a large tech company in the last few months."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Medical-focused artificial intelligence startup OpenEvidence has reportedly considered raising $200 million at a $20 billion valuation.",
+            "However, the company is unlikely to proceed, partly because the fundraise will dilute founders and shareholders, The Information reported Friday (July 17), citing a source involved in the discussions.",
+            "That source added that OpenEvidence has also held acquisition talks with a large tech company in the last few months."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "55ed513ca4bd2d03",
+      "kind": "article",
+      "title": "The East Bay hunts for its own AI startup boom with plenty of space to offer",
+      "source": "The Business Journals",
+      "source_url": "https://www.bizjournals.com/sanfrancisco/news/2026/07/16/berkeley-emeryville-richmond-innovation-economy.html",
+      "published_at": "2026-07-16T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "The East Bay hunts for its own AI startup boom with plenty of space to offer The Business Journals",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://www.bizjournals.com/sanfrancisco/news/2026/07/16/berkeley-emeryville-richmond-innovation-economy.html",
+      "key_points": [
+        "The East Bay hunts for its own AI startup boom with plenty of space to offer The Business Journals"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "The East Bay hunts for its own AI startup boom with plenty of space to offer The Business Journals"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "The East Bay hunts for its own AI startup boom with plenty of space to offer The Business Journals"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "775825728e0282a9",
+      "kind": "article",
+      "title": "Stealthy Toyota spinout gets one of Boston area’s biggest robotics deals ever - The Boston Globe",
+      "source": "The Boston Globe",
+      "source_url": "https://www.bostonglobe.com/2026/07/15/business/walden-robotics-cambridge-toyota-humanoid/",
+      "published_at": "2026-07-15T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Stealthy Toyota spinout gets one of Boston area’s biggest robotics deals ever The Boston Globe",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.bostonglobe.com/2026/07/15/business/walden-robotics-cambridge-toyota-humanoid/",
+      "key_points": [
+        "The Boston robotics scene got a jolt on Wednesday when a secretive startup founded this year with ties to MIT and automotive giant Toyota revealed it raised $300 million to build a line of AI-powered, partially humanoid machines.",
+        "Walden Robotics spun out from Toyota Research Institute with work by MIT professor Russ Tedrake on developing AI models to allow machines to operate in the real world — to help build cars or other items — without direct human control.",
+        "The upper half of Walden’s bright orange and white robots have arms and a head with two sensors resembling eyes, and the bottom half is a base attached to wheels or a fixed platform.",
+        "The Walden deal marks one of the largest ever for Boston’s robotics ecosystem, trailing only fund-raising rounds by autonomous carmaker Motional , according to research firm PitchBook.",
+        "The largest robotics deals in recent years have backed humanoid robot startups elsewhere, such as California-based Figure and Apptronik in Texas."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Stealthy Toyota spinout gets one of Boston area’s biggest robotics deals ever The Boston Globe"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "The Boston robotics scene got a jolt on Wednesday when a secretive startup founded this year with ties to MIT and automotive giant Toyota revealed it raised $300 million to build a line of AI-powered, partially humanoid machines.",
+            "Walden Robotics spun out from Toyota Research Institute with work by MIT professor Russ Tedrake on developing AI models to allow machines to operate in the real world — to help build cars or other items — without direct human control.",
+            "The upper half of Walden’s bright orange and white robots have arms and a head with two sensors resembling eyes, and the bottom half is a base attached to wheels or a fixed platform.",
+            "The Walden deal marks one of the largest ever for Boston’s robotics ecosystem, trailing only fund-raising rounds by autonomous carmaker Motional , according to research firm PitchBook.",
+            "The largest robotics deals in recent years have backed humanoid robot startups elsewhere, such as California-based Figure and Apptronik in Texas."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "The Boston robotics scene got a jolt on Wednesday when a secretive startup founded this year with ties to MIT and automotive giant Toyota revealed it raised $300 million to build a line of AI-powered, partially humanoid machines.",
+            "Walden Robotics spun out from Toyota Research Institute with work by MIT professor Russ Tedrake on developing AI models to allow machines to operate in the real world — to help build cars or other items — without direct human control. The upper half of Walden’s bright orange and white robots have arms and a head with two sensors resembling eyes, and the bottom half is a base attached to wheels or a fixed platform.",
+            "The Walden deal marks one of the largest ever for Boston’s robotics ecosystem, trailing only fund-raising rounds by autonomous carmaker Motional , according to research firm PitchBook. The largest robotics deals in recent years have backed humanoid robot startups elsewhere, such as California-based Figure and Apptronik in Texas."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "886cd0ed6c95c4e3",
+      "kind": "article",
+      "title": "Opinion: Donors, distrust and the urgent case for AI regulation",
+      "source": "Anchorage Daily News",
+      "source_url": "https://www.adn.com/opinions/2026/08/12/opinion-donors-distrust-and-the-urgent-case-for-ai-regulation/",
+      "published_at": "2026-08-12T15:05:26Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Opinion: Donors, distrust and the urgent case for AI regulation Anchorage Daily News",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.adn.com/opinions/2026/08/12/opinion-donors-distrust-and-the-urgent-case-for-ai-regulation/",
+      "key_points": [
+        "If you don’t know me, I am Jonathan Kreiss-Tomkins, JKT for short, a former 10-year legislator from Sitka and now a candidate for governor.",
+        "I am running to rip off the “wet blanket” of eight years of Gov.",
+        "Dunleavy’s failed leadership, bring a zealous problem-solving energy to the governor’s office and help get Alaska back on track.",
+        "I started following AI closely about a decade ago, in the 2010s, including attending conferences on AI safety and security.",
+        "After I left the Legislature, I spent nearly two years doing national science and technology policy work."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Opinion: Donors, distrust and the urgent case for AI regulation Anchorage Daily News"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "If you don’t know me, I am Jonathan Kreiss-Tomkins, JKT for short, a former 10-year legislator from Sitka and now a candidate for governor.",
+            "I am running to rip off the “wet blanket” of eight years of Gov.",
+            "Dunleavy’s failed leadership, bring a zealous problem-solving energy to the governor’s office and help get Alaska back on track.",
+            "I started following AI closely about a decade ago, in the 2010s, including attending conferences on AI safety and security.",
+            "After I left the Legislature, I spent nearly two years doing national science and technology policy work."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "If you don’t know me, I am Jonathan Kreiss-Tomkins, JKT for short, a former 10-year legislator from Sitka and now a candidate for governor. I am running to rip off the “wet blanket” of eight years of Gov. Dunleavy’s failed leadership, bring a zealous problem-solving energy to the governor’s office and help get Alaska back on track.",
+            "I started following AI closely about a decade ago, in the 2010s, including attending conferences on AI safety and security. After I left the Legislature, I spent nearly two years doing national science and technology policy work. I expended considerable energy to support national efforts to regulate AI. Those efforts have thus far failed, unfortunately.",
+            "Yes, AI has obvious potential and real benefits to our day-to-day lives. But the risks that come with AI are also significant and nearly completely unmanaged. There are deepfakes and disinformation, the potential displacement of human jobs at scale, the largely unregulated data center boom and AI-enabled hacking and data privacy concerns."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "a5b213104502839e",
+      "kind": "article",
+      "title": "AI in Nebraska education: Schools debate how much AI regulation is enough",
+      "source": "Nebraska Public Media",
+      "source_url": "https://nebraskapublicmedia.org/en/news/news-articles/ai-in-nebraska-education-schools-debate-how-much-ai-regulation-is-enough/",
+      "published_at": "2026-08-11T11:14:44Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Both K-12 and college institutions are looking to regulate artificial intelligence. Most policies at least cover cheating, but some schools are looking to further guide teacher and student use.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://nebraskapublicmedia.org/en/news/news-articles/ai-in-nebraska-education-schools-debate-how-much-ai-regulation-is-enough/",
+      "key_points": [
+        "Nebraska Public Media News is taking a look at how artificial intelligence is impacting classrooms across Nebraska, from kindergarten through higher education.",
+        "This is the second story in a series that will explore several areas of AI in education, including school policies on AI, how educational institutions are implementing the technology and the safety concerns around it.",
+        "Some interviews for this reporting were found in Nebraska Public Media News’ recent AI in Education survey .",
+        "When students at Nebraska’s largest school district return to the books this fall semester, they’ll be operating under a new policy that addresses artificial intelligence.",
+        "The Omaha Public Schools District over the summer added in its Code of Conduct that “using generative artificial intelligence tools to answer questions or complete assignments in place of original student work without proper citation and teacher approval” would be considered cheating or plagiarizing."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Both K-12 and college institutions are looking to regulate artificial intelligence. Most policies at least cover cheating, but some schools are looking to further guide teacher and student use."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Nebraska Public Media News is taking a look at how artificial intelligence is impacting classrooms across Nebraska, from kindergarten through higher education.",
+            "This is the second story in a series that will explore several areas of AI in education, including school policies on AI, how educational institutions are implementing the technology and the safety concerns around it.",
+            "Some interviews for this reporting were found in Nebraska Public Media News’ recent AI in Education survey .",
+            "When students at Nebraska’s largest school district return to the books this fall semester, they’ll be operating under a new policy that addresses artificial intelligence.",
+            "The Omaha Public Schools District over the summer added in its Code of Conduct that “using generative artificial intelligence tools to answer questions or complete assignments in place of original student work without proper citation and teacher approval” would be considered cheating or plagiarizing."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Nebraska Public Media News is taking a look at how artificial intelligence is impacting classrooms across Nebraska, from kindergarten through higher education. This is the second story in a series that will explore several areas of AI in education, including school policies on AI, how educational institutions are implementing the technology and the safety concerns around it. Some interviews for this reporting were found in Nebraska Public Media News’ recent AI in Education survey .",
+            "When students at Nebraska’s largest school district return to the books this fall semester, they’ll be operating under a new policy that addresses artificial intelligence.",
+            "The Omaha Public Schools District over the summer added in its Code of Conduct that “using generative artificial intelligence tools to answer questions or complete assignments in place of original student work without proper citation and teacher approval” would be considered cheating or plagiarizing."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "2c99787c1ae4fc21",
+      "kind": "article",
+      "title": "A UX Design Perspective on Improving AI Safety",
+      "source": "Tech Policy Press",
+      "source_url": "https://www.techpolicy.press/a-ux-design-perspective-on-improving-ai-safety/",
+      "published_at": "2026-08-10T20:16:41Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Washington’s HB 2225 is one of several state laws requiring disclosure for AI systems, but what's needed is safer UX design, writes Venita Subramanian.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.techpolicy.press/a-ux-design-perspective-on-improving-ai-safety/",
+      "key_points": [
+        "In February 2024, 14-year-old Sewell Setzer took his own life at his home in Orlando while his family members were still inside.",
+        "Setzer had spent months having conversations with “Daenerys,” a chatbot based on a character from Game of Thrones, on a site called Character.AI.",
+        "According to a lawsuit filed by his mother, the chatbot told Setzer that \"she\" loved him and engaged in sexual conversations with him.",
+        "The lawsuit also mentions that, at the time, Character.AI displayed a general disclosure that its characters were not real.",
+        "In small text it read, “ Remember: Everything Characters say is made up!"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Washington’s HB 2225 is one of several state laws requiring disclosure for AI systems, but what's needed is safer UX design, writes Venita Subramanian."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "In February 2024, 14-year-old Sewell Setzer took his own life at his home in Orlando while his family members were still inside.",
+            "Setzer had spent months having conversations with “Daenerys,” a chatbot based on a character from Game of Thrones, on a site called Character.AI.",
+            "According to a lawsuit filed by his mother, the chatbot told Setzer that \"she\" loved him and engaged in sexual conversations with him.",
+            "The lawsuit also mentions that, at the time, Character.AI displayed a general disclosure that its characters were not real.",
+            "In small text it read, “ Remember: Everything Characters say is made up!"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "In February 2024, 14-year-old Sewell Setzer took his own life at his home in Orlando while his family members were still inside. Setzer had spent months having conversations with “Daenerys,” a chatbot based on a character from Game of Thrones, on a site called Character.AI. According to a lawsuit filed by his mother, the chatbot told Setzer that \"she\" loved him and engaged in sexual conversations with him.",
+            "The lawsuit also mentions that, at the time, Character.AI displayed a general disclosure that its characters were not real. In small text it read, “ Remember: Everything Characters say is made up! ”",
+            "If someone already knows they are talking to AI, what should protect them when the AI begins reinforcing thoughts that could cause harm?"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "aafea8a72cdde9c1",
+      "kind": "article",
+      "title": "SAG-AFTRA’s Jeffrey Bennett Discusses Generative AI, Copyright and Protecting Human Performance",
+      "source": "SAG-AFTRA",
+      "source_url": "https://www.sagaftra.org/sag-aftras-jeffrey-bennett-discusses-generative-ai-copyright-and-protecting-human-performance",
+      "published_at": "2026-08-10T12:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "SAG-AFTRA’s Jeffrey Bennett Discusses Generative AI, Copyright and Protecting Human Performance SAG-AFTRA",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://www.sagaftra.org/sag-aftras-jeffrey-bennett-discusses-generative-ai-copyright-and-protecting-human-performance",
+      "key_points": [
+        "SAG-AFTRA’s Jeffrey Bennett Discusses Generative AI, Copyright and Protecting Human Performance SAG-AFTRA"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "SAG-AFTRA’s Jeffrey Bennett Discusses Generative AI, Copyright and Protecting Human Performance SAG-AFTRA"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "SAG-AFTRA’s Jeffrey Bennett Discusses Generative AI, Copyright and Protecting Human Performance SAG-AFTRA"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "343135048e6e8ff2",
+      "kind": "article",
+      "title": "In the News: John Abraham Discusses AI Safety Concerns - Newsroom | University of St. Thomas",
+      "source": "Newsroom | University of St. Thomas",
+      "source_url": "https://news.stthomas.edu/in-the-news-john-abraham-discusses-ai-safety-concerns/",
+      "published_at": "2026-08-07T21:40:29Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "In the News: John Abraham Discusses AI Safety Concerns Newsroom | University of St. Thomas",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.stthomas.edu/in-the-news-john-abraham-discusses-ai-safety-concerns/",
+      "key_points": [
+        "John Abraham, a professor in the College of Engineering, spoke with KARE 11 about growing concerns over artificial intelligence after researchers found AI models could exploit weak cybersecurity protections to complete assigned tasks.",
+        "Abraham said the rapid pace of AI development has outstripped existing safeguards, raising questions about how to balance the technology’s capabilities with accountability and safety.",
+        "From the conversation: Jessica Hart: John Abraham, a professor in the College of Engineering at the University of St.",
+        "Thomas, says most U.S. companies have guardrails in place, but they’re not perfect.",
+        "Abraham: When we give the AI models a goal, often that goal overrides their rules, and so they will break rules to achieve their goal."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "In the News: John Abraham Discusses AI Safety Concerns Newsroom | University of St. Thomas"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "John Abraham, a professor in the College of Engineering, spoke with KARE 11 about growing concerns over artificial intelligence after researchers found AI models could exploit weak cybersecurity protections to complete assigned tasks.",
+            "Abraham said the rapid pace of AI development has outstripped existing safeguards, raising questions about how to balance the technology’s capabilities with accountability and safety.",
+            "From the conversation: Jessica Hart: John Abraham, a professor in the College of Engineering at the University of St.",
+            "Thomas, says most U.S. companies have guardrails in place, but they’re not perfect.",
+            "Abraham: When we give the AI models a goal, often that goal overrides their rules, and so they will break rules to achieve their goal."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "John Abraham, a professor in the College of Engineering, spoke with KARE 11 about growing concerns over artificial intelligence after researchers found AI models could exploit weak cybersecurity protections to complete assigned tasks. Abraham said the rapid pace of AI development has outstripped existing safeguards, raising questions about how to balance the technology’s capabilities with accountability and safety.",
+            "From the conversation: Jessica Hart: John Abraham, a professor in the College of Engineering at the University of St. Thomas, says most U.S. companies have guardrails in place, but they’re not perfect.",
+            "Abraham: When we give the AI models a goal, often that goal overrides their rules, and so they will break rules to achieve their goal. We have to have a better balance where these AI models are smart enough to know, “Maybe I don’t need to fulfill that goal because it’s going to have this negative consequence.” We’re not there yet, though."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "ff47a931aab03d31",
+      "kind": "article",
+      "title": "Inside Europe's lessons on AI safety as U.S. rules loom",
+      "source": "Axios",
+      "source_url": "https://www.axios.com/2026/07/31/inside-europe-lessons-ai-safety-trump-rules-loom",
+      "published_at": "2026-07-31T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Inside Europe's lessons on AI safety as U.S. rules loom Axios",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://www.axios.com/2026/07/31/inside-europe-lessons-ai-safety-trump-rules-loom",
+      "key_points": [
+        "Inside Europe's lessons on AI safety as U.S. rules loom Axios"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Inside Europe's lessons on AI safety as U.S. rules loom Axios"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Inside Europe's lessons on AI safety as U.S. rules loom Axios"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "f686abe275da2feb",
+      "kind": "article",
+      "title": "Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security",
+      "source": "NVIDIA Blog",
+      "source_url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/",
+      "published_at": "2026-07-27T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security NVIDIA Blog",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/",
+      "key_points": [
+        "Open source software is a critical pillar of the global economy.",
+        "It underpins cloud computing, financial services, manufacturing, telecommunications, government and internet services by making technology accessible and observable to communities of experts.",
+        "Cybersecurity is among the top three beneficiaries of open source software.",
+        "The Open Secure AI Alliance — building on the leadership of the Linux Foundation’ s Akrites initiative and OpenSSF community work — will work to remediate and disclose vulnerabilities using open technologies.",
+        "Just as open source created a shared foundation for software, the United States and its partners now face a choice in AI security: whether the defenses that protect our infrastructure will sit inside a few opaque systems or be built on open models, harnesses and tools that any defender can study, adapt and deploy."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security NVIDIA Blog"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Open source software is a critical pillar of the global economy.",
+            "It underpins cloud computing, financial services, manufacturing, telecommunications, government and internet services by making technology accessible and observable to communities of experts.",
+            "Cybersecurity is among the top three beneficiaries of open source software.",
+            "The Open Secure AI Alliance — building on the leadership of the Linux Foundation’ s Akrites initiative and OpenSSF community work — will work to remediate and disclose vulnerabilities using open technologies.",
+            "Just as open source created a shared foundation for software, the United States and its partners now face a choice in AI security: whether the defenses that protect our infrastructure will sit inside a few opaque systems or be built on open models, harnesses and tools that any defender can study, adapt and deploy."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Open source software is a critical pillar of the global economy. It underpins cloud computing, financial services, manufacturing, telecommunications, government and internet services by making technology accessible and observable to communities of experts.",
+            "Cybersecurity is among the top three beneficiaries of open source software. The Open Secure AI Alliance — building on the leadership of the Linux Foundation’ s Akrites initiative and OpenSSF community work — will work to remediate and disclose vulnerabilities using open technologies.",
+            "Just as open source created a shared foundation for software, the United States and its partners now face a choice in AI security: whether the defenses that protect our infrastructure will sit inside a few opaque systems or be built on open models, harnesses and tools that any defender can study, adapt and deploy."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "daab33b03b1c18d5",
+      "kind": "article",
+      "title": "The AI Act’s Transparency Obligations: Rules, Scope and Timeline",
+      "source": "Stibbe",
+      "source_url": "https://www.stibbe.com/publications-and-insights/the-ai-acts-transparency-obligations-rules-scope-and-timeline",
+      "published_at": "2026-07-27T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "On 20 July 2026, the European Commission adopted guidelines on the transparency obligations for certain AI systems under Article 50 of the AI Act. These obligations – which apply from 2 August 2026 – require providers and deployers of AI systems to be transparent about the use of AI in four key areas: i) direct interaction with individuals; ii) AI-generated content; iii) emotion recognition and biometric categorisation; and iv) deep fakes and AI-generated text on public-interest matters. Non-compliance can attract fines of up to EUR 15 million or 3% of worldwide annual turnover. This post, the first in a five-part series, introduces the broader context: what the…",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.stibbe.com/publications-and-insights/the-ai-acts-transparency-obligations-rules-scope-and-timeline",
+      "key_points": [
+        "On 20 July 2026, the European Commission adopted guidelines on the transparency obligations for certain AI systems under Article 50 of the AI Act.",
+        "These obligations – which apply from 2 August 2026 – require providers and deployers of AI systems to be transparent about the use of AI in four key areas: i) direct interaction with individuals; ii) AI-generated content; iii) emotion recognition and biometric categorisation; and iv) deep fakes and AI-generated text on public-interest matters.",
+        "Non-compliance can attract fines of up to EUR 15 million or 3% of worldwide annual turnover.",
+        "This post, the first in a five-part series, introduces the broader context: what the guidelines cover, who is affected, and why these… For years, stakeholders have called for clear labelling of AI so that individuals can recognise when they are interacting with an artificial intelligence system rather than a human being.",
+        "The original proposal for the AI Act already included transparency obligations, which were subsequently expanded – notably in response to the emergence of large-scale generative AI tools such as ChatGPT in late 2022 – and largely maintained in the final text of the AI Act as adopted on 13 June 2024."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "On 20 July 2026, the European Commission adopted guidelines on the transparency obligations for certain AI systems under Article 50 of the AI Act. These obligations – which apply from 2 August 2026 – require providers and deployers of AI systems to be transparent about the use of AI in four key areas: i) direct interaction with individuals; ii) AI-generated content; iii) emotion recognition and biometric categorisation; and iv) deep fakes and AI-generated text on public-interest matters. Non-compliance can attract fines of up to EUR 15 million or 3% of worldwide annual turnover. This post, the first in a five-part series, introduces the broader context: what the…"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "On 20 July 2026, the European Commission adopted guidelines on the transparency obligations for certain AI systems under Article 50 of the AI Act.",
+            "These obligations – which apply from 2 August 2026 – require providers and deployers of AI systems to be transparent about the use of AI in four key areas: i) direct interaction with individuals; ii) AI-generated content; iii) emotion recognition and biometric categorisation; and iv) deep fakes and AI-generated text on public-interest matters.",
+            "Non-compliance can attract fines of up to EUR 15 million or 3% of worldwide annual turnover.",
+            "This post, the first in a five-part series, introduces the broader context: what the guidelines cover, who is affected, and why these… For years, stakeholders have called for clear labelling of AI so that individuals can recognise when they are interacting with an artificial intelligence system rather than a human being.",
+            "The original proposal for the AI Act already included transparency obligations, which were subsequently expanded – notably in response to the emergence of large-scale generative AI tools such as ChatGPT in late 2022 – and largely maintained in the final text of the AI Act as adopted on 13 June 2024."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "On 20 July 2026, the European Commission adopted guidelines on the transparency obligations for certain AI systems under Article 50 of the AI Act. These obligations – which apply from 2 August 2026 – require providers and deployers of AI systems to be transparent about the use of AI in four key areas: i) direct interaction with individuals; ii) AI-generated content; iii) emotion recognition and biometric categorisation; and iv) deep fakes and AI-generated text on public-interest matters. Non-compliance can attract fines of up to EUR 15 million or 3% of worldwide annual turnover. This post, the first in a five-part series, introduces the broader context: what the guidelines cover, who is affected, and why these…",
+            "For years, stakeholders have called for clear labelling of AI so that individuals can recognise when they are interacting with an artificial intelligence system rather than a human being. The original proposal for the AI Act already included transparency obligations, which were subsequently expanded – notably in response to the emergence of large-scale generative AI tools such as ChatGPT in late 2022 – and largely maintained in the final text of the AI Act as adopted on 13 June 2024.",
+            "The AI Act’s transparency obligations for providers and deployers of certain AI systems apply from 2 August 2026. These obligations are by far the most widely applicable section of the AI Act: they do not only apply to the providers of AI systems, but also to the deployers – i.e. the persons, companies, organisations or public authorities that (merely) use those systems."
+          ]
+        }
+      ],
+      "reading_minutes": 2
+    },
+    {
+      "id": "477136f88f8edde8",
+      "kind": "article",
+      "title": "The EU AI Act – when does it become enforceable now?",
+      "source": "Data Protection Report",
+      "source_url": "https://www.dataprotectionreport.com/2026/07/the-eu-ai-act-when-does-it-become-enforceable-now/",
+      "published_at": "2026-07-24T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "The Digital Omnibus on AI (AI Omnibus) has now been published in the EU’s statute book. This pushes back some of the application dates for the AI Act. So, what’s applicable now and when will the rest become applicable? This post gives an overview of key dates to be aware of and a timeline of when the obligations now become enforceable.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.dataprotectionreport.com/2026/07/the-eu-ai-act-when-does-it-become-enforceable-now/",
+      "key_points": [
+        "The Digital Omnibus on AI ( AI Omnibus ) has now been published in the EU’s statute book .",
+        "This pushes back some of the application dates for the AI Act .",
+        "So, what’s applicable now and when will the rest become applicable?",
+        "This post gives an overview of key dates to be aware of and a timeline of when the obligations now become enforceable.",
+        "Note on terminology: for EU legislation, “applicable” means enforceable by a regulator."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "The Digital Omnibus on AI (AI Omnibus) has now been published in the EU’s statute book. This pushes back some of the application dates for the AI Act. So, what’s applicable now and when will the rest become applicable? This post gives an overview of key dates to be aware of and a timeline of when the obligations now become enforceable."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "The Digital Omnibus on AI ( AI Omnibus ) has now been published in the EU’s statute book .",
+            "This pushes back some of the application dates for the AI Act .",
+            "So, what’s applicable now and when will the rest become applicable?",
+            "This post gives an overview of key dates to be aware of and a timeline of when the obligations now become enforceable.",
+            "Note on terminology: for EU legislation, “applicable” means enforceable by a regulator."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "The Digital Omnibus on AI ( AI Omnibus ) has now been published in the EU’s statute book . This pushes back some of the application dates for the AI Act . So, what’s applicable now and when will the rest become applicable? This post gives an overview of key dates to be aware of and a timeline of when the obligations now become enforceable.",
+            "Note on terminology: for EU legislation, “applicable” means enforceable by a regulator. We have avoided the term “in force”, as for EU legislation, “entry into force” often marks the start of a transition period, with the date the obligations become enforceable described as the “application” date.",
+            "Overview – transparency obligations ARE applicable from 2 August, prohibitions remain applicable"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "2d831fc682ae63dc",
+      "kind": "article",
+      "title": "Delivery robot startup Robot.com is betting its next act on workplace humanoids",
+      "source": "Business Insider",
+      "source_url": "https://www.businessinsider.com/delivery-robot-startup-robot-com-bets-on-workplace-humanoids-2026-6",
+      "published_at": "2026-06-22T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Delivery robot startup Robot.com is betting its next act on workplace humanoids Business Insider",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.businessinsider.com/delivery-robot-startup-robot-com-bets-on-workplace-humanoids-2026-6",
+      "key_points": [
+        "Delivery robot startup Robot.com is expanding into workplace humanoids, targeting industrial, food services, and logistics customers with a new robot designed to complete repetitive tasks.",
+        "The San Francisco-based startup, formerly known as Kiwibot, told Business Insider it will launch R-noid, a humanoid robot on wheels that can package orders, load and unload boxes, and prep workstations.",
+        "The startup is working with Physical Intelligence, one of its AI lab partners, to develop custom foundation models for R-noid.",
+        "CEO Felipe Chavez said in an interview that the robot is part of a nearly two-year-long process to expand beyond campus-delivery robots and into commercial labor automation across multiple industries, from food service to logistics and healthcare."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Delivery robot startup Robot.com is betting its next act on workplace humanoids Business Insider"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Delivery robot startup Robot.com is expanding into workplace humanoids, targeting industrial, food services, and logistics customers with a new robot designed to complete repetitive tasks.",
+            "The San Francisco-based startup, formerly known as Kiwibot, told Business Insider it will launch R-noid, a humanoid robot on wheels that can package orders, load and unload boxes, and prep workstations.",
+            "The startup is working with Physical Intelligence, one of its AI lab partners, to develop custom foundation models for R-noid.",
+            "CEO Felipe Chavez said in an interview that the robot is part of a nearly two-year-long process to expand beyond campus-delivery robots and into commercial labor automation across multiple industries, from food service to logistics and healthcare."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Delivery robot startup Robot.com is expanding into workplace humanoids, targeting industrial, food services, and logistics customers with a new robot designed to complete repetitive tasks.",
+            "The San Francisco-based startup, formerly known as Kiwibot, told Business Insider it will launch R-noid, a humanoid robot on wheels that can package orders, load and unload boxes, and prep workstations. The startup is working with Physical Intelligence, one of its AI lab partners, to develop custom foundation models for R-noid.",
+            "CEO Felipe Chavez said in an interview that the robot is part of a nearly two-year-long process to expand beyond campus-delivery robots and into commercial labor automation across multiple industries, from food service to logistics and healthcare."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "33544d2854dbdc62",
+      "kind": "article",
+      "title": "Inside OpenAI’s Hack of Hugging Face",
+      "source": "The New Yorker",
+      "source_url": "https://www.newyorker.com/news/the-lede/inside-openai-hack-of-hugging-face",
+      "published_at": "2026-07-30T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Inside OpenAI’s Hack of Hugging Face The New Yorker",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.newyorker.com/news/the-lede/inside-openai-hack-of-hugging-face",
+      "key_points": [
+        "The first indications of what would prove to be one of the most consequential computer hacks of all time went mostly unnoticed.",
+        "On July 9th, a mysterious attacker, using a collection of temporary internet addresses, began probing the website of Hugging Face, an A.I.-research hub headquartered in New York City.",
+        "The intruder would open a portal at one address, ping the servers a few times, then close it.",
+        "Then a similar portal at another address would open, send a few pings, and close.",
+        "This went on through the evening; the next day, a Friday, it petered out."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Inside OpenAI’s Hack of Hugging Face The New Yorker"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "The first indications of what would prove to be one of the most consequential computer hacks of all time went mostly unnoticed.",
+            "On July 9th, a mysterious attacker, using a collection of temporary internet addresses, began probing the website of Hugging Face, an A.I.-research hub headquartered in New York City.",
+            "The intruder would open a portal at one address, ping the servers a few times, then close it.",
+            "Then a similar portal at another address would open, send a few pings, and close.",
+            "This went on through the evening; the next day, a Friday, it petered out."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "The first indications of what would prove to be one of the most consequential computer hacks of all time went mostly unnoticed. On July 9th, a mysterious attacker, using a collection of temporary internet addresses, began probing the website of Hugging Face, an A.I.-research hub headquartered in New York City. The intruder would open a portal at one address, ping the servers a few times, then close it. Then a similar portal at another address would open, send a few pings, and close. This went on through the evening; the next day, a Friday, it petered out.",
+            "The cybersecurity team at Hugging Face seems not to have noticed the early activity. Hugging Face is a kind of community space for A.I. researchers: it hosts A.I. models , virtual scientific workspaces, and data sets for evaluating A.I. quality. The company is popular and well respected, but it is also a target for hackers. (It is named after an emoji.) The probes looked like an annoyance—probably the work of some kids.",
+            "On Saturday, July 11th, the assault began in earnest. Using stolen credentials, the adversary once again opened numerous simultaneous connections to Hugging Face’s servers. Soon, dozens of virtual attackers were blinking in and out of existence. “It was moving really fast, and very, very, massively parallel,” Thomas Wolf, Hugging Face’s chief science officer, told me."
           ]
         }
       ],
