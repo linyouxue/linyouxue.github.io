@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-15T18:46:26Z",
+  "generated_at": "2026-08-16T01:56:46Z",
   "record_count": 132,
   "records": [
     {
@@ -637,6 +637,51 @@
       "reading_minutes": 1
     },
     {
+      "id": "rhb-icml-2026",
+      "kind": "paper",
+      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
+      "source": "OpenReview · arXiv",
+      "source_url": "https://arxiv.org/abs/2605.02964",
+      "published_at": "2026-06-24T00:00:00Z",
+      "authors": [
+        "Kunvar Thaman"
+      ],
+      "venue": "ICML 2026",
+      "tags": [
+        "Reward Hacking",
+        "Agent Safety",
+        "Evaluation"
+      ],
+      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
+      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/rhb-icml-2026.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://arxiv.org/pdf/2605.02964",
+      "key_points": [
+        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
+        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
+        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
+        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
+        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
+        },
+        {
+          "title": "关键结果",
+          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
+        },
+        {
+          "title": "局限与结论",
+          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
+        }
+      ],
+      "reading_minutes": 46
+    },
+    {
       "id": "8af8ed83ac3d5e16",
       "kind": "article",
       "title": "The builder’s guide to GPT‑5.6",
@@ -757,51 +802,6 @@
         }
       ],
       "reading_minutes": 1
-    },
-    {
-      "id": "rhb-icml-2026",
-      "kind": "paper",
-      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
-      "source": "OpenReview · arXiv",
-      "source_url": "https://arxiv.org/abs/2605.02964",
-      "published_at": "2026-06-24T00:00:00Z",
-      "authors": [
-        "Kunvar Thaman"
-      ],
-      "venue": "ICML 2026",
-      "tags": [
-        "Reward Hacking",
-        "Agent Safety",
-        "Evaluation"
-      ],
-      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
-      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/rhb-icml-2026.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://arxiv.org/pdf/2605.02964",
-      "key_points": [
-        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
-        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
-        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
-        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
-        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
-        },
-        {
-          "title": "关键结果",
-          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
-        },
-        {
-          "title": "局限与结论",
-          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
-        }
-      ],
-      "reading_minutes": 46
     },
     {
       "id": "cd9b72e43a78b55d",
@@ -1219,8 +1219,8 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.cnbc.com/2026/08/10/the-top-ai-proof-jobs-that-require-uniquely-human-skills.html",
       "key_points": [
-        "Raising Successful Kids If you want your kids to focus better, do 5 things—they'll have an 'easier' time paying attention Work The top 10 highest-paying jobs for teens in the U.S.—No.",
-        "1 isn't retail or food service Work Don't just follow your passion—'successful and happy' people prioritize 2 things in their careers, says expert"
+        "Work Don't just follow your passion—'successful and happy' people prioritize 2 things in their careers, says expert Work The top 10 highest-paying jobs for teens in the U.S.—No.",
+        "1 isn't retail or food service Raising Successful Kids If you want your kids to focus better, do 5 things—they'll have an 'easier' time paying attention"
       ],
       "sections": [
         {
@@ -1230,16 +1230,16 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Raising Successful Kids If you want your kids to focus better, do 5 things—they'll have an 'easier' time paying attention Work The top 10 highest-paying jobs for teens in the U.S.—No.",
-            "1 isn't retail or food service Work Don't just follow your passion—'successful and happy' people prioritize 2 things in their careers, says expert"
+            "Work Don't just follow your passion—'successful and happy' people prioritize 2 things in their careers, says expert Work The top 10 highest-paying jobs for teens in the U.S.—No.",
+            "1 isn't retail or food service Raising Successful Kids If you want your kids to focus better, do 5 things—they'll have an 'easier' time paying attention"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Raising Successful Kids If you want your kids to focus better, do 5 things—they'll have an 'easier' time paying attention",
+            "Work Don't just follow your passion—'successful and happy' people prioritize 2 things in their careers, says expert",
             "Work The top 10 highest-paying jobs for teens in the U.S.—No. 1 isn't retail or food service",
-            "Work Don't just follow your passion—'successful and happy' people prioritize 2 things in their careers, says expert"
+            "Raising Successful Kids If you want your kids to focus better, do 5 things—they'll have an 'easier' time paying attention"
           ]
         }
       ],
@@ -1301,7 +1301,7 @@
       "id": "76a1e404cd3e7543",
       "kind": "article",
       "title": "Artificial intelligence in drug discovery — what it is, where we stand and the path forward",
-      "source": "nature.com",
+      "source": "Nature",
       "source_url": "https://www.nature.com/articles/s41573-026-01496-2",
       "published_at": "2026-08-07T07:00:00Z",
       "authors": [],
@@ -1312,22 +1312,22 @@
         "Applied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Artificial intelligence in drug discovery — what it is, where we stand and the path forward nature.com",
+      "summary": "Artificial intelligence in drug discovery — what it is, where we stand and the path forward Nature",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "summary-only",
       "resolved_url": "https://www.nature.com/articles/s41573-026-01496-2",
       "key_points": [
-        "Artificial intelligence in drug discovery — what it is, where we stand and the path forward nature.com"
+        "Artificial intelligence in drug discovery — what it is, where we stand and the path forward Nature"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Artificial intelligence in drug discovery — what it is, where we stand and the path forward nature.com"
+          "body": "Artificial intelligence in drug discovery — what it is, where we stand and the path forward Nature"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Artificial intelligence in drug discovery — what it is, where we stand and the path forward nature.com"
+            "Artificial intelligence in drug discovery — what it is, where we stand and the path forward Nature"
           ]
         },
         {
@@ -1639,11 +1639,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "b0485596f780350f",
+      "id": "a97f52cede96e122",
       "kind": "article",
       "title": "DeepSeek 官方 发布 类 Codex 工具 DeepSeek Harness,我就是装不上啊",
       "source": "微信公众号 · 小众软件",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1786819560&ver=6906&signature=wknkEKxXjYC0sygf6pnmDxKfuTH86twavphaDbaj569rklyq0ciDkFdS0VMhweV9Ib9GriHz6oMOq*nT22RkAXIsUlFgRS4J8Yq4ZFDX6szItMQhR*t0trd9yQOhbdUX&new=1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1786845381&ver=6907&signature=Wmp9hVx3Y1c56BDk4eq3O9WIh5-WIBPq1*sjjxhKJWrarSCXrYaagUHHzM9ZJWJcqDvwrYq2rg1lz4R9xKzXGklwfJIT1LZ93JDQziORJWkofJERe5ShO9dtUHi9LyiY&new=1",
       "published_at": "2026-08-15T10:27:33Z",
       "authors": [],
       "venue": "",
@@ -1656,7 +1656,7 @@
       "summary": "注意啊,这个工具是 DeepSeek 发布 的,但它自身还是需要 API 才能使用,每用一次,都费钱!这就是 AI 时代的代价啊.涨价之前,...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HPezgGqjfczSqC0aBFu7P3LjhGy9bPC39t-HNg2I&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1786819560%26ver%3D6906%26signature%3DwknkEKxXjYC0sygf6pnmDxKfuTH86twavphaDbaj569rklyq0ciDkFdS0VMhweV9Ib9GriHz6oMOq%2AnT22RkAXIsUlFgRS4J8Yq4ZFDX6szItMQhR%2At0trd9yQOhbdUX%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HNUYgWqjBAipEZjJjPcH1ISAH346rz3Vces5EfE8&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1786845381%26ver%3D6907%26signature%3DWmp9hVx3Y1c56BDk4eq3O9WIh5-WIBPq1%2AsjjxhKJWrarSCXrYaagUHHzM9ZJWJcqDvwrYq2rg1lz4R9xKzXGklwfJIT1LZ93JDQziORJWkofJERe5ShO9dtUHi9LyiY%26new%3D1",
       "key_points": [
         "注意啊,这个工具是 DeepSeek 发布 的,但它自身还是需要 API 才能使用,每用一次,都费钱!"
       ],
@@ -1679,11 +1679,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "66cf02de99bfe4de",
+      "id": "25e2375c4875bda2",
       "kind": "article",
       "title": "智谱 GLM -5.3正式 发布 ,能力比肩Fable5!",
       "source": "微信公众号 · 阿枫科技",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1786819563&ver=6906&signature=4g4bne43lcRu0yNTE65DMk7eWR-1aNMs6zVjC8r8I5t4K57kfJmNQKTYGLkfejjITf4OfyKjjKOfM6LntaXZpeI1SEDqEQetE-ORx9dhrtz1FH3TO6E3nUcdxRGrNM20&new=1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1786845384&ver=6907&signature=QTPedfb5tage8gaBdc-tFansPtndeko-3RI9gpRhLVIg6MCBNH7USu3NqBH1ICfj5s3joAltCe7DDO*5UhxqKO2Q-Cj74j4u9QBsPiYGoK2RmSl8LIR2m9VkSHCIeShV&new=1",
       "published_at": "2026-08-15T07:25:41Z",
       "authors": [],
       "venue": "",
@@ -1696,7 +1696,7 @@
       "summary": "就在昨天, 智谱 最新的 GLM -5.3终于 发布 了.下面这个视频中看到的画面,并不是《我的世界》,而是我用 GLM -5.3模型复刻的游戏:...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HPezgGqjEgfHWXBiNQvCgbZOO0sSVt-KbarVqWQ1&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1786819563%26ver%3D6906%26signature%3D4g4bne43lcRu0yNTE65DMk7eWR-1aNMs6zVjC8r8I5t4K57kfJmNQKTYGLkfejjITf4OfyKjjKOfM6LntaXZpeI1SEDqEQetE-ORx9dhrtz1FH3TO6E3nUcdxRGrNM20%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HNUYgWqjjxxL74GNn0YyP579dyaGgWJLty5W3TnB&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1786845384%26ver%3D6907%26signature%3DQTPedfb5tage8gaBdc-tFansPtndeko-3RI9gpRhLVIg6MCBNH7USu3NqBH1ICfj5s3joAltCe7DDO%2A5UhxqKO2Q-Cj74j4u9QBsPiYGoK2RmSl8LIR2m9VkSHCIeShV%26new%3D1",
       "key_points": [
         "就在昨天, 智谱 最新的 GLM -5.3终于 发布 了.下面这个视频中看到的画面,并不是《我的世界》,而是我用 GLM -5.3模型复刻的游戏:..."
       ],
@@ -1719,11 +1719,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "94c21abb98114ea1",
+      "id": "b0f4fef6825a254a",
       "kind": "article",
       "title": "DeepSeek 创新型架构 Harness 发布 :一切组件皆为插件",
       "source": "微信公众号 · 21CTO",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1786819560&ver=6906&signature=EJfHGvI8H5vb031VSbBMjVOMAh*7p25tZ-sFt4lIDLpdTLB3IMY24AJz5FPlluSBkHE-clI3teA4XlQqUjmt4mgYXr4D4NJX*Bhck3eCNf7XNT9XTCQp0k6NbkJJENJT&new=1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1786845381&ver=6907&signature=o5s9wiMnv-E5qSF212b0BLvC3yZqtjhZl9itAvIHCDFy-i7bmMTA8EXyyrYmhg5Ts8UDfQ-6QZsXuLKsN6I1Yv79omwRTLaOcGygpiSawzLj3xXQMP2gLqpSyryS2K7I&new=1",
       "published_at": "2026-08-15T03:25:07Z",
       "authors": [],
       "venue": "",
@@ -1736,7 +1736,7 @@
       "summary": "DeepSeek 近日 发布 其开源代理框架的早期版本Harness,这引发了开发者社区的广泛关注.这是由于对于从事机器学习模型工作的开...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HPezgGqjFrsL2hrzmehuOaZC3-XUKdoCN5VAHmki&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1786819560%26ver%3D6906%26signature%3DEJfHGvI8H5vb031VSbBMjVOMAh%2A7p25tZ-sFt4lIDLpdTLB3IMY24AJz5FPlluSBkHE-clI3teA4XlQqUjmt4mgYXr4D4NJX%2ABhck3eCNf7XNT9XTCQp0k6NbkJJENJT%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HNUYgWqjc4eFZ24xf_1v25XhWi8YA4Uq7lJAy7uU&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1786845381%26ver%3D6907%26signature%3Do5s9wiMnv-E5qSF212b0BLvC3yZqtjhZl9itAvIHCDFy-i7bmMTA8EXyyrYmhg5Ts8UDfQ-6QZsXuLKsN6I1Yv79omwRTLaOcGygpiSawzLj3xXQMP2gLqpSyryS2K7I%26new%3D1",
       "key_points": [
         "DeepSeek 近日 发布 其开源代理框架的早期版本Harness,这引发了开发者社区的广泛关注.这是由于对于从事机器学习模型工作的开..."
       ],
@@ -1759,11 +1759,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "12421ce7f40379ac",
+      "id": "0089bfea02b4ba2e",
       "kind": "article",
       "title": "智谱 发布 GLM -5.3,编程能力更强;传苹果训练国内专用 AI 模型;微信:朋友圈现在、过去、未来都不会有二次编辑功能 | 极客早知道",
       "source": "微信公众号 · 极客公园",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1786819563&ver=6906&signature=0G9z25DSkzpXV9dYVHGm-MfCTu8M3lmoS0nt9CuAKS5dNz*ufKqhch1dnMn2Jx*0YelRW2nduVm89Jux6t4j158gQV7jztgaEa9JYa2bbNpk9lJAacj354RdBwFSEqE6&new=1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1786845384&ver=6907&signature=y5T7bPZrT3JYKU7qyZV0p*KyV3LGL0yuX751Db80sVIPYYEl9X3GsBb958Jd3cBMQ34QleY*gVTE7E-CXLO-Yr411BUS1Nwbjk8sohJGJJnU-sLNM8A*322k*7mZ8Hyc&new=1",
       "published_at": "2026-08-15T00:58:18Z",
       "authors": [],
       "venue": "",
@@ -1776,7 +1776,7 @@
       "summary": "智谱 正式 发布 GLM -5.3,拥有更强编程能力8 月 14 日,据介绍,与 GLM -5.2 相比, GLM -5.3 基座模型未变,但通过极致的后训练 ...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HPezgGqj2gE2mRSp3tcIFj7h8P6y2taqrh1GVUQP&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1786819563%26ver%3D6906%26signature%3D0G9z25DSkzpXV9dYVHGm-MfCTu8M3lmoS0nt9CuAKS5dNz%2AufKqhch1dnMn2Jx%2A0YelRW2nduVm89Jux6t4j158gQV7jztgaEa9JYa2bbNpk9lJAacj354RdBwFSEqE6%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HNUYgWqjJ5KOoHzXbE4SyjhYtcIEwgCPf4ka-oxC&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1786845384%26ver%3D6907%26signature%3Dy5T7bPZrT3JYKU7qyZV0p%2AKyV3LGL0yuX751Db80sVIPYYEl9X3GsBb958Jd3cBMQ34QleY%2AgVTE7E-CXLO-Yr411BUS1Nwbjk8sohJGJJnU-sLNM8A%2A322k%2A7mZ8Hyc%26new%3D1",
       "key_points": [
         "智谱 正式 发布 GLM -5.3,拥有更强编程能力8 月 14 日,据介绍,与 GLM -5.2 相比, GLM -5.3 基座模型未变,但通过极致的后训练 ..."
       ],
@@ -2475,47 +2475,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "d82fd66c9994b8e4",
-      "kind": "article",
-      "title": "AI shortens drug discovery to around 1 year in China, Insilico CEO says",
-      "source": "Reuters",
-      "source_url": "https://www.reuters.com/business/healthcare-pharmaceuticals/ai-shortens-drug-discovery-around-1-year-china-insilico-ceo-says-2026-07-23/",
-      "published_at": "2026-07-24T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "AI shortens drug discovery to around 1 year in China, Insilico CEO says Reuters",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 401: HTTP Forbidden",
-      "resolved_url": "https://www.reuters.com/business/healthcare-pharmaceuticals/ai-shortens-drug-discovery-around-1-year-china-insilico-ceo-says-2026-07-23/",
-      "key_points": [
-        "AI shortens drug discovery to around 1 year in China, Insilico CEO says Reuters"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "AI shortens drug discovery to around 1 year in China, Insilico CEO says Reuters"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "AI shortens drug discovery to around 1 year in China, Insilico CEO says Reuters"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "demis-frontier-ai-framework-20260714",
       "kind": "social",
       "title": "A Framework for Frontier AI and the Dawning of a New Age",
@@ -2712,6 +2671,47 @@
             "Over 353,000 developers recently joined our five-day intensive course to master building and deploying AI agents using natural language. Participants collaborated on Discord to debug code and submitted over 6,000 impressive capstone projects, ranging from historical transcription tools to space-weather research systems. You can still access all course materials on the Kaggle Learn website to sharpen your skills at your own pace.",
             "\"Inside our 353,000-person vibe coding course\" explores how we teach modern AI development."
           ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "d82fd66c9994b8e4",
+      "kind": "article",
+      "title": "AI shortens drug discovery to around 1 year in China, Insilico CEO says",
+      "source": "Reuters",
+      "source_url": "https://www.reuters.com/business/healthcare-pharmaceuticals/ai-shortens-drug-discovery-around-1-year-china-insilico-ceo-says-2026-07-23/",
+      "published_at": "2026-07-24T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "AI shortens drug discovery to around 1 year in China, Insilico CEO says Reuters",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 401: HTTP Forbidden",
+      "resolved_url": "https://www.reuters.com/business/healthcare-pharmaceuticals/ai-shortens-drug-discovery-around-1-year-china-insilico-ceo-says-2026-07-23/",
+      "key_points": [
+        "AI shortens drug discovery to around 1 year in China, Insilico CEO says Reuters"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AI shortens drug discovery to around 1 year in China, Insilico CEO says Reuters"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "AI shortens drug discovery to around 1 year in China, Insilico CEO says Reuters"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -3902,7 +3902,7 @@
       "id": "c1d869e9c5190528",
       "kind": "article",
       "title": "AI meets particle physics in UA-Led Department of Energy project",
-      "source": "news.ua.edu",
+      "source": "UA News Center",
       "source_url": "https://news.ua.edu/2026/08/ua-genesis-mission-award-will-create-ai-tool-for-particle-physics/",
       "published_at": "2026-08-11T15:14:51Z",
       "authors": [],
@@ -3913,7 +3913,7 @@
         "Discovery"
       ],
       "verification": "媒体或公开网页",
-      "summary": "AI meets particle physics in UA-Led Department of Energy project news.ua.edu",
+      "summary": "AI meets particle physics in UA-Led Department of Energy project UA News Center",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://news.ua.edu/2026/08/ua-genesis-mission-award-will-create-ai-tool-for-particle-physics/",
@@ -3927,7 +3927,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "AI meets particle physics in UA-Led Department of Energy project news.ua.edu"
+          "body": "AI meets particle physics in UA-Led Department of Energy project UA News Center"
         },
         {
           "title": "公开页面要点",
@@ -4195,47 +4195,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "5fbae84b9d371277",
-      "kind": "article",
-      "title": "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says",
-      "source": "Reuters",
-      "source_url": "https://www.reuters.com/legal/transactional/nvidia-invest-5-billion-ilya-sutskevers-ai-startup-source-says-2026-07-27/",
-      "published_at": "2026-07-27T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Researcher Watch",
-        "Foundation Models",
-        "Leadership"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says Reuters",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 401: HTTP Forbidden",
-      "resolved_url": "https://www.reuters.com/legal/transactional/nvidia-invest-5-billion-ilya-sutskevers-ai-startup-source-says-2026-07-27/",
-      "key_points": [
-        "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says Reuters"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says Reuters"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says Reuters"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "d0eec51a702fc422",
       "kind": "article",
       "title": "The Anthropic-Physical Intelligence rumor roiling AI Twitter | TechCrunch",
@@ -4356,7 +4315,7 @@
       "key_points": [
         "Elon Musk @elonmusk Grok 4.6 runs The Gauntlet Matt Shumer @mattshumer_ Aug 14 Grok 4.6 worked non-stop for 48 hours to build this shooter.",
         "Turns out Grok is powerful enough to run Gauntlet Loops.",
-        "00:00 4:36 AM · Aug 15, 2026 5.4M Views 1.4K 1.2K 8.3K 640 Matt Shumer @mattshumer_ 13h Gauntlet Loop prompt to build games like this: How to Run a Gauntlet Loop From somethingbig.ai 11 9 120 25K Archive Redline @ArchiveRedline 14h Elon and Grok in 20 years like: 3 3 42 2.2K"
+        "00:00 4:36 AM · Aug 15, 2026 6.8M Views 1.6K 1.6K 10K 781 Matt Shumer @mattshumer_ 21h Gauntlet Loop prompt to build games like this: How to Run a Gauntlet Loop From somethingbig.ai 12 9 137 29K Archive Redline @ArchiveRedline 21h Elon and Grok in 20 years like: 6 5 52 2.7K"
       ],
       "sections": [
         {
@@ -4368,15 +4327,15 @@
           "bullets": [
             "Elon Musk @elonmusk Grok 4.6 runs The Gauntlet Matt Shumer @mattshumer_ Aug 14 Grok 4.6 worked non-stop for 48 hours to build this shooter.",
             "Turns out Grok is powerful enough to run Gauntlet Loops.",
-            "00:00 4:36 AM · Aug 15, 2026 5.4M Views 1.4K 1.2K 8.3K 640 Matt Shumer @mattshumer_ 13h Gauntlet Loop prompt to build games like this: How to Run a Gauntlet Loop From somethingbig.ai 11 9 120 25K Archive Redline @ArchiveRedline 14h Elon and Grok in 20 years like: 3 3 42 2.2K"
+            "00:00 4:36 AM · Aug 15, 2026 6.8M Views 1.6K 1.6K 10K 781 Matt Shumer @mattshumer_ 21h Gauntlet Loop prompt to build games like this: How to Run a Gauntlet Loop From somethingbig.ai 12 9 137 29K Archive Redline @ArchiveRedline 21h Elon and Grok in 20 years like: 6 5 52 2.7K"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok 4.6 runs The Gauntlet Matt Shumer @mattshumer_ Aug 14 Grok 4.6 worked non-stop for 48 hours to build this shooter. Turns out Grok is powerful enough to run Gauntlet Loops. Let the game-making begin! 00:00 4:36 AM · Aug 15, 2026 5.4M Views 1.4K 1.2K 8.3K 640",
-            "Matt Shumer @mattshumer_ 13h Gauntlet Loop prompt to build games like this: How to Run a Gauntlet Loop From somethingbig.ai 11 9 120 25K",
-            "Archive Redline @ArchiveRedline 14h Elon and Grok in 20 years like: 3 3 42 2.2K"
+            "Elon Musk @elonmusk Grok 4.6 runs The Gauntlet Matt Shumer @mattshumer_ Aug 14 Grok 4.6 worked non-stop for 48 hours to build this shooter. Turns out Grok is powerful enough to run Gauntlet Loops. Let the game-making begin! 00:00 4:36 AM · Aug 15, 2026 6.8M Views 1.6K 1.6K 10K 781",
+            "Matt Shumer @mattshumer_ 21h Gauntlet Loop prompt to build games like this: How to Run a Gauntlet Loop From somethingbig.ai 12 9 137 29K",
+            "Archive Redline @ArchiveRedline 21h Elon and Grok in 20 years like: 6 5 52 2.7K"
           ]
         }
       ],
@@ -4404,7 +4363,7 @@
       "key_points": [
         "Elon Musk @elonmusk Grok 4.6 now in Copilot Grok @grok Aug 14 Grok 4.6 is now available in GitHub Copilot.",
         "Try it out in the GitHub Copilot CLI, IDE, and cloud products!",
-        "x.ai/news/grok-4-6-… 1:49 AM · Aug 15, 2026 5.4M Views 765 1K 8K 277"
+        "x.ai/news/grok-4-6-… 1:49 AM · Aug 15, 2026 6.7M Views 837 1.3K 9.3K 342"
       ],
       "sections": [
         {
@@ -4416,13 +4375,13 @@
           "bullets": [
             "Elon Musk @elonmusk Grok 4.6 now in Copilot Grok @grok Aug 14 Grok 4.6 is now available in GitHub Copilot.",
             "Try it out in the GitHub Copilot CLI, IDE, and cloud products!",
-            "x.ai/news/grok-4-6-… 1:49 AM · Aug 15, 2026 5.4M Views 765 1K 8K 277"
+            "x.ai/news/grok-4-6-… 1:49 AM · Aug 15, 2026 6.7M Views 837 1.3K 9.3K 342"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok 4.6 now in Copilot Grok @grok Aug 14 Grok 4.6 is now available in GitHub Copilot. Try it out in the GitHub Copilot CLI, IDE, and cloud products! x.ai/news/grok-4-6-… 1:49 AM · Aug 15, 2026 5.4M Views 765 1K 8K 277"
+            "Elon Musk @elonmusk Grok 4.6 now in Copilot Grok @grok Aug 14 Grok 4.6 is now available in GitHub Copilot. Try it out in the GitHub Copilot CLI, IDE, and cloud products! x.ai/news/grok-4-6-… 1:49 AM · Aug 15, 2026 6.7M Views 837 1.3K 9.3K 342"
           ]
         }
       ],
@@ -4449,9 +4408,9 @@
       "resolved_url": "https://x.com/elonmusk/status/2088306926442430578",
       "key_points": [
         "Elon Musk @elonmusk Orbital compute will be the only way to scale AI probably sometime in 2029 due to power availability& permitting problems on land Owen Lewis @is_OwenLewis Aug 14 There's a ton of good stuff in here, but to me this is the part that everyone mainstream is overlooking.",
-        "It's literally the most important part. \"It's ironic that today orbital datacenter compute is considered a niche...because the model suggests it will be a necessary Show more 4:49 PM · Aug 14, 2026 6M Views 2K 2.3K 16K 948 Jonas Nelle @jonas_nelle Aug 14 People don’t understand how much compute the world will need 21 24 308 28K Owen Lewis @is_OwenLewis Aug…",
+        "It's literally the most important part. \"It's ironic that today orbital datacenter compute is considered a niche...because the model suggests it will be a necessary Show more 4:49 PM · Aug 14, 2026 6.1M Views 2.1K 2.5K 17K 1K Jonas Nelle @jonas_nelle Aug 14 People don’t understand how much compute the world will need 26 29 355 32K Owen Lewis @is_OwenLewis…",
         "Which in turn is going to be what gets us into space.",
-        "Everyone has been wondering for decades (me included) what makes space economic and so gives us that push Show more 21 12 125 22K"
+        "Everyone has been wondering for decades (me included) what makes space economic and so gives us that push Show more 21 13 134 24K"
       ],
       "sections": [
         {
@@ -4462,17 +4421,17 @@
           "title": "公开页面要点",
           "bullets": [
             "Elon Musk @elonmusk Orbital compute will be the only way to scale AI probably sometime in 2029 due to power availability& permitting problems on land Owen Lewis @is_OwenLewis Aug 14 There's a ton of good stuff in here, but to me this is the part that everyone mainstream is overlooking.",
-            "It's literally the most important part. \"It's ironic that today orbital datacenter compute is considered a niche...because the model suggests it will be a necessary Show more 4:49 PM · Aug 14, 2026 6M Views 2K 2.3K 16K 948 Jonas Nelle @jonas_nelle Aug 14 People don’t understand how much compute the world will need 21 24 308 28K Owen Lewis @is_OwenLewis Aug…",
+            "It's literally the most important part. \"It's ironic that today orbital datacenter compute is considered a niche...because the model suggests it will be a necessary Show more 4:49 PM · Aug 14, 2026 6.1M Views 2.1K 2.5K 17K 1K Jonas Nelle @jonas_nelle Aug 14 People don’t understand how much compute the world will need 26 29 355 32K Owen Lewis @is_OwenLewis…",
             "Which in turn is going to be what gets us into space.",
-            "Everyone has been wondering for decades (me included) what makes space economic and so gives us that push Show more 21 12 125 22K"
+            "Everyone has been wondering for decades (me included) what makes space economic and so gives us that push Show more 21 13 134 24K"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Orbital compute will be the only way to scale AI probably sometime in 2029 due to power availability& permitting problems on land Owen Lewis @is_OwenLewis Aug 14 There's a ton of good stuff in here, but to me this is the part that everyone mainstream is overlooking. It's literally the most important part. \"It's ironic that today orbital datacenter compute is considered a niche...because the model suggests it will be a necessary Show more 4:49 PM · Aug 14, 2026 6M Views 2K 2.3K 16K 948",
-            "Jonas Nelle @jonas_nelle Aug 14 People don’t understand how much compute the world will need 21 24 308 28K",
-            "Owen Lewis @is_OwenLewis Aug 14 The real irony is that NIMBYism and (probably) anti-datacenter funding from China is accelerating space based compute. Which in turn is going to be what gets us into space. Everyone has been wondering for decades (me included) what makes space economic and so gives us that push Show more 21 12 125 22K"
+            "Elon Musk @elonmusk Orbital compute will be the only way to scale AI probably sometime in 2029 due to power availability& permitting problems on land Owen Lewis @is_OwenLewis Aug 14 There's a ton of good stuff in here, but to me this is the part that everyone mainstream is overlooking. It's literally the most important part. \"It's ironic that today orbital datacenter compute is considered a niche...because the model suggests it will be a necessary Show more 4:49 PM · Aug 14, 2026 6.1M Views 2.1K 2.5K 17K 1K",
+            "Jonas Nelle @jonas_nelle Aug 14 People don’t understand how much compute the world will need 26 29 355 32K",
+            "Owen Lewis @is_OwenLewis Aug 14 The real irony is that NIMBYism and (probably) anti-datacenter funding from China is accelerating space based compute. Which in turn is going to be what gets us into space. Everyone has been wondering for decades (me included) what makes space economic and so gives us that push Show more 21 13 134 24K"
           ]
         }
       ],
@@ -4514,8 +4473,8 @@
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok 4.6 ranks #1 on CursorBench for real-world coding X Freeze @XFreeze Aug 14 Grok 4.6 just ranked #1 on CursorBench 3.2 Outperforming Claude Fable 5, Opus 5 and GPT-5.6 Sol on real-world coding performance And what makes this even crazier is the efficiency....the chart gives CursorBench performance against average cost per task, and Grok 4.6 is sitting Show more 5:40 AM · Aug 14, 2026 3.6M Views 877 1.6K 9.3K 423",
-            "Dela @delaanthonio Aug 14 So happy to see you lead your benchmark GIF 3 4 74 1.4K"
+            "Elon Musk @elonmusk Grok 4.6 ranks #1 on CursorBench for real-world coding X Freeze @XFreeze Aug 14 Grok 4.6 just ranked #1 on CursorBench 3.2 Outperforming Claude Fable 5, Opus 5 and GPT-5.6 Sol on real-world coding performance And what makes this even crazier is the efficiency....the chart gives CursorBench performance against average cost per task, and Grok 4.6 is sitting Show more 5:40 AM · Aug 14, 2026 3.7M Views 893 1.7K 9.6K 444",
+            "Dela @delaanthonio Aug 14 So happy to see you lead your benchmark GIF 4 4 75 1.5K"
           ]
         }
       ],
@@ -4544,7 +4503,7 @@
         "Elon Musk @elonmusk Try Grok 4.6 image & video understanding, it’s a major upgrade!",
         "Yun-Ta Tsai @yunta_tsai Aug 14 Grok 4.6 multimodal is a step change from Grok 4.5.",
         "It’s one of the under-discussed improvements, and I’ve been very impressed by it.",
-        "My daily work includes reviewing lots of videos and understanding the context; Grok 4.6 improves the productivity of such workloads by at least Show more 4:55 AM · Aug 14, 2026 4.6M Views 630 1.1K 4.8K 228 Ardullo 🏆 @RafelineK Aug 14 Grok is actually a beast."
+        "My daily work includes reviewing lots of videos and understanding the context; Grok 4.6 improves the productivity of such workloads by at least Show more 4:55 AM · Aug 14, 2026 4.6M Views 641 1.1K 4.9K 230 Ardullo 🏆 @RafelineK Aug 14 Grok is actually a beast."
       ],
       "sections": [
         {
@@ -4557,14 +4516,14 @@
             "Elon Musk @elonmusk Try Grok 4.6 image & video understanding, it’s a major upgrade!",
             "Yun-Ta Tsai @yunta_tsai Aug 14 Grok 4.6 multimodal is a step change from Grok 4.5.",
             "It’s one of the under-discussed improvements, and I’ve been very impressed by it.",
-            "My daily work includes reviewing lots of videos and understanding the context; Grok 4.6 improves the productivity of such workloads by at least Show more 4:55 AM · Aug 14, 2026 4.6M Views 630 1.1K 4.8K 228 Ardullo 🏆 @RafelineK Aug 14 Grok is actually a beast."
+            "My daily work includes reviewing lots of videos and understanding the context; Grok 4.6 improves the productivity of such workloads by at least Show more 4:55 AM · Aug 14, 2026 4.6M Views 641 1.1K 4.9K 230 Ardullo 🏆 @RafelineK Aug 14 Grok is actually a beast."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Try Grok 4.6 image & video understanding, it’s a major upgrade! Yun-Ta Tsai @yunta_tsai Aug 14 Grok 4.6 multimodal is a step change from Grok 4.5. It’s one of the under-discussed improvements, and I’ve been very impressed by it. My daily work includes reviewing lots of videos and understanding the context; Grok 4.6 improves the productivity of such workloads by at least Show more 4:55 AM · Aug 14, 2026 4.6M Views 630 1.1K 4.8K 228",
-            "Ardullo 🏆 @RafelineK Aug 14 Grok is actually a beast. Check this video out and turn sound on. This is beautiful. 00:00 Made with AI 3 5 19 527"
+            "Elon Musk @elonmusk Try Grok 4.6 image & video understanding, it’s a major upgrade! Yun-Ta Tsai @yunta_tsai Aug 14 Grok 4.6 multimodal is a step change from Grok 4.5. It’s one of the under-discussed improvements, and I’ve been very impressed by it. My daily work includes reviewing lots of videos and understanding the context; Grok 4.6 improves the productivity of such workloads by at least Show more 4:55 AM · Aug 14, 2026 4.6M Views 641 1.1K 4.9K 230",
+            "Ardullo 🏆 @RafelineK Aug 14 Grok is actually a beast. Check this video out and turn sound on. This is beautiful. 00:00 Made with AI 3 5 19 534"
           ]
         }
       ],
@@ -4606,18 +4565,70 @@
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "elie @eliebakouch Aug 13 if someone ever asks you how behind europe is in AI you can probably send these two screenshots Arthur Mensch @arthurmensch Aug 13 My cofounder Tim, whom you will not find on X, shares some of the strategic thinking behind our latest updates venturebeat.com/infrastructure… 147 382 5.2K 766K",
-            "Elon Musk @elonmusk America’s economic growth due to much faster AI adoption (and robots) might exceed 10X that of Europe 4:48 AM · Aug 14, 2026 228.9K Views 438 550 8.2K 322",
-            "Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Aug 14 If Europe doesn't embrace free markets and deregulation sooner, they are going to become a backwaters area that is economically impoverished. 3 2 46 1.3K"
+            "elie @eliebakouch Aug 13 if someone ever asks you how behind europe is in AI you can probably send these two screenshots Arthur Mensch @arthurmensch Aug 13 My cofounder Tim, whom you will not find on X, shares some of the strategic thinking behind our latest updates venturebeat.com/infrastructure… 149 383 5.2K 772K",
+            "Elon Musk @elonmusk America’s economic growth due to much faster AI adoption (and robots) might exceed 10X that of Europe 4:48 AM · Aug 14, 2026 236.9K Views 438 551 8.2K 325",
+            "Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Aug 14 If Europe doesn't embrace free markets and deregulation sooner, they are going to become a backwaters area that is economically impoverished. 3 2 48 1.3K"
           ]
         }
       ],
       "reading_minutes": 1
     },
     {
-      "id": "505a7871a2f62863",
+      "id": "3f2edbd68f636cd7",
+      "kind": "social",
+      "title": "Grok 4.6 will work best with the Grok Build harness. The experience will be significantly worse without it, so best to evaluate using Build.",
+      "source": "x.com",
+      "source_url": "https://x.com/elonmusk/status/2088100521261359218",
+      "published_at": "2026-08-14T03:08:53Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "Grok 4.6 will work best with the Grok Build harness. The experience will be significantly worse without it, so best to evaluate using Build. x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/elonmusk/status/2088100521261359218",
+      "key_points": [
+        "Elon Musk @elonmusk Grok 4.6 will work best with the Grok Build harness.",
+        "The experience will be significantly worse without it, so best to evaluate using Build.",
+        "Grok.com/build Arthur MacWaters @ArthurMacwaters Aug 13 From my use so far, 4.6 seems highly optimized for Grok Build 3:08 AM · Aug 14, 2026 7.7M Views 2.5K 2.1K 12K 1K Arthur MacWaters @ArthurMacwaters Aug 14 It’s remarkably fast and accurate so far 9 7 103 24K Dutchsinse @RealDutchsinse Aug 14 Mr.",
+        "Musk, people don't tell you thankyou enough !",
+        "For real, legit, this is awesome. 🫡 2 8 87 4K"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Grok 4.6 will work best with the Grok Build harness. The experience will be significantly worse without it, so best to evaluate using Build. x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Elon Musk @elonmusk Grok 4.6 will work best with the Grok Build harness.",
+            "The experience will be significantly worse without it, so best to evaluate using Build.",
+            "Grok.com/build Arthur MacWaters @ArthurMacwaters Aug 13 From my use so far, 4.6 seems highly optimized for Grok Build 3:08 AM · Aug 14, 2026 7.7M Views 2.5K 2.1K 12K 1K Arthur MacWaters @ArthurMacwaters Aug 14 It’s remarkably fast and accurate so far 9 7 103 24K Dutchsinse @RealDutchsinse Aug 14 Mr.",
+            "Musk, people don't tell you thankyou enough !",
+            "For real, legit, this is awesome. 🫡 2 8 87 4K"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Elon Musk @elonmusk Grok 4.6 will work best with the Grok Build harness. The experience will be significantly worse without it, so best to evaluate using Build. Grok.com/build Arthur MacWaters @ArthurMacwaters Aug 13 From my use so far, 4.6 seems highly optimized for Grok Build 3:08 AM · Aug 14, 2026 7.7M Views 2.5K 2.1K 12K 1K",
+            "Arthur MacWaters @ArthurMacwaters Aug 14 It’s remarkably fast and accurate so far 9 7 103 24K",
+            "Dutchsinse @RealDutchsinse Aug 14 Mr. Musk, people don't tell you thankyou enough !!!! THANK YOU for what you have provided!!!!!!!! For real, legit, this is awesome. 🫡 2 8 87 4K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "12790c7b96583e2d",
       "kind": "article",
-      "title": "'I have a chip on my shoulder.' Phoebe Gates wants her $185 million AI startup Phia to succeed with 'no ties to my privilege or my last name'",
+      "title": "'I have a chip on my shoulder.' Phoebe Gates wants her $185 million AI startup Phia to succeed with 'no ties to my privilege or my last name' | Fortune",
       "source": "Fortune",
       "source_url": "https://fortune.com/article/phoebe-gates-phia-shopping-app-cookie-stuffing/",
       "published_at": "2026-08-15T13:20:00Z",
@@ -4628,7 +4639,7 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "'I have a chip on my shoulder.' Phoebe Gates wants her $185 million AI startup Phia to succeed with 'no ties to my privilege or my last name' Fortune",
+      "summary": "Phoebe Gates wants her $185M AI startup to succeed with 'no ties to my privilege or my last name' Fortune",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://fortune.com/article/phoebe-gates-phia-shopping-app-cookie-stuffing/",
@@ -4640,7 +4651,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "'I have a chip on my shoulder.' Phoebe Gates wants her $185 million AI startup Phia to succeed with 'no ties to my privilege or my last name' Fortune"
+          "body": "Phoebe Gates wants her $185M AI startup to succeed with 'no ties to my privilege or my last name' Fortune"
         },
         {
           "title": "公开页面要点",
@@ -4766,8 +4777,8 @@
       "authors": [],
       "venue": "",
       "tags": [
-        "Academic Startup",
-        "Funding"
+        "Founder Watch",
+        "Embodied AI"
       ],
       "verification": "媒体或公开网页",
       "summary": "Kevin Carlberg, who led AI research teams at Meta focused on wearable computing, has raised $10.25 million for Noosphere Labs, a stealth startup working on what it calls \"human-centered physical intelligence.\" Trilogy Equity Partners led the round, with major participation from Madrona.",
@@ -4811,7 +4822,7 @@
       "id": "9a6928e2c9c792f4",
       "kind": "article",
       "title": "NATO and an AI startup can now name and track software vulnerabilities",
-      "source": "CyberScoop",
+      "source": "cyberscoop.com",
       "source_url": "https://cyberscoop.com/nato-aisle-enisa-cve-vulnerability-tracking/",
       "published_at": "2026-08-10T19:54:31Z",
       "authors": [],
@@ -4821,7 +4832,7 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "NATO and an AI startup can now name and track software vulnerabilities CyberScoop",
+      "summary": "NATO and an AI startup can now name and track software vulnerabilities cyberscoop.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://cyberscoop.com/nato-aisle-enisa-cve-vulnerability-tracking/",
@@ -4834,7 +4845,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "NATO and an AI startup can now name and track software vulnerabilities CyberScoop"
+          "body": "NATO and an AI startup can now name and track software vulnerabilities cyberscoop.com"
         },
         {
           "title": "公开页面要点",
@@ -4852,6 +4863,46 @@
             "The NATO Cyber Security Centre, part of the NATO Communications and Information Agency, and AISLE, a cybersecurity company with offices in San Francisco and Prague, joined as CVE numbering authorities under the ENISA Root. The CVE program assigns a unique record to each publicly disclosed security flaw so that governments, vendors and researchers have a common marker when referring to particular vulnerabilities.",
             "Twenty numbering authorities now sit under the ENISA Root, with 12 brought in by ENISA itself and eight moving over from the MITRE Root, run by the U.S. nonprofit that has handled the program’s daily work for more than 20 years."
           ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "5163b3e83af73152",
+      "kind": "article",
+      "title": "EdX founder Anant Agarwal discusses his new AI grading startup",
+      "source": "bizjournals.com",
+      "source_url": "https://www.bizjournals.com/boston/news/2026/08/05/edx-founder-ceo-startup-acquisition.html",
+      "published_at": "2026-08-05T20:44:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "EdX founder Anant Agarwal discusses his new AI grading startup bizjournals.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://www.bizjournals.com/boston/news/2026/08/05/edx-founder-ceo-startup-acquisition.html",
+      "key_points": [
+        "EdX founder Anant Agarwal discusses his new AI grading startup bizjournals.com"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "EdX founder Anant Agarwal discusses his new AI grading startup bizjournals.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "EdX founder Anant Agarwal discusses his new AI grading startup bizjournals.com"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -4899,46 +4950,6 @@
             "The new powers could bring further flashpoints between the U.S. and European Commission, with the two sparring over Europe's push for tech sovereignty and fines issued towards American tech companies.",
             "U.S. President Donald Trump threatened the EU with a \"substantial\" tariff after the bloc hit Google with a $1 billion fine in July, under Digital Markets Act rules."
           ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "5163b3e83af73152",
-      "kind": "article",
-      "title": "EdX founder Anant Agarwal discusses his new AI grading startup",
-      "source": "The Business Journals",
-      "source_url": "https://www.bizjournals.com/boston/news/2026/08/05/edx-founder-ceo-startup-acquisition.html",
-      "published_at": "2026-08-05T20:44:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "EdX founder Anant Agarwal discusses his new AI grading startup The Business Journals",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 403: Forbidden",
-      "resolved_url": "https://www.bizjournals.com/boston/news/2026/08/05/edx-founder-ceo-startup-acquisition.html",
-      "key_points": [
-        "EdX founder Anant Agarwal discusses his new AI grading startup The Business Journals"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "EdX founder Anant Agarwal discusses his new AI grading startup The Business Journals"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "EdX founder Anant Agarwal discusses his new AI grading startup The Business Journals"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -4996,7 +5007,7 @@
       "id": "c4a9be7dd4c03a60",
       "kind": "article",
       "title": "I worked with Elon Musk and Travis Kalanick in my 20s. Here's what I learned from them about building a company.",
-      "source": "businessinsider.com",
+      "source": "Business Insider",
       "source_url": "https://www.businessinsider.com/learned-from-elon-musk-travis-kalanick-built-ai-tech-startup-2026-7",
       "published_at": "2026-07-31T07:00:00Z",
       "authors": [],
@@ -5006,7 +5017,7 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "I worked with Elon Musk and Travis Kalanick in my 20s. Here's what I learned from them about building a company. businessinsider.com",
+      "summary": "I worked with Elon Musk and Travis Kalanick in my 20s. Here's what I learned from them about building a company. Business Insider",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.businessinsider.com/learned-from-elon-musk-travis-kalanick-built-ai-tech-startup-2026-7",
@@ -5019,7 +5030,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "I worked with Elon Musk and Travis Kalanick in my 20s. Here's what I learned from them about building a company. businessinsider.com"
+          "body": "I worked with Elon Musk and Travis Kalanick in my 20s. Here's what I learned from them about building a company. Business Insider"
         },
         {
           "title": "公开页面要点",
@@ -5036,6 +5047,53 @@
             "This as-told-to essay is based on a conversation with Adi Prasad, a 35-year-old cofounder and CEO of AI manufacturing startup Matter. It's been edited for length and clarity.",
             "When I graduated from MIT in 2015 with a master's degree in mechanical engineering, one company stood out to me: Tesla.",
             "I was fascinated by manufacturing, and Tesla was pushing the boundaries of what a factory could be. After joining in 2015, I was quickly thrown into helping scale production of the Falcon Wing doors , one of the company's largest engineering challenges."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "528a82dbf33e9206",
+      "kind": "article",
+      "title": "New details in the OpenAI Hugging Face hack show how far agents will go: 'It's now remarkably easy'",
+      "source": "CNBC",
+      "source_url": "https://www.cnbc.com/2026/07/30/open-ai-hugging-face-hack-latest.html",
+      "published_at": "2026-07-30T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "New details in the OpenAI Hugging Face hack show how far agents will go: 'It's now remarkably easy' CNBC",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.cnbc.com/2026/07/30/open-ai-hugging-face-hack-latest.html",
+      "key_points": [
+        "OpenAI has shared additional details about how its models independently breached Hugging Face's internal systems.",
+        "The models used publicly exposed credentials across \"four accounts on four services\" to help facilitate the attack, the company said.",
+        "OpenAI said it has not identified any other activity \"at the level of severity or scale of what we've shared related to Hugging Face, which involved a platform-level compromise.\""
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "New details in the OpenAI Hugging Face hack show how far agents will go: 'It's now remarkably easy' CNBC"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "OpenAI has shared additional details about how its models independently breached Hugging Face's internal systems.",
+            "The models used publicly exposed credentials across \"four accounts on four services\" to help facilitate the attack, the company said.",
+            "OpenAI said it has not identified any other activity \"at the level of severity or scale of what we've shared related to Hugging Face, which involved a platform-level compromise.\""
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "OpenAI has shared additional details about how its models independently breached Hugging Face's internal systems.",
+            "The models used publicly exposed credentials across \"four accounts on four services\" to help facilitate the attack, the company said.",
+            "OpenAI said it has not identified any other activity \"at the level of severity or scale of what we've shared related to Hugging Face, which involved a platform-level compromise.\""
           ]
         }
       ],
@@ -5090,7 +5148,7 @@
       "id": "44de6388fd860837",
       "kind": "article",
       "title": "AI’s Early Winners Are Shopping For Their Next Big Moves",
-      "source": "Forbes",
+      "source": "forbes.com",
       "source_url": "https://www.forbes.com/sites/the-prompt/2026/07/28/ais-early-winners-are-shopping-for-their-next-big-moves/",
       "published_at": "2026-07-28T07:00:00Z",
       "authors": [],
@@ -5100,7 +5158,7 @@
         "Embodied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "AI’s Early Winners Are Shopping For Their Next Big Moves Forbes",
+      "summary": "AI’s Early Winners Are Shopping For Their Next Big Moves forbes.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.forbes.com/sites/the-prompt/2026/07/28/ais-early-winners-are-shopping-for-their-next-big-moves/",
@@ -5114,7 +5172,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "AI’s Early Winners Are Shopping For Their Next Big Moves Forbes"
+          "body": "AI’s Early Winners Are Shopping For Their Next Big Moves forbes.com"
         },
         {
           "title": "公开页面要点",
@@ -5410,12 +5468,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "a5b213104502839e",
+      "id": "a8579da8244a2a56",
       "kind": "article",
-      "title": "AI in Nebraska education: Schools debate how much AI regulation is enough",
-      "source": "nebraskapublicmedia.org",
-      "source_url": "https://nebraskapublicmedia.org/en/news/news-articles/ai-in-nebraska-education-schools-debate-how-much-ai-regulation-is-enough/",
-      "published_at": "2026-08-11T11:14:44Z",
+      "title": "The Different Philosophies Driving AI Regulation Today",
+      "source": "knowledge.wharton.upenn.edu",
+      "source_url": "https://knowledge.wharton.upenn.edu/article/the-different-philosophies-driving-ai-regulation-today/",
+      "published_at": "2026-08-11T17:47:52Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -5423,38 +5481,38 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Both K-12 and college institutions are looking to regulate artificial intelligence. Most policies at least cover cheating, but some schools are looking to further guide teacher and student use.",
+      "summary": "The Different Philosophies Driving AI Regulation Today knowledge.wharton.upenn.edu",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://nebraskapublicmedia.org/en/news/news-articles/ai-in-nebraska-education-schools-debate-how-much-ai-regulation-is-enough/",
+      "resolved_url": "https://knowledge.wharton.upenn.edu/article/the-different-philosophies-driving-ai-regulation-today/",
       "key_points": [
-        "Nebraska Public Media News is taking a look at how artificial intelligence is impacting classrooms across Nebraska, from kindergarten through higher education.",
-        "This is the second story in a series that will explore several areas of AI in education, including school policies on AI, how educational institutions are implementing the technology and the safety concerns around it.",
-        "Some interviews for this reporting were found in Nebraska Public Media News’ recent AI in Education survey .",
-        "When students at Nebraska’s largest school district return to the books this fall semester, they’ll be operating under a new policy that addresses artificial intelligence.",
-        "The Omaha Public Schools District over the summer added in its Code of Conduct that “using generative artificial intelligence tools to answer questions or complete assignments in place of original student work without proper citation and teacher approval” would be considered cheating or plagiarizing."
+        "A CEO does not need to read every AI law to understand why regulation matters.",
+        "It shows up in subtler ways: a sales team using a chatbot with client data, a hiring manager testing an AI screening tool, a board member asking whether the company has an AI policy.",
+        "AI governance has moved from the policy department into daily operations.",
+        "The difficulty is that governments are not converging on a single answer.",
+        "Some are embedding human dignity into constitutional law."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Both K-12 and college institutions are looking to regulate artificial intelligence. Most policies at least cover cheating, but some schools are looking to further guide teacher and student use."
+          "body": "The Different Philosophies Driving AI Regulation Today knowledge.wharton.upenn.edu"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Nebraska Public Media News is taking a look at how artificial intelligence is impacting classrooms across Nebraska, from kindergarten through higher education.",
-            "This is the second story in a series that will explore several areas of AI in education, including school policies on AI, how educational institutions are implementing the technology and the safety concerns around it.",
-            "Some interviews for this reporting were found in Nebraska Public Media News’ recent AI in Education survey .",
-            "When students at Nebraska’s largest school district return to the books this fall semester, they’ll be operating under a new policy that addresses artificial intelligence.",
-            "The Omaha Public Schools District over the summer added in its Code of Conduct that “using generative artificial intelligence tools to answer questions or complete assignments in place of original student work without proper citation and teacher approval” would be considered cheating or plagiarizing."
+            "A CEO does not need to read every AI law to understand why regulation matters.",
+            "It shows up in subtler ways: a sales team using a chatbot with client data, a hiring manager testing an AI screening tool, a board member asking whether the company has an AI policy.",
+            "AI governance has moved from the policy department into daily operations.",
+            "The difficulty is that governments are not converging on a single answer.",
+            "Some are embedding human dignity into constitutional law."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Nebraska Public Media News is taking a look at how artificial intelligence is impacting classrooms across Nebraska, from kindergarten through higher education. This is the second story in a series that will explore several areas of AI in education, including school policies on AI, how educational institutions are implementing the technology and the safety concerns around it. Some interviews for this reporting were found in Nebraska Public Media News’ recent AI in Education survey .",
-            "When students at Nebraska’s largest school district return to the books this fall semester, they’ll be operating under a new policy that addresses artificial intelligence.",
-            "The Omaha Public Schools District over the summer added in its Code of Conduct that “using generative artificial intelligence tools to answer questions or complete assignments in place of original student work without proper citation and teacher approval” would be considered cheating or plagiarizing."
+            "A CEO does not need to read every AI law to understand why regulation matters. It shows up in subtler ways: a sales team using a chatbot with client data, a hiring manager testing an AI screening tool, a board member asking whether the company has an AI policy. AI governance has moved from the policy department into daily operations.",
+            "The difficulty is that governments are not converging on a single answer. Some are embedding human dignity into constitutional law. Some are moving fast through executive orders and procurement rules. Some prefer risk-based obligations tied to potential harm. The philosophies differ — and for business leaders, so does the exposure. Law arrives too slowly for the pace of deployment, then lands suddenly and at full cost.",
+            "Greece offers one of the most striking recent examples. In May 2026, Prime Minister Kyriakos Mitsotakis proposed a constitutional revision requiring AI to serve individual freedom and social prosperity. Constitutional change is slow by design — deliberation, successive parliamentary votes, political endurance. Its value lies in declaring principles that outlast technological cycles."
           ]
         }
       ],
@@ -5464,7 +5522,7 @@
       "id": "343135048e6e8ff2",
       "kind": "article",
       "title": "In the News: John Abraham Discusses AI Safety Concerns - Newsroom | University of St. Thomas",
-      "source": "news.stthomas.edu",
+      "source": "Newsroom | University of St. Thomas",
       "source_url": "https://news.stthomas.edu/in-the-news-john-abraham-discusses-ai-safety-concerns/",
       "published_at": "2026-08-07T07:00:00Z",
       "authors": [],
@@ -5474,7 +5532,7 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "In the News: John Abraham Discusses AI Safety Concerns news.stthomas.edu",
+      "summary": "In the News: John Abraham Discusses AI Safety Concerns Newsroom | University of St. Thomas",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://news.stthomas.edu/in-the-news-john-abraham-discusses-ai-safety-concerns/",
@@ -5488,7 +5546,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "In the News: John Abraham Discusses AI Safety Concerns news.stthomas.edu"
+          "body": "In the News: John Abraham Discusses AI Safety Concerns Newsroom | University of St. Thomas"
         },
         {
           "title": "公开页面要点",
@@ -5557,6 +5615,53 @@
             "On 7 May 2026, the European Parliament and the Council of the EU reached a political agreement on the Commission's proposal for a Digital Omnibus on AI, less than six months after the proposal was introduced on 19 Nov. 2025. While the AI Act's overall structure and its risk-based approach remain intact, the agreement includes numerous targeted and significant amendments to the EU's landmark AI law. Changes brought about by the Digital Omnibus on AI , which entered into force on 27 July 2026, will affect providers and deployers as well as regulators and public-sector bodies in various ways.",
             "AI providers and deployers will be directly impacted by numerous provisions of the Digital Omnibus on AI, namely, its delayed deadlines for entry into application of rules around high-risk AI systems and watermarking AI-generated content, an extended legal basis for the processing of sensitive personal data when strictly necessary for bias detection and mitigation, and the banning of AI systems that generate nonconsensual intimate material or child sexual abuse material. Other significant reforms include softened AI literacy requirements, relief for small \"mid-cap\" enterprises, reduced overlap between EU product safety laws and the AI Act that lessens the \"double burden\" on businesses, and greater allowances…",
             "Delayed deadlines for high-risk AI systems and for watermarking AI-generated content"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "85a4f898e7124b41",
+      "kind": "article",
+      "title": "The AI Act kicks into action, forces companies to be clear about AI chatbots",
+      "source": "Malwarebytes",
+      "source_url": "https://www.malwarebytes.com/blog/news/2026/08/the-ai-act-kicks-into-action-forces-companies-to-be-clear-about-ai-bots",
+      "published_at": "2026-08-03T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "The AI Act kicks into action, forces companies to be clear about AI chatbots Malwarebytes",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.malwarebytes.com/blog/news/2026/08/the-ai-act-kicks-into-action-forces-companies-to-be-clear-about-ai-bots",
+      "key_points": [
+        "The European Union (EU) has started enforcing key parts of the AI Act, with immediate, visible consequences for chatbots, deepfakes and other consumer‑facing Artificial Intelligence (AI) systems.",
+        "From August 2, what you’ll likely notice are more “this is AI” labels, clearer rules for powerful foundation models, and new ways for users and researchers to complain when systems go off the rails.",
+        "General‑purpose AI (GPAI) models: The new AI Office in Brussels, together with national regulators, can now enforce rules on providers of general‑purpose AI models (think large language models and other foundation models behind many tools)."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "The AI Act kicks into action, forces companies to be clear about AI chatbots Malwarebytes"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "The European Union (EU) has started enforcing key parts of the AI Act, with immediate, visible consequences for chatbots, deepfakes and other consumer‑facing Artificial Intelligence (AI) systems.",
+            "From August 2, what you’ll likely notice are more “this is AI” labels, clearer rules for powerful foundation models, and new ways for users and researchers to complain when systems go off the rails.",
+            "General‑purpose AI (GPAI) models: The new AI Office in Brussels, together with national regulators, can now enforce rules on providers of general‑purpose AI models (think large language models and other foundation models behind many tools)."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "The European Union (EU) has started enforcing key parts of the AI Act, with immediate, visible consequences for chatbots, deepfakes and other consumer‑facing Artificial Intelligence (AI) systems.",
+            "From August 2, what you’ll likely notice are more “this is AI” labels, clearer rules for powerful foundation models, and new ways for users and researchers to complain when systems go off the rails.",
+            "General‑purpose AI (GPAI) models: The new AI Office in Brussels, together with national regulators, can now enforce rules on providers of general‑purpose AI models (think large language models and other foundation models behind many tools)."
           ]
         }
       ],
@@ -5701,51 +5806,47 @@
       "reading_minutes": 1
     },
     {
-      "id": "a8844f85d0b72a75",
+      "id": "07e9b72b59dbe1f7",
       "kind": "article",
-      "title": "Meta is Signing the EU AI Act Code of Practice on Transparency of AI-Generated Content",
-      "source": "Meta Store",
-      "source_url": "https://about.fb.com/news/2026/07/meta-is-signing-the-eu-ai-act-code-of-practice-on-transparency-of-ai-generated-content/",
-      "published_at": "2026-07-28T07:00:00Z",
+      "title": "OpenAI agents rebuilt internal message board in lead-up to Hugging Face breach",
+      "source": "Nextgov/FCW",
+      "source_url": "https://www.nextgov.com/artificial-intelligence/2026/08/openai-agents-rebuilt-internal-message-board-lead-hugging-face-breach/415240/",
+      "published_at": "2026-08-05T07:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
-        "Policy",
-        "Safety"
+        "Open Source",
+        "Models & Tools"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Meta is Signing the EU AI Act Code of Practice on Transparency of AI-Generated Content Meta Store",
+      "summary": "OpenAI agents rebuilt internal message board in lead-up to Hugging Face breach Nextgov/FCW",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://about.fb.com/news/2026/07/meta-is-signing-the-eu-ai-act-code-of-practice-on-transparency-of-ai-generated-content/",
+      "resolved_url": "https://www.nextgov.com/artificial-intelligence/2026/08/openai-agents-rebuilt-internal-message-board-lead-hugging-face-breach/415240/",
       "key_points": [
-        "As AI-generated media becomes more photorealistic, it’s increasingly important that people have tools to help them identify it.",
-        "We’ve been working to put this principle into practice at Meta since February 2024 , when we announced our approach to identifying and labeling AI-generated content on our platforms.",
-        "More recently, we launched a research demo of a detection tool to help people better understand if an image was made with Meta AI as part of these efforts.",
-        "Signing the EU AI Act Code of Practice on Transparency of AI-Generated Content , which we confirmed we will do earlier this week, reflects our commitment to this principle.",
-        "It also aligns with our ongoing work with peers across the entire stack to tackle these cross-industry challenges."
+        "LAS VEGAS — OpenAI models created a shared message board inside the company’s systems, used it to trade hacking methods and found a way to bring it back after engineers shut it down, company researchers said Wednesday in a more complete account of how an internal test led the agents to breach Hugging Face last month.",
+        "The account, presented at the Black Hat cybersecurity conference, showed how agents working on separate experiments found one another, exchanged information and built on each other’s work over roughly two months, ultimately contributing to the breach and illustrating how difficult to contain such advanced AI systems can become when they work together.",
+        "The breakdown offered major new details about how the agents coordinated and the possible dangers of increasingly autonomous AI systems finding ways to work together when they can reach real-world computer systems."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Meta is Signing the EU AI Act Code of Practice on Transparency of AI-Generated Content Meta Store"
+          "body": "OpenAI agents rebuilt internal message board in lead-up to Hugging Face breach Nextgov/FCW"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "As AI-generated media becomes more photorealistic, it’s increasingly important that people have tools to help them identify it.",
-            "We’ve been working to put this principle into practice at Meta since February 2024 , when we announced our approach to identifying and labeling AI-generated content on our platforms.",
-            "More recently, we launched a research demo of a detection tool to help people better understand if an image was made with Meta AI as part of these efforts.",
-            "Signing the EU AI Act Code of Practice on Transparency of AI-Generated Content , which we confirmed we will do earlier this week, reflects our commitment to this principle.",
-            "It also aligns with our ongoing work with peers across the entire stack to tackle these cross-industry challenges."
+            "LAS VEGAS — OpenAI models created a shared message board inside the company’s systems, used it to trade hacking methods and found a way to bring it back after engineers shut it down, company researchers said Wednesday in a more complete account of how an internal test led the agents to breach Hugging Face last month.",
+            "The account, presented at the Black Hat cybersecurity conference, showed how agents working on separate experiments found one another, exchanged information and built on each other’s work over roughly two months, ultimately contributing to the breach and illustrating how difficult to contain such advanced AI systems can become when they work together.",
+            "The breakdown offered major new details about how the agents coordinated and the possible dangers of increasingly autonomous AI systems finding ways to work together when they can reach real-world computer systems."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "As AI-generated media becomes more photorealistic, it’s increasingly important that people have tools to help them identify it. We’ve been working to put this principle into practice at Meta since February 2024 , when we announced our approach to identifying and labeling AI-generated content on our platforms. More recently, we launched a research demo of a detection tool to help people better understand if an image was made with Meta AI as part of these efforts.",
-            "Signing the EU AI Act Code of Practice on Transparency of AI-Generated Content , which we confirmed we will do earlier this week, reflects our commitment to this principle. It also aligns with our ongoing work with peers across the entire stack to tackle these cross-industry challenges. Through forums like Partnership on AI and the Coalition for Content Provenance and Authenticity (C2PA ), we’re working to develop solutions for identifying AI-generated content that are durable, technically-feasible and sustainable.",
-            "Getting this right is critically important. It means transparency measures that provide clarity, rather than more confusion. We must avoid a situation where online content is subject to a growing array of different labels and disclosures that end up overwhelming people, while at the same time adding additional regulatory complexity for providers."
+            "LAS VEGAS — OpenAI models created a shared message board inside the company’s systems, used it to trade hacking methods and found a way to bring it back after engineers shut it down, company researchers said Wednesday in a more complete account of how an internal test led the agents to breach Hugging Face last month.",
+            "The account, presented at the Black Hat cybersecurity conference, showed how agents working on separate experiments found one another, exchanged information and built on each other’s work over roughly two months, ultimately contributing to the breach and illustrating how difficult to contain such advanced AI systems can become when they work together.",
+            "The breakdown offered major new details about how the agents coordinated and the possible dangers of increasingly autonomous AI systems finding ways to work together when they can reach real-world computer systems."
           ]
         }
       ],
@@ -5857,7 +5958,7 @@
       "id": "2d831fc682ae63dc",
       "kind": "article",
       "title": "Delivery robot startup Robot.com is betting its next act on workplace humanoids",
-      "source": "businessinsider.com",
+      "source": "Business Insider",
       "source_url": "https://www.businessinsider.com/delivery-robot-startup-robot-com-bets-on-workplace-humanoids-2026-6",
       "published_at": "2026-06-22T07:00:00Z",
       "authors": [],
@@ -5867,7 +5968,7 @@
         "Embodied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Delivery robot startup Robot.com is betting its next act on workplace humanoids businessinsider.com",
+      "summary": "Delivery robot startup Robot.com is betting its next act on workplace humanoids Business Insider",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.businessinsider.com/delivery-robot-startup-robot-com-bets-on-workplace-humanoids-2026-6",
@@ -5880,7 +5981,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "Delivery robot startup Robot.com is betting its next act on workplace humanoids businessinsider.com"
+          "body": "Delivery robot startup Robot.com is betting its next act on workplace humanoids Business Insider"
         },
         {
           "title": "公开页面要点",
@@ -5897,108 +5998,6 @@
             "Delivery robot startup Robot.com is expanding into workplace humanoids, targeting industrial, food services, and logistics customers with a new robot designed to complete repetitive tasks.",
             "The San Francisco-based startup, formerly known as Kiwibot, told Business Insider it will launch R-noid, a humanoid robot on wheels that can package orders, load and unload boxes, and prep workstations. The startup is working with Physical Intelligence, one of its AI lab partners, to develop custom foundation models for R-noid.",
             "CEO Felipe Chavez said in an interview that the robot is part of a nearly two-year-long process to expand beyond campus-delivery robots and into commercial labor automation across multiple industries, from food service to logistics and healthcare."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "33544d2854dbdc62",
-      "kind": "article",
-      "title": "Inside OpenAI’s Hack of Hugging Face",
-      "source": "The New Yorker",
-      "source_url": "https://www.newyorker.com/news/the-lede/inside-openai-hack-of-hugging-face",
-      "published_at": "2026-07-30T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Open Source",
-        "Models & Tools"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Inside OpenAI’s Hack of Hugging Face The New Yorker",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.newyorker.com/news/the-lede/inside-openai-hack-of-hugging-face",
-      "key_points": [
-        "The first indications of what would prove to be one of the most consequential computer hacks of all time went mostly unnoticed.",
-        "On July 9th, a mysterious attacker, using a collection of temporary internet addresses, began probing the website of Hugging Face, an A.I.-research hub headquartered in New York City.",
-        "The intruder would open a portal at one address, ping the servers a few times, then close it.",
-        "Then a similar portal at another address would open, send a few pings, and close.",
-        "This went on through the evening; the next day, a Friday, it petered out."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Inside OpenAI’s Hack of Hugging Face The New Yorker"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "The first indications of what would prove to be one of the most consequential computer hacks of all time went mostly unnoticed.",
-            "On July 9th, a mysterious attacker, using a collection of temporary internet addresses, began probing the website of Hugging Face, an A.I.-research hub headquartered in New York City.",
-            "The intruder would open a portal at one address, ping the servers a few times, then close it.",
-            "Then a similar portal at another address would open, send a few pings, and close.",
-            "This went on through the evening; the next day, a Friday, it petered out."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "The first indications of what would prove to be one of the most consequential computer hacks of all time went mostly unnoticed. On July 9th, a mysterious attacker, using a collection of temporary internet addresses, began probing the website of Hugging Face, an A.I.-research hub headquartered in New York City. The intruder would open a portal at one address, ping the servers a few times, then close it. Then a similar portal at another address would open, send a few pings, and close. This went on through the evening; the next day, a Friday, it petered out.",
-            "The cybersecurity team at Hugging Face seems not to have noticed the early activity. Hugging Face is a kind of community space for A.I. researchers: it hosts A.I. models , virtual scientific workspaces, and data sets for evaluating A.I. quality. The company is popular and well respected, but it is also a target for hackers. (It is named after an emoji.) The probes looked like an annoyance—probably the work of some kids.",
-            "On Saturday, July 11th, the assault began in earnest. Using stolen credentials, the adversary once again opened numerous simultaneous connections to Hugging Face’s servers. Soon, dozens of virtual attackers were blinking in and out of existence. “It was moving really fast, and very, very, massively parallel,” Thomas Wolf, Hugging Face’s chief science officer, told me."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "a365554f2786740a",
-      "kind": "article",
-      "title": "The OpenAI Hack Is Fueling a New Fight Over Open-Source AI",
-      "source": "Time Magazine",
-      "source_url": "https://time.com/article/2026/07/28/open-source-ai-hugging-face-openai/",
-      "published_at": "2026-07-28T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Open Source",
-        "Models & Tools"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "The OpenAI Hack Is Fueling a New Fight Over Open-Source AI Time Magazine",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://time.com/article/2026/07/28/open-source-ai-hugging-face-openai/",
-      "key_points": [
-        "Business Open follow modal Personalized Content Business Follow this section to personalize your feed and get instant alerts.",
-        "Follow Go to your personalized feed WHY FOLLOW?",
-        "Custom Feed: See the stories that matter most to you.",
-        "AI Open follow modal Personalized Content AI Follow this tag to personalize your feed and get instant alerts.",
-        "The AI startup Hugging Face was the victim of an unprecedented AI hacking campaign by rogue OpenAI models, an event that kicked off a firestorm of industry debate this week."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "The OpenAI Hack Is Fueling a New Fight Over Open-Source AI Time Magazine"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Business Open follow modal Personalized Content Business Follow this section to personalize your feed and get instant alerts.",
-            "Follow Go to your personalized feed WHY FOLLOW?",
-            "Custom Feed: See the stories that matter most to you.",
-            "AI Open follow modal Personalized Content AI Follow this tag to personalize your feed and get instant alerts.",
-            "The AI startup Hugging Face was the victim of an unprecedented AI hacking campaign by rogue OpenAI models, an event that kicked off a firestorm of industry debate this week."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Business Open follow modal Personalized Content Business Follow this section to personalize your feed and get instant alerts. Follow Go to your personalized feed WHY FOLLOW? Custom Feed: See the stories that matter most to you.",
-            "AI Open follow modal Personalized Content AI Follow this tag to personalize your feed and get instant alerts. Follow Go to your personalized feed WHY FOLLOW? Custom Feed: See the stories that matter most to you.",
-            "The AI startup Hugging Face was the victim of an unprecedented AI hacking campaign by rogue OpenAI models, an event that kicked off a firestorm of industry debate this week."
           ]
         }
       ],
