@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-16T01:56:46Z",
+  "generated_at": "2026-08-16T06:58:00Z",
   "record_count": 132,
   "records": [
     {
@@ -586,6 +586,51 @@
       "reading_minutes": 1
     },
     {
+      "id": "rhb-icml-2026",
+      "kind": "paper",
+      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
+      "source": "OpenReview · arXiv",
+      "source_url": "https://arxiv.org/abs/2605.02964",
+      "published_at": "2026-06-24T00:00:00Z",
+      "authors": [
+        "Kunvar Thaman"
+      ],
+      "venue": "ICML 2026",
+      "tags": [
+        "Reward Hacking",
+        "Agent Safety",
+        "Evaluation"
+      ],
+      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
+      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/rhb-icml-2026.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://arxiv.org/pdf/2605.02964",
+      "key_points": [
+        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
+        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
+        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
+        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
+        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
+        },
+        {
+          "title": "关键结果",
+          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
+        },
+        {
+          "title": "局限与结论",
+          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
+        }
+      ],
+      "reading_minutes": 46
+    },
+    {
       "id": "a37d11d589542899",
       "kind": "article",
       "title": "Introducing Gemini 3.7 Flash",
@@ -635,51 +680,6 @@
         }
       ],
       "reading_minutes": 1
-    },
-    {
-      "id": "rhb-icml-2026",
-      "kind": "paper",
-      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
-      "source": "OpenReview · arXiv",
-      "source_url": "https://arxiv.org/abs/2605.02964",
-      "published_at": "2026-06-24T00:00:00Z",
-      "authors": [
-        "Kunvar Thaman"
-      ],
-      "venue": "ICML 2026",
-      "tags": [
-        "Reward Hacking",
-        "Agent Safety",
-        "Evaluation"
-      ],
-      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
-      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/rhb-icml-2026.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://arxiv.org/pdf/2605.02964",
-      "key_points": [
-        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
-        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
-        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
-        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
-        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
-        },
-        {
-          "title": "关键结果",
-          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
-        },
-        {
-          "title": "局限与结论",
-          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
-        }
-      ],
-      "reading_minutes": 46
     },
     {
       "id": "8af8ed83ac3d5e16",
@@ -1219,8 +1219,8 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.cnbc.com/2026/08/10/the-top-ai-proof-jobs-that-require-uniquely-human-skills.html",
       "key_points": [
-        "Work Don't just follow your passion—'successful and happy' people prioritize 2 things in their careers, says expert Work The top 10 highest-paying jobs for teens in the U.S.—No.",
-        "1 isn't retail or food service Raising Successful Kids If you want your kids to focus better, do 5 things—they'll have an 'easier' time paying attention"
+        "Work The top 10 highest-paying jobs for teens in the U.S.—No.",
+        "1 isn't retail or food service Work Don't just follow your passion—'successful and happy' people prioritize 2 things in their careers, says expert Work 'Doomjobbing’ can hurt your job search and worsen anxiety, experts say: Why it happens and how to avoid it"
       ],
       "sections": [
         {
@@ -1230,16 +1230,16 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Work Don't just follow your passion—'successful and happy' people prioritize 2 things in their careers, says expert Work The top 10 highest-paying jobs for teens in the U.S.—No.",
-            "1 isn't retail or food service Raising Successful Kids If you want your kids to focus better, do 5 things—they'll have an 'easier' time paying attention"
+            "Work The top 10 highest-paying jobs for teens in the U.S.—No.",
+            "1 isn't retail or food service Work Don't just follow your passion—'successful and happy' people prioritize 2 things in their careers, says expert Work 'Doomjobbing’ can hurt your job search and worsen anxiety, experts say: Why it happens and how to avoid it"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Work Don't just follow your passion—'successful and happy' people prioritize 2 things in their careers, says expert",
             "Work The top 10 highest-paying jobs for teens in the U.S.—No. 1 isn't retail or food service",
-            "Raising Successful Kids If you want your kids to focus better, do 5 things—they'll have an 'easier' time paying attention"
+            "Work Don't just follow your passion—'successful and happy' people prioritize 2 things in their careers, says expert",
+            "Work 'Doomjobbing’ can hurt your job search and worsen anxiety, experts say: Why it happens and how to avoid it"
           ]
         }
       ],
@@ -1590,7 +1590,7 @@
       "id": "9c65b2e009741fa7",
       "kind": "article",
       "title": "Claude Fable 5 AI finds a tiny formula that topples an 87-year-old math conjecture",
-      "source": "ScienceDaily",
+      "source": "sciencedaily.com",
       "source_url": "https://www.sciencedaily.com/releases/2026/08/260804034634.htm",
       "published_at": "2026-08-05T07:00:00Z",
       "authors": [],
@@ -1639,11 +1639,51 @@
       "reading_minutes": 1
     },
     {
-      "id": "a97f52cede96e122",
+      "id": "4d2d3152dc3cd736",
+      "kind": "article",
+      "title": "DeepSeek 发布 智能体,完美驱动 Power BI",
+      "source": "微信公众号 · dotNET跨平台",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1786863454&ver=6907&signature=hn-Tx7gdF6gi76n8UKcpvXYzCobv8AEOYk34iXbF6nL30yTGhZ0CwoGaHaO*zAOVADgr6fVisQtykgQBC5lmD*GzxgTiHxaZqcDD5D-gMNYbyRuDoUYm-E*-zcnJRy-s&new=1",
+      "published_at": "2026-08-16T00:03:40Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "微信公众号",
+        "DeepSeek",
+        "模型"
+      ],
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "summary": "8 月 13 日, DeepSeek 正式 发布 了自己的智能体产品 DeepSeek Harness,而且直接开源.这可能是 DeepSeek 迄今为止最不像＂模...",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "indexed-summary",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HHBfgWqjVF2ovcIQESxwrVPa3VdMyHB9nVc2r3Df&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1786863454%26ver%3D6907%26signature%3Dhn-Tx7gdF6gi76n8UKcpvXYzCobv8AEOYk34iXbF6nL30yTGhZ0CwoGaHaO%2AzAOVADgr6fVisQtykgQBC5lmD%2AGzxgTiHxaZqcDD5D-gMNYbyRuDoUYm-E%2A-zcnJRy-s%26new%3D1",
+      "key_points": [
+        "8 月 13 日, DeepSeek 正式 发布 了自己的智能体产品 DeepSeek Harness,而且直接开源.这可能是 DeepSeek 迄今为止最不像＂模..."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "8 月 13 日, DeepSeek 正式 发布 了自己的智能体产品 DeepSeek Harness,而且直接开源.这可能是 DeepSeek 迄今为止最不像＂模..."
+        },
+        {
+          "title": "公开索引摘要",
+          "bullets": [
+            "8 月 13 日, DeepSeek 正式 发布 了自己的智能体产品 DeepSeek Harness,而且直接开源.这可能是 DeepSeek 迄今为止最不像＂模..."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "593e6a56f3e91689",
       "kind": "article",
       "title": "DeepSeek 官方 发布 类 Codex 工具 DeepSeek Harness,我就是装不上啊",
       "source": "微信公众号 · 小众软件",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1786845381&ver=6907&signature=Wmp9hVx3Y1c56BDk4eq3O9WIh5-WIBPq1*sjjxhKJWrarSCXrYaagUHHzM9ZJWJcqDvwrYq2rg1lz4R9xKzXGklwfJIT1LZ93JDQziORJWkofJERe5ShO9dtUHi9LyiY&new=1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1786863454&ver=6907&signature=Wmp9hVx3Y1c56BDk4eq3O9WIh5-WIBPq1*sjjxhKJWpKb0JfZfwCtE9D28*BSCKTVHAulhw2hutfcAZ2o2iKifP1RTcp1d-s21zskRknbnc*2WYsF9PEDrH4UayPkK8M&new=1",
       "published_at": "2026-08-15T10:27:33Z",
       "authors": [],
       "venue": "",
@@ -1656,7 +1696,7 @@
       "summary": "注意啊,这个工具是 DeepSeek 发布 的,但它自身还是需要 API 才能使用,每用一次,都费钱!这就是 AI 时代的代价啊.涨价之前,...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HNUYgWqjBAipEZjJjPcH1ISAH346rz3Vces5EfE8&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1786845381%26ver%3D6907%26signature%3DWmp9hVx3Y1c56BDk4eq3O9WIh5-WIBPq1%2AsjjxhKJWrarSCXrYaagUHHzM9ZJWJcqDvwrYq2rg1lz4R9xKzXGklwfJIT1LZ93JDQziORJWkofJERe5ShO9dtUHi9LyiY%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HHBfgWqj-X3XjtwzQgKVr0bKK09ZDNu8uNqwDK4P&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1786863454%26ver%3D6907%26signature%3DWmp9hVx3Y1c56BDk4eq3O9WIh5-WIBPq1%2AsjjxhKJWpKb0JfZfwCtE9D28%2ABSCKTVHAulhw2hutfcAZ2o2iKifP1RTcp1d-s21zskRknbnc%2A2WYsF9PEDrH4UayPkK8M%26new%3D1",
       "key_points": [
         "注意啊,这个工具是 DeepSeek 发布 的,但它自身还是需要 API 才能使用,每用一次,都费钱!"
       ],
@@ -1679,11 +1719,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "25e2375c4875bda2",
+      "id": "d91cd9d6d6b16ad3",
       "kind": "article",
       "title": "智谱 GLM -5.3正式 发布 ,能力比肩Fable5!",
       "source": "微信公众号 · 阿枫科技",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1786845384&ver=6907&signature=QTPedfb5tage8gaBdc-tFansPtndeko-3RI9gpRhLVIg6MCBNH7USu3NqBH1ICfj5s3joAltCe7DDO*5UhxqKO2Q-Cj74j4u9QBsPiYGoK2RmSl8LIR2m9VkSHCIeShV&new=1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1786863461&ver=6907&signature=QTPedfb5tage8gaBdc-tFansPtndeko-3RI9gpRhLVJwgTxBafFahEXM9DzMOvALQj20YHP0nb*bHLa9rVhFQnIntOz5-R*50y9QK*i8LaBs1mjGUGnTp1xO3U2Vy3VR&new=1",
       "published_at": "2026-08-15T07:25:41Z",
       "authors": [],
       "venue": "",
@@ -1696,7 +1736,7 @@
       "summary": "就在昨天, 智谱 最新的 GLM -5.3终于 发布 了.下面这个视频中看到的画面,并不是《我的世界》,而是我用 GLM -5.3模型复刻的游戏:...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HNUYgWqjjxxL74GNn0YyP579dyaGgWJLty5W3TnB&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1786845384%26ver%3D6907%26signature%3DQTPedfb5tage8gaBdc-tFansPtndeko-3RI9gpRhLVIg6MCBNH7USu3NqBH1ICfj5s3joAltCe7DDO%2A5UhxqKO2Q-Cj74j4u9QBsPiYGoK2RmSl8LIR2m9VkSHCIeShV%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HHBfgWqjqk__cI2KhH0HBFnvaHalnSxKIWRzMKdu&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1786863461%26ver%3D6907%26signature%3DQTPedfb5tage8gaBdc-tFansPtndeko-3RI9gpRhLVJwgTxBafFahEXM9DzMOvALQj20YHP0nb%2AbHLa9rVhFQnIntOz5-R%2A50y9QK%2Ai8LaBs1mjGUGnTp1xO3U2Vy3VR%26new%3D1",
       "key_points": [
         "就在昨天, 智谱 最新的 GLM -5.3终于 发布 了.下面这个视频中看到的画面,并不是《我的世界》,而是我用 GLM -5.3模型复刻的游戏:..."
       ],
@@ -1723,7 +1763,7 @@
       "kind": "article",
       "title": "DeepSeek 创新型架构 Harness 发布 :一切组件皆为插件",
       "source": "微信公众号 · 21CTO",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1786845381&ver=6907&signature=o5s9wiMnv-E5qSF212b0BLvC3yZqtjhZl9itAvIHCDFy-i7bmMTA8EXyyrYmhg5Ts8UDfQ-6QZsXuLKsN6I1Yv79omwRTLaOcGygpiSawzLj3xXQMP2gLqpSyryS2K7I&new=1",
+      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HNUYgWqjc4eFZ24xf_1v25XhWi8YA4Uq7lJAy7uU&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1786845381%26ver%3D6907%26signature%3Do5s9wiMnv-E5qSF212b0BLvC3yZqtjhZl9itAvIHCDFy-i7bmMTA8EXyyrYmhg5Ts8UDfQ-6QZsXuLKsN6I1Yv79omwRTLaOcGygpiSawzLj3xXQMP2gLqpSyryS2K7I%26new%3D1",
       "published_at": "2026-08-15T03:25:07Z",
       "authors": [],
       "venue": "",
@@ -1759,11 +1799,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "0089bfea02b4ba2e",
+      "id": "1bbda17dbf155fd3",
       "kind": "article",
       "title": "智谱 发布 GLM -5.3,编程能力更强;传苹果训练国内专用 AI 模型;微信:朋友圈现在、过去、未来都不会有二次编辑功能 | 极客早知道",
       "source": "微信公众号 · 极客公园",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1786845384&ver=6907&signature=y5T7bPZrT3JYKU7qyZV0p*KyV3LGL0yuX751Db80sVIPYYEl9X3GsBb958Jd3cBMQ34QleY*gVTE7E-CXLO-Yr411BUS1Nwbjk8sohJGJJnU-sLNM8A*322k*7mZ8Hyc&new=1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1786863461&ver=6907&signature=y5T7bPZrT3JYKU7qyZV0p*KyV3LGL0yuX751Db80sVLHcdK6kKtIlZd-gqv1haSQ4TBxbM60WaU4*Hm9gX1wQwJJKT5Od53NkzGud7Ue0*hJREU4DGEKi-oGwI5E65cY&new=1",
       "published_at": "2026-08-15T00:58:18Z",
       "authors": [],
       "venue": "",
@@ -1776,7 +1816,7 @@
       "summary": "智谱 正式 发布 GLM -5.3,拥有更强编程能力8 月 14 日,据介绍,与 GLM -5.2 相比, GLM -5.3 基座模型未变,但通过极致的后训练 ...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HNUYgWqjJ5KOoHzXbE4SyjhYtcIEwgCPf4ka-oxC&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1786845384%26ver%3D6907%26signature%3Dy5T7bPZrT3JYKU7qyZV0p%2AKyV3LGL0yuX751Db80sVIPYYEl9X3GsBb958Jd3cBMQ34QleY%2AgVTE7E-CXLO-Yr411BUS1Nwbjk8sohJGJJnU-sLNM8A%2A322k%2A7mZ8Hyc%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HHFfgWqjIPXHzIK1KiBOg3DkCHMp7BbFRdTL1NRN&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1786863461%26ver%3D6907%26signature%3Dy5T7bPZrT3JYKU7qyZV0p%2AKyV3LGL0yuX751Db80sVLHcdK6kKtIlZd-gqv1haSQ4TBxbM60WaU4%2AHm9gX1wQwJJKT5Od53NkzGud7Ue0%2AhJREU4DGEKi-oGwI5E65cY%26new%3D1",
       "key_points": [
         "智谱 正式 发布 GLM -5.3,拥有更强编程能力8 月 14 日,据介绍,与 GLM -5.2 相比, GLM -5.3 基座模型未变,但通过极致的后训练 ..."
       ],
@@ -2239,46 +2279,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "6857c0e16f3ebd7e",
-      "kind": "article",
-      "title": "一波三折终上线! DeepSeek 新版本 发布 ,AI圈迎“疯狂星期四”",
-      "source": "微信公众号 · 21世纪经济报道",
-      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HFLIfmqjSJ7gwm5fm3N9St6mAYozZlMDyzpV6GCS&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1786693698%26ver%3D6903%26signature%3DXOJzfnA1PdIMa1xFQ9N-%2Ap1QxaQses2m3wz684TzaOvlFNGyeRjdY5u4pR-2YqLdICx73pvchNSiGmXyPhxFUUkywomfIV%2A35FP3k6pPNrqliP36Jlo6xkutAZVHC4bu%26new%3D1",
-      "published_at": "2026-08-14T03:37:03Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "微信公众号",
-        "DeepSeek",
-        "模型"
-      ],
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "summary": "DeepSeek 发布 推文官宣V4-Pro正式版于网页端、App及API全线上线,并同步 公布 了调价方案.官网首页通知恢复,官方更新日志中...",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HFLIfmqjSJ7gwm5fm3N9St6mAYozZlMDyzpV6GCS&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1786693698%26ver%3D6903%26signature%3DXOJzfnA1PdIMa1xFQ9N-%2Ap1QxaQses2m3wz684TzaOvlFNGyeRjdY5u4pR-2YqLdICx73pvchNSiGmXyPhxFUUkywomfIV%2A35FP3k6pPNrqliP36Jlo6xkutAZVHC4bu%26new%3D1",
-      "key_points": [
-        "DeepSeek 发布 推文官宣V4-Pro正式版于网页端、App及API全线上线,并同步 公布 了调价方案.官网首页通知恢复,官方更新日志中..."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "DeepSeek 发布 推文官宣V4-Pro正式版于网页端、App及API全线上线,并同步 公布 了调价方案.官网首页通知恢复,官方更新日志中..."
-        },
-        {
-          "title": "公开索引摘要",
-          "bullets": [
-            "DeepSeek 发布 推文官宣V4-Pro正式版于网页端、App及API全线上线,并同步 公布 了调价方案.官网首页通知恢复,官方更新日志中..."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "94ea973fb6b37250",
       "kind": "article",
       "title": "Bring your spreadsheet data to life with Sheets canvas",
@@ -2578,104 +2578,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "9363823b65d49546",
-      "kind": "article",
-      "title": "Orchard: An open framework for scalable agentic AI",
-      "source": "Microsoft Research",
-      "source_url": "https://www.microsoft.com/en-us/research/blog/orchard-an-open-framework-for-scalable-agentic-ai/",
-      "published_at": "2026-08-03T16:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Microsoft",
-        "Research"
-      ],
-      "verification": "官方来源",
-      "summary": "Orchard is an open-source framework for the research community to train and evaluate AI agents across task types. It reduces complexity while supporting strong performance from smaller models by enabling researchers to reuse the same infrastructure. The post Orchard: An open framework for scalable agentic AI appeared first on Microsoft Research .",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.microsoft.com/en-us/research/blog/orchard-an-open-framework-for-scalable-agentic-ai/",
-      "key_points": [
-        "Orchard is an open-source framework for scalable and cost-effective agentic AI research, built around Orchard Env, a reusable environment service for training and evaluating agents across task domains.",
-        "The same Orchard infrastructure supports software-engineering, web-navigation, and personal-assistant agents, and can train them directly inside real deployment harnesses such as Codex, OpenClaw, and ZeroClaw—letting researchers reuse environments, data pipelines, and evaluation workflows across tasks.",
-        "Orchard-SWE, Orchard-GUI, and Orchard-Claw demonstrate that relatively small open-weight models can achieve strong results on complex real-world tasks.",
-        "For example, Orchard-SWE reaches 69.7% on SWE-bench Verified—73.0% with value-model reranking—using only about 3 billion active parameters, approaching frontier systems using more than 10 times larger models."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Orchard is an open-source framework for the research community to train and evaluate AI agents across task types. It reduces complexity while supporting strong performance from smaller models by enabling researchers to reuse the same infrastructure. The post Orchard: An open framework for scalable agentic AI appeared first on Microsoft Research ."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Orchard is an open-source framework for scalable and cost-effective agentic AI research, built around Orchard Env, a reusable environment service for training and evaluating agents across task domains.",
-            "The same Orchard infrastructure supports software-engineering, web-navigation, and personal-assistant agents, and can train them directly inside real deployment harnesses such as Codex, OpenClaw, and ZeroClaw—letting researchers reuse environments, data pipelines, and evaluation workflows across tasks.",
-            "Orchard-SWE, Orchard-GUI, and Orchard-Claw demonstrate that relatively small open-weight models can achieve strong results on complex real-world tasks.",
-            "For example, Orchard-SWE reaches 69.7% on SWE-bench Verified—73.0% with value-model reranking—using only about 3 billion active parameters, approaching frontier systems using more than 10 times larger models."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Orchard is an open-source framework for scalable and cost-effective agentic AI research, built around Orchard Env, a reusable environment service for training and evaluating agents across task domains.",
-            "The same Orchard infrastructure supports software-engineering, web-navigation, and personal-assistant agents, and can train them directly inside real deployment harnesses such as Codex, OpenClaw, and ZeroClaw—letting researchers reuse environments, data pipelines, and evaluation workflows across tasks.",
-            "Orchard-SWE, Orchard-GUI, and Orchard-Claw demonstrate that relatively small open-weight models can achieve strong results on complex real-world tasks. For example, Orchard-SWE reaches 69.7% on SWE-bench Verified—73.0% with value-model reranking—using only about 3 billion active parameters, approaching frontier systems using more than 10 times larger models."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "f76832163d5ff2ed",
-      "kind": "article",
-      "title": "Inside our 353,000-person vibe coding course",
-      "source": "Google AI",
-      "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/",
-      "published_at": "2026-08-03T15:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Google",
-        "Official"
-      ],
-      "verification": "官方来源",
-      "summary": "Illustrations of a laptop, an AI spark, messages, code, and a 3-D cube",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/",
-      "key_points": [
-        "Google and Kaggle’s “AI Agents: Intensive Vibe Coding” course had expert-led sessions, technical whitepapers and notebooks, and capstone projects.",
-        "Over 353,000 developers recently joined our five-day intensive course to master building and deploying AI agents using natural language.",
-        "Participants collaborated on Discord to debug code and submitted over 6,000 impressive capstone projects, ranging from historical transcription tools to space-weather research systems.",
-        "You can still access all course materials on the Kaggle Learn website to sharpen your skills at your own pace. \"Inside our 353,000-person vibe coding course\" explores how we teach modern AI development."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Illustrations of a laptop, an AI spark, messages, code, and a 3-D cube"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Google and Kaggle’s “AI Agents: Intensive Vibe Coding” course had expert-led sessions, technical whitepapers and notebooks, and capstone projects.",
-            "Over 353,000 developers recently joined our five-day intensive course to master building and deploying AI agents using natural language.",
-            "Participants collaborated on Discord to debug code and submitted over 6,000 impressive capstone projects, ranging from historical transcription tools to space-weather research systems.",
-            "You can still access all course materials on the Kaggle Learn website to sharpen your skills at your own pace. \"Inside our 353,000-person vibe coding course\" explores how we teach modern AI development."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Google and Kaggle’s “AI Agents: Intensive Vibe Coding” course had expert-led sessions, technical whitepapers and notebooks, and capstone projects.",
-            "Over 353,000 developers recently joined our five-day intensive course to master building and deploying AI agents using natural language. Participants collaborated on Discord to debug code and submitted over 6,000 impressive capstone projects, ranging from historical transcription tools to space-weather research systems. You can still access all course materials on the Kaggle Learn website to sharpen your skills at your own pace.",
-            "\"Inside our 353,000-person vibe coding course\" explores how we teach modern AI development."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "d82fd66c9994b8e4",
       "kind": "article",
       "title": "AI shortens drug discovery to around 1 year in China, Insilico CEO says",
@@ -2805,6 +2707,104 @@
         {
           "title": "原文短摘录",
           "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "9363823b65d49546",
+      "kind": "article",
+      "title": "Orchard: An open framework for scalable agentic AI",
+      "source": "Microsoft Research",
+      "source_url": "https://www.microsoft.com/en-us/research/blog/orchard-an-open-framework-for-scalable-agentic-ai/",
+      "published_at": "2026-08-03T16:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Microsoft",
+        "Research"
+      ],
+      "verification": "官方来源",
+      "summary": "Orchard is an open-source framework for the research community to train and evaluate AI agents across task types. It reduces complexity while supporting strong performance from smaller models by enabling researchers to reuse the same infrastructure. The post Orchard: An open framework for scalable agentic AI appeared first on Microsoft Research .",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.microsoft.com/en-us/research/blog/orchard-an-open-framework-for-scalable-agentic-ai/",
+      "key_points": [
+        "Orchard is an open-source framework for scalable and cost-effective agentic AI research, built around Orchard Env, a reusable environment service for training and evaluating agents across task domains.",
+        "The same Orchard infrastructure supports software-engineering, web-navigation, and personal-assistant agents, and can train them directly inside real deployment harnesses such as Codex, OpenClaw, and ZeroClaw—letting researchers reuse environments, data pipelines, and evaluation workflows across tasks.",
+        "Orchard-SWE, Orchard-GUI, and Orchard-Claw demonstrate that relatively small open-weight models can achieve strong results on complex real-world tasks.",
+        "For example, Orchard-SWE reaches 69.7% on SWE-bench Verified—73.0% with value-model reranking—using only about 3 billion active parameters, approaching frontier systems using more than 10 times larger models."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Orchard is an open-source framework for the research community to train and evaluate AI agents across task types. It reduces complexity while supporting strong performance from smaller models by enabling researchers to reuse the same infrastructure. The post Orchard: An open framework for scalable agentic AI appeared first on Microsoft Research ."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Orchard is an open-source framework for scalable and cost-effective agentic AI research, built around Orchard Env, a reusable environment service for training and evaluating agents across task domains.",
+            "The same Orchard infrastructure supports software-engineering, web-navigation, and personal-assistant agents, and can train them directly inside real deployment harnesses such as Codex, OpenClaw, and ZeroClaw—letting researchers reuse environments, data pipelines, and evaluation workflows across tasks.",
+            "Orchard-SWE, Orchard-GUI, and Orchard-Claw demonstrate that relatively small open-weight models can achieve strong results on complex real-world tasks.",
+            "For example, Orchard-SWE reaches 69.7% on SWE-bench Verified—73.0% with value-model reranking—using only about 3 billion active parameters, approaching frontier systems using more than 10 times larger models."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Orchard is an open-source framework for scalable and cost-effective agentic AI research, built around Orchard Env, a reusable environment service for training and evaluating agents across task domains.",
+            "The same Orchard infrastructure supports software-engineering, web-navigation, and personal-assistant agents, and can train them directly inside real deployment harnesses such as Codex, OpenClaw, and ZeroClaw—letting researchers reuse environments, data pipelines, and evaluation workflows across tasks.",
+            "Orchard-SWE, Orchard-GUI, and Orchard-Claw demonstrate that relatively small open-weight models can achieve strong results on complex real-world tasks. For example, Orchard-SWE reaches 69.7% on SWE-bench Verified—73.0% with value-model reranking—using only about 3 billion active parameters, approaching frontier systems using more than 10 times larger models."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "f76832163d5ff2ed",
+      "kind": "article",
+      "title": "Inside our 353,000-person vibe coding course",
+      "source": "Google AI",
+      "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/",
+      "published_at": "2026-08-03T15:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Google",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "Illustrations of a laptop, an AI spark, messages, code, and a 3-D cube",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/",
+      "key_points": [
+        "Google and Kaggle’s “AI Agents: Intensive Vibe Coding” course had expert-led sessions, technical whitepapers and notebooks, and capstone projects.",
+        "Over 353,000 developers recently joined our five-day intensive course to master building and deploying AI agents using natural language.",
+        "Participants collaborated on Discord to debug code and submitted over 6,000 impressive capstone projects, ranging from historical transcription tools to space-weather research systems.",
+        "You can still access all course materials on the Kaggle Learn website to sharpen your skills at your own pace. \"Inside our 353,000-person vibe coding course\" explores how we teach modern AI development."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Illustrations of a laptop, an AI spark, messages, code, and a 3-D cube"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Google and Kaggle’s “AI Agents: Intensive Vibe Coding” course had expert-led sessions, technical whitepapers and notebooks, and capstone projects.",
+            "Over 353,000 developers recently joined our five-day intensive course to master building and deploying AI agents using natural language.",
+            "Participants collaborated on Discord to debug code and submitted over 6,000 impressive capstone projects, ranging from historical transcription tools to space-weather research systems.",
+            "You can still access all course materials on the Kaggle Learn website to sharpen your skills at your own pace. \"Inside our 353,000-person vibe coding course\" explores how we teach modern AI development."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Google and Kaggle’s “AI Agents: Intensive Vibe Coding” course had expert-led sessions, technical whitepapers and notebooks, and capstone projects.",
+            "Over 353,000 developers recently joined our five-day intensive course to master building and deploying AI agents using natural language. Participants collaborated on Discord to debug code and submitted over 6,000 impressive capstone projects, ranging from historical transcription tools to space-weather research systems. You can still access all course materials on the Kaggle Learn website to sharpen your skills at your own pace.",
+            "\"Inside our 353,000-person vibe coding course\" explores how we teach modern AI development."
+          ]
         }
       ],
       "reading_minutes": 1
@@ -4294,6 +4294,58 @@
       "reading_minutes": 1
     },
     {
+      "id": "28df9f67083f868d",
+      "kind": "social",
+      "title": "Worth trying Grok 4.6. Fable 5 is smarter overall, but Grok is much faster and lower cost. Grok 4.7 has a good chance of exceeding all current models in intelligence.",
+      "source": "x.com",
+      "source_url": "https://x.com/elonmusk/status/2088735708693602427",
+      "published_at": "2026-08-15T21:12:54Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "Worth trying Grok 4.6. Fable 5 is smarter overall, but Grok is much faster and lower cost. Grok 4.7 has a good chance of exceeding all current models in intelligence. x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/elonmusk/status/2088735708693602427",
+      "key_points": [
+        "Chief Nerd @TheChiefNerd 19h 👀 Gavin Baker on Grok 4.6 Outpacing Anthropic “This is pretty wild … You're well ahead of Fable 5, which I think most people would agree is the gold standard … Very few investors talk about Grok at all and it is Pareto dominant on a lot of measures … Maybe people should Show more 00:00 40 75 1.1K 120K Elon Musk @elonmusk Worth…",
+        "Fable 5 is smarter overall, but Grok is much faster and lower cost.",
+        "Grok 4.7 has a good chance of exceeding all current models in intelligence.",
+        "9:12 PM · Aug 15, 2026 1.1M Views 566 554 10K 391 Null @ItsNull69 9h Grok 4.6 has been incredible.",
+        "It was the model that finally convinced me to dump Anthropic."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Worth trying Grok 4.6. Fable 5 is smarter overall, but Grok is much faster and lower cost. Grok 4.7 has a good chance of exceeding all current models in intelligence. x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Chief Nerd @TheChiefNerd 19h 👀 Gavin Baker on Grok 4.6 Outpacing Anthropic “This is pretty wild … You're well ahead of Fable 5, which I think most people would agree is the gold standard … Very few investors talk about Grok at all and it is Pareto dominant on a lot of measures … Maybe people should Show more 00:00 40 75 1.1K 120K Elon Musk @elonmusk Worth…",
+            "Fable 5 is smarter overall, but Grok is much faster and lower cost.",
+            "Grok 4.7 has a good chance of exceeding all current models in intelligence.",
+            "9:12 PM · Aug 15, 2026 1.1M Views 566 554 10K 391 Null @ItsNull69 9h Grok 4.6 has been incredible.",
+            "It was the model that finally convinced me to dump Anthropic."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Chief Nerd @TheChiefNerd 19h 👀 Gavin Baker on Grok 4.6 Outpacing Anthropic “This is pretty wild … You're well ahead of Fable 5, which I think most people would agree is the gold standard … Very few investors talk about Grok at all and it is Pareto dominant on a lot of measures … Maybe people should Show more 00:00 40 75 1.1K 120K",
+            "Elon Musk @elonmusk Worth trying Grok 4.6. Fable 5 is smarter overall, but Grok is much faster and lower cost. Grok 4.7 has a good chance of exceeding all current models in intelligence. 9:12 PM · Aug 15, 2026 1.1M Views 566 554 10K 391",
+            "Null @ItsNull69 9h Grok 4.6 has been incredible. It was the model that finally convinced me to dump Anthropic. 26 1.4K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "02acb7f79b6956be",
       "kind": "social",
       "title": "Grok 4.6 runs The Gauntlet",
@@ -4315,7 +4367,7 @@
       "key_points": [
         "Elon Musk @elonmusk Grok 4.6 runs The Gauntlet Matt Shumer @mattshumer_ Aug 14 Grok 4.6 worked non-stop for 48 hours to build this shooter.",
         "Turns out Grok is powerful enough to run Gauntlet Loops.",
-        "00:00 4:36 AM · Aug 15, 2026 6.8M Views 1.6K 1.6K 10K 781 Matt Shumer @mattshumer_ 21h Gauntlet Loop prompt to build games like this: How to Run a Gauntlet Loop From somethingbig.ai 12 9 137 29K Archive Redline @ArchiveRedline 21h Elon and Grok in 20 years like: 6 5 52 2.7K"
+        "00:00 4:36 AM · Aug 15, 2026 7.1M Views 1.6K 1.7K 11K 826 Matt Shumer @mattshumer_ Aug 15 Gauntlet Loop prompt to build games like this: How to Run a Gauntlet Loop From somethingbig.ai 12 9 140 31K Archive Redline @ArchiveRedline Aug 15 Elon and Grok in 20 years like: 6 6 56 2.9K"
       ],
       "sections": [
         {
@@ -4327,15 +4379,15 @@
           "bullets": [
             "Elon Musk @elonmusk Grok 4.6 runs The Gauntlet Matt Shumer @mattshumer_ Aug 14 Grok 4.6 worked non-stop for 48 hours to build this shooter.",
             "Turns out Grok is powerful enough to run Gauntlet Loops.",
-            "00:00 4:36 AM · Aug 15, 2026 6.8M Views 1.6K 1.6K 10K 781 Matt Shumer @mattshumer_ 21h Gauntlet Loop prompt to build games like this: How to Run a Gauntlet Loop From somethingbig.ai 12 9 137 29K Archive Redline @ArchiveRedline 21h Elon and Grok in 20 years like: 6 5 52 2.7K"
+            "00:00 4:36 AM · Aug 15, 2026 7.1M Views 1.6K 1.7K 11K 826 Matt Shumer @mattshumer_ Aug 15 Gauntlet Loop prompt to build games like this: How to Run a Gauntlet Loop From somethingbig.ai 12 9 140 31K Archive Redline @ArchiveRedline Aug 15 Elon and Grok in 20 years like: 6 6 56 2.9K"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok 4.6 runs The Gauntlet Matt Shumer @mattshumer_ Aug 14 Grok 4.6 worked non-stop for 48 hours to build this shooter. Turns out Grok is powerful enough to run Gauntlet Loops. Let the game-making begin! 00:00 4:36 AM · Aug 15, 2026 6.8M Views 1.6K 1.6K 10K 781",
-            "Matt Shumer @mattshumer_ 21h Gauntlet Loop prompt to build games like this: How to Run a Gauntlet Loop From somethingbig.ai 12 9 137 29K",
-            "Archive Redline @ArchiveRedline 21h Elon and Grok in 20 years like: 6 5 52 2.7K"
+            "Elon Musk @elonmusk Grok 4.6 runs The Gauntlet Matt Shumer @mattshumer_ Aug 14 Grok 4.6 worked non-stop for 48 hours to build this shooter. Turns out Grok is powerful enough to run Gauntlet Loops. Let the game-making begin! 00:00 4:36 AM · Aug 15, 2026 7.1M Views 1.6K 1.7K 11K 826",
+            "Matt Shumer @mattshumer_ Aug 15 Gauntlet Loop prompt to build games like this: How to Run a Gauntlet Loop From somethingbig.ai 12 9 140 31K",
+            "Archive Redline @ArchiveRedline Aug 15 Elon and Grok in 20 years like: 6 6 56 2.9K"
           ]
         }
       ],
@@ -4363,7 +4415,7 @@
       "key_points": [
         "Elon Musk @elonmusk Grok 4.6 now in Copilot Grok @grok Aug 14 Grok 4.6 is now available in GitHub Copilot.",
         "Try it out in the GitHub Copilot CLI, IDE, and cloud products!",
-        "x.ai/news/grok-4-6-… 1:49 AM · Aug 15, 2026 6.7M Views 837 1.3K 9.3K 342"
+        "x.ai/news/grok-4-6-… 1:49 AM · Aug 15, 2026 6.8M Views 855 1.3K 9.6K 352"
       ],
       "sections": [
         {
@@ -4375,13 +4427,13 @@
           "bullets": [
             "Elon Musk @elonmusk Grok 4.6 now in Copilot Grok @grok Aug 14 Grok 4.6 is now available in GitHub Copilot.",
             "Try it out in the GitHub Copilot CLI, IDE, and cloud products!",
-            "x.ai/news/grok-4-6-… 1:49 AM · Aug 15, 2026 6.7M Views 837 1.3K 9.3K 342"
+            "x.ai/news/grok-4-6-… 1:49 AM · Aug 15, 2026 6.8M Views 855 1.3K 9.6K 352"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok 4.6 now in Copilot Grok @grok Aug 14 Grok 4.6 is now available in GitHub Copilot. Try it out in the GitHub Copilot CLI, IDE, and cloud products! x.ai/news/grok-4-6-… 1:49 AM · Aug 15, 2026 6.7M Views 837 1.3K 9.3K 342"
+            "Elon Musk @elonmusk Grok 4.6 now in Copilot Grok @grok Aug 14 Grok 4.6 is now available in GitHub Copilot. Try it out in the GitHub Copilot CLI, IDE, and cloud products! x.ai/news/grok-4-6-… 1:49 AM · Aug 15, 2026 6.8M Views 855 1.3K 9.6K 352"
           ]
         }
       ],
@@ -4408,9 +4460,9 @@
       "resolved_url": "https://x.com/elonmusk/status/2088306926442430578",
       "key_points": [
         "Elon Musk @elonmusk Orbital compute will be the only way to scale AI probably sometime in 2029 due to power availability& permitting problems on land Owen Lewis @is_OwenLewis Aug 14 There's a ton of good stuff in here, but to me this is the part that everyone mainstream is overlooking.",
-        "It's literally the most important part. \"It's ironic that today orbital datacenter compute is considered a niche...because the model suggests it will be a necessary Show more 4:49 PM · Aug 14, 2026 6.1M Views 2.1K 2.5K 17K 1K Jonas Nelle @jonas_nelle Aug 14 People don’t understand how much compute the world will need 26 29 355 32K Owen Lewis @is_OwenLewis…",
+        "It's literally the most important part. \"It's ironic that today orbital datacenter compute is considered a niche...because the model suggests it will be a necessary Show more 4:49 PM · Aug 14, 2026 6.2M Views 2.1K 2.6K 18K 1K Jonas Nelle @jonas_nelle Aug 14 People don’t understand how much compute the world will need 27 28 376 34K Owen Lewis @is_OwenLewis…",
         "Which in turn is going to be what gets us into space.",
-        "Everyone has been wondering for decades (me included) what makes space economic and so gives us that push Show more 21 13 134 24K"
+        "Everyone has been wondering for decades (me included) what makes space economic and so gives us that push Show more 21 12 137 24K"
       ],
       "sections": [
         {
@@ -4421,17 +4473,17 @@
           "title": "公开页面要点",
           "bullets": [
             "Elon Musk @elonmusk Orbital compute will be the only way to scale AI probably sometime in 2029 due to power availability& permitting problems on land Owen Lewis @is_OwenLewis Aug 14 There's a ton of good stuff in here, but to me this is the part that everyone mainstream is overlooking.",
-            "It's literally the most important part. \"It's ironic that today orbital datacenter compute is considered a niche...because the model suggests it will be a necessary Show more 4:49 PM · Aug 14, 2026 6.1M Views 2.1K 2.5K 17K 1K Jonas Nelle @jonas_nelle Aug 14 People don’t understand how much compute the world will need 26 29 355 32K Owen Lewis @is_OwenLewis…",
+            "It's literally the most important part. \"It's ironic that today orbital datacenter compute is considered a niche...because the model suggests it will be a necessary Show more 4:49 PM · Aug 14, 2026 6.2M Views 2.1K 2.6K 18K 1K Jonas Nelle @jonas_nelle Aug 14 People don’t understand how much compute the world will need 27 28 376 34K Owen Lewis @is_OwenLewis…",
             "Which in turn is going to be what gets us into space.",
-            "Everyone has been wondering for decades (me included) what makes space economic and so gives us that push Show more 21 13 134 24K"
+            "Everyone has been wondering for decades (me included) what makes space economic and so gives us that push Show more 21 12 137 24K"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Orbital compute will be the only way to scale AI probably sometime in 2029 due to power availability& permitting problems on land Owen Lewis @is_OwenLewis Aug 14 There's a ton of good stuff in here, but to me this is the part that everyone mainstream is overlooking. It's literally the most important part. \"It's ironic that today orbital datacenter compute is considered a niche...because the model suggests it will be a necessary Show more 4:49 PM · Aug 14, 2026 6.1M Views 2.1K 2.5K 17K 1K",
-            "Jonas Nelle @jonas_nelle Aug 14 People don’t understand how much compute the world will need 26 29 355 32K",
-            "Owen Lewis @is_OwenLewis Aug 14 The real irony is that NIMBYism and (probably) anti-datacenter funding from China is accelerating space based compute. Which in turn is going to be what gets us into space. Everyone has been wondering for decades (me included) what makes space economic and so gives us that push Show more 21 13 134 24K"
+            "Elon Musk @elonmusk Orbital compute will be the only way to scale AI probably sometime in 2029 due to power availability& permitting problems on land Owen Lewis @is_OwenLewis Aug 14 There's a ton of good stuff in here, but to me this is the part that everyone mainstream is overlooking. It's literally the most important part. \"It's ironic that today orbital datacenter compute is considered a niche...because the model suggests it will be a necessary Show more 4:49 PM · Aug 14, 2026 6.2M Views 2.1K 2.6K 18K 1K",
+            "Jonas Nelle @jonas_nelle Aug 14 People don’t understand how much compute the world will need 27 28 376 34K",
+            "Owen Lewis @is_OwenLewis Aug 14 The real irony is that NIMBYism and (probably) anti-datacenter funding from China is accelerating space based compute. Which in turn is going to be what gets us into space. Everyone has been wondering for decades (me included) what makes space economic and so gives us that push Show more 21 12 137 24K"
           ]
         }
       ],
@@ -4473,8 +4525,8 @@
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok 4.6 ranks #1 on CursorBench for real-world coding X Freeze @XFreeze Aug 14 Grok 4.6 just ranked #1 on CursorBench 3.2 Outperforming Claude Fable 5, Opus 5 and GPT-5.6 Sol on real-world coding performance And what makes this even crazier is the efficiency....the chart gives CursorBench performance against average cost per task, and Grok 4.6 is sitting Show more 5:40 AM · Aug 14, 2026 3.7M Views 893 1.7K 9.6K 444",
-            "Dela @delaanthonio Aug 14 So happy to see you lead your benchmark GIF 4 4 75 1.5K"
+            "Elon Musk @elonmusk Grok 4.6 ranks #1 on CursorBench for real-world coding X Freeze @XFreeze Aug 14 Grok 4.6 just ranked #1 on CursorBench 3.2 Outperforming Claude Fable 5, Opus 5 and GPT-5.6 Sol on real-world coding performance And what makes this even crazier is the efficiency....the chart gives CursorBench performance against average cost per task, and Grok 4.6 is sitting Show more 5:40 AM · Aug 14, 2026 3.7M Views 897 1.7K 9.7K 446",
+            "Dela @delaanthonio Aug 14 So happy to see you lead your benchmark GIF 4 4 77 1.5K"
           ]
         }
       ],
@@ -4503,7 +4555,7 @@
         "Elon Musk @elonmusk Try Grok 4.6 image & video understanding, it’s a major upgrade!",
         "Yun-Ta Tsai @yunta_tsai Aug 14 Grok 4.6 multimodal is a step change from Grok 4.5.",
         "It’s one of the under-discussed improvements, and I’ve been very impressed by it.",
-        "My daily work includes reviewing lots of videos and understanding the context; Grok 4.6 improves the productivity of such workloads by at least Show more 4:55 AM · Aug 14, 2026 4.6M Views 641 1.1K 4.9K 230 Ardullo 🏆 @RafelineK Aug 14 Grok is actually a beast."
+        "My daily work includes reviewing lots of videos and understanding the context; Grok 4.6 improves the productivity of such workloads by at least Show more 4:55 AM · Aug 14, 2026 4.6M Views 644 1.1K 4.9K 230 Ardullo 🏆 @RafelineK Aug 14 Grok is actually a beast."
       ],
       "sections": [
         {
@@ -4516,58 +4568,14 @@
             "Elon Musk @elonmusk Try Grok 4.6 image & video understanding, it’s a major upgrade!",
             "Yun-Ta Tsai @yunta_tsai Aug 14 Grok 4.6 multimodal is a step change from Grok 4.5.",
             "It’s one of the under-discussed improvements, and I’ve been very impressed by it.",
-            "My daily work includes reviewing lots of videos and understanding the context; Grok 4.6 improves the productivity of such workloads by at least Show more 4:55 AM · Aug 14, 2026 4.6M Views 641 1.1K 4.9K 230 Ardullo 🏆 @RafelineK Aug 14 Grok is actually a beast."
+            "My daily work includes reviewing lots of videos and understanding the context; Grok 4.6 improves the productivity of such workloads by at least Show more 4:55 AM · Aug 14, 2026 4.6M Views 644 1.1K 4.9K 230 Ardullo 🏆 @RafelineK Aug 14 Grok is actually a beast."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Try Grok 4.6 image & video understanding, it’s a major upgrade! Yun-Ta Tsai @yunta_tsai Aug 14 Grok 4.6 multimodal is a step change from Grok 4.5. It’s one of the under-discussed improvements, and I’ve been very impressed by it. My daily work includes reviewing lots of videos and understanding the context; Grok 4.6 improves the productivity of such workloads by at least Show more 4:55 AM · Aug 14, 2026 4.6M Views 641 1.1K 4.9K 230",
-            "Ardullo 🏆 @RafelineK Aug 14 Grok is actually a beast. Check this video out and turn sound on. This is beautiful. 00:00 Made with AI 3 5 19 534"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "c937149122095f22",
-      "kind": "social",
-      "title": "America’s economic growth due to much faster AI adoption (and robots) might exceed 10X that of Europe",
-      "source": "x.com",
-      "source_url": "https://x.com/elonmusk/status/2088125639643607317",
-      "published_at": "2026-08-14T04:48:42Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "America’s economic growth due to much faster AI adoption (and robots) might exceed 10X that of Europe x.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/elonmusk/status/2088125639643607317",
-      "key_points": [
-        "America’s economic growth due to much faster AI adoption (and robots) might exceed 10X that of Europe x.com"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "America’s economic growth due to much faster AI adoption (and robots) might exceed 10X that of Europe x.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "@eliebakouch America’s economic growth due to much faster AI adoption (and robots) might exceed 10X that of Europe"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "elie @eliebakouch Aug 13 if someone ever asks you how behind europe is in AI you can probably send these two screenshots Arthur Mensch @arthurmensch Aug 13 My cofounder Tim, whom you will not find on X, shares some of the strategic thinking behind our latest updates venturebeat.com/infrastructure… 149 383 5.2K 772K",
-            "Elon Musk @elonmusk America’s economic growth due to much faster AI adoption (and robots) might exceed 10X that of Europe 4:48 AM · Aug 14, 2026 236.9K Views 438 551 8.2K 325",
-            "Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Aug 14 If Europe doesn't embrace free markets and deregulation sooner, they are going to become a backwaters area that is economically impoverished. 3 2 48 1.3K"
+            "Elon Musk @elonmusk Try Grok 4.6 image & video understanding, it’s a major upgrade! Yun-Ta Tsai @yunta_tsai Aug 14 Grok 4.6 multimodal is a step change from Grok 4.5. It’s one of the under-discussed improvements, and I’ve been very impressed by it. My daily work includes reviewing lots of videos and understanding the context; Grok 4.6 improves the productivity of such workloads by at least Show more 4:55 AM · Aug 14, 2026 4.6M Views 644 1.1K 4.9K 230",
+            "Ardullo 🏆 @RafelineK Aug 14 Grok is actually a beast. Check this video out and turn sound on. This is beautiful. 00:00 Made with AI 3 5 19 537"
           ]
         }
       ],
@@ -4595,9 +4603,9 @@
       "key_points": [
         "Elon Musk @elonmusk Grok 4.6 will work best with the Grok Build harness.",
         "The experience will be significantly worse without it, so best to evaluate using Build.",
-        "Grok.com/build Arthur MacWaters @ArthurMacwaters Aug 13 From my use so far, 4.6 seems highly optimized for Grok Build 3:08 AM · Aug 14, 2026 7.7M Views 2.5K 2.1K 12K 1K Arthur MacWaters @ArthurMacwaters Aug 14 It’s remarkably fast and accurate so far 9 7 103 24K Dutchsinse @RealDutchsinse Aug 14 Mr.",
+        "Grok.com/build Arthur MacWaters @ArthurMacwaters Aug 13 From my use so far, 4.6 seems highly optimized for Grok Build 3:08 AM · Aug 14, 2026 7.8M Views 2.6K 2.1K 13K 1K Arthur MacWaters @ArthurMacwaters Aug 14 It’s remarkably fast and accurate so far 10 7 105 24K Dutchsinse @RealDutchsinse Aug 14 Mr.",
         "Musk, people don't tell you thankyou enough !",
-        "For real, legit, this is awesome. 🫡 2 8 87 4K"
+        "For real, legit, this is awesome. 🫡 3 7 87 4.1K"
       ],
       "sections": [
         {
@@ -4609,26 +4617,26 @@
           "bullets": [
             "Elon Musk @elonmusk Grok 4.6 will work best with the Grok Build harness.",
             "The experience will be significantly worse without it, so best to evaluate using Build.",
-            "Grok.com/build Arthur MacWaters @ArthurMacwaters Aug 13 From my use so far, 4.6 seems highly optimized for Grok Build 3:08 AM · Aug 14, 2026 7.7M Views 2.5K 2.1K 12K 1K Arthur MacWaters @ArthurMacwaters Aug 14 It’s remarkably fast and accurate so far 9 7 103 24K Dutchsinse @RealDutchsinse Aug 14 Mr.",
+            "Grok.com/build Arthur MacWaters @ArthurMacwaters Aug 13 From my use so far, 4.6 seems highly optimized for Grok Build 3:08 AM · Aug 14, 2026 7.8M Views 2.6K 2.1K 13K 1K Arthur MacWaters @ArthurMacwaters Aug 14 It’s remarkably fast and accurate so far 10 7 105 24K Dutchsinse @RealDutchsinse Aug 14 Mr.",
             "Musk, people don't tell you thankyou enough !",
-            "For real, legit, this is awesome. 🫡 2 8 87 4K"
+            "For real, legit, this is awesome. 🫡 3 7 87 4.1K"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok 4.6 will work best with the Grok Build harness. The experience will be significantly worse without it, so best to evaluate using Build. Grok.com/build Arthur MacWaters @ArthurMacwaters Aug 13 From my use so far, 4.6 seems highly optimized for Grok Build 3:08 AM · Aug 14, 2026 7.7M Views 2.5K 2.1K 12K 1K",
-            "Arthur MacWaters @ArthurMacwaters Aug 14 It’s remarkably fast and accurate so far 9 7 103 24K",
-            "Dutchsinse @RealDutchsinse Aug 14 Mr. Musk, people don't tell you thankyou enough !!!! THANK YOU for what you have provided!!!!!!!! For real, legit, this is awesome. 🫡 2 8 87 4K"
+            "Elon Musk @elonmusk Grok 4.6 will work best with the Grok Build harness. The experience will be significantly worse without it, so best to evaluate using Build. Grok.com/build Arthur MacWaters @ArthurMacwaters Aug 13 From my use so far, 4.6 seems highly optimized for Grok Build 3:08 AM · Aug 14, 2026 7.8M Views 2.6K 2.1K 13K 1K",
+            "Arthur MacWaters @ArthurMacwaters Aug 14 It’s remarkably fast and accurate so far 10 7 105 24K",
+            "Dutchsinse @RealDutchsinse Aug 14 Mr. Musk, people don't tell you thankyou enough !!!! THANK YOU for what you have provided!!!!!!!! For real, legit, this is awesome. 🫡 3 7 87 4.1K"
           ]
         }
       ],
       "reading_minutes": 1
     },
     {
-      "id": "12790c7b96583e2d",
+      "id": "505a7871a2f62863",
       "kind": "article",
-      "title": "'I have a chip on my shoulder.' Phoebe Gates wants her $185 million AI startup Phia to succeed with 'no ties to my privilege or my last name' | Fortune",
+      "title": "'I have a chip on my shoulder.' Phoebe Gates wants her $185 million AI startup Phia to succeed with 'no ties to my privilege or my last name'",
       "source": "Fortune",
       "source_url": "https://fortune.com/article/phoebe-gates-phia-shopping-app-cookie-stuffing/",
       "published_at": "2026-08-15T13:20:00Z",
@@ -4639,7 +4647,7 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Phoebe Gates wants her $185M AI startup to succeed with 'no ties to my privilege or my last name' Fortune",
+      "summary": "'I have a chip on my shoulder.' Phoebe Gates wants her $185 million AI startup Phia to succeed with 'no ties to my privilege or my last name' Fortune",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://fortune.com/article/phoebe-gates-phia-shopping-app-cookie-stuffing/",
@@ -4651,7 +4659,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "Phoebe Gates wants her $185M AI startup to succeed with 'no ties to my privilege or my last name' Fortune"
+          "body": "'I have a chip on my shoulder.' Phoebe Gates wants her $185 million AI startup Phia to succeed with 'no ties to my privilege or my last name' Fortune"
         },
         {
           "title": "公开页面要点",
@@ -4726,7 +4734,7 @@
     {
       "id": "fdbd08103fa45850",
       "kind": "article",
-      "title": "Okoboji team raises $4.3M for AI startup, Arzana - Storm Lake Times Pilot",
+      "title": "Okoboji team raises $4.3M for AI startup, Arzana",
       "source": "Storm Lake Times Pilot",
       "source_url": "https://www.stormlake.com/stories/okoboji-team-raises-43m-for-ai-startup-arzana,211852",
       "published_at": "2026-08-12T18:39:52Z",
@@ -4737,32 +4745,28 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "William Alexander (Okoboji High School ‘21) and co-founder Marshall Kools recently closed a $4.3 million seed round for their startup, Arzana. Mason Vander Pol (OHS ‘22) joined the team as their …",
+      "summary": "Okoboji team raises $4.3M for AI startup, Arzana Storm Lake Times Pilot",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: 403",
       "resolved_url": "https://www.stormlake.com/stories/okoboji-team-raises-43m-for-ai-startup-arzana,211852",
       "key_points": [
-        "William Alexander (Okoboji High School ‘21) and co-founder Marshall Kools recently closed a $4.3 million seed round for their startup, Arzana.",
-        "Mason Vander Pol (OHS ‘22) joined the team as their … SL family’s $5 million gift accelerates TSC research at Cincinnati Children’s"
+        "Okoboji team raises $4.3M for AI startup, Arzana Storm Lake Times Pilot"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "William Alexander (Okoboji High School ‘21) and co-founder Marshall Kools recently closed a $4.3 million seed round for their startup, Arzana. Mason Vander Pol (OHS ‘22) joined the team as their …"
+          "body": "Okoboji team raises $4.3M for AI startup, Arzana Storm Lake Times Pilot"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "William Alexander (Okoboji High School ‘21) and co-founder Marshall Kools recently closed a $4.3 million seed round for their startup, Arzana.",
-            "Mason Vander Pol (OHS ‘22) joined the team as their … SL family’s $5 million gift accelerates TSC research at Cincinnati Children’s"
+            "Okoboji team raises $4.3M for AI startup, Arzana Storm Lake Times Pilot"
           ]
         },
         {
           "title": "原文短摘录",
-          "paragraphs": [
-            "William Alexander (Okoboji High School ‘21) and co-founder Marshall Kools recently closed a $4.3 million seed round for their startup, Arzana. Mason Vander Pol (OHS ‘22) joined the team as their …",
-            "SL family’s $5 million gift accelerates TSC research at Cincinnati Children’s"
-          ]
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -4777,8 +4781,8 @@
       "authors": [],
       "venue": "",
       "tags": [
-        "Founder Watch",
-        "Embodied AI"
+        "Academic Startup",
+        "Funding"
       ],
       "verification": "媒体或公开网页",
       "summary": "Kevin Carlberg, who led AI research teams at Meta focused on wearable computing, has raised $10.25 million for Noosphere Labs, a stealth startup working on what it calls \"human-centered physical intelligence.\" Trilogy Equity Partners led the round, with major participation from Madrona.",
@@ -4822,7 +4826,7 @@
       "id": "9a6928e2c9c792f4",
       "kind": "article",
       "title": "NATO and an AI startup can now name and track software vulnerabilities",
-      "source": "cyberscoop.com",
+      "source": "CyberScoop",
       "source_url": "https://cyberscoop.com/nato-aisle-enisa-cve-vulnerability-tracking/",
       "published_at": "2026-08-10T19:54:31Z",
       "authors": [],
@@ -4832,7 +4836,7 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "NATO and an AI startup can now name and track software vulnerabilities cyberscoop.com",
+      "summary": "NATO and an AI startup can now name and track software vulnerabilities CyberScoop",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://cyberscoop.com/nato-aisle-enisa-cve-vulnerability-tracking/",
@@ -4845,7 +4849,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "NATO and an AI startup can now name and track software vulnerabilities cyberscoop.com"
+          "body": "NATO and an AI startup can now name and track software vulnerabilities CyberScoop"
         },
         {
           "title": "公开页面要点",
@@ -4871,7 +4875,7 @@
       "id": "5163b3e83af73152",
       "kind": "article",
       "title": "EdX founder Anant Agarwal discusses his new AI grading startup",
-      "source": "bizjournals.com",
+      "source": "The Business Journals",
       "source_url": "https://www.bizjournals.com/boston/news/2026/08/05/edx-founder-ceo-startup-acquisition.html",
       "published_at": "2026-08-05T20:44:00Z",
       "authors": [],
@@ -4881,23 +4885,23 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "EdX founder Anant Agarwal discusses his new AI grading startup bizjournals.com",
+      "summary": "EdX founder Anant Agarwal discusses his new AI grading startup The Business Journals",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "summary-only",
       "fetch_note": "HTTP Error 403: Forbidden",
       "resolved_url": "https://www.bizjournals.com/boston/news/2026/08/05/edx-founder-ceo-startup-acquisition.html",
       "key_points": [
-        "EdX founder Anant Agarwal discusses his new AI grading startup bizjournals.com"
+        "EdX founder Anant Agarwal discusses his new AI grading startup The Business Journals"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "EdX founder Anant Agarwal discusses his new AI grading startup bizjournals.com"
+          "body": "EdX founder Anant Agarwal discusses his new AI grading startup The Business Journals"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "EdX founder Anant Agarwal discusses his new AI grading startup bizjournals.com"
+            "EdX founder Anant Agarwal discusses his new AI grading startup The Business Journals"
           ]
         },
         {
@@ -5148,7 +5152,7 @@
       "id": "44de6388fd860837",
       "kind": "article",
       "title": "AI’s Early Winners Are Shopping For Their Next Big Moves",
-      "source": "forbes.com",
+      "source": "Forbes",
       "source_url": "https://www.forbes.com/sites/the-prompt/2026/07/28/ais-early-winners-are-shopping-for-their-next-big-moves/",
       "published_at": "2026-07-28T07:00:00Z",
       "authors": [],
@@ -5158,7 +5162,7 @@
         "Embodied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "AI’s Early Winners Are Shopping For Their Next Big Moves forbes.com",
+      "summary": "AI’s Early Winners Are Shopping For Their Next Big Moves Forbes",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.forbes.com/sites/the-prompt/2026/07/28/ais-early-winners-are-shopping-for-their-next-big-moves/",
@@ -5172,7 +5176,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "AI’s Early Winners Are Shopping For Their Next Big Moves forbes.com"
+          "body": "AI’s Early Winners Are Shopping For Their Next Big Moves Forbes"
         },
         {
           "title": "公开页面要点",
@@ -5471,7 +5475,7 @@
       "id": "a8579da8244a2a56",
       "kind": "article",
       "title": "The Different Philosophies Driving AI Regulation Today",
-      "source": "knowledge.wharton.upenn.edu",
+      "source": "Knowledge at Wharton",
       "source_url": "https://knowledge.wharton.upenn.edu/article/the-different-philosophies-driving-ai-regulation-today/",
       "published_at": "2026-08-11T17:47:52Z",
       "authors": [],
@@ -5481,7 +5485,7 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "The Different Philosophies Driving AI Regulation Today knowledge.wharton.upenn.edu",
+      "summary": "The Different Philosophies Driving AI Regulation Today Knowledge at Wharton",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://knowledge.wharton.upenn.edu/article/the-different-philosophies-driving-ai-regulation-today/",
@@ -5495,7 +5499,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "The Different Philosophies Driving AI Regulation Today knowledge.wharton.upenn.edu"
+          "body": "The Different Philosophies Driving AI Regulation Today Knowledge at Wharton"
         },
         {
           "title": "公开页面要点",
@@ -5760,7 +5764,7 @@
       "id": "b92be6f02d8d8145",
       "kind": "article",
       "title": "EU AI Act — Commission Confirms Transparency Code of Practice as Adequate and Publishes Final Version of Its Guidelines on Transparency Obligations | Faegre Drinker Biddle & Reath…",
-      "source": "Faegre Drinker",
+      "source": "Faegre Drinker Biddle & Reath LLP",
       "source_url": "https://www.faegredrinker.com/en/insights/publications/2026/7/eu-ai-act-commission-confirms-transparency-code-of-practice-as-adequate-and-publishes-final-version-of-its-guidelines-on-transparency-obligations",
       "published_at": "2026-07-30T20:57:30Z",
       "authors": [],
@@ -5770,7 +5774,7 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "EU AI Act — Commission Confirms Transparency Code of Practice as Adequate and Publishes Final Version of Its Guidelines on Transparency Obligations Faegre Drinker",
+      "summary": "EU AI Act — Commission Confirms Transparency Code of Practice as Adequate and Publishes Final Version of Its Guidelines on Transparency Obligations Faegre Drinker Biddle & Reath LLP",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.faegredrinker.com/en/insights/publications/2026/7/eu-ai-act-commission-confirms-transparency-code-of-practice-as-adequate-and-publishes-final-version-of-its-guidelines-on-transparency-obligations",
@@ -5783,7 +5787,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "EU AI Act — Commission Confirms Transparency Code of Practice as Adequate and Publishes Final Version of Its Guidelines on Transparency Obligations Faegre Drinker"
+          "body": "EU AI Act — Commission Confirms Transparency Code of Practice as Adequate and Publishes Final Version of Its Guidelines on Transparency Obligations Faegre Drinker Biddle & Reath LLP"
         },
         {
           "title": "公开页面要点",
