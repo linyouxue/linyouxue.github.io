@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-20T07:04:32Z",
+  "generated_at": "2026-08-20T13:09:19Z",
   "item_count": 132,
   "category_counts": {
     "research": 20,
@@ -19,7 +19,7 @@
     "paragraphs": [
       "研究侧共收录 20 条信号，重点包括 《BACE: LLM-based Code Generation through Bayesian Anchored…》、《Reward Hacking Benchmark: Measuring Exploits in LLM Agents…》。与只看榜单相比，更值得持续观察的是论文能否把 Agent 的可靠性、评测完整性与推理成本一起向前推进。",
       "AI 跨领域贡献收录 16 条，代表性事件包括 《Claude Fable 5 协助找到雅可比猜想的显式三维反例》、《How Claude is accelerating protein design and…》。这类结果会区分官方论文、可核验反例、媒体报道与尚待同行评审的社交平台首发，避免把‘可计算验证’和‘完成学术确认’混为一谈。",
-      "中国 AI 板块本期收录 16 条动态，已覆盖 Kimi / 月之暗面、Qwen / 通义千问、智谱 / Z.ai、DeepSeek。代表性变化包括 《借着 DeepSeek Harness 发布 后的争议聊聊“harness”与“产品”之间的关系》、《DeepSeek Harness 重磅 发布 加入多模态能力》；竞争正在从单次模型发布延伸到开源策略、Agent 产品入口、国产算力适配和价格体系。",
+      "中国 AI 板块本期收录 16 条动态，已覆盖 Kimi / 月之暗面、Qwen / 通义千问、智谱 / Z.ai、DeepSeek。代表性变化包括 《DeepSeek Harness 发布 v0.1.0-rc.8,多模态输入与子代理支持同步更新》、《发布 仅7天, DeepSeek Harness 接入多模态,工作流与子智能体协同再升级》；竞争正在从单次模型发布延伸到开源策略、Agent 产品入口、国产算力适配和价格体系。",
       "产业侧共有 30 条前沿实验室与大厂动态、14 条关键人物公开信号，另有 14 条创业和 10 条政策安全更新。模型能力、算力供给、创始人判断、产品分发与合规成本正在变成同一个竞争问题。"
     ],
     "takeaways": [
@@ -45,11 +45,11 @@
       "字节豆包 / Seed": 0
     },
     "people_watch_coverage": {
-      "Elon Musk / xAI": 5,
+      "Elon Musk / xAI": 4,
       "Sam Altman / OpenAI": 1,
       "Dario Amodei / Anthropic": 1,
-      "Demis Hassabis / DeepMind": 1,
-      "Yann LeCun / AMI": 1,
+      "Demis Hassabis / DeepMind": 2,
+      "Yann LeCun / AMI": 0,
       "何恺明 / MIT·DeepMind": 1,
       "姚顺雨 / Agents": 1,
       "Ilya Sutskever / SSI": 2,
@@ -74,9 +74,9 @@
       "note": ""
     },
     {
-      "name": "Hugging Face",
+      "name": "NVIDIA AI",
       "status": "ok",
-      "count": 7,
+      "count": 6,
       "note": ""
     },
     {
@@ -86,15 +86,15 @@
       "note": ""
     },
     {
-      "name": "Google DeepMind",
+      "name": "Hugging Face",
       "status": "ok",
-      "count": 8,
+      "count": 7,
       "note": ""
     },
     {
-      "name": "NVIDIA AI",
+      "name": "Google DeepMind",
       "status": "ok",
-      "count": 6,
+      "count": 8,
       "note": ""
     },
     {
@@ -122,13 +122,13 @@
       "note": ""
     },
     {
-      "name": "AI for Mathematics & Science",
+      "name": "AI for Biology, Medicine & Materials",
       "status": "ok",
       "count": 12,
       "note": ""
     },
     {
-      "name": "AI for Biology, Medicine & Materials",
+      "name": "AI for Mathematics & Science",
       "status": "ok",
       "count": 12,
       "note": ""
@@ -152,18 +152,6 @@
       "note": ""
     },
     {
-      "name": "Anthropic",
-      "status": "ok",
-      "count": 8,
-      "note": ""
-    },
-    {
-      "name": "China AI · Tencent & ByteDance",
-      "status": "ok",
-      "count": 10,
-      "note": ""
-    },
-    {
       "name": "China AI · Kimi & Qwen",
       "status": "ok",
       "count": 10,
@@ -176,13 +164,25 @@
       "note": ""
     },
     {
-      "name": "China AI · DeepSeek & Zhipu",
+      "name": "China AI · Tencent & ByteDance",
       "status": "ok",
       "count": 10,
       "note": ""
     },
     {
+      "name": "Anthropic",
+      "status": "ok",
+      "count": 8,
+      "note": ""
+    },
+    {
       "name": "Frontier Leaders on X",
+      "status": "ok",
+      "count": 10,
+      "note": ""
+    },
+    {
+      "name": "China AI · DeepSeek & Zhipu",
       "status": "ok",
       "count": 10,
       "note": ""
@@ -528,24 +528,6 @@
       "reader_status": "summary-only"
     },
     {
-      "id": "d343977d0a5f3b97",
-      "category": "frontier",
-      "title": "How NVIDIA scales expertise with ChatGPT Work",
-      "summary": "NVIDIA teams use ChatGPT Work to reduce manual tasks, connect fast-moving signals, and scale successful workflows globally.",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/nvidia/chatgpt-work",
-      "published_at": "2026-08-18T00:00:00Z",
-      "tags": [
-        "OpenAI",
-        "Official"
-      ],
-      "importance": 100,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=d343977d0a5f3b97",
-      "reader_status": "summary-only"
-    },
-    {
       "id": "8303b6755e541fe0",
       "category": "impact",
       "title": "Accelerating the frontiers of scientific discovery: Google’s $40M commitment to the Genesis Mission",
@@ -587,6 +569,24 @@
       "reader_url": "./reader.html?id=rhb-icml-2026",
       "reader_status": "open-pdf-cached",
       "cached_pdf": "./papers/rhb-icml-2026.pdf"
+    },
+    {
+      "id": "d343977d0a5f3b97",
+      "category": "frontier",
+      "title": "How NVIDIA scales expertise with ChatGPT Work",
+      "summary": "NVIDIA teams use ChatGPT Work to reduce manual tasks, connect fast-moving signals, and scale successful workflows globally.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/nvidia/chatgpt-work",
+      "published_at": "2026-08-18T00:00:00Z",
+      "tags": [
+        "OpenAI",
+        "Official"
+      ],
+      "importance": 99,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=d343977d0a5f3b97",
+      "reader_status": "summary-only"
     },
     {
       "id": "6fb98afda19810da",
@@ -753,6 +753,26 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "87a7ca835732b12c",
+      "category": "impact",
+      "title": "Discovered Materials is playing AI whack-a-mole to hunt cooler chips | TechCrunch",
+      "summary": "Discovered Materials is playing AI whack-a-mole to hunt cooler chips TechCrunch",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/10/discovered-materials-is-playing-ai-whack-a-mole-to-hunt-cooler-chips/",
+      "published_at": "2026-08-10T07:00:00Z",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "importance": 94,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=87a7ca835732b12c",
+      "index_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNM2VDMDMyWE56Z3JTcEZzTTFndmhMR1A0Zl8yNXVocEt3OWt5eVZSTTFtR09hNE40QV9FeTA5bXBOTEpFVGd4X2tKaDN1VHdYb1ZUcHU3Q0dkaGxkQm5PU1ZOeE9LLWVaYWRuSndUMUpFcmM1cGpTMmlEZE1FU0Rnc3ZLOUd4d2xTeWFxT2N1UmZsY3RiNm8wLVRJb1cybUtxSmlJMjFR?oc=5",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "0c5420bfeb754341",
       "category": "impact",
       "title": "These 10 'AI-proof' jobs require ‘uniquely human’ skills, says report—you have to 'react in real time'",
@@ -771,6 +791,46 @@
       "reader_url": "./reader.html?id=0c5420bfeb754341",
       "index_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPNHZ1eEFDVDdDT2FhaERnVnkybTZkNC15M0d2d2RVbDA0eEsweTdySzhXOVlPb2VBOUdiYVo4ZVdwSDRLelZHNmVjMU1XdklKTy1oZGhVWFB5b0p5aHVXVmxGTklMSVNPWmJpZjNZYUR3S0VaX0dRR2JDYjltdEE2VDlWcXlnTFdXcEk1QUZmTjNmRGdSVTNsbdIBngFBVV95cUxPaEFTazRZYlBHVG5ENmlVOVYzalJCcGZWblF0Qnh5WnQzNTlOelJZVXR5dkg2Ul9WSkVSRlQ1MUUwVklzUkJ0ekdSM3V5TlJTcjdyWmFRUGVWYzZqM2ljWWN4UHRGcV9DVmNSN3N0aE94VTBObXhheGxxWG8wRDZkdjRyc2lpY3F0ekJfSGxRSXprYlUwOWVFWG5WWmtBZw?oc=5",
       "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "a2b24b8a9eba03cc",
+      "category": "china",
+      "title": "DeepSeek Harness 发布 v0.1.0-rc.8,多模态输入与子代理支持同步更新",
+      "summary": "DeepSeek 模型已经具备视觉能力.官方文档说明,在视觉端点 发布 前,默认目录不会列出视觉模型.使用者仍需接入实际支持图片输...",
+      "source": "微信公众号 · AI搜图",
+      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HJn8hmqjZlZ8M1hXNChkCCfYDFyN7G890pTKYKvc&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1787231365%26ver%3D6916%26signature%3DWR3gOOl-ekEIMpoeL-AxjhS9lfX5s0PreYdsy73L8aPAXlf2adF3GAfod64zF%2A8N-SyeLi0ib%2ANXSl6EFew-3vlna2h%2AbCsSwBPKWPfvxLmWqz1eSO-aBWUHi5hU13OY%26new%3D1",
+      "published_at": "2026-08-20T10:02:02Z",
+      "tags": [
+        "微信公众号",
+        "DeepSeek",
+        "模型"
+      ],
+      "importance": 93,
+      "content_kind": "article",
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "reader_url": "./reader.html?id=a2b24b8a9eba03cc",
+      "index_url": "https://weixin.sogou.com/weixin?type=2&query=DeepSeek+%E5%8F%91%E5%B8%83",
+      "reader_status": "indexed-summary"
+    },
+    {
+      "id": "64bc4dda7e9c982f",
+      "category": "china",
+      "title": "发布 仅7天, DeepSeek Harness 接入多模态,工作流与子智能体协同再升级",
+      "summary": "发布 仅一周时间, DeepSeek Harness 迎来了新一轮的版本迭代.本次更新的核心亮点集中在多模态架构的引入,其模型适配器现已支...",
+      "source": "微信公众号 · 华弘数科",
+      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HJn8hmqjnpQ8x6PWyUCHfTManDtkAc9VtJgEan9s&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1787231365%26ver%3D6916%26signature%3DO5tEMq1UagxhyTUHxIZxUiyssTpIiW5Zhz5l7O7D4H7wcVRpnb7-SPRYe8J85UuyRRsNvaqGsKd1m8j3niMdLhP9r-3ti-XxVefFfoH3c5EJiQ0ZEJbc7yQoehXN7Irr%26new%3D1",
+      "published_at": "2026-08-20T10:00:58Z",
+      "tags": [
+        "微信公众号",
+        "DeepSeek",
+        "模型"
+      ],
+      "importance": 93,
+      "content_kind": "article",
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "reader_url": "./reader.html?id=64bc4dda7e9c982f",
+      "index_url": "https://weixin.sogou.com/weixin?type=2&query=DeepSeek+%E5%8F%91%E5%B8%83",
+      "reader_status": "indexed-summary"
     },
     {
       "id": "e34b852cf0110eec",
@@ -1067,46 +1127,6 @@
       "content_kind": "article",
       "verification": "搜狗微信公开索引摘要 · 点击原文核对",
       "reader_url": "./reader.html?id=b19f05b9aecff239",
-      "index_url": "https://weixin.sogou.com/weixin?type=2&query=DeepSeek+%E5%8F%91%E5%B8%83",
-      "reader_status": "indexed-summary"
-    },
-    {
-      "id": "09cad85c339cfb0c",
-      "category": "china",
-      "title": "DeepSeek 模型价格同步调整公告",
-      "summary": "重要公告关于 DeepSeek 价格调整的公告Agent 模式 DeepSeek V4 Flash 闲时不涨价 · 闲时打折同步上线随着 DeepSeek 价格调整...",
-      "source": "微信公众号 · 无思微程序",
-      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HI4DhGqjGIrQfupcrDxvdUDb7i0JsnWe-Et5G4C7&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1787036542%26ver%3D6911%26signature%3DZ57y8imTZgqQW09SD4eui6UEfzOu1ezEp3iKR9N1RatzkINR1Wz0Tld-f9Tp8Sh7CxtrHHNbkKIMQsLiRe0Hcb0K-VsMqiSjPo4OxlkSX1-rwCg4eaOh-uS2Fkd-jk1b%26new%3D1",
-      "published_at": "2026-08-17T08:04:14Z",
-      "tags": [
-        "微信公众号",
-        "DeepSeek",
-        "模型"
-      ],
-      "importance": 93,
-      "content_kind": "article",
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "reader_url": "./reader.html?id=09cad85c339cfb0c",
-      "index_url": "https://weixin.sogou.com/weixin?type=2&query=DeepSeek+%E5%8F%91%E5%B8%83",
-      "reader_status": "indexed-summary"
-    },
-    {
-      "id": "0070517ddbb2e920",
-      "category": "china",
-      "title": "Deepseek 放大招,推出了 Deepseek harness",
-      "summary": "前言2026年8月13日, DeepSeek 正式 发布 了其首款Agent产品—— DeepSeek Harness(简称DSH或dsh) 的开发者预览版,并同步以 ...",
-      "source": "微信公众号 · 云在前端",
-      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HDu6g2qjb10MX_wDcIeRLeFSI2YE4mH4ZNH2ymzI&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1787017748%26ver%3D6911%26signature%3DZ4fAqne8RRq4LmkZPziekQNK7Z5fdQqkIEOtHhNj%2AH-sxGCoIGv%2AKXXqqOOgzNM%2AUt1kH7w%2A-O%2AN-YdkaFiS9y8r7mBrF%2A7ZPXdZ%2AGm9rEF-nl6za1nUH1YAVvAeFut3%26new%3D1",
-      "published_at": "2026-08-17T05:44:12Z",
-      "tags": [
-        "微信公众号",
-        "DeepSeek",
-        "模型"
-      ],
-      "importance": 93,
-      "content_kind": "article",
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "reader_url": "./reader.html?id=0070517ddbb2e920",
       "index_url": "https://weixin.sogou.com/weixin?type=2&query=DeepSeek+%E5%8F%91%E5%B8%83",
       "reader_status": "indexed-summary"
     },
@@ -1588,8 +1608,8 @@
       "id": "8a2f9bd2b8299d48",
       "category": "impact",
       "title": "This may be the first academic profession to see its work taken over by AI",
-      "summary": "This may be the first academic profession to see its work taken over by AI washingtonpost.com",
-      "source": "washingtonpost.com",
+      "summary": "This may be the first academic profession to see its work taken over by AI The Washington Post",
+      "source": "The Washington Post",
       "url": "https://www.washingtonpost.com/technology/2026/08/19/mathematicians-ask-whats-left-humans-when-ai-can-do-math-research/",
       "published_at": "2026-08-19T16:00:00Z",
       "tags": [
@@ -1643,6 +1663,26 @@
       "reader_status": "summary-only"
     },
     {
+      "id": "36dca138f44049a4",
+      "category": "impact",
+      "title": "Meet AIDO Cell, Nobel Laureate's latest attempt to improve drug discovery with AI",
+      "summary": "Meet AIDO Cell, Nobel Laureate's latest attempt to improve drug discovery with AI FirstWord Pharma",
+      "source": "FirstWord Pharma",
+      "url": "https://firstwordpharma.com/story/7858366",
+      "published_at": "2026-08-18T20:20:45Z",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "importance": 88,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=36dca138f44049a4",
+      "index_url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE4wUE5mbldPUHJLSjRCdDZXQ0xXamNxQmhETVZQQzFlQlcyLWJ5VGk4YmxBM20wVGs1Rjl2TFFhQnJBTzhzd0czem5sODlZLUJlaGww?oc=5",
+      "reader_status": "summary-only"
+    },
+    {
       "id": "c19de2972545b27c",
       "category": "opensource",
       "title": "How Much Memory Does Your Agent Actually Need?",
@@ -1658,42 +1698,6 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=c19de2972545b27c",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "81b181d6743de6ff",
-      "category": "opensource",
-      "title": "Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers",
-      "summary": "We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
-      "source": "Hugging Face",
-      "url": "https://huggingface.co/blog/multi-vector-encoder",
-      "published_at": "2026-08-18T00:00:00Z",
-      "tags": [
-        "Hugging Face",
-        "Open Source"
-      ],
-      "importance": 88,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=81b181d6743de6ff",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "57c5fefdf2e2663f",
-      "category": "opensource",
-      "title": "Same Cluster, 33 Points More Utilization: What Changed Was the Order",
-      "summary": "A Blog post by Dharma-AI on Hugging Face",
-      "source": "Hugging Face",
-      "url": "https://huggingface.co/blog/Dharma-AI/gpu-management-pt2",
-      "published_at": "2026-08-17T19:46:21Z",
-      "tags": [
-        "Hugging Face",
-        "Open Source"
-      ],
-      "importance": 88,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=57c5fefdf2e2663f",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2057,6 +2061,42 @@
       "reader_status": "summary-only"
     },
     {
+      "id": "81b181d6743de6ff",
+      "category": "opensource",
+      "title": "Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers",
+      "summary": "We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/blog/multi-vector-encoder",
+      "published_at": "2026-08-18T00:00:00Z",
+      "tags": [
+        "Hugging Face",
+        "Open Source"
+      ],
+      "importance": 87,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=81b181d6743de6ff",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "57c5fefdf2e2663f",
+      "category": "opensource",
+      "title": "Same Cluster, 33 Points More Utilization: What Changed Was the Order",
+      "summary": "A Blog post by Dharma-AI on Hugging Face",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/blog/Dharma-AI/gpu-management-pt2",
+      "published_at": "2026-08-17T19:46:21Z",
+      "tags": [
+        "Hugging Face",
+        "Open Source"
+      ],
+      "importance": 87,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=57c5fefdf2e2663f",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "764ec6ef3b1a55d1",
       "category": "impact",
       "title": "Pharma Races to Scale AI as Billions Flow into Drug Discovery",
@@ -2074,26 +2114,6 @@
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=764ec6ef3b1a55d1",
       "index_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOMTZSaVJGVklKc3FlOHRWTEthLW9CT1Vfa0p1MVJJeGVHZzB4ZjM0ZWFQamdyVzQxN2pLWE1OVTFjR3FrQXNOb1JRSUFfdE9CU05Ia21YU2ZIUnhWdHBpcEwxNGowS1VJM2NmUUhqT0c2bnFfNDhZd1lCZEtybDVTY3VUY2ttSGw2ajNWSG9GcGhHeFdzbGxOalJSdnFHcDVZWTJrb3lvbVNWRnBmZXk1UVRrLUpzcGR2YzYtR2pyQQ?oc=5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "4f46def622f83f27",
-      "category": "impact",
-      "title": "Novo Nordisk, AWS partner on AI drug discovery",
-      "summary": "Novo Nordisk, AWS partner on AI drug discovery NJBIZ",
-      "source": "NJBIZ",
-      "url": "https://njbiz.com/novo-nordisk-aws-ai-drug-discovery/",
-      "published_at": "2026-08-14T10:53:06Z",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "importance": 87,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=4f46def622f83f27",
-      "index_url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8xZElrTFRyYXZVMjJZZzN0MXBPVnZlYlRhWF9wSHhjYVRTMXZiOHdFMS11cm1ncXZJTi1fVnc2dVRsX1I3Q09rcy1lY3U2XzJxeUJTclZRMGFYc0I0NmUyd3RGcw?oc=5",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2133,26 +2153,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "62370045db6bed55",
-      "category": "impact",
-      "title": "Job Seekers Are Racing to AI-Proof Their Résumés",
-      "summary": "Job Seekers Are Racing to AI-Proof Their Résumés WSJ",
-      "source": "WSJ",
-      "url": "https://www.wsj.com/tech/ai/job-seekers-are-racing-to-ai-proof-their-resumes-f310f43c",
-      "published_at": "2026-08-13T12:36:00Z",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "importance": 87,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=62370045db6bed55",
-      "index_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNRlFncnhWM3RVaXQ3V3NESl96T1N4cG8tYU5tZzZpbUtwbnBBNUdhbl9keDVQTnphMExQLVB4MTREQW9VU1FhSE9FVk1VcnJYVnJ1UmRTaEZoZlVUdVNHM2hiaHc2bUhzMHo4aHVSWFlpT1RSQjhGcHVEYzFCbjJ3M2NpaF83TVVoc0VJYUdB?oc=5",
-      "reader_status": "summary-only"
-    },
-    {
       "id": "df0c3d1d4d7f74b2",
       "category": "opensource",
       "title": "What We Learned by Reproducing 2,200 papers from ICML",
@@ -2164,17 +2164,17 @@
         "Hugging Face",
         "Open Source"
       ],
-      "importance": 87,
+      "importance": 86,
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=df0c3d1d4d7f74b2",
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "b304c8adc4ea2eb7",
+      "id": "236b353456f7fbfd",
       "category": "voices",
-      "title": "Google Shakes Up A.I. Leadership",
-      "summary": "Google Shakes Up A.I. Leadership The New York Times",
+      "title": "Google Names Demis Hassabis to New AI Role in a Leadership Shake-up",
+      "summary": "Google Names Demis Hassabis to New AI Role in a Leadership Shake-up The New York Times",
       "source": "The New York Times",
       "url": "https://www.nytimes.com/2026/08/05/technology/google-ai-leadership.html",
       "published_at": "2026-08-05T07:00:00Z",
@@ -2186,28 +2186,8 @@
       "importance": 85,
       "content_kind": "article",
       "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=b304c8adc4ea2eb7",
+      "reader_url": "./reader.html?id=236b353456f7fbfd",
       "index_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5yZ3NxNDlkcDE4bHFmbURXcXV2d3pLTE5OLU1yTXlzSnNNeEU0cTBycjV5Y1h6dk1hTXJocS1PcUZ2NUZJSE52MHR0amI3OXBpVXhka2dRRW9HVFlFdUozMEFMeTUyanNJY3BZTU92UjNjWjZjakdSWk4tQQ?oc=5",
-      "reader_status": "summary-only"
-    },
-    {
-      "id": "20ddf793eb6f5767",
-      "category": "voices",
-      "title": "Yann LeCun Joins New AI Investing Firm 224 Ventures",
-      "summary": "Yann LeCun Joins New AI Investing Firm 224 Ventures Bloomberg.com",
-      "source": "Bloomberg.com",
-      "url": "https://www.bloomberg.com/news/articles/2026-08-05/yann-lecun-joins-new-ai-investing-firm-224-ventures",
-      "published_at": "2026-08-05T07:00:00Z",
-      "tags": [
-        "Researcher Watch",
-        "Foundation Models",
-        "Leadership"
-      ],
-      "importance": 85,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=20ddf793eb6f5767",
-      "index_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNWmY2a3U0YkQyXzg1NnNLYm1sQkIzWkxDYUVrdmQwRmtJYjlFaFYxX0FtTnVmRzBUUFVDVVJ5RjlKaXljb0oxTEJkTnV6OTdBMi14MjRObE1CNlkyOFdrWkJzTzFOb0tpYktIYWp5dk5tR0hIMFNtYU85Z240VWZPcnlzMDV1VnJtazA4SkRTdEwyQV9keG50cm1Qc2h2X3hFZUVZeA?oc=5",
       "reader_status": "summary-only"
     },
     {
@@ -2326,6 +2306,46 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "86c4ef2e9fbdf07c",
+      "category": "voices",
+      "title": "Fei-Fei Li Says She Runs Her AI Startup Like a 'Tiger Mom'",
+      "summary": "Fei-Fei Li Says She Runs Her AI Startup Like a 'Tiger Mom' Business Insider",
+      "source": "Business Insider",
+      "url": "https://www.businessinsider.com/godmother-of-ai-feifei-li-world-labs-tiger-mom-2026-8",
+      "published_at": "2026-08-20T05:00:08Z",
+      "tags": [
+        "Researcher Watch",
+        "Vision",
+        "World Models"
+      ],
+      "importance": 80,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=86c4ef2e9fbdf07c",
+      "index_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPa0N3aHlwelFJNVBvZmZZRmlhaG1aYXVTLWx3dnhiU0ZMZUYtWEVaNjJ6S2JobnRpdDRvZGNWS2daS0VWOWk0UWV2MWV4a0FNZlZHMGtibGg3eE5SeXA5Nm9kSG5VSjdfU3Ewbk9hUnRvZDJtaGF6X2llTkYwM0VUSldEVXJHZkV6Mkk0UUpn?oc=5",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "7e68a5ce0bb4f151",
+      "category": "voices",
+      "title": "Elon Musk (@elonmusk) on X",
+      "summary": "Grok upgrades",
+      "source": "x.com",
+      "url": "https://x.com/elonmusk/status/2090288581466304765",
+      "published_at": "2026-08-20T04:03:28Z",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "importance": 80,
+      "content_kind": "social",
+      "verification": "公开平台索引，需查看原帖",
+      "reader_url": "./reader.html?id=7e68a5ce0bb4f151",
+      "index_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9obWQ1bGhYbnhyNDNpMkltTmhoNTRvMXM2TEdFZW91NTl0aDkyUUhhdkwyOFRienY3R1RKWFVtWTlRQ1pHQ1V0SWFWajVNdWFhSFNLSDNQTS1ZVElNU3c?oc=5",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "251e95e6abef64b4",
       "category": "voices",
       "title": "Grok Build puts you in charge of your computer",
@@ -2346,13 +2366,13 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "2b1635378ce63b20",
+      "id": "0e1671a69953b1e8",
       "category": "voices",
-      "title": "Elon Musk (@elonmusk) on X",
-      "summary": "Grok Voice",
+      "title": "China is also by far the strongest competitor in AI",
+      "summary": "China is also by far the strongest competitor in AI x.com",
       "source": "x.com",
-      "url": "https://x.com/elonmusk/status/2090132472210358351",
-      "published_at": "2026-08-19T17:43:08Z",
+      "url": "https://x.com/elonmusk/status/2090138693176881338",
+      "published_at": "2026-08-19T18:07:52Z",
       "tags": [
         "X",
         "Founder Watch",
@@ -2361,66 +2381,8 @@
       "importance": 80,
       "content_kind": "social",
       "verification": "公开平台索引，需查看原帖",
-      "reader_url": "./reader.html?id=2b1635378ce63b20",
-      "index_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1nY1kwTGZrVVptUTNyeWJEbVE2UTE4RGQwZS05TnprTVZweUhKY1ExY2FCY0xMbE5SUGwzRjBvcnN4ZFc3dHRCOUt5S1pmcktKLWhKYTFwWjFDVjJNN1E?oc=5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "a9d6da51a337b2de",
-      "category": "voices",
-      "title": "Try Grok Build for serious work",
-      "summary": "Try Grok Build for serious work x.com",
-      "source": "x.com",
-      "url": "https://x.com/elonmusk/status/2090113937127969180",
-      "published_at": "2026-08-19T16:29:29Z",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "importance": 80,
-      "content_kind": "social",
-      "verification": "公开平台索引，需查看原帖",
-      "reader_url": "./reader.html?id=a9d6da51a337b2de",
-      "index_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBDbGstMFFFbGNETXFhNUlxTGRjekRSNS1oT09SODJsR0FiZXZUTkptaWE2YVBTblZVa2JWNkpGdHhUVHdmdzNmSE1TUnphdThhRGZjS0Z1aHNKZ0JwaUE?oc=5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "86c4ef2e9fbdf07c",
-      "category": "startups",
-      "title": "Fei-Fei Li Says She Runs Her AI Startup Like a 'Tiger Mom'",
-      "summary": "Fei-Fei Li Says She Runs Her AI Startup Like a 'Tiger Mom' Business Insider",
-      "source": "Business Insider",
-      "url": "https://www.businessinsider.com/godmother-of-ai-feifei-li-world-labs-tiger-mom-2026-8",
-      "published_at": "2026-08-20T04:58:00Z",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "importance": 79,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=86c4ef2e9fbdf07c",
-      "index_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPa0N3aHlwelFJNVBvZmZZRmlhaG1aYXVTLWx3dnhiU0ZMZUYtWEVaNjJ6S2JobnRpdDRvZGNWS2daS0VWOWk0UWV2MWV4a0FNZlZHMGtibGg3eE5SeXA5Nm9kSG5VSjdfU3Ewbk9hUnRvZDJtaGF6X2llTkYwM0VUSldEVXJHZkV6Mkk0UUpn?oc=5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "eef9ede724531566",
-      "category": "startups",
-      "title": "2 UC Berkeley students create landscaping business within Berkeley tech bubble",
-      "summary": "Across UC Berkeley — the No. 1 school for startups and founders — tech and business enthusiasts ponder new AI startups and business ventures. But from the same campus, students",
-      "source": "Daily Cal",
-      "url": "https://www.dailycal.org/news/campus/student-life/2-uc-berkeley-students-create-landscaping-business-within-berkeley-tech-bubble/article_e9b3a638-6b52-4487-a37b-09bb4a386ba7.html",
-      "published_at": "2026-08-19T12:45:00Z",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "importance": 79,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=eef9ede724531566",
-      "index_url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxORzJTNGZFOWM2Zm1tbFVySXJ1VEhFc1dFT1FBVGJ0enFpWnozeGRSVVJJU05hOE5Wekk1VjVXTkJNMHNqZUgyYTJjdDdPdkhqMkVQdlpWcVppMEZsZ1hjX3dZV2ZBTW9DcFlJUk9UUmQ1UjdldW1jalN5TmU2U1JfRlJzWEdPMnhWTHZpLUlab0g4dzJ2ZDJ5NU9BbHZzNGJscEhtcU1GVnFCemFvaHFPaEotX2FlRUZFR2dGcWx3dFd2bUNYWERheVdWc040a2hHTTZSTTBQbWRwZWZWaENRRUxucTdKMkRkOFk4T0VUMmR6T3JvamhJV0xwVkRnVUhxTFR0bTlxSjAxQQ?oc=5",
+      "reader_url": "./reader.html?id=0e1671a69953b1e8",
+      "index_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9JdzgtcldMUHdzVDFBV1A2NU5uaHFjNkFfYVlNaUpqUEUxRExEcFM4TWZCZk9IVUEyRFFvUGRFV1lVaDQ4TXdjUExWLWdoN1g5WjFmbmNyNi1LdHp3aHc?oc=5",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2446,8 +2408,8 @@
       "id": "505a7871a2f62863",
       "category": "startups",
       "title": "'I have a chip on my shoulder.' Phoebe Gates wants her $185 million AI startup Phia to succeed with 'no ties to my privilege or my last name'",
-      "summary": "'I have a chip on my shoulder.' Phoebe Gates wants her $185 million AI startup Phia to succeed with 'no ties to my privilege or my last name' fortune.com",
-      "source": "fortune.com",
+      "summary": "'I have a chip on my shoulder.' Phoebe Gates wants her $185 million AI startup Phia to succeed with 'no ties to my privilege or my last name' Fortune",
+      "source": "Fortune",
       "url": "https://fortune.com/article/phoebe-gates-phia-shopping-app-cookie-stuffing/",
       "published_at": "2026-08-15T13:20:00Z",
       "tags": [
@@ -2500,6 +2462,25 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "066f2bf163daeff9",
+      "category": "startups",
+      "title": "Six Months, $74.1 Million: Westlake University Professor's Embodied AI Startup Secures Four Funding Rounds — BigGo Finance",
+      "summary": "Six Months, $74.1 Million: Westlake University Professor's Embodied AI Startup Secures Four Funding Rounds finance.biggo.com",
+      "source": "finance.biggo.com",
+      "url": "https://finance.biggo.com/news/3987db46-87d4-41f6-9b79-19ff0b355b4d",
+      "published_at": "2026-08-11T07:00:00Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 77,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=066f2bf163daeff9",
+      "index_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5kSm5lLTczQTE2eDNNdWZpQmppanBMYUNJSVlPOTlRUW1lbHNjSjh1UzI3UnBsQldXQnRhYS05YnVZbWZXbkF2MXNzMmZubW0wVDJwS19kYXA2SDdWTjZrR1ByZVpUN3NjMjlBZ1FGWFMwQ0J6dmc?oc=5",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "36f3963d49a0b943",
       "category": "startups",
       "title": "Ex-Meta AI research director raises $10.25M from Trilogy and Madrona for stealth physical AI startup",
@@ -2508,8 +2489,8 @@
       "url": "https://www.geekwire.com/2026/ex-meta-ai-research-director-raises-10-25m-from-trilogy-and-madrona-for-stealth-physical-ai-startup/",
       "published_at": "2026-08-11T07:00:00Z",
       "tags": [
-        "Academic Startup",
-        "Funding"
+        "Founder Watch",
+        "Embodied AI"
       ],
       "importance": 77,
       "content_kind": "article",
@@ -2651,25 +2632,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "44de6388fd860837",
-      "category": "startups",
-      "title": "AI’s Early Winners Are Shopping For Their Next Big Moves",
-      "summary": "AI’s Early Winners Are Shopping For Their Next Big Moves Forbes",
-      "source": "Forbes",
-      "url": "https://www.forbes.com/sites/the-prompt/2026/07/28/ais-early-winners-are-shopping-for-their-next-big-moves/",
-      "published_at": "2026-07-28T07:00:00Z",
-      "tags": [
-        "Founder Watch",
-        "Embodied AI"
-      ],
-      "importance": 74,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=44de6388fd860837",
-      "index_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOZFBBSmdkbjNfbk91YWhMTS1zbTZ4Q0dRTDRvZlZDX2hGbHdzN2ptaVAxWE1uMF90amQwZFF2VUhzc1BzS1YyUE5aQmpUNEdVeVJnb2NnZENVc3dfd2xqOFRjWmxvOXZHQ0pGM2RNVFpZOUd6ZS03NGtZak9VMEZJeng1Y3l3b1IzYTNkUlRJdVBieG43cVQ1aVVhUkpQZTcyZHdESkdObEstejQ?oc=5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "7220460ff000894f",
       "category": "startups",
       "title": "He Turned Down Apple. Now His AI Startup Is Challenging ChatGPT",
@@ -2705,6 +2667,44 @@
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=8a5e4e1b4e85d62d",
       "index_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNNlEyYnVVbEtNOWtYUm1Kb3o3QW5uWXVxbEJYYVR3ZkoySkZMTFo2UjQzMGxubHMzczByV3AzNlVUNkRfYzhPbThaQkR6UVhCdnZYSWs4MDducUdMMWRIUmZWdkExVnNOY1VtR0RYOGtWZ1RxMXF5eUYxazlmRjkwNXQwQmI4NDhY?oc=5",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "a9ed20334a27b9d6",
+      "category": "startups",
+      "title": "This B-School Student’s AI Startup Is Making Healthcare Processes More Efficient",
+      "summary": "This B-School Student’s AI Startup Is Making Healthcare Processes More Efficient Poets&Quants",
+      "source": "Poets&Quants",
+      "url": "https://poetsandquants.com/2026/07/25/this-mba-students-ai-startup-is-making-healthcare-processes-more-efficient/",
+      "published_at": "2026-07-25T07:00:00Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 74,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=a9ed20334a27b9d6",
+      "index_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOc1d6QkVkc0d3aTUwMDZZYUpnS2FmYnd5dWx4NnNLUXpOWDE3ZmNvMTRMT1FBenlCTVVENmFDRGROQ2s4Q25fTzkzYUNseF9WTWNhUkh0LUZvNDVpZWFEekFseUtXN0dnZkhSMEJ5TzNpOUotT2swZjh1U0k3WEV5UW1tRXhvaEJ5SFVoNnFmTHJTQ055ZHdIN0lGTWo2ZHdiU3pwd1d6aTcwZ3otQnVicEhzSQ?oc=5",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "b5a0641280da413a",
+      "category": "startups",
+      "title": "AI Startup Corgi Of Seven-Day Work Week Fame Raises Yet Again At $4 Billion Valuation",
+      "summary": "AI Startup Corgi Of Seven-Day Work Week Fame Raises Yet Again At $4 Billion Valuation Forbes",
+      "source": "Forbes",
+      "url": "https://www.forbes.com/sites/annatong/2026/07/22/ai-startup-corgi-of-seven-day-work-week-fame-raises-yet-again-at-4-billion-valuation/",
+      "published_at": "2026-07-22T07:00:00Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 73,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=b5a0641280da413a",
+      "index_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQcEt4ZXc5SlJVb3BKOEtVTloyMmlpaXFORVRrbFBUdWw3NVBiTm8wQUQzTFd6SGp4VElfN0dLVklBZW8tVUF3SzNmeVFacE9zVk9MaTNoRG9qN0Itd0ZhSm5CNEVlX1RJQ184QlZJYjhpcXA1V05yZEozTnlUR1MxUnFOS3k2R0xOV2gwUHZQMFNmeUtaRnNoSlhNQm1JcE94c2JIWEtWNHJKY0F6VUc4cGcyMXB4UXVnWUdWaE9lNlNBTnRBNFBiZTNwR1BBYjg?oc=5",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2749,8 +2749,8 @@
       "id": "32fda35043c4758f",
       "category": "opensource",
       "title": "How I Reached #7 in a Hugging Face AI Competition for Under $80 | HackerNoon",
-      "summary": "How I Reached #7 in a Hugging Face AI Competition for Under $80 hackernoon.com",
-      "source": "hackernoon.com",
+      "summary": "How I Reached #7 in a Hugging Face AI Competition for Under $80 HackerNoon",
+      "source": "HackerNoon",
       "url": "https://hackernoon.com/how-i-reached-7-in-a-hugging-face-ai-competition-for-under-$80",
       "published_at": "2026-08-19T06:46:17Z",
       "tags": [
@@ -2782,25 +2782,6 @@
       "reader_url": "./reader.html?id=aafea8a72cdde9c1",
       "index_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOMm03OXdLUU5aNlE3Vzg2M1gydVFLUkpuMF9WblJLbUdidlBWMjNLNF9HX3hKendMWFQwSHc0WnU3Z19NQmZJbWF4ZHdmck54MjF1YURjZEhvUnNLYnpEX3BOXzBRcmk4VTNucm1JUjhMNnFyWHhpUlZFZDBwcmdUcnFSbjQyX1hNNDV3SUlpaS1Sd0diYjFFQ1g5ZUJtVmFEcEVrWHVsQTY0b0hiMmI4bV9XV2JJX2RYM3c?oc=5",
       "reader_status": "summary-only"
-    },
-    {
-      "id": "fa47ca78d8c30202",
-      "category": "opensource",
-      "title": "No Barriers Can Stop Open-source AI Tide",
-      "summary": "The Little Tech Association, a group of nearly 200 Silicon Valley companies, recently wrote to the White House and government officials like Commerce Secretary Howard Lutnick, urging them not to restrict access to Chinese open-weight AI models.",
-      "source": "中国科技网",
-      "url": "https://www.stdaily.com/web/English/2026-08/14/content_562321.html",
-      "published_at": "2026-08-14T06:02:51Z",
-      "tags": [
-        "Open Source",
-        "Models & Tools"
-      ],
-      "importance": 69,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=fa47ca78d8c30202",
-      "index_url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9RdDktNlBiRzZQWkM3U3d2N2NVc1B5LUlPSHN1RmdrajBYR2tEbWN6VHl3REZjTUFyR1RJNWFEdWt6ZEJhNXc0ZXNnMklqT0pLOGNORFNleFY0WGlMSmY2NXpFQXZVUjV6LUFRZjJqOUwyNkpL?oc=5",
-      "reader_status": "public-page-excerpt"
     },
     {
       "id": "343135048e6e8ff2",
@@ -2845,7 +2826,7 @@
       "category": "policy",
       "title": "Safer and more transparent AI",
       "summary": "On 2 August 2026, new rules regarding the transparency of AI systems take effect. They aim to foster trust and integrity in the information ecosystem.",
-      "source": "commission.europa.eu",
+      "source": "European Commission",
       "url": "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en",
       "published_at": "2026-08-02T07:00:00Z",
       "tags": [
@@ -2863,7 +2844,7 @@
       "id": "8e9b014a3bd12f1f",
       "category": "policy",
       "title": "Five Reasons AI Regulation Is Coming To The US, How And When",
-      "summary": "Five Reasons AI Regulation Is Coming To The US, How And When Forbes",
+      "summary": "AI Regulation shifts from debate to enforcement as cyber incidents and U.S. politics push frontier labs toward trust-building oversight amid rising 2026 pressure.",
       "source": "Forbes",
       "url": "https://www.forbes.com/sites/paulocarvao/2026/08/01/five-reasons-ai-regulation-is-coming-to-the-us-how-and-when/",
       "published_at": "2026-08-01T07:00:00Z",
@@ -2876,7 +2857,7 @@
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=8e9b014a3bd12f1f",
       "index_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPZ1ZJblVIS01WSW9aZmFuajlXc2E1dGdCRmZzV2c2OVprbl93SHFEd1BJOS1kWTJSRzRRM1A1RHBRVmI0WFozTUo3Ml9uejl4bktMd09xdWpTMmprMXRKTU1kYm54VmFTdC1KbGhkUVNLM1VLTDFLX2VfNTljV2thSWRxQXNjOUdFVVdIcUE0VGMxVVNmVkNiYnQyNzZQcW9rUThtZFlUY0E5ZjJ5M0lDTE5B?oc=5",
-      "reader_status": "summary-only"
+      "reader_status": "public-page-excerpt"
     },
     {
       "id": "ff47a931aab03d31",
@@ -2914,6 +2895,25 @@
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=10d655c1073e8f87",
       "index_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQY2RqUWNVMkhVcXhLNjUwaXg0ZG1odGtUR0xVdHdQTU1qQ0RrRU9ZZ0xYSlBPaEF3WWE4ZndxcHpER1RFZ0F1SnZZSHlyZy1hcmcwWHQtY2NIWGdpM2wwYkpzeEtsekRlVEF1bmVYNllEQnZ3OFVFVF9RNTJ0aGQ2Z3ZnOUF6TVRHN1AxdEhjOFN2M19WNC1YZDdIcVBqd1JvME9FUno2QU9JWVJiOEdCRlVob3Q3SF9YX19STFBxcHdERWN1?oc=5",
+      "reader_status": "summary-only"
+    },
+    {
+      "id": "ae475ba1df390dd4",
+      "category": "opensource",
+      "title": "How OpenAI's agents broke out of testing to hack Hugging Face",
+      "summary": "How OpenAI's agents broke out of testing to hack Hugging Face Axios",
+      "source": "Axios",
+      "url": "https://www.axios.com/2026/08/06/openai-hugging-face-black-hat",
+      "published_at": "2026-08-05T07:00:00Z",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "importance": 67,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=ae475ba1df390dd4",
+      "index_url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1QNW5EMlBhN0N6SlRwVkRkMWhCQlVjbWZWX2JXSDZUdHRKVV9Ua3c3S1JFZk9GYnNyUlQxVWxKQ29tQ1VmQVNpWU5ORFZueFNCek1zU09wMmpyV2F1aUhVM2N0V0lQV20td0V6Zk5PMA?oc=5",
       "reader_status": "summary-only"
     }
   ]
