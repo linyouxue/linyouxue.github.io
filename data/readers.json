@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-23T01:59:24Z",
+  "generated_at": "2026-08-23T06:59:58Z",
   "record_count": 132,
   "records": [
     {
@@ -54,6 +54,41 @@
         }
       ],
       "reading_minutes": 1
+    },
+    {
+      "id": "unit-distance-openai-20260520",
+      "kind": "paper",
+      "title": "OpenAI 模型推翻平面单位距离问题中的长期猜想",
+      "source": "OpenAI · Research",
+      "source_url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+      "published_at": "2026-05-20T08:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Unit Distance",
+        "Discrete Geometry",
+        "Verified Proof"
+      ],
+      "verification": "官方论文 · 外部数学家已检查",
+      "summary": "OpenAI 的通用推理模型找到一族新的点集构造，证明单位距离对数可以达到 n 的 1+δ 次方，从而推翻长期流行的 n 的 1+o(1) 上界猜想。证明已由外部数学家检查，并有公开证明 PDF 与多位数学家的伴随评论。",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/unit-distance-openai-20260520.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf",
+      "key_points": [
+        "Planar Point Sets with Many Unit Distances OpenAI Abstract For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets.",
+        "We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n.",
+        "This disproves the well-known unit distance conjecture from [ Erd46].",
+        "The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely.",
+        "After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets. We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n. This disproves the well-known unit distance conjecture from [ Erd46]. The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely. After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1. Golod–Shafarevich theory ensures existence of an inﬁnite such tower, even after a quotient step making the prescribed Frobenius classes trivial. A crucial property of the construction is that all resulting discriminants and class numbers are at most exponential in the extension degree. 1 Main Result For a ﬁnite set P ⊂ R2, let ν(P ) = # {{x,y } ⊂ P : |x −y|= 1} andν(n) = max |P |=nν(P ). The planar unit-distance problem goes back to Erdős [ Erd46], who conjectured that there should be an absolute constant C such that, for all suﬃciently large n, ν(n) ≤ n1+C/ log logn. (1) The same 1946 paper also introduced the distinct-distances problem, later resolved up to logarithmic factors by Guth–Katz [ GK15]. An elementary upper bound is ν(n) = O(n3/ 2): the Euclidean unit-distance graph is K2, 3-free, since two unit circles meet in at most two points, and the Kővári–Sós–Turán theorem applies [ KST54]. The best known upper bound ν(n) = O(n4/ 3) is due to Spencer–Szemerédi–Trotter [ SST84]; Székely later gave a short crossing-number proof of this incidence bound [ Sze97]. It is useful to compare this with the same question for other norms on R2, a direction studied systematically by Brass [ Bra96]. If the unit ball has a ﬂat segment, one can arrange quadratically many unit distances, so the interesting normed-plane analogues usually impose strict convexity or genericity. Székely’s crossing-number argument extends to strictly convex norms, again giving O(n4/ 3), and Valtr constructed a strictly convex norm for which this exponent is…"
+        }
+      ],
+      "reading_minutes": 32
     },
     {
       "id": "2e8bec6440d10036",
@@ -152,41 +187,6 @@
         }
       ],
       "reading_minutes": 2
-    },
-    {
-      "id": "unit-distance-openai-20260520",
-      "kind": "paper",
-      "title": "OpenAI 模型推翻平面单位距离问题中的长期猜想",
-      "source": "OpenAI · Research",
-      "source_url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
-      "published_at": "2026-05-20T08:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Unit Distance",
-        "Discrete Geometry",
-        "Verified Proof"
-      ],
-      "verification": "官方论文 · 外部数学家已检查",
-      "summary": "OpenAI 的通用推理模型找到一族新的点集构造，证明单位距离对数可以达到 n 的 1+δ 次方，从而推翻长期流行的 n 的 1+o(1) 上界猜想。证明已由外部数学家检查，并有公开证明 PDF 与多位数学家的伴随评论。",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/unit-distance-openai-20260520.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf",
-      "key_points": [
-        "Planar Point Sets with Many Unit Distances OpenAI Abstract For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets.",
-        "We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n.",
-        "This disproves the well-known unit distance conjecture from [ Erd46].",
-        "The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely.",
-        "After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets. We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n. This disproves the well-known unit distance conjecture from [ Erd46]. The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely. After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1. Golod–Shafarevich theory ensures existence of an inﬁnite such tower, even after a quotient step making the prescribed Frobenius classes trivial. A crucial property of the construction is that all resulting discriminants and class numbers are at most exponential in the extension degree. 1 Main Result For a ﬁnite set P ⊂ R2, let ν(P ) = # {{x,y } ⊂ P : |x −y|= 1} andν(n) = max |P |=nν(P ). The planar unit-distance problem goes back to Erdős [ Erd46], who conjectured that there should be an absolute constant C such that, for all suﬃciently large n, ν(n) ≤ n1+C/ log logn. (1) The same 1946 paper also introduced the distinct-distances problem, later resolved up to logarithmic factors by Guth–Katz [ GK15]. An elementary upper bound is ν(n) = O(n3/ 2): the Euclidean unit-distance graph is K2, 3-free, since two unit circles meet in at most two points, and the Kővári–Sós–Turán theorem applies [ KST54]. The best known upper bound ν(n) = O(n4/ 3) is due to Spencer–Szemerédi–Trotter [ SST84]; Székely later gave a short crossing-number proof of this incidence bound [ Sze97]. It is useful to compare this with the same question for other norms on R2, a direction studied systematically by Brass [ Bra96]. If the unit ball has a ﬂat segment, one can arrange quadratically many unit distances, so the interesting normed-plane analogues usually impose strict convexity or genericity. Székely’s crossing-number argument extends to strictly convex norms, again giving O(n4/ 3), and Valtr constructed a strictly convex norm for which this exponent is…"
-        }
-      ],
-      "reading_minutes": 32
     },
     {
       "id": "343d58c33ec0d59f",
@@ -1343,7 +1343,7 @@
       "kind": "article",
       "title": "DeepSeek 多模态模型 发布 ,对标GPT-5.6表现如何?",
       "source": "微信公众号 · 机器迷途",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1787450317&ver=6921&signature=B2zKMlbu6JOg2WsHwf2O8-NIFw7kg22X45mW2-evriSjv64P-sugRESjC3Kdiv4t-dEWhbEbDNmChJsycgrwhjHv0mjyMpNZxObYjHYL2T9TX1cBYpmM*rSGv1*F-L*w&new=1",
+      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HNxTimqj2teLmQhOY1I-0m3_h0YEP6PhbV06n-4V&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1787450317%26ver%3D6921%26signature%3DB2zKMlbu6JOg2WsHwf2O8-NIFw7kg22X45mW2-evriSjv64P-sugRESjC3Kdiv4t-dEWhbEbDNmChJsycgrwhjHv0mjyMpNZxObYjHYL2T9TX1cBYpmM%2ArSGv1%2AF-L%2Aw%26new%3D1",
       "published_at": "2026-08-23T00:17:43Z",
       "authors": [],
       "venue": "",
@@ -1383,7 +1383,7 @@
       "kind": "article",
       "title": "DeepSeek 多模态 发布 ,我用它打通了视频工作流里最难的一环",
       "source": "微信公众号 · 一企点",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1787450317&ver=6921&signature=sCkJHBXss94WAoeKxuHofkZ6Vwkh-ApyJANK6Q1WdfONKBjiR*X--AVs1A1LkaAYiO8*l9fTqUsEnIwfcMvft8mHaihDf4q-FKhszfnojkegECPGB0ImQv3eTuk8*o5j&new=1",
+      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HNxTimqjHSHksemtQNs4TsdtUH92SSRe-ybcCGFp&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1787450317%26ver%3D6921%26signature%3DsCkJHBXss94WAoeKxuHofkZ6Vwkh-ApyJANK6Q1WdfONKBjiR%2AX--AVs1A1LkaAYiO8%2Al9fTqUsEnIwfcMvft8mHaihDf4q-FKhszfnojkegECPGB0ImQv3eTuk8%2Ao5j%26new%3D1",
       "published_at": "2026-08-23T00:01:08Z",
       "authors": [],
       "venue": "",
@@ -1463,7 +1463,7 @@
       "kind": "article",
       "title": "Bug?网传 腾讯 混元 4 上线, 元宝 私信博主求删帖",
       "source": "微信公众号 · 程序员的那些事",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1787450321&ver=6921&signature=nJ0k7PxjhhiMYAXSoQckc6GyQ2m2gKuT1GZflrFvwPUjRfBsQzFRt-pbEgkTxE9hcfVP1e-xXRlEysMhKYLs3Jl54zT7pRk1-nOCdMO-UcaIYdbFp0eSTXE6ZRrJJ7Sr&new=1",
+      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HNxTimqjeEItMKAf-rSc61Wq1GzMVv4jivy8R2Vm&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1787450321%26ver%3D6921%26signature%3DnJ0k7PxjhhiMYAXSoQckc6GyQ2m2gKuT1GZflrFvwPUjRfBsQzFRt-pbEgkTxE9hcfVP1e-xXRlEysMhKYLs3Jl54zT7pRk1-nOCdMO-UcaIYdbFp0eSTXE6ZRrJJ7Sr%26new%3D1",
       "published_at": "2026-08-22T07:42:08Z",
       "authors": [],
       "venue": "",
@@ -1579,11 +1579,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "34910864216007f4",
+      "id": "a0d812938837cc53",
       "kind": "article",
       "title": "DeepSeek 发布 多模态模型: DeepSeek -V4-Flash-Vision-Exp",
       "source": "微信公众号 · dev技术栈",
-      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HAoAiWqjuTDOfEjRfMEkpAcCU20gElYlta4JAHv_&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1787363322%26ver%3D6919%26signature%3DOBTKnrPkkACXIjygxrYuSkTsIXG-%2AMIs91oycKp%2AYkH85p8%2ACrKvJMb5gLnQIZXyln-D9keKPJ7x9evYegcBmZ4HHKzT3yQViSWaM0DMfDqzo9dobiiGzA1e0fAeqa8r%26new%3D1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1787468352&ver=6921&signature=qukojRmqNm9CXYmhvrl1iahX5ScI6cjME24*U9EvW*ixF*oZMb5W8YfWYoZCbVjbedSBEXxLcxUgy7AdpJxi6XrB46QUbPkDlbuvgWzGMdzu-cYG-KW7f4T*Z*GGI8Kg&new=1",
       "published_at": "2026-08-22T01:45:25Z",
       "authors": [],
       "venue": "",
@@ -1596,7 +1596,7 @@
       "summary": "DeepSeek 发布 多模态模型: DeepSeek -V4-Flash-Vision-Exp8月21日晚上, DeepSeek 官方在 X 上发了一句很短的宣布:＂...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HAoAiWqjuTDOfEjRfMEkpAcCU20gElYlta4JAHv_&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1787363322%26ver%3D6919%26signature%3DOBTKnrPkkACXIjygxrYuSkTsIXG-%2AMIs91oycKp%2AYkH85p8%2ACrKvJMb5gLnQIZXyln-D9keKPJ7x9evYegcBmZ4HHKzT3yQViSWaM0DMfDqzo9dobiiGzA1e0fAeqa8r%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HE-aimqj8_3EkUpW2u5OvKVnDvBXreP6lOODSaqZ&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1787468352%26ver%3D6921%26signature%3DqukojRmqNm9CXYmhvrl1iahX5ScI6cjME24%2AU9EvW%2AixF%2AoZMb5W8YfWYoZCbVjbedSBEXxLcxUgy7AdpJxi6XrB46QUbPkDlbuvgWzGMdzu-cYG-KW7f4T%2AZ%2AGGI8Kg%26new%3D1",
       "key_points": [
         "DeepSeek 发布 多模态模型: DeepSeek -V4-Flash-Vision-Exp8月21日晚上, DeepSeek 官方在 X 上发了一句很短的宣布:＂..."
       ],
@@ -1729,6 +1729,46 @@
           "title": "公开索引摘要",
           "bullets": [
             "Agent,开始逼近 Opus据官方 发布 ,新模型在多项 Agent Benchmark 上的成绩如下:相比原来的 DeepSeek V4 Flash,新模型在依赖..."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "1a6133c0ecfd1ea0",
+      "kind": "article",
+      "title": "重磅上线! DeepSeek 发布 首个实验性多模态模",
+      "source": "微信公众号 · VisionaryFutures",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1787468352&ver=6921&signature=8TGib9pxwEih6d4Cdnq1ZB0*L9*VaU8EwLXCLR*O9PY6q6oNCMa-50hymSixNCv2wQHt6BRxUFVlEPLzXasYX5MPwyTmrGYL-YmLZC3faDqyHV78WTG5oFUm90pnRQQn&new=1",
+      "published_at": "2026-08-21T19:47:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "微信公众号",
+        "DeepSeek",
+        "模型"
+      ],
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "summary": "DeepSeek Harness 0.1.1 也已同步 发布 ,原生内置对该模型的全面支持.开发人员可直接查阅官方文档探索更多视觉代理工作流.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "indexed-summary",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HE-aimqjLQKvMnQTfihI3aQp0Gr74ySQtRo6uniT&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1787468352%26ver%3D6921%26signature%3D8TGib9pxwEih6d4Cdnq1ZB0%2AL9%2AVaU8EwLXCLR%2AO9PY6q6oNCMa-50hymSixNCv2wQHt6BRxUFVlEPLzXasYX5MPwyTmrGYL-YmLZC3faDqyHV78WTG5oFUm90pnRQQn%26new%3D1",
+      "key_points": [
+        "DeepSeek Harness 0.1.1 也已同步 发布 ,原生内置对该模型的全面支持.开发人员可直接查阅官方文档探索更多视觉代理工作流."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "DeepSeek Harness 0.1.1 也已同步 发布 ,原生内置对该模型的全面支持.开发人员可直接查阅官方文档探索更多视觉代理工作流."
+        },
+        {
+          "title": "公开索引摘要",
+          "bullets": [
+            "DeepSeek Harness 0.1.1 也已同步 发布 ,原生内置对该模型的全面支持.开发人员可直接查阅官方文档探索更多视觉代理工作流."
           ]
         },
         {
@@ -1929,46 +1969,6 @@
           "title": "公开索引摘要",
           "bullets": [
             "月之暗面 发布 并开源 Kimi K2——首款开源的万亿参数(1T 总 / 32B 激活)MoE 基础模型,采用 modified MIT 许可,主攻 Agentic ..."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "6dfc260bd9d8144d",
-      "kind": "article",
-      "title": "聚焦国产AI产品: 月之暗面 Kimi",
-      "source": "微信公众号 · 人工智能行业合规",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1787450317&ver=6921&signature=EoXjnOozX45G*D97CDg-izqrjFT248CaYBzlDHd2x4n6eSpL0SbTcPf6nJ5HFgKi6zHBOPbjI*jAoOySVCNFErX74VUYxA4jH96enDN0jCIldha9MZVM3vZu9iU2XfLt&new=1",
-      "published_at": "2026-08-21T04:01:04Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "微信公众号",
-        "Kimi",
-        "月之暗面"
-      ],
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "summary": "月之暗面 创始团队多为清华背景,在研发初期便果断放弃全栈铺开... 月 发布 的 Kimi K3,进一步将自研注意力机制升级为KDA混合线性...",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HN5TimqjlhrUz5BKxDbfn743ceHyYav4okPGVPaG&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1787450317%26ver%3D6921%26signature%3DEoXjnOozX45G%2AD97CDg-izqrjFT248CaYBzlDHd2x4n6eSpL0SbTcPf6nJ5HFgKi6zHBOPbjI%2AjAoOySVCNFErX74VUYxA4jH96enDN0jCIldha9MZVM3vZu9iU2XfLt%26new%3D1",
-      "key_points": [
-        "月之暗面 创始团队多为清华背景,在研发初期便果断放弃全栈铺开... 月 发布 的 Kimi K3,进一步将自研注意力机制升级为KDA混合线性..."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "月之暗面 创始团队多为清华背景,在研发初期便果断放弃全栈铺开... 月 发布 的 Kimi K3,进一步将自研注意力机制升级为KDA混合线性..."
-        },
-        {
-          "title": "公开索引摘要",
-          "bullets": [
-            "月之暗面 创始团队多为清华背景,在研发初期便果断放弃全栈铺开... 月 发布 的 Kimi K3,进一步将自研注意力机制升级为KDA混合线性..."
           ]
         },
         {
@@ -2579,6 +2579,50 @@
       "reading_minutes": 1
     },
     {
+      "id": "d191d3a2a7ef4a3d",
+      "kind": "article",
+      "title": "Pediatric surgeon and early childhood researcher: This is the 'essential' AI-proof skill kids need right now",
+      "source": "CNBC",
+      "source_url": "https://www.cnbc.com/2026/07/29/pediatric-surgeon-this-is-the-no-1-ai-proof-skill-kids-need-right-now.html",
+      "published_at": "2026-07-29T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Pediatric surgeon and early childhood researcher: This is the 'essential' AI-proof skill kids need right now CNBC",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.cnbc.com/2026/07/29/pediatric-surgeon-this-is-the-no-1-ai-proof-skill-kids-need-right-now.html",
+      "key_points": [
+        "Psychology and Relationships I'm a psychologist who studies couples: 7 red flags of an 'extremely' unhealthy relationship Get Ahead The most successful people are willing to do these 3 ‘extremely uncomfortable’ things, says expert Raising Successful Kids Parents who raise emotionally intelligent kids do 7 things early on"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Pediatric surgeon and early childhood researcher: This is the 'essential' AI-proof skill kids need right now CNBC"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Psychology and Relationships I'm a psychologist who studies couples: 7 red flags of an 'extremely' unhealthy relationship Get Ahead The most successful people are willing to do these 3 ‘extremely uncomfortable’ things, says expert Raising Successful Kids Parents who raise emotionally intelligent kids do 7 things early on"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Psychology and Relationships I'm a psychologist who studies couples: 7 red flags of an 'extremely' unhealthy relationship",
+            "Get Ahead The most successful people are willing to do these 3 ‘extremely uncomfortable’ things, says expert",
+            "Raising Successful Kids Parents who raise emotionally intelligent kids do 7 things early on"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "4a513ae357635e92",
       "kind": "article",
       "title": "Evolve your marketing with new AI tools",
@@ -2622,50 +2666,6 @@
             "We’re adding AI and agentic experiences across Google Ads and Google Analytics to simplify your workflow and expedite your path to business growth.",
             "Google is rolling out new artificial intelligence tools in Google Ads and Google Analytics to help you uncover insights and act faster. You can now use AI-powered summaries on your homepages, create visual reports with simple text prompts, and benchmark your performance against similar businesses. Log in to your accounts today to explore these new features and refine your marketing strategy.",
             "\"Evolve your marketing with new AI tools\" shows how Google’s AI helps you grow."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "d191d3a2a7ef4a3d",
-      "kind": "article",
-      "title": "Pediatric surgeon and early childhood researcher: This is the 'essential' AI-proof skill kids need right now",
-      "source": "CNBC",
-      "source_url": "https://www.cnbc.com/2026/07/29/pediatric-surgeon-this-is-the-no-1-ai-proof-skill-kids-need-right-now.html",
-      "published_at": "2026-07-29T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Pediatric surgeon and early childhood researcher: This is the 'essential' AI-proof skill kids need right now CNBC",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.cnbc.com/2026/07/29/pediatric-surgeon-this-is-the-no-1-ai-proof-skill-kids-need-right-now.html",
-      "key_points": [
-        "Raising Successful Kids I’ve worked with over 1,000 kids—the ones with the best people skills use these 6 phrases Psychology and Relationships I'm a psychologist who studies couples: 7 red flags of an 'extremely' unhealthy relationship Get Ahead The most successful people are willing to do these 3 ‘extremely uncomfortable’ things, says expert"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Pediatric surgeon and early childhood researcher: This is the 'essential' AI-proof skill kids need right now CNBC"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Raising Successful Kids I’ve worked with over 1,000 kids—the ones with the best people skills use these 6 phrases Psychology and Relationships I'm a psychologist who studies couples: 7 red flags of an 'extremely' unhealthy relationship Get Ahead The most successful people are willing to do these 3 ‘extremely uncomfortable’ things, says expert"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Raising Successful Kids I’ve worked with over 1,000 kids—the ones with the best people skills use these 6 phrases",
-            "Psychology and Relationships I'm a psychologist who studies couples: 7 red flags of an 'extremely' unhealthy relationship",
-            "Get Ahead The most successful people are willing to do these 3 ‘extremely uncomfortable’ things, says expert"
           ]
         }
       ],
@@ -2733,7 +2733,7 @@
       "resolved_url": "https://x.com/sama/status/2074909079450050629",
       "key_points": [
         "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
-        "5:30 PM · Jul 8, 2026 762.5K Views 933 518 11K 777 Jenny @suomi55 Jul 8 Are you kidding us?",
+        "5:30 PM · Jul 8, 2026 762.5K Views 933 518 11K 776 Jenny @suomi55 Jul 8 Are you kidding us?",
         "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
         "You are promoting something here that you yourself have taken away from the users!",
         "#keep4o #BringBack4o #OpenSource4o 20 13 193 13K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.8K"
@@ -2747,7 +2747,7 @@
           "title": "公开页面要点",
           "bullets": [
             "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
-            "5:30 PM · Jul 8, 2026 762.5K Views 933 518 11K 777 Jenny @suomi55 Jul 8 Are you kidding us?",
+            "5:30 PM · Jul 8, 2026 762.5K Views 933 518 11K 776 Jenny @suomi55 Jul 8 Are you kidding us?",
             "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
             "You are promoting something here that you yourself have taken away from the users!",
             "#keep4o #BringBack4o #OpenSource4o 20 13 193 13K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.8K"
@@ -2756,7 +2756,7 @@
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 762.5K Views 933 518 11K 777",
+            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 762.5K Views 933 518 11K 776",
             "Jenny @suomi55 Jul 8 Are you kidding us? „it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o! You are promoting something here that you yourself have taken away from the users! That’s disgusting! #keep4o #BringBack4o #OpenSource4o 20 13 193 13K",
             "David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.8K"
           ]
@@ -2914,6 +2914,47 @@
       "reading_minutes": 1
     },
     {
+      "id": "62370045db6bed55",
+      "kind": "article",
+      "title": "Job Seekers Are Racing to AI-Proof Their Résumés",
+      "source": "WSJ",
+      "source_url": "https://www.wsj.com/tech/ai/job-seekers-are-racing-to-ai-proof-their-resumes-f310f43c",
+      "published_at": "2026-08-23T02:35:18Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Job Seekers Are Racing to AI-Proof Their Résumés WSJ",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 401: HTTP Forbidden",
+      "resolved_url": "https://www.wsj.com/tech/ai/job-seekers-are-racing-to-ai-proof-their-resumes-f310f43c",
+      "key_points": [
+        "Job Seekers Are Racing to AI-Proof Their Résumés WSJ"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Job Seekers Are Racing to AI-Proof Their Résumés WSJ"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Job Seekers Are Racing to AI-Proof Their Résumés WSJ"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "07008f88581b53af",
       "kind": "article",
       "title": "Measuring benchmark optimization in speech recognition",
@@ -2959,53 +3000,6 @@
             "Public voice AI benchmarks increasingly suggest that models are performing at human levels. Yet those scores don't always reflect how models work in the real-world. Since public benchmarks are open and widely used, models can also become optimized for the tests themselves. Their scores may improve because they have learned benchmark-specific patterns and not because they have become better at the underlying task.",
             "One reason is that traditional benchmarks overlook many of the conditions and qualities that make voice systems reliable, natural, contextually appropriate, and effective in practice. That's why we recently introduced held-out sets in Real World VoiceEQ , the Open-ASR Leaderboard , and the Far-field ASR Leaderboard : to measure more of what matters in real-world use.",
             "However, broader measurement alone does not solve the problem. This phenomenon, sometimes called benchmark optimization or \"benchmaxxing,\" is often discussed around machine learning, however, it has been difficult to measure in speech recognition."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "46a795466038356f",
-      "kind": "article",
-      "title": "Up to 3.2x Faster Inference with LFM2.5-DSpark",
-      "source": "Hugging Face",
-      "source_url": "https://huggingface.co/blog/LiquidAI/lfm25-dspark",
-      "published_at": "2026-08-20T16:52:57Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Hugging Face",
-        "Open Source"
-      ],
-      "verification": "官方来源",
-      "summary": "A Blog post by Liquid AI on Hugging Face",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://huggingface.co/blog/LiquidAI/lfm25-dspark",
-      "key_points": [
-        "Today, we release DSpark draft model checkpoints for three models from our LFM2.5 family: LFM2.5-1.2B-Instruct, LFM2.5-2.6B, and LFM2.5-8B-A1B.",
-        "These add a speculative decoding path that trades a minimal memory increase for a large decoding speedup without changing output quality: Faster inference : up to 3.18 throughput improvement on a GPU and up to 2.87x on-device.",
-        "Toward on-device agentic inference : cuts function-calling latency by 57% on average for LFM2.5-2.6B"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "A Blog post by Liquid AI on Hugging Face"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Today, we release DSpark draft model checkpoints for three models from our LFM2.5 family: LFM2.5-1.2B-Instruct, LFM2.5-2.6B, and LFM2.5-8B-A1B.",
-            "These add a speculative decoding path that trades a minimal memory increase for a large decoding speedup without changing output quality: Faster inference : up to 3.18 throughput improvement on a GPU and up to 2.87x on-device.",
-            "Toward on-device agentic inference : cuts function-calling latency by 57% on average for LFM2.5-2.6B"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Today, we release DSpark draft model checkpoints for three models from our LFM2.5 family: LFM2.5-1.2B-Instruct, LFM2.5-2.6B, and LFM2.5-8B-A1B. These add a speculative decoding path that trades a minimal memory increase for a large decoding speedup without changing output quality:",
-            "Faster inference : up to 3.18 throughput improvement on a GPU and up to 2.87x on-device.",
-            "Toward on-device agentic inference : cuts function-calling latency by 57% on average for LFM2.5-2.6B"
           ]
         }
       ],
@@ -3557,6 +3551,53 @@
       "reading_minutes": 1
     },
     {
+      "id": "46a795466038356f",
+      "kind": "article",
+      "title": "Up to 3.2x Faster Inference with LFM2.5-DSpark",
+      "source": "Hugging Face",
+      "source_url": "https://huggingface.co/blog/LiquidAI/lfm25-dspark",
+      "published_at": "2026-08-20T16:52:57Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Hugging Face",
+        "Open Source"
+      ],
+      "verification": "官方来源",
+      "summary": "A Blog post by Liquid AI on Hugging Face",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://huggingface.co/blog/LiquidAI/lfm25-dspark",
+      "key_points": [
+        "Today, we release DSpark draft model checkpoints for three models from our LFM2.5 family: LFM2.5-1.2B-Instruct, LFM2.5-2.6B, and LFM2.5-8B-A1B.",
+        "These add a speculative decoding path that trades a minimal memory increase for a large decoding speedup without changing output quality: Faster inference : up to 3.18 throughput improvement on a GPU and up to 2.87x on-device.",
+        "Toward on-device agentic inference : cuts function-calling latency by 57% on average for LFM2.5-2.6B"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "A Blog post by Liquid AI on Hugging Face"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Today, we release DSpark draft model checkpoints for three models from our LFM2.5 family: LFM2.5-1.2B-Instruct, LFM2.5-2.6B, and LFM2.5-8B-A1B.",
+            "These add a speculative decoding path that trades a minimal memory increase for a large decoding speedup without changing output quality: Faster inference : up to 3.18 throughput improvement on a GPU and up to 2.87x on-device.",
+            "Toward on-device agentic inference : cuts function-calling latency by 57% on average for LFM2.5-2.6B"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Today, we release DSpark draft model checkpoints for three models from our LFM2.5 family: LFM2.5-1.2B-Instruct, LFM2.5-2.6B, and LFM2.5-8B-A1B. These add a speculative decoding path that trades a minimal memory increase for a large decoding speedup without changing output quality:",
+            "Faster inference : up to 3.18 throughput improvement on a GPU and up to 2.87x on-device.",
+            "Toward on-device agentic inference : cuts function-calling latency by 57% on average for LFM2.5-2.6B"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "8a2f9bd2b8299d48",
       "kind": "article",
       "title": "This may be the first academic profession to see its work taken over by AI",
@@ -3601,7 +3642,7 @@
       "id": "78d60b903b5f1722",
       "kind": "article",
       "title": "AI Pioneer Fei-Fei Li Warns of Risks From Growing Tech Backlash",
-      "source": "Bloomberg",
+      "source": "Bloomberg.com",
       "source_url": "https://www.bloomberg.com/news/articles/2026-08-19/ai-pioneer-fei-fei-li-warns-of-risks-from-growing-tech-backlash",
       "published_at": "2026-08-19T12:00:00Z",
       "authors": [],
@@ -3612,23 +3653,23 @@
         "World Models"
       ],
       "verification": "媒体或公开网页",
-      "summary": "AI Pioneer Fei-Fei Li Warns of Risks From Growing Tech Backlash Bloomberg",
+      "summary": "AI Pioneer Fei-Fei Li Warns of Risks From Growing Tech Backlash Bloomberg.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "summary-only",
       "fetch_note": "HTTP Error 403: Forbidden",
       "resolved_url": "https://www.bloomberg.com/news/articles/2026-08-19/ai-pioneer-fei-fei-li-warns-of-risks-from-growing-tech-backlash",
       "key_points": [
-        "AI Pioneer Fei-Fei Li Warns of Risks From Growing Tech Backlash Bloomberg"
+        "AI Pioneer Fei-Fei Li Warns of Risks From Growing Tech Backlash Bloomberg.com"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "AI Pioneer Fei-Fei Li Warns of Risks From Growing Tech Backlash Bloomberg"
+          "body": "AI Pioneer Fei-Fei Li Warns of Risks From Growing Tech Backlash Bloomberg.com"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "AI Pioneer Fei-Fei Li Warns of Risks From Growing Tech Backlash Bloomberg"
+            "AI Pioneer Fei-Fei Li Warns of Risks From Growing Tech Backlash Bloomberg.com"
           ]
         },
         {
@@ -3735,6 +3776,47 @@
             "PISCATAWAY, N.J. , Aug. 18, 2026 /PRNewswire/ -- GenScript Biotech Corporation (HKEX: 1548) reported first-half revenue of approximately US$404.2 million on a comparable basis, up 27.3% year over year, while adjusted net profit rose 203.3% to approximately US$62.5 million. The results reflect strong growth across its core businesses, improved operating efficiency, and accelerating demand for AI-enabled drug discovery services.",
             "The AI-enabled drug discovery business doubled year over year and maintained rapid growth for a third consecutive half-year reporting period, driven by demand from AI-focused biotechnology companies and pharmaceutical innovators. Gene-to-Protein accounted for approximately 66% of GenScript Life Science Group revenue and remained the company's primary growth engine."
           ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "7f7b0b81db820972",
+      "kind": "article",
+      "title": "Harell Data Debuts With $15M To Change Incentives, Speed Up AI Drug Discovery",
+      "source": "Timmerman Report",
+      "source_url": "https://timmermanreport.com/2026/08/harell-data-debuts-with-15m-to-change-incentives-speed-up-ai-drug-discovery/",
+      "published_at": "2026-08-18T00:53:57Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Harell Data Debuts With $15M To Change Incentives, Speed Up AI Drug Discovery Timmerman Report",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "<urlopen error _ssl.c:993: The handshake operation timed out>",
+      "resolved_url": "https://timmermanreport.com/2026/08/harell-data-debuts-with-15m-to-change-incentives-speed-up-ai-drug-discovery/",
+      "key_points": [
+        "Harell Data Debuts With $15M To Change Incentives, Speed Up AI Drug Discovery Timmerman Report"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Harell Data Debuts With $15M To Change Incentives, Speed Up AI Drug Discovery Timmerman Report"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Harell Data Debuts With $15M To Change Incentives, Speed Up AI Drug Discovery Timmerman Report"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -3892,60 +3974,10 @@
       "reading_minutes": 1
     },
     {
-      "id": "b04a4b04e131faac",
-      "kind": "article",
-      "title": "Gen Z is eyeing up ‘secure’ healthcare jobs to AI-proof their careers, but be warned: chiropractors, doctors and paramedics are the unhappiest workers | Fortune",
-      "source": "Fortune",
-      "source_url": "https://fortune.com/article/gen-z-is-eyeing-up-secure-healthcare-jobs-to-ai-proof-their-careers-but-be-warned-chiropractors-doctors-and-paramedics-are-the-unhappiest-workers/",
-      "published_at": "2026-08-16T13:22:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Gen Z eye up AI-proof healthcare—chiropractors, doctors and paramedics are the unhappiest workers Fortune",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://fortune.com/article/gen-z-is-eyeing-up-secure-healthcare-jobs-to-ai-proof-their-careers-but-be-warned-chiropractors-doctors-and-paramedics-are-the-unhappiest-workers/",
-      "key_points": [
-        "Tech leaders have consistently warned AI is already as good as entry-level workers and it could halve white-collar jobs by 2030.",
-        "So it’s no wonder they’re eyeing up jobs in health care, which offer low unemployment rates, the potential to earn over $200,000 , and are unlikely to be replaced with robotic doctors and nurses anytime soon.",
-        "But there’s one thing they should know before filling out medical school applications: Pursuing job security doesn’t necessarily guarantee job satisfaction.",
-        "That’s because 2025 research from shift work platform Deputy, which surveyed 1.28 million users, ranks doctors, paramedics, and even chiropractors as the unhappiest workers."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Gen Z eye up AI-proof healthcare—chiropractors, doctors and paramedics are the unhappiest workers Fortune"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Tech leaders have consistently warned AI is already as good as entry-level workers and it could halve white-collar jobs by 2030.",
-            "So it’s no wonder they’re eyeing up jobs in health care, which offer low unemployment rates, the potential to earn over $200,000 , and are unlikely to be replaced with robotic doctors and nurses anytime soon.",
-            "But there’s one thing they should know before filling out medical school applications: Pursuing job security doesn’t necessarily guarantee job satisfaction.",
-            "That’s because 2025 research from shift work platform Deputy, which surveyed 1.28 million users, ranks doctors, paramedics, and even chiropractors as the unhappiest workers."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Tech leaders have consistently warned AI is already as good as entry-level workers and it could halve white-collar jobs by 2030. So it’s no wonder they’re eyeing up jobs in health care, which offer low unemployment rates, the potential to earn over $200,000 , and are unlikely to be replaced with robotic doctors and nurses anytime soon.",
-            "But there’s one thing they should know before filling out medical school applications: Pursuing job security doesn’t necessarily guarantee job satisfaction.",
-            "That’s because 2025 research from shift work platform Deputy, which surveyed 1.28 million users, ranks doctors, paramedics, and even chiropractors as the unhappiest workers."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "8fad5f96cf88a620",
       "kind": "article",
       "title": "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan",
-      "source": "Bloomberg",
+      "source": "Bloomberg.com",
       "source_url": "https://www.bloomberg.com/news/videos/2026-08-19/what-s-next-after-chatgpt-this-ai-pioneer-has-a-plan-video",
       "published_at": "2026-08-19T00:00:00Z",
       "authors": [],
@@ -3955,23 +3987,23 @@
         "Embodied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg",
+      "summary": "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "summary-only",
       "fetch_note": "HTTP Error 403: Forbidden",
       "resolved_url": "https://www.bloomberg.com/news/videos/2026-08-19/what-s-next-after-chatgpt-this-ai-pioneer-has-a-plan-video",
       "key_points": [
-        "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg"
+        "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg.com"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg"
+          "body": "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg.com"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg"
+            "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg.com"
           ]
         },
         {
@@ -4079,47 +4111,6 @@
             "You have an agent that can already record a demonstration and push it to the Hugging Face Hub . Now you want to run that loop continuously: collect episodes through the day, train a policy on the growing dataset, deploy it, and pull the next batch back to improve it. Run that loop once and every piece works. Run it every day and you start paying for the same byte transfers over and over. The recordings you upload keep growing, each training run copies the whole dataset to the GPUs before it starts, and every new checkpoint ships out while the next batch of recordings comes back.",
             "The first post in this series introduced Strands Robots , an open source SDK from AWS ( Apache 2.0 ) that exposes robot abstractions, simulation, and the LeRobot stack as AgentTools you compose into a single Strands agent. It covered the Robot() factory, recording a demonstration in simulation, running a policy, and deploying the same agent code to a physical SO-101. That factory resolves a name against a registry of arms, humanoids, mobile bases, and hands, so the SO-100 used throughout this post is one of many supported embodiments. The robot catalog lists every robot the factory knows about. LeRobot's dataset format is already used by over 90,000 datasets and models on the Hub from more than 8,000 publishers…"
           ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "62370045db6bed55",
-      "kind": "article",
-      "title": "Job Seekers Are Racing to AI-Proof Their Résumés",
-      "source": "WSJ",
-      "source_url": "https://www.wsj.com/tech/ai/job-seekers-are-racing-to-ai-proof-their-resumes-f310f43c",
-      "published_at": "2026-08-13T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Job Seekers Are Racing to AI-Proof Their Résumés WSJ",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 401: HTTP Forbidden",
-      "resolved_url": "https://www.wsj.com/tech/ai/job-seekers-are-racing-to-ai-proof-their-resumes-f310f43c",
-      "key_points": [
-        "Job Seekers Are Racing to AI-Proof Their Résumés WSJ"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Job Seekers Are Racing to AI-Proof Their Résumés WSJ"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Job Seekers Are Racing to AI-Proof Their Résumés WSJ"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -4360,6 +4351,47 @@
       "reading_minutes": 1
     },
     {
+      "id": "5fbae84b9d371277",
+      "kind": "article",
+      "title": "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says",
+      "source": "Reuters",
+      "source_url": "https://www.reuters.com/legal/transactional/nvidia-invest-5-billion-ilya-sutskevers-ai-startup-source-says-2026-07-27/",
+      "published_at": "2026-07-27T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Researcher Watch",
+        "Foundation Models",
+        "Leadership"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says Reuters",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 401: HTTP Forbidden",
+      "resolved_url": "https://www.reuters.com/legal/transactional/nvidia-invest-5-billion-ilya-sutskevers-ai-startup-source-says-2026-07-27/",
+      "key_points": [
+        "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says Reuters"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says Reuters"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says Reuters"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "760abd9c11269c2a",
       "kind": "social",
       "title": "Grok Voice ranked first",
@@ -4380,9 +4412,9 @@
       "resolved_url": "https://x.com/elonmusk/status/2090962975587000493",
       "key_points": [
         "Elon Musk @elonmusk Grok Voice ranked first X Freeze @XFreeze Aug 21 Grok Voice Think Fast 2.0 just ranked #1 on Artificial Analysis’ new Speech Agent Arena for highest Task Success Rate This benchmark actually measures what matters Real people talk to hidden voice agents across practical scenarios.",
-        "Task Success Rate tracks whether the AI Show more 12:43 AM · Aug 22, 2026 2.4M Views 571 907 5.4K 212 Serdagreat ⚔️ @DasaelR Aug 22 Kekius maximus ranks 1st, a name like that is destined for greatness!",
-        "5 8 27 365 X Girls @thesoragirls Aug 22 Grok Voice Think Fast 2.0 is a beast!",
-        "X Girls @thesoragirls Aug 19 When your voice model hits 99% and still thinks faster than the competition 🔥 00:00 4 11 228"
+        "Task Success Rate tracks whether the AI Show more 12:43 AM · Aug 22, 2026 2.4M Views 583 959 5.7K 216 Serdagreat ⚔️ @DasaelR Aug 22 Kekius maximus ranks 1st, a name like that is destined for greatness!",
+        "5 8 27 370 X Girls @thesoragirls Aug 22 Grok Voice Think Fast 2.0 is a beast!",
+        "X Girls @thesoragirls Aug 19 When your voice model hits 99% and still thinks faster than the competition 🔥 00:00 4 11 229"
       ],
       "sections": [
         {
@@ -4393,17 +4425,17 @@
           "title": "公开页面要点",
           "bullets": [
             "Elon Musk @elonmusk Grok Voice ranked first X Freeze @XFreeze Aug 21 Grok Voice Think Fast 2.0 just ranked #1 on Artificial Analysis’ new Speech Agent Arena for highest Task Success Rate This benchmark actually measures what matters Real people talk to hidden voice agents across practical scenarios.",
-            "Task Success Rate tracks whether the AI Show more 12:43 AM · Aug 22, 2026 2.4M Views 571 907 5.4K 212 Serdagreat ⚔️ @DasaelR Aug 22 Kekius maximus ranks 1st, a name like that is destined for greatness!",
-            "5 8 27 365 X Girls @thesoragirls Aug 22 Grok Voice Think Fast 2.0 is a beast!",
-            "X Girls @thesoragirls Aug 19 When your voice model hits 99% and still thinks faster than the competition 🔥 00:00 4 11 228"
+            "Task Success Rate tracks whether the AI Show more 12:43 AM · Aug 22, 2026 2.4M Views 583 959 5.7K 216 Serdagreat ⚔️ @DasaelR Aug 22 Kekius maximus ranks 1st, a name like that is destined for greatness!",
+            "5 8 27 370 X Girls @thesoragirls Aug 22 Grok Voice Think Fast 2.0 is a beast!",
+            "X Girls @thesoragirls Aug 19 When your voice model hits 99% and still thinks faster than the competition 🔥 00:00 4 11 229"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok Voice ranked first X Freeze @XFreeze Aug 21 Grok Voice Think Fast 2.0 just ranked #1 on Artificial Analysis’ new Speech Agent Arena for highest Task Success Rate This benchmark actually measures what matters Real people talk to hidden voice agents across practical scenarios. Task Success Rate tracks whether the AI Show more 12:43 AM · Aug 22, 2026 2.4M Views 571 907 5.4K 212",
-            "Serdagreat ⚔️ @DasaelR Aug 22 Kekius maximus ranks 1st, a name like that is destined for greatness! 5 8 27 365",
-            "X Girls @thesoragirls Aug 22 Grok Voice Think Fast 2.0 is a beast! X Girls @thesoragirls Aug 19 When your voice model hits 99% and still thinks faster than the competition 🔥 00:00 4 11 228"
+            "Elon Musk @elonmusk Grok Voice ranked first X Freeze @XFreeze Aug 21 Grok Voice Think Fast 2.0 just ranked #1 on Artificial Analysis’ new Speech Agent Arena for highest Task Success Rate This benchmark actually measures what matters Real people talk to hidden voice agents across practical scenarios. Task Success Rate tracks whether the AI Show more 12:43 AM · Aug 22, 2026 2.4M Views 583 959 5.7K 216",
+            "Serdagreat ⚔️ @DasaelR Aug 22 Kekius maximus ranks 1st, a name like that is destined for greatness! 5 8 27 370",
+            "X Girls @thesoragirls Aug 22 Grok Voice Think Fast 2.0 is a beast! X Girls @thesoragirls Aug 19 When your voice model hits 99% and still thinks faster than the competition 🔥 00:00 4 11 229"
           ]
         }
       ],
@@ -4445,52 +4477,9 @@
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Try Grok 4.6 using the Grok Build harness or Cursor app for max usefulness X.ai/build Tesla Owners Silicon Valley @teslaownersSV Aug 21 BREAKING: Grok 4.6 just took the #1 spot on CursorBench 3.2 — while delivering a massive efficiency advantage. ⚡💻 • Grok 4.6 Extra High — 70.8% | $2.81/task • Fable 5 Max — 70.5% | $17.32/task • Opus 5 Max — 70.0% | $8.23/task • GPT-5.6 Sol Max — 67.2% | $5.69/task Grok Show more 9:33 PM · Aug 21, 2026 2.1M Views 471 787 3.7K 188",
+            "Elon Musk @elonmusk Try Grok 4.6 using the Grok Build harness or Cursor app for max usefulness X.ai/build Tesla Owners Silicon Valley @teslaownersSV Aug 21 BREAKING: Grok 4.6 just took the #1 spot on CursorBench 3.2 — while delivering a massive efficiency advantage. ⚡💻 • Grok 4.6 Extra High — 70.8% | $2.81/task • Fable 5 Max — 70.5% | $17.32/task • Opus 5 Max — 70.0% | $8.23/task • GPT-5.6 Sol Max — 67.2% | $5.69/task Grok Show more 9:33 PM · Aug 21, 2026 2.1M Views 479 824 3.9K 195",
             "Tesla Owners Silicon Valley @teslaownersSV Aug 21 it's a game changer 6 19 4.2K",
-            "Vet KUSAMA ™ @vetkusama Aug 21 Dear @ elonmusk , Grok is sometimes overly aggressive, and most of the time its acts the way its wants, not the way I want to hear it. Why 😅😅😅😅 1 17 526"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "76936586d0c6af26",
-      "kind": "social",
-      "title": "Wider access to Grok @bot",
-      "source": "x.com",
-      "source_url": "https://x.com/elonmusk/status/2090853842552578523",
-      "published_at": "2026-08-21T17:29:36Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Wider access to Grok @Bot",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/elonmusk/status/2090853842552578523",
-      "key_points": [
-        "HandsomeHank @HandsomeHank_ Aug 21 Now I really have to upgrade to SuperGrok Plus 🤣 Small favor if possible... can you please have an upgrade path to SuperGrok Plus for those with X Premium+ so we don't have to get a separate subscription for Super Grok Plus since we get SuperGrok with X Premium+ 5 1 27 1.2K XO @Ortix008 Aug 21 I think super grok plus should…"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Wider access to Grok @Bot"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "HandsomeHank @HandsomeHank_ Aug 21 Now I really have to upgrade to SuperGrok Plus 🤣 Small favor if possible... can you please have an upgrade path to SuperGrok Plus for those with X Premium+ so we don't have to get a separate subscription for Super Grok Plus since we get SuperGrok with X Premium+ 5 1 27 1.2K XO @Ortix008 Aug 21 I think super grok plus should…"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "HandsomeHank @HandsomeHank_ Aug 21 Now I really have to upgrade to SuperGrok Plus 🤣 Small favor if possible... can you please have an upgrade path to SuperGrok Plus for those with X Premium+ so we don't have to get a separate subscription for Super Grok Plus since we get SuperGrok with X Premium+ 5 1 27 1.2K",
-            "XO @Ortix008 Aug 21 I think super grok plus should be included to premium plus 𝕏 users 1 1 14 438"
+            "Vet KUSAMA ™ @vetkusama Aug 21 Dear @ elonmusk , Grok is sometimes overly aggressive, and most of the time its acts the way its wants, not the way I want to hear it. Why 😅😅😅😅 1 17 533"
           ]
         }
       ],
@@ -4532,8 +4521,8 @@
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok 4.6 on extra high thinking mode now achieves #1 score on CursorBench! X Freeze @XFreeze Aug 21 Grok 4.6 just took the #1 spot on CursorBench 3.2.....and the efficiency is insane Here's the cost comparison: • Grok 4.6 Extra High — 70.8% | $2.81/task • Fable 5 Max — 70.5% | $17.32/task • Opus 5 Max — 70.0% | $8.23/task • GPT-5.6 Sol Max — 67.2% | $5.69/task Grok Show more 4:36 PM · Aug 21, 2026 29.3M Views 1.7K 1.8K 16K 912",
-            "hadesdevs @hadesdevs Aug 21 \"My model on the bench of the company I bought is 1st\" GIF 3 2 78 5.7K",
+            "Elon Musk @elonmusk Grok 4.6 on extra high thinking mode now achieves #1 score on CursorBench! X Freeze @XFreeze Aug 21 Grok 4.6 just took the #1 spot on CursorBench 3.2.....and the efficiency is insane Here's the cost comparison: • Grok 4.6 Extra High — 70.8% | $2.81/task • Fable 5 Max — 70.5% | $17.32/task • Opus 5 Max — 70.0% | $8.23/task • GPT-5.6 Sol Max — 67.2% | $5.69/task Grok Show more 4:36 PM · Aug 21, 2026 29.4M Views 1.7K 1.9K 16K 918",
+            "hadesdevs @hadesdevs Aug 21 \"My model on the bench of the company I bought is 1st\" GIF 3 2 80 5.8K",
             "Gabi ∞ @GabiiAH11 Aug 21 cursor made the bench and cursor's model wins it, shocking absolutely no one who's watched this movie before 2 2 37 2.6K"
           ]
         }
@@ -4690,56 +4679,9 @@
       "reading_minutes": 1
     },
     {
-      "id": "c896be4c877d555d",
-      "kind": "article",
-      "title": "New York AI startup plans Connecticut expansion after CI investment",
-      "source": "Hartford Business Journal",
-      "source_url": "https://hartfordbusiness.com/article/new-york-ai-startup-plans-connecticut-expansion-after-ci-investment/",
-      "published_at": "2026-08-11T11:30:02Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "New York AI startup plans Connecticut expansion after CI investment Hartford Business Journal",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://hartfordbusiness.com/article/new-york-ai-startup-plans-connecticut-expansion-after-ci-investment/",
-      "key_points": [
-        "Industry: E-commerce Technology Top Executive: Ryan Urban, Founder and CEO HQ: Brooklyn, New York Employees: Just under 100 Total Funding Raised: $37.5 million in financing, incentives and committed capital Website: www.queen.one A Brooklyn, New York-based e-commerce technology startup said it plans to expand its Connecticut workforce after securing an…",
-        "Queen One , which develops artificial intelligence software for online retailers, has received an initial $1 million investment from the state’s quasi-public venture capital arm.",
-        "CI has committed a second $1 million if the company meets undisclosed job-growth and other expansion milestones in Connecticut."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "New York AI startup plans Connecticut expansion after CI investment Hartford Business Journal"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Industry: E-commerce Technology Top Executive: Ryan Urban, Founder and CEO HQ: Brooklyn, New York Employees: Just under 100 Total Funding Raised: $37.5 million in financing, incentives and committed capital Website: www.queen.one A Brooklyn, New York-based e-commerce technology startup said it plans to expand its Connecticut workforce after securing an…",
-            "Queen One , which develops artificial intelligence software for online retailers, has received an initial $1 million investment from the state’s quasi-public venture capital arm.",
-            "CI has committed a second $1 million if the company meets undisclosed job-growth and other expansion milestones in Connecticut."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Queen One Inc. Industry: E-commerce Technology Top Executive: Ryan Urban, Founder and CEO HQ: Brooklyn, New York Employees: Just under 100 Total Funding Raised: $37.5 million in financing, incentives and committed capital Website: www.queen.one",
-            "A Brooklyn, New York-based e-commerce technology startup said it plans to expand its Connecticut workforce after securing an investment of up to $2 million from Connecticut Innovations (CI), with much of the funding tied to future hiring in the state.",
-            "Queen One , which develops artificial intelligence software for online retailers, has received an initial $1 million investment from the state’s quasi-public venture capital arm. CI has committed a second $1 million if the company meets undisclosed job-growth and other expansion milestones in Connecticut."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "066f2bf163daeff9",
       "kind": "article",
-      "title": "Six Months, $74.1 Million: Westlake University Professor's Embodied AI Startup Secures Four Funding Rounds",
+      "title": "Six Months, $74.1 Million: Westlake University Professor's Embodied AI Startup Secures Four Funding Rounds — BigGo Finance",
       "source": "finance.biggo.com",
       "source_url": "https://finance.biggo.com/news/3987db46-87d4-41f6-9b79-19ff0b355b4d",
       "published_at": "2026-08-11T07:00:00Z",
@@ -4752,11 +4694,14 @@
       "verification": "媒体或公开网页",
       "summary": "Six Months, $74.1 Million: Westlake University Professor's Embodied AI Startup Secures Four Funding Rounds finance.biggo.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "<urlopen error timed out>",
+      "fetch_status": "public-page-excerpt",
       "resolved_url": "https://finance.biggo.com/news/3987db46-87d4-41f6-9b79-19ff0b355b4d",
       "key_points": [
-        "Six Months, $74.1 Million: Westlake University Professor's Embodied AI Startup Secures Four Funding Rounds finance.biggo.com"
+        "As the humanoid robot race pivots from a battle over hardware specifications to a contest over foundational model capabilities, an embodied AI company founded by a Westlake University professor has completed four funding rounds in just six months, propelled by its unique full-stack, self-developed approach.",
+        "Embodied AI general-purpose brain company Westlake Robotics has officially closed its Series A funding round.",
+        "With this, the company has completed four rounds of financing in six months, totaling 500 million yuan (approximately $74.1 million).",
+        "The investor lineup includes prominent institutions such as SAIF Partners, Xiaomiao Langcheng, Henan Investment Group Huirong Fund, and Haiyuan Fund, creating a shareholder matrix that brings together state-owned capital, industrial capital, and top-tier venture capital.",
+        "This high-frequency fundraising pace is rare in the embodied AI sector."
       ],
       "sections": [
         {
@@ -4766,23 +4711,31 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Six Months, $74.1 Million: Westlake University Professor's Embodied AI Startup Secures Four Funding Rounds finance.biggo.com"
+            "As the humanoid robot race pivots from a battle over hardware specifications to a contest over foundational model capabilities, an embodied AI company founded by a Westlake University professor has completed four funding rounds in just six months, propelled by its unique full-stack, self-developed approach.",
+            "Embodied AI general-purpose brain company Westlake Robotics has officially closed its Series A funding round.",
+            "With this, the company has completed four rounds of financing in six months, totaling 500 million yuan (approximately $74.1 million).",
+            "The investor lineup includes prominent institutions such as SAIF Partners, Xiaomiao Langcheng, Henan Investment Group Huirong Fund, and Haiyuan Fund, creating a shareholder matrix that brings together state-owned capital, industrial capital, and top-tier venture capital.",
+            "This high-frequency fundraising pace is rare in the embodied AI sector."
           ]
         },
         {
           "title": "原文短摘录",
-          "paragraphs": []
+          "paragraphs": [
+            "As the humanoid robot race pivots from a battle over hardware specifications to a contest over foundational model capabilities, an embodied AI company founded by a Westlake University professor has completed four funding rounds in just six months, propelled by its unique full-stack, self-developed approach.",
+            "Embodied AI general-purpose brain company Westlake Robotics has officially closed its Series A funding round. With this, the company has completed four rounds of financing in six months, totaling 500 million yuan (approximately $74.1 million). The investor lineup includes prominent institutions such as SAIF Partners, Xiaomiao Langcheng, Henan Investment Group Huirong Fund, and Haiyuan Fund, creating a shareholder matrix that brings together state-owned capital, industrial capital, and top-tier venture capital.",
+            "This high-frequency fundraising pace is rare in the embodied AI sector. The latest round closed less than a month after the previous one, with the intensive capital injections underscoring strong market recognition of its technological roadmap and commercialization capabilities."
+          ]
         }
       ],
       "reading_minutes": 1
     },
     {
-      "id": "9dcd2ee28543e666",
+      "id": "36f3963d49a0b943",
       "kind": "article",
-      "title": "World-OKTA opens AI startup course ahead of Shenzhen finals",
-      "source": "Aju Press",
-      "source_url": "https://www.ajupress.com/view/20260810171407909",
-      "published_at": "2026-08-10T08:23:14Z",
+      "title": "Ex-Meta AI research director raises $10.25M from Trilogy and Madrona for stealth physical AI startup",
+      "source": "GeekWire",
+      "source_url": "https://www.geekwire.com/2026/ex-meta-ai-research-director-raises-10-25m-from-trilogy-and-madrona-for-stealth-physical-ai-startup/",
+      "published_at": "2026-08-11T07:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -4790,30 +4743,38 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "SEOUL, August 10 (AJP) -The World Federation of Overseas Korean Traders Associations, known as World-OKTA, is recruiting participants for a four-day online course on agentic AI, the classroom stage of a startup competition that culminates in Shenzhen this autumn.The training runs from Aug. 18 to Aug. 21 on Zoom, Korea time, with applications closin...",
+      "summary": "Kevin Carlberg, who led AI research teams at Meta focused on wearable computing, has raised $10.25 million for Noosphere Labs, a stealth startup working on what it calls \"human-centered physical intelligence.\" Trilogy Equity Partners led the round, with major participation from Madrona.",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.ajupress.com/view/20260810171407909",
+      "resolved_url": "https://www.geekwire.com/2026/ex-meta-ai-research-director-raises-10-25m-from-trilogy-and-madrona-for-stealth-physical-ai-startup/",
       "key_points": [
-        "World-OKTA wraps up entrepreneurship training for global AI startup hopefuls World-OKTA signs MOU with Guangdong trade bodies ahead of October expo China's YMTC moves toward $4.9 billion IPO as memory chip push accelerates"
+        "A former Meta AI research director has raised $10.25 million for a Seattle-area startup working on what it calls “human-centered physical intelligence” — AI designed to help people interact with and make sense of the physical world, beyond text and images on screens.",
+        "A company called Noosphere Labs, led by Kevin Carlberg , disclosed the financing in a Form D filed Monday with the Securities and Exchange Commission.",
+        "Reached via phone by GeekWire on Monday evening, Carlberg said he wasn’t yet ready to share details about the startup.",
+        "Trilogy Equity Partners confirmed that it led the round.",
+        "One of the directors listed in the Form D filing is Amy McCullough , a managing director at the Bellevue-based venture firm."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "SEOUL, August 10 (AJP) -The World Federation of Overseas Korean Traders Associations, known as World-OKTA, is recruiting participants for a four-day online course on agentic AI, the classroom stage of a startup competition that culminates in Shenzhen this autumn.The training runs from Aug. 18 to Aug. 21 on Zoom, Korea time, with applications closin..."
+          "body": "Kevin Carlberg, who led AI research teams at Meta focused on wearable computing, has raised $10.25 million for Noosphere Labs, a stealth startup working on what it calls \"human-centered physical intelligence.\" Trilogy Equity Partners led the round, with major participation from Madrona."
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "World-OKTA wraps up entrepreneurship training for global AI startup hopefuls World-OKTA signs MOU with Guangdong trade bodies ahead of October expo China's YMTC moves toward $4.9 billion IPO as memory chip push accelerates"
+            "A former Meta AI research director has raised $10.25 million for a Seattle-area startup working on what it calls “human-centered physical intelligence” — AI designed to help people interact with and make sense of the physical world, beyond text and images on screens.",
+            "A company called Noosphere Labs, led by Kevin Carlberg , disclosed the financing in a Form D filed Monday with the Securities and Exchange Commission.",
+            "Reached via phone by GeekWire on Monday evening, Carlberg said he wasn’t yet ready to share details about the startup.",
+            "Trilogy Equity Partners confirmed that it led the round.",
+            "One of the directors listed in the Form D filing is Amy McCullough , a managing director at the Bellevue-based venture firm."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "World-OKTA wraps up entrepreneurship training for global AI startup hopefuls",
-            "World-OKTA signs MOU with Guangdong trade bodies ahead of October expo",
-            "China's YMTC moves toward $4.9 billion IPO as memory chip push accelerates"
+            "A former Meta AI research director has raised $10.25 million for a Seattle-area startup working on what it calls “human-centered physical intelligence” — AI designed to help people interact with and make sense of the physical world, beyond text and images on screens.",
+            "A company called Noosphere Labs, led by Kevin Carlberg , disclosed the financing in a Form D filed Monday with the Securities and Exchange Commission. Reached via phone by GeekWire on Monday evening, Carlberg said he wasn’t yet ready to share details about the startup.",
+            "Trilogy Equity Partners confirmed that it led the round. One of the directors listed in the Form D filing is Amy McCullough , a managing director at the Bellevue-based venture firm. Madrona, the Seattle VC firm, separately confirmed that it had “major participation” in the round."
           ]
         }
       ],
@@ -5226,6 +5187,53 @@
       "reading_minutes": 1
     },
     {
+      "id": "4e74d581a515c9e1",
+      "kind": "article",
+      "title": "Meet Ditto: the AI startup trying to reinvent college dating",
+      "source": "Mashable",
+      "source_url": "https://mashable.com/life/ditto-ai-matchmaker-for-college-students",
+      "published_at": "2026-07-30T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Meet Ditto: the AI startup trying to reinvent college dating Mashable",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://mashable.com/life/ditto-ai-matchmaker-for-college-students",
+      "key_points": [
+        "Hinge's founder recently left the app to start an AI matchmaking service , but he isn't the only one with that startup idea.",
+        "Ditto is an AI matchmaker specifically for college students — and it does all the work in iMessage. \"For the past 20 years, we've connected in primitive ways.",
+        "We manually swipe,\" Ditto AI's manifesto reads on its website. \"Spending hours trying to find the right people — because all we have are static and dead profiles.\" Ditto was founded by Eric Liu and Allen Wang, two University of California, Berkeley students who dropped out around four years ago to create a new consumer product, Liu said in an interview with…"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Meet Ditto: the AI startup trying to reinvent college dating Mashable"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Hinge's founder recently left the app to start an AI matchmaking service , but he isn't the only one with that startup idea.",
+            "Ditto is an AI matchmaker specifically for college students — and it does all the work in iMessage. \"For the past 20 years, we've connected in primitive ways.",
+            "We manually swipe,\" Ditto AI's manifesto reads on its website. \"Spending hours trying to find the right people — because all we have are static and dead profiles.\" Ditto was founded by Eric Liu and Allen Wang, two University of California, Berkeley students who dropped out around four years ago to create a new consumer product, Liu said in an interview with…"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Hinge's founder recently left the app to start an AI matchmaking service , but he isn't the only one with that startup idea. Ditto is an AI matchmaker specifically for college students — and it does all the work in iMessage.",
+            "\"For the past 20 years, we've connected in primitive ways. We manually scroll. We manually search. We manually swipe,\" Ditto AI's manifesto reads on its website. \"Spending hours trying to find the right people — because all we have are static and dead profiles.\"",
+            "Ditto was founded by Eric Liu and Allen Wang, two University of California, Berkeley students who dropped out around four years ago to create a new consumer product, Liu said in an interview with Mashable."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "f0cf53374d9b0d3c",
       "kind": "article",
       "title": "This AI startup has roughly 50 employees, no product and has never published a word of research. It's worth $32 billion",
@@ -5538,7 +5546,7 @@
       "id": "aafea8a72cdde9c1",
       "kind": "article",
       "title": "SAG-AFTRA’s Jeffrey Bennett Discusses Generative AI, Copyright and Protecting Human Performance",
-      "source": "sag-aftra",
+      "source": "SAG-AFTRA",
       "source_url": "https://www.sagaftra.org/sag-aftras-jeffrey-bennett-discusses-generative-ai-copyright-and-protecting-human-performance",
       "published_at": "2026-08-10T12:00:00Z",
       "authors": [],
@@ -5548,23 +5556,23 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "SAG-AFTRA’s Jeffrey Bennett Discusses Generative AI, Copyright and Protecting Human Performance sag-aftra",
+      "summary": "SAG-AFTRA’s Jeffrey Bennett Discusses Generative AI, Copyright and Protecting Human Performance SAG-AFTRA",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "summary-only",
       "fetch_note": "HTTP Error 403: Forbidden",
       "resolved_url": "https://www.sagaftra.org/sag-aftras-jeffrey-bennett-discusses-generative-ai-copyright-and-protecting-human-performance",
       "key_points": [
-        "SAG-AFTRA’s Jeffrey Bennett Discusses Generative AI, Copyright and Protecting Human Performance sag-aftra"
+        "SAG-AFTRA’s Jeffrey Bennett Discusses Generative AI, Copyright and Protecting Human Performance SAG-AFTRA"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "SAG-AFTRA’s Jeffrey Bennett Discusses Generative AI, Copyright and Protecting Human Performance sag-aftra"
+          "body": "SAG-AFTRA’s Jeffrey Bennett Discusses Generative AI, Copyright and Protecting Human Performance SAG-AFTRA"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "SAG-AFTRA’s Jeffrey Bennett Discusses Generative AI, Copyright and Protecting Human Performance sag-aftra"
+            "SAG-AFTRA’s Jeffrey Bennett Discusses Generative AI, Copyright and Protecting Human Performance SAG-AFTRA"
           ]
         },
         {
