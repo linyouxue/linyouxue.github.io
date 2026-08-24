@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-23T18:47:42Z",
-  "record_count": 132,
+  "generated_at": "2026-08-24T01:57:01Z",
+  "record_count": 131,
   "records": [
     {
       "id": "jacobian-fable-20260720",
@@ -49,7 +49,7 @@
           "paragraphs": [
             "levent @__alpoge__ hello there the jacobian conjecture is false thanx to my close friend akhil for asking about it and my other close friend fable for working during the world cup final ((1+xy)^3 z + y^2 (1+xy) (4+3xy), y + 3 x (1+xy)^2 z + 3 x y^2 (4+3xy), 2 x - 3 x^2 y - x^3 z): \\C^3\\to \\C^3, has jacobian determinant -2, and sends (0, 0, -1/4), (1, -3/2, 13/2), and (-1, 3/2, 13/2) to (-1/4, 0, 0) 2:19 AM · Jul 20, 2026 39.9M Views 1.7K 5.4K 44K 12K",
             "levent @__alpoge__ Jul 20 wolframalpha.com/input?i=Det%5B… jacobian determinant in wolfram alpha wolframalpha.com Det[D[{(1+x y)^3 z + y^2 (1 + x y) (4 + 3x y), y + 3x (1 + x y)^2 z + 3x y^2 (4 + 3x y), 2x - 3x^2... Wolfram|Alpha brings expert-level knowledge and capabilities to the broadest possible range of people—spanning all professions and education levels. 20 53 1.5K 935K levent @__alpoge__ Jul 20 wolframalpha.com/input?i=%28%28… wolframalpha.com/input?i=%28%28… evaluating at two of those points in wolfram alpha wolframalpha.com ((1+x y)^3 z + y^2 (1 + x y) (4 + 3x y), y + 3x (1 + x y)^2 z + 3x y^2 (4 + 3x y), 2x - 3x^2 y -... Wolfram|Alpha brings expert-level knowledge and capabilities to the broadest…",
-            "Aldo Cortesi @cortesi Jul 20 The absolute state of maths. 8 89 1.6K 123K"
+            "Aldo Cortesi @cortesi Jul 20 The absolute state of maths. 8 89 1.6K 124K"
           ]
         }
       ],
@@ -433,6 +433,51 @@
       "reading_minutes": 31
     },
     {
+      "id": "rhb-icml-2026",
+      "kind": "paper",
+      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
+      "source": "OpenReview · arXiv",
+      "source_url": "https://arxiv.org/abs/2605.02964",
+      "published_at": "2026-06-24T00:00:00Z",
+      "authors": [
+        "Kunvar Thaman"
+      ],
+      "venue": "ICML 2026",
+      "tags": [
+        "Reward Hacking",
+        "Agent Safety",
+        "Evaluation"
+      ],
+      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
+      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/rhb-icml-2026.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://arxiv.org/pdf/2605.02964",
+      "key_points": [
+        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
+        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
+        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
+        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
+        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
+        },
+        {
+          "title": "关键结果",
+          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
+        },
+        {
+          "title": "局限与结论",
+          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
+        }
+      ],
+      "reading_minutes": 46
+    },
+    {
       "id": "3a26b92514eab0d8",
       "kind": "article",
       "title": "From Atari to EVE Online: Building on 15 Years of AI Research in Games",
@@ -482,100 +527,6 @@
         }
       ],
       "reading_minutes": 1
-    },
-    {
-      "id": "8303b6755e541fe0",
-      "kind": "article",
-      "title": "Accelerating the frontiers of scientific discovery: Google’s $40M commitment to the Genesis Mission",
-      "source": "Google DeepMind",
-      "source_url": "https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission/",
-      "published_at": "2026-07-22T13:38:54Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "DeepMind",
-        "Official"
-      ],
-      "verification": "官方来源",
-      "summary": "Google is committing $40 million in AI tokens and cloud credits to support the DOE’s Genesis Mission and accelerate groundbreaking scientific discovery.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://cloud.google.com/blog/topics/public-sector/accelerating-frontiers-of-scientific-discovery-40-million-dollar-commitment-genesis-mission",
-      "key_points": [
-        "VP for Science and Strategic Initiatives, Google DeepMind, and Chief Scientist, Google Cloud Empowering an Adaptive, Responsible, Secure, and Intelligent way forward Scientists today face challenges of extraordinary scale and complexity.",
-        "From shaping and simulating the intricate dynamics of fusion plasma, to exploring the vast search space of new materials, to making sense of the exabytes of data pouring out of the world's most advanced experimental facilities.",
-        "The demands on modern research are unprecedented.",
-        "Frontier AI can help address these challenges, while accelerating groundbreaking scientific discoveries."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Google is committing $40 million in AI tokens and cloud credits to support the DOE’s Genesis Mission and accelerate groundbreaking scientific discovery."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "VP for Science and Strategic Initiatives, Google DeepMind, and Chief Scientist, Google Cloud Empowering an Adaptive, Responsible, Secure, and Intelligent way forward Scientists today face challenges of extraordinary scale and complexity.",
-            "From shaping and simulating the intricate dynamics of fusion plasma, to exploring the vast search space of new materials, to making sense of the exabytes of data pouring out of the world's most advanced experimental facilities.",
-            "The demands on modern research are unprecedented.",
-            "Frontier AI can help address these challenges, while accelerating groundbreaking scientific discoveries."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "VP for Science and Strategic Initiatives, Google DeepMind, and Chief Scientist, Google Cloud",
-            "Empowering an Adaptive, Responsible, Secure, and Intelligent way forward",
-            "Scientists today face challenges of extraordinary scale and complexity. From shaping and simulating the intricate dynamics of fusion plasma, to exploring the vast search space of new materials, to making sense of the exabytes of data pouring out of the world's most advanced experimental facilities. The demands on modern research are unprecedented. Frontier AI can help address these challenges, while accelerating groundbreaking scientific discoveries."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "rhb-icml-2026",
-      "kind": "paper",
-      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
-      "source": "OpenReview · arXiv",
-      "source_url": "https://arxiv.org/abs/2605.02964",
-      "published_at": "2026-06-24T00:00:00Z",
-      "authors": [
-        "Kunvar Thaman"
-      ],
-      "venue": "ICML 2026",
-      "tags": [
-        "Reward Hacking",
-        "Agent Safety",
-        "Evaluation"
-      ],
-      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
-      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/rhb-icml-2026.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://arxiv.org/pdf/2605.02964",
-      "key_points": [
-        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
-        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
-        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
-        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
-        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
-        },
-        {
-          "title": "关键结果",
-          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
-        },
-        {
-          "title": "局限与结论",
-          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
-        }
-      ],
-      "reading_minutes": 46
     },
     {
       "id": "eb43f0cc8a6e5921",
@@ -937,6 +888,55 @@
         {
           "title": "原文短摘录",
           "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "8303b6755e541fe0",
+      "kind": "article",
+      "title": "Accelerating the frontiers of scientific discovery: Google’s $40M commitment to the Genesis Mission",
+      "source": "Google DeepMind",
+      "source_url": "https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission/",
+      "published_at": "2026-07-22T13:38:54Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "DeepMind",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "Google is committing $40 million in AI tokens and cloud credits to support the DOE’s Genesis Mission and accelerate groundbreaking scientific discovery.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://cloud.google.com/blog/topics/public-sector/accelerating-frontiers-of-scientific-discovery-40-million-dollar-commitment-genesis-mission",
+      "key_points": [
+        "VP for Science and Strategic Initiatives, Google DeepMind, and Chief Scientist, Google Cloud Empowering an Adaptive, Responsible, Secure, and Intelligent way forward Scientists today face challenges of extraordinary scale and complexity.",
+        "From shaping and simulating the intricate dynamics of fusion plasma, to exploring the vast search space of new materials, to making sense of the exabytes of data pouring out of the world's most advanced experimental facilities.",
+        "The demands on modern research are unprecedented.",
+        "Frontier AI can help address these challenges, while accelerating groundbreaking scientific discoveries."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Google is committing $40 million in AI tokens and cloud credits to support the DOE’s Genesis Mission and accelerate groundbreaking scientific discovery."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "VP for Science and Strategic Initiatives, Google DeepMind, and Chief Scientist, Google Cloud Empowering an Adaptive, Responsible, Secure, and Intelligent way forward Scientists today face challenges of extraordinary scale and complexity.",
+            "From shaping and simulating the intricate dynamics of fusion plasma, to exploring the vast search space of new materials, to making sense of the exabytes of data pouring out of the world's most advanced experimental facilities.",
+            "The demands on modern research are unprecedented.",
+            "Frontier AI can help address these challenges, while accelerating groundbreaking scientific discoveries."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "VP for Science and Strategic Initiatives, Google DeepMind, and Chief Scientist, Google Cloud",
+            "Empowering an Adaptive, Responsible, Secure, and Intelligent way forward",
+            "Scientists today face challenges of extraordinary scale and complexity. From shaping and simulating the intricate dynamics of fusion plasma, to exploring the vast search space of new materials, to making sense of the exabytes of data pouring out of the world's most advanced experimental facilities. The demands on modern research are unprecedented. Frontier AI can help address these challenges, while accelerating groundbreaking scientific discoveries."
+          ]
         }
       ],
       "reading_minutes": 1
@@ -1339,11 +1339,51 @@
       "reading_minutes": 1
     },
     {
+      "id": "f27d9a59d4feadad",
+      "kind": "article",
+      "title": "DeepSeek 发布 新模型,现在支持图片识别了!",
+      "source": "微信公众号 · 非同质前端札记",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1787536578&ver=6923&signature=CStrVWKWcFivzIY5Aw6abFaxT-ldYhxDfKPPSgfTTQQg*b6a9skSEIDylh*dyarnyrGkQBZX6Z-0CdyXZWBSA8nkgo-XFCtUK8JSYUe1*j1fi12Rji4jSxF-RxUNKsw9&new=1",
+      "published_at": "2026-08-24T01:18:34Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "微信公众号",
+        "DeepSeek",
+        "模型"
+      ],
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "summary": "deepseek -v4-flash-vision-exp.它可以描述图片、识别截图中的文字、分析图表,支持 JPEG、PNG、GIF 和 WebP 格式.你可以把截...",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "indexed-summary",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HM-ki2qjU1kNy3KGW2p8O4uxUrW-kvkjjSjBpMW1&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1787536578%26ver%3D6923%26signature%3DCStrVWKWcFivzIY5Aw6abFaxT-ldYhxDfKPPSgfTTQQg%2Ab6a9skSEIDylh%2AdyarnyrGkQBZX6Z-0CdyXZWBSA8nkgo-XFCtUK8JSYUe1%2Aj1fi12Rji4jSxF-RxUNKsw9%26new%3D1",
+      "key_points": [
+        "deepseek -v4-flash-vision-exp.它可以描述图片、识别截图中的文字、分析图表,支持 JPEG、PNG、GIF 和 WebP 格式.你可以把截..."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "deepseek -v4-flash-vision-exp.它可以描述图片、识别截图中的文字、分析图表,支持 JPEG、PNG、GIF 和 WebP 格式.你可以把截..."
+        },
+        {
+          "title": "公开索引摘要",
+          "bullets": [
+            "deepseek -v4-flash-vision-exp.它可以描述图片、识别截图中的文字、分析图表,支持 JPEG、PNG、GIF 和 WebP 格式.你可以把截..."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "ccb875dae9c825f9",
       "kind": "article",
       "title": "DeepSeek 宣布周末取消峰谷定价:AI调度正在从＂找低价＂进化到＂找低峰＂,你跟上了吗?",
       "source": "微信公众号 · 洛思志",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1787510819&ver=6922&signature=QjxLkWk44RXCeS3ngSiZ6vYreoetZECJCjqtz3es8lQNe5NgO2kPIdNtZFxtCcZKUIjJ3P7n02nnj*BDirg*ZvqA1W-qaGK4A1BI14lZqgZH5Wc2b1mlWXGIcCmdUnCd&new=1",
+      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HDFAi2qjO5ns8kHrtJsM4N9KsFMH1eZGUbVXfQOE&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1787510819%26ver%3D6922%26signature%3DQjxLkWk44RXCeS3ngSiZ6vYreoetZECJCjqtz3es8lQNe5NgO2kPIdNtZFxtCcZKUIjJ3P7n02nnj%2ABDirg%2AZvqA1W-qaGK4A1BI14lZqgZH5Wc2b1mlWXGIcCmdUnCd%26new%3D1",
       "published_at": "2026-08-23T15:14:43Z",
       "authors": [],
       "venue": "",
@@ -1379,11 +1419,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "104e92b04f3f2371",
+      "id": "ab902ab7639fcdc1",
       "kind": "article",
       "title": "DeepSeek 官网: 发布 招聘智算中心岗位(硬件)",
       "source": "微信公众号 · 昶睿AI Agent",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1787510819&ver=6922&signature=uzLg*JYkg-ej2TzCkhUK7BfTIrwGGUPIStIiayB24iZY-Iar6h1C36BH8Ie5pAaeJaeCO9VghSfPgqqC4pkHh-0SUX6CWPBx6lTwHpecRmpwUnnuO1VuCB7e6Hel2lBd&new=1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1787536578&ver=6923&signature=CNQRlXOMWNw*gx3cZmFYKYpa1BV9JBs3EM5FvmDgXfqMVmzWaHhBHs2OxrZJVXwi-oQkip2EJxzXxOG*ufMKXWJDGJbewKgSNgSmsb5H5-kitzZqKOdTFhfP3qZZbBpq&new=1",
       "published_at": "2026-08-23T10:43:15Z",
       "authors": [],
       "venue": "",
@@ -1396,7 +1436,7 @@
       "summary": "识别二维码阅读官网原文职位描述职位名称:数据中心团队 职能类型:运维 工作地点:浙江·杭州市、 北京市、 内蒙古·乌兰察布市...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HDFAi2qjqTUW1ViBAoL-zO1aLUDL72WujN1lpWLP&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1787510819%26ver%3D6922%26signature%3DuzLg%2AJYkg-ej2TzCkhUK7BfTIrwGGUPIStIiayB24iZY-Iar6h1C36BH8Ie5pAaeJaeCO9VghSfPgqqC4pkHh-0SUX6CWPBx6lTwHpecRmpwUnnuO1VuCB7e6Hel2lBd%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HM-ki2qjW_9VUVPu3xUOIxAP1PgshcjeXnBE7Re_&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1787536578%26ver%3D6923%26signature%3DCNQRlXOMWNw%2Agx3cZmFYKYpa1BV9JBs3EM5FvmDgXfqMVmzWaHhBHs2OxrZJVXwi-oQkip2EJxzXxOG%2AufMKXWJDGJbewKgSNgSmsb5H5-kitzZqKOdTFhfP3qZZbBpq%26new%3D1",
       "key_points": [
         "识别二维码阅读官网原文职位描述职位名称:数据中心团队 职能类型:运维 工作地点:浙江·杭州市、 北京市、 内蒙古·乌兰察布市..."
       ],
@@ -1929,46 +1969,6 @@
           "title": "公开索引摘要",
           "bullets": [
             "终于等到了, DeepSeek 上线了一款面向Agent 时代的多模态模型: deepseek -v4-flash-vision-exp.从官方 公布 的 Benchmark 来看,这..."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "5ef982b1eda7560a",
-      "kind": "article",
-      "title": "DeepSeek 发布 视觉模型,V4用户等来了睁眼时刻",
-      "source": "微信公众号 · Python工作圈",
-      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HNieiGqjTK7XKmTqiD919Ck14_Z_n_ovC7Nekk5_&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1787338442%26ver%3D6918%26signature%3DUsIJlVmVpY6hxT34PxWyzkC4o2AwE5YAzKe7YUOkHcwyPNGEKH84B7HFx7tX%2AqFvtq30zWBO6m%2A5oT3nS0LUKQPpA48mT1ubdIzzmRnXfnbzRoLDV7EnR0vFnvG5PscP%26new%3D1",
-      "published_at": "2026-08-21T13:39:50Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "微信公众号",
-        "DeepSeek",
-        "模型"
-      ],
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "summary": "视觉,是下一场排位赛的入场券把这次 发布 放到更大的背景里看,其实是 DeepSeek 在回应一个行业趋势.纯文本模型的差距正在被拉...",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HNieiGqjTK7XKmTqiD919Ck14_Z_n_ovC7Nekk5_&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1787338442%26ver%3D6918%26signature%3DUsIJlVmVpY6hxT34PxWyzkC4o2AwE5YAzKe7YUOkHcwyPNGEKH84B7HFx7tX%2AqFvtq30zWBO6m%2A5oT3nS0LUKQPpA48mT1ubdIzzmRnXfnbzRoLDV7EnR0vFnvG5PscP%26new%3D1",
-      "key_points": [
-        "视觉,是下一场排位赛的入场券把这次 发布 放到更大的背景里看,其实是 DeepSeek 在回应一个行业趋势.纯文本模型的差距正在被拉..."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "视觉,是下一场排位赛的入场券把这次 发布 放到更大的背景里看,其实是 DeepSeek 在回应一个行业趋势.纯文本模型的差距正在被拉..."
-        },
-        {
-          "title": "公开索引摘要",
-          "bullets": [
-            "视觉,是下一场排位赛的入场券把这次 发布 放到更大的背景里看,其实是 DeepSeek 在回应一个行业趋势.纯文本模型的差距正在被拉..."
           ]
         },
         {
@@ -2632,6 +2632,55 @@
       "reading_minutes": 1
     },
     {
+      "id": "4a513ae357635e92",
+      "kind": "article",
+      "title": "Evolve your marketing with new AI tools",
+      "source": "Google AI",
+      "source_url": "https://blog.google/products/ads-commerce/google-ads-analytics-ai-updates/",
+      "published_at": "2026-08-10T14:30:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Google",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "Advisor UI in Google Ads and Google Analytics",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://blog.google/products/ads-commerce/google-ads-analytics-ai-updates/",
+      "key_points": [
+        "We’re adding AI and agentic experiences across Google Ads and Google Analytics to simplify your workflow and expedite your path to business growth.",
+        "Google is rolling out new artificial intelligence tools in Google Ads and Google Analytics to help you uncover insights and act faster.",
+        "You can now use AI-powered summaries on your homepages, create visual reports with simple text prompts, and benchmark your performance against similar businesses.",
+        "Log in to your accounts today to explore these new features and refine your marketing strategy. \"Evolve your marketing with new AI tools\" shows how Google’s AI helps you grow."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Advisor UI in Google Ads and Google Analytics"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "We’re adding AI and agentic experiences across Google Ads and Google Analytics to simplify your workflow and expedite your path to business growth.",
+            "Google is rolling out new artificial intelligence tools in Google Ads and Google Analytics to help you uncover insights and act faster.",
+            "You can now use AI-powered summaries on your homepages, create visual reports with simple text prompts, and benchmark your performance against similar businesses.",
+            "Log in to your accounts today to explore these new features and refine your marketing strategy. \"Evolve your marketing with new AI tools\" shows how Google’s AI helps you grow."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "We’re adding AI and agentic experiences across Google Ads and Google Analytics to simplify your workflow and expedite your path to business growth.",
+            "Google is rolling out new artificial intelligence tools in Google Ads and Google Analytics to help you uncover insights and act faster. You can now use AI-powered summaries on your homepages, create visual reports with simple text prompts, and benchmark your performance against similar businesses. Log in to your accounts today to explore these new features and refine your marketing strategy.",
+            "\"Evolve your marketing with new AI tools\" shows how Google’s AI helps you grow."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "3efbd85cd692f350",
       "kind": "article",
       "title": "Closing the data loop in AI-driven drug discovery",
@@ -2684,55 +2733,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "4a513ae357635e92",
-      "kind": "article",
-      "title": "Evolve your marketing with new AI tools",
-      "source": "Google AI",
-      "source_url": "https://blog.google/products/ads-commerce/google-ads-analytics-ai-updates/",
-      "published_at": "2026-08-10T14:30:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Google",
-        "Official"
-      ],
-      "verification": "官方来源",
-      "summary": "Advisor UI in Google Ads and Google Analytics",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://blog.google/products/ads-commerce/google-ads-analytics-ai-updates/",
-      "key_points": [
-        "We’re adding AI and agentic experiences across Google Ads and Google Analytics to simplify your workflow and expedite your path to business growth.",
-        "Google is rolling out new artificial intelligence tools in Google Ads and Google Analytics to help you uncover insights and act faster.",
-        "You can now use AI-powered summaries on your homepages, create visual reports with simple text prompts, and benchmark your performance against similar businesses.",
-        "Log in to your accounts today to explore these new features and refine your marketing strategy. \"Evolve your marketing with new AI tools\" shows how Google’s AI helps you grow."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Advisor UI in Google Ads and Google Analytics"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "We’re adding AI and agentic experiences across Google Ads and Google Analytics to simplify your workflow and expedite your path to business growth.",
-            "Google is rolling out new artificial intelligence tools in Google Ads and Google Analytics to help you uncover insights and act faster.",
-            "You can now use AI-powered summaries on your homepages, create visual reports with simple text prompts, and benchmark your performance against similar businesses.",
-            "Log in to your accounts today to explore these new features and refine your marketing strategy. \"Evolve your marketing with new AI tools\" shows how Google’s AI helps you grow."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "We’re adding AI and agentic experiences across Google Ads and Google Analytics to simplify your workflow and expedite your path to business growth.",
-            "Google is rolling out new artificial intelligence tools in Google Ads and Google Analytics to help you uncover insights and act faster. You can now use AI-powered summaries on your homepages, create visual reports with simple text prompts, and benchmark your performance against similar businesses. Log in to your accounts today to explore these new features and refine your marketing strategy.",
-            "\"Evolve your marketing with new AI tools\" shows how Google’s AI helps you grow."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "sam-altman-gpt-live-20260708",
       "kind": "social",
       "title": "Sam Altman 预告 ChatGPT 新一代实时语音 GPT-live",
@@ -2753,7 +2753,7 @@
       "resolved_url": "https://x.com/sama/status/2074909079450050629",
       "key_points": [
         "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
-        "5:30 PM · Jul 8, 2026 762.6K Views 932 518 11K 774 Jenny @suomi55 Jul 8 Are you kidding us?",
+        "5:30 PM · Jul 8, 2026 762.6K Views 932 518 11K 773 Jenny @suomi55 Jul 8 Are you kidding us?",
         "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
         "You are promoting something here that you yourself have taken away from the users!",
         "#keep4o #BringBack4o #OpenSource4o 20 13 193 13K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.8K"
@@ -2767,7 +2767,7 @@
           "title": "公开页面要点",
           "bullets": [
             "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
-            "5:30 PM · Jul 8, 2026 762.6K Views 932 518 11K 774 Jenny @suomi55 Jul 8 Are you kidding us?",
+            "5:30 PM · Jul 8, 2026 762.6K Views 932 518 11K 773 Jenny @suomi55 Jul 8 Are you kidding us?",
             "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
             "You are promoting something here that you yourself have taken away from the users!",
             "#keep4o #BringBack4o #OpenSource4o 20 13 193 13K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.8K"
@@ -2776,7 +2776,7 @@
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 762.6K Views 932 518 11K 774",
+            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 762.6K Views 932 518 11K 773",
             "Jenny @suomi55 Jul 8 Are you kidding us? „it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o! You are promoting something here that you yourself have taken away from the users! That’s disgusting! #keep4o #BringBack4o #OpenSource4o 20 13 193 13K",
             "David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.8K"
           ]
@@ -3621,7 +3621,7 @@
       "id": "78d60b903b5f1722",
       "kind": "article",
       "title": "AI Pioneer Fei-Fei Li Warns of Risks From Growing Tech Backlash",
-      "source": "Bloomberg.com",
+      "source": "Bloomberg",
       "source_url": "https://www.bloomberg.com/news/articles/2026-08-19/ai-pioneer-fei-fei-li-warns-of-risks-from-growing-tech-backlash",
       "published_at": "2026-08-19T12:00:00Z",
       "authors": [],
@@ -3632,23 +3632,23 @@
         "World Models"
       ],
       "verification": "媒体或公开网页",
-      "summary": "AI Pioneer Fei-Fei Li Warns of Risks From Growing Tech Backlash Bloomberg.com",
+      "summary": "AI Pioneer Fei-Fei Li Warns of Risks From Growing Tech Backlash Bloomberg",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "summary-only",
       "fetch_note": "HTTP Error 403: Forbidden",
       "resolved_url": "https://www.bloomberg.com/news/articles/2026-08-19/ai-pioneer-fei-fei-li-warns-of-risks-from-growing-tech-backlash",
       "key_points": [
-        "AI Pioneer Fei-Fei Li Warns of Risks From Growing Tech Backlash Bloomberg.com"
+        "AI Pioneer Fei-Fei Li Warns of Risks From Growing Tech Backlash Bloomberg"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "AI Pioneer Fei-Fei Li Warns of Risks From Growing Tech Backlash Bloomberg.com"
+          "body": "AI Pioneer Fei-Fei Li Warns of Risks From Growing Tech Backlash Bloomberg"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "AI Pioneer Fei-Fei Li Warns of Risks From Growing Tech Backlash Bloomberg.com"
+            "AI Pioneer Fei-Fei Li Warns of Risks From Growing Tech Backlash Bloomberg"
           ]
         },
         {
@@ -4010,7 +4010,7 @@
       "id": "8fad5f96cf88a620",
       "kind": "article",
       "title": "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan",
-      "source": "Bloomberg.com",
+      "source": "Bloomberg",
       "source_url": "https://www.bloomberg.com/news/videos/2026-08-19/what-s-next-after-chatgpt-this-ai-pioneer-has-a-plan-video",
       "published_at": "2026-08-19T00:00:00Z",
       "authors": [],
@@ -4020,23 +4020,23 @@
         "Embodied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg.com",
+      "summary": "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "summary-only",
       "fetch_note": "HTTP Error 403: Forbidden",
       "resolved_url": "https://www.bloomberg.com/news/videos/2026-08-19/what-s-next-after-chatgpt-this-ai-pioneer-has-a-plan-video",
       "key_points": [
-        "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg.com"
+        "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg.com"
+          "body": "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg.com"
+            "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg"
           ]
         },
         {
@@ -4384,6 +4384,94 @@
       "reading_minutes": 1
     },
     {
+      "id": "5fbae84b9d371277",
+      "kind": "article",
+      "title": "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says",
+      "source": "Reuters",
+      "source_url": "https://www.reuters.com/legal/transactional/nvidia-invest-5-billion-ilya-sutskevers-ai-startup-source-says-2026-07-27/",
+      "published_at": "2026-07-27T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Researcher Watch",
+        "Foundation Models",
+        "Leadership"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says Reuters",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 401: HTTP Forbidden",
+      "resolved_url": "https://www.reuters.com/legal/transactional/nvidia-invest-5-billion-ilya-sutskevers-ai-startup-source-says-2026-07-27/",
+      "key_points": [
+        "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says Reuters"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says Reuters"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Nvidia to invest $5 billion in Ilya Sutskever's AI startup, source says Reuters"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "d3f07a9e4ca86a07",
+      "kind": "social",
+      "title": "Grok Bot can do amazing things!",
+      "source": "x.com",
+      "source_url": "https://x.com/elonmusk/status/2091591712833753456",
+      "published_at": "2026-08-23T18:21:38Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "Grok Bot can do amazing things! x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/elonmusk/status/2091591712833753456",
+      "key_points": [
+        "Elon Musk @elonmusk Grok Bot can do amazing things!",
+        "Yun-Ta Tsai @yunta_tsai 8h Three months later, Grok’s progress is amazing, and @ bot makes it even more powerful and easier to use.",
+        "This is the fidelity using the same prompt: “Explain Navier-Stokes equation and how it relates to airfoil design with actual fluid dynamics simulation.” 00:00 6:21 PM · Aug 23, 2026 2.3M Views 663 683 4.3K 328 Optimistic General Intelligence @opgein 7h Optimistic + Grokbot + Innovation = OGI 2 7 47 6.2K"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Grok Bot can do amazing things! x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Elon Musk @elonmusk Grok Bot can do amazing things!",
+            "Yun-Ta Tsai @yunta_tsai 8h Three months later, Grok’s progress is amazing, and @ bot makes it even more powerful and easier to use.",
+            "This is the fidelity using the same prompt: “Explain Navier-Stokes equation and how it relates to airfoil design with actual fluid dynamics simulation.” 00:00 6:21 PM · Aug 23, 2026 2.3M Views 663 683 4.3K 328 Optimistic General Intelligence @opgein 7h Optimistic + Grokbot + Innovation = OGI 2 7 47 6.2K"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Elon Musk @elonmusk Grok Bot can do amazing things! Yun-Ta Tsai @yunta_tsai 8h Three months later, Grok’s progress is amazing, and @ bot makes it even more powerful and easier to use. This is the fidelity using the same prompt: “Explain Navier-Stokes equation and how it relates to airfoil design with actual fluid dynamics simulation.” 00:00 6:21 PM · Aug 23, 2026 2.3M Views 663 683 4.3K 328",
+            "Optimistic General Intelligence @opgein 7h Optimistic + Grokbot + Innovation = OGI 2 7 47 6.2K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "760abd9c11269c2a",
       "kind": "social",
       "title": "Grok Voice ranked first",
@@ -4404,9 +4492,9 @@
       "resolved_url": "https://x.com/elonmusk/status/2090962975587000493",
       "key_points": [
         "Elon Musk @elonmusk Grok Voice ranked first X Freeze @XFreeze Aug 21 Grok Voice Think Fast 2.0 just ranked #1 on Artificial Analysis’ new Speech Agent Arena for highest Task Success Rate This benchmark actually measures what matters Real people talk to hidden voice agents across practical scenarios.",
-        "Task Success Rate tracks whether the AI Show more 12:43 AM · Aug 22, 2026 2.5M Views 607 1.1K 6.1K 229 Serdagreat ⚔️ @DasaelR Aug 22 Kekius maximus ranks 1st, a name like that is destined for greatness!",
-        "5 8 27 376 X Girls @thesoragirls Aug 22 Grok Voice Think Fast 2.0 is a beast!",
-        "X Girls @thesoragirls Aug 19 When your voice model hits 99% and still thinks faster than the competition 🔥 00:00 4 11 233"
+        "Task Success Rate tracks whether the AI Show more 12:43 AM · Aug 22, 2026 2.5M Views 615 1.2K 6.2K 230 Serdagreat ⚔️ @DasaelR Aug 22 Kekius maximus ranks 1st, a name like that is destined for greatness!",
+        "4 8 27 381 X Girls @thesoragirls Aug 22 Grok Voice Think Fast 2.0 is a beast!",
+        "X Girls @thesoragirls Aug 19 When your voice model hits 99% and still thinks faster than the competition 🔥 00:00 4 11 234"
       ],
       "sections": [
         {
@@ -4417,17 +4505,17 @@
           "title": "公开页面要点",
           "bullets": [
             "Elon Musk @elonmusk Grok Voice ranked first X Freeze @XFreeze Aug 21 Grok Voice Think Fast 2.0 just ranked #1 on Artificial Analysis’ new Speech Agent Arena for highest Task Success Rate This benchmark actually measures what matters Real people talk to hidden voice agents across practical scenarios.",
-            "Task Success Rate tracks whether the AI Show more 12:43 AM · Aug 22, 2026 2.5M Views 607 1.1K 6.1K 229 Serdagreat ⚔️ @DasaelR Aug 22 Kekius maximus ranks 1st, a name like that is destined for greatness!",
-            "5 8 27 376 X Girls @thesoragirls Aug 22 Grok Voice Think Fast 2.0 is a beast!",
-            "X Girls @thesoragirls Aug 19 When your voice model hits 99% and still thinks faster than the competition 🔥 00:00 4 11 233"
+            "Task Success Rate tracks whether the AI Show more 12:43 AM · Aug 22, 2026 2.5M Views 615 1.2K 6.2K 230 Serdagreat ⚔️ @DasaelR Aug 22 Kekius maximus ranks 1st, a name like that is destined for greatness!",
+            "4 8 27 381 X Girls @thesoragirls Aug 22 Grok Voice Think Fast 2.0 is a beast!",
+            "X Girls @thesoragirls Aug 19 When your voice model hits 99% and still thinks faster than the competition 🔥 00:00 4 11 234"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok Voice ranked first X Freeze @XFreeze Aug 21 Grok Voice Think Fast 2.0 just ranked #1 on Artificial Analysis’ new Speech Agent Arena for highest Task Success Rate This benchmark actually measures what matters Real people talk to hidden voice agents across practical scenarios. Task Success Rate tracks whether the AI Show more 12:43 AM · Aug 22, 2026 2.5M Views 607 1.1K 6.1K 229",
-            "Serdagreat ⚔️ @DasaelR Aug 22 Kekius maximus ranks 1st, a name like that is destined for greatness! 5 8 27 376",
-            "X Girls @thesoragirls Aug 22 Grok Voice Think Fast 2.0 is a beast! X Girls @thesoragirls Aug 19 When your voice model hits 99% and still thinks faster than the competition 🔥 00:00 4 11 233"
+            "Elon Musk @elonmusk Grok Voice ranked first X Freeze @XFreeze Aug 21 Grok Voice Think Fast 2.0 just ranked #1 on Artificial Analysis’ new Speech Agent Arena for highest Task Success Rate This benchmark actually measures what matters Real people talk to hidden voice agents across practical scenarios. Task Success Rate tracks whether the AI Show more 12:43 AM · Aug 22, 2026 2.5M Views 615 1.2K 6.2K 230",
+            "Serdagreat ⚔️ @DasaelR Aug 22 Kekius maximus ranks 1st, a name like that is destined for greatness! 4 8 27 381",
+            "X Girls @thesoragirls Aug 22 Grok Voice Think Fast 2.0 is a beast! X Girls @thesoragirls Aug 19 When your voice model hits 99% and still thinks faster than the competition 🔥 00:00 4 11 234"
           ]
         }
       ],
@@ -4469,96 +4557,9 @@
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Try Grok 4.6 using the Grok Build harness or Cursor app for max usefulness X.ai/build Tesla Owners Silicon Valley @teslaownersSV Aug 21 BREAKING: Grok 4.6 just took the #1 spot on CursorBench 3.2 — while delivering a massive efficiency advantage. ⚡💻 • Grok 4.6 Extra High — 70.8% | $2.81/task • Fable 5 Max — 70.5% | $17.32/task • Opus 5 Max — 70.0% | $8.23/task • GPT-5.6 Sol Max — 67.2% | $5.69/task Grok Show more 9:33 PM · Aug 21, 2026 2.2M Views 495 917 4.1K 200",
-            "Tesla Owners Silicon Valley @teslaownersSV Aug 21 it's a game changer 6 19 4.3K",
-            "Vet KUSAMA ™ @vetkusama Aug 21 Dear @ elonmusk , Grok is sometimes overly aggressive, and most of the time its acts the way its wants, not the way I want to hear it. Why 😅😅😅😅 1 17 541"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "2eb5e7ff4833960b",
-      "kind": "social",
-      "title": "Wider access to Grok @Bot",
-      "source": "x.com",
-      "source_url": "https://x.com/elonmusk/status/2090853842552578523",
-      "published_at": "2026-08-21T17:29:36Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Wider access to Grok @Bot",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/elonmusk/status/2090853842552578523",
-      "key_points": [
-        "HandsomeHank @HandsomeHank_ Aug 21 Now I really have to upgrade to SuperGrok Plus 🤣 Small favor if possible... can you please have an upgrade path to SuperGrok Plus for those with X Premium+ so we don't have to get a separate subscription for Super Grok Plus since we get SuperGrok with X Premium+ 5 1 27 1.3K Planet Of Memes @PlanetOfMemes Aug 21 😆 Planet Of…"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Wider access to Grok @Bot"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "HandsomeHank @HandsomeHank_ Aug 21 Now I really have to upgrade to SuperGrok Plus 🤣 Small favor if possible... can you please have an upgrade path to SuperGrok Plus for those with X Premium+ so we don't have to get a separate subscription for Super Grok Plus since we get SuperGrok with X Premium+ 5 1 27 1.3K Planet Of Memes @PlanetOfMemes Aug 21 😆 Planet Of…"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "HandsomeHank @HandsomeHank_ Aug 21 Now I really have to upgrade to SuperGrok Plus 🤣 Small favor if possible... can you please have an upgrade path to SuperGrok Plus for those with X Premium+ so we don't have to get a separate subscription for Super Grok Plus since we get SuperGrok with X Premium+ 5 1 27 1.3K",
-            "Planet Of Memes @PlanetOfMemes Aug 21 😆 Planet Of Memes @PlanetOfMemes Aug 21 My team of Grok Bots. 😆 1 1 15 1.7K"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "4505027e6f474bab",
-      "kind": "social",
-      "title": "Grok 4.6 on extra high thinking mode now achieves #1 score on CursorBench!",
-      "source": "x.com",
-      "source_url": "https://x.com/elonmusk/status/2090840497338425739",
-      "published_at": "2026-08-21T16:36:35Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Grok 4.6 on extra high thinking mode now achieves #1 score on CursorBench! x.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/elonmusk/status/2090840497338425739",
-      "key_points": [
-        "Elon Musk @elonmusk Grok 4.6 on extra high thinking mode now achieves #1 score on CursorBench!"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Grok 4.6 on extra high thinking mode now achieves #1 score on CursorBench! x.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Elon Musk @elonmusk Grok 4.6 on extra high thinking mode now achieves #1 score on CursorBench!"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Elon Musk @elonmusk Grok 4.6 on extra high thinking mode now achieves #1 score on CursorBench! X Freeze @XFreeze Aug 21 Grok 4.6 just took the #1 spot on CursorBench 3.2.....and the efficiency is insane Here's the cost comparison: • Grok 4.6 Extra High — 70.8% | $2.81/task • Fable 5 Max — 70.5% | $17.32/task • Opus 5 Max — 70.0% | $8.23/task • GPT-5.6 Sol Max — 67.2% | $5.69/task Grok Show more 4:36 PM · Aug 21, 2026 29.6M Views 1.7K 2K 17K 930",
-            "hadesdevs @hadesdevs Aug 21 \"My model on the bench of the company I bought is 1st\" GIF 3 2 84 5.9K",
-            "Gabi ∞ @GabiiAH11 Aug 21 cursor made the bench and cursor's model wins it, shocking absolutely no one who's watched this movie before 2 2 37 2.7K"
+            "Elon Musk @elonmusk Try Grok 4.6 using the Grok Build harness or Cursor app for max usefulness X.ai/build Tesla Owners Silicon Valley @teslaownersSV Aug 21 BREAKING: Grok 4.6 just took the #1 spot on CursorBench 3.2 — while delivering a massive efficiency advantage. ⚡💻 • Grok 4.6 Extra High — 70.8% | $2.81/task • Fable 5 Max — 70.5% | $17.32/task • Opus 5 Max — 70.0% | $8.23/task • GPT-5.6 Sol Max — 67.2% | $5.69/task Grok Show more 9:33 PM · Aug 21, 2026 2.2M Views 498 976 4.1K 200",
+            "Tesla Owners Silicon Valley @teslaownersSV Aug 21 it's a game changer 6 19 4.4K",
+            "Vet KUSAMA ™ @vetkusama Aug 21 Dear @ elonmusk , Grok is sometimes overly aggressive, and most of the time its acts the way its wants, not the way I want to hear it. Why 😅😅😅😅 1 17 549"
           ]
         }
       ],
@@ -4865,47 +4866,47 @@
       "reading_minutes": 1
     },
     {
-      "id": "76e9ea2760947dc3",
+      "id": "8635fbebdea1f392",
       "kind": "article",
-      "title": "AI pioneers are split on the technology’s risk to jobs",
-      "source": "thecurrent.com",
-      "source_url": "https://www.thecurrent.com/innovation/ai-pioneers-split-technology-risk-jobs-ai4-las-vegas",
-      "published_at": "2026-08-06T18:50:31Z",
+      "title": "Anthropic, OpenAI among firms facing new scrutiny under EU AI Act enforcement powers",
+      "source": "CNBC",
+      "source_url": "https://www.cnbc.com/2026/08/03/eu-ai-act-enforcement-powers.html",
+      "published_at": "2026-08-03T07:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
-        "Founder Watch",
-        "Embodied AI"
+        "Policy",
+        "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "At AI4 in Las Vegas, Geoffrey Hinton, Fei-Fei Li, Andrew Ng, and Anton Korinek shared competing visions for AI's future, tackling everything from marketing jobs and AI safety to the economic transformation ahead.",
+      "summary": "Anthropic, OpenAI among firms facing new scrutiny under EU AI Act enforcement powers CNBC",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.thecurrent.com/innovation/ai-pioneers-split-technology-risk-jobs-ai4-las-vegas",
+      "resolved_url": "https://www.cnbc.com/2026/08/03/eu-ai-act-enforcement-powers.html",
       "key_points": [
-        "From marketers becoming \"full-cycle marketers\" to the possibility of AI reshaping the economy, the industry's biggest thinkers painted very different pictures of what comes next at AI4.",
-        "Even among AI’s pioneers, there isn’t consensus on the technology’s biggest challenges, or just how profoundly it will reshape society.",
-        "Against a backdrop of 114-degree Las Vegas heat, Ai4, dubbed the “world’s largest AI conference,” hosted some of the industry’s hottest debates, as several AI trailblazers sparred over the technology’s biggest opportunities and risks."
+        "The European Commission on Sunday gained new powers to investigate, impose fines and order changes at companies developing AI models, as part of the rollout of its AI Act.",
+        "The new powers could bring further flashpoints between the U.S. and European Commission, with the two sparring over Europe's push for tech sovereignty and fines issued towards American tech companies.",
+        "President Donald Trump threatened the EU with a \"substantial\" tariff after the bloc hit Google with a $1 billion fine in July, under Digital Markets Act rules."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "At AI4 in Las Vegas, Geoffrey Hinton, Fei-Fei Li, Andrew Ng, and Anton Korinek shared competing visions for AI's future, tackling everything from marketing jobs and AI safety to the economic transformation ahead."
+          "body": "Anthropic, OpenAI among firms facing new scrutiny under EU AI Act enforcement powers CNBC"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "From marketers becoming \"full-cycle marketers\" to the possibility of AI reshaping the economy, the industry's biggest thinkers painted very different pictures of what comes next at AI4.",
-            "Even among AI’s pioneers, there isn’t consensus on the technology’s biggest challenges, or just how profoundly it will reshape society.",
-            "Against a backdrop of 114-degree Las Vegas heat, Ai4, dubbed the “world’s largest AI conference,” hosted some of the industry’s hottest debates, as several AI trailblazers sparred over the technology’s biggest opportunities and risks."
+            "The European Commission on Sunday gained new powers to investigate, impose fines and order changes at companies developing AI models, as part of the rollout of its AI Act.",
+            "The new powers could bring further flashpoints between the U.S. and European Commission, with the two sparring over Europe's push for tech sovereignty and fines issued towards American tech companies.",
+            "President Donald Trump threatened the EU with a \"substantial\" tariff after the bloc hit Google with a $1 billion fine in July, under Digital Markets Act rules."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "From marketers becoming \"full-cycle marketers\" to the possibility of AI reshaping the economy, the industry's biggest thinkers painted very different pictures of what comes next at AI4.",
-            "Even among AI’s pioneers, there isn’t consensus on the technology’s biggest challenges, or just how profoundly it will reshape society.",
-            "Against a backdrop of 114-degree Las Vegas heat, Ai4, dubbed the “world’s largest AI conference,” hosted some of the industry’s hottest debates, as several AI trailblazers sparred over the technology’s biggest opportunities and risks."
+            "The European Commission on Sunday gained new powers to investigate, impose fines and order changes at companies developing AI models, as part of the rollout of its AI Act.",
+            "The new powers could bring further flashpoints between the U.S. and European Commission, with the two sparring over Europe's push for tech sovereignty and fines issued towards American tech companies.",
+            "U.S. President Donald Trump threatened the EU with a \"substantial\" tariff after the bloc hit Google with a $1 billion fine in July, under Digital Markets Act rules."
           ]
         }
       ],
@@ -5222,53 +5223,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "4e74d581a515c9e1",
-      "kind": "article",
-      "title": "Meet Ditto: the AI startup trying to reinvent college dating",
-      "source": "Mashable",
-      "source_url": "https://mashable.com/life/ditto-ai-matchmaker-for-college-students",
-      "published_at": "2026-07-30T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Meet Ditto: the AI startup trying to reinvent college dating Mashable",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://mashable.com/life/ditto-ai-matchmaker-for-college-students",
-      "key_points": [
-        "Hinge's founder recently left the app to start an AI matchmaking service , but he isn't the only one with that startup idea.",
-        "Ditto is an AI matchmaker specifically for college students — and it does all the work in iMessage. \"For the past 20 years, we've connected in primitive ways.",
-        "We manually swipe,\" Ditto AI's manifesto reads on its website. \"Spending hours trying to find the right people — because all we have are static and dead profiles.\" Ditto was founded by Eric Liu and Allen Wang, two University of California, Berkeley students who dropped out around four years ago to create a new consumer product, Liu said in an interview with…"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Meet Ditto: the AI startup trying to reinvent college dating Mashable"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Hinge's founder recently left the app to start an AI matchmaking service , but he isn't the only one with that startup idea.",
-            "Ditto is an AI matchmaker specifically for college students — and it does all the work in iMessage. \"For the past 20 years, we've connected in primitive ways.",
-            "We manually swipe,\" Ditto AI's manifesto reads on its website. \"Spending hours trying to find the right people — because all we have are static and dead profiles.\" Ditto was founded by Eric Liu and Allen Wang, two University of California, Berkeley students who dropped out around four years ago to create a new consumer product, Liu said in an interview with…"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Hinge's founder recently left the app to start an AI matchmaking service , but he isn't the only one with that startup idea. Ditto is an AI matchmaker specifically for college students — and it does all the work in iMessage.",
-            "\"For the past 20 years, we've connected in primitive ways. We manually scroll. We manually search. We manually swipe,\" Ditto AI's manifesto reads on its website. \"Spending hours trying to find the right people — because all we have are static and dead profiles.\"",
-            "Ditto was founded by Eric Liu and Allen Wang, two University of California, Berkeley students who dropped out around four years ago to create a new consumer product, Liu said in an interview with Mashable."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "f0cf53374d9b0d3c",
       "kind": "article",
       "title": "This AI startup has roughly 50 employees, no product and has never published a word of research. It's worth $32 billion",
@@ -5309,6 +5263,46 @@
             "Jeff Bezos backs a platform that lets anyone invest in rental homes for as little as $100 — 6 ways to build wealth like a landlord without actually being one",
             "Dave Ramsey warns nearly 50% of Americans are making 1 big Social Security mistake — here's what it is and 3 simple steps to fix it ASAP"
           ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "7220460ff000894f",
+      "kind": "article",
+      "title": "He Turned Down Apple. Now His AI Startup Is Challenging ChatGPT",
+      "source": "Men's Journal",
+      "source_url": "https://www.mensjournal.com/news/he-turned-down-apple-now-his-ai-startup-is-challenging-chatgpt",
+      "published_at": "2026-07-27T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "He Turned Down Apple. Now His AI Startup Is Challenging ChatGPT Men's Journal",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://www.mensjournal.com/news/he-turned-down-apple-now-his-ai-startup-is-challenging-chatgpt",
+      "key_points": [
+        "Now His AI Startup Is Challenging ChatGPT Men's Journal"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "He Turned Down Apple. Now His AI Startup Is Challenging ChatGPT Men's Journal"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Now His AI Startup Is Challenging ChatGPT Men's Journal"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -5579,45 +5573,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "c911ab8aea67271b",
-      "kind": "article",
-      "title": "AI Regulation in Flux: U.S. and global shift toward “lighter touch”",
-      "source": "JD Supra",
-      "source_url": "https://www.jdsupra.com/legalnews/ai-regulation-in-flux-u-s-and-global-9435651/",
-      "published_at": "2026-08-11T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "AI Regulation in Flux: U.S. and global shift toward “lighter touch” JD Supra",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "resolved_url": "https://www.jdsupra.com/legalnews/ai-regulation-in-flux-u-s-and-global-9435651/",
-      "key_points": [
-        "AI Regulation in Flux: U.S. and global shift toward “lighter touch” JD Supra"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "AI Regulation in Flux: U.S. and global shift toward “lighter touch” JD Supra"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "AI Regulation in Flux: U.S. and global shift toward “lighter touch” JD Supra"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "ce3a6f63b8716a8a",
       "kind": "article",
       "title": "A New Approach to Open Source AI: A Framework for Openness | The Mozilla Blog",
@@ -5669,12 +5624,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "aafea8a72cdde9c1",
+      "id": "c911ab8aea67271b",
       "kind": "article",
-      "title": "SAG-AFTRA’s Jeffrey Bennett Discusses Generative AI, Copyright and Protecting Human Performance",
-      "source": "SAG-AFTRA",
-      "source_url": "https://www.sagaftra.org/sag-aftras-jeffrey-bennett-discusses-generative-ai-copyright-and-protecting-human-performance",
-      "published_at": "2026-08-10T12:00:00Z",
+      "title": "AI Regulation in Flux: U.S. and global shift toward “lighter touch”",
+      "source": "JD Supra",
+      "source_url": "https://www.jdsupra.com/legalnews/ai-regulation-in-flux-u-s-and-global-9435651/",
+      "published_at": "2026-08-11T07:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -5682,23 +5637,22 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "SAG-AFTRA’s Jeffrey Bennett Discusses Generative AI, Copyright and Protecting Human Performance SAG-AFTRA",
+      "summary": "AI Regulation in Flux: U.S. and global shift toward “lighter touch” JD Supra",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 403: Forbidden",
-      "resolved_url": "https://www.sagaftra.org/sag-aftras-jeffrey-bennett-discusses-generative-ai-copyright-and-protecting-human-performance",
+      "resolved_url": "https://www.jdsupra.com/legalnews/ai-regulation-in-flux-u-s-and-global-9435651/",
       "key_points": [
-        "SAG-AFTRA’s Jeffrey Bennett Discusses Generative AI, Copyright and Protecting Human Performance SAG-AFTRA"
+        "AI Regulation in Flux: U.S. and global shift toward “lighter touch” JD Supra"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "SAG-AFTRA’s Jeffrey Bennett Discusses Generative AI, Copyright and Protecting Human Performance SAG-AFTRA"
+          "body": "AI Regulation in Flux: U.S. and global shift toward “lighter touch” JD Supra"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "SAG-AFTRA’s Jeffrey Bennett Discusses Generative AI, Copyright and Protecting Human Performance SAG-AFTRA"
+            "AI Regulation in Flux: U.S. and global shift toward “lighter touch” JD Supra"
           ]
         },
         {
