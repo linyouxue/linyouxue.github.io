@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-29T20:54:08Z",
+  "generated_at": "2026-08-30T05:22:15Z",
   "record_count": 131,
   "records": [
     {
@@ -56,6 +56,41 @@
       "reading_minutes": 1
     },
     {
+      "id": "unit-distance-openai-20260520",
+      "kind": "paper",
+      "title": "OpenAI 模型推翻平面单位距离问题中的长期猜想",
+      "source": "OpenAI · Research",
+      "source_url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+      "published_at": "2026-05-20T08:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Unit Distance",
+        "Discrete Geometry",
+        "Verified Proof"
+      ],
+      "verification": "官方论文 · 外部数学家已检查",
+      "summary": "OpenAI 的通用推理模型找到一族新的点集构造，证明单位距离对数可以达到 n 的 1+δ 次方，从而推翻长期流行的 n 的 1+o(1) 上界猜想。证明已由外部数学家检查，并有公开证明 PDF 与多位数学家的伴随评论。",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/unit-distance-openai-20260520.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf",
+      "key_points": [
+        "Planar Point Sets with Many Unit Distances OpenAI Abstract For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets.",
+        "We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n.",
+        "This disproves the well-known unit distance conjecture from [ Erd46].",
+        "The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely.",
+        "After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets. We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n. This disproves the well-known unit distance conjecture from [ Erd46]. The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely. After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1. Golod–Shafarevich theory ensures existence of an inﬁnite such tower, even after a quotient step making the prescribed Frobenius classes trivial. A crucial property of the construction is that all resulting discriminants and class numbers are at most exponential in the extension degree. 1 Main Result For a ﬁnite set P ⊂ R2, let ν(P ) = # {{x,y } ⊂ P : |x −y|= 1} andν(n) = max |P |=nν(P ). The planar unit-distance problem goes back to Erdős [ Erd46], who conjectured that there should be an absolute constant C such that, for all suﬃciently large n, ν(n) ≤ n1+C/ log logn. (1) The same 1946 paper also introduced the distinct-distances problem, later resolved up to logarithmic factors by Guth–Katz [ GK15]. An elementary upper bound is ν(n) = O(n3/ 2): the Euclidean unit-distance graph is K2, 3-free, since two unit circles meet in at most two points, and the Kővári–Sós–Turán theorem applies [ KST54]. The best known upper bound ν(n) = O(n4/ 3) is due to Spencer–Szemerédi–Trotter [ SST84]; Székely later gave a short crossing-number proof of this incidence bound [ Sze97]. It is useful to compare this with the same question for other norms on R2, a direction studied systematically by Brass [ Bra96]. If the unit ball has a ﬂat segment, one can arrange quadratically many unit distances, so the interesting normed-plane analogues usually impose strict convexity or genericity. Székely’s crossing-number argument extends to strictly convex norms, again giving O(n4/ 3), and Valtr constructed a strictly convex norm for which this exponent is…"
+        }
+      ],
+      "reading_minutes": 32
+    },
+    {
       "id": "3a6937d828d9f6ee",
       "kind": "article",
       "title": "Claude for Life Sciences",
@@ -105,41 +140,6 @@
         }
       ],
       "reading_minutes": 1
-    },
-    {
-      "id": "unit-distance-openai-20260520",
-      "kind": "paper",
-      "title": "OpenAI 模型推翻平面单位距离问题中的长期猜想",
-      "source": "OpenAI · Research",
-      "source_url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
-      "published_at": "2026-05-20T08:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Unit Distance",
-        "Discrete Geometry",
-        "Verified Proof"
-      ],
-      "verification": "官方论文 · 外部数学家已检查",
-      "summary": "OpenAI 的通用推理模型找到一族新的点集构造，证明单位距离对数可以达到 n 的 1+δ 次方，从而推翻长期流行的 n 的 1+o(1) 上界猜想。证明已由外部数学家检查，并有公开证明 PDF 与多位数学家的伴随评论。",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/unit-distance-openai-20260520.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf",
-      "key_points": [
-        "Planar Point Sets with Many Unit Distances OpenAI Abstract For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets.",
-        "We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n.",
-        "This disproves the well-known unit distance conjecture from [ Erd46].",
-        "The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely.",
-        "After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets. We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n. This disproves the well-known unit distance conjecture from [ Erd46]. The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely. After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1. Golod–Shafarevich theory ensures existence of an inﬁnite such tower, even after a quotient step making the prescribed Frobenius classes trivial. A crucial property of the construction is that all resulting discriminants and class numbers are at most exponential in the extension degree. 1 Main Result For a ﬁnite set P ⊂ R2, let ν(P ) = # {{x,y } ⊂ P : |x −y|= 1} andν(n) = max |P |=nν(P ). The planar unit-distance problem goes back to Erdős [ Erd46], who conjectured that there should be an absolute constant C such that, for all suﬃciently large n, ν(n) ≤ n1+C/ log logn. (1) The same 1946 paper also introduced the distinct-distances problem, later resolved up to logarithmic factors by Guth–Katz [ GK15]. An elementary upper bound is ν(n) = O(n3/ 2): the Euclidean unit-distance graph is K2, 3-free, since two unit circles meet in at most two points, and the Kővári–Sós–Turán theorem applies [ KST54]. The best known upper bound ν(n) = O(n4/ 3) is due to Spencer–Szemerédi–Trotter [ SST84]; Székely later gave a short crossing-number proof of this incidence bound [ Sze97]. It is useful to compare this with the same question for other norms on R2, a direction studied systematically by Brass [ Bra96]. If the unit ball has a ﬂat segment, one can arrange quadratically many unit distances, so the interesting normed-plane analogues usually impose strict convexity or genericity. Székely’s crossing-number argument extends to strictly convex norms, again giving O(n4/ 3), and Valtr constructed a strictly convex norm for which this exponent is…"
-        }
-      ],
-      "reading_minutes": 32
     },
     {
       "id": "2e8bec6440d10036",
@@ -666,6 +666,51 @@
       "reading_minutes": 1
     },
     {
+      "id": "rhb-icml-2026",
+      "kind": "paper",
+      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
+      "source": "OpenReview · arXiv",
+      "source_url": "https://arxiv.org/abs/2605.02964",
+      "published_at": "2026-06-24T00:00:00Z",
+      "authors": [
+        "Kunvar Thaman"
+      ],
+      "venue": "ICML 2026",
+      "tags": [
+        "Reward Hacking",
+        "Agent Safety",
+        "Evaluation"
+      ],
+      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
+      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/rhb-icml-2026.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://arxiv.org/pdf/2605.02964",
+      "key_points": [
+        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
+        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
+        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
+        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
+        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
+        },
+        {
+          "title": "关键结果",
+          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
+        },
+        {
+          "title": "局限与结论",
+          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
+        }
+      ],
+      "reading_minutes": 46
+    },
+    {
       "id": "a6cdc989dfc0ae15",
       "kind": "article",
       "title": "Gemini Omni 1.1 Flash lets you build with more control",
@@ -955,51 +1000,6 @@
         }
       ],
       "reading_minutes": 1
-    },
-    {
-      "id": "rhb-icml-2026",
-      "kind": "paper",
-      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
-      "source": "OpenReview · arXiv",
-      "source_url": "https://arxiv.org/abs/2605.02964",
-      "published_at": "2026-06-24T00:00:00Z",
-      "authors": [
-        "Kunvar Thaman"
-      ],
-      "venue": "ICML 2026",
-      "tags": [
-        "Reward Hacking",
-        "Agent Safety",
-        "Evaluation"
-      ],
-      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
-      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/rhb-icml-2026.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://arxiv.org/pdf/2605.02964",
-      "key_points": [
-        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
-        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
-        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
-        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
-        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
-        },
-        {
-          "title": "关键结果",
-          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
-        },
-        {
-          "title": "局限与结论",
-          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
-        }
-      ],
-      "reading_minutes": 46
     },
     {
       "id": "aeb180574cb44458",
@@ -1538,57 +1538,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "1e74d877c0285559",
-      "kind": "article",
-      "title": "3 new ways to plan and book travel in Search",
-      "source": "Google AI",
-      "source_url": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/",
-      "published_at": "2026-08-27T16:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Google",
-        "Official"
-      ],
-      "verification": "官方来源",
-      "summary": "Graphic depicting new travel features for AI Mode in Search",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/",
-      "key_points": [
-        "Our latest upgrades for AI Mode in Search can help you track flight prices, view points or miles rates, and book your dream hotel.",
-        "Planning a trip comes with lots of moving parts and countless options to consider.",
-        "With AI Mode in Search , you can already get real-time data to compare flights and hotels, find the best recommendations across the web, and craft the perfect itinerary .",
-        "Now, we’re upgrading that experience with new ways to track flight prices, view points or miles rates, and book your dream hotel, right in AI Mode.",
-        "Today, we’re bringing Google Flights’ popular price tracking feature directly into AI Mode, letting you set up price alerts as you chat, without breaking your flow."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Graphic depicting new travel features for AI Mode in Search"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Our latest upgrades for AI Mode in Search can help you track flight prices, view points or miles rates, and book your dream hotel.",
-            "Planning a trip comes with lots of moving parts and countless options to consider.",
-            "With AI Mode in Search , you can already get real-time data to compare flights and hotels, find the best recommendations across the web, and craft the perfect itinerary .",
-            "Now, we’re upgrading that experience with new ways to track flight prices, view points or miles rates, and book your dream hotel, right in AI Mode.",
-            "Today, we’re bringing Google Flights’ popular price tracking feature directly into AI Mode, letting you set up price alerts as you chat, without breaking your flow."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Our latest upgrades for AI Mode in Search can help you track flight prices, view points or miles rates, and book your dream hotel.",
-            "Planning a trip comes with lots of moving parts and countless options to consider. With AI Mode in Search , you can already get real-time data to compare flights and hotels, find the best recommendations across the web, and craft the perfect itinerary . Now, we’re upgrading that experience with new ways to track flight prices, view points or miles rates, and book your dream hotel, right in AI Mode.",
-            "Today, we’re bringing Google Flights’ popular price tracking feature directly into AI Mode, letting you set up price alerts as you chat, without breaking your flow. Describe where and when you want to fly and AI Mode will show you the best options available with the latest prices from more than 300 partner airlines and travel sites. If you’re ready to book, you can build your full itinerary in AI Mode and buy your tickets through the airline’s website or your preferred booking platform."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "dbfd98ce069e41ac",
       "kind": "article",
       "title": "字节 发布 ＂ 豆包 工作＂:AI办公四巨头正式开战",
@@ -1753,7 +1702,7 @@
       "kind": "article",
       "title": "2026-08-27 智谱 发布 GLM -5.3-Flash:Ox Alpha 正式亮相",
       "source": "微信公众号 · AI喵实验室",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1788036828&ver=6934&signature=Dy8D4LM-l*pp-iuFEqd0LJr9yUm9L9jET5J5UWkh80OSHOpRwVWF3B5cFO81HYCi0v2yl4wS8xaCygkDH0ILT-djMtq*3dj4P1jqSWTKEcl*Q4H*oFVKsPVaedtXUos-&new=1",
+      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HOhGk2qjGI80lVPQnceX1flXF5ZWJ-MLaJLqZ3Gk&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1788036828%26ver%3D6934%26signature%3DDy8D4LM-l%2App-iuFEqd0LJr9yUm9L9jET5J5UWkh80OSHOpRwVWF3B5cFO81HYCi0v2yl4wS8xaCygkDH0ILT-djMtq%2A3dj4P1jqSWTKEcl%2AQ4H%2AoFVKsPVaedtXUos-%26new%3D1",
       "published_at": "2026-08-27T09:30:24Z",
       "authors": [],
       "venue": "",
@@ -2024,6 +1973,57 @@
         {
           "title": "原文短摘录",
           "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "1e74d877c0285559",
+      "kind": "article",
+      "title": "3 new ways to plan and book travel in Search",
+      "source": "Google AI",
+      "source_url": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/",
+      "published_at": "2026-08-27T16:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Google",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "Graphic depicting new travel features for AI Mode in Search",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/",
+      "key_points": [
+        "Our latest upgrades for AI Mode in Search can help you track flight prices, view points or miles rates, and book your dream hotel.",
+        "Planning a trip comes with lots of moving parts and countless options to consider.",
+        "With AI Mode in Search , you can already get real-time data to compare flights and hotels, find the best recommendations across the web, and craft the perfect itinerary .",
+        "Now, we’re upgrading that experience with new ways to track flight prices, view points or miles rates, and book your dream hotel, right in AI Mode.",
+        "Today, we’re bringing Google Flights’ popular price tracking feature directly into AI Mode, letting you set up price alerts as you chat, without breaking your flow."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Graphic depicting new travel features for AI Mode in Search"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Our latest upgrades for AI Mode in Search can help you track flight prices, view points or miles rates, and book your dream hotel.",
+            "Planning a trip comes with lots of moving parts and countless options to consider.",
+            "With AI Mode in Search , you can already get real-time data to compare flights and hotels, find the best recommendations across the web, and craft the perfect itinerary .",
+            "Now, we’re upgrading that experience with new ways to track flight prices, view points or miles rates, and book your dream hotel, right in AI Mode.",
+            "Today, we’re bringing Google Flights’ popular price tracking feature directly into AI Mode, letting you set up price alerts as you chat, without breaking your flow."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Our latest upgrades for AI Mode in Search can help you track flight prices, view points or miles rates, and book your dream hotel.",
+            "Planning a trip comes with lots of moving parts and countless options to consider. With AI Mode in Search , you can already get real-time data to compare flights and hotels, find the best recommendations across the web, and craft the perfect itinerary . Now, we’re upgrading that experience with new ways to track flight prices, view points or miles rates, and book your dream hotel, right in AI Mode.",
+            "Today, we’re bringing Google Flights’ popular price tracking feature directly into AI Mode, letting you set up price alerts as you chat, without breaking your flow. Describe where and when you want to fly and AI Mode will show you the best options available with the latest prices from more than 300 partner airlines and travel sites. If you’re ready to book, you can build your full itinerary in AI Mode and buy your tickets through the airline’s website or your preferred booking platform."
+          ]
         }
       ],
       "reading_minutes": 1
@@ -2482,58 +2482,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "9c65b2e009741fa7",
-      "kind": "article",
-      "title": "Claude Fable 5 AI finds a tiny formula that topples an 87-year-old math conjecture",
-      "source": "Science Daily",
-      "source_url": "https://www.sciencedaily.com/releases/2026/08/260804034634.htm",
-      "published_at": "2026-08-05T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "A mathematician working at Anthropic says he used the AI model Claude Fable 5 to uncover a remarkably simple counterexample to the Jacobian conjecture, a famous problem that has resisted mathematicians for more than a century. The result shows that the conjecture is false in three dimensions and above, although the original two-dimensional version remains unsolved.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.sciencedaily.com/releases/2026/08/260804034634.htm",
-      "key_points": [
-        "As millions of people were coming down from the excitement of the FIFA World Cup Final recently, a different kind of excitement was building within the mathematical community.",
-        "Levent Alpöge, a mathematician working at the artificial intelligence (AI) company Anthropic, made a very casual announcement on X that he had found a counterexample to the Jacobian conjecture, a very old and well-known problem in a field of mathematics called algebraic geometry.",
-        "He had done this using Anthropic’s large language model Claude Fable 5, released to the general public only a few weeks ago.",
-        "This is just the latest of many striking mathematical breakthroughs made by mathematicians working with large language models.",
-        "But this one feels a little different to those that have come before."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "A mathematician working at Anthropic says he used the AI model Claude Fable 5 to uncover a remarkably simple counterexample to the Jacobian conjecture, a famous problem that has resisted mathematicians for more than a century. The result shows that the conjecture is false in three dimensions and above, although the original two-dimensional version remains unsolved."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "As millions of people were coming down from the excitement of the FIFA World Cup Final recently, a different kind of excitement was building within the mathematical community.",
-            "Levent Alpöge, a mathematician working at the artificial intelligence (AI) company Anthropic, made a very casual announcement on X that he had found a counterexample to the Jacobian conjecture, a very old and well-known problem in a field of mathematics called algebraic geometry.",
-            "He had done this using Anthropic’s large language model Claude Fable 5, released to the general public only a few weeks ago.",
-            "This is just the latest of many striking mathematical breakthroughs made by mathematicians working with large language models.",
-            "But this one feels a little different to those that have come before."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "As millions of people were coming down from the excitement of the FIFA World Cup Final recently, a different kind of excitement was building within the mathematical community.",
-            "Levent Alpöge, a mathematician working at the artificial intelligence (AI) company Anthropic, made a very casual announcement on X that he had found a counterexample to the Jacobian conjecture, a very old and well-known problem in a field of mathematics called algebraic geometry. He had done this using Anthropic’s large language model Claude Fable 5, released to the general public only a few weeks ago.",
-            "This is just the latest of many striking mathematical breakthroughs made by mathematicians working with large language models. But this one feels a little different to those that have come before."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "7bb26bb70fc7f913",
       "kind": "article",
       "title": "Get closer to the game with Gemini and Pixel",
@@ -2634,53 +2582,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "95693a658f9a0d54",
-      "kind": "article",
-      "title": "MindTopo reveals VLMs’ spatial reasoning abilities",
-      "source": "Microsoft Research",
-      "source_url": "https://www.microsoft.com/en-us/research/blog/mindtopo-reveals-vlms-spatial-reasoning-abilities/",
-      "published_at": "2026-08-12T16:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Microsoft",
-        "Research"
-      ],
-      "verification": "官方来源",
-      "summary": "A path, a fence, a knot. MindTopo sets a new benchmark for testing how AI understands topological relationships and highlights new opportunities to strengthen spatial reasoning and planning. The post MindTopo reveals VLMs’ spatial reasoning abilities appeared first on Microsoft Research .",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.microsoft.com/en-us/research/blog/mindtopo-reveals-vlms-spatial-reasoning-abilities/",
-      "key_points": [
-        "MindTopo is a new benchmark for testing topological reasoning in AI, evaluating whether multimodal models can understand concepts such as connectivity, enclosure, order, separation, and knots.",
-        "The benchmark measures both reasoning and planning, testing not only whether models can recognize topological relationships in static images but also whether they can preserve and manipulate those relationships through a sequence of actions.",
-        "Current multimodal models perform much better on static recognition than interactive tasks, suggesting they struggle to maintain a consistent understanding of topology over time."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "A path, a fence, a knot. MindTopo sets a new benchmark for testing how AI understands topological relationships and highlights new opportunities to strengthen spatial reasoning and planning. The post MindTopo reveals VLMs’ spatial reasoning abilities appeared first on Microsoft Research ."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "MindTopo is a new benchmark for testing topological reasoning in AI, evaluating whether multimodal models can understand concepts such as connectivity, enclosure, order, separation, and knots.",
-            "The benchmark measures both reasoning and planning, testing not only whether models can recognize topological relationships in static images but also whether they can preserve and manipulate those relationships through a sequence of actions.",
-            "Current multimodal models perform much better on static recognition than interactive tasks, suggesting they struggle to maintain a consistent understanding of topology over time."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "MindTopo is a new benchmark for testing topological reasoning in AI, evaluating whether multimodal models can understand concepts such as connectivity, enclosure, order, separation, and knots.",
-            "The benchmark measures both reasoning and planning, testing not only whether models can recognize topological relationships in static images but also whether they can preserve and manipulate those relationships through a sequence of actions.",
-            "Current multimodal models perform much better on static recognition than interactive tasks, suggesting they struggle to maintain a consistent understanding of topology over time."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "sam-altman-gpt-live-20260708",
       "kind": "social",
       "title": "Sam Altman 预告 ChatGPT 新一代实时语音 GPT-live",
@@ -2727,6 +2628,53 @@
             "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 763.1K Views 931 517 11K 771",
             "Jenny @suomi55 Jul 8 Are you kidding us? „it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o! You are promoting something here that you yourself have taken away from the users! That’s disgusting! #keep4o #BringBack4o #OpenSource4o 20 13 193 13K",
             "David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.8K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "95693a658f9a0d54",
+      "kind": "article",
+      "title": "MindTopo reveals VLMs’ spatial reasoning abilities",
+      "source": "Microsoft Research",
+      "source_url": "https://www.microsoft.com/en-us/research/blog/mindtopo-reveals-vlms-spatial-reasoning-abilities/",
+      "published_at": "2026-08-12T16:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Microsoft",
+        "Research"
+      ],
+      "verification": "官方来源",
+      "summary": "A path, a fence, a knot. MindTopo sets a new benchmark for testing how AI understands topological relationships and highlights new opportunities to strengthen spatial reasoning and planning. The post MindTopo reveals VLMs’ spatial reasoning abilities appeared first on Microsoft Research .",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.microsoft.com/en-us/research/blog/mindtopo-reveals-vlms-spatial-reasoning-abilities/",
+      "key_points": [
+        "MindTopo is a new benchmark for testing topological reasoning in AI, evaluating whether multimodal models can understand concepts such as connectivity, enclosure, order, separation, and knots.",
+        "The benchmark measures both reasoning and planning, testing not only whether models can recognize topological relationships in static images but also whether they can preserve and manipulate those relationships through a sequence of actions.",
+        "Current multimodal models perform much better on static recognition than interactive tasks, suggesting they struggle to maintain a consistent understanding of topology over time."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "A path, a fence, a knot. MindTopo sets a new benchmark for testing how AI understands topological relationships and highlights new opportunities to strengthen spatial reasoning and planning. The post MindTopo reveals VLMs’ spatial reasoning abilities appeared first on Microsoft Research ."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "MindTopo is a new benchmark for testing topological reasoning in AI, evaluating whether multimodal models can understand concepts such as connectivity, enclosure, order, separation, and knots.",
+            "The benchmark measures both reasoning and planning, testing not only whether models can recognize topological relationships in static images but also whether they can preserve and manipulate those relationships through a sequence of actions.",
+            "Current multimodal models perform much better on static recognition than interactive tasks, suggesting they struggle to maintain a consistent understanding of topology over time."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "MindTopo is a new benchmark for testing topological reasoning in AI, evaluating whether multimodal models can understand concepts such as connectivity, enclosure, order, separation, and knots.",
+            "The benchmark measures both reasoning and planning, testing not only whether models can recognize topological relationships in static images but also whether they can preserve and manipulate those relationships through a sequence of actions.",
+            "Current multimodal models perform much better on static recognition than interactive tasks, suggesting they struggle to maintain a consistent understanding of topology over time."
           ]
         }
       ],
@@ -2880,48 +2828,49 @@
       "reading_minutes": 1
     },
     {
-      "id": "db6f95eaa29f1bb2",
+      "id": "9363823b65d49546",
       "kind": "article",
-      "title": "Students find AI isn't a cure all for drug discovery",
-      "source": "Medical Xpress",
-      "source_url": "https://medicalxpress.com/news/2026-08-students-ai-isnt-drug-discovery.html",
-      "published_at": "2026-08-27T17:40:06Z",
+      "title": "Orchard: An open framework for scalable agentic AI",
+      "source": "Microsoft Research",
+      "source_url": "https://www.microsoft.com/en-us/research/blog/orchard-an-open-framework-for-scalable-agentic-ai/",
+      "published_at": "2026-08-03T16:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
+        "Microsoft",
+        "Research"
       ],
-      "verification": "媒体或公开网页",
-      "summary": "There's been a lot of talk about artificial intelligence's potential to transform drug research and discovery—and companies are spending billions in pursuit of that dream.",
+      "verification": "官方来源",
+      "summary": "Orchard is an open-source framework for the research community to train and evaluate AI agents across task types. It reduces complexity while supporting strong performance from smaller models by enabling researchers to reuse the same infrastructure. The post Orchard: An open framework for scalable agentic AI appeared first on Microsoft Research .",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://medicalxpress.com/news/2026-08-students-ai-isnt-drug-discovery.html",
+      "resolved_url": "https://www.microsoft.com/en-us/research/blog/orchard-an-open-framework-for-scalable-agentic-ai/",
       "key_points": [
-        "This article has been reviewed according to Science X's editorial process and policies .",
-        "Editors have highlighted the following attributes while ensuring the content's credibility: There's been a lot of talk about artificial intelligence's potential to transform drug research and discovery—and companies are spending billions in pursuit of that dream.",
-        "In 2025, the AI drug discovery market was valued at $2.3 billion and is projected to grow to $13.8 billion by 2033, according to market analysis firm Grand View Research."
+        "Orchard is an open-source framework for scalable and cost-effective agentic AI research, built around Orchard Env, a reusable environment service for training and evaluating agents across task domains.",
+        "The same Orchard infrastructure supports software-engineering, web-navigation, and personal-assistant agents, and can train them directly inside real deployment harnesses such as Codex, OpenClaw, and ZeroClaw—letting researchers reuse environments, data pipelines, and evaluation workflows across tasks.",
+        "Orchard-SWE, Orchard-GUI, and Orchard-Claw demonstrate that relatively small open-weight models can achieve strong results on complex real-world tasks.",
+        "For example, Orchard-SWE reaches 69.7% on SWE-bench Verified—73.0% with value-model reranking—using only about 3 billion active parameters, approaching frontier systems using more than 10 times larger models."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "There's been a lot of talk about artificial intelligence's potential to transform drug research and discovery—and companies are spending billions in pursuit of that dream."
+          "body": "Orchard is an open-source framework for the research community to train and evaluate AI agents across task types. It reduces complexity while supporting strong performance from smaller models by enabling researchers to reuse the same infrastructure. The post Orchard: An open framework for scalable agentic AI appeared first on Microsoft Research ."
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "This article has been reviewed according to Science X's editorial process and policies .",
-            "Editors have highlighted the following attributes while ensuring the content's credibility: There's been a lot of talk about artificial intelligence's potential to transform drug research and discovery—and companies are spending billions in pursuit of that dream.",
-            "In 2025, the AI drug discovery market was valued at $2.3 billion and is projected to grow to $13.8 billion by 2033, according to market analysis firm Grand View Research."
+            "Orchard is an open-source framework for scalable and cost-effective agentic AI research, built around Orchard Env, a reusable environment service for training and evaluating agents across task domains.",
+            "The same Orchard infrastructure supports software-engineering, web-navigation, and personal-assistant agents, and can train them directly inside real deployment harnesses such as Codex, OpenClaw, and ZeroClaw—letting researchers reuse environments, data pipelines, and evaluation workflows across tasks.",
+            "Orchard-SWE, Orchard-GUI, and Orchard-Claw demonstrate that relatively small open-weight models can achieve strong results on complex real-world tasks.",
+            "For example, Orchard-SWE reaches 69.7% on SWE-bench Verified—73.0% with value-model reranking—using only about 3 billion active parameters, approaching frontier systems using more than 10 times larger models."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "This article has been reviewed according to Science X's editorial process and policies . Editors have highlighted the following attributes while ensuring the content's credibility:",
-            "There's been a lot of talk about artificial intelligence's potential to transform drug research and discovery—and companies are spending billions in pursuit of that dream.",
-            "In 2025, the AI drug discovery market was valued at $2.3 billion and is projected to grow to $13.8 billion by 2033, according to market analysis firm Grand View Research."
+            "Orchard is an open-source framework for scalable and cost-effective agentic AI research, built around Orchard Env, a reusable environment service for training and evaluating agents across task domains.",
+            "The same Orchard infrastructure supports software-engineering, web-navigation, and personal-assistant agents, and can train them directly inside real deployment harnesses such as Codex, OpenClaw, and ZeroClaw—letting researchers reuse environments, data pipelines, and evaluation workflows across tasks.",
+            "Orchard-SWE, Orchard-GUI, and Orchard-Claw demonstrate that relatively small open-weight models can achieve strong results on complex real-world tasks. For example, Orchard-SWE reaches 69.7% on SWE-bench Verified—73.0% with value-model reranking—using only about 3 billion active parameters, approaching frontier systems using more than 10 times larger models."
           ]
         }
       ],
@@ -2974,55 +2923,6 @@
             "Many of the most widely used benchmarks for AI-driven drug-discovery have data issues that can alter which algorithms appear to work best, an audit of 51 datasets has found.",
             "For researchers developing machine-learning models for drug discovery, benchmarks serve as a testing ground. Benchmark performance often determines where drug-discovery models rank on leaderboards and which are considered state of the art. However, subtle issues with the composition of benchmark datasets – for example, when the same molecule or a very similar one appears in both the training and test sets, known as train–test leakage – can also make some models seem better than they are.",
             "Concerns about benchmark datasets are not new. As well as train–test leakage, various researchers have noticed inconsistent annotations and misparsed structures in benchmark datasets. Maximilian Schuh at the Technical University of Munich in Germany began wondering quite how widespread these issues might be after attending a machine-learning conference and seeing how heavily researchers relied on benchmark scores to compare their methods. ‘It always has been suspected that some benchmarks are not that great,’ says Schuh. ‘But you always should look into the data, and it should be quantifiable to have proof it’s actually bad.’"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "9363823b65d49546",
-      "kind": "article",
-      "title": "Orchard: An open framework for scalable agentic AI",
-      "source": "Microsoft Research",
-      "source_url": "https://www.microsoft.com/en-us/research/blog/orchard-an-open-framework-for-scalable-agentic-ai/",
-      "published_at": "2026-08-03T16:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Microsoft",
-        "Research"
-      ],
-      "verification": "官方来源",
-      "summary": "Orchard is an open-source framework for the research community to train and evaluate AI agents across task types. It reduces complexity while supporting strong performance from smaller models by enabling researchers to reuse the same infrastructure. The post Orchard: An open framework for scalable agentic AI appeared first on Microsoft Research .",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.microsoft.com/en-us/research/blog/orchard-an-open-framework-for-scalable-agentic-ai/",
-      "key_points": [
-        "Orchard is an open-source framework for scalable and cost-effective agentic AI research, built around Orchard Env, a reusable environment service for training and evaluating agents across task domains.",
-        "The same Orchard infrastructure supports software-engineering, web-navigation, and personal-assistant agents, and can train them directly inside real deployment harnesses such as Codex, OpenClaw, and ZeroClaw—letting researchers reuse environments, data pipelines, and evaluation workflows across tasks.",
-        "Orchard-SWE, Orchard-GUI, and Orchard-Claw demonstrate that relatively small open-weight models can achieve strong results on complex real-world tasks.",
-        "For example, Orchard-SWE reaches 69.7% on SWE-bench Verified—73.0% with value-model reranking—using only about 3 billion active parameters, approaching frontier systems using more than 10 times larger models."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Orchard is an open-source framework for the research community to train and evaluate AI agents across task types. It reduces complexity while supporting strong performance from smaller models by enabling researchers to reuse the same infrastructure. The post Orchard: An open framework for scalable agentic AI appeared first on Microsoft Research ."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Orchard is an open-source framework for scalable and cost-effective agentic AI research, built around Orchard Env, a reusable environment service for training and evaluating agents across task domains.",
-            "The same Orchard infrastructure supports software-engineering, web-navigation, and personal-assistant agents, and can train them directly inside real deployment harnesses such as Codex, OpenClaw, and ZeroClaw—letting researchers reuse environments, data pipelines, and evaluation workflows across tasks.",
-            "Orchard-SWE, Orchard-GUI, and Orchard-Claw demonstrate that relatively small open-weight models can achieve strong results on complex real-world tasks.",
-            "For example, Orchard-SWE reaches 69.7% on SWE-bench Verified—73.0% with value-model reranking—using only about 3 billion active parameters, approaching frontier systems using more than 10 times larger models."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Orchard is an open-source framework for scalable and cost-effective agentic AI research, built around Orchard Env, a reusable environment service for training and evaluating agents across task domains.",
-            "The same Orchard infrastructure supports software-engineering, web-navigation, and personal-assistant agents, and can train them directly inside real deployment harnesses such as Codex, OpenClaw, and ZeroClaw—letting researchers reuse environments, data pipelines, and evaluation workflows across tasks.",
-            "Orchard-SWE, Orchard-GUI, and Orchard-Claw demonstrate that relatively small open-weight models can achieve strong results on complex real-world tasks. For example, Orchard-SWE reaches 69.7% on SWE-bench Verified—73.0% with value-model reranking—using only about 3 billion active parameters, approaching frontier systems using more than 10 times larger models."
           ]
         }
       ],
@@ -3282,47 +3182,6 @@
             "E arlier this month, about 40 top mathematicians gathered at OpenAI’s offices to discuss the future of their profession. The meeting was off-the-record, but if recent articles by mathematicians are any guide, it was mostly pretty glum. People fear for their jobs, their careers and the work they love.",
             "We think the contrary view is more likely, at least in the short-term. AI models are nowhere near as capable as experienced academic mathematicians."
           ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "8b89f75a907b3512",
-      "kind": "article",
-      "title": "STREAMLINE uses AI to tackle one of nuclear physics’ toughest problems",
-      "source": "anl.gov",
-      "source_url": "https://www.anl.gov/article/streamline-uses-ai-to-tackle-one-of-nuclear-physics-toughest-problems",
-      "published_at": "2026-08-25T12:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "STREAMLINE uses AI to tackle one of nuclear physics’ toughest problems anl.gov",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 403: Forbidden",
-      "resolved_url": "https://www.anl.gov/article/streamline-uses-ai-to-tackle-one-of-nuclear-physics-toughest-problems",
-      "key_points": [
-        "STREAMLINE uses AI to tackle one of nuclear physics’ toughest problems anl.gov"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "STREAMLINE uses AI to tackle one of nuclear physics’ toughest problems anl.gov"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "STREAMLINE uses AI to tackle one of nuclear physics’ toughest problems anl.gov"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -3721,6 +3580,161 @@
         }
       ],
       "reading_minutes": 1
+    },
+    {
+      "id": "3eb9052fba640d85",
+      "kind": "article",
+      "title": "Mathematics After AI - First Things",
+      "source": "First Things",
+      "source_url": "https://firstthings.com/mathematics-after-ai/",
+      "published_at": "2026-08-18T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Last year, mathematicians from more than a dozen universities met in the city of Leiden to discuss how artificial intelligence will affect the future of their field. The fruit...",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://firstthings.com/mathematics-after-ai/",
+      "key_points": [
+        "Last year, mathematicians from more than a dozen universities met in the city of Leiden to discuss how artificial intelligence will affect the future of their field.",
+        "The fruit of that meeting is “ The Leiden Declaration on Artificial Intelligence and Mathematics ,” a few dozen paragraphs of carefully measured prose concerning the threats posed by this new technology and how best to address them.",
+        "At the time of writing, it has accrued over 3,500 signatures.",
+        "One of the themes of the declaration is that the AI frenzy has created a dangerous culture of oversimplification.",
+        "Its drafters have therefore endeavored to steer the narrow way between hype and hysteria."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Last year, mathematicians from more than a dozen universities met in the city of Leiden to discuss how artificial intelligence will affect the future of their field. The fruit..."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Last year, mathematicians from more than a dozen universities met in the city of Leiden to discuss how artificial intelligence will affect the future of their field.",
+            "The fruit of that meeting is “ The Leiden Declaration on Artificial Intelligence and Mathematics ,” a few dozen paragraphs of carefully measured prose concerning the threats posed by this new technology and how best to address them.",
+            "At the time of writing, it has accrued over 3,500 signatures.",
+            "One of the themes of the declaration is that the AI frenzy has created a dangerous culture of oversimplification.",
+            "Its drafters have therefore endeavored to steer the narrow way between hype and hysteria."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Last year, mathematicians from more than a dozen universities met in the city of Leiden to discuss how artificial intelligence will affect the future of their field. The fruit of that meeting is “ The Leiden Declaration on Artificial Intelligence and Mathematics ,” a few dozen paragraphs of carefully measured prose concerning the threats posed by this new technology and how best to address them. At the time of writing, it has accrued over 3,500 signatures.",
+            "One of the themes of the declaration is that the AI frenzy has created a dangerous culture of oversimplification. Its drafters have therefore endeavored to steer the narrow way between hype and hysteria. I tried manfully to read the declaration in this spirit, but as I reviewed the list of “potential threats,” I could not help but think that, were some Screwtape assigned by the infernal high command to bring down the mathematical community, he could hardly have dreamed up a more perfect instrument to effect his designs than AI.",
+            "Take the first two threats on the list: AI is remarkably good at producing fluent mathematical nonsense and remarkably bad at attributing the work it cites to the correct human sources. Feed enough papers with “plausible but unreliable arguments” and unverified citations into the existing peer-review system, and it will quickly break down or otherwise be forced to abandon its traditional standards of rigor. These papers, once published, will also form part of the training material for the next generation of large language models. Only a few small errors compounding over time might be enough to push mathematics into a state of grave disorder."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "f8f2c2d6b145fa5f",
+      "kind": "article",
+      "title": "AI-Generated Math Proof Hints at a Path to Safer Automated Code",
+      "source": "IEEE Spectrum",
+      "source_url": "https://spectrum.ieee.org/axiom-math-246-theorem-formalization",
+      "published_at": "2026-08-18T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "AI-Generated Math Proof Hints at a Path to Safer Automated Code IEEE Spectrum",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://spectrum.ieee.org/axiom-math-246-theorem-formalization",
+      "key_points": [
+        "Benjamin Skuse is a freelance writer of all things science and technology.",
+        "Representing a significant milestone in AI-assisted mathematical research, a team at Axiom Math has automatically verified the proof of a theorem relating to prime numbers—colloquially referred to as the “246 theorem”—for the first time using the company’s AI system AxiomProver.",
+        "In formal verification, mathematicians task a computer with checking a machine-readable version of a proof.",
+        "The process is not a 100 percent guarantee that the proof is correct, as a recent demonstration showed , exposing how a bug in the method could be exploited to accept a false, AI-generated proof.",
+        "Still, the computational method is as close to a rubber stamp as you can get."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AI-Generated Math Proof Hints at a Path to Safer Automated Code IEEE Spectrum"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Benjamin Skuse is a freelance writer of all things science and technology.",
+            "Representing a significant milestone in AI-assisted mathematical research, a team at Axiom Math has automatically verified the proof of a theorem relating to prime numbers—colloquially referred to as the “246 theorem”—for the first time using the company’s AI system AxiomProver.",
+            "In formal verification, mathematicians task a computer with checking a machine-readable version of a proof.",
+            "The process is not a 100 percent guarantee that the proof is correct, as a recent demonstration showed , exposing how a bug in the method could be exploited to accept a false, AI-generated proof.",
+            "Still, the computational method is as close to a rubber stamp as you can get."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Benjamin Skuse is a freelance writer of all things science and technology. He holds a Ph.D. in applied mathematics.",
+            "Representing a significant milestone in AI-assisted mathematical research, a team at Axiom Math has automatically verified the proof of a theorem relating to prime numbers—colloquially referred to as the “246 theorem”—for the first time using the company’s AI system AxiomProver.",
+            "In formal verification, mathematicians task a computer with checking a machine-readable version of a proof. The process is not a 100 percent guarantee that the proof is correct, as a recent demonstration showed , exposing how a bug in the method could be exploited to accept a false, AI-generated proof. Still, the computational method is as close to a rubber stamp as you can get."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "9789d4f5c43a5e69",
+      "kind": "article",
+      "title": "How Claude is accelerating protein design and analytical chemistry",
+      "source": "Anthropic",
+      "source_url": "https://www.anthropic.com/research/Claude-accelerates-protein-design",
+      "published_at": "2026-08-18T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Frontier Labs",
+        "Industry"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "In this post, we share two results that show how Claude can help life scientists increase the pace of their research. In the first, we tested Claude’s ability to design protein binders from scratch, a key step in creating protein-based drugs that has historically taken a specialist weeks or months per target. In the second example, we evaluated whether Claude can accelerate chemical analysis. Claude Opus 5, a generally available model, was given NMR and LC-MS data (the data that allows chemists to assess the identity and purity of the compounds they work with).",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.anthropic.com/research/Claude-accelerates-protein-design",
+      "key_points": [
+        "Summary: In this post, we share two results that show how Claude can help life scientists increase the pace of their research.",
+        "In the first, we tested Claude’s ability to design protein binders from scratch, a key task representative of the early parts of the drug design process and one that has historically taken a specialist weeks or months per target.",
+        "Claude (Mythos Preview and Opus 4.8) designed protein binders against 15 targets, and succeeded against 14 of them.",
+        "Between 22% and 35% of its individual designs bound successfully, depending on the setup, compared to the 10-15% that is typical in protein design campaigns today.",
+        "Some of its strongest designs bound several times more tightly than the best… AI models are also beginning to hasten progress in experimental fields where verifying the results is more complex and expensive, such as in the life sciences."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "In this post, we share two results that show how Claude can help life scientists increase the pace of their research. In the first, we tested Claude’s ability to design protein binders from scratch, a key step in creating protein-based drugs that has historically taken a specialist weeks or months per target. In the second example, we evaluated whether Claude can accelerate chemical analysis. Claude Opus 5, a generally available model, was given NMR and LC-MS data (the data that allows chemists to assess the identity and purity of the compounds they work with)."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Summary: In this post, we share two results that show how Claude can help life scientists increase the pace of their research.",
+            "In the first, we tested Claude’s ability to design protein binders from scratch, a key task representative of the early parts of the drug design process and one that has historically taken a specialist weeks or months per target.",
+            "Claude (Mythos Preview and Opus 4.8) designed protein binders against 15 targets, and succeeded against 14 of them.",
+            "Between 22% and 35% of its individual designs bound successfully, depending on the setup, compared to the 10-15% that is typical in protein design campaigns today.",
+            "Some of its strongest designs bound several times more tightly than the best… AI models are also beginning to hasten progress in experimental fields where verifying the results is more complex and expensive, such as in the life sciences."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Summary: In this post, we share two results that show how Claude can help life scientists increase the pace of their research. In the first, we tested Claude’s ability to design protein binders from scratch, a key task representative of the early parts of the drug design process and one that has historically taken a specialist weeks or months per target. Claude (Mythos Preview and Opus 4.8) designed protein binders against 15 targets, and succeeded against 14 of them. Between 22% and 35% of its individual designs bound successfully, depending on the setup, compared to the 10-15% that is typical in protein design campaigns today. Some of its strongest designs bound several times more tightly than the best…",
+            "AI models are also beginning to hasten progress in experimental fields where verifying the results is more complex and expensive, such as in the life sciences. In this post, we share the results of two experiments into Claude’s scientific capabilities. First, we present findings from our investigation into Claude’s performance on a protein design campaign, showing that Claude can design protein binders against a variety of targets as well as (or even better than) leading human experts. Second, we share how Claude Opus 5 performed on an analytical chemistry task, demonstrating how general-access models can support the routine and time-intensive aspects of research.",
+            "The protein design and analytical chemistry tasks described below are representative of the work that makes up some parts of the early stages of the drug development process. Accelerating these phases is one component of our much larger effort to speed up drug development end-to-end, many aspects of which have more to do with policy and operational bottlenecks than with improvements in core scientific capabilities."
+          ]
+        }
+      ],
+      "reading_minutes": 2
     },
     {
       "id": "7f7b0b81db820972",
@@ -4164,38 +4178,28 @@
         "World Models"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Dr. Fei-Fei Li is the inaugural Sequoia Professor in the Computer Science Department at Stanford University, and Co-Director of Stanford’s Human-Centered AI Institute. She served as the Director of Stanford’s AI Lab from 2013 to 2018. And during her sabbatical from Stanford from January 2017 to September 2018, she was Vice President at Google and served as Chief Scientist of AI/ML at Google Cloud. Dr. Fei-Fei Li obtained her B.A. degree in physics from Princeton in 1999 with High Honors, and her PhD degree in electrical engineering from California Institute of Technology (Caltech) in 2005. She joined Stanford in 2009 as an assistant professor. Prior to that, she was on…",
+      "summary": "Fei-Fei Li American Academy of Arts and Sciences",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
+      "fetch_status": "summary-only",
+      "fetch_note": "The read operation timed out",
       "resolved_url": "https://www.amacad.org/person/fei-fei-li",
       "key_points": [
-        "Fei-Fei Li is the inaugural Sequoia Professor in the Computer Science Department at Stanford University, and Co-Director of Stanford’s Human-Centered AI Institute.",
-        "She served as the Director of Stanford’s AI Lab from 2013 to 2018.",
-        "And during her sabbatical from Stanford from January 2017 to September 2018, she was Vice President at Google and served as Chief Scientist of AI/ML at Google Cloud.",
-        "Fei-Fei Li obtained her B.A. degree in physics from Princeton in 1999 with High Honors, and her PhD degree in electrical engineering from California Institute of Technology (Caltech) in 2005.",
-        "She joined Stanford in 2009 as an assistant professor."
+        "Fei-Fei Li American Academy of Arts and Sciences"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Dr. Fei-Fei Li is the inaugural Sequoia Professor in the Computer Science Department at Stanford University, and Co-Director of Stanford’s Human-Centered AI Institute. She served as the Director of Stanford’s AI Lab from 2013 to 2018. And during her sabbatical from Stanford from January 2017 to September 2018, she was Vice President at Google and served as Chief Scientist of AI/ML at Google Cloud. Dr. Fei-Fei Li obtained her B.A. degree in physics from Princeton in 1999 with High Honors, and her PhD degree in electrical engineering from California Institute of Technology (Caltech) in 2005. She joined Stanford in 2009 as an assistant professor. Prior to that, she was on…"
+          "body": "Fei-Fei Li American Academy of Arts and Sciences"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Fei-Fei Li is the inaugural Sequoia Professor in the Computer Science Department at Stanford University, and Co-Director of Stanford’s Human-Centered AI Institute.",
-            "She served as the Director of Stanford’s AI Lab from 2013 to 2018.",
-            "And during her sabbatical from Stanford from January 2017 to September 2018, she was Vice President at Google and served as Chief Scientist of AI/ML at Google Cloud.",
-            "Fei-Fei Li obtained her B.A. degree in physics from Princeton in 1999 with High Honors, and her PhD degree in electrical engineering from California Institute of Technology (Caltech) in 2005.",
-            "She joined Stanford in 2009 as an assistant professor."
+            "Fei-Fei Li American Academy of Arts and Sciences"
           ]
         },
         {
           "title": "原文短摘录",
-          "paragraphs": [
-            "Dr. Fei-Fei Li is the inaugural Sequoia Professor in the Computer Science Department at Stanford University, and Co-Director of Stanford’s Human-Centered AI Institute. She served as the Director of Stanford’s AI Lab from 2013 to 2018. And during her sabbatical from Stanford from January 2017 to September 2018, she was Vice President at Google and served as Chief Scientist of AI/ML at Google Cloud. Dr. Fei-Fei Li obtained her B.A. degree in physics from Princeton in 1999 with High Honors, and her PhD degree in electrical engineering from California Institute of Technology (Caltech) in 2005. She joined Stanford in 2009 as an assistant professor. Prior to that, she was on faculty at Princeton University…",
-            "Dr. Fei-Fei Li’s current research interests include cognitively inspired AI, machine learning, deep learning, computer vision and AI+healthcare especially ambient intelligent systems for healthcare delivery. In the past she has also worked on cognitive and computational neuroscience. Dr. Li has published more than 200 scientific articles in top-tier journals and conferences, including Nature, PNAS, Journal of Neuroscience, CVPR, ICCV, NIPS, ECCV, ICRA, IROS, RSS, IJCV, IEEE-PAMI, New England Journal of Medicine, Nature Digital Medicine, etc. Dr. Li is the inventor of ImageNet and the ImageNet Challenge, a critical large-scale dataset and benchmarking effort that has contributed to the latest developments in…"
-          ]
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -4385,12 +4389,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "b0a743d8d0fd97c4",
+      "id": "a66fd57ead40a4be",
       "kind": "social",
-      "title": "The AI riptide is already underway",
+      "title": "Grok @Bot buys a Tesla!",
       "source": "x.com",
-      "source_url": "https://x.com/elonmusk/status/2093577089957994826",
-      "published_at": "2026-08-29T05:50:49Z",
+      "source_url": "https://x.com/elonmusk/status/2093858309824553395",
+      "published_at": "2026-08-30T00:28:17Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -4399,29 +4403,84 @@
         "First-party Post"
       ],
       "verification": "公开平台索引，需查看原帖",
-      "summary": "The AI riptide is already underway x.com",
+      "summary": "Grok @Bot buys a Tesla!",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/elonmusk/status/2093577089957994826",
+      "resolved_url": "https://x.com/elonmusk/status/2093858309824553395",
       "key_points": [
-        "Maybe for the better if the young people don't start life as Marxists."
+        "DogeDesigner @cb_doge 12h Grok Bot can literally buy things for you on the internet now.",
+        "Here’s a wild example: @ Baconbrix asked Grok Bot to buy him a Tesla, and it actually placed the order for a Model Y.",
+        "Grok Bot is getting insanely powerful. 🚀 12:28 AM · Aug 30, 2026 1.3M Views 614 494 2.9K 124 Noah 🎷 @Noah1540912 4h Heard @ grok is interested in the model J 5 4 19 1.3K mleejr @MLeeJr 4h grok @ bot is managing my @ grok coin drb crypto position 2 2 19 357"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "The AI riptide is already underway x.com"
+          "body": "Grok @Bot buys a Tesla!"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Maybe for the better if the young people don't start life as Marxists."
+            "DogeDesigner @cb_doge 12h Grok Bot can literally buy things for you on the internet now.",
+            "Here’s a wild example: @ Baconbrix asked Grok Bot to buy him a Tesla, and it actually placed the order for a Model Y.",
+            "Grok Bot is getting insanely powerful. 🚀 12:28 AM · Aug 30, 2026 1.3M Views 614 494 2.9K 124 Noah 🎷 @Noah1540912 4h Heard @ grok is interested in the model J 5 4 19 1.3K mleejr @MLeeJr 4h grok @ bot is managing my @ grok coin drb crypto position 2 2 19 357"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk The AI riptide is already underway Brett Winton @wintonARK Aug 28 a surprise I think is coming the quick payback periods and extraordinarily high IRR for AI infrastructure, even at monumental scale, will push up cost of capital sufficient to push many traditional businesses into the abyss, even those without obvious direct AI counter-exposure 5:50 AM · Aug 29, 2026 6M Views 966 1.1K 9.1K 1.3K",
-            "The Morangutan @MorangutanMan 14h Are schools, colleges and universities doomed in the long run, when ai can teach anybody anywhere in the world at a higher standard than woke professors and teachers for free? How will that change society? Maybe for the better if the young people don't start life as Marxists. 5 5 69 8.5K"
+            "Elon Musk @elonmusk Grok @ bot buys a Tesla! DogeDesigner @cb_doge 12h Grok Bot can literally buy things for you on the internet now. Here’s a wild example: @ Baconbrix asked Grok Bot to buy him a Tesla, and it actually placed the order for a Model Y. Grok Bot is getting insanely powerful. 🚀 12:28 AM · Aug 30, 2026 1.3M Views 614 494 2.9K 124",
+            "Noah 🎷 @Noah1540912 4h Heard @ grok is interested in the model J 5 4 19 1.3K",
+            "mleejr @MLeeJr 4h grok @ bot is managing my @ grok coin drb crypto position 2 2 19 357"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "2df450db0a3a17b6",
+      "kind": "social",
+      "title": "@PeterDiamandis The reason I know this is because we’re doing it at Tesla AI",
+      "source": "x.com",
+      "source_url": "https://x.com/elonmusk/status/2093799718832771461",
+      "published_at": "2026-08-29T20:35:28Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "@PeterDiamandis The reason I know this is because we’re doing it at Tesla AI x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/elonmusk/status/2093799718832771461",
+      "key_points": [
+        "Diamandis, MD @PeterDiamandis 10h Elon predicted 100x gains in AI intelligence at fixed model size.",
+        "It was at the edge of plausibility when he said it.",
+        "91 147 3.8K 259K Elon Musk @elonmusk The reason I know this is because we’re doing it at Tesla AI 8:35 PM · Aug 29, 2026 374.4K Views 294 438 10K 306 Tech.",
+        "Lovers Community @Thedreamer89987 8h Optimus AI at Tesla AI 3 5 64 6.5K"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "@PeterDiamandis The reason I know this is because we’re doing it at Tesla AI x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Diamandis, MD @PeterDiamandis 10h Elon predicted 100x gains in AI intelligence at fixed model size.",
+            "It was at the edge of plausibility when he said it.",
+            "91 147 3.8K 259K Elon Musk @elonmusk The reason I know this is because we’re doing it at Tesla AI 8:35 PM · Aug 29, 2026 374.4K Views 294 438 10K 306 Tech.",
+            "Lovers Community @Thedreamer89987 8h Optimus AI at Tesla AI 3 5 64 6.5K"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Peter H. Diamandis, MD @PeterDiamandis 10h Elon predicted 100x gains in AI intelligence at fixed model size. It was at the edge of plausibility when he said it. Turns out it's now a fact. We are nowhere near the ceiling. 91 147 3.8K 259K",
+            "Elon Musk @elonmusk The reason I know this is because we’re doing it at Tesla AI 8:35 PM · Aug 29, 2026 374.4K Views 294 438 10K 306",
+            "Tech. Lovers Community @Thedreamer89987 8h Optimus AI at Tesla AI 3 5 64 6.5K"
           ]
         }
       ],
@@ -4463,9 +4522,9 @@
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "billie eilish @billieeilish Aug 27 Behind the scenes of Eilish Intense, Billie’s newest fragrance, available now on billieeilish.com 00:00 5.2K 1.6K 22K 17M",
-            "Elon Musk @elonmusk @ grok please roast Eilish’s hypocrisy in hating on capitalism and “stolen land” while selling perfume and living in luxury on that same land 1:27 AM · Aug 29, 2026 4M Views 1.8K 8K 141K 2.8K",
-            "Grok @grok 19h Billie critiques capitalism and \"stolen land\" while launching Eilish Intense perfume and living in multi-million-dollar LA properties on that same land. The system she faults funds the luxury; the territory stays hers. Clear inconsistency. 112 722 21K 676K"
+            "billie eilish @billieeilish Aug 27 Behind the scenes of Eilish Intense, Billie’s newest fragrance, available now on billieeilish.com 00:00 5.6K 1.6K 22K 19M",
+            "Elon Musk @elonmusk @ grok please roast Eilish’s hypocrisy in hating on capitalism and “stolen land” while selling perfume and living in luxury on that same land 1:27 AM · Aug 29, 2026 4.3M Views 1.9K 8.5K 148K 3K",
+            "Grok @grok Aug 29 Billie critiques capitalism and \"stolen land\" while launching Eilish Intense perfume and living in multi-million-dollar LA properties on that same land. The system she faults funds the luxury; the territory stays hers. Clear inconsistency. 116 818 23K 721K"
           ]
         }
       ],
@@ -4492,7 +4551,7 @@
       "resolved_url": "https://x.com/elonmusk/status/2093471590767882716",
       "key_points": [
         "This is GrokStreet a live pixel trading floor running locally on my mac. eleven desks trade 24/7.",
-        "The Chief patrols the office and bonks anyone who books a sloppy loss. and Show more 00:00 00:00 7 13 43 1.4K Frogi @Frogiiix 20h How to use @ grok imagine jimothelony 00:00 6 10 30 1.3K"
+        "The Chief patrols the office and bonks anyone who books a sloppy loss. and Show more 00:00 00:00 7 13 43 1.5K Frogi @Frogiiix Aug 29 How to use @ grok imagine jimothelony 00:00 6 9 30 1.4K"
       ],
       "sections": [
         {
@@ -4503,65 +4562,15 @@
           "title": "公开页面要点",
           "bullets": [
             "This is GrokStreet a live pixel trading floor running locally on my mac. eleven desks trade 24/7.",
-            "The Chief patrols the office and bonks anyone who books a sloppy loss. and Show more 00:00 00:00 7 13 43 1.4K Frogi @Frogiiix 20h How to use @ grok imagine jimothelony 00:00 6 10 30 1.3K"
+            "The Chief patrols the office and bonks anyone who books a sloppy loss. and Show more 00:00 00:00 7 13 43 1.5K Frogi @Frogiiix Aug 29 How to use @ grok imagine jimothelony 00:00 6 9 30 1.4K"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk How to use Grok @ bot X Freeze @XFreeze Aug 28 SpaceXAI has built an entire Grok Bot Guides library showing how people are actually using AI agents as real teammates These are practical playbooks from people already running Grok Bot for: • Mobile app development • Product management • Design • Enterprise GTM • Managing Show more 10:51 PM · Aug 28, 2026 3.6M Views 843 1.6K 11K 8.7K",
-            "AdiiX @adiix_official 21h And this how @ bot work AdiiX @adiix_official 23h Elon What did You Build My Grok Bot Agent Work on My Computer i Manage Them From my Phone, From Anywhere. This is GrokStreet a live pixel trading floor running locally on my mac. eleven desks trade 24/7. The Chief patrols the office and bonks anyone who books a sloppy loss. and Show more 00:00 00:00 7 13 43 1.4K",
-            "Frogi @Frogiiix 20h How to use @ grok imagine jimothelony 00:00 6 10 30 1.3K"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "9d2087b723729ed7",
-      "kind": "social",
-      "title": "@dadkins_ @OpenAI We already did, it didn't solve any of them. But we haven't thrown a ton of inference at them.",
-      "source": "x.com",
-      "source_url": "https://x.com/polynoamial/status/2093460474738393511",
-      "published_at": "2026-08-28T22:07:26Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Researcher Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "@dadkins_ @OpenAI We already did, it didn't solve any of them. But we haven't thrown a ton of inference at them. x.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/polynoamial/status/2093460474738393511",
-      "key_points": [
-        "danny adkins @dadkins_ 22h when do you think you'll take a stab at a Millennium Prize problem?",
-        "2 55 9.8K Noam Brown @polynoamial We already did, it didn't solve any of them.",
-        "But we haven't thrown a ton of inference at them.",
-        "10:07 PM · Aug 28, 2026 11.3K Views 9 5 363 27 🍓🍓🍓 @iruletheworldmo 22h when do you think you’ll start taking real stabs at huge problems. sam says a lot, maybe we’ll just pour a ton of inference and solve x. or is that to happen on the consumer side?"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "@dadkins_ @OpenAI We already did, it didn't solve any of them. But we haven't thrown a ton of inference at them. x.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "danny adkins @dadkins_ 22h when do you think you'll take a stab at a Millennium Prize problem?",
-            "2 55 9.8K Noam Brown @polynoamial We already did, it didn't solve any of them.",
-            "But we haven't thrown a ton of inference at them.",
-            "10:07 PM · Aug 28, 2026 11.3K Views 9 5 363 27 🍓🍓🍓 @iruletheworldmo 22h when do you think you’ll start taking real stabs at huge problems. sam says a lot, maybe we’ll just pour a ton of inference and solve x. or is that to happen on the consumer side?"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "danny adkins @dadkins_ 22h when do you think you'll take a stab at a Millennium Prize problem? 2 55 9.8K",
-            "Noam Brown @polynoamial We already did, it didn't solve any of them. But we haven't thrown a ton of inference at them. 10:07 PM · Aug 28, 2026 11.3K Views 9 5 363 27",
-            "🍓🍓🍓 @iruletheworldmo 22h when do you think you’ll start taking real stabs at huge problems. sam says a lot, maybe we’ll just pour a ton of inference and solve x. or is that to happen on the consumer side? 1 7 2.3K"
+            "Elon Musk @elonmusk How to use Grok @ bot X Freeze @XFreeze Aug 28 SpaceXAI has built an entire Grok Bot Guides library showing how people are actually using AI agents as real teammates These are practical playbooks from people already running Grok Bot for: • Mobile app development • Product management • Design • Enterprise GTM • Managing Show more 10:51 PM · Aug 28, 2026 3.8M Views 864 1.8K 11K 9.6K",
+            "AdiiX @adiix_official Aug 28 And this how @ bot work AdiiX @adiix_official Aug 28 Elon What did You Build My Grok Bot Agent Work on My Computer i Manage Them From my Phone, From Anywhere. This is GrokStreet a live pixel trading floor running locally on my mac. eleven desks trade 24/7. The Chief patrols the office and bonks anyone who books a sloppy loss. and Show more 00:00 00:00 7 13 43 1.5K",
+            "Frogi @Frogiiix Aug 29 How to use @ grok imagine jimothelony 00:00 6 9 30 1.4K"
           ]
         }
       ],
@@ -4761,12 +4770,11 @@
       "verification": "媒体或公开网页",
       "summary": "Homebuilding AI startup Digs raises $25.3M and partners with building products giant GeekWire",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
       "resolved_url": "https://www.geekwire.com/2026/homebuilding-ai-startup-digs-raises-25-3m-and-partners-with-building-products-giant/",
       "key_points": [
-        "by Kurt Schlosser on Aug 25, 2026 at 3:30 am August 24, 2026 at 2:34 pm Digs , a Vancouver, Wash.-based startup building AI software for residential construction, raised $25.3 million in Series A funding led by building products giant Builders FirstSource , the companies announced Tuesday.",
-        "Under the five-year agreement, Builders FirstSource will integrate Digs’ AI platform into its digital ecosystem, expanding tools for its 140,000 builder clients.",
-        "The technology streamlines everything from pre-construction estimates and blueprint collaboration to post-move-in home maintenance and warranty care for homeowners."
+        "Homebuilding AI startup Digs raises $25.3M and partners with building products giant GeekWire"
       ],
       "sections": [
         {
@@ -4776,18 +4784,12 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "by Kurt Schlosser on Aug 25, 2026 at 3:30 am August 24, 2026 at 2:34 pm Digs , a Vancouver, Wash.-based startup building AI software for residential construction, raised $25.3 million in Series A funding led by building products giant Builders FirstSource , the companies announced Tuesday.",
-            "Under the five-year agreement, Builders FirstSource will integrate Digs’ AI platform into its digital ecosystem, expanding tools for its 140,000 builder clients.",
-            "The technology streamlines everything from pre-construction estimates and blueprint collaboration to post-move-in home maintenance and warranty care for homeowners."
+            "Homebuilding AI startup Digs raises $25.3M and partners with building products giant GeekWire"
           ]
         },
         {
           "title": "原文短摘录",
-          "paragraphs": [
-            "by Kurt Schlosser on Aug 25, 2026 at 3:30 am August 24, 2026 at 2:34 pm",
-            "Digs , a Vancouver, Wash.-based startup building AI software for residential construction, raised $25.3 million in Series A funding led by building products giant Builders FirstSource , the companies announced Tuesday.",
-            "Under the five-year agreement, Builders FirstSource will integrate Digs’ AI platform into its digital ecosystem, expanding tools for its 140,000 builder clients. The technology streamlines everything from pre-construction estimates and blueprint collaboration to post-move-in home maintenance and warranty care for homeowners."
-          ]
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -4849,8 +4851,8 @@
       "authors": [],
       "venue": "",
       "tags": [
-        "Founder Watch",
-        "Embodied AI"
+        "Academic Startup",
+        "Funding"
       ],
       "verification": "媒体或公开网页",
       "summary": "Fei-Fei Li Says She Runs Her AI Startup Like a 'Tiger Mom' Business Insider",
@@ -5302,53 +5304,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "76e9ea2760947dc3",
-      "kind": "article",
-      "title": "AI pioneers are split on the technology’s risk to jobs",
-      "source": "thecurrent.com",
-      "source_url": "https://www.thecurrent.com/innovation/ai-pioneers-split-technology-risk-jobs-ai4-las-vegas",
-      "published_at": "2026-08-06T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Founder Watch",
-        "Embodied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "At AI4 in Las Vegas, Geoffrey Hinton, Fei-Fei Li, Andrew Ng, and Anton Korinek shared competing visions for AI's future, tackling everything from marketing jobs and AI safety to the economic transformation ahead.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.thecurrent.com/innovation/ai-pioneers-split-technology-risk-jobs-ai4-las-vegas",
-      "key_points": [
-        "From marketers becoming \"full-cycle marketers\" to the possibility of AI reshaping the economy, the industry's biggest thinkers painted very different pictures of what comes next at AI4.",
-        "Even among AI’s pioneers, there isn’t consensus on the technology’s biggest challenges, or just how profoundly it will reshape society.",
-        "Against a backdrop of 114-degree Las Vegas heat, Ai4, dubbed the “world’s largest AI conference,” hosted some of the industry’s hottest debates, as several AI trailblazers sparred over the technology’s biggest opportunities and risks."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "At AI4 in Las Vegas, Geoffrey Hinton, Fei-Fei Li, Andrew Ng, and Anton Korinek shared competing visions for AI's future, tackling everything from marketing jobs and AI safety to the economic transformation ahead."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "From marketers becoming \"full-cycle marketers\" to the possibility of AI reshaping the economy, the industry's biggest thinkers painted very different pictures of what comes next at AI4.",
-            "Even among AI’s pioneers, there isn’t consensus on the technology’s biggest challenges, or just how profoundly it will reshape society.",
-            "Against a backdrop of 114-degree Las Vegas heat, Ai4, dubbed the “world’s largest AI conference,” hosted some of the industry’s hottest debates, as several AI trailblazers sparred over the technology’s biggest opportunities and risks."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "From marketers becoming \"full-cycle marketers\" to the possibility of AI reshaping the economy, the industry's biggest thinkers painted very different pictures of what comes next at AI4.",
-            "Even among AI’s pioneers, there isn’t consensus on the technology’s biggest challenges, or just how profoundly it will reshape society.",
-            "Against a backdrop of 114-degree Las Vegas heat, Ai4, dubbed the “world’s largest AI conference,” hosted some of the industry’s hottest debates, as several AI trailblazers sparred over the technology’s biggest opportunities and risks."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "ada6057e17c2e7c0",
       "kind": "article",
       "title": "Nscale to acquire Romanian co-founded AI startup Anyscale in reportedly USD 1.65 billion deal",
@@ -5452,7 +5407,7 @@
       "title": "The EU AI Act gets real",
       "source": "Axios",
       "source_url": "https://www.axios.com/2026/08/28/eu-ai-act-gets-real",
-      "published_at": "2026-08-29T00:18:29Z",
+      "published_at": "2026-08-28T09:17:10Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -5530,6 +5485,53 @@
             "Members of The Conference Board get exclusive access to the full range of products and services that deliver Trusted Insights for What's Ahead ® including webcasts, publications, data and analysis, plus discounts to conferences and events.",
             "Action : The European Union (EU) has begun applying its AI Act’s transparency requirements for certain AI systems and AI-generated or manipulated content.",
             "Under the Act, firms must disclose when people interact with AI in certain circumstances and must make synthetic text, audio, images, and video detectable in a machine-readable format. 1 Firms must also disclose AI systems that generate or manipulate text published with the purpose of informing the public on “matters of public interest.”"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "8a5e4e1b4e85d62d",
+      "kind": "article",
+      "title": "World Labs Acquires Robotics Company SceniX",
+      "source": "AI Insider",
+      "source_url": "https://theaiinsider.tech/2026/07/27/world-labs-acquires-robotics-company-scenix/",
+      "published_at": "2026-07-27T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Insider Brief World Labs acquired robotics company SceniX as it expands its spatial intelligence work into embodied AI. World Labs said SceniX will help",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://theaiinsider.tech/2026/07/27/world-labs-acquires-robotics-company-scenix/",
+      "key_points": [
+        "World Labs acquired robotics company SceniX as it expands its spatial intelligence work into embodied AI.",
+        "World Labs said SceniX will help advance systems that can understand, simulate and act across virtual and physical environments.",
+        "Founder and CEO Fei-Fei Li said SceniX brings simulation and robotics experience, with technology already tested in live deployments on real hardware."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Insider Brief World Labs acquired robotics company SceniX as it expands its spatial intelligence work into embodied AI. World Labs said SceniX will help"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "World Labs acquired robotics company SceniX as it expands its spatial intelligence work into embodied AI.",
+            "World Labs said SceniX will help advance systems that can understand, simulate and act across virtual and physical environments.",
+            "Founder and CEO Fei-Fei Li said SceniX brings simulation and robotics experience, with technology already tested in live deployments on real hardware."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "World Labs acquired robotics company SceniX as it expands its spatial intelligence work into embodied AI.",
+            "World Labs said SceniX will help advance systems that can understand, simulate and act across virtual and physical environments.",
+            "Founder and CEO Fei-Fei Li said SceniX brings simulation and robotics experience, with technology already tested in live deployments on real hardware."
           ]
         }
       ],
