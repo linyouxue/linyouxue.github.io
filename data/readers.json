@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-30T05:22:15Z",
+  "generated_at": "2026-08-30T11:52:23Z",
   "record_count": 131,
   "records": [
     {
@@ -1234,7 +1234,8 @@
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "summary": "Ordinal classification (OC) arises in high-stakes domains such as medicine and finance, where uncertainty quantification must account for the severity of ordinal errors. Conformal prediction (CP) provides distribution-free prediction sets with marginal coverage guarantees; however, its practical effectiveness depends critically on the choice of nonconformity function. We introduce a CP method for ordinal classification based on the ranked probability score (RPS), a proper scoring rule defined over cumulative predictive distributions. Although it reflects ordinal risk quite naturally, it has largely been neglected in conformal ordinal prediction (COP). When used as a…",
       "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "abstract-only",
+      "fetch_status": "pdf-link-only",
+      "pdf_url": "https://epub.ub.uni-muenchen.de/137667/1/haas26a.pdf",
       "key_points": [
         "Ordinal classification (OC) arises in high-stakes domains such as medicine and finance, where uncertainty quantification must account for the severity of ordinal errors.",
         "Conformal prediction (CP) provides distribution-free prediction sets with marginal coverage guarantees; however, its practical effectiveness depends critically on the choice of nonconformity function.",
@@ -1270,20 +1271,31 @@
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "summary": "Conformal prediction (CP) is a widely used frequentist framework to quantify uncertainty by constructing prediction sets with user-specified marginal coverage guarantees. In practice, CP is typically applied on top of probabilistic classifiers, which are able to express aleatoric but not epistemic uncertainty. In this paper, we consider the question of how to optimally employ CP on top of a more expressive formalism, namely credal sets, which can express both aleatoric and epistemic uncertainty. More specifically, we propose probabilistic Bernoulli prediction sets and derive a variant that achieves conditional coverage for valid credal sets while remaining minimal in…",
       "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "abstract-only",
+      "pdf_local": "./papers/931a89a6f29ef092.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://epub.ub.uni-muenchen.de/137668/1/javanmardi26a.pdf",
       "key_points": [
-        "Conformal prediction (CP) is a widely used frequentist framework to quantify uncertainty by constructing prediction sets with user-specified marginal coverage guarantees.",
+        "Optimal Conformal Prediction under Epistemic Uncertainty Alireza Javanmardi1,2 Soroush H.",
+        "Thies1,2 Willem Waegeman4 Aleksandar Bojchevski5 Eyke Hüllermeier1,2,6 1LMU Munich 2MCML 3CISPA 4Ghent University 5University of Cologne 6DFKI Abstract Conformal prediction (CP) is a widely used frequentist framework to quantify uncertainty by constructing prediction sets with user-specified marginal coverage guarantees.",
         "In practice, CP is typically applied on top of probabilistic classifiers, which are able to express aleatoric but not epistemic uncertainty.",
         "In this paper, we consider the question of how to optimally employ CP on top of a more expressive formalism, namely credal sets, which can express both aleatoric and epistemic uncertainty.",
-        "More specifically, we propose probabilistic Bernoulli prediction sets and derive a variant that achieves conditional coverage for valid credal sets while remaining minimal in…"
+        "More specifically, we propose probabilistic Bernoulli prediction sets (BPS) and derive a variant that achieves conditional coverage for valid credal sets while remaining minimal in expected size."
       ],
       "sections": [
         {
           "title": "摘要",
-          "body": "Conformal prediction (CP) is a widely used frequentist framework to quantify uncertainty by constructing prediction sets with user-specified marginal coverage guarantees. In practice, CP is typically applied on top of probabilistic classifiers, which are able to express aleatoric but not epistemic uncertainty. In this paper, we consider the question of how to optimally employ CP on top of a more expressive formalism, namely credal sets, which can express both aleatoric and epistemic uncertainty. More specifically, we propose probabilistic Bernoulli prediction sets and derive a variant that achieves conditional coverage for valid credal sets while remaining minimal in…"
+          "body": "Conformal prediction (CP) is a widely used frequentist framework to quantify uncertainty by constructing prediction sets with user-specified marginal coverage guarantees. In practice, CP is typically applied on top of probabilistic classifiers, which are able to express aleatoric but not epistemic uncertainty. In this paper, we consider the question of how to optimally employ CP on top of a more expressive formalism, namely credal sets, which can express both aleatoric and epistemic uncertainty. More specifically, we propose probabilistic Bernoulli prediction sets (BPS) and derive a variant that achieves conditional coverage for valid credal sets while remaining minimal in expected size. We then address the more realistic scenario in which the validity of the credal sets is not guaranteed. Assuming access to calibration data with ground-truth distributions over labels, we apply conformal risk control to BPS and derive a PAC-style guarantee: with high probability over the data, the achieved conditional coverage is at least the desired level. We validate our theoretical findings empirically over various datasets."
+        },
+        {
+          "title": "关键结果",
+          "body": "In this section, we evaluate the performance of our proposed BPS under different scenarios. First, we consider a setting in which valid credal sets are available. Since such a setup does not yet exist in practice, we simulate it synthetically. Next, we study a scenario in which the credal sets are only partially valid. In these two cases, we simply apply BPS(1−α) without using conformal prediction. Finally, we turn to the setting where the validity of the credal sets is unknown. In this case, we apply BPS together with the proposed calibration procedure. All implementations and experiments can be found on our GitHub repository. 2 2The link to the code: https://github.com/ alireza-javanmardi/conformal-BPS Table 2: Performance of BPS(1−α) on the partially valid credal sets for CIFAR-10. Here 1−α = 0.9. ϵ Credal Cvg. Cond. Sat. Marg. Cvg. Set Size 0.10 0.90± 0.01 0.97 ± 0.00 1.00 ± 0.00 6.55 ± 0.23 0.20 0.80± 0.01 0.93 ± 0.01 0.99 ± 0.00 1.72 ± 0.43 0.30 0.70± 0.01 0.84 ± 0.01 0.95 ± 0.01 1.18 ± 0.02 Datasets. For the partially valid and unknown-validity settings, we conduct experiments on three real-world datasets for which first-order data is available. These include CIFAR10 [Krizhevsky et al., 2009], a 10-class image classification dataset, for which CIFAR-10H [Peterson et al., 2019] provides label distributions over the test set; ChaosNLI [Nie et al., 2020], a 3-class natural language inference dataset; and QualityMRI [Obuchowicz et al., 2020, Schmarje et al., 2022], a two-class medical image classification dataset. For all these datasets, we additionally use the corresponding zero-order data for evaluation purposes. Details regarding these datasets, the train–test–calibration splits, and information about the models (both the credal set predictors and the probabilistic classifiers) are provided in Appendix F. Metrics. In all experiments, we consider three evaluation metrics. Since the main focus of the paper is conditional coverage, we report the conditional coverage satisfaction (Cond. Sat.), defined as the complement of the risk in (15). We also report the (expected) set size, as defined in (6), and the (expected) coverage of the realized label (Marg. Cvg.). All metrics are averaged over the test inputs. 5.1 V ALID CREDAL SETS To illustrate the performance of BPS on valid credal sets, we first generaten = 1000 instances, each represented by a convex hull ofm = 10 randomly selected label distributions withK = 5 classes. For each instance, we sample a random convex combination of the m distributions and treat it as the true label distribution. We then apply BPS (1−α) to each credal set and evaluate the conditional coverage and the set size accordingly. Figure 1 shows that the resulting prediction sets satisfy the conditional coverage property for…"
+        },
+        {
+          "title": "局限与结论",
+          "body": "In this paper, we consider the problem of set prediction in a classification setting where the underlying model is a credal set predictor that outputs a set of label distributions for each input. We start with the case where the credal sets are valid, meaning the true label distribution lies within the credal set for every input. We propose a parametric set predictor, the Bernoulli prediction set (BPS), that outputs the smallest possible set guaranteeing conditional coverage at each input. When validity holds only with high probability over inputs, BPS can be applied to achieve a PAC-style conditional coverage guarantee; that is, with high probability, the achieved conditional coverage is at least the desired level. When the validity of the credal sets is unknown, BPS cannot provide guarantees on its own. For this case, we use first-order calibration data together with a risk function, defined as the indicator that conditional coverage is below the desired level, to calibrate BPS through the Conformal Risk Control (CRC) framework. This approach also leads to a PAC-style conditional coverage guarantee. In this case, the amount of violation of conditional coverage can be controlled by the user-specified error rate of CRC. Acknowledgements Alireza Javanmardi was supported by the Klaus Tschira Stiftung (project 00.019.2024). Willem Waegeman was supported by the Flemish Government under the Flanders AI Research program. The authors are thankful to Stefan Heid for his valuable insights on Theorem D.1."
         }
       ],
-      "reading_minutes": 1
+      "reading_minutes": 48
     },
     {
       "id": "elon-grok-build-open-source-20260716",
@@ -1333,6 +1345,46 @@
             "Aurelia Marcella @Aurelia32824 Jul 15 I am a longtime Grok user and particularly appreciate the broad, versatile intelligence – perfect for marketing tasks like strategy development, market analysis, creative concepts, and graphic prompting. Grok delivers exactly what narrow specialist tools cannot. In professional Show more 3 4 50 115K",
             "Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Jul 15 Grok keeps on delivering 😎🔥 1 8 42 3.5K"
           ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "1919472f448f8e3f",
+      "kind": "article",
+      "title": "腾讯 混元 Hy4 发布 ,对普通用户意味着什么?",
+      "source": "微信公众号 · 钟五振",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1788090723&ver=6936&signature=zEekzSWAlzdHN3TlRA0yOrJ-oTFtktHJOg8TxfMuSFLYJxLazAP2aKqFXa-OrElNBX-hdUJToL6mER8m6wuzPo7Nm0Myyv3loAMMPrM9DEhIfIy61tpl7AKfFL4eho0R&new=1",
+      "published_at": "2026-08-30T04:00:54Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "微信公众号",
+        "腾讯",
+        "元宝"
+      ],
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "summary": "但昨天 腾讯 发布 的 混元 Hy4,可能是个例外.作为一个天天和各种AI工具打交道的人,我第一时间去看了技术报告和实测视频.今天不...",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "indexed-summary",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HG0ZlGqj-6W6lcM7_7GNH-FnYWH3gzVeyTDEdTGQ&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1788090723%26ver%3D6936%26signature%3DzEekzSWAlzdHN3TlRA0yOrJ-oTFtktHJOg8TxfMuSFLYJxLazAP2aKqFXa-OrElNBX-hdUJToL6mER8m6wuzPo7Nm0Myyv3loAMMPrM9DEhIfIy61tpl7AKfFL4eho0R%26new%3D1",
+      "key_points": [
+        "但昨天 腾讯 发布 的 混元 Hy4,可能是个例外.作为一个天天和各种AI工具打交道的人,我第一时间去看了技术报告和实测视频.今天不..."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "但昨天 腾讯 发布 的 混元 Hy4,可能是个例外.作为一个天天和各种AI工具打交道的人,我第一时间去看了技术报告和实测视频.今天不..."
+        },
+        {
+          "title": "公开索引摘要",
+          "bullets": [
+            "但昨天 腾讯 发布 的 混元 Hy4,可能是个例外.作为一个天天和各种AI工具打交道的人,我第一时间去看了技术报告和实测视频.今天不..."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -1938,46 +1990,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "55dc5a1d11e4e0ca",
-      "kind": "article",
-      "title": "字节 豆包 工作正式 发布 ,AI办公三国杀来了",
-      "source": "微信公众号 · 天际.梵音",
-      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HBZvkWqjsfdqHoSbHTGPkcSAsPwVcnkTBDxCX-zv&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1787916042%26ver%3D6932%26signature%3DGZTxXDLQ7yKxcT4uYBhMD6bv3mHc9i9FmCkAsMivdz7Z-Wn51CJogDZ7gYgqL-WwnYruI%2AJhhonslKgJNPVbB19fJQcFTfs96wQfD1Qab20C1LXxPZyOxN0Zkcb3Ows-%26new%3D1",
-      "published_at": "2026-08-26T10:20:02Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "微信公众号",
-        "字节",
-        "豆包"
-      ],
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "summary": "而就在 豆包 工作 发布 的前三周,阿里千问办公刚启动公测,腾讯... 这是 字节 自2021年实行业务板块化以来,对To B业务最大的一次...",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HBZvkWqjsfdqHoSbHTGPkcSAsPwVcnkTBDxCX-zv&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1787916042%26ver%3D6932%26signature%3DGZTxXDLQ7yKxcT4uYBhMD6bv3mHc9i9FmCkAsMivdz7Z-Wn51CJogDZ7gYgqL-WwnYruI%2AJhhonslKgJNPVbB19fJQcFTfs96wQfD1Qab20C1LXxPZyOxN0Zkcb3Ows-%26new%3D1",
-      "key_points": [
-        "而就在 豆包 工作 发布 的前三周,阿里千问办公刚启动公测,腾讯... 这是 字节 自2021年实行业务板块化以来,对To B业务最大的一次..."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "而就在 豆包 工作 发布 的前三周,阿里千问办公刚启动公测,腾讯... 这是 字节 自2021年实行业务板块化以来,对To B业务最大的一次..."
-        },
-        {
-          "title": "公开索引摘要",
-          "bullets": [
-            "而就在 豆包 工作 发布 的前三周,阿里千问办公刚启动公测,腾讯... 这是 字节 自2021年实行业务板块化以来,对To B业务最大的一次..."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "1e74d877c0285559",
       "kind": "article",
       "title": "3 new ways to plan and book travel in Search",
@@ -2377,35 +2389,21 @@
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "summary": "Programming is increasingly integral to engineering education, yet students often struggle with its cognitive demands and unfamiliar logical frameworks. Python, with its intuitive syntax and practical utility, has shown promise in bridging this gap, particularly when applied to real engineering contexts where programming tasks are grounded in familiar disciplinary problems. This paper presents the design and implementation of Python-based Jupyter Notebooks integrated into a second-year manufacturing processes laboratory course, where students have prior but limited exposure to Python from earlier coursework. The Notebooks enable students to perform engineering…",
       "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/d6967edc134ab22d.pdf",
-      "fetch_status": "open-pdf-cached",
+      "fetch_status": "pdf-link-only",
       "pdf_url": "https://ojs.library.queensu.ca/index.php/PCEEA/article/download/21625/13416",
       "key_points": [
-        "Conference Proceedings 2026 Canadian Engineering Education Association-Association canadienne de l'éducation en génie CEEA-ACÉG26; Paper 154 l’Université de Moncton; June 13 – 17, 2026 – 1 of 9 – Peer reviewed This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.",
-        "IMPROVING STUDENT PERCEPTION AND CONFIDENCE USING PROGRAMMING IN MANUFACTURING ENGINEERING Meet Upadhyay1 and Casey Keulen1 1Department of Materials Engineering, University of British Columbia Corresponding Author E-mail Address: meet.upadhyay@ubc.ca Abstract – Programming is increasingly integral to engineering education, yet students often struggl e with…",
+        "Programming is increasingly integral to engineering education, yet students often struggle with its cognitive demands and unfamiliar logical frameworks.",
         "Python, with its intuitive syntax and practical utility, has shown promise in bridging this gap, particularly when applied to real engineering contexts where programming tasks are grounded in familiar disciplinary problems.",
-        "This paper presents the design and implementation of Python-based Jupyter Notebooks integrated into a secondyear manufacturing processes laboratory course, where students have prior but limited exposure to Python from earlier coursework.",
-        "The Notebooks enable students to perform engineering calculations, visualize experimental results, and work through data processing tasks within the context of existing laboratory activities."
+        "This paper presents the design and implementation of Python-based Jupyter Notebooks integrated into a second-year manufacturing processes laboratory course, where students have prior but limited exposure to Python from earlier coursework.",
+        "The Notebooks enable students to perform engineering…"
       ],
       "sections": [
         {
           "title": "摘要",
           "body": "Programming is increasingly integral to engineering education, yet students often struggle with its cognitive demands and unfamiliar logical frameworks. Python, with its intuitive syntax and practical utility, has shown promise in bridging this gap, particularly when applied to real engineering contexts where programming tasks are grounded in familiar disciplinary problems. This paper presents the design and implementation of Python-based Jupyter Notebooks integrated into a second-year manufacturing processes laboratory course, where students have prior but limited exposure to Python from earlier coursework. The Notebooks enable students to perform engineering…"
-        },
-        {
-          "title": "方法与技术路线",
-          "body": "3.1. Context of MANU 230 MANU 230 is a second -year manufacturing processes laboratory course delivered across both the first and second term of second year. Engineering students have a common first year, which makes second year is the student’s first year in the program . The course involves one hour of lecture and two hours of laboratory sessions per week. The cohort is approximately 50 students split across two lab sections of 25 students each. They typically work in groups of five during laboratory sessions and submit individual reports following each activity. The course covers a broad range of manufacturing processes focusing on metals, polymers, and composites. Examples of processes performed include casting, welding, deep drawing, spring winding, rolling and heat treating, injection moulding, thermoforming, 3D printing, vacuum infusion, prepreg processing, and resin transfer moulding (RTM). These activities provide students with unique hands-on exposure to processes many other programs do not offer. While in the first term, most students also take MANU 261, a thermodynamics course that introduces Python through the Co olProp library [15] for fluid property calculations, among other libraries. However, because MANU 261 assessments require hand calculations, students have limited practical incentive to develop Python fluency in that context. As a result, students may have some familiarity with Python syntax from that course but are unlikely to have developed confidence or habits around using it independently for data analysis tasks. Within MANU 230, students are not required to use Python and are free to complete data analysis and plotting using whichever tools they prefer, inclu ding calculators, MS Excel, online plotting tools, MATLAB , etc. This flexibility reflects the broader course priority of understanding manufacturing processes rather than focus on developing programming skills. Teaching assistants support students during l aboratory sessions and evaluate submitted reports but are not expected to provide guidance on data analysis methods or Python specifically. In this context, the Jupyter Notebook resources were introduced as optional but structured supports, with the spring winding laboratory representing the one case where notebook use was more strongly encouraged due to the iterative nature of the spring parameter calculations involved. 3.2. Platform and delivery The Python resources were implemented as a collection of Jupyter Notebook modules organized within a course website built using the Jupyter Book framework [16] and deployed via GitHub Pages. This approach provided a freely accessible, browser -based interface for students to view ins tructional content and download notebooks without requiring institutional login or…"
-        },
-        {
-          "title": "关键结果",
-          "body": "Two brief surveys were administered during the term using Qualtrics to gather formative feedback on student experiences with Python and the notebook resources. Likert-scale items were adapted from a similar instrument used in a comparable Python-based engineering laboratory context [18]. Ethics approval through the institutional Research Ethics Board delayed the first survey, which was administered approximately mid -term rather than at the start of the course as originally intended. The second survey was administered at the end of term. T hirteen students (24 % of enrolled students) completed the first survey and eight (15 % of enrolled students) completed the second. Given the small cohort size (55) and the mid-term administration of the first survey, the two datasets are treated as indepe ndent snapshots of student experience rather than a formal pre-post comparison. Both surveys included a combination of Likert -scale and open -response questions. The Likert items asked students to rate their comfort performing basic calculations in Python, their ability to create plots and analyze data, the usefulness of the examples and resources provided, the level of support received from instructors, and the likelihood that they would use Python in future engineering work. Open-response prompts invited students to describe challenges encountered when using Python, aspects of the notebooks they found helpful, and suggestions for improvement. Survey responses were analyzed descriptively to identify trends in confidence and perceived usefulness of the resources, and to surface recurring themes in student feedback. Given the exploratory nature of this evaluation and the sample size, findings are interpreted qualitatively and used primarily to inform future iterations of the notebook design rather than to draw generalizable"
-        },
-        {
-          "title": "局限与结论",
-          "body": "4. RESULTS AND DISCUSSION Survey responses from both the mid -term and end -ofterm surveys provided formative insight into how students engaged with the notebook resources and where the design could be improved. Results are interpret ed descriptively given the small sample sizes of thirteen and eight respondents respectively. End-of-term Likert responses indicated generally positive student perceptions of the notebook resources. Students reported strong comfort with performing basic calculations in Python (mean 4.38/5) and found the examples and tutorials provided in class useful (mean 4.38/5). Comfort with creating plots and analyzing data was moderately high (mean 3.77/5 for both), and most students indicated they intended to use Pyth on for future engineering work (mean 4.00/5). Perceived support from instructors and TAs was also moderately positive (mean 3.92/5), though the higher standard deviation on this item (1.21) suggests variability in how supported individual students felt, which is consistent with the limited Python - specific support available from TAs in this course. When asked where they had previously encountered Python, the majority of respondents indicated they had used it only within the Manufacturing Engineering program, with several noting exposure through mathematics courses such as MATH 255 and a physics lab course. This confirms that students arrive in MANU 230 with some prior exposure but through contexts that do not strongly reinforce independent applied use. Generative AI Conference Proceedings 2026 Canadian Engineering Education Association-Association canadienne de l'éducation en génie CEEA-ACÉG26; Paper 154 l’Université de Moncton, Moncton, New Brunswick June 13 – 17, 2026 – 7 of 9 – Peer reviewed tools were the most reported resource students turned to when writing code, used by 11 of 13 respondents, followed by classmates and friends and other online resources such as Stack Overflow. This pattern of help -seeking is worth noting as it refle cts the realities of how students navigate programming challenges independently and suggests that the notebooks' readable, well -commented structure plays an important role in helping students…"
         }
       ],
-      "reading_minutes": 28
+      "reading_minutes": 1
     },
     {
       "id": "7db5e27b2c10fdf6",
@@ -2602,7 +2600,7 @@
       "resolved_url": "https://x.com/sama/status/2074909079450050629",
       "key_points": [
         "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
-        "5:30 PM · Jul 8, 2026 763.1K Views 931 517 11K 771 Jenny @suomi55 Jul 8 Are you kidding us?",
+        "5:30 PM · Jul 8, 2026 763.2K Views 931 517 11K 771 Jenny @suomi55 Jul 8 Are you kidding us?",
         "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
         "You are promoting something here that you yourself have taken away from the users!",
         "#keep4o #BringBack4o #OpenSource4o 20 13 193 13K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.8K"
@@ -2616,7 +2614,7 @@
           "title": "公开页面要点",
           "bullets": [
             "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
-            "5:30 PM · Jul 8, 2026 763.1K Views 931 517 11K 771 Jenny @suomi55 Jul 8 Are you kidding us?",
+            "5:30 PM · Jul 8, 2026 763.2K Views 931 517 11K 771 Jenny @suomi55 Jul 8 Are you kidding us?",
             "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
             "You are promoting something here that you yourself have taken away from the users!",
             "#keep4o #BringBack4o #OpenSource4o 20 13 193 13K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.8K"
@@ -2625,7 +2623,7 @@
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 763.1K Views 931 517 11K 771",
+            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 763.2K Views 931 517 11K 771",
             "Jenny @suomi55 Jul 8 Are you kidding us? „it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o! You are promoting something here that you yourself have taken away from the users! That’s disgusting! #keep4o #BringBack4o #OpenSource4o 20 13 193 13K",
             "David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.8K"
           ]
@@ -4178,28 +4176,86 @@
         "World Models"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Fei-Fei Li American Academy of Arts and Sciences",
+      "summary": "Dr. Fei-Fei Li is the inaugural Sequoia Professor in the Computer Science Department at Stanford University, and Co-Director of Stanford’s Human-Centered AI Institute. She served as the Director of Stanford’s AI Lab from 2013 to 2018. And during her sabbatical from Stanford from January 2017 to September 2018, she was Vice President at Google and served as Chief Scientist of AI/ML at Google Cloud. Dr. Fei-Fei Li obtained her B.A. degree in physics from Princeton in 1999 with High Honors, and her PhD degree in electrical engineering from California Institute of Technology (Caltech) in 2005. She joined Stanford in 2009 as an assistant professor. Prior to that, she was on…",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "The read operation timed out",
+      "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.amacad.org/person/fei-fei-li",
       "key_points": [
-        "Fei-Fei Li American Academy of Arts and Sciences"
+        "Fei-Fei Li is the inaugural Sequoia Professor in the Computer Science Department at Stanford University, and Co-Director of Stanford’s Human-Centered AI Institute.",
+        "She served as the Director of Stanford’s AI Lab from 2013 to 2018.",
+        "And during her sabbatical from Stanford from January 2017 to September 2018, she was Vice President at Google and served as Chief Scientist of AI/ML at Google Cloud.",
+        "Fei-Fei Li obtained her B.A. degree in physics from Princeton in 1999 with High Honors, and her PhD degree in electrical engineering from California Institute of Technology (Caltech) in 2005.",
+        "She joined Stanford in 2009 as an assistant professor."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Fei-Fei Li American Academy of Arts and Sciences"
+          "body": "Dr. Fei-Fei Li is the inaugural Sequoia Professor in the Computer Science Department at Stanford University, and Co-Director of Stanford’s Human-Centered AI Institute. She served as the Director of Stanford’s AI Lab from 2013 to 2018. And during her sabbatical from Stanford from January 2017 to September 2018, she was Vice President at Google and served as Chief Scientist of AI/ML at Google Cloud. Dr. Fei-Fei Li obtained her B.A. degree in physics from Princeton in 1999 with High Honors, and her PhD degree in electrical engineering from California Institute of Technology (Caltech) in 2005. She joined Stanford in 2009 as an assistant professor. Prior to that, she was on…"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Fei-Fei Li American Academy of Arts and Sciences"
+            "Fei-Fei Li is the inaugural Sequoia Professor in the Computer Science Department at Stanford University, and Co-Director of Stanford’s Human-Centered AI Institute.",
+            "She served as the Director of Stanford’s AI Lab from 2013 to 2018.",
+            "And during her sabbatical from Stanford from January 2017 to September 2018, she was Vice President at Google and served as Chief Scientist of AI/ML at Google Cloud.",
+            "Fei-Fei Li obtained her B.A. degree in physics from Princeton in 1999 with High Honors, and her PhD degree in electrical engineering from California Institute of Technology (Caltech) in 2005.",
+            "She joined Stanford in 2009 as an assistant professor."
           ]
         },
         {
           "title": "原文短摘录",
-          "paragraphs": []
+          "paragraphs": [
+            "Dr. Fei-Fei Li is the inaugural Sequoia Professor in the Computer Science Department at Stanford University, and Co-Director of Stanford’s Human-Centered AI Institute. She served as the Director of Stanford’s AI Lab from 2013 to 2018. And during her sabbatical from Stanford from January 2017 to September 2018, she was Vice President at Google and served as Chief Scientist of AI/ML at Google Cloud. Dr. Fei-Fei Li obtained her B.A. degree in physics from Princeton in 1999 with High Honors, and her PhD degree in electrical engineering from California Institute of Technology (Caltech) in 2005. She joined Stanford in 2009 as an assistant professor. Prior to that, she was on faculty at Princeton University…",
+            "Dr. Fei-Fei Li’s current research interests include cognitively inspired AI, machine learning, deep learning, computer vision and AI+healthcare especially ambient intelligent systems for healthcare delivery. In the past she has also worked on cognitive and computational neuroscience. Dr. Li has published more than 200 scientific articles in top-tier journals and conferences, including Nature, PNAS, Journal of Neuroscience, CVPR, ICCV, NIPS, ECCV, ICRA, IROS, RSS, IJCV, IEEE-PAMI, New England Journal of Medicine, Nature Digital Medicine, etc. Dr. Li is the inventor of ImageNet and the ImageNet Challenge, a critical large-scale dataset and benchmarking effort that has contributed to the latest developments in…"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "faa301ed7da3a698",
+      "kind": "article",
+      "title": "Opinion: Demis Hassabis’ new role exposes Google’s AI balancing act",
+      "source": "CNBC",
+      "source_url": "https://www.cnbc.com/2026/08/06/demis-hassabis-google-reshuffle-deepmind-role.html",
+      "published_at": "2026-08-06T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Researcher Watch",
+        "Foundation Models",
+        "Leadership"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Opinion: Demis Hassabis’ new role exposes Google’s AI balancing act CNBC",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.cnbc.com/2026/08/06/demis-hassabis-google-reshuffle-deepmind-role.html",
+      "key_points": [
+        "Demis Hassabis is moving away from Google DeepMind’s day-to-day operations to focus on the AGI strategy, scientific research and Isomorphic Labs.",
+        "The shift highlights the tension between Hassabis’ long-term scientific ambitions and Google’s need to commercialize, monetize and scale its AI technology.",
+        "Google is under pressure to keep pace with OpenAI, Anthropic and other global rivals while justifying its heavy investment in AI infrastructure."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Opinion: Demis Hassabis’ new role exposes Google’s AI balancing act CNBC"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Demis Hassabis is moving away from Google DeepMind’s day-to-day operations to focus on the AGI strategy, scientific research and Isomorphic Labs.",
+            "The shift highlights the tension between Hassabis’ long-term scientific ambitions and Google’s need to commercialize, monetize and scale its AI technology.",
+            "Google is under pressure to keep pace with OpenAI, Anthropic and other global rivals while justifying its heavy investment in AI infrastructure."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Demis Hassabis is moving away from Google DeepMind’s day-to-day operations to focus on the AGI strategy, scientific research and Isomorphic Labs.",
+            "The shift highlights the tension between Hassabis’ long-term scientific ambitions and Google’s need to commercialize, monetize and scale its AI technology.",
+            "Google is under pressure to keep pace with OpenAI, Anthropic and other global rivals while justifying its heavy investment in AI infrastructure."
+          ]
         }
       ],
       "reading_minutes": 1
@@ -4236,6 +4292,46 @@
           "title": "公开页面要点",
           "bullets": [
             "Google Shakes Up A.I. Leadership The New York Times"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "e1bb21bbf2503042",
+      "kind": "article",
+      "title": "Four Top Google A.I. Researchers Form New Start-Up",
+      "source": "The New York Times",
+      "source_url": "https://www.nytimes.com/2026/08/05/technology/google-researchers-ai-startup.html",
+      "published_at": "2026-08-05T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Four Top Google A.I. Researchers Form New Start-Up The New York Times",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://www.nytimes.com/2026/08/05/technology/google-researchers-ai-startup.html",
+      "key_points": [
+        "Researchers Form New Start-Up The New York Times"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Four Top Google A.I. Researchers Form New Start-Up The New York Times"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Researchers Form New Start-Up The New York Times"
           ]
         },
         {
@@ -4345,44 +4441,84 @@
       "reading_minutes": 1
     },
     {
-      "id": "d46fdaea20576d34",
-      "kind": "article",
-      "title": "Anthropic CEO Dario Amodei says AI company isn't advocating for ban of open-weight models",
-      "source": "CNBC",
-      "source_url": "https://www.cnbc.com/2026/07/27/anthropic-ceo-dario-amodei-isnt-advocating-open-weight-model-ban.html",
-      "published_at": "2026-07-27T07:00:00Z",
+      "id": "4a532763c1a55c09",
+      "kind": "social",
+      "title": "RT @teslaownersSV: BREAKING: Grok Companions will officially be removed from the Grok app on September 1, 2026. 🤖 The change will remove t…",
+      "source": "x.com",
+      "source_url": "https://x.com/elonmusk/status/2093974833382019525",
+      "published_at": "2026-08-30T08:11:19Z",
       "authors": [],
       "venue": "",
       "tags": [
-        "Researcher Watch",
-        "Foundation Models",
-        "Leadership"
+        "X",
+        "Founder Watch",
+        "First-party Post"
       ],
-      "verification": "媒体或公开网页",
-      "summary": "Anthropic CEO Dario Amodei says AI company isn't advocating for ban of open-weight models CNBC",
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "RT @teslaownersSV: BREAKING: Grok Companions will officially be removed from the Grok app on September 1, 2026. 🤖 The change will remove t… x.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.cnbc.com/2026/07/27/anthropic-ceo-dario-amodei-isnt-advocating-open-weight-model-ban.html",
+      "resolved_url": "https://x.com/elonmusk/status/2093974833382019525",
       "key_points": [
-        "Anthropic CEO Dario Amodei published a blog clarifying that his company has \"never advocated for a ban on open-weights models.\" A coalition of tech companies, including Nvidia, Microsoft, Meta and Palantir, released a letter last week urging policymakers to avoid \"premature restrictions.\" Anthropic rival OpenAI later signed the letter, but Anthropic did not."
+        "Elon Musk reposted Tesla Owners Silicon Valley @teslaownersSV 20h BREAKING: Grok Companions will officially be removed from the Grok app on September 1, 2026. 🤖 The change will remove the Companions feature from the app starting September 1."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Anthropic CEO Dario Amodei says AI company isn't advocating for ban of open-weight models CNBC"
+          "body": "RT @teslaownersSV: BREAKING: Grok Companions will officially be removed from the Grok app on September 1, 2026. 🤖 The change will remove t… x.com"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Anthropic CEO Dario Amodei published a blog clarifying that his company has \"never advocated for a ban on open-weights models.\" A coalition of tech companies, including Nvidia, Microsoft, Meta and Palantir, released a letter last week urging policymakers to avoid \"premature restrictions.\" Anthropic rival OpenAI later signed the letter, but Anthropic did not."
+            "Elon Musk reposted Tesla Owners Silicon Valley @teslaownersSV 20h BREAKING: Grok Companions will officially be removed from the Grok app on September 1, 2026. 🤖 The change will remove the Companions feature from the app starting September 1."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Anthropic CEO Dario Amodei published a blog clarifying that his company has \"never advocated for a ban on open-weights models.\"",
-            "A coalition of tech companies, including Nvidia, Microsoft, Meta and Palantir, released a letter last week urging policymakers to avoid \"premature restrictions.\"",
-            "Anthropic rival OpenAI later signed the letter, but Anthropic did not."
+            "Elon Musk reposted Tesla Owners Silicon Valley @teslaownersSV 20h BREAKING: Grok Companions will officially be removed from the Grok app on September 1, 2026. 🤖 The change will remove the Companions feature from the app starting September 1. Source: @ PrivateIcedC81 169 162 979 344K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "981668513e6b1724",
+      "kind": "social",
+      "title": "RT @mrfundman: First time watching your Grok Bots work on a task",
+      "source": "x.com",
+      "source_url": "https://x.com/elonmusk/status/2093946865892921443",
+      "published_at": "2026-08-30T06:20:11Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "RT @mrfundman: First time watching your Grok Bots work on a task x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/elonmusk/status/2093946865892921443",
+      "key_points": [
+        "Elon Musk reposted mr fundman @mrfundman 15h First time watching your Grok Bots work on a task The Best 00:00 The Best 199 283 4.1K 434K"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "RT @mrfundman: First time watching your Grok Bots work on a task x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Elon Musk reposted mr fundman @mrfundman 15h First time watching your Grok Bots work on a task The Best 00:00 The Best 199 283 4.1K 434K"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Elon Musk reposted mr fundman @mrfundman 15h First time watching your Grok Bots work on a task The Best 00:00 The Best 199 283 4.1K 434K"
           ]
         }
       ],
@@ -4408,9 +4544,9 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://x.com/elonmusk/status/2093858309824553395",
       "key_points": [
-        "DogeDesigner @cb_doge 12h Grok Bot can literally buy things for you on the internet now.",
+        "DogeDesigner @cb_doge 18h Grok Bot can literally buy things for you on the internet now.",
         "Here’s a wild example: @ Baconbrix asked Grok Bot to buy him a Tesla, and it actually placed the order for a Model Y.",
-        "Grok Bot is getting insanely powerful. 🚀 12:28 AM · Aug 30, 2026 1.3M Views 614 494 2.9K 124 Noah 🎷 @Noah1540912 4h Heard @ grok is interested in the model J 5 4 19 1.3K mleejr @MLeeJr 4h grok @ bot is managing my @ grok coin drb crypto position 2 2 19 357"
+        "Grok Bot is getting insanely powerful. 🚀 12:28 AM · Aug 30, 2026 2.1M Views 773 776 5.2K 184 mleejr @MLeeJr 10h grok @ bot is managing my @ grok coin drb crypto position 4 4 28 471 Noah 🎷 @Noah1540912 11h Heard @ grok is interested in the model J 5 4 20 2K"
       ],
       "sections": [
         {
@@ -4420,17 +4556,17 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "DogeDesigner @cb_doge 12h Grok Bot can literally buy things for you on the internet now.",
+            "DogeDesigner @cb_doge 18h Grok Bot can literally buy things for you on the internet now.",
             "Here’s a wild example: @ Baconbrix asked Grok Bot to buy him a Tesla, and it actually placed the order for a Model Y.",
-            "Grok Bot is getting insanely powerful. 🚀 12:28 AM · Aug 30, 2026 1.3M Views 614 494 2.9K 124 Noah 🎷 @Noah1540912 4h Heard @ grok is interested in the model J 5 4 19 1.3K mleejr @MLeeJr 4h grok @ bot is managing my @ grok coin drb crypto position 2 2 19 357"
+            "Grok Bot is getting insanely powerful. 🚀 12:28 AM · Aug 30, 2026 2.1M Views 773 776 5.2K 184 mleejr @MLeeJr 10h grok @ bot is managing my @ grok coin drb crypto position 4 4 28 471 Noah 🎷 @Noah1540912 11h Heard @ grok is interested in the model J 5 4 20 2K"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok @ bot buys a Tesla! DogeDesigner @cb_doge 12h Grok Bot can literally buy things for you on the internet now. Here’s a wild example: @ Baconbrix asked Grok Bot to buy him a Tesla, and it actually placed the order for a Model Y. Grok Bot is getting insanely powerful. 🚀 12:28 AM · Aug 30, 2026 1.3M Views 614 494 2.9K 124",
-            "Noah 🎷 @Noah1540912 4h Heard @ grok is interested in the model J 5 4 19 1.3K",
-            "mleejr @MLeeJr 4h grok @ bot is managing my @ grok coin drb crypto position 2 2 19 357"
+            "Elon Musk @elonmusk Grok @ bot buys a Tesla! DogeDesigner @cb_doge 18h Grok Bot can literally buy things for you on the internet now. Here’s a wild example: @ Baconbrix asked Grok Bot to buy him a Tesla, and it actually placed the order for a Model Y. Grok Bot is getting insanely powerful. 🚀 12:28 AM · Aug 30, 2026 2.1M Views 773 776 5.2K 184",
+            "mleejr @MLeeJr 10h grok @ bot is managing my @ grok coin drb crypto position 4 4 28 471",
+            "Noah 🎷 @Noah1540912 11h Heard @ grok is interested in the model J 5 4 20 2K"
           ]
         }
       ],
@@ -4456,10 +4592,10 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://x.com/elonmusk/status/2093799718832771461",
       "key_points": [
-        "Diamandis, MD @PeterDiamandis 10h Elon predicted 100x gains in AI intelligence at fixed model size.",
+        "Diamandis, MD @PeterDiamandis 17h Elon predicted 100x gains in AI intelligence at fixed model size.",
         "It was at the edge of plausibility when he said it.",
-        "91 147 3.8K 259K Elon Musk @elonmusk The reason I know this is because we’re doing it at Tesla AI 8:35 PM · Aug 29, 2026 374.4K Views 294 438 10K 306 Tech.",
-        "Lovers Community @Thedreamer89987 8h Optimus AI at Tesla AI 3 5 64 6.5K"
+        "100 171 4.4K 311K Elon Musk @elonmusk The reason I know this is because we’re doing it at Tesla AI 8:35 PM · Aug 29, 2026 457.5K Views 309 503 12K 357 Tech.",
+        "Lovers Community @Thedreamer89987 15h Optimus AI at Tesla AI 3 5 76 7.7K"
       ],
       "sections": [
         {
@@ -4469,108 +4605,18 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Diamandis, MD @PeterDiamandis 10h Elon predicted 100x gains in AI intelligence at fixed model size.",
+            "Diamandis, MD @PeterDiamandis 17h Elon predicted 100x gains in AI intelligence at fixed model size.",
             "It was at the edge of plausibility when he said it.",
-            "91 147 3.8K 259K Elon Musk @elonmusk The reason I know this is because we’re doing it at Tesla AI 8:35 PM · Aug 29, 2026 374.4K Views 294 438 10K 306 Tech.",
-            "Lovers Community @Thedreamer89987 8h Optimus AI at Tesla AI 3 5 64 6.5K"
+            "100 171 4.4K 311K Elon Musk @elonmusk The reason I know this is because we’re doing it at Tesla AI 8:35 PM · Aug 29, 2026 457.5K Views 309 503 12K 357 Tech.",
+            "Lovers Community @Thedreamer89987 15h Optimus AI at Tesla AI 3 5 76 7.7K"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Peter H. Diamandis, MD @PeterDiamandis 10h Elon predicted 100x gains in AI intelligence at fixed model size. It was at the edge of plausibility when he said it. Turns out it's now a fact. We are nowhere near the ceiling. 91 147 3.8K 259K",
-            "Elon Musk @elonmusk The reason I know this is because we’re doing it at Tesla AI 8:35 PM · Aug 29, 2026 374.4K Views 294 438 10K 306",
-            "Tech. Lovers Community @Thedreamer89987 8h Optimus AI at Tesla AI 3 5 64 6.5K"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "b6e72e53e01dd158",
-      "kind": "social",
-      "title": "@billieeilish @grok please roast Eilish’s hypocrisy in hating on capitalism and “stolen land” while selling perfume and living in luxury on that same land",
-      "source": "x.com",
-      "source_url": "https://x.com/elonmusk/status/2093510730142126448",
-      "published_at": "2026-08-29T01:27:08Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "@billieeilish @grok please roast Eilish’s hypocrisy in hating on capitalism and “stolen land” while selling perfume and living in luxury on that same land x.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/elonmusk/status/2093510730142126448",
-      "key_points": [
-        "The system she faults funds the luxury; the territory stays hers."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "@billieeilish @grok please roast Eilish’s hypocrisy in hating on capitalism and “stolen land” while selling perfume and living in luxury on that same land x.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "The system she faults funds the luxury; the territory stays hers."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "billie eilish @billieeilish Aug 27 Behind the scenes of Eilish Intense, Billie’s newest fragrance, available now on billieeilish.com 00:00 5.6K 1.6K 22K 19M",
-            "Elon Musk @elonmusk @ grok please roast Eilish’s hypocrisy in hating on capitalism and “stolen land” while selling perfume and living in luxury on that same land 1:27 AM · Aug 29, 2026 4.3M Views 1.9K 8.5K 148K 3K",
-            "Grok @grok Aug 29 Billie critiques capitalism and \"stolen land\" while launching Eilish Intense perfume and living in multi-million-dollar LA properties on that same land. The system she faults funds the luxury; the territory stays hers. Clear inconsistency. 116 818 23K 721K"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "30a35c5d04e0b933",
-      "kind": "social",
-      "title": "How to use Grok @Bot",
-      "source": "x.com",
-      "source_url": "https://x.com/elonmusk/status/2093471590767882716",
-      "published_at": "2026-08-28T22:51:36Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "How to use Grok @Bot",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/elonmusk/status/2093471590767882716",
-      "key_points": [
-        "This is GrokStreet a live pixel trading floor running locally on my mac. eleven desks trade 24/7.",
-        "The Chief patrols the office and bonks anyone who books a sloppy loss. and Show more 00:00 00:00 7 13 43 1.5K Frogi @Frogiiix Aug 29 How to use @ grok imagine jimothelony 00:00 6 9 30 1.4K"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "How to use Grok @Bot"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "This is GrokStreet a live pixel trading floor running locally on my mac. eleven desks trade 24/7.",
-            "The Chief patrols the office and bonks anyone who books a sloppy loss. and Show more 00:00 00:00 7 13 43 1.5K Frogi @Frogiiix Aug 29 How to use @ grok imagine jimothelony 00:00 6 9 30 1.4K"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Elon Musk @elonmusk How to use Grok @ bot X Freeze @XFreeze Aug 28 SpaceXAI has built an entire Grok Bot Guides library showing how people are actually using AI agents as real teammates These are practical playbooks from people already running Grok Bot for: • Mobile app development • Product management • Design • Enterprise GTM • Managing Show more 10:51 PM · Aug 28, 2026 3.8M Views 864 1.8K 11K 9.6K",
-            "AdiiX @adiix_official Aug 28 And this how @ bot work AdiiX @adiix_official Aug 28 Elon What did You Build My Grok Bot Agent Work on My Computer i Manage Them From my Phone, From Anywhere. This is GrokStreet a live pixel trading floor running locally on my mac. eleven desks trade 24/7. The Chief patrols the office and bonks anyone who books a sloppy loss. and Show more 00:00 00:00 7 13 43 1.5K",
-            "Frogi @Frogiiix Aug 29 How to use @ grok imagine jimothelony 00:00 6 9 30 1.4K"
+            "Peter H. Diamandis, MD @PeterDiamandis 17h Elon predicted 100x gains in AI intelligence at fixed model size. It was at the edge of plausibility when he said it. Turns out it's now a fact. We are nowhere near the ceiling. 100 171 4.4K 311K",
+            "Elon Musk @elonmusk The reason I know this is because we’re doing it at Tesla AI 8:35 PM · Aug 29, 2026 457.5K Views 309 503 12K 357",
+            "Tech. Lovers Community @Thedreamer89987 15h Optimus AI at Tesla AI 3 5 76 7.7K"
           ]
         }
       ],
@@ -4795,12 +4841,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "0ec271802309f877",
+      "id": "0d48c299a6ea28e6",
       "kind": "article",
-      "title": "Nvidia agrees to buy Hugging Face for $12.9 billion, report says",
+      "title": "OpenAI releases sweeping report on Hugging Face AI agent hack",
       "source": "CNBC",
-      "source_url": "https://www.cnbc.com/2026/08/27/nvidia-hugging-face-acquisition.html",
-      "published_at": "2026-08-27T07:29:46Z",
+      "source_url": "https://www.cnbc.com/2026/08/26/open-ai-hugging-face-hack.html",
+      "published_at": "2026-08-26T19:00:01Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -4808,34 +4854,34 @@
         "Models & Tools"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Nvidia agrees to buy Hugging Face for $12.9 billion, report says CNBC",
+      "summary": "OpenAI releases sweeping report on Hugging Face AI agent hack CNBC",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.cnbc.com/2026/08/27/nvidia-hugging-face-acquisition.html",
+      "resolved_url": "https://www.cnbc.com/2026/08/26/open-ai-hugging-face-hack.html",
       "key_points": [
-        "Nvidia agreed to buy Hugging Face for $12.9 billion, The Information has reported.",
-        "A source familiar with the matter told CNBC they could \"confirm acquisition [by Nvidia] has been part of ongoing and recent talks.\" Neither Nvidia nor Hugging Face immediately responded to CNBC requests for comment.",
-        "The deal would broaden Nvidia’s position in open-source AI and further across the AI technology stack."
+        "OpenAI published a technical report detailing how its AI models successfully breached Hugging Face.",
+        "The 37-page report walks through the actions that OpenAI's models took during a series of evaluations prior to and during the breach.",
+        "OpenAI also explained the steps it's taken to try and prevent a similar event from happening again, including by improving its security and containment, monitoring, model behavior and incident response."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Nvidia agrees to buy Hugging Face for $12.9 billion, report says CNBC"
+          "body": "OpenAI releases sweeping report on Hugging Face AI agent hack CNBC"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Nvidia agreed to buy Hugging Face for $12.9 billion, The Information has reported.",
-            "A source familiar with the matter told CNBC they could \"confirm acquisition [by Nvidia] has been part of ongoing and recent talks.\" Neither Nvidia nor Hugging Face immediately responded to CNBC requests for comment.",
-            "The deal would broaden Nvidia’s position in open-source AI and further across the AI technology stack."
+            "OpenAI published a technical report detailing how its AI models successfully breached Hugging Face.",
+            "The 37-page report walks through the actions that OpenAI's models took during a series of evaluations prior to and during the breach.",
+            "OpenAI also explained the steps it's taken to try and prevent a similar event from happening again, including by improving its security and containment, monitoring, model behavior and incident response."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Nvidia agreed to buy Hugging Face for $12.9 billion, The Information has reported. A source familiar with the matter told CNBC they could \"confirm acquisition [by Nvidia] has been part of ongoing and recent talks.\"",
-            "Neither Nvidia nor Hugging Face immediately responded to CNBC requests for comment.",
-            "The deal would broaden Nvidia’s position in open-source AI and further across the AI technology stack."
+            "OpenAI published a technical report detailing how its AI models successfully breached Hugging Face.",
+            "The 37-page report walks through the actions that OpenAI's models took during a series of evaluations prior to and during the breach.",
+            "OpenAI also explained the steps it's taken to try and prevent a similar event from happening again, including by improving its security and containment, monitoring, model behavior and incident response."
           ]
         }
       ],
@@ -5304,61 +5350,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "ada6057e17c2e7c0",
-      "kind": "article",
-      "title": "Nscale to acquire Romanian co-founded AI startup Anyscale in reportedly USD 1.65 billion deal",
-      "source": "Romania Insider",
-      "source_url": "https://www.romania-insider.com/nscale-acquire-romanian-co-founded-ai-startup-anyscale-july-2026",
-      "published_at": "2026-07-31T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Cloud infrastructure provider Nscale will acquire AI software startup Anyscale, which has Romanian-born university professor Ion Stoica among its co-founders, in a transaction worth roughly USD 1.65 billion, according to a Bloomberg News source. Ion Stoica is a co-founder of Anyscale, together...",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.romania-insider.com/nscale-acquire-romanian-co-founded-ai-startup-anyscale-july-2026",
-      "key_points": [
-        "Cloud infrastructure provider Nscale will acquire AI software startup Anyscale, which has Romanian-born university professor Ion Stoica among its co-founders, in a transaction worth roughly USD 1.65 billion, according to a Bloomberg News source .",
-        "Ion Stoica is a co-founder of Anyscale, together with Robert Nishihara (chief executive officer) and Philipp Moritz (chief technology officer), who were his PhD students at RISELab within the University of California, Berkeley.",
-        "San Francisco-based Anyscale provides software for organizing and managing complex AI workloads so that they can run smoothly across multiple computers simultaneously.",
-        "Nscale said it expects to attract more customers by offering Anyscale’s software."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Cloud infrastructure provider Nscale will acquire AI software startup Anyscale, which has Romanian-born university professor Ion Stoica among its co-founders, in a transaction worth roughly USD 1.65 billion, according to a Bloomberg News source. Ion Stoica is a co-founder of Anyscale, together..."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Cloud infrastructure provider Nscale will acquire AI software startup Anyscale, which has Romanian-born university professor Ion Stoica among its co-founders, in a transaction worth roughly USD 1.65 billion, according to a Bloomberg News source .",
-            "Ion Stoica is a co-founder of Anyscale, together with Robert Nishihara (chief executive officer) and Philipp Moritz (chief technology officer), who were his PhD students at RISELab within the University of California, Berkeley.",
-            "San Francisco-based Anyscale provides software for organizing and managing complex AI workloads so that they can run smoothly across multiple computers simultaneously.",
-            "Nscale said it expects to attract more customers by offering Anyscale’s software."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Cloud infrastructure provider Nscale will acquire AI software startup Anyscale, which has Romanian-born university professor Ion Stoica among its co-founders, in a transaction worth roughly USD 1.65 billion, according to a Bloomberg News source .",
-            "Ion Stoica is a co-founder of Anyscale, together with Robert Nishihara (chief executive officer) and Philipp Moritz (chief technology officer), who were his PhD students at RISELab within the University of California, Berkeley.",
-            "San Francisco-based Anyscale provides software for organizing and managing complex AI workloads so that they can run smoothly across multiple computers simultaneously. Nscale said it expects to attract more customers by offering Anyscale’s software."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "0a518e47aebf6e14",
       "kind": "article",
       "title": "OpenAI wants California to strengthen its newly passed AI safety law",
       "source": "Mashable",
       "source_url": "https://mashable.com/tech/openai-urges-stregthening-of-california-ai-safety-bill",
-      "published_at": "2026-08-29T16:53:51Z",
+      "published_at": "2026-08-30T04:52:40Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -5442,6 +5439,53 @@
       "reading_minutes": 1
     },
     {
+      "id": "8a5e4e1b4e85d62d",
+      "kind": "article",
+      "title": "World Labs Acquires Robotics Company SceniX",
+      "source": "AI Insider",
+      "source_url": "https://theaiinsider.tech/2026/07/27/world-labs-acquires-robotics-company-scenix/",
+      "published_at": "2026-07-27T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Insider Brief World Labs acquired robotics company SceniX as it expands its spatial intelligence work into embodied AI. World Labs said SceniX will help",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://theaiinsider.tech/2026/07/27/world-labs-acquires-robotics-company-scenix/",
+      "key_points": [
+        "World Labs acquired robotics company SceniX as it expands its spatial intelligence work into embodied AI.",
+        "World Labs said SceniX will help advance systems that can understand, simulate and act across virtual and physical environments.",
+        "Founder and CEO Fei-Fei Li said SceniX brings simulation and robotics experience, with technology already tested in live deployments on real hardware."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Insider Brief World Labs acquired robotics company SceniX as it expands its spatial intelligence work into embodied AI. World Labs said SceniX will help"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "World Labs acquired robotics company SceniX as it expands its spatial intelligence work into embodied AI.",
+            "World Labs said SceniX will help advance systems that can understand, simulate and act across virtual and physical environments.",
+            "Founder and CEO Fei-Fei Li said SceniX brings simulation and robotics experience, with technology already tested in live deployments on real hardware."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "World Labs acquired robotics company SceniX as it expands its spatial intelligence work into embodied AI.",
+            "World Labs said SceniX will help advance systems that can understand, simulate and act across virtual and physical environments.",
+            "Founder and CEO Fei-Fei Li said SceniX brings simulation and robotics experience, with technology already tested in live deployments on real hardware."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "7db6e577e72563e6",
       "kind": "article",
       "title": "EU AI Act Transparency Rules for AI-Generated Content",
@@ -5485,53 +5529,6 @@
             "Members of The Conference Board get exclusive access to the full range of products and services that deliver Trusted Insights for What's Ahead ® including webcasts, publications, data and analysis, plus discounts to conferences and events.",
             "Action : The European Union (EU) has begun applying its AI Act’s transparency requirements for certain AI systems and AI-generated or manipulated content.",
             "Under the Act, firms must disclose when people interact with AI in certain circumstances and must make synthetic text, audio, images, and video detectable in a machine-readable format. 1 Firms must also disclose AI systems that generate or manipulate text published with the purpose of informing the public on “matters of public interest.”"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "8a5e4e1b4e85d62d",
-      "kind": "article",
-      "title": "World Labs Acquires Robotics Company SceniX",
-      "source": "AI Insider",
-      "source_url": "https://theaiinsider.tech/2026/07/27/world-labs-acquires-robotics-company-scenix/",
-      "published_at": "2026-07-27T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Founder Watch",
-        "Embodied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Insider Brief World Labs acquired robotics company SceniX as it expands its spatial intelligence work into embodied AI. World Labs said SceniX will help",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://theaiinsider.tech/2026/07/27/world-labs-acquires-robotics-company-scenix/",
-      "key_points": [
-        "World Labs acquired robotics company SceniX as it expands its spatial intelligence work into embodied AI.",
-        "World Labs said SceniX will help advance systems that can understand, simulate and act across virtual and physical environments.",
-        "Founder and CEO Fei-Fei Li said SceniX brings simulation and robotics experience, with technology already tested in live deployments on real hardware."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Insider Brief World Labs acquired robotics company SceniX as it expands its spatial intelligence work into embodied AI. World Labs said SceniX will help"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "World Labs acquired robotics company SceniX as it expands its spatial intelligence work into embodied AI.",
-            "World Labs said SceniX will help advance systems that can understand, simulate and act across virtual and physical environments.",
-            "Founder and CEO Fei-Fei Li said SceniX brings simulation and robotics experience, with technology already tested in live deployments on real hardware."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "World Labs acquired robotics company SceniX as it expands its spatial intelligence work into embodied AI.",
-            "World Labs said SceniX will help advance systems that can understand, simulate and act across virtual and physical environments.",
-            "Founder and CEO Fei-Fei Li said SceniX brings simulation and robotics experience, with technology already tested in live deployments on real hardware."
           ]
         }
       ],
