@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-31T05:29:56Z",
+  "generated_at": "2026-08-31T13:44:25Z",
   "item_count": 132,
   "category_counts": {
     "research": 20,
@@ -68,25 +68,25 @@
       "note": ""
     },
     {
-      "name": "OpenAI",
-      "status": "ok",
-      "count": 9,
-      "note": ""
-    },
-    {
       "name": "NVIDIA AI",
       "status": "ok",
       "count": 6,
       "note": ""
     },
     {
-      "name": "Hugging Face",
+      "name": "OpenAI",
+      "status": "ok",
+      "count": 9,
+      "note": ""
+    },
+    {
+      "name": "Google AI",
       "status": "ok",
       "count": 7,
       "note": ""
     },
     {
-      "name": "Google AI",
+      "name": "Hugging Face",
       "status": "ok",
       "count": 7,
       "note": ""
@@ -98,27 +98,27 @@
       "note": ""
     },
     {
-      "name": "Academic Startup Radar",
-      "status": "ok",
-      "count": 10,
-      "note": ""
-    },
-    {
       "name": "World Model Founders",
       "status": "ok",
       "count": 7,
       "note": ""
     },
     {
-      "name": "Microsoft Research",
+      "name": "Academic Startup Radar",
       "status": "ok",
-      "count": 6,
+      "count": 10,
       "note": ""
     },
     {
       "name": "AI for Mathematics & Science",
       "status": "ok",
       "count": 12,
+      "note": ""
+    },
+    {
+      "name": "Microsoft Research",
+      "status": "ok",
+      "count": 6,
       "note": ""
     },
     {
@@ -140,19 +140,19 @@
       "note": ""
     },
     {
-      "name": "Open Source AI Monitor",
-      "status": "ok",
-      "count": 8,
-      "note": ""
-    },
-    {
       "name": "AI Policy Monitor",
       "status": "ok",
       "count": 10,
       "note": ""
     },
     {
-      "name": "China AI · Tencent & ByteDance",
+      "name": "Open Source AI Monitor",
+      "status": "ok",
+      "count": 8,
+      "note": ""
+    },
+    {
+      "name": "China AI · Kimi & Qwen",
       "status": "ok",
       "count": 10,
       "note": ""
@@ -164,7 +164,7 @@
       "note": ""
     },
     {
-      "name": "China AI · Kimi & Qwen",
+      "name": "China AI · Tencent & ByteDance",
       "status": "ok",
       "count": 10,
       "note": ""
@@ -182,27 +182,27 @@
       "note": ""
     },
     {
-      "name": "Frontier Leaders on X",
-      "status": "ok",
-      "count": 10,
-      "note": ""
-    },
-    {
       "name": "Agent & Reasoning Researchers",
       "status": "ok",
       "count": 9,
       "note": ""
     },
     {
-      "name": "Vision & World Model Researchers",
+      "name": "Frontier Leaders on X",
       "status": "ok",
-      "count": 9,
+      "count": 10,
       "note": ""
     },
     {
       "name": "China AI Social Monitor",
       "status": "ok",
       "count": 3,
+      "note": ""
+    },
+    {
+      "name": "Vision & World Model Researchers",
+      "status": "ok",
+      "count": 9,
       "note": ""
     },
     {
@@ -318,7 +318,7 @@
       "content_kind": "article",
       "verification": "MIT 官方个人主页基线 · 持续更新",
       "reader_url": "./reader.html?id=kaiming-he-research-watch",
-      "reader_status": "public-page-excerpt"
+      "reader_status": "summary-only"
     },
     {
       "id": "shunyu-yao-agent-watch",
@@ -1380,6 +1380,26 @@
       "reader_status": "pdf-link-only"
     },
     {
+      "id": "9c65b2e009741fa7",
+      "category": "impact",
+      "title": "Claude Fable 5 AI finds a tiny formula that topples an 87-year-old math conjecture",
+      "summary": "A mathematician working at Anthropic says he used the AI model Claude Fable 5 to uncover a remarkably simple counterexample to the Jacobian conjecture, a famous problem that has resisted mathematicians for more than a century. The result shows that the conjecture is false in three dimensions and above, although the original two-dimensional version remains unsolved.",
+      "source": "Science Daily",
+      "url": "https://www.sciencedaily.com/releases/2026/08/260804034634.htm",
+      "published_at": "2026-08-05T07:00:00Z",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "importance": 91,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=9c65b2e009741fa7",
+      "index_url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5LTjhJRElLS05BcUk4SV9hMGhNRkJmR1IxQm5wTXJYcVg1cVRabEhXVkQ0Tm0tYkxQRjRSOEpIcldNWjlPVFVtOUMxMWNlOENfcmVpR2xqamFSVlB2OTBLSXBOR1ltWWFKbXdWbmprVQ?oc=5",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "7bb26bb70fc7f913",
       "category": "bigtech",
       "title": "Get closer to the game with Gemini and Pixel",
@@ -2155,25 +2175,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "9789d4f5c43a5e69",
-      "category": "impact",
-      "title": "How Claude is accelerating protein design and analytical chemistry",
-      "summary": "In this post, we share two results that show how Claude can help life scientists increase the pace of their research. In the first, we tested Claude’s ability to design protein binders from scratch, a key step in creating protein-based drugs that has historically taken a specialist weeks or months per target. In the second example, we evaluated whether Claude can accelerate chemical analysis. Claude Opus 5, a generally available model, was given NMR and LC-MS data (the data that allows chemists to assess the identity and purity of the compounds they work with).",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/research/Claude-accelerates-protein-design",
-      "published_at": "2026-08-18T07:00:00Z",
-      "tags": [
-        "Frontier Labs",
-        "Industry"
-      ],
-      "importance": 85,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=9789d4f5c43a5e69",
-      "index_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBZSUlFZ25ZeUpwR2FqLUh5WlJpQVRfM3RPaVg5dlo5NWMzbldIOW1WZDR2MklDNWdidlJIN2JKbUV1VU52aDk0YmlpdVJIVmRVTzRfanM5ZmU5MnlWVTZLSHZhTE0wVC1iRzNwUzRKRTk3MC1DMWZR?oc=5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "9943969fce7ee83e",
       "category": "voices",
       "title": "Fei-Fei Li",
@@ -2311,6 +2312,26 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "98109b5971e2aee7",
+      "category": "voices",
+      "title": "Should say that I personally still find the @Grok app more useful for some tasks than @Bot. Worth trying it out on super tough tasks if you haven’t in a while. https://t.co/u2y4RZRUZ5",
+      "summary": "Should say that I personally still find the @Grok app more useful for some tasks than @Bot. Worth trying it out on super tough tasks if you haven’t in a while. https://t.co/u2y4RZRUZ5 x.com",
+      "source": "x.com",
+      "url": "https://x.com/elonmusk/status/2094147282434211869",
+      "published_at": "2026-08-30T19:36:34Z",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "importance": 80,
+      "content_kind": "social",
+      "verification": "公开平台索引，需查看原帖",
+      "reader_url": "./reader.html?id=98109b5971e2aee7",
+      "index_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5CUFd5clB4RlRZLWtiT29tbW54Qjg2MGN3NDJmQTQ2T0g4Z3hnNktGZ0g4bHFFTFlhRTRWM3E1VDJwU25hcHo4bkZqUUxpYmViS0pFQmdBOW9rVDhqZmc?oc=5",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "39609cb1dc4f45ab",
       "category": "voices",
       "title": "How to share your Grok @Bot design with others",
@@ -2351,26 +2372,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "4a532763c1a55c09",
-      "category": "voices",
-      "title": "RT @teslaownersSV: BREAKING: Grok Companions will officially be removed from the Grok app on September 1, 2026. 🤖 The change will remove t…",
-      "summary": "RT @teslaownersSV: BREAKING: Grok Companions will officially be removed from the Grok app on September 1, 2026. 🤖 The change will remove t… x.com",
-      "source": "x.com",
-      "url": "https://x.com/elonmusk/status/2093974833382019525",
-      "published_at": "2026-08-30T08:11:19Z",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "importance": 80,
-      "content_kind": "social",
-      "verification": "公开平台索引，需查看原帖",
-      "reader_url": "./reader.html?id=4a532763c1a55c09",
-      "index_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1KR3laTUI5dThicFJtczZKVmRRam1seTFXNEFON3VpV3c2N1Y5WXFEZmxqdGhBaHdpeTRhSWNUeEM5VHh0cmdGN2NsQ2YtQ3lGRkNZSnJZN1Ntbl85aGc?oc=5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "d0eec51a702fc422",
       "category": "startups",
       "title": "The Anthropic-Physical Intelligence rumor roiling AI Twitter | TechCrunch",
@@ -2406,6 +2407,25 @@
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=425faad41bc142e2",
       "index_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNN2ZVcER1YXNsaEthelVtNENlUXBCMzdyRV80bWhNWHBHSk5rVmMzZGJyaFZfWS1YclBDWklqc0RFTEZzYm1fSXJzd1RWVDR4U1d2QzZfWTRFTUtfa1Ewa2FBUzRGZU93dkE4dWZJM0YwdHFhaWlrLTF2ajRBaWt2TGZMS1oyclVaM0lpQms1dGx1T3JTVlFLdA?oc=5",
+      "reader_status": "summary-only"
+    },
+    {
+      "id": "76582a8433cb888f",
+      "category": "startups",
+      "title": "Globus Medical buys AI startup Higgs Boson Health to build surgical intelligence",
+      "summary": "Globus Medical buys AI startup Higgs Boson Health to build surgical intelligence Dealroom",
+      "source": "Dealroom",
+      "url": "https://app.dealroom.co/news/note/globus-medical-buys-ai-startup-higgs-boson-health-to-build-surgical-intelligence",
+      "published_at": "2026-08-26T22:46:55Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 78,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=76582a8433cb888f",
+      "index_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOU2ZZUDh3OUxwYV9XODJfdS1yQVhGUVJKOVhvb01IanhhRi03T1FGdUM2OU5OdEVQazgzOExtQTZiT3RCWDdQTU1XeF9SWHlqYWNnVFk1dFZFQnc3S1M3SGtQUkROS3lhblVrWGw4QVRDUXN3YmVCem9TajQwMTJ1R3IzV1FoeGdxc3Qwcno0ZWo2UWVqNVhHZkltU2t2aUVlNlc5Qm1iMVptb3hoM19GcHV5WUc?oc=5",
       "reader_status": "summary-only"
     },
     {
@@ -2474,8 +2494,8 @@
       "url": "https://www.businessinsider.com/godmother-of-ai-feifei-li-world-labs-tiger-mom-2026-8",
       "published_at": "2026-08-19T07:00:00Z",
       "tags": [
-        "Academic Startup",
-        "Funding"
+        "Founder Watch",
+        "Embodied AI"
       ],
       "importance": 77,
       "content_kind": "article",
@@ -2578,25 +2598,6 @@
       "reader_url": "./reader.html?id=f2f1d3ff6ac81a6a",
       "index_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQUmVnbUJFMHBjbC1tYUlxMjJhMVV0X2FXWkRieTg1d3Q0UktOUFoxSjc0bkZaVGZfUU1vOFk0alM1UUJxNmJaZUVGNEdTSUwyLWRGOURFNEliTXhwUEVEWXo0R1NQcWFyR0FPV3RZTF9JMlJYNXVBenV0ZElzVXdTMEtsZjFUdnVWcHliZzJaUFJtbjBPR1NFRA?oc=5",
       "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "e8174d329f21c1b5",
-      "category": "startups",
-      "title": "Jeff Bezos’ AI company plants flag in Oakland as demand spills over",
-      "summary": "Jeff Bezos’ AI company plants flag in Oakland as demand spills over The Real Deal",
-      "source": "The Real Deal",
-      "url": "https://therealdeal.com/san-francisco/2026/08/12/jeff-bezos-project-prometheus-ai-startup-settles-in-oakland/",
-      "published_at": "2026-08-12T07:00:00Z",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "importance": 75,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=e8174d329f21c1b5",
-      "index_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNZkdidkJVd3ZVNDRXdUk0LVJDdHhTYUdLcWg1c0ctMW03TlVZVnM5VDU0emx6X213YVBBUXcxRlcza1BIRlN4Rl9rb3pXT00tMEw2cDE5UFlPa3ZJSlp1WlJ3dzJwcF9TT0UyU3Y1bUtIR1Zvb3luN3NhSmhoUEgzTWlVTTE1VGt2M0tXTFBjOVY5Z2VLRnExa01oNU9HcVZSN2ZCcmZRZFRkSHF6R2c?oc=5",
-      "reader_status": "summary-only"
     },
     {
       "id": "066f2bf163daeff9",
@@ -2822,7 +2823,7 @@
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=2100838f03ed0a6b",
       "index_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPNW5GN1ZibUY3dXZjMDlUbEhaOE5rREl4RW9ETExtTTBrT0lHOUdOVE1pSWRibDNQc0U4UjFpeFVpSmNLRzEwMl9RaERwdFpxaVFfcEo2N3hxT3lmZHBLb2lFZ2RocHBIckZULVptd184R29DMmxFaFNyMEVEQ2g3SjJmSm43UW9scm5oS2hYYlowR2NaUTdoeDlMS3ZTUGt0WXp1cG5YNlg0Y0N6M1FJ0gG0AUFVX3lxTFBEeVZMT2s4d1NHU3JXVkN0b0tIRkxiamNmaW14Y0N0Um9ZOVhEUkVOcXAzdVc3aG55TzJYcHJma05yNklQdWJNcGNNS041Nzk5R3M4UTZnVXdMbVNja0JxbGhTeWtTY3IxT1JnQ2JtdHJQcGxHVHA2SUhuQ1ViLU81RlM2YmNnd0ZNdzMwdWU1a3gzNElyek4wbFlOMk42VWtYeUNqTDN1YXhRZ1RUOFRPbnNKMw?oc=5",
-      "reader_status": "public-page-excerpt"
+      "reader_status": "summary-only"
     },
     {
       "id": "dd5cb3eb41fa11b1",
