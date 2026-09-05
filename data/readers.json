@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-05T04:23:44Z",
+  "generated_at": "2026-09-05T10:32:38Z",
   "record_count": 130,
   "records": [
     {
@@ -47,7 +47,7 @@
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "levent @__alpoge__ hello there the jacobian conjecture is false thanx to my close friend akhil for asking about it and my other close friend fable for working during the world cup final ((1+xy)^3 z + y^2 (1+xy) (4+3xy), y + 3 x (1+xy)^2 z + 3 x y^2 (4+3xy), 2 x - 3 x^2 y - x^3 z): \\C^3\\to \\C^3, has jacobian determinant -2, and sends (0, 0, -1/4), (1, -3/2, 13/2), and (-1, 3/2, 13/2) to (-1/4, 0, 0) 2:19 AM · Jul 20, 2026 39.9M Views 1.7K 5.4K 44K 12K",
+            "levent @__alpoge__ hello there the jacobian conjecture is false thanx to my close friend akhil for asking about it and my other close friend fable for working during the world cup final ((1+xy)^3 z + y^2 (1+xy) (4+3xy), y + 3 x (1+xy)^2 z + 3 x y^2 (4+3xy), 2 x - 3 x^2 y - x^3 z): \\C^3\\to \\C^3, has jacobian determinant -2, and sends (0, 0, -1/4), (1, -3/2, 13/2), and (-1, 3/2, 13/2) to (-1/4, 0, 0) 2:19 AM · Jul 20, 2026 40M Views 1.7K 5.4K 44K 12K",
             "levent @__alpoge__ Jul 20 wolframalpha.com/input?i=Det%5B… jacobian determinant in wolfram alpha wolframalpha.com Det[D[{(1+x y)^3 z + y^2 (1 + x y) (4 + 3x y), y + 3x (1 + x y)^2 z + 3x y^2 (4 + 3x y), 2x - 3x^2... Wolfram|Alpha brings expert-level knowledge and capabilities to the broadest possible range of people—spanning all professions and education levels. 20 54 1.5K 939K levent @__alpoge__ Jul 20 wolframalpha.com/input?i=%28%28… wolframalpha.com/input?i=%28%28… evaluating at two of those points in wolfram alpha wolframalpha.com ((1+x y)^3 z + y^2 (1 + x y) (4 + 3x y), y + 3x (1 + x y)^2 z + 3x y^2 (4 + 3x y), 2x - 3x^2 y -... Wolfram|Alpha brings expert-level knowledge and capabilities to the broadest…",
             "Aldo Cortesi @cortesi Jul 20 The absolute state of maths. 8 89 1.6K 134K"
           ]
@@ -777,6 +777,51 @@
       "reading_minutes": 1
     },
     {
+      "id": "rhb-icml-2026",
+      "kind": "paper",
+      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
+      "source": "OpenReview · arXiv",
+      "source_url": "https://arxiv.org/abs/2605.02964",
+      "published_at": "2026-06-24T00:00:00Z",
+      "authors": [
+        "Kunvar Thaman"
+      ],
+      "venue": "ICML 2026",
+      "tags": [
+        "Reward Hacking",
+        "Agent Safety",
+        "Evaluation"
+      ],
+      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
+      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/rhb-icml-2026.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://arxiv.org/pdf/2605.02964",
+      "key_points": [
+        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
+        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
+        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
+        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
+        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
+        },
+        {
+          "title": "关键结果",
+          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
+        },
+        {
+          "title": "局限与结论",
+          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
+        }
+      ],
+      "reading_minutes": 46
+    },
+    {
       "id": "0ed65fdc863b3df9",
       "kind": "article",
       "title": "Developing Enterprise Frontier Safeguards with our customers",
@@ -875,51 +920,6 @@
         }
       ],
       "reading_minutes": 1
-    },
-    {
-      "id": "rhb-icml-2026",
-      "kind": "paper",
-      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
-      "source": "OpenReview · arXiv",
-      "source_url": "https://arxiv.org/abs/2605.02964",
-      "published_at": "2026-06-24T00:00:00Z",
-      "authors": [
-        "Kunvar Thaman"
-      ],
-      "venue": "ICML 2026",
-      "tags": [
-        "Reward Hacking",
-        "Agent Safety",
-        "Evaluation"
-      ],
-      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
-      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/rhb-icml-2026.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://arxiv.org/pdf/2605.02964",
-      "key_points": [
-        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
-        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
-        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
-        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
-        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
-        },
-        {
-          "title": "关键结果",
-          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
-        },
-        {
-          "title": "局限与结论",
-          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
-        }
-      ],
-      "reading_minutes": 46
     },
     {
       "id": "9db14d8118bcfbce",
@@ -2977,46 +2977,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "f94e09a266de5c6a",
-      "kind": "article",
-      "title": "Insilico Medicine releases frontier AI models for drug discovery",
-      "source": "News-Medical",
-      "source_url": "https://www.news-medical.net/news/20260902/Insilico-Medicine-releases-frontier-AI-models-for-drug-discovery.aspx",
-      "published_at": "2026-09-02T18:25:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Insilico Medicine, a clinical-stage generative artificial intelligence (AI)-driven drug discovery company, today announced the release of a series of frontier specialist models for chemistry and biology, trained through its MMAI Gym for Science framework.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.news-medical.net/news/20260902/Insilico-Medicine-releases-frontier-AI-models-for-drug-discovery.aspx",
-      "key_points": [
-        "Insilico Medicine, a clinical-stage generative artificial intelligence (AI)-driven drug discovery company, today announced the release of a series of frontier specialist models for chemistry and biology, trained through its MMAI Gym for Science framework."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Insilico Medicine, a clinical-stage generative artificial intelligence (AI)-driven drug discovery company, today announced the release of a series of frontier specialist models for chemistry and biology, trained through its MMAI Gym for Science framework."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Insilico Medicine, a clinical-stage generative artificial intelligence (AI)-driven drug discovery company, today announced the release of a series of frontier specialist models for chemistry and biology, trained through its MMAI Gym for Science framework."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "95693a658f9a0d54",
       "kind": "article",
       "title": "MindTopo reveals VLMs’ spatial reasoning abilities",
@@ -3110,6 +3070,46 @@
             "The challenge: Chest X-ray interpretation spans diverse tasks that require both expressive report generation and calibrated diagnostic predictions.",
             "CARE-X is a unified chest X-ray VLM for diverse clinical interpretation tasks. It combines generation and structured prediction to provide both free-text reasoning and deterministic outputs."
           ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "f94e09a266de5c6a",
+      "kind": "article",
+      "title": "Insilico Medicine releases frontier AI models for drug discovery",
+      "source": "News-Medical",
+      "source_url": "https://www.news-medical.net/news/20260902/Insilico-Medicine-releases-frontier-AI-models-for-drug-discovery.aspx",
+      "published_at": "2026-09-02T18:25:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Insilico Medicine, a clinical-stage generative artificial intelligence (AI)-driven drug discovery company, today announced the release of a series of frontier specialist models for chemistry and biology, trained through its MMAI Gym for Science framework.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.news-medical.net/news/20260902/Insilico-Medicine-releases-frontier-AI-models-for-drug-discovery.aspx",
+      "key_points": [
+        "Insilico Medicine, a clinical-stage generative artificial intelligence (AI)-driven drug discovery company, today announced the release of a series of frontier specialist models for chemistry and biology, trained through its MMAI Gym for Science framework."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Insilico Medicine, a clinical-stage generative artificial intelligence (AI)-driven drug discovery company, today announced the release of a series of frontier specialist models for chemistry and biology, trained through its MMAI Gym for Science framework."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Insilico Medicine, a clinical-stage generative artificial intelligence (AI)-driven drug discovery company, today announced the release of a series of frontier specialist models for chemistry and biology, trained through its MMAI Gym for Science framework."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -3464,52 +3464,52 @@
       "reading_minutes": 1
     },
     {
-      "id": "259a35ee76d2a3c6",
+      "id": "23cf021c782376b8",
       "kind": "article",
-      "title": "AI helps design new materials that work in the real world",
-      "source": "MIT News",
-      "source_url": "https://news.mit.edu/2026/ai-helps-design-new-materials-that-work-in-real-world-0826",
+      "title": "From the Lab: How Javier Gómez-Serrano is using AI to solve the most elusive question in math",
+      "source": "Brown University",
+      "source_url": "https://www.brown.edu/news/2026-08-26/javier-gomez-serrano-lab",
       "published_at": "2026-08-26T07:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
         "AI for Science",
-        "Biology",
-        "Applied AI"
+        "Mathematics",
+        "Discovery"
       ],
       "verification": "媒体或公开网页",
-      "summary": "MIT researchers added a new component to AI models that design new materials, helping ensure the material will be stable and practical for real-world use. The “CrysVCD” approach could reduce the money and time spent on screening out unusable designs.",
+      "summary": "From the Lab: How Javier Gómez-Serrano is using AI to solve the most elusive question in math Brown University",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.mit.edu/2026/ai-helps-design-new-materials-that-work-in-real-world-0826",
+      "resolved_url": "https://www.brown.edu/news/2026-08-26/javier-gomez-serrano-lab",
       "key_points": [
-        "Images for download on the MIT News office website are made available to non-commercial entities, press and the general public under a Creative Commons Attribution Non-Commercial No Derivatives license .",
-        "You may not alter the images provided, other than to crop them to size.",
-        "A credit line must be used when reproducing images; if one is not provided below, credit the images to \"MIT.\" Today, anyone with a large enough artificial intelligence model can generate millions of new material designs in minutes.",
-        "Unfortunately, that hasn’t led to a huge leap in the number of new materials being used to improve the performance of products like computer chips and rockets.",
-        "One reason for the translation gap is that current models don’t reliably factor in the chemical stability of the materials they generate, and unstable materials aren’t very useful in the real world."
+        "Whether it’s a team of physicists working to understand the laws of quantum mechanics or an archeologist unearthing an ancient city, scholarship at Brown takes many shapes across fields of study.",
+        "This feature series, From the Lab / Field / Studio, brings those stories of discovery to life.",
+        "Q: WHAT MADE YOU WANT TO DEDICATE YOUR PROFESSIONAL LIFE TO MATHEMATICS?",
+        "That’s a hard question because I actually decided a little late.",
+        "I have undergraduate degrees in math and electrical engineering."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "MIT researchers added a new component to AI models that design new materials, helping ensure the material will be stable and practical for real-world use. The “CrysVCD” approach could reduce the money and time spent on screening out unusable designs."
+          "body": "From the Lab: How Javier Gómez-Serrano is using AI to solve the most elusive question in math Brown University"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Images for download on the MIT News office website are made available to non-commercial entities, press and the general public under a Creative Commons Attribution Non-Commercial No Derivatives license .",
-            "You may not alter the images provided, other than to crop them to size.",
-            "A credit line must be used when reproducing images; if one is not provided below, credit the images to \"MIT.\" Today, anyone with a large enough artificial intelligence model can generate millions of new material designs in minutes.",
-            "Unfortunately, that hasn’t led to a huge leap in the number of new materials being used to improve the performance of products like computer chips and rockets.",
-            "One reason for the translation gap is that current models don’t reliably factor in the chemical stability of the materials they generate, and unstable materials aren’t very useful in the real world."
+            "Whether it’s a team of physicists working to understand the laws of quantum mechanics or an archeologist unearthing an ancient city, scholarship at Brown takes many shapes across fields of study.",
+            "This feature series, From the Lab / Field / Studio, brings those stories of discovery to life.",
+            "Q: WHAT MADE YOU WANT TO DEDICATE YOUR PROFESSIONAL LIFE TO MATHEMATICS?",
+            "That’s a hard question because I actually decided a little late.",
+            "I have undergraduate degrees in math and electrical engineering."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Images for download on the MIT News office website are made available to non-commercial entities, press and the general public under a Creative Commons Attribution Non-Commercial No Derivatives license . You may not alter the images provided, other than to crop them to size. A credit line must be used when reproducing images; if one is not provided below, credit the images to \"MIT.\"",
-            "Today, anyone with a large enough artificial intelligence model can generate millions of new material designs in minutes. Unfortunately, that hasn’t led to a huge leap in the number of new materials being used to improve the performance of products like computer chips and rockets.",
-            "One reason for the translation gap is that current models don’t reliably factor in the chemical stability of the materials they generate, and unstable materials aren’t very useful in the real world. That forces industries to allocate huge computational budgets to screening out all the unstable materials they generate, in some cases leaving behind a tiny fraction of usable options."
+            "Whether it’s a team of physicists working to understand the laws of quantum mechanics or an archeologist unearthing an ancient city, scholarship at Brown takes many shapes across fields of study. This feature series, From the Lab / Field / Studio, brings those stories of discovery to life.",
+            "Q: WHAT MADE YOU WANT TO DEDICATE YOUR PROFESSIONAL LIFE TO MATHEMATICS? That’s a hard question because I actually decided a little late. I have undergraduate degrees in math and electrical engineering. When I graduated, I had to decide between being a software engineer or doing a Ph.D. in math. I chose math. It just appealed to me more than doing software engineering. I thought I could see myself doing that for all my life. Software engineering was fun, but I wasn't seeing that for more than five or 10 years. Q: WHAT DO YOU WISH THAT PEOPLE BETTER UNDERSTOOD ABOUT WHAT YOU DO? In terms of the AI business, it’s that LLMs are powerful, but we still need mathematical expertise and critical thinking. Humans are…",
+            "The Brown University mathematician fully embraces AI as a means to answer questions that have eluded humanity for centuries."
           ]
         }
       ],
@@ -4354,7 +4354,7 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://x.com/elonmusk/status/2096001766324064371",
       "key_points": [
-        "Elon Musk @elonmusk Grok @ bot available for iPad matt palmer @mattyp 14h Grok Bot is now available for iPad 10:25 PM · Sep 4, 2026 1.4M Views 462 454 3.4K 193"
+        "Elon Musk @elonmusk Grok @ bot available for iPad matt palmer @mattyp 20h Grok Bot is now available for iPad 10:25 PM · Sep 4, 2026 1.9M Views 518 566 4.3K 247"
       ],
       "sections": [
         {
@@ -4364,13 +4364,13 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Elon Musk @elonmusk Grok @ bot available for iPad matt palmer @mattyp 14h Grok Bot is now available for iPad 10:25 PM · Sep 4, 2026 1.4M Views 462 454 3.4K 193"
+            "Elon Musk @elonmusk Grok @ bot available for iPad matt palmer @mattyp 20h Grok Bot is now available for iPad 10:25 PM · Sep 4, 2026 1.9M Views 518 566 4.3K 247"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok @ bot available for iPad matt palmer @mattyp 14h Grok Bot is now available for iPad 10:25 PM · Sep 4, 2026 1.4M Views 462 454 3.4K 193"
+            "Elon Musk @elonmusk Grok @ bot available for iPad matt palmer @mattyp 20h Grok Bot is now available for iPad 10:25 PM · Sep 4, 2026 1.9M Views 518 566 4.3K 247"
           ]
         }
       ],
@@ -4397,10 +4397,10 @@
       "resolved_url": "https://x.com/elonmusk/status/2095988111222227130",
       "key_points": [
         "Try Haggle Bot for saving money on procurement!",
-        "Grok Bot @bot 9h You can now add Bot templates from our marketplace.",
+        "Grok Bot @bot 15h You can now add Bot templates from our marketplace.",
         "We’re sharing Haggle Bot, our in-house procurement specialist.",
         "It negotiates vendor contracts, finds unused SaaS seats, and price-checks recurring purchases.",
-        "9:31 PM · Sep 4, 2026 14.5M Views 680 859 7.7K 1.8K BLACK PHOENIX BPX @BLACKPHOENIXFN 6h Haggle Bot just saved $100K in unused SaaS seats."
+        "9:31 PM · Sep 4, 2026 20.2M Views 788 1.1K 10K 2.4K BLACK PHOENIX BPX @BLACKPHOENIXFN 12h Haggle Bot just saved $100K in unused SaaS seats."
       ],
       "sections": [
         {
@@ -4411,17 +4411,17 @@
           "title": "公开页面要点",
           "bullets": [
             "Try Haggle Bot for saving money on procurement!",
-            "Grok Bot @bot 9h You can now add Bot templates from our marketplace.",
+            "Grok Bot @bot 15h You can now add Bot templates from our marketplace.",
             "We’re sharing Haggle Bot, our in-house procurement specialist.",
             "It negotiates vendor contracts, finds unused SaaS seats, and price-checks recurring purchases.",
-            "9:31 PM · Sep 4, 2026 14.5M Views 680 859 7.7K 1.8K BLACK PHOENIX BPX @BLACKPHOENIXFN 6h Haggle Bot just saved $100K in unused SaaS seats."
+            "9:31 PM · Sep 4, 2026 20.2M Views 788 1.1K 10K 2.4K BLACK PHOENIX BPX @BLACKPHOENIXFN 12h Haggle Bot just saved $100K in unused SaaS seats."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok @ bot templates. Try Haggle Bot for saving money on procurement! This is a gamechanger. Grok Bot @bot 9h You can now add Bot templates from our marketplace. We’re sharing Haggle Bot, our in-house procurement specialist. It negotiates vendor contracts, finds unused SaaS seats, and price-checks recurring purchases. One week in, it's saved us over $100K. 9:31 PM · Sep 4, 2026 14.5M Views 680 859 7.7K 1.8K",
-            "BLACK PHOENIX BPX @BLACKPHOENIXFN 6h Haggle Bot just saved $100K in unused SaaS seats. Now send it after Adobe, Salesforce, and my landlord. 2 3 24 221"
+            "Elon Musk @elonmusk Grok @ bot templates. Try Haggle Bot for saving money on procurement! This is a gamechanger. Grok Bot @bot 15h You can now add Bot templates from our marketplace. We’re sharing Haggle Bot, our in-house procurement specialist. It negotiates vendor contracts, finds unused SaaS seats, and price-checks recurring purchases. One week in, it's saved us over $100K. 9:31 PM · Sep 4, 2026 20.2M Views 788 1.1K 10K 2.4K",
+            "BLACK PHOENIX BPX @BLACKPHOENIXFN 12h Haggle Bot just saved $100K in unused SaaS seats. Now send it after Adobe, Salesforce, and my landlord. 2 3 24 228"
           ]
         }
       ],
@@ -4449,7 +4449,7 @@
       "key_points": [
         "Sam Altman @sama GPT-6 Astra is now available to all Pro, Enterprise, and Business Premium users in Work/Codex, and is available in the API.",
         "We will start rollout to Plus and Business users next.",
-        "8:33 PM · Sep 4, 2026 1.2M Views 701 669 15K 609 Thomas Unise @thomasunise 7h Me explaining GPT-6 Astra to my friends who don’t care about AI at all 00:00 3 6 131 12K maria @maria_rcks 7h now that its out there, what is the reason for the delay?"
+        "8:33 PM · Sep 4, 2026 1.5M Views 760 752 17K 692 Thomas Unise @thomasunise 13h Me explaining GPT-6 Astra to my friends who don’t care about AI at all 00:00 6 9 158 15K maria @maria_rcks 13h now that its out there, what is the reason for the delay?"
       ],
       "sections": [
         {
@@ -4461,15 +4461,15 @@
           "bullets": [
             "Sam Altman @sama GPT-6 Astra is now available to all Pro, Enterprise, and Business Premium users in Work/Codex, and is available in the API.",
             "We will start rollout to Plus and Business users next.",
-            "8:33 PM · Sep 4, 2026 1.2M Views 701 669 15K 609 Thomas Unise @thomasunise 7h Me explaining GPT-6 Astra to my friends who don’t care about AI at all 00:00 3 6 131 12K maria @maria_rcks 7h now that its out there, what is the reason for the delay?"
+            "8:33 PM · Sep 4, 2026 1.5M Views 760 752 17K 692 Thomas Unise @thomasunise 13h Me explaining GPT-6 Astra to my friends who don’t care about AI at all 00:00 6 9 158 15K maria @maria_rcks 13h now that its out there, what is the reason for the delay?"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Sam Altman @sama GPT-6 Astra is now available to all Pro, Enterprise, and Business Premium users in Work/Codex, and is available in the API. We will start rollout to Plus and Business users next. Thank you for the patience. 8:33 PM · Sep 4, 2026 1.2M Views 701 669 15K 609",
-            "Thomas Unise @thomasunise 7h Me explaining GPT-6 Astra to my friends who don’t care about AI at all 00:00 3 6 131 12K",
-            "maria @maria_rcks 7h now that its out there, what is the reason for the delay? 5 89 6.8K"
+            "Sam Altman @sama GPT-6 Astra is now available to all Pro, Enterprise, and Business Premium users in Work/Codex, and is available in the API. We will start rollout to Plus and Business users next. Thank you for the patience. 8:33 PM · Sep 4, 2026 1.5M Views 760 752 17K 692",
+            "Thomas Unise @thomasunise 13h Me explaining GPT-6 Astra to my friends who don’t care about AI at all 00:00 6 9 158 15K",
+            "maria @maria_rcks 13h now that its out there, what is the reason for the delay? 5 99 7.6K"
           ]
         }
       ],
@@ -4528,6 +4528,51 @@
       "reading_minutes": 1
     },
     {
+      "id": "5159bc08da5304e7",
+      "kind": "social",
+      "title": "first, sorry for the messy rollout. second, when we screw up, we try to make it right. third, we should be able to begin broad rollout to API customers and chatgpt subscribers in the near future. as usual we will start with pro subscribers.",
+      "source": "x.com",
+      "source_url": "https://x.com/sama/status/2095678759651438887",
+      "published_at": "2026-09-04T01:02:06Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "first, sorry for the messy rollout. second, when we screw up, we try to make it right. third, we should be able to begin broad rollout to API customers and chatgpt subscribers in the near future. as usual we will start with pro subscribers. x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/sama/status/2095678759651438887",
+      "key_points": [
+        "FroyoJo @froy0Joe Sep 4 Please just explain what near future means?",
+        "8 1 458 150K Fix @FixlationAI Sep 4 how it feels watching everyone with early access posting their outputs 1 4 328 32K"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "first, sorry for the messy rollout. second, when we screw up, we try to make it right. third, we should be able to begin broad rollout to API customers and chatgpt subscribers in the near future. as usual we will start with pro subscribers. x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "FroyoJo @froy0Joe Sep 4 Please just explain what near future means?",
+            "8 1 458 150K Fix @FixlationAI Sep 4 how it feels watching everyone with early access posting their outputs 1 4 328 32K"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "FroyoJo @froy0Joe Sep 4 Please just explain what near future means? Next week, tomorrow, this weekend? 8 1 458 150K",
+            "Fix @FixlationAI Sep 4 how it feels watching everyone with early access posting their outputs 1 4 328 32K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "2aaf53989a8fcc9d",
       "kind": "social",
       "title": "Also, this is my favorite OpenAI video so far. It makes me excited for the future!",
@@ -4549,8 +4594,9 @@
       "key_points": [
         "Sam Altman @sama Also, this is my favorite OpenAI video so far.",
         "Anything you can do on a computer, Astra can do for you.",
-        "00:00 7:54 PM · Sep 3, 2026 2.4M Views 876 954 19K 3.5K yv_thorne @yv_thorne Sep 3 What about this video?",
-        "#OpenSource4o #OpenSourceo3 #OpenSource41 3 39 2.9K Bateman @PatrickBatemnn Sep 4 Pov: we’re in 2030 and Astra 10.5 talk to Opus 12.6 Marvel Perfect Gifs & Clips 00:00 Marvel Perfect Gifs & Clips 1 35 3.4K"
+        "00:00 7:54 PM · Sep 3, 2026 2.5M Views 886 965 20K 3.5K yv_thorne @yv_thorne Sep 3 What about this video?",
+        "#OpenSource4o #OpenSourceo3 #OpenSource41 3 45 3K Valéria @Valria34773 Sep 3 I am really glad about progress and innovation.",
+        "What if you release the weights of deprecated models now that your friend bought Huggingface?"
       ],
       "sections": [
         {
@@ -4562,62 +4608,17 @@
           "bullets": [
             "Sam Altman @sama Also, this is my favorite OpenAI video so far.",
             "Anything you can do on a computer, Astra can do for you.",
-            "00:00 7:54 PM · Sep 3, 2026 2.4M Views 876 954 19K 3.5K yv_thorne @yv_thorne Sep 3 What about this video?",
-            "#OpenSource4o #OpenSourceo3 #OpenSource41 3 39 2.9K Bateman @PatrickBatemnn Sep 4 Pov: we’re in 2030 and Astra 10.5 talk to Opus 12.6 Marvel Perfect Gifs & Clips 00:00 Marvel Perfect Gifs & Clips 1 35 3.4K"
+            "00:00 7:54 PM · Sep 3, 2026 2.5M Views 886 965 20K 3.5K yv_thorne @yv_thorne Sep 3 What about this video?",
+            "#OpenSource4o #OpenSourceo3 #OpenSource41 3 45 3K Valéria @Valria34773 Sep 3 I am really glad about progress and innovation.",
+            "What if you release the weights of deprecated models now that your friend bought Huggingface?"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Sam Altman @sama Also, this is my favorite OpenAI video so far. It makes me excited for the future! OpenAI @OpenAI Sep 3 This is GPT-6 Astra. Anything you can do on a computer, Astra can do for you. Fast. 00:00 7:54 PM · Sep 3, 2026 2.4M Views 876 954 19K 3.5K",
-            "yv_thorne @yv_thorne Sep 3 What about this video? #OpenSource4o #OpenSourceo3 #OpenSource41 3 39 2.9K",
-            "Bateman @PatrickBatemnn Sep 4 Pov: we’re in 2030 and Astra 10.5 talk to Opus 12.6 Marvel Perfect Gifs & Clips 00:00 Marvel Perfect Gifs & Clips 1 35 3.4K"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "0b59a22722d0109d",
-      "kind": "social",
-      "title": "We hit a little snag getting the blog post deployed, but it is really great: https://t.co/jjqXUWfrNW",
-      "source": "x.com",
-      "source_url": "https://x.com/sama/status/2095600429363302720",
-      "published_at": "2026-09-03T19:50:51Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "We hit a little snag getting the blog post deployed, but it is really great: https://t.co/jjqXUWfrNW x.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/sama/status/2095600429363302720",
-      "key_points": [
-        "Sam Altman @sama We hit a little snag getting the blog post deployed, but it is really great: GPT-6 Astra: A new generation of intelligence From openai.com 7:50 PM · Sep 3, 2026 909.5K Views 519 400 7.6K 1.3K PAULY @Wonka0x Sep 3 The AGI seems to be struggling with this blog post… Standby.",
-        "4 26 81 6.5K kitze 🛠️ tinkerer.club @thekitze Sep 3 > agi is here > A BLOG POST doesn't work smfh 2026 is not real 3 71 5.4K"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "We hit a little snag getting the blog post deployed, but it is really great: https://t.co/jjqXUWfrNW x.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Sam Altman @sama We hit a little snag getting the blog post deployed, but it is really great: GPT-6 Astra: A new generation of intelligence From openai.com 7:50 PM · Sep 3, 2026 909.5K Views 519 400 7.6K 1.3K PAULY @Wonka0x Sep 3 The AGI seems to be struggling with this blog post… Standby.",
-            "4 26 81 6.5K kitze 🛠️ tinkerer.club @thekitze Sep 3 > agi is here > A BLOG POST doesn't work smfh 2026 is not real 3 71 5.4K"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Sam Altman @sama We hit a little snag getting the blog post deployed, but it is really great: GPT-6 Astra: A new generation of intelligence From openai.com 7:50 PM · Sep 3, 2026 909.5K Views 519 400 7.6K 1.3K",
-            "PAULY @Wonka0x Sep 3 The AGI seems to be struggling with this blog post… Standby. 4 26 81 6.5K",
-            "kitze 🛠️ tinkerer.club @thekitze Sep 3 > agi is here > A BLOG POST doesn't work smfh 2026 is not real 3 71 5.4K"
+            "Sam Altman @sama Also, this is my favorite OpenAI video so far. It makes me excited for the future! OpenAI @OpenAI Sep 3 This is GPT-6 Astra. Anything you can do on a computer, Astra can do for you. Fast. 00:00 7:54 PM · Sep 3, 2026 2.5M Views 886 965 20K 3.5K",
+            "yv_thorne @yv_thorne Sep 3 What about this video? #OpenSource4o #OpenSourceo3 #OpenSource41 3 45 3K",
+            "Valéria @Valria34773 Sep 3 I am really glad about progress and innovation. What if you release the weights of deprecated models now that your friend bought Huggingface? #OpenSource4o #OpenSource41 #OpenSource45 #OpenSourceo3 2 42 1.7K"
           ]
         }
       ],
@@ -4755,51 +4756,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "8d13ecd1480e3fa7",
-      "kind": "article",
-      "title": "Hugging Face approached Nvidia’s Huang weeks ahead of $12.9B acquisition, CEO tells CNBC",
-      "source": "CNBC",
-      "source_url": "https://www.cnbc.com/2026/09/03/nvidia-agrees-to-buy-hugging-face-for-almost-13-billion-ai-expansion.html",
-      "published_at": "2026-09-03T12:04:26Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Open Source",
-        "Models & Tools"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Hugging Face approached Nvidia’s Huang weeks ahead of $12.9B acquisition, CEO tells CNBC CNBC",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.cnbc.com/2026/09/03/nvidia-agrees-to-buy-hugging-face-for-almost-13-billion-ai-expansion.html",
-      "key_points": [
-        "Nvidia agreed to buy Hugging Face, an open-source AI platform, for $12.9 billion.",
-        "Jensen Huang, Nvidia's CEO, said in a blog post that with the deal, the company \"will expand access to AI for developers and institutions worldwide.\" It's Nvidia's second-biggest purchase, after it paid $20 billion for Groq assets at the end of last year."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Hugging Face approached Nvidia’s Huang weeks ahead of $12.9B acquisition, CEO tells CNBC CNBC"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Nvidia agreed to buy Hugging Face, an open-source AI platform, for $12.9 billion.",
-            "Jensen Huang, Nvidia's CEO, said in a blog post that with the deal, the company \"will expand access to AI for developers and institutions worldwide.\" It's Nvidia's second-biggest purchase, after it paid $20 billion for Groq assets at the end of last year."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Nvidia agreed to buy Hugging Face, an open-source AI platform, for $12.9 billion.",
-            "Jensen Huang, Nvidia's CEO, said in a blog post that with the deal, the company \"will expand access to AI for developers and institutions worldwide.\"",
-            "It's Nvidia's second-biggest purchase, after it paid $20 billion for Groq assets at the end of last year."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "cc109e49f3a2c768",
       "kind": "article",
       "title": "Engineering students turn industry challenge into AI startup ‘built by engineers, for engineers’",
@@ -4850,7 +4806,7 @@
       "id": "f382ca51aca57f14",
       "kind": "article",
       "title": "Tokyo AI startup Akari takes stake in Akita motor maker Aster",
-      "source": "app.dealroom.co",
+      "source": "Dealroom",
       "source_url": "https://app.dealroom.co/news/note/tokyo-ai-startup-akari-takes-stake-in-akita-motor-maker-aster",
       "published_at": "2026-09-01T10:04:21Z",
       "authors": [],
@@ -4860,23 +4816,23 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Tokyo AI startup Akari takes stake in Akita motor maker Aster app.dealroom.co",
+      "summary": "Tokyo AI startup Akari takes stake in Akita motor maker Aster Dealroom",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "summary-only",
       "fetch_note": "HTTP Error 403: Forbidden",
       "resolved_url": "https://app.dealroom.co/news/note/tokyo-ai-startup-akari-takes-stake-in-akita-motor-maker-aster",
       "key_points": [
-        "Tokyo AI startup Akari takes stake in Akita motor maker Aster app.dealroom.co"
+        "Tokyo AI startup Akari takes stake in Akita motor maker Aster Dealroom"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Tokyo AI startup Akari takes stake in Akita motor maker Aster app.dealroom.co"
+          "body": "Tokyo AI startup Akari takes stake in Akita motor maker Aster Dealroom"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Tokyo AI startup Akari takes stake in Akita motor maker Aster app.dealroom.co"
+            "Tokyo AI startup Akari takes stake in Akita motor maker Aster Dealroom"
           ]
         },
         {
@@ -5025,6 +4981,53 @@
       "reading_minutes": 1
     },
     {
+      "id": "0d48c299a6ea28e6",
+      "kind": "article",
+      "title": "OpenAI releases sweeping report on Hugging Face AI agent hack",
+      "source": "CNBC",
+      "source_url": "https://www.cnbc.com/2026/08/26/open-ai-hugging-face-hack.html",
+      "published_at": "2026-08-26T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "OpenAI releases sweeping report on Hugging Face AI agent hack CNBC",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.cnbc.com/2026/08/26/open-ai-hugging-face-hack.html",
+      "key_points": [
+        "OpenAI published a technical report detailing how its AI models successfully breached Hugging Face.",
+        "The 37-page report walks through the actions that OpenAI's models took during a series of evaluations prior to and during the breach.",
+        "OpenAI also explained the steps it's taken to try and prevent a similar event from happening again, including by improving its security and containment, monitoring, model behavior and incident response."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "OpenAI releases sweeping report on Hugging Face AI agent hack CNBC"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "OpenAI published a technical report detailing how its AI models successfully breached Hugging Face.",
+            "The 37-page report walks through the actions that OpenAI's models took during a series of evaluations prior to and during the breach.",
+            "OpenAI also explained the steps it's taken to try and prevent a similar event from happening again, including by improving its security and containment, monitoring, model behavior and incident response."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "OpenAI published a technical report detailing how its AI models successfully breached Hugging Face.",
+            "The 37-page report walks through the actions that OpenAI's models took during a series of evaluations prior to and during the breach.",
+            "OpenAI also explained the steps it's taken to try and prevent a similar event from happening again, including by improving its security and containment, monitoring, model behavior and incident response."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "c6ef844572798599",
       "kind": "article",
       "title": "OpenAI Makes AI Safety Changes in Wake of Hugging Face Breach",
@@ -5068,7 +5071,7 @@
       "id": "505a7871a2f62863",
       "kind": "article",
       "title": "'I have a chip on my shoulder.' Phoebe Gates wants her $185 million AI startup Phia to succeed with 'no ties to my privilege or my last name'",
-      "source": "Fortune",
+      "source": "fortune.com",
       "source_url": "https://fortune.com/article/phoebe-gates-phia-shopping-app-cookie-stuffing/",
       "published_at": "2026-08-15T07:00:00Z",
       "authors": [],
@@ -5078,7 +5081,7 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "'I have a chip on my shoulder.' Phoebe Gates wants her $185 million AI startup Phia to succeed with 'no ties to my privilege or my last name' Fortune",
+      "summary": "'I have a chip on my shoulder.' Phoebe Gates wants her $185 million AI startup Phia to succeed with 'no ties to my privilege or my last name' fortune.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://fortune.com/article/phoebe-gates-phia-shopping-app-cookie-stuffing/",
@@ -5090,7 +5093,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "'I have a chip on my shoulder.' Phoebe Gates wants her $185 million AI startup Phia to succeed with 'no ties to my privilege or my last name' Fortune"
+          "body": "'I have a chip on my shoulder.' Phoebe Gates wants her $185 million AI startup Phia to succeed with 'no ties to my privilege or my last name' fortune.com"
         },
         {
           "title": "公开页面要点",
@@ -5434,7 +5437,7 @@
       "id": "c524bbd10341230e",
       "kind": "article",
       "title": "Mother turns grief into national AI‑safety campaign for Catholic families",
-      "source": "EWTN News",
+      "source": "ewtnnews.com",
       "source_url": "https://www.ewtnnews.com/world/us/nashville-schools-offer-ai-safety-talk-for-catholic-families",
       "published_at": "2026-09-04T19:40:00Z",
       "authors": [],
@@ -5444,7 +5447,7 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Mother turns grief into national AI‑safety campaign for Catholic families EWTN News",
+      "summary": "Mother turns grief into national AI‑safety campaign for Catholic families ewtnnews.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.ewtnnews.com/world/us/nashville-schools-offer-ai-safety-talk-for-catholic-families",
@@ -5457,7 +5460,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "Mother turns grief into national AI‑safety campaign for Catholic families EWTN News"
+          "body": "Mother turns grief into national AI‑safety campaign for Catholic families ewtnnews.com"
         },
         {
           "title": "公开页面要点",
@@ -5534,7 +5537,7 @@
       "id": "ea56a385fa454613",
       "kind": "article",
       "title": "The Fight for Serious AI Regulation Just Won a Big Victory in Massachusetts",
-      "source": "thenation.com",
+      "source": "The Nation",
       "source_url": "https://www.thenation.com/?post_type=article&p=608600",
       "published_at": "2026-09-03T13:15:02Z",
       "authors": [],
@@ -5544,7 +5547,7 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "The Fight for Serious AI Regulation Just Won a Big Victory in Massachusetts thenation.com",
+      "summary": "The Fight for Serious AI Regulation Just Won a Big Victory in Massachusetts The Nation",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.thenation.com/article/politics/ed-markey-ai-regulation/",
@@ -5556,7 +5559,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "The Fight for Serious AI Regulation Just Won a Big Victory in Massachusetts thenation.com"
+          "body": "The Fight for Serious AI Regulation Just Won a Big Victory in Massachusetts The Nation"
         },
         {
           "title": "公开页面要点",
@@ -5751,7 +5754,7 @@
       "id": "4637f7d7989a05db",
       "kind": "article",
       "title": "OpenAI blinks first in AI safety standoff",
-      "source": "Axios",
+      "source": "axios.com",
       "source_url": "https://www.axios.com/2026/08/19/openai-astra-safety-altman-anthropic",
       "published_at": "2026-08-19T07:00:00Z",
       "authors": [],
@@ -5761,23 +5764,23 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "OpenAI blinks first in AI safety standoff Axios",
+      "summary": "OpenAI blinks first in AI safety standoff axios.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "summary-only",
       "fetch_note": "HTTP Error 403: Forbidden",
       "resolved_url": "https://www.axios.com/2026/08/19/openai-astra-safety-altman-anthropic",
       "key_points": [
-        "OpenAI blinks first in AI safety standoff Axios"
+        "OpenAI blinks first in AI safety standoff axios.com"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "OpenAI blinks first in AI safety standoff Axios"
+          "body": "OpenAI blinks first in AI safety standoff axios.com"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "OpenAI blinks first in AI safety standoff Axios"
+            "OpenAI blinks first in AI safety standoff axios.com"
           ]
         },
         {
