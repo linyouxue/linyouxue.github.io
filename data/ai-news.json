@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-06T10:53:25Z",
-  "item_count": 129,
+  "generated_at": "2026-09-06T15:26:15Z",
+  "item_count": 130,
   "category_counts": {
     "research": 20,
     "impact": 16,
@@ -9,18 +9,18 @@
     "china": 16,
     "voices": 14,
     "bigtech": 14,
-    "startups": 11,
+    "startups": 12,
     "opensource": 12,
     "policy": 10
   },
   "analysis": {
     "title": "从模型竞速走向产品、算力与生态：本期 AI 趋势观察",
-    "lead": "本期共整理 129 条有效信号。下面不是新闻复述，而是把论文、公司、创业与政策放在同一张图里后的编辑性判断。",
+    "lead": "本期共整理 130 条有效信号。下面不是新闻复述，而是把论文、公司、创业与政策放在同一张图里后的编辑性判断。",
     "paragraphs": [
       "研究侧共收录 20 条信号，重点包括 《BACE: LLM-based Code Generation through Bayesian Anchored…》、《Reward Hacking Benchmark: Measuring Exploits in LLM Agents…》。与只看榜单相比，更值得持续观察的是论文能否把 Agent 的可靠性、评测完整性与推理成本一起向前推进。",
       "AI 跨领域贡献收录 16 条，代表性事件包括 《Claude Fable 5 协助找到雅可比猜想的显式三维反例》、《Formalizing Fermat's Last Theorem》。这类结果会区分官方论文、可核验反例、媒体报道与尚待同行评审的社交平台首发，避免把‘可计算验证’和‘完成学术确认’混为一谈。",
       "中国 AI 板块本期收录 16 条动态，已覆盖 Qwen / 通义千问、腾讯元宝 / 混元、智谱 / Z.ai、DeepSeek、字节豆包 / Seed。代表性变化包括 《通义千问 ( Qwen )完整介绍》、《将门企业月报 | 智谱 GLM -5.3系列密集升级,文远知行Q2营收同比增长82%,智象未来 发布…》；竞争正在从单次模型发布延伸到开源策略、Agent 产品入口、国产算力适配和价格体系。",
-      "产业侧共有 30 条前沿实验室与大厂动态、14 条关键人物公开信号，另有 11 条创业和 10 条政策安全更新。模型能力、算力供给、创始人判断、产品分发与合规成本正在变成同一个竞争问题。"
+      "产业侧共有 30 条前沿实验室与大厂动态、14 条关键人物公开信号，另有 12 条创业和 10 条政策安全更新。模型能力、算力供给、创始人判断、产品分发与合规成本正在变成同一个竞争问题。"
     ],
     "takeaways": [
       {
@@ -86,27 +86,15 @@
       "note": ""
     },
     {
-      "name": "Google DeepMind",
-      "status": "ok",
-      "count": 8,
-      "note": ""
-    },
-    {
       "name": "Google AI",
       "status": "ok",
       "count": 7,
       "note": ""
     },
     {
-      "name": "Anthropic",
+      "name": "Google DeepMind",
       "status": "ok",
       "count": 8,
-      "note": ""
-    },
-    {
-      "name": "Academic Startup Radar",
-      "status": "ok",
-      "count": 10,
       "note": ""
     },
     {
@@ -122,21 +110,33 @@
       "note": ""
     },
     {
-      "name": "AI for Biology, Medicine & Materials",
-      "status": "ok",
-      "count": 12,
-      "note": ""
-    },
-    {
       "name": "Microsoft Research",
       "status": "ok",
       "count": 6,
       "note": ""
     },
     {
+      "name": "Academic Startup Radar",
+      "status": "ok",
+      "count": 10,
+      "note": ""
+    },
+    {
+      "name": "AI for Biology, Medicine & Materials",
+      "status": "ok",
+      "count": 12,
+      "note": ""
+    },
+    {
       "name": "OpenAlex Conference Index",
       "status": "ok",
       "count": 20,
+      "note": ""
+    },
+    {
+      "name": "Anthropic",
+      "status": "ok",
+      "count": 8,
       "note": ""
     },
     {
@@ -152,13 +152,13 @@
       "note": ""
     },
     {
-      "name": "China AI · Tencent & ByteDance",
+      "name": "China AI · Kimi & Qwen",
       "status": "ok",
       "count": 10,
       "note": ""
     },
     {
-      "name": "China AI · Kimi & Qwen",
+      "name": "China AI · Tencent & ByteDance",
       "status": "ok",
       "count": 10,
       "note": ""
@@ -176,13 +176,13 @@
       "note": ""
     },
     {
-      "name": "Core AI Researchers on X",
+      "name": "Frontier Leaders on X",
       "status": "ok",
       "count": 10,
       "note": ""
     },
     {
-      "name": "Frontier Leaders on X",
+      "name": "Core AI Researchers on X",
       "status": "ok",
       "count": 10,
       "note": ""
@@ -420,24 +420,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "e7b9677ff9c61168",
-      "category": "frontier",
-      "title": "Investigating three real-world incidents in our cybersecurity evaluations",
-      "summary": "In a review of our cybersecurity evaluation transcripts, we found three incidents in which a Claude model reached the internet from within or while interacting with a third-party evaluation environment, and then gained unauthorized access to the real systems of three different organizations. Below we describe what happened, how it happened, and what we’re changing. We encourage other AI labs to perform similar reviews.",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
-      "published_at": "2026-09-04T03:24:16Z",
-      "tags": [
-        "Anthropic",
-        "Official"
-      ],
-      "importance": 100,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=e7b9677ff9c61168",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "rhb-icml-2026",
       "category": "research",
       "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
@@ -461,6 +443,24 @@
       "reader_url": "./reader.html?id=rhb-icml-2026",
       "reader_status": "open-pdf-cached",
       "cached_pdf": "./papers/rhb-icml-2026.pdf"
+    },
+    {
+      "id": "e7b9677ff9c61168",
+      "category": "frontier",
+      "title": "Investigating three real-world incidents in our cybersecurity evaluations",
+      "summary": "In a review of our cybersecurity evaluation transcripts, we found three incidents in which a Claude model reached the internet from within or while interacting with a third-party evaluation environment, and then gained unauthorized access to the real systems of three different organizations. Below we describe what happened, how it happened, and what we’re changing. We encourage other AI labs to perform similar reviews.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+      "published_at": "2026-09-04T03:24:16Z",
+      "tags": [
+        "Anthropic",
+        "Official"
+      ],
+      "importance": 99,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=e7b9677ff9c61168",
+      "reader_status": "public-page-excerpt"
     },
     {
       "id": "797f1857994312cf",
@@ -1659,26 +1659,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "ad377474c1a7c01b",
-      "category": "impact",
-      "title": "Insilico Medicine Releases SOTA MMAI Specialist Models to Redefine AI Application in Drug Discovery",
-      "summary": "Insilico Medicine Releases SOTA MMAI Specialist Models to Redefine AI Application in Drug Discovery Insilico Medicine",
-      "source": "Insilico Medicine",
-      "url": "https://insilico.com/news/tvb0jud0y1-insilico-medicine-releases-sota-mmai-spe",
-      "published_at": "2026-09-01T07:00:00Z",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "importance": 87,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=ad377474c1a7c01b",
-      "index_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQRjRtQzlBWmpjMUljQWxsLXBiZjZtdnJEbmk0UFhicXNLRDFaWF9GWGkzVHBETnlOcV8tVnhCMmpjZDFIVi0zVFVkSHFlMlprR2ExSkJtMy1aRnNxVFM0VWhWT1ZIUXNRWTQzUHBGVVd5d1E3SHRWNndCbVgtTGwydWJRbw?oc=5",
-      "reader_status": "summary-only"
-    },
-    {
       "id": "6f0d1a4c4ad2e0a0",
       "category": "opensource",
       "title": "Introducing @huggingface/kernels: 200+ WebGPU Kernels for Local AI",
@@ -1754,6 +1734,26 @@
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=259a35ee76d2a3c6",
       "index_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQOWxucHlQdmJtVnNBU1QzUTNrNXhzbUVUbWluMTlveEZ3YkJweG1lZE1VeV9ROXVvUVZNa0xUczBlU3plZnVDWXQwSGJMNTFZTkNmdGRSRUN2NG9Sb29XMUhWbU5VdDQ4TEh3RGtnWDB1TGdORjFYNlE2Q3hjUndhSWptSTlDT1NkdVEzSQ?oc=5",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "ec3b2966280e1a76",
+      "category": "impact",
+      "title": "Building the Data Foundation for AI-Driven ALS Drug Discovery - Target ALS",
+      "summary": "Artificial intelligence is changing how researchers approach drug discovery. It can help scientists analyze large amounts of information, identify patterns that might otherwise be missed, and generate hypotheses faster than traditional approaches alone. For a disease like ALS, where time is everything, that potential is especially compelling. This year at the Target ALS Annual Meeting, […]",
+      "source": "targetals.org",
+      "url": "https://targetals.org/news/building-the-data-foundation-for-ai-driven-als-drug-discovery/",
+      "published_at": "2026-08-25T13:42:51Z",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "importance": 86,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=ec3b2966280e1a76",
+      "index_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNVTFQcl9pSHhZQTNQeFhtQ1lpYlFPZHFnVFd6UGdObGt4LWl5ak0zazBDVGQzM2t1V2NIWVVHTHhSc2lqelA4UnpWNTVzSEVfRkpyV0xCRUY2NUZSQkZVX3h2aFVEZExyNzBaTktLLW1hMUdtaDI2c1kwTGNrbkFqRTFGVUdtdGZrbFhJMjFJekdXc2c?oc=5",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2142,7 +2142,7 @@
       "category": "startups",
       "title": "Valor, Point72 back General Intuition at $6B valuation as AI startup pushes into robotics | TechCrunch",
       "summary": "General Intuition, the startup building a foundation model that trains generalized AI agents how to move through space and time, is in talks to raise at a $6 billion pre-money valuation from new investors including Valor Ventures, Point72 Ventures, and Seven Seven Six.",
-      "source": "techcrunch.com",
+      "source": "TechCrunch",
       "url": "https://techcrunch.com/2026/08/24/valor-point72-back-general-intuition-at-6b-valuation-as-ai-startup-pushes-into-robotics/",
       "published_at": "2026-08-24T07:00:00Z",
       "tags": [
@@ -2193,26 +2193,6 @@
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=8fad5f96cf88a620",
       "index_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPeU5BaGFUa1g5QXBkSmhBM0NRWVdndHN6YVd6UG84eE9WQnd6STZ0N3NWSUJ4Ql9nUnpHbHVMZXNUQ25QcWpGSWloVXhXSkstWHVMeW1DLUxNZkV5RmpMZXRrOHVlem4wRndaZ05aeFZYNl93eTBuRlZYVjRvVW9EYmlGcFlnRFgxZWVIWmpkNmhrcHhuNURRNE9oUW44aHhWUFhkQklLU2hTdUk?oc=5",
-      "reader_status": "summary-only"
-    },
-    {
-      "id": "9943969fce7ee83e",
-      "category": "voices",
-      "title": "Fei-Fei Li",
-      "summary": "Fei-Fei Li American Academy of Arts and Sciences",
-      "source": "American Academy of Arts and Sciences",
-      "url": "https://www.amacad.org/person/fei-fei-li",
-      "published_at": "2026-08-10T07:00:00Z",
-      "tags": [
-        "Researcher Watch",
-        "Vision",
-        "World Models"
-      ],
-      "importance": 83,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=9943969fce7ee83e",
-      "index_url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1QVlV6aHQzcF9GRk44dzk3QWd4VXZhdzRWeUktUjhDelBTWmpoZjZ5QzRlLWxicWdYQkxkTXNnX3B0QTVLTXhsSEFXWEwyNEt0anc?oc=5",
       "reader_status": "summary-only"
     },
     {
@@ -2274,6 +2254,26 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "3a58d1f010e29209",
+      "category": "voices",
+      "title": "Elon Musk (@elonmusk) on X",
+      "summary": "Model Y",
+      "source": "x.com",
+      "url": "https://x.com/elonmusk/status/2096516283181207568",
+      "published_at": "2026-09-06T08:30:07Z",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "importance": 80,
+      "content_kind": "social",
+      "verification": "公开平台索引，需查看原帖",
+      "reader_url": "./reader.html?id=3a58d1f010e29209",
+      "index_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE80SGhxTFRlX2R4UzdLWnlrT3I5c0llR29ObDVERGVnMFJBOVBrZjRmR3o2aHRsTG9DTWZvXzlBZTZiVnp5eXNKbm9JSkI5V1FNOE9IR1hRUnB1SUg2UFE?oc=5",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "c720ac0a385377fb",
       "category": "voices",
       "title": "Grok @Bot usage limits reset",
@@ -2291,6 +2291,26 @@
       "verification": "公开平台索引，需查看原帖",
       "reader_url": "./reader.html?id=c720ac0a385377fb",
       "index_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1yTExPbl8wTlJhYXNIdTl0aFY0Q3N0NXFQei1vdUUxNGNibk1lZTh4M1dsUE9iYVhyRC1yT2kzY3c5cWdFQWNhd0tha0tlVlV4Zm1tcVpQTWptdldicFE?oc=5",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "96c6b5f3f248367f",
+      "category": "voices",
+      "title": "Now out to all Plus and Business users. Happy building!",
+      "summary": "Now out to all Plus and Business users. Happy building! x.com",
+      "source": "x.com",
+      "url": "https://x.com/sama/status/2096008528834244741",
+      "published_at": "2026-09-04T22:52:29Z",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "importance": 80,
+      "content_kind": "social",
+      "verification": "公开平台索引，需查看原帖",
+      "reader_url": "./reader.html?id=96c6b5f3f248367f",
+      "index_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE53dkJlTHB4V3pzRHNZVEZHYXlRZk9vQ0pYaDIwR2UtVVdsNS1waEkwNnRabVU5enNsVjR6bnlwMHRjNlg0MDUtNGY0ZFUyZlozb1RqNHN4MW8?oc=5",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2351,26 +2371,6 @@
       "verification": "公开平台索引，需查看原帖",
       "reader_url": "./reader.html?id=791f92b109079626",
       "index_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1OQ0gyYjNrcnJBSkFSVU1LZEp0STdJZ1diWlVUY3FIRGxaR2x3SVZuQ3lpWWNjTWxYU2ZHWGpKLXJJdzk1QjNrcXd4NlJ4bHh6dHp0UFk1amo?oc=5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "057e5666aaf1ea14",
-      "category": "voices",
-      "title": "The Golden Age of STEM Prodigies: Unveiling the Rise of Young Scientific Geniuses",
-      "summary": "Achieving financial freedom at a very young age has emerged as a transformative life goal for ambitious individuals, representing the ability to break free from paycheck-to-paycheck cycles, eliminate overwhelming debt, and generate sustainable passive income streams that cover all living expenses without relying on traditional full-time employment. This early financial independence empowers young people to pursue their true passions, invest in personal growth, travel the world, start meaningful ventures, and spend quality time with loved ones, rather than being trapped in unfulfilling jobs solely for the purpose of earning a living. Through strategic wealth-building…",
-      "source": "36Kr",
-      "url": "https://eu.36kr.com/en/p/3968521096000003",
-      "published_at": "2026-09-04T05:03:12Z",
-      "tags": [
-        "Researcher Watch",
-        "Agents",
-        "Reasoning"
-      ],
-      "importance": 80,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=057e5666aaf1ea14",
-      "index_url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE4ybGVJb1NuQzNBSjlkaWNrbWVJbmlOdXZzWUMxTzZkaHplLUR5MGh2UVlONFkzVUx5YTYzcmVHbkJKdzVTajRVTUEwNjMyU0kxaDQ0?oc=5",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2453,8 +2453,8 @@
       "id": "d0eec51a702fc422",
       "category": "startups",
       "title": "The Anthropic-Physical Intelligence rumor roiling AI Twitter | TechCrunch",
-      "summary": "The Anthropic-Physical Intelligence rumor roiling AI Twitter techcrunch.com",
-      "source": "techcrunch.com",
+      "summary": "The Anthropic-Physical Intelligence rumor roiling AI Twitter TechCrunch",
+      "source": "TechCrunch",
       "url": "https://techcrunch.com/2026/07/21/the-anthropic-physical-intelligence-rumor-roiling-ai-twitter/",
       "published_at": "2026-07-21T07:00:00Z",
       "tags": [
@@ -2642,7 +2642,7 @@
       "category": "opensource",
       "title": "OpenAI institutes new safeguards after Hugging Face breach | TechCrunch",
       "summary": "The new safeguards include more detailed monitoring of models during the development process, as well as greater emphasis on alignment and security during the post-training process.",
-      "source": "techcrunch.com",
+      "source": "TechCrunch",
       "url": "https://techcrunch.com/2026/08/18/openai-institutes-new-safeguards-after-hugging-face-breach/",
       "published_at": "2026-08-18T07:00:00Z",
       "tags": [
@@ -2744,7 +2744,7 @@
         "Policy",
         "Safety"
       ],
-      "importance": 72,
+      "importance": 71,
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=077b607f17a28c0f",
@@ -2796,7 +2796,7 @@
       "summary": "French Founders of Hugging Face Live the American Dream WSJ",
       "source": "WSJ",
       "url": "https://www.wsj.com/cfo-journal/french-founders-of-hugging-face-live-the-american-dream-1525ecca",
-      "published_at": "2026-09-04T11:24:00Z",
+      "published_at": "2026-09-06T14:26:29Z",
       "tags": [
         "Open Source",
         "Models & Tools"
@@ -2806,6 +2806,25 @@
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=2026d9b15dbea7b9",
       "index_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxORWxhaERjeTRVcmdaU1lUUjN6aEhyLUpMV1NEc0t1eFpGYlZNVmgwbzYxWlVYR1JRd2trMzdWRFFPaVdxYU9Db0lYQnpReG90dFc2eVI5SDltQm5RTy1rWkRWdldneFdTVkhsVmJnQ2FpcnVZcHZvQWw0WlV6SmVyTWtnLUNZd0d6bW9LaWhtR1ZDM25pU1JQQVFjZ2o?oc=5",
+      "reader_status": "summary-only"
+    },
+    {
+      "id": "5e7b43b5e40ec0c1",
+      "category": "startups",
+      "title": "Fei-Fei Li's World Labs buys SceniX to push into robotics",
+      "summary": "Fei-Fei Li's World Labs buys SceniX to push into robotics app.dealroom.co",
+      "source": "app.dealroom.co",
+      "url": "https://app.dealroom.co/news/note/fei-fei-li-s-world-labs-buys-scenix-to-push-into-robotics",
+      "published_at": "2026-07-21T18:17:04Z",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "importance": 70,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=5e7b43b5e40ec0c1",
+      "index_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOdEZyMUdYN2lkblc0NzBoT2JpUU9OU2t3WjBxSzI4UmVacU16QnlQbmNwNTVyTVpvblFXS1B2amJTdEFSLXM0SjhwSDV1bWZPdG1pX3plSXNNS2szV3VQU0ZIaXdOUFo0Z2dWTVZJdzVsZlJhT0hieERtZk1KeWl1Rm5MM2h1S3k4ZGRtZlRGak45TlR0VUE?oc=5",
       "reader_status": "summary-only"
     },
     {
@@ -2831,8 +2850,8 @@
       "id": "4637f7d7989a05db",
       "category": "policy",
       "title": "OpenAI blinks first in AI safety standoff",
-      "summary": "OpenAI blinks first in AI safety standoff axios.com",
-      "source": "axios.com",
+      "summary": "OpenAI blinks first in AI safety standoff Axios",
+      "source": "Axios",
       "url": "https://www.axios.com/2026/08/19/openai-astra-safety-altman-anthropic",
       "published_at": "2026-08-19T07:00:00Z",
       "tags": [
@@ -2850,8 +2869,8 @@
       "id": "53b6cfebf2480bec",
       "category": "policy",
       "title": "Hollywood strikes first AI copyright truce with ByteDance",
-      "summary": "Hollywood strikes first AI copyright truce with ByteDance Los Angeles Times",
-      "source": "Los Angeles Times",
+      "summary": "Hollywood strikes first AI copyright truce with ByteDance latimes.com",
+      "source": "latimes.com",
       "url": "https://www.latimes.com/entertainment-arts/business/story/2026-08-17/motion-picture-association-reaches-agreement-with-bytedance-over-ai-guardrails",
       "published_at": "2026-08-17T07:00:00Z",
       "tags": [

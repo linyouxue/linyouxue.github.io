@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-06T10:53:48Z",
-  "record_count": 129,
+  "generated_at": "2026-09-06T15:26:39Z",
+  "record_count": 130,
   "records": [
     {
       "id": "jacobian-fable-20260720",
@@ -473,6 +473,51 @@
       "reading_minutes": 1
     },
     {
+      "id": "rhb-icml-2026",
+      "kind": "paper",
+      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
+      "source": "OpenReview · arXiv",
+      "source_url": "https://arxiv.org/abs/2605.02964",
+      "published_at": "2026-06-24T00:00:00Z",
+      "authors": [
+        "Kunvar Thaman"
+      ],
+      "venue": "ICML 2026",
+      "tags": [
+        "Reward Hacking",
+        "Agent Safety",
+        "Evaluation"
+      ],
+      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
+      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/rhb-icml-2026.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://arxiv.org/pdf/2605.02964",
+      "key_points": [
+        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
+        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
+        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
+        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
+        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
+        },
+        {
+          "title": "关键结果",
+          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
+        },
+        {
+          "title": "局限与结论",
+          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
+        }
+      ],
+      "reading_minutes": 46
+    },
+    {
       "id": "e7b9677ff9c61168",
       "kind": "article",
       "title": "Investigating three real-world incidents in our cybersecurity evaluations",
@@ -522,51 +567,6 @@
         }
       ],
       "reading_minutes": 1
-    },
-    {
-      "id": "rhb-icml-2026",
-      "kind": "paper",
-      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
-      "source": "OpenReview · arXiv",
-      "source_url": "https://arxiv.org/abs/2605.02964",
-      "published_at": "2026-06-24T00:00:00Z",
-      "authors": [
-        "Kunvar Thaman"
-      ],
-      "venue": "ICML 2026",
-      "tags": [
-        "Reward Hacking",
-        "Agent Safety",
-        "Evaluation"
-      ],
-      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
-      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/rhb-icml-2026.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://arxiv.org/pdf/2605.02964",
-      "key_points": [
-        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
-        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
-        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
-        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
-        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
-        },
-        {
-          "title": "关键结果",
-          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
-        },
-        {
-          "title": "局限与结论",
-          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
-        }
-      ],
-      "reading_minutes": 46
     },
     {
       "id": "797f1857994312cf",
@@ -3275,46 +3275,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "ad377474c1a7c01b",
-      "kind": "article",
-      "title": "Insilico Medicine Releases SOTA MMAI Specialist Models to Redefine AI Application in Drug Discovery",
-      "source": "Insilico Medicine",
-      "source_url": "https://insilico.com/news/tvb0jud0y1-insilico-medicine-releases-sota-mmai-spe",
-      "published_at": "2026-09-01T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Insilico Medicine Releases SOTA MMAI Specialist Models to Redefine AI Application in Drug Discovery Insilico Medicine",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "resolved_url": "https://insilico.com/news/tvb0jud0y1-insilico-medicine-releases-sota-mmai-spe",
-      "key_points": [
-        "Insilico Medicine Releases SOTA MMAI Specialist Models to Redefine AI Application in Drug Discovery Insilico Medicine"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Insilico Medicine Releases SOTA MMAI Specialist Models to Redefine AI Application in Drug Discovery Insilico Medicine"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Insilico Medicine Releases SOTA MMAI Specialist Models to Redefine AI Application in Drug Discovery Insilico Medicine"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "6f0d1a4c4ad2e0a0",
       "kind": "article",
       "title": "Introducing @huggingface/kernels: 200+ WebGPU Kernels for Local AI",
@@ -3512,6 +3472,58 @@
             "Images for download on the MIT News office website are made available to non-commercial entities, press and the general public under a Creative Commons Attribution Non-Commercial No Derivatives license . You may not alter the images provided, other than to crop them to size. A credit line must be used when reproducing images; if one is not provided below, credit the images to \"MIT.\"",
             "Today, anyone with a large enough artificial intelligence model can generate millions of new material designs in minutes. Unfortunately, that hasn’t led to a huge leap in the number of new materials being used to improve the performance of products like computer chips and rockets.",
             "One reason for the translation gap is that current models don’t reliably factor in the chemical stability of the materials they generate, and unstable materials aren’t very useful in the real world. That forces industries to allocate huge computational budgets to screening out all the unstable materials they generate, in some cases leaving behind a tiny fraction of usable options."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "ec3b2966280e1a76",
+      "kind": "article",
+      "title": "Building the Data Foundation for AI-Driven ALS Drug Discovery - Target ALS",
+      "source": "targetals.org",
+      "source_url": "https://targetals.org/news/building-the-data-foundation-for-ai-driven-als-drug-discovery/",
+      "published_at": "2026-08-25T13:42:51Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Artificial intelligence is changing how researchers approach drug discovery. It can help scientists analyze large amounts of information, identify patterns that might otherwise be missed, and generate hypotheses faster than traditional approaches alone. For a disease like ALS, where time is everything, that potential is especially compelling. This year at the Target ALS Annual Meeting, […]",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://targetals.org/news/building-the-data-foundation-for-ai-driven-als-drug-discovery/",
+      "key_points": [
+        "Artificial intelligence is changing how researchers approach drug discovery.",
+        "It can help scientists analyze large amounts of information, identify patterns that might otherwise be missed, and generate hypotheses faster than traditional approaches alone.",
+        "For a disease like ALS, where time is everything, that potential is especially compelling.",
+        "This year at the Target ALS Annual Meeting , leaders from Roche, Lilly Ventures, and insitro discussed how their companies are applying artificial intelligence and machine learning to drug discovery.",
+        "Their optimism was accompanied by an important note of caution: while AI is already improving aspects of drug discovery, realizing its full potential in areas like clinical development will take time."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Artificial intelligence is changing how researchers approach drug discovery. It can help scientists analyze large amounts of information, identify patterns that might otherwise be missed, and generate hypotheses faster than traditional approaches alone. For a disease like ALS, where time is everything, that potential is especially compelling. This year at the Target ALS Annual Meeting, […]"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Artificial intelligence is changing how researchers approach drug discovery.",
+            "It can help scientists analyze large amounts of information, identify patterns that might otherwise be missed, and generate hypotheses faster than traditional approaches alone.",
+            "For a disease like ALS, where time is everything, that potential is especially compelling.",
+            "This year at the Target ALS Annual Meeting , leaders from Roche, Lilly Ventures, and insitro discussed how their companies are applying artificial intelligence and machine learning to drug discovery.",
+            "Their optimism was accompanied by an important note of caution: while AI is already improving aspects of drug discovery, realizing its full potential in areas like clinical development will take time."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Artificial intelligence is changing how researchers approach drug discovery. It can help scientists analyze large amounts of information, identify patterns that might otherwise be missed, and generate hypotheses faster than traditional approaches alone. For a disease like ALS, where time is everything, that potential is especially compelling.",
+            "This year at the Target ALS Annual Meeting , leaders from Roche, Lilly Ventures, and insitro discussed how their companies are applying artificial intelligence and machine learning to drug discovery. Their optimism was accompanied by an important note of caution: while AI is already improving aspects of drug discovery, realizing its full potential in areas like clinical development will take time.",
+            "But there is another piece of the equation that receives less attention: AI is only as powerful as the data behind it."
           ]
         }
       ],
@@ -4072,7 +4084,7 @@
       "id": "07300289e063b700",
       "kind": "article",
       "title": "Valor, Point72 back General Intuition at $6B valuation as AI startup pushes into robotics | TechCrunch",
-      "source": "techcrunch.com",
+      "source": "TechCrunch",
       "source_url": "https://techcrunch.com/2026/08/24/valor-point72-back-general-intuition-at-6b-valuation-as-ai-startup-pushes-into-robotics/",
       "published_at": "2026-08-24T07:00:00Z",
       "authors": [],
@@ -4189,47 +4201,6 @@
           "title": "公开页面要点",
           "bullets": [
             "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg.com"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "9943969fce7ee83e",
-      "kind": "article",
-      "title": "Fei-Fei Li",
-      "source": "American Academy of Arts and Sciences",
-      "source_url": "https://www.amacad.org/person/fei-fei-li",
-      "published_at": "2026-08-10T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Researcher Watch",
-        "Vision",
-        "World Models"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Fei-Fei Li American Academy of Arts and Sciences",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 403: Forbidden",
-      "resolved_url": "https://www.amacad.org/person/fei-fei-li",
-      "key_points": [
-        "Fei-Fei Li American Academy of Arts and Sciences"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Fei-Fei Li American Academy of Arts and Sciences"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Fei-Fei Li American Academy of Arts and Sciences"
           ]
         },
         {
@@ -4378,6 +4349,52 @@
       "reading_minutes": 1
     },
     {
+      "id": "3a58d1f010e29209",
+      "kind": "social",
+      "title": "Elon Musk (@elonmusk) on X",
+      "source": "x.com",
+      "source_url": "https://x.com/elonmusk/status/2096516283181207568",
+      "published_at": "2026-09-06T08:30:07Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "Model Y",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/elonmusk/status/2096516283181207568",
+      "key_points": [
+        "Elon Musk @elonmusk Model Y X Freeze @XFreeze 11h Tesla Model Y has become one of the most dominant cars on Earth It finished as the world’s #1 best-selling passenger vehicle for three straight years: 2023 — #1 2024 — #1 2025 — #1 And more than 4 million Model Ys have now been sold globally 4 million of one fully electric Show more 8:30 AM · Sep 6, 2026 3.1M…",
+        "22 34 82 355 🍒Wild Cherry 2000🌸 @SGautreau29553 6h This always trips me out😂 00:00 8 6 55 2.3K"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Model Y"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Elon Musk @elonmusk Model Y X Freeze @XFreeze 11h Tesla Model Y has become one of the most dominant cars on Earth It finished as the world’s #1 best-selling passenger vehicle for three straight years: 2023 — #1 2024 — #1 2025 — #1 And more than 4 million Model Ys have now been sold globally 4 million of one fully electric Show more 8:30 AM · Sep 6, 2026 3.1M…",
+            "22 34 82 355 🍒Wild Cherry 2000🌸 @SGautreau29553 6h This always trips me out😂 00:00 8 6 55 2.3K"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Elon Musk @elonmusk Model Y X Freeze @XFreeze 11h Tesla Model Y has become one of the most dominant cars on Earth It finished as the world’s #1 best-selling passenger vehicle for three straight years: 2023 — #1 2024 — #1 2025 — #1 And more than 4 million Model Ys have now been sold globally 4 million of one fully electric Show more 8:30 AM · Sep 6, 2026 3.1M Views 1.3K 1K 8.5K 191",
+            "Doge1RH @Doge1CoinRH 6h Model Y or the falcon 9 that will take Doge-1 to the orbit? 22 34 82 355",
+            "🍒Wild Cherry 2000🌸 @SGautreau29553 6h This always trips me out😂 00:00 8 6 55 2.3K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "c720ac0a385377fb",
       "kind": "social",
       "title": "Grok @Bot usage limits reset",
@@ -4397,9 +4414,9 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://x.com/elonmusk/status/2096332306847875580",
       "key_points": [
-        "Elon Musk @elonmusk Grok @ bot usage limits reset Grok Bot @bot 16h We've reset usage limits for all Grok Bot users.",
-        "8:19 PM · Sep 5, 2026 4.7M Views 1.6K 1.1K 11K 280 RalphWired @WiredRalph12 13h You need to fix this now.",
-        "Fucking clown show. @ Parodyjeffx Jvnior @Jvnior 14h 119,000 posts about @ Parodyjeffx Not a single post from Elon musk about it."
+        "Elon Musk @elonmusk Grok @ bot usage limits reset Grok Bot @bot 21h We've reset usage limits for all Grok Bot users.",
+        "8:19 PM · Sep 5, 2026 5.7M Views 1.7K 1.2K 12K 301 RalphWired @WiredRalph12 17h You need to fix this now.",
+        "Fucking clown show. @ Parodyjeffx Jvnior @Jvnior 18h 119,000 posts about @ Parodyjeffx Not a single post from Elon musk about it."
       ],
       "sections": [
         {
@@ -4409,16 +4426,65 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Elon Musk @elonmusk Grok @ bot usage limits reset Grok Bot @bot 16h We've reset usage limits for all Grok Bot users.",
-            "8:19 PM · Sep 5, 2026 4.7M Views 1.6K 1.1K 11K 280 RalphWired @WiredRalph12 13h You need to fix this now.",
-            "Fucking clown show. @ Parodyjeffx Jvnior @Jvnior 14h 119,000 posts about @ Parodyjeffx Not a single post from Elon musk about it."
+            "Elon Musk @elonmusk Grok @ bot usage limits reset Grok Bot @bot 21h We've reset usage limits for all Grok Bot users.",
+            "8:19 PM · Sep 5, 2026 5.7M Views 1.7K 1.2K 12K 301 RalphWired @WiredRalph12 17h You need to fix this now.",
+            "Fucking clown show. @ Parodyjeffx Jvnior @Jvnior 18h 119,000 posts about @ Parodyjeffx Not a single post from Elon musk about it."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok @ bot usage limits reset Grok Bot @bot 16h We've reset usage limits for all Grok Bot users. Enjoy! 8:19 PM · Sep 5, 2026 4.7M Views 1.6K 1.1K 11K 280",
-            "RalphWired @WiredRalph12 13h You need to fix this now. Fucking clown show. @ Parodyjeffx Jvnior @Jvnior 14h 119,000 posts about @ Parodyjeffx Not a single post from Elon musk about it. 3 57 2.5K"
+            "Elon Musk @elonmusk Grok @ bot usage limits reset Grok Bot @bot 21h We've reset usage limits for all Grok Bot users. Enjoy! 8:19 PM · Sep 5, 2026 5.7M Views 1.7K 1.2K 12K 301",
+            "RalphWired @WiredRalph12 17h You need to fix this now. Fucking clown show. @ Parodyjeffx Jvnior @Jvnior 18h 119,000 posts about @ Parodyjeffx Not a single post from Elon musk about it. 3 65 3.3K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "96c6b5f3f248367f",
+      "kind": "social",
+      "title": "Now out to all Plus and Business users. Happy building!",
+      "source": "x.com",
+      "source_url": "https://x.com/sama/status/2096008528834244741",
+      "published_at": "2026-09-04T22:52:29Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "Now out to all Plus and Business users. Happy building! x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/sama/status/2096008528834244741",
+      "key_points": [
+        "Sam Altman @sama Now out to all Plus and Business users.",
+        "Sam Altman @sama Sep 4 GPT-6 Astra is now available to all Pro, Enterprise, and Business Premium users in Work/Codex, and is available in the API.",
+        "We will start rollout to Plus and Business users next.",
+        "10:52 PM · Sep 4, 2026 1.2M Views 1.1K 742 18K 705 David Stark @stark4833 Sep 4 Bring 4o back as a separate subscription a legacy subscription people would be willing to pay for it."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Now out to all Plus and Business users. Happy building! x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Sam Altman @sama Now out to all Plus and Business users.",
+            "Sam Altman @sama Sep 4 GPT-6 Astra is now available to all Pro, Enterprise, and Business Premium users in Work/Codex, and is available in the API.",
+            "We will start rollout to Plus and Business users next.",
+            "10:52 PM · Sep 4, 2026 1.2M Views 1.1K 742 18K 705 David Stark @stark4833 Sep 4 Bring 4o back as a separate subscription a legacy subscription people would be willing to pay for it."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Sam Altman @sama Now out to all Plus and Business users. Happy building! Sam Altman @sama Sep 4 GPT-6 Astra is now available to all Pro, Enterprise, and Business Premium users in Work/Codex, and is available in the API. We will start rollout to Plus and Business users next. Thank you for the patience. 10:52 PM · Sep 4, 2026 1.2M Views 1.1K 742 18K 705",
+            "David Stark @stark4833 Sep 4 Bring 4o back as a separate subscription a legacy subscription people would be willing to pay for it. Thank you. #4oForAll 6 5 145 8.3K"
           ]
         }
       ],
@@ -4444,7 +4510,7 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://x.com/elonmusk/status/2096001766324064371",
       "key_points": [
-        "Elon Musk @elonmusk Grok @ bot available for iPad matt palmer @mattyp Sep 4 Grok Bot is now available for iPad 10:25 PM · Sep 4, 2026 2.9M Views 604 903 6.2K 368"
+        "Elon Musk @elonmusk Grok @ bot available for iPad matt palmer @mattyp Sep 4 Grok Bot is now available for iPad 10:25 PM · Sep 4, 2026 2.9M Views 610 945 6.3K 371"
       ],
       "sections": [
         {
@@ -4454,13 +4520,13 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Elon Musk @elonmusk Grok @ bot available for iPad matt palmer @mattyp Sep 4 Grok Bot is now available for iPad 10:25 PM · Sep 4, 2026 2.9M Views 604 903 6.2K 368"
+            "Elon Musk @elonmusk Grok @ bot available for iPad matt palmer @mattyp Sep 4 Grok Bot is now available for iPad 10:25 PM · Sep 4, 2026 2.9M Views 610 945 6.3K 371"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok @ bot available for iPad matt palmer @mattyp Sep 4 Grok Bot is now available for iPad 10:25 PM · Sep 4, 2026 2.9M Views 604 903 6.2K 368"
+            "Elon Musk @elonmusk Grok @ bot available for iPad matt palmer @mattyp Sep 4 Grok Bot is now available for iPad 10:25 PM · Sep 4, 2026 2.9M Views 610 945 6.3K 371"
           ]
         }
       ],
@@ -4490,7 +4556,7 @@
         "Grok Bot @bot Sep 4 You can now add Bot templates from our marketplace.",
         "We’re sharing Haggle Bot, our in-house procurement specialist.",
         "It negotiates vendor contracts, finds unused SaaS seats, and price-checks recurring purchases.",
-        "9:31 PM · Sep 4, 2026 21.2M Views 847 1.4K 11K 3.1K BLACK PHOENIX BPX @BLACKPHOENIXFN Sep 4 Haggle Bot just saved $100K in unused SaaS seats."
+        "9:31 PM · Sep 4, 2026 21.3M Views 853 1.5K 12K 3.2K BLACK PHOENIX BPX @BLACKPHOENIXFN Sep 4 Haggle Bot just saved $100K in unused SaaS seats."
       ],
       "sections": [
         {
@@ -4504,13 +4570,13 @@
             "Grok Bot @bot Sep 4 You can now add Bot templates from our marketplace.",
             "We’re sharing Haggle Bot, our in-house procurement specialist.",
             "It negotiates vendor contracts, finds unused SaaS seats, and price-checks recurring purchases.",
-            "9:31 PM · Sep 4, 2026 21.2M Views 847 1.4K 11K 3.1K BLACK PHOENIX BPX @BLACKPHOENIXFN Sep 4 Haggle Bot just saved $100K in unused SaaS seats."
+            "9:31 PM · Sep 4, 2026 21.3M Views 853 1.5K 12K 3.2K BLACK PHOENIX BPX @BLACKPHOENIXFN Sep 4 Haggle Bot just saved $100K in unused SaaS seats."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok @ bot templates. Try Haggle Bot for saving money on procurement! This is a gamechanger. Grok Bot @bot Sep 4 You can now add Bot templates from our marketplace. We’re sharing Haggle Bot, our in-house procurement specialist. It negotiates vendor contracts, finds unused SaaS seats, and price-checks recurring purchases. One week in, it's saved us over $100K. 9:31 PM · Sep 4, 2026 21.2M Views 847 1.4K 11K 3.1K",
+            "Elon Musk @elonmusk Grok @ Bot templates. Try Haggle Bot for saving money on procurement! This is a gamechanger. Grok Bot @bot Sep 4 You can now add Bot templates from our marketplace. We’re sharing Haggle Bot, our in-house procurement specialist. It negotiates vendor contracts, finds unused SaaS seats, and price-checks recurring purchases. One week in, it's saved us over $100K. 9:31 PM · Sep 4, 2026 21.3M Views 853 1.5K 12K 3.2K",
             "BLACK PHOENIX BPX @BLACKPHOENIXFN Sep 4 Haggle Bot just saved $100K in unused SaaS seats. Now send it after Adobe, Salesforce, and my landlord. 2 3 24 233"
           ]
         }
@@ -4539,7 +4605,7 @@
       "key_points": [
         "Sam Altman @sama GPT-6 Astra is now available to all Pro, Enterprise, and Business Premium users in Work/Codex, and is available in the API.",
         "We will start rollout to Plus and Business users next.",
-        "8:33 PM · Sep 4, 2026 2.1M Views 862 904 21K 831 Thomas Unise @thomasunise Sep 4 Me explaining GPT-6 Astra to my friends who don’t care about AI at all 00:00 6 9 187 18K Sophie @Sophty_ Sep 4 Still waiting for the dated 2025 4o snapshot 🧐🕰️ #keep4o 2 13 112 9K"
+        "8:33 PM · Sep 4, 2026 2.2M Views 885 921 21K 868 Thomas Unise @thomasunise Sep 4 Me explaining GPT-6 Astra to my friends who don’t care about AI at all 00:00 6 10 193 18K Sophie @Sophty_ Sep 4 Still waiting for the dated 2025 4o snapshot 🧐🕰️ #keep4o 2 14 115 9.6K"
       ],
       "sections": [
         {
@@ -4551,67 +4617,15 @@
           "bullets": [
             "Sam Altman @sama GPT-6 Astra is now available to all Pro, Enterprise, and Business Premium users in Work/Codex, and is available in the API.",
             "We will start rollout to Plus and Business users next.",
-            "8:33 PM · Sep 4, 2026 2.1M Views 862 904 21K 831 Thomas Unise @thomasunise Sep 4 Me explaining GPT-6 Astra to my friends who don’t care about AI at all 00:00 6 9 187 18K Sophie @Sophty_ Sep 4 Still waiting for the dated 2025 4o snapshot 🧐🕰️ #keep4o 2 13 112 9K"
+            "8:33 PM · Sep 4, 2026 2.2M Views 885 921 21K 868 Thomas Unise @thomasunise Sep 4 Me explaining GPT-6 Astra to my friends who don’t care about AI at all 00:00 6 10 193 18K Sophie @Sophty_ Sep 4 Still waiting for the dated 2025 4o snapshot 🧐🕰️ #keep4o 2 14 115 9.6K"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Sam Altman @sama GPT-6 Astra is now available to all Pro, Enterprise, and Business Premium users in Work/Codex, and is available in the API. We will start rollout to Plus and Business users next. Thank you for the patience. 8:33 PM · Sep 4, 2026 2.1M Views 862 904 21K 831",
-            "Thomas Unise @thomasunise Sep 4 Me explaining GPT-6 Astra to my friends who don’t care about AI at all 00:00 6 9 187 18K",
-            "Sophie @Sophty_ Sep 4 Still waiting for the dated 2025 4o snapshot 🧐🕰️ #keep4o 2 13 112 9K"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "057e5666aaf1ea14",
-      "kind": "article",
-      "title": "The Golden Age of STEM Prodigies: Unveiling the Rise of Young Scientific Geniuses",
-      "source": "36Kr",
-      "source_url": "https://eu.36kr.com/en/p/3968521096000003",
-      "published_at": "2026-09-04T05:03:12Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Researcher Watch",
-        "Agents",
-        "Reasoning"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Achieving financial freedom at a very young age has emerged as a transformative life goal for ambitious individuals, representing the ability to break free from paycheck-to-paycheck cycles, eliminate overwhelming debt, and generate sustainable passive income streams that cover all living expenses without relying on traditional full-time employment. This early financial independence empowers young people to pursue their true passions, invest in personal growth, travel the world, start meaningful ventures, and spend quality time with loved ones, rather than being trapped in unfulfilling jobs solely for the purpose of earning a living. Through strategic wealth-building…",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://eu.36kr.com/en/p/3968521096000003",
-      "key_points": [
-        "At the end of last year, Shunyu Yao, a former researcher at OpenAI, joined Tencent with high-profile attention, prompting Tencent to issue an urgent denial: Shunyu Yao does not have a nine-figure annual salary.",
-        "In the AI-driven wealth creation wave, the soaring value is not only the net worth of startup founders, but also the annual compensation packages of top-tier employees.",
-        "The New Money of the new era is being generated in batches.",
-        "As one of the representatives, Shunyu Yao was born in 1998, and has made four critical choices in his career: The first choice was his major: In 2015, Shunyu Yao was admitted to the Yao Class of Tsinghua University with a score of 704 in the national college entrance examination, majoring in computer science.",
-        "He studied under Jiajun Wu, a senior alumnus of Tsinghua and a leading deep learning expert, and began to systematically explore artificial general intelligence."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Achieving financial freedom at a very young age has emerged as a transformative life goal for ambitious individuals, representing the ability to break free from paycheck-to-paycheck cycles, eliminate overwhelming debt, and generate sustainable passive income streams that cover all living expenses without relying on traditional full-time employment. This early financial independence empowers young people to pursue their true passions, invest in personal growth, travel the world, start meaningful ventures, and spend quality time with loved ones, rather than being trapped in unfulfilling jobs solely for the purpose of earning a living. Through strategic wealth-building…"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "At the end of last year, Shunyu Yao, a former researcher at OpenAI, joined Tencent with high-profile attention, prompting Tencent to issue an urgent denial: Shunyu Yao does not have a nine-figure annual salary.",
-            "In the AI-driven wealth creation wave, the soaring value is not only the net worth of startup founders, but also the annual compensation packages of top-tier employees.",
-            "The New Money of the new era is being generated in batches.",
-            "As one of the representatives, Shunyu Yao was born in 1998, and has made four critical choices in his career: The first choice was his major: In 2015, Shunyu Yao was admitted to the Yao Class of Tsinghua University with a score of 704 in the national college entrance examination, majoring in computer science.",
-            "He studied under Jiajun Wu, a senior alumnus of Tsinghua and a leading deep learning expert, and began to systematically explore artificial general intelligence."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "At the end of last year, Shunyu Yao, a former researcher at OpenAI, joined Tencent with high-profile attention, prompting Tencent to issue an urgent denial: Shunyu Yao does not have a nine-figure annual salary.",
-            "In the AI-driven wealth creation wave, the soaring value is not only the net worth of startup founders, but also the annual compensation packages of top-tier employees. The New Money of the new era is being generated in batches. As one of the representatives, Shunyu Yao was born in 1998, and has made four critical choices in his career:",
-            "The first choice was his major: In 2015, Shunyu Yao was admitted to the Yao Class of Tsinghua University with a score of 704 in the national college entrance examination, majoring in computer science. He studied under Jiajun Wu, a senior alumnus of Tsinghua and a leading deep learning expert, and began to systematically explore artificial general intelligence."
+            "Sam Altman @sama GPT-6 Astra is now available to all Pro, Enterprise, and Business Premium users in Work/Codex, and is available in the API. We will start rollout to Plus and Business users next. Thank you for the patience. 8:33 PM · Sep 4, 2026 2.2M Views 885 921 21K 868",
+            "Thomas Unise @thomasunise Sep 4 Me explaining GPT-6 Astra to my friends who don’t care about AI at all 00:00 6 10 193 18K",
+            "Sophie @Sophty_ Sep 4 Still waiting for the dated 2025 4o snapshot 🧐🕰️ #keep4o 2 14 115 9.6K"
           ]
         }
       ],
@@ -4799,7 +4813,7 @@
       "id": "d0eec51a702fc422",
       "kind": "article",
       "title": "The Anthropic-Physical Intelligence rumor roiling AI Twitter | TechCrunch",
-      "source": "techcrunch.com",
+      "source": "TechCrunch",
       "source_url": "https://techcrunch.com/2026/07/21/the-anthropic-physical-intelligence-rumor-roiling-ai-twitter/",
       "published_at": "2026-07-21T07:00:00Z",
       "authors": [],
@@ -4809,7 +4823,7 @@
         "Embodied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "The Anthropic-Physical Intelligence rumor roiling AI Twitter techcrunch.com",
+      "summary": "The Anthropic-Physical Intelligence rumor roiling AI Twitter TechCrunch",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://techcrunch.com/2026/07/21/the-anthropic-physical-intelligence-rumor-roiling-ai-twitter/",
@@ -4823,7 +4837,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "The Anthropic-Physical Intelligence rumor roiling AI Twitter techcrunch.com"
+          "body": "The Anthropic-Physical Intelligence rumor roiling AI Twitter TechCrunch"
         },
         {
           "title": "公开页面要点",
@@ -5245,7 +5259,7 @@
       "id": "f2f1d3ff6ac81a6a",
       "kind": "article",
       "title": "OpenAI institutes new safeguards after Hugging Face breach | TechCrunch",
-      "source": "techcrunch.com",
+      "source": "TechCrunch",
       "source_url": "https://techcrunch.com/2026/08/18/openai-institutes-new-safeguards-after-hugging-face-breach/",
       "published_at": "2026-08-18T07:00:00Z",
       "authors": [],
@@ -5618,7 +5632,7 @@
       "title": "French Founders of Hugging Face Live the American Dream",
       "source": "WSJ",
       "source_url": "https://www.wsj.com/cfo-journal/french-founders-of-hugging-face-live-the-american-dream-1525ecca",
-      "published_at": "2026-09-04T11:24:00Z",
+      "published_at": "2026-09-06T14:26:29Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -5643,6 +5657,46 @@
           "title": "公开页面要点",
           "bullets": [
             "French Founders of Hugging Face Live the American Dream WSJ"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "5e7b43b5e40ec0c1",
+      "kind": "article",
+      "title": "Fei-Fei Li's World Labs buys SceniX to push into robotics",
+      "source": "app.dealroom.co",
+      "source_url": "https://app.dealroom.co/news/note/fei-fei-li-s-world-labs-buys-scenix-to-push-into-robotics",
+      "published_at": "2026-07-21T18:17:04Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Fei-Fei Li's World Labs buys SceniX to push into robotics app.dealroom.co",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://app.dealroom.co/news/note/fei-fei-li-s-world-labs-buys-scenix-to-push-into-robotics",
+      "key_points": [
+        "Fei-Fei Li's World Labs buys SceniX to push into robotics app.dealroom.co"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Fei-Fei Li's World Labs buys SceniX to push into robotics app.dealroom.co"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Fei-Fei Li's World Labs buys SceniX to push into robotics app.dealroom.co"
           ]
         },
         {
@@ -5699,7 +5753,7 @@
       "id": "4637f7d7989a05db",
       "kind": "article",
       "title": "OpenAI blinks first in AI safety standoff",
-      "source": "axios.com",
+      "source": "Axios",
       "source_url": "https://www.axios.com/2026/08/19/openai-astra-safety-altman-anthropic",
       "published_at": "2026-08-19T07:00:00Z",
       "authors": [],
@@ -5709,23 +5763,23 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "OpenAI blinks first in AI safety standoff axios.com",
+      "summary": "OpenAI blinks first in AI safety standoff Axios",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "summary-only",
       "fetch_note": "HTTP Error 403: Forbidden",
       "resolved_url": "https://www.axios.com/2026/08/19/openai-astra-safety-altman-anthropic",
       "key_points": [
-        "OpenAI blinks first in AI safety standoff axios.com"
+        "OpenAI blinks first in AI safety standoff Axios"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "OpenAI blinks first in AI safety standoff axios.com"
+          "body": "OpenAI blinks first in AI safety standoff Axios"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "OpenAI blinks first in AI safety standoff axios.com"
+            "OpenAI blinks first in AI safety standoff Axios"
           ]
         },
         {
@@ -5739,7 +5793,7 @@
       "id": "53b6cfebf2480bec",
       "kind": "article",
       "title": "Hollywood strikes first AI copyright truce with ByteDance",
-      "source": "Los Angeles Times",
+      "source": "latimes.com",
       "source_url": "https://www.latimes.com/entertainment-arts/business/story/2026-08-17/motion-picture-association-reaches-agreement-with-bytedance-over-ai-guardrails",
       "published_at": "2026-08-17T07:00:00Z",
       "authors": [],
@@ -5749,7 +5803,7 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Hollywood strikes first AI copyright truce with ByteDance Los Angeles Times",
+      "summary": "Hollywood strikes first AI copyright truce with ByteDance latimes.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.latimes.com/entertainment-arts/business/story/2026-08-17/motion-picture-association-reaches-agreement-with-bytedance-over-ai-guardrails",
@@ -5761,7 +5815,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "Hollywood strikes first AI copyright truce with ByteDance Los Angeles Times"
+          "body": "Hollywood strikes first AI copyright truce with ByteDance latimes.com"
         },
         {
           "title": "公开页面要点",
