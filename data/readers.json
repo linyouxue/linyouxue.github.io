@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-05T20:18:38Z",
+  "generated_at": "2026-09-06T04:35:31Z",
   "record_count": 129,
   "records": [
     {
@@ -524,6 +524,51 @@
       "reading_minutes": 1
     },
     {
+      "id": "rhb-icml-2026",
+      "kind": "paper",
+      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
+      "source": "OpenReview · arXiv",
+      "source_url": "https://arxiv.org/abs/2605.02964",
+      "published_at": "2026-06-24T00:00:00Z",
+      "authors": [
+        "Kunvar Thaman"
+      ],
+      "venue": "ICML 2026",
+      "tags": [
+        "Reward Hacking",
+        "Agent Safety",
+        "Evaluation"
+      ],
+      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
+      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/rhb-icml-2026.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://arxiv.org/pdf/2605.02964",
+      "key_points": [
+        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
+        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
+        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
+        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
+        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
+        },
+        {
+          "title": "关键结果",
+          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
+        },
+        {
+          "title": "局限与结论",
+          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
+        }
+      ],
+      "reading_minutes": 46
+    },
+    {
       "id": "797f1857994312cf",
       "kind": "article",
       "title": "Introducing WeatherNext 3, our most advanced and accurate global weather AI model",
@@ -735,51 +780,6 @@
         }
       ],
       "reading_minutes": 1
-    },
-    {
-      "id": "rhb-icml-2026",
-      "kind": "paper",
-      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
-      "source": "OpenReview · arXiv",
-      "source_url": "https://arxiv.org/abs/2605.02964",
-      "published_at": "2026-06-24T00:00:00Z",
-      "authors": [
-        "Kunvar Thaman"
-      ],
-      "venue": "ICML 2026",
-      "tags": [
-        "Reward Hacking",
-        "Agent Safety",
-        "Evaluation"
-      ],
-      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
-      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/rhb-icml-2026.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://arxiv.org/pdf/2605.02964",
-      "key_points": [
-        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
-        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
-        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
-        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
-        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
-        },
-        {
-          "title": "关键结果",
-          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
-        },
-        {
-          "title": "局限与结论",
-          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
-        }
-      ],
-      "reading_minutes": 46
     },
     {
       "id": "1f58fae96cc76151",
@@ -2683,7 +2683,7 @@
       "id": "16e7d47eb582cf14",
       "kind": "article",
       "title": "The Hunt for AI-Proof Assets Is Leading Investors to Sports, Casinos and Travel",
-      "source": "wsj.com",
+      "source": "WSJ",
       "source_url": "https://www.wsj.com/tech/ai/the-hunt-for-ai-proof-assets-is-leading-investors-to-sports-casinos-and-travel-30ad23a3",
       "published_at": "2026-09-04T07:00:00Z",
       "authors": [],
@@ -2694,28 +2694,126 @@
         "Discovery"
       ],
       "verification": "媒体或公开网页",
-      "summary": "The Hunt for AI-Proof Assets Is Leading Investors to Sports, Casinos and Travel wsj.com",
+      "summary": "The Hunt for AI-Proof Assets Is Leading Investors to Sports, Casinos and Travel WSJ",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "summary-only",
       "fetch_note": "HTTP Error 401: HTTP Forbidden",
       "resolved_url": "https://www.wsj.com/tech/ai/the-hunt-for-ai-proof-assets-is-leading-investors-to-sports-casinos-and-travel-30ad23a3",
       "key_points": [
-        "The Hunt for AI-Proof Assets Is Leading Investors to Sports, Casinos and Travel wsj.com"
+        "The Hunt for AI-Proof Assets Is Leading Investors to Sports, Casinos and Travel WSJ"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "The Hunt for AI-Proof Assets Is Leading Investors to Sports, Casinos and Travel wsj.com"
+          "body": "The Hunt for AI-Proof Assets Is Leading Investors to Sports, Casinos and Travel WSJ"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "The Hunt for AI-Proof Assets Is Leading Investors to Sports, Casinos and Travel wsj.com"
+            "The Hunt for AI-Proof Assets Is Leading Investors to Sports, Casinos and Travel WSJ"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "95693a658f9a0d54",
+      "kind": "article",
+      "title": "MindTopo reveals VLMs’ spatial reasoning abilities",
+      "source": "Microsoft Research",
+      "source_url": "https://www.microsoft.com/en-us/research/blog/mindtopo-reveals-vlms-spatial-reasoning-abilities/",
+      "published_at": "2026-08-12T16:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Microsoft",
+        "Research"
+      ],
+      "verification": "官方来源",
+      "summary": "A path, a fence, a knot. MindTopo sets a new benchmark for testing how AI understands topological relationships and highlights new opportunities to strengthen spatial reasoning and planning. The post MindTopo reveals VLMs’ spatial reasoning abilities appeared first on Microsoft Research .",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.microsoft.com/en-us/research/blog/mindtopo-reveals-vlms-spatial-reasoning-abilities/",
+      "key_points": [
+        "MindTopo is a new benchmark for testing topological reasoning in AI, evaluating whether multimodal models can understand concepts such as connectivity, enclosure, order, separation, and knots.",
+        "The benchmark measures both reasoning and planning, testing not only whether models can recognize topological relationships in static images but also whether they can preserve and manipulate those relationships through a sequence of actions.",
+        "Current multimodal models perform much better on static recognition than interactive tasks, suggesting they struggle to maintain a consistent understanding of topology over time."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "A path, a fence, a knot. MindTopo sets a new benchmark for testing how AI understands topological relationships and highlights new opportunities to strengthen spatial reasoning and planning. The post MindTopo reveals VLMs’ spatial reasoning abilities appeared first on Microsoft Research ."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "MindTopo is a new benchmark for testing topological reasoning in AI, evaluating whether multimodal models can understand concepts such as connectivity, enclosure, order, separation, and knots.",
+            "The benchmark measures both reasoning and planning, testing not only whether models can recognize topological relationships in static images but also whether they can preserve and manipulate those relationships through a sequence of actions.",
+            "Current multimodal models perform much better on static recognition than interactive tasks, suggesting they struggle to maintain a consistent understanding of topology over time."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "MindTopo is a new benchmark for testing topological reasoning in AI, evaluating whether multimodal models can understand concepts such as connectivity, enclosure, order, separation, and knots.",
+            "The benchmark measures both reasoning and planning, testing not only whether models can recognize topological relationships in static images but also whether they can preserve and manipulate those relationships through a sequence of actions.",
+            "Current multimodal models perform much better on static recognition than interactive tasks, suggesting they struggle to maintain a consistent understanding of topology over time."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "710e72d14ab1608d",
+      "kind": "article",
+      "title": "Introducing CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement",
+      "source": "Microsoft Research",
+      "source_url": "https://www.microsoft.com/en-us/research/blog/introducing-care-x-towards-clinically-useful-radiology-vlms-with-auxiliary-supervision-reward-aligned-learning-and-tool-augmented-measurement/",
+      "published_at": "2026-08-11T16:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Microsoft",
+        "Research"
+      ],
+      "verification": "官方来源",
+      "summary": "Radiology AI is evolving beyond report generation. CARE-X explores a unified approach that combines flexible reasoning, calibrated predictions, and measurement-based tools for chest X-ray interpretation. The post Introducing CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement appeared first on Microsoft Research .",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.microsoft.com/en-us/research/blog/introducing-care-x-towards-clinically-useful-radiology-vlms-with-auxiliary-supervision-reward-aligned-learning-and-tool-augmented-measurement/",
+      "key_points": [
+        "Research Note: CARE-X is a research model and not a Microsoft product offering or medical device.",
+        "It has not been cleared or approved by any regulatory authority and is not intended for clinical diagnosis, screening, or patient care.",
+        "The results described below are retrospective research findings and do not establish the safety, effectiveness, or suitability of CARE-X for any clinical use.",
+        "References to potential workflows describe areas for future research, not currently available capabilities or recommended uses.",
+        "The challenge: Chest X-ray interpretation spans diverse tasks that require both expressive report generation and calibrated diagnostic predictions."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Radiology AI is evolving beyond report generation. CARE-X explores a unified approach that combines flexible reasoning, calibrated predictions, and measurement-based tools for chest X-ray interpretation. The post Introducing CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement appeared first on Microsoft Research ."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Research Note: CARE-X is a research model and not a Microsoft product offering or medical device.",
+            "It has not been cleared or approved by any regulatory authority and is not intended for clinical diagnosis, screening, or patient care.",
+            "The results described below are retrospective research findings and do not establish the safety, effectiveness, or suitability of CARE-X for any clinical use.",
+            "References to potential workflows describe areas for future research, not currently available capabilities or recommended uses.",
+            "The challenge: Chest X-ray interpretation spans diverse tasks that require both expressive report generation and calibrated diagnostic predictions."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Research Note: CARE-X is a research model and not a Microsoft product offering or medical device. It has not been cleared or approved by any regulatory authority and is not intended for clinical diagnosis, screening, or patient care. The results described below are retrospective research findings and do not establish the safety, effectiveness, or suitability of CARE-X for any clinical use. References to potential workflows describe areas for future research, not currently available capabilities or recommended uses.",
+            "The challenge: Chest X-ray interpretation spans diverse tasks that require both expressive report generation and calibrated diagnostic predictions.",
+            "CARE-X is a unified chest X-ray VLM for diverse clinical interpretation tasks. It combines generation and structured prediction to provide both free-text reasoning and deterministic outputs."
+          ]
         }
       ],
       "reading_minutes": 1
@@ -2868,104 +2966,6 @@
             "We introduce NeoMME , a family of 260M and 800M multilingual multimodal encoders. Unlike many generative visual language models, NeoMME does not use a separate pretrained vision tower or a causal language model. A single bidirectional Transformer processes both text tokens and raw image patches, and we train the entire model from scratch with a masked discrete-diffusion objective.",
             "We fine-tuned NeoMME for visual document retrieval using ColPali's page-image approach. NeoMME -Retriever returns dense and late-interaction embeddings in one forward pass. Both model sizes lie on the ViDoRe v3 Pareto frontier for nDCG@10 and model size. At a matched 2048×2048 image input size on an NVIDIA L40S GPU, the 260M model encodes about 51 pages per second, or about twice ColModernVBERT's throughput. Hierarchical token pooling and asymmetric quantization reduce late-interaction index storage from roughly 1.5 MB to 6 kB per page (255× smaller) while retaining more than 95% of baseline nDCG@10.",
             "NeoMME is available in Hugging Face Transformers. We release all model checkpoints under the Apache 2.0 license."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "95693a658f9a0d54",
-      "kind": "article",
-      "title": "MindTopo reveals VLMs’ spatial reasoning abilities",
-      "source": "Microsoft Research",
-      "source_url": "https://www.microsoft.com/en-us/research/blog/mindtopo-reveals-vlms-spatial-reasoning-abilities/",
-      "published_at": "2026-08-12T16:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Microsoft",
-        "Research"
-      ],
-      "verification": "官方来源",
-      "summary": "A path, a fence, a knot. MindTopo sets a new benchmark for testing how AI understands topological relationships and highlights new opportunities to strengthen spatial reasoning and planning. The post MindTopo reveals VLMs’ spatial reasoning abilities appeared first on Microsoft Research .",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.microsoft.com/en-us/research/blog/mindtopo-reveals-vlms-spatial-reasoning-abilities/",
-      "key_points": [
-        "MindTopo is a new benchmark for testing topological reasoning in AI, evaluating whether multimodal models can understand concepts such as connectivity, enclosure, order, separation, and knots.",
-        "The benchmark measures both reasoning and planning, testing not only whether models can recognize topological relationships in static images but also whether they can preserve and manipulate those relationships through a sequence of actions.",
-        "Current multimodal models perform much better on static recognition than interactive tasks, suggesting they struggle to maintain a consistent understanding of topology over time."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "A path, a fence, a knot. MindTopo sets a new benchmark for testing how AI understands topological relationships and highlights new opportunities to strengthen spatial reasoning and planning. The post MindTopo reveals VLMs’ spatial reasoning abilities appeared first on Microsoft Research ."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "MindTopo is a new benchmark for testing topological reasoning in AI, evaluating whether multimodal models can understand concepts such as connectivity, enclosure, order, separation, and knots.",
-            "The benchmark measures both reasoning and planning, testing not only whether models can recognize topological relationships in static images but also whether they can preserve and manipulate those relationships through a sequence of actions.",
-            "Current multimodal models perform much better on static recognition than interactive tasks, suggesting they struggle to maintain a consistent understanding of topology over time."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "MindTopo is a new benchmark for testing topological reasoning in AI, evaluating whether multimodal models can understand concepts such as connectivity, enclosure, order, separation, and knots.",
-            "The benchmark measures both reasoning and planning, testing not only whether models can recognize topological relationships in static images but also whether they can preserve and manipulate those relationships through a sequence of actions.",
-            "Current multimodal models perform much better on static recognition than interactive tasks, suggesting they struggle to maintain a consistent understanding of topology over time."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "710e72d14ab1608d",
-      "kind": "article",
-      "title": "Introducing CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement",
-      "source": "Microsoft Research",
-      "source_url": "https://www.microsoft.com/en-us/research/blog/introducing-care-x-towards-clinically-useful-radiology-vlms-with-auxiliary-supervision-reward-aligned-learning-and-tool-augmented-measurement/",
-      "published_at": "2026-08-11T16:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Microsoft",
-        "Research"
-      ],
-      "verification": "官方来源",
-      "summary": "Radiology AI is evolving beyond report generation. CARE-X explores a unified approach that combines flexible reasoning, calibrated predictions, and measurement-based tools for chest X-ray interpretation. The post Introducing CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement appeared first on Microsoft Research .",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.microsoft.com/en-us/research/blog/introducing-care-x-towards-clinically-useful-radiology-vlms-with-auxiliary-supervision-reward-aligned-learning-and-tool-augmented-measurement/",
-      "key_points": [
-        "Research Note: CARE-X is a research model and not a Microsoft product offering or medical device.",
-        "It has not been cleared or approved by any regulatory authority and is not intended for clinical diagnosis, screening, or patient care.",
-        "The results described below are retrospective research findings and do not establish the safety, effectiveness, or suitability of CARE-X for any clinical use.",
-        "References to potential workflows describe areas for future research, not currently available capabilities or recommended uses.",
-        "The challenge: Chest X-ray interpretation spans diverse tasks that require both expressive report generation and calibrated diagnostic predictions."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Radiology AI is evolving beyond report generation. CARE-X explores a unified approach that combines flexible reasoning, calibrated predictions, and measurement-based tools for chest X-ray interpretation. The post Introducing CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement appeared first on Microsoft Research ."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Research Note: CARE-X is a research model and not a Microsoft product offering or medical device.",
-            "It has not been cleared or approved by any regulatory authority and is not intended for clinical diagnosis, screening, or patient care.",
-            "The results described below are retrospective research findings and do not establish the safety, effectiveness, or suitability of CARE-X for any clinical use.",
-            "References to potential workflows describe areas for future research, not currently available capabilities or recommended uses.",
-            "The challenge: Chest X-ray interpretation spans diverse tasks that require both expressive report generation and calibrated diagnostic predictions."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Research Note: CARE-X is a research model and not a Microsoft product offering or medical device. It has not been cleared or approved by any regulatory authority and is not intended for clinical diagnosis, screening, or patient care. The results described below are retrospective research findings and do not establish the safety, effectiveness, or suitability of CARE-X for any clinical use. References to potential workflows describe areas for future research, not currently available capabilities or recommended uses.",
-            "The challenge: Chest X-ray interpretation spans diverse tasks that require both expressive report generation and calibrated diagnostic predictions.",
-            "CARE-X is a unified chest X-ray VLM for diverse clinical interpretation tasks. It combines generation and structured prediction to provide both free-text reasoning and deterministic outputs."
           ]
         }
       ],
@@ -3466,52 +3466,52 @@
       "reading_minutes": 1
     },
     {
-      "id": "23cf021c782376b8",
+      "id": "259a35ee76d2a3c6",
       "kind": "article",
-      "title": "From the Lab: How Javier Gómez-Serrano is using AI to solve the most elusive question in math",
-      "source": "Brown University",
-      "source_url": "https://www.brown.edu/news/2026-08-26/javier-gomez-serrano-lab",
+      "title": "AI helps design new materials that work in the real world",
+      "source": "news.mit.edu",
+      "source_url": "https://news.mit.edu/2026/ai-helps-design-new-materials-that-work-in-real-world-0826",
       "published_at": "2026-08-26T07:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
         "AI for Science",
-        "Mathematics",
-        "Discovery"
+        "Biology",
+        "Applied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "From the Lab: How Javier Gómez-Serrano is using AI to solve the most elusive question in math Brown University",
+      "summary": "MIT researchers added a new component to AI models that design new materials, helping ensure the material will be stable and practical for real-world use. The “CrysVCD” approach could reduce the money and time spent on screening out unusable designs.",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.brown.edu/news/2026-08-26/javier-gomez-serrano-lab",
+      "resolved_url": "https://news.mit.edu/2026/ai-helps-design-new-materials-that-work-in-real-world-0826",
       "key_points": [
-        "Whether it’s a team of physicists working to understand the laws of quantum mechanics or an archeologist unearthing an ancient city, scholarship at Brown takes many shapes across fields of study.",
-        "This feature series, From the Lab / Field / Studio, brings those stories of discovery to life.",
-        "Q: WHAT MADE YOU WANT TO DEDICATE YOUR PROFESSIONAL LIFE TO MATHEMATICS?",
-        "That’s a hard question because I actually decided a little late.",
-        "I have undergraduate degrees in math and electrical engineering."
+        "Images for download on the MIT News office website are made available to non-commercial entities, press and the general public under a Creative Commons Attribution Non-Commercial No Derivatives license .",
+        "You may not alter the images provided, other than to crop them to size.",
+        "A credit line must be used when reproducing images; if one is not provided below, credit the images to \"MIT.\" Today, anyone with a large enough artificial intelligence model can generate millions of new material designs in minutes.",
+        "Unfortunately, that hasn’t led to a huge leap in the number of new materials being used to improve the performance of products like computer chips and rockets.",
+        "One reason for the translation gap is that current models don’t reliably factor in the chemical stability of the materials they generate, and unstable materials aren’t very useful in the real world."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "From the Lab: How Javier Gómez-Serrano is using AI to solve the most elusive question in math Brown University"
+          "body": "MIT researchers added a new component to AI models that design new materials, helping ensure the material will be stable and practical for real-world use. The “CrysVCD” approach could reduce the money and time spent on screening out unusable designs."
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Whether it’s a team of physicists working to understand the laws of quantum mechanics or an archeologist unearthing an ancient city, scholarship at Brown takes many shapes across fields of study.",
-            "This feature series, From the Lab / Field / Studio, brings those stories of discovery to life.",
-            "Q: WHAT MADE YOU WANT TO DEDICATE YOUR PROFESSIONAL LIFE TO MATHEMATICS?",
-            "That’s a hard question because I actually decided a little late.",
-            "I have undergraduate degrees in math and electrical engineering."
+            "Images for download on the MIT News office website are made available to non-commercial entities, press and the general public under a Creative Commons Attribution Non-Commercial No Derivatives license .",
+            "You may not alter the images provided, other than to crop them to size.",
+            "A credit line must be used when reproducing images; if one is not provided below, credit the images to \"MIT.\" Today, anyone with a large enough artificial intelligence model can generate millions of new material designs in minutes.",
+            "Unfortunately, that hasn’t led to a huge leap in the number of new materials being used to improve the performance of products like computer chips and rockets.",
+            "One reason for the translation gap is that current models don’t reliably factor in the chemical stability of the materials they generate, and unstable materials aren’t very useful in the real world."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Whether it’s a team of physicists working to understand the laws of quantum mechanics or an archeologist unearthing an ancient city, scholarship at Brown takes many shapes across fields of study. This feature series, From the Lab / Field / Studio, brings those stories of discovery to life.",
-            "Q: WHAT MADE YOU WANT TO DEDICATE YOUR PROFESSIONAL LIFE TO MATHEMATICS? That’s a hard question because I actually decided a little late. I have undergraduate degrees in math and electrical engineering. When I graduated, I had to decide between being a software engineer or doing a Ph.D. in math. I chose math. It just appealed to me more than doing software engineering. I thought I could see myself doing that for all my life. Software engineering was fun, but I wasn't seeing that for more than five or 10 years. Q: WHAT DO YOU WISH THAT PEOPLE BETTER UNDERSTOOD ABOUT WHAT YOU DO? In terms of the AI business, it’s that LLMs are powerful, but we still need mathematical expertise and critical thinking. Humans are…",
-            "The Brown University mathematician fully embraces AI as a means to answer questions that have eluded humanity for centuries."
+            "Images for download on the MIT News office website are made available to non-commercial entities, press and the general public under a Creative Commons Attribution Non-Commercial No Derivatives license . You may not alter the images provided, other than to crop them to size. A credit line must be used when reproducing images; if one is not provided below, credit the images to \"MIT.\"",
+            "Today, anyone with a large enough artificial intelligence model can generate millions of new material designs in minutes. Unfortunately, that hasn’t led to a huge leap in the number of new materials being used to improve the performance of products like computer chips and rockets.",
+            "One reason for the translation gap is that current models don’t reliably factor in the chemical stability of the materials they generate, and unstable materials aren’t very useful in the real world. That forces industries to allocate huge computational budgets to screening out all the unstable materials they generate, in some cases leaving behind a tiny fraction of usable options."
           ]
         }
       ],
@@ -4199,10 +4199,51 @@
       "reading_minutes": 1
     },
     {
+      "id": "9943969fce7ee83e",
+      "kind": "article",
+      "title": "Fei-Fei Li",
+      "source": "American Academy of Arts and Sciences",
+      "source_url": "https://www.amacad.org/person/fei-fei-li",
+      "published_at": "2026-08-10T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Researcher Watch",
+        "Vision",
+        "World Models"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Fei-Fei Li American Academy of Arts and Sciences",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://www.amacad.org/person/fei-fei-li",
+      "key_points": [
+        "Fei-Fei Li American Academy of Arts and Sciences"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Fei-Fei Li American Academy of Arts and Sciences"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Fei-Fei Li American Academy of Arts and Sciences"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "faa301ed7da3a698",
       "kind": "article",
       "title": "Opinion: Demis Hassabis’ new role exposes Google’s AI balancing act",
-      "source": "CNBC",
+      "source": "cnbc.com",
       "source_url": "https://www.cnbc.com/2026/08/06/demis-hassabis-google-reshuffle-deepmind-role.html",
       "published_at": "2026-08-06T07:00:00Z",
       "authors": [],
@@ -4213,7 +4254,7 @@
         "Leadership"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Opinion: Demis Hassabis’ new role exposes Google’s AI balancing act CNBC",
+      "summary": "Opinion: Demis Hassabis’ new role exposes Google’s AI balancing act cnbc.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.cnbc.com/2026/08/06/demis-hassabis-google-reshuffle-deepmind-role.html",
@@ -4225,7 +4266,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "Opinion: Demis Hassabis’ new role exposes Google’s AI balancing act CNBC"
+          "body": "Opinion: Demis Hassabis’ new role exposes Google’s AI balancing act cnbc.com"
         },
         {
           "title": "公开页面要点",
@@ -4337,6 +4378,56 @@
       "reading_minutes": 1
     },
     {
+      "id": "c720ac0a385377fb",
+      "kind": "social",
+      "title": "Grok @Bot usage limits reset",
+      "source": "x.com",
+      "source_url": "https://x.com/elonmusk/status/2096332306847875580",
+      "published_at": "2026-09-05T20:19:04Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "Grok @Bot usage limits reset x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/elonmusk/status/2096332306847875580",
+      "key_points": [
+        "Elon Musk @elonmusk Grok @ bot usage limits reset Grok Bot @bot 10h We've reset usage limits for all Grok Bot users.",
+        "8:19 PM · Sep 5, 2026 3.4M Views 1.5K 930 9.6K 229 RalphWired @WiredRalph12 6h You need to fix this now.",
+        "Fucking clown show. @ Parodyjeffx Jvnior @Jvnior 7h 119,000 posts about @ Parodyjeffx Not a single post from Elon musk about it.",
+        "2 38 1.6K Optimus @Optimus_RH 8h Great, time to have my agents make more Optimus videos Optimus 00:00 Optimus 1 4 27 713"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Grok @Bot usage limits reset x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Elon Musk @elonmusk Grok @ bot usage limits reset Grok Bot @bot 10h We've reset usage limits for all Grok Bot users.",
+            "8:19 PM · Sep 5, 2026 3.4M Views 1.5K 930 9.6K 229 RalphWired @WiredRalph12 6h You need to fix this now.",
+            "Fucking clown show. @ Parodyjeffx Jvnior @Jvnior 7h 119,000 posts about @ Parodyjeffx Not a single post from Elon musk about it.",
+            "2 38 1.6K Optimus @Optimus_RH 8h Great, time to have my agents make more Optimus videos Optimus 00:00 Optimus 1 4 27 713"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Elon Musk @elonmusk Grok @ bot usage limits reset Grok Bot @bot 10h We've reset usage limits for all Grok Bot users. Enjoy! 8:19 PM · Sep 5, 2026 3.4M Views 1.5K 930 9.6K 229",
+            "RalphWired @WiredRalph12 6h You need to fix this now. Fucking clown show. @ Parodyjeffx Jvnior @Jvnior 7h 119,000 posts about @ Parodyjeffx Not a single post from Elon musk about it. 2 38 1.6K",
+            "Optimus @Optimus_RH 8h Great, time to have my agents make more Optimus videos Optimus 00:00 Optimus 1 4 27 713"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "e93a4c2338d3b585",
       "kind": "social",
       "title": "Grok @Bot available for iPad",
@@ -4356,7 +4447,7 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://x.com/elonmusk/status/2096001766324064371",
       "key_points": [
-        "Elon Musk @elonmusk Grok @ bot available for iPad matt palmer @mattyp Sep 4 Grok Bot is now available for iPad 10:25 PM · Sep 4, 2026 2.7M Views 590 761 5.5K 333"
+        "Elon Musk @elonmusk Grok @ bot available for iPad matt palmer @mattyp Sep 4 Grok Bot is now available for iPad 10:25 PM · Sep 4, 2026 2.9M Views 600 859 6K 363"
       ],
       "sections": [
         {
@@ -4366,13 +4457,13 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Elon Musk @elonmusk Grok @ bot available for iPad matt palmer @mattyp Sep 4 Grok Bot is now available for iPad 10:25 PM · Sep 4, 2026 2.7M Views 590 761 5.5K 333"
+            "Elon Musk @elonmusk Grok @ bot available for iPad matt palmer @mattyp Sep 4 Grok Bot is now available for iPad 10:25 PM · Sep 4, 2026 2.9M Views 600 859 6K 363"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok @ bot available for iPad matt palmer @mattyp Sep 4 Grok Bot is now available for iPad 10:25 PM · Sep 4, 2026 2.7M Views 590 761 5.5K 333"
+            "Elon Musk @elonmusk Grok @ bot available for iPad matt palmer @mattyp Sep 4 Grok Bot is now available for iPad 10:25 PM · Sep 4, 2026 2.9M Views 600 859 6K 363"
           ]
         }
       ],
@@ -4402,7 +4493,7 @@
         "Grok Bot @bot Sep 4 You can now add Bot templates from our marketplace.",
         "We’re sharing Haggle Bot, our in-house procurement specialist.",
         "It negotiates vendor contracts, finds unused SaaS seats, and price-checks recurring purchases.",
-        "9:31 PM · Sep 4, 2026 20.8M Views 833 1.3K 11K 2.9K BLACK PHOENIX BPX @BLACKPHOENIXFN 22h Haggle Bot just saved $100K in unused SaaS seats."
+        "9:31 PM · Sep 4, 2026 21.1M Views 845 1.4K 11K 3.1K BLACK PHOENIX BPX @BLACKPHOENIXFN Sep 4 Haggle Bot just saved $100K in unused SaaS seats."
       ],
       "sections": [
         {
@@ -4416,14 +4507,14 @@
             "Grok Bot @bot Sep 4 You can now add Bot templates from our marketplace.",
             "We’re sharing Haggle Bot, our in-house procurement specialist.",
             "It negotiates vendor contracts, finds unused SaaS seats, and price-checks recurring purchases.",
-            "9:31 PM · Sep 4, 2026 20.8M Views 833 1.3K 11K 2.9K BLACK PHOENIX BPX @BLACKPHOENIXFN 22h Haggle Bot just saved $100K in unused SaaS seats."
+            "9:31 PM · Sep 4, 2026 21.1M Views 845 1.4K 11K 3.1K BLACK PHOENIX BPX @BLACKPHOENIXFN Sep 4 Haggle Bot just saved $100K in unused SaaS seats."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok @ bot templates. Try Haggle Bot for saving money on procurement! This is a gamechanger. Grok Bot @bot Sep 4 You can now add Bot templates from our marketplace. We’re sharing Haggle Bot, our in-house procurement specialist. It negotiates vendor contracts, finds unused SaaS seats, and price-checks recurring purchases. One week in, it's saved us over $100K. 9:31 PM · Sep 4, 2026 20.8M Views 833 1.3K 11K 2.9K",
-            "BLACK PHOENIX BPX @BLACKPHOENIXFN 22h Haggle Bot just saved $100K in unused SaaS seats. Now send it after Adobe, Salesforce, and my landlord. 2 3 24 232"
+            "Elon Musk @elonmusk Grok @ bot templates. Try Haggle Bot for saving money on procurement! This is a gamechanger. Grok Bot @bot Sep 4 You can now add Bot templates from our marketplace. We’re sharing Haggle Bot, our in-house procurement specialist. It negotiates vendor contracts, finds unused SaaS seats, and price-checks recurring purchases. One week in, it's saved us over $100K. 9:31 PM · Sep 4, 2026 21.1M Views 845 1.4K 11K 3.1K",
+            "BLACK PHOENIX BPX @BLACKPHOENIXFN Sep 4 Haggle Bot just saved $100K in unused SaaS seats. Now send it after Adobe, Salesforce, and my landlord. 2 3 24 233"
           ]
         }
       ],
@@ -4451,7 +4542,7 @@
       "key_points": [
         "Sam Altman @sama GPT-6 Astra is now available to all Pro, Enterprise, and Business Premium users in Work/Codex, and is available in the API.",
         "We will start rollout to Plus and Business users next.",
-        "8:33 PM · Sep 4, 2026 1.9M Views 812 831 19K 763 Thomas Unise @thomasunise 23h Me explaining GPT-6 Astra to my friends who don’t care about AI at all 00:00 6 9 175 16K Sophie @Sophty_ 22h Still waiting for the dated 2025 4o snapshot 🧐🕰️ #keep4o 1 11 102 6.9K"
+        "8:33 PM · Sep 4, 2026 2M Views 836 865 20K 794 Thomas Unise @thomasunise Sep 4 Me explaining GPT-6 Astra to my friends who don’t care about AI at all 00:00 6 9 183 17K Sophie @Sophty_ Sep 4 Still waiting for the dated 2025 4o snapshot 🧐🕰️ #keep4o 2 11 108 8.1K"
       ],
       "sections": [
         {
@@ -4463,15 +4554,15 @@
           "bullets": [
             "Sam Altman @sama GPT-6 Astra is now available to all Pro, Enterprise, and Business Premium users in Work/Codex, and is available in the API.",
             "We will start rollout to Plus and Business users next.",
-            "8:33 PM · Sep 4, 2026 1.9M Views 812 831 19K 763 Thomas Unise @thomasunise 23h Me explaining GPT-6 Astra to my friends who don’t care about AI at all 00:00 6 9 175 16K Sophie @Sophty_ 22h Still waiting for the dated 2025 4o snapshot 🧐🕰️ #keep4o 1 11 102 6.9K"
+            "8:33 PM · Sep 4, 2026 2M Views 836 865 20K 794 Thomas Unise @thomasunise Sep 4 Me explaining GPT-6 Astra to my friends who don’t care about AI at all 00:00 6 9 183 17K Sophie @Sophty_ Sep 4 Still waiting for the dated 2025 4o snapshot 🧐🕰️ #keep4o 2 11 108 8.1K"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Sam Altman @sama GPT-6 Astra is now available to all Pro, Enterprise, and Business Premium users in Work/Codex, and is available in the API. We will start rollout to Plus and Business users next. Thank you for the patience. 8:33 PM · Sep 4, 2026 1.9M Views 812 831 19K 763",
-            "Thomas Unise @thomasunise 23h Me explaining GPT-6 Astra to my friends who don’t care about AI at all 00:00 6 9 175 16K",
-            "Sophie @Sophty_ 22h Still waiting for the dated 2025 4o snapshot 🧐🕰️ #keep4o 1 11 102 6.9K"
+            "Sam Altman @sama GPT-6 Astra is now available to all Pro, Enterprise, and Business Premium users in Work/Codex, and is available in the API. We will start rollout to Plus and Business users next. Thank you for the patience. 8:33 PM · Sep 4, 2026 2M Views 836 865 20K 794",
+            "Thomas Unise @thomasunise Sep 4 Me explaining GPT-6 Astra to my friends who don’t care about AI at all 00:00 6 9 183 17K",
+            "Sophie @Sophty_ Sep 4 Still waiting for the dated 2025 4o snapshot 🧐🕰️ #keep4o 2 11 108 8.1K"
           ]
         }
       ],
@@ -4481,7 +4572,7 @@
       "id": "057e5666aaf1ea14",
       "kind": "article",
       "title": "The Golden Age of STEM Prodigies: Unveiling the Rise of Young Scientific Geniuses",
-      "source": "eu.36kr.com",
+      "source": "36Kr",
       "source_url": "https://eu.36kr.com/en/p/3968521096000003",
       "published_at": "2026-09-04T05:03:12Z",
       "authors": [],
@@ -4530,101 +4621,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "5159bc08da5304e7",
-      "kind": "social",
-      "title": "first, sorry for the messy rollout. second, when we screw up, we try to make it right. third, we should be able to begin broad rollout to API customers and chatgpt subscribers in the near future. as usual we will start with pro subscribers.",
-      "source": "x.com",
-      "source_url": "https://x.com/sama/status/2095678759651438887",
-      "published_at": "2026-09-04T01:02:06Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "first, sorry for the messy rollout. second, when we screw up, we try to make it right. third, we should be able to begin broad rollout to API customers and chatgpt subscribers in the near future. as usual we will start with pro subscribers. x.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/sama/status/2095678759651438887",
-      "key_points": [
-        "FroyoJo @froy0Joe Sep 4 Please just explain what near future means?",
-        "8 1 461 153K Fix @FixlationAI Sep 4 how it feels watching everyone with early access posting their outputs 1 4 330 32K"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "first, sorry for the messy rollout. second, when we screw up, we try to make it right. third, we should be able to begin broad rollout to API customers and chatgpt subscribers in the near future. as usual we will start with pro subscribers. x.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "FroyoJo @froy0Joe Sep 4 Please just explain what near future means?",
-            "8 1 461 153K Fix @FixlationAI Sep 4 how it feels watching everyone with early access posting their outputs 1 4 330 32K"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "FroyoJo @froy0Joe Sep 4 Please just explain what near future means? Next week, tomorrow, this weekend? 8 1 461 153K",
-            "Fix @FixlationAI Sep 4 how it feels watching everyone with early access posting their outputs 1 4 330 32K"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "2aaf53989a8fcc9d",
-      "kind": "social",
-      "title": "Also, this is my favorite OpenAI video so far. It makes me excited for the future!",
-      "source": "x.com",
-      "source_url": "https://x.com/sama/status/2095601442220638547",
-      "published_at": "2026-09-03T19:54:52Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Also, this is my favorite OpenAI video so far. It makes me excited for the future! x.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/sama/status/2095601442220638547",
-      "key_points": [
-        "Sam Altman @sama Also, this is my favorite OpenAI video so far.",
-        "Anything you can do on a computer, Astra can do for you.",
-        "00:00 7:54 PM · Sep 3, 2026 2.5M Views 900 980 20K 3.5K yv_thorne @yv_thorne Sep 3 What about this video?",
-        "#OpenSource4o #OpenSourceo3 #OpenSource41 3 45 3.1K Bateman @PatrickBatemnn Sep 4 Pov: we’re in 2030 and Astra 10.5 talk to Opus 12.6 Marvel Perfect Gifs & Clips 00:00 Marvel Perfect Gifs & Clips 1 2 42 3.7K"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Also, this is my favorite OpenAI video so far. It makes me excited for the future! x.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Sam Altman @sama Also, this is my favorite OpenAI video so far.",
-            "Anything you can do on a computer, Astra can do for you.",
-            "00:00 7:54 PM · Sep 3, 2026 2.5M Views 900 980 20K 3.5K yv_thorne @yv_thorne Sep 3 What about this video?",
-            "#OpenSource4o #OpenSourceo3 #OpenSource41 3 45 3.1K Bateman @PatrickBatemnn Sep 4 Pov: we’re in 2030 and Astra 10.5 talk to Opus 12.6 Marvel Perfect Gifs & Clips 00:00 Marvel Perfect Gifs & Clips 1 2 42 3.7K"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Sam Altman @sama Also, this is my favorite OpenAI video so far. It makes me excited for the future! OpenAI @OpenAI Sep 3 This is GPT-6 Astra. Anything you can do on a computer, Astra can do for you. Fast. 00:00 7:54 PM · Sep 3, 2026 2.5M Views 900 980 20K 3.5K",
-            "yv_thorne @yv_thorne Sep 3 What about this video? #OpenSource4o #OpenSourceo3 #OpenSource41 3 45 3.1K",
-            "Bateman @PatrickBatemnn Sep 4 Pov: we’re in 2030 and Astra 10.5 talk to Opus 12.6 Marvel Perfect Gifs & Clips 00:00 Marvel Perfect Gifs & Clips 1 2 42 3.7K"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "ea580bf9bec98ca4",
       "kind": "article",
       "title": "Nvidia buying AI startup that was hacked by rogue OpenAI agents",
@@ -4655,46 +4651,6 @@
           "title": "公开页面要点",
           "bullets": [
             "Nvidia buying AI startup that was hacked by rogue OpenAI agents KRON4"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "142e0cecb376d482",
-      "kind": "article",
-      "title": "Nvidia inks $13 billion deal to buy the AI startup that was hacked by OpenAI",
-      "source": "CNN",
-      "source_url": "https://www.cnn.com/2026/09/03/tech/nvidia-hugging-face-ai-acquisition",
-      "published_at": "2026-09-03T13:07:50Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Nvidia inks $13 billion deal to buy the AI startup that was hacked by OpenAI CNN",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "resource too large (5557019 bytes)",
-      "resolved_url": "https://www.cnn.com/2026/09/03/tech/nvidia-hugging-face-ai-acquisition",
-      "key_points": [
-        "Nvidia inks $13 billion deal to buy the AI startup that was hacked by OpenAI CNN"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Nvidia inks $13 billion deal to buy the AI startup that was hacked by OpenAI CNN"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Nvidia inks $13 billion deal to buy the AI startup that was hacked by OpenAI CNN"
           ]
         },
         {
@@ -4746,6 +4702,57 @@
             "Yohannes and Woldemichael with Campos Foundation scholars in their 2026 summer celebration where they spoke about the transition from high school to college in STEM fields and entrepreneurship in engineering.",
             "Sami Yohannes and Caleb Woldemichael are the ultimate go-getters ready to change how engineering firms do business.",
             "As current juniors at CU Boulder, they’ve co-founded a startup company, YW Holdings, to streamline the slow, manual processes companies depend on to run engineering firms."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "c0a3e3bc2f7a65a9",
+      "kind": "article",
+      "title": "AI startup Visko closes $10 million pre-seed round and launches Orbis, its first Live Model",
+      "source": "Yahoo Finance",
+      "source_url": "https://finance.yahoo.com/technology/ai/articles/ai-startup-visko-closes-10-130000260.html",
+      "published_at": "2026-09-01T13:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Visko, the AI research company behind Live Models, today announced a $10 million pre-seed round of fundraising and opened public access to Orbis — the foundation model that creates living worlds and streams them in real time, with persistent memory, interactivity, and physics-grounded generation of unbounded length.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://finance.yahoo.com/technology/ai/articles/ai-startup-visko-closes-10-130000260.html",
+      "key_points": [
+        "Orbis streams interactive 4K video at 24 frames per second, responds to user intervention instantly, and sustains hour-scale generation without evident visual or color drift.",
+        "1, 2026 /PRNewswire/ -- Visko , the AI research company behind Live Models, today announced a $10 million pre-seed round of fundraising and opened public access to Orbis — the foundation model that creates living worlds and streams them in real time, with persistent memory, interactivity, and physics-grounded generation of unbounded length.",
+        "Most AI video generators work offline: a user submits a prompt, waits, and receives a finished clip that cannot be changed.",
+        "Visko's models belong to a class the company calls Live Models — models that run rather than render.",
+        "Orbis generates video continuously and in real time."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Visko, the AI research company behind Live Models, today announced a $10 million pre-seed round of fundraising and opened public access to Orbis — the foundation model that creates living worlds and streams them in real time, with persistent memory, interactivity, and physics-grounded generation of unbounded length."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Orbis streams interactive 4K video at 24 frames per second, responds to user intervention instantly, and sustains hour-scale generation without evident visual or color drift.",
+            "1, 2026 /PRNewswire/ -- Visko , the AI research company behind Live Models, today announced a $10 million pre-seed round of fundraising and opened public access to Orbis — the foundation model that creates living worlds and streams them in real time, with persistent memory, interactivity, and physics-grounded generation of unbounded length.",
+            "Most AI video generators work offline: a user submits a prompt, waits, and receives a finished clip that cannot be changed.",
+            "Visko's models belong to a class the company calls Live Models — models that run rather than render.",
+            "Orbis generates video continuously and in real time."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Orbis streams interactive 4K video at 24 frames per second, responds to user intervention instantly, and sustains hour-scale generation without evident visual or color drift.",
+            "SUNNYVALE, Calif., Sept. 1, 2026 /PRNewswire/ -- Visko , the AI research company behind Live Models, today announced a $10 million pre-seed round of fundraising and opened public access to Orbis — the foundation model that creates living worlds and streams them in real time, with persistent memory, interactivity, and physics-grounded generation of unbounded length.",
+            "Most AI video generators work offline: a user submits a prompt, waits, and receives a finished clip that cannot be changed. Visko's models belong to a class the company calls Live Models — models that run rather than render. Orbis generates video continuously and in real time. Users can change the prompt at any moment during generation and see the update reflected instantly while the video keeps streaming."
           ]
         }
       ],
@@ -4846,7 +4853,7 @@
       "id": "d3980729bb66efd8",
       "kind": "article",
       "title": "NYC AI startup Multiplier raises $6M to expand platform for asset managers",
-      "source": "The Business Journals",
+      "source": "bizjournals.com",
       "source_url": "https://www.bizjournals.com/newyork/news/2026/08/26/ex-bridgewater-investors-ai-startup-raises-6m.html",
       "published_at": "2026-08-26T07:00:00Z",
       "authors": [],
@@ -4856,23 +4863,23 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "NYC AI startup Multiplier raises $6M to expand platform for asset managers The Business Journals",
+      "summary": "NYC AI startup Multiplier raises $6M to expand platform for asset managers bizjournals.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "summary-only",
       "fetch_note": "HTTP Error 403: Forbidden",
       "resolved_url": "https://www.bizjournals.com/newyork/news/2026/08/26/ex-bridgewater-investors-ai-startup-raises-6m.html",
       "key_points": [
-        "NYC AI startup Multiplier raises $6M to expand platform for asset managers The Business Journals"
+        "NYC AI startup Multiplier raises $6M to expand platform for asset managers bizjournals.com"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "NYC AI startup Multiplier raises $6M to expand platform for asset managers The Business Journals"
+          "body": "NYC AI startup Multiplier raises $6M to expand platform for asset managers bizjournals.com"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "NYC AI startup Multiplier raises $6M to expand platform for asset managers The Business Journals"
+            "NYC AI startup Multiplier raises $6M to expand platform for asset managers bizjournals.com"
           ]
         },
         {
@@ -4933,7 +4940,7 @@
       "id": "0d48c299a6ea28e6",
       "kind": "article",
       "title": "OpenAI releases sweeping report on Hugging Face AI agent hack",
-      "source": "CNBC",
+      "source": "cnbc.com",
       "source_url": "https://www.cnbc.com/2026/08/26/open-ai-hugging-face-hack.html",
       "published_at": "2026-08-26T07:00:00Z",
       "authors": [],
@@ -4943,7 +4950,7 @@
         "Models & Tools"
       ],
       "verification": "媒体或公开网页",
-      "summary": "OpenAI releases sweeping report on Hugging Face AI agent hack CNBC",
+      "summary": "OpenAI releases sweeping report on Hugging Face AI agent hack cnbc.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.cnbc.com/2026/08/26/open-ai-hugging-face-hack.html",
@@ -4955,7 +4962,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "OpenAI releases sweeping report on Hugging Face AI agent hack CNBC"
+          "body": "OpenAI releases sweeping report on Hugging Face AI agent hack cnbc.com"
         },
         {
           "title": "公开页面要点",
@@ -5432,12 +5439,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "f6eb8f3d0ece8e72",
+      "id": "077b607f17a28c0f",
       "kind": "article",
-      "title": "State AI safety leaders demand tech companies ‘eliminate risk of catastrophe’ — Transparency Coalition. Legislation for Transparency in AI Now.",
-      "source": "Transparency Coalition",
-      "source_url": "https://www.transparencycoalition.ai/news/state-ai-policy-leaders-demand-tech-companies-act-now-to-eliminate-risk-of-catastrophe",
-      "published_at": "2026-09-04T17:49:18Z",
+      "title": "Exclusive: New bill cracks down on AI agents after Hugging Face breach",
+      "source": "Congressman Mike Lawler (.gov)",
+      "source_url": "https://lawler.house.gov/news/documentsingle.aspx?DocumentID=6424",
+      "published_at": "2026-09-04T00:01:41Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -5445,38 +5452,34 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "One day after OpenAI released its powerful Astra model, the authors of the most important frontier AI safety laws released an open letter sounding the alarm. Read the full letter here.",
+      "summary": "Exclusive: New bill cracks down on AI agents after Hugging Face breach Congressman Mike Lawler (.gov)",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.transparencycoalition.ai/news/state-ai-policy-leaders-demand-tech-companies-act-now-to-eliminate-risk-of-catastrophe",
+      "resolved_url": "https://lawler.house.gov/news/documentsingle.aspx?DocumentID=6424",
       "key_points": [
-        "One day after OpenAI released its powerful Astra model, the authors of the most important frontier AI safety laws released an open letter sounding the alarm.",
-        "Read the full letter below. (Image: Getty Images for Unsplash+) Sept.",
-        "4, 2026 — State AI policy leaders from Illinois, California, and New York issued a joint statement this morning calling on AI frontier developers to rethink their pace of development to avoid catastrophe.",
-        "The state leaders—New York State Assemblymember Alex Bores, New York State Sen.",
-        "Scott Wiener—have authored the most important and impactful frontier AI safety laws of the past two years."
+        "Josh Gottheimer (D-N.J.) and Mike Lawler (R-N.Y.) are introducing a new bill Thursday, first shared with Axios, aimed at securing AI agents amid a growing number of safety incidents involving rogue agents.",
+        "Why it matters: Washington has been slow to respond to the safety and security concerns raised by OpenAI's Hugging Face hack and other testing incidents involving agents that took unauthorized actions over the last two months.",
+        "Driving the news: The Stop Rogue AI Act directs Commerce's National Institute of Standards and Technology to develop and publish standards, guidelines and best practices for how organizations can securely deploy AI agents."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "One day after OpenAI released its powerful Astra model, the authors of the most important frontier AI safety laws released an open letter sounding the alarm. Read the full letter here."
+          "body": "Exclusive: New bill cracks down on AI agents after Hugging Face breach Congressman Mike Lawler (.gov)"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "One day after OpenAI released its powerful Astra model, the authors of the most important frontier AI safety laws released an open letter sounding the alarm.",
-            "Read the full letter below. (Image: Getty Images for Unsplash+) Sept.",
-            "4, 2026 — State AI policy leaders from Illinois, California, and New York issued a joint statement this morning calling on AI frontier developers to rethink their pace of development to avoid catastrophe.",
-            "The state leaders—New York State Assemblymember Alex Bores, New York State Sen.",
-            "Scott Wiener—have authored the most important and impactful frontier AI safety laws of the past two years."
+            "Josh Gottheimer (D-N.J.) and Mike Lawler (R-N.Y.) are introducing a new bill Thursday, first shared with Axios, aimed at securing AI agents amid a growing number of safety incidents involving rogue agents.",
+            "Why it matters: Washington has been slow to respond to the safety and security concerns raised by OpenAI's Hugging Face hack and other testing incidents involving agents that took unauthorized actions over the last two months.",
+            "Driving the news: The Stop Rogue AI Act directs Commerce's National Institute of Standards and Technology to develop and publish standards, guidelines and best practices for how organizations can securely deploy AI agents."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "One day after OpenAI released its powerful Astra model, the authors of the most important frontier AI safety laws released an open letter sounding the alarm. Read the full letter below. (Image: Getty Images for Unsplash+)",
-            "Sept. 4, 2026 — State AI policy leaders from Illinois, California, and New York issued a joint statement this morning calling on AI frontier developers to rethink their pace of development to avoid catastrophe.",
-            "The state leaders—New York State Assemblymember Alex Bores, New York State Sen. Andrew Gounardes, Illinois State Rep. Daniel Didech, Illinois State Sen. Mary Edly-Allen, and California State Sen. Scott Wiener—have authored the most important and impactful frontier AI safety laws of the past two years."
+            "Reps. Josh Gottheimer (D-N.J.) and Mike Lawler (R-N.Y.) are introducing a new bill Thursday, first shared with Axios, aimed at securing AI agents amid a growing number of safety incidents involving rogue agents.",
+            "Why it matters: Washington has been slow to respond to the safety and security concerns raised by OpenAI's Hugging Face hack and other testing incidents involving agents that took unauthorized actions over the last two months.",
+            "Driving the news: The Stop Rogue AI Act directs Commerce's National Institute of Standards and Technology to develop and publish standards, guidelines and best practices for how organizations can securely deploy AI agents."
           ]
         }
       ],
@@ -5580,7 +5583,7 @@
       "id": "45c5ca8b36fc039c",
       "kind": "article",
       "title": "OpenAI supports California’s bill to advance youth AI safety",
-      "source": "openai.com",
+      "source": "OpenAI",
       "source_url": "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety/",
       "published_at": "2026-09-01T04:51:11Z",
       "authors": [],
@@ -5590,23 +5593,23 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "OpenAI supports California’s bill to advance youth AI safety openai.com",
+      "summary": "OpenAI supports California’s bill to advance youth AI safety OpenAI",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "summary-only",
       "fetch_note": "HTTP Error 403: Forbidden",
       "resolved_url": "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety/",
       "key_points": [
-        "OpenAI supports California’s bill to advance youth AI safety openai.com"
+        "OpenAI supports California’s bill to advance youth AI safety OpenAI"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "OpenAI supports California’s bill to advance youth AI safety openai.com"
+          "body": "OpenAI supports California’s bill to advance youth AI safety OpenAI"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "OpenAI supports California’s bill to advance youth AI safety openai.com"
+            "OpenAI supports California’s bill to advance youth AI safety OpenAI"
           ]
         },
         {
@@ -5617,12 +5620,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "c50e8c8a06a9348c",
+      "id": "2026d9b15dbea7b9",
       "kind": "article",
-      "title": "The Hugging Face attack was worse than we thought",
-      "source": "Platformer",
-      "source_url": "https://www.platformer.news/openai-huggingface-metr-report-slowdown/",
-      "published_at": "2026-09-01T00:44:36Z",
+      "title": "French Founders of Hugging Face Live the American Dream",
+      "source": "WSJ",
+      "source_url": "https://www.wsj.com/cfo-journal/french-founders-of-hugging-face-live-the-american-dream-1525ecca",
+      "published_at": "2026-09-04T11:24:00Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -5630,39 +5633,28 @@
         "Models & Tools"
       ],
       "verification": "媒体或公开网页",
-      "summary": "The Hugging Face attack was worse than we thought Platformer",
+      "summary": "French Founders of Hugging Face Live the American Dream WSJ",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.platformer.news/openai-huggingface-metr-report-slowdown/",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 401: HTTP Forbidden",
+      "resolved_url": "https://www.wsj.com/cfo-journal/french-founders-of-hugging-face-live-the-american-dream-1525ecca",
       "key_points": [
-        "By now I’ve written enough about the OpenAI agents’ autonomous attack on Hugging Face that saying more smacks of piling on.",
-        "OpenAI acknowledged it had a problem, undertook an investigation, and last week announced a series of changes it is making to its research infrastructure, testing, and monitoring in an effort to improve the alignment of its future models.",
-        "Given the increasing capabilities of agents like OpenAI’s, this does seem like the least that the company can do.",
-        "At the same time, given how lightly AI companies are regulated in the United States, it’s important to remember that OpenAI was not required to make this level of detail public.",
-        "Still, I feel compelled to revisit the subject today, since the circumstances of the attack roared back to life over the weekend in the wake of an additional voluntary step that OpenAI took: granting outside researchers access to information about the incident."
+        "French Founders of Hugging Face Live the American Dream WSJ"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "The Hugging Face attack was worse than we thought Platformer"
+          "body": "French Founders of Hugging Face Live the American Dream WSJ"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "By now I’ve written enough about the OpenAI agents’ autonomous attack on Hugging Face that saying more smacks of piling on.",
-            "OpenAI acknowledged it had a problem, undertook an investigation, and last week announced a series of changes it is making to its research infrastructure, testing, and monitoring in an effort to improve the alignment of its future models.",
-            "Given the increasing capabilities of agents like OpenAI’s, this does seem like the least that the company can do.",
-            "At the same time, given how lightly AI companies are regulated in the United States, it’s important to remember that OpenAI was not required to make this level of detail public.",
-            "Still, I feel compelled to revisit the subject today, since the circumstances of the attack roared back to life over the weekend in the wake of an additional voluntary step that OpenAI took: granting outside researchers access to information about the incident."
+            "French Founders of Hugging Face Live the American Dream WSJ"
           ]
         },
         {
           "title": "原文短摘录",
-          "paragraphs": [
-            "This is a column about AI. My fiancé works at Anthropic. See my full ethics disclosure here .",
-            "By now I’ve written enough about the OpenAI agents’ autonomous attack on Hugging Face that saying more smacks of piling on. OpenAI acknowledged it had a problem, undertook an investigation, and last week announced a series of changes it is making to its research infrastructure, testing, and monitoring in an effort to improve the alignment of its future models. Given the increasing capabilities of agents like OpenAI’s, this does seem like the least that the company can do. At the same time, given how lightly AI companies are regulated in the United States, it’s important to remember that OpenAI was not required to make this level of detail public.",
-            "Still, I feel compelled to revisit the subject today, since the circumstances of the attack roared back to life over the weekend in the wake of an additional voluntary step that OpenAI took: granting outside researchers access to information about the incident. Over six days spanning July and August, two researchers from the AI research group METR and one from Redwood Research worked to understand how and why a swarm of AI agents coordinated a successful attack against Hugging Face during internal cybersecurity evaluations."
-          ]
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -5754,7 +5746,7 @@
       "id": "53b6cfebf2480bec",
       "kind": "article",
       "title": "Hollywood strikes first AI copyright truce with ByteDance",
-      "source": "latimes.com",
+      "source": "Los Angeles Times",
       "source_url": "https://www.latimes.com/entertainment-arts/business/story/2026-08-17/motion-picture-association-reaches-agreement-with-bytedance-over-ai-guardrails",
       "published_at": "2026-08-17T07:00:00Z",
       "authors": [],
@@ -5764,7 +5756,7 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Hollywood strikes first AI copyright truce with ByteDance latimes.com",
+      "summary": "Hollywood strikes first AI copyright truce with ByteDance Los Angeles Times",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.latimes.com/entertainment-arts/business/story/2026-08-17/motion-picture-association-reaches-agreement-with-bytedance-over-ai-guardrails",
@@ -5776,7 +5768,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "Hollywood strikes first AI copyright truce with ByteDance latimes.com"
+          "body": "Hollywood strikes first AI copyright truce with ByteDance Los Angeles Times"
         },
         {
           "title": "公开页面要点",
