@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-12T20:31:59Z",
+  "generated_at": "2026-09-13T04:44:02Z",
   "record_count": 130,
   "records": [
     {
@@ -47,13 +47,48 @@
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "levent @__alpoge__ hello there the jacobian conjecture is false thanx to my close friend akhil for asking about it and my other close friend fable for working during the world cup final ((1+xy)^3 z + y^2 (1+xy) (4+3xy), y + 3 x (1+xy)^2 z + 3 x y^2 (4+3xy), 2 x - 3 x^2 y - x^3 z): \\C^3\\to \\C^3, has jacobian determinant -2, and sends (0, 0, -1/4), (1, -3/2, 13/2), and (-1, 3/2, 13/2) to (-1/4, 0, 0) 2:19 AM · Jul 20, 2026 40M Views 1.7K 5.4K 44K 12K",
+            "levent @__alpoge__ hello there the jacobian conjecture is false thanx to my close friend akhil for asking about it and my other close friend fable for working during the world cup final ((1+xy)^3 z + y^2 (1+xy) (4+3xy), y + 3 x (1+xy)^2 z + 3 x y^2 (4+3xy), 2 x - 3 x^2 y - x^3 z): \\C^3\\to \\C^3, has jacobian determinant -2, and sends (0, 0, -1/4), (1, -3/2, 13/2), and (-1, 3/2, 13/2) to (-1/4, 0, 0) 2:19 AM · Jul 20, 2026 40M Views 1.7K 5.4K 43K 11K",
             "levent @__alpoge__ Jul 20 wolframalpha.com/input?i=Det%5B… jacobian determinant in wolfram alpha wolframalpha.com Det[D[{(1+x y)^3 z + y^2 (1 + x y) (4 + 3x y), y + 3x (1 + x y)^2 z + 3x y^2 (4 + 3x y), 2x - 3x^2... Wolfram|Alpha brings expert-level knowledge and capabilities to the broadest possible range of people—spanning all professions and education levels. 20 53 1.5K 945K levent @__alpoge__ Jul 20 wolframalpha.com/input?i=%28%28… wolframalpha.com/input?i=%28%28… evaluating at two of those points in wolfram alpha wolframalpha.com ((1+x y)^3 z + y^2 (1 + x y) (4 + 3x y), y + 3x (1 + x y)^2 z + 3x y^2 (4 + 3x y), 2x - 3x^2 y -... Wolfram|Alpha brings expert-level knowledge and capabilities to the broadest…",
-            "Aldo Cortesi @cortesi Jul 20 The absolute state of maths. 8 89 1.6K 137K"
+            "Aldo Cortesi @cortesi Jul 20 The absolute state of maths. 8 89 1.6K 136K"
           ]
         }
       ],
       "reading_minutes": 1
+    },
+    {
+      "id": "unit-distance-openai-20260520",
+      "kind": "paper",
+      "title": "OpenAI 模型推翻平面单位距离问题中的长期猜想",
+      "source": "OpenAI · Research",
+      "source_url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+      "published_at": "2026-05-20T08:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Unit Distance",
+        "Discrete Geometry",
+        "Verified Proof"
+      ],
+      "verification": "官方论文 · 外部数学家已检查",
+      "summary": "OpenAI 的通用推理模型找到一族新的点集构造，证明单位距离对数可以达到 n 的 1+δ 次方，从而推翻长期流行的 n 的 1+o(1) 上界猜想。证明已由外部数学家检查，并有公开证明 PDF 与多位数学家的伴随评论。",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/unit-distance-openai-20260520.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf",
+      "key_points": [
+        "Planar Point Sets with Many Unit Distances OpenAI Abstract For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets.",
+        "We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n.",
+        "This disproves the well-known unit distance conjecture from [ Erd46].",
+        "The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely.",
+        "After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets. We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n. This disproves the well-known unit distance conjecture from [ Erd46]. The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely. After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1. Golod–Shafarevich theory ensures existence of an inﬁnite such tower, even after a quotient step making the prescribed Frobenius classes trivial. A crucial property of the construction is that all resulting discriminants and class numbers are at most exponential in the extension degree. 1 Main Result For a ﬁnite set P ⊂ R2, let ν(P ) = # {{x,y } ⊂ P : |x −y|= 1} andν(n) = max |P |=nν(P ). The planar unit-distance problem goes back to Erdős [ Erd46], who conjectured that there should be an absolute constant C such that, for all suﬃciently large n, ν(n) ≤ n1+C/ log logn. (1) The same 1946 paper also introduced the distinct-distances problem, later resolved up to logarithmic factors by Guth–Katz [ GK15]. An elementary upper bound is ν(n) = O(n3/ 2): the Euclidean unit-distance graph is K2, 3-free, since two unit circles meet in at most two points, and the Kővári–Sós–Turán theorem applies [ KST54]. The best known upper bound ν(n) = O(n4/ 3) is due to Spencer–Szemerédi–Trotter [ SST84]; Székely later gave a short crossing-number proof of this incidence bound [ Sze97]. It is useful to compare this with the same question for other norms on R2, a direction studied systematically by Brass [ Bra96]. If the unit ball has a ﬂat segment, one can arrange quadratically many unit distances, so the interesting normed-plane analogues usually impose strict convexity or genericity. Székely’s crossing-number argument extends to strictly convex norms, again giving O(n4/ 3), and Valtr constructed a strictly convex norm for which this exponent is…"
+        }
+      ],
+      "reading_minutes": 32
     },
     {
       "id": "6d1a490f5a8dac36",
@@ -94,41 +129,6 @@
         }
       ],
       "reading_minutes": 1
-    },
-    {
-      "id": "unit-distance-openai-20260520",
-      "kind": "paper",
-      "title": "OpenAI 模型推翻平面单位距离问题中的长期猜想",
-      "source": "OpenAI · Research",
-      "source_url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
-      "published_at": "2026-05-20T08:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Unit Distance",
-        "Discrete Geometry",
-        "Verified Proof"
-      ],
-      "verification": "官方论文 · 外部数学家已检查",
-      "summary": "OpenAI 的通用推理模型找到一族新的点集构造，证明单位距离对数可以达到 n 的 1+δ 次方，从而推翻长期流行的 n 的 1+o(1) 上界猜想。证明已由外部数学家检查，并有公开证明 PDF 与多位数学家的伴随评论。",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/unit-distance-openai-20260520.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf",
-      "key_points": [
-        "Planar Point Sets with Many Unit Distances OpenAI Abstract For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets.",
-        "We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n.",
-        "This disproves the well-known unit distance conjecture from [ Erd46].",
-        "The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely.",
-        "After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets. We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n. This disproves the well-known unit distance conjecture from [ Erd46]. The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely. After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1. Golod–Shafarevich theory ensures existence of an inﬁnite such tower, even after a quotient step making the prescribed Frobenius classes trivial. A crucial property of the construction is that all resulting discriminants and class numbers are at most exponential in the extension degree. 1 Main Result For a ﬁnite set P ⊂ R2, let ν(P ) = # {{x,y } ⊂ P : |x −y|= 1} andν(n) = max |P |=nν(P ). The planar unit-distance problem goes back to Erdős [ Erd46], who conjectured that there should be an absolute constant C such that, for all suﬃciently large n, ν(n) ≤ n1+C/ log logn. (1) The same 1946 paper also introduced the distinct-distances problem, later resolved up to logarithmic factors by Guth–Katz [ GK15]. An elementary upper bound is ν(n) = O(n3/ 2): the Euclidean unit-distance graph is K2, 3-free, since two unit circles meet in at most two points, and the Kővári–Sós–Turán theorem applies [ KST54]. The best known upper bound ν(n) = O(n4/ 3) is due to Spencer–Szemerédi–Trotter [ SST84]; Székely later gave a short crossing-number proof of this incidence bound [ Sze97]. It is useful to compare this with the same question for other norms on R2, a direction studied systematically by Brass [ Bra96]. If the unit ball has a ﬂat segment, one can arrange quadratically many unit distances, so the interesting normed-plane analogues usually impose strict convexity or genericity. Székely’s crossing-number argument extends to strictly convex norms, again giving O(n4/ 3), and Valtr constructed a strictly convex norm for which this exponent is…"
-        }
-      ],
-      "reading_minutes": 32
     },
     {
       "id": "69a6dff164ab81f4",
@@ -899,46 +899,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "631ad0996fb828cd",
-      "kind": "article",
-      "title": "Now everyone can put data to work",
-      "source": "OpenAI",
-      "source_url": "https://openai.com/index/put-data-to-work",
-      "published_at": "2026-09-10T15:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "OpenAI",
-        "Official"
-      ],
-      "verification": "官方来源",
-      "summary": "Meet the Data agent in ChatGPT Work. Connect company data, uncover insights, and build interactive dashboards with AI using natural language.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 403: Forbidden",
-      "resolved_url": "https://openai.com/index/put-data-to-work",
-      "key_points": [
-        "Connect company data, uncover insights, and build interactive dashboards with AI using natural language."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Meet the Data agent in ChatGPT Work. Connect company data, uncover insights, and build interactive dashboards with AI using natural language."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Connect company data, uncover insights, and build interactive dashboards with AI using natural language."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "rhb-icml-2026",
       "kind": "paper",
       "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
@@ -982,6 +942,46 @@
         }
       ],
       "reading_minutes": 46
+    },
+    {
+      "id": "631ad0996fb828cd",
+      "kind": "article",
+      "title": "Now everyone can put data to work",
+      "source": "OpenAI",
+      "source_url": "https://openai.com/index/put-data-to-work",
+      "published_at": "2026-09-10T15:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "OpenAI",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "Meet the Data agent in ChatGPT Work. Connect company data, uncover insights, and build interactive dashboards with AI using natural language.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://openai.com/index/put-data-to-work",
+      "key_points": [
+        "Connect company data, uncover insights, and build interactive dashboards with AI using natural language."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Meet the Data agent in ChatGPT Work. Connect company data, uncover insights, and build interactive dashboards with AI using natural language."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Connect company data, uncover insights, and build interactive dashboards with AI using natural language."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
     },
     {
       "id": "b33b50b8a73ae953",
@@ -1247,9 +1247,9 @@
       "key_points": [
         "Elon Musk @elonmusk Grok Build is now open source SpaceXAI @SpaceXAI Jul 15 We've open-sourced Grok Build and have reset usage limits for all users.",
         "Open sourcing Grok Build allows anyone to support making a reliable and robust harness.",
-        "Check out our code, including the Git repo for the Grok Build CLI. x.ai/open-source 8:48 PM · Jul 15, 2026 4.9M Views 1.9K 2.5K 20K 1.4K Aurelia Marcella @Aurelia32824 Jul 15 I am a longtime Grok user and particularly appreciate the broad, versatile intelligence – perfect for marketing tasks like strategy development, market analysis, creative concepts, and…",
+        "Check out our code, including the Git repo for the Grok Build CLI. x.ai/open-source 8:48 PM · Jul 15, 2026 4.8M Views 1.8K 2.5K 19K 1.3K Aurelia Marcella @Aurelia32824 Jul 15 I am a longtime Grok user and particularly appreciate the broad, versatile intelligence – perfect for marketing tasks like strategy development, market analysis, creative concepts, and…",
         "Grok delivers exactly what narrow specialist tools cannot.",
-        "In professional Show more 3 4 50 115K Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Jul 15 Grok keeps on delivering 😎🔥 1 8 42 3.5K"
+        "In professional Show more 3 4 50 115K Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Jul 15 Grok keeps on delivering 😎🔥 1 8 42 3.4K"
       ],
       "sections": [
         {
@@ -1261,53 +1261,53 @@
           "bullets": [
             "Elon Musk @elonmusk Grok Build is now open source SpaceXAI @SpaceXAI Jul 15 We've open-sourced Grok Build and have reset usage limits for all users.",
             "Open sourcing Grok Build allows anyone to support making a reliable and robust harness.",
-            "Check out our code, including the Git repo for the Grok Build CLI. x.ai/open-source 8:48 PM · Jul 15, 2026 4.9M Views 1.9K 2.5K 20K 1.4K Aurelia Marcella @Aurelia32824 Jul 15 I am a longtime Grok user and particularly appreciate the broad, versatile intelligence – perfect for marketing tasks like strategy development, market analysis, creative concepts, and…",
+            "Check out our code, including the Git repo for the Grok Build CLI. x.ai/open-source 8:48 PM · Jul 15, 2026 4.8M Views 1.8K 2.5K 19K 1.3K Aurelia Marcella @Aurelia32824 Jul 15 I am a longtime Grok user and particularly appreciate the broad, versatile intelligence – perfect for marketing tasks like strategy development, market analysis, creative concepts, and…",
             "Grok delivers exactly what narrow specialist tools cannot.",
-            "In professional Show more 3 4 50 115K Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Jul 15 Grok keeps on delivering 😎🔥 1 8 42 3.5K"
+            "In professional Show more 3 4 50 115K Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Jul 15 Grok keeps on delivering 😎🔥 1 8 42 3.4K"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok Build is now open source SpaceXAI @SpaceXAI Jul 15 We've open-sourced Grok Build and have reset usage limits for all users. Open sourcing Grok Build allows anyone to support making a reliable and robust harness. Check out our code, including the Git repo for the Grok Build CLI. x.ai/open-source 8:48 PM · Jul 15, 2026 4.9M Views 1.9K 2.5K 20K 1.4K",
+            "Elon Musk @elonmusk Grok Build is now open source SpaceXAI @SpaceXAI Jul 15 We've open-sourced Grok Build and have reset usage limits for all users. Open sourcing Grok Build allows anyone to support making a reliable and robust harness. Check out our code, including the Git repo for the Grok Build CLI. x.ai/open-source 8:48 PM · Jul 15, 2026 4.8M Views 1.8K 2.5K 19K 1.3K",
             "Aurelia Marcella @Aurelia32824 Jul 15 I am a longtime Grok user and particularly appreciate the broad, versatile intelligence – perfect for marketing tasks like strategy development, market analysis, creative concepts, and graphic prompting. Grok delivers exactly what narrow specialist tools cannot. In professional Show more 3 4 50 115K",
-            "Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Jul 15 Grok keeps on delivering 😎🔥 1 8 42 3.5K"
+            "Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Jul 15 Grok keeps on delivering 😎🔥 1 8 42 3.4K"
           ]
         }
       ],
       "reading_minutes": 1
     },
     {
-      "id": "daf09f609b79a05a",
+      "id": "eda0af49d6727c3a",
       "kind": "article",
-      "title": "Designing physics experiments with artificial intelligence",
-      "source": "Nature",
-      "source_url": "https://www.nature.com/articles/s41586-026-10898-6",
-      "published_at": "2026-09-02T07:00:00Z",
+      "title": "DeepSeek V4.1-Flash 发布 :552B参数、1M上下文、0.02元/百万token",
+      "source": "微信公众号 · 硅基觉醒中",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1789274619&ver=6963&signature=Q9qpon7UcpjZgezYtf1p1r5XAHAHBYusbnP5bRQt3OMZL2LaslCklSX7FzRIZ-OMvGhRxO4d1BB9QT0IoTtfMMKE9QZvhEXXtJ4N9nD51KhhZsYihMsfFgoeQ3lxx4ap&new=1",
+      "published_at": "2026-09-13T01:07:26Z",
       "authors": [],
       "venue": "",
       "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
+        "微信公众号",
+        "DeepSeek",
+        "模型"
       ],
-      "verification": "媒体或公开网页",
-      "summary": "Designing physics experiments with artificial intelligence Nature",
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "summary": "老灯说 DeepSeek 把大模型价格战打到了小数点后四位——这次不是降价,是重新定义＂便宜＂.9月10日, DeepSeek 正式 发布 V4.1-...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "resolved_url": "https://www.nature.com/articles/s41586-026-10898-6",
+      "fetch_status": "indexed-summary",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HAoqpmqjmsRdZ5PE7kXk9AMRmMSHmnQdizMutKyZ&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789274619%26ver%3D6963%26signature%3DQ9qpon7UcpjZgezYtf1p1r5XAHAHBYusbnP5bRQt3OMZL2LaslCklSX7FzRIZ-OMvGhRxO4d1BB9QT0IoTtfMMKE9QZvhEXXtJ4N9nD51KhhZsYihMsfFgoeQ3lxx4ap%26new%3D1",
       "key_points": [
-        "Designing physics experiments with artificial intelligence Nature"
+        "老灯说 DeepSeek 把大模型价格战打到了小数点后四位——这次不是降价,是重新定义＂便宜＂.9月10日, DeepSeek 正式 发布 V4.1-..."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Designing physics experiments with artificial intelligence Nature"
+          "body": "老灯说 DeepSeek 把大模型价格战打到了小数点后四位——这次不是降价,是重新定义＂便宜＂.9月10日, DeepSeek 正式 发布 V4.1-..."
         },
         {
-          "title": "公开页面要点",
+          "title": "公开索引摘要",
           "bullets": [
-            "Designing physics experiments with artificial intelligence Nature"
+            "老灯说 DeepSeek 把大模型价格战打到了小数点后四位——这次不是降价,是重新定义＂便宜＂.9月10日, DeepSeek 正式 发布 V4.1-..."
           ]
         },
         {
@@ -1318,11 +1318,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "b39badcb4510619d",
+      "id": "febe8ea8d3e5c5d7",
       "kind": "article",
       "title": "DeepSeek V4.1正式 发布",
       "source": "微信公众号 · 长三角电脑之家",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1789245091&ver=6962&signature=Q-8Cs-0mZju3gDg3etFeF1ySAEUAo6-fGd7QvdjjDf8BH2x0upAXPT5E0vj8JGQJhgVtA1sQ9EC67gNiVqeecTxRjI-kc0l485AHQrZCgEAZK5*hCrcbcbEDnRs1lIC1&new=1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1789274619&ver=6963&signature=bf73daX3wSz-fALRIkphnyH4Zt6eGJn0NwtdKzh2M5aVNEDXjVyCGL3V3HlEclyiPduBwrwPxCXEVavB0HRk2n7hv3NBHJQbr89hTMKc7Vvwub41G2Qsl7f3QytWGaQp&new=1",
       "published_at": "2026-09-12T11:19:44Z",
       "authors": [],
       "venue": "",
@@ -1335,7 +1335,7 @@
       "summary": "9月10日晚, DeepSeek 低调上线 V4.1-Flash.别被＂4.1＂这个版本号骗了——社区普遍评价:这更接近一次换代级 发布 .架构:不对...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HLK2pWqjzw147G8C4ylLw9Mx-tSMUw5zRyam6bWM&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789245091%26ver%3D6962%26signature%3DQ-8Cs-0mZju3gDg3etFeF1ySAEUAo6-fGd7QvdjjDf8BH2x0upAXPT5E0vj8JGQJhgVtA1sQ9EC67gNiVqeecTxRjI-kc0l485AHQrZCgEAZK5%2AhCrcbcbEDnRs1lIC1%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HAoqpmqjq3v88pp4EyV-4SbFJDg8mIMah8WO36KV&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789274619%26ver%3D6963%26signature%3Dbf73daX3wSz-fALRIkphnyH4Zt6eGJn0NwtdKzh2M5aVNEDXjVyCGL3V3HlEclyiPduBwrwPxCXEVavB0HRk2n7hv3NBHJQbr89hTMKc7Vvwub41G2Qsl7f3QytWGaQp%26new%3D1",
       "key_points": [
         "9月10日晚, DeepSeek 低调上线 V4.1-Flash.别被＂4.1＂这个版本号骗了——社区普遍评价:这更接近一次换代级 发布 .架构:不对..."
       ],
@@ -1402,7 +1402,7 @@
       "kind": "article",
       "title": "DeepSeek 发布 新模型;OpenAI考虑放慢AI研发节奏;英伟达被查|AIGC周观察第149期",
       "source": "微信公众号 · 中国企业家杂志",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1789245091&ver=6962&signature=wkoEfdsqO41BU8550z1xpzdLGHCMfwGW3xz-8nq0eS4OiyBEVT3-f7sUNU0wMd2kcL-SJ1XJthuf89a-x58L*vpC3OKdsyKBc0pv1pDQu-Kmr-lXWa3wHrA-9p7lzau5&new=1",
+      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HLK2pWqjJZYuNgAZh3vKsavNHSrE_W75RBEUlUw5&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789245091%26ver%3D6962%26signature%3DwkoEfdsqO41BU8550z1xpzdLGHCMfwGW3xz-8nq0eS4OiyBEVT3-f7sUNU0wMd2kcL-SJ1XJthuf89a-x58L%2AvpC3OKdsyKBc0pv1pDQu-Kmr-lXWa3wHrA-9p7lzau5%26new%3D1",
       "published_at": "2026-09-11T10:53:24Z",
       "authors": [],
       "venue": "",
@@ -1473,57 +1473,6 @@
         {
           "title": "原文短摘录",
           "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "4d29937938879928",
-      "kind": "article",
-      "title": "3 ways to prep for your next big race with Search",
-      "source": "Google AI",
-      "source_url": "https://blog.google/products-and-platforms/products/search/running-race-training-tips/",
-      "published_at": "2026-09-10T16:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Google",
-        "Official"
-      ],
-      "verification": "官方来源",
-      "summary": "Illustration on a blue background of technicolor runners with a magnifying glass and Gemini spark overlaid",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://blog.google/products-and-platforms/products/search/running-race-training-tips/",
-      "key_points": [
-        "Search can help you get race-day ready with tailored training plans, custom playlists, and more.",
-        "Running is surging in popularity, and you can use Google Search’s artificial intelligence tools to simplify your race preparation.",
-        "Use the Canvas tool to build a personalized training schedule, connect your YouTube Music account to generate motivating playlists, and search for specific gear that fits your budget and needs.",
-        "Start by asking Search for a custom plan tailored to your local routes and current fitness level.",
-        "Check out \"3 ways to prep for your next big race with Search\" for tips."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Illustration on a blue background of technicolor runners with a magnifying glass and Gemini spark overlaid"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Search can help you get race-day ready with tailored training plans, custom playlists, and more.",
-            "Running is surging in popularity, and you can use Google Search’s artificial intelligence tools to simplify your race preparation.",
-            "Use the Canvas tool to build a personalized training schedule, connect your YouTube Music account to generate motivating playlists, and search for specific gear that fits your budget and needs.",
-            "Start by asking Search for a custom plan tailored to your local routes and current fitness level.",
-            "Check out \"3 ways to prep for your next big race with Search\" for tips."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Search can help you get race-day ready with tailored training plans, custom playlists, and more.",
-            "Running is surging in popularity, and you can use Google Search’s artificial intelligence tools to simplify your race preparation. Use the Canvas tool to build a personalized training schedule, connect your YouTube Music account to generate motivating playlists, and search for specific gear that fits your budget and needs. Start by asking Search for a custom plan tailored to your local routes and current fitness level.",
-            "Check out \"3 ways to prep for your next big race with Search\" for tips."
-          ]
         }
       ],
       "reading_minutes": 1
@@ -1969,41 +1918,52 @@
       "reading_minutes": 1
     },
     {
-      "id": "a4ff1c6a321e85f4",
+      "id": "4d29937938879928",
       "kind": "article",
-      "title": "字节 发布 「 豆包 工作」:AI 办公从帮你写到替你干",
-      "source": "微信公众号 · 思维逻辑数学AI",
-      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HGURlWqjN3_sAd5wiAHCa1XetN0erfPa11WdM0T1&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1788154201%26ver%3D6937%26signature%3DsnI1zeeMLjpadeWW6E4sjJ--8JdJIXeYKEq1CJehJxnt-YRoWFj9zhxUJpvibr4oBGtW5DvqRsRUZ7BbPCke8w091Bnh9v3rMdtbsOasHKX0rsflMEfaq3d7QQOgCv98%26new%3D1",
-      "published_at": "2026-08-31T00:41:11Z",
+      "title": "3 ways to prep for your next big race with Search",
+      "source": "Google AI",
+      "source_url": "https://blog.google/products-and-platforms/products/search/running-race-training-tips/",
+      "published_at": "2026-09-10T16:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
-        "微信公众号",
-        "字节",
-        "豆包"
+        "Google",
+        "Official"
       ],
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "summary": "字节 跳动给这个老问题交了份新答卷—— 豆包 正式 发布 独立办公 Agent「 豆包 工作」.它的野心很直白:不再帮你写,而是替你干.一...",
+      "verification": "官方来源",
+      "summary": "Illustration on a blue background of technicolor runners with a magnifying glass and Gemini spark overlaid",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HGURlWqjN3_sAd5wiAHCa1XetN0erfPa11WdM0T1&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1788154201%26ver%3D6937%26signature%3DsnI1zeeMLjpadeWW6E4sjJ--8JdJIXeYKEq1CJehJxnt-YRoWFj9zhxUJpvibr4oBGtW5DvqRsRUZ7BbPCke8w091Bnh9v3rMdtbsOasHKX0rsflMEfaq3d7QQOgCv98%26new%3D1",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://blog.google/products-and-platforms/products/search/running-race-training-tips/",
       "key_points": [
-        "字节 跳动给这个老问题交了份新答卷—— 豆包 正式 发布 独立办公 Agent「 豆包 工作」.它的野心很直白:不再帮你写,而是替你干.一..."
+        "Search can help you get race-day ready with tailored training plans, custom playlists, and more.",
+        "Running is surging in popularity, and you can use Google Search’s artificial intelligence tools to simplify your race preparation.",
+        "Use the Canvas tool to build a personalized training schedule, connect your YouTube Music account to generate motivating playlists, and search for specific gear that fits your budget and needs.",
+        "Start by asking Search for a custom plan tailored to your local routes and current fitness level.",
+        "Check out \"3 ways to prep for your next big race with Search\" for tips."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "字节 跳动给这个老问题交了份新答卷—— 豆包 正式 发布 独立办公 Agent「 豆包 工作」.它的野心很直白:不再帮你写,而是替你干.一..."
+          "body": "Illustration on a blue background of technicolor runners with a magnifying glass and Gemini spark overlaid"
         },
         {
-          "title": "公开索引摘要",
+          "title": "公开页面要点",
           "bullets": [
-            "字节 跳动给这个老问题交了份新答卷—— 豆包 正式 发布 独立办公 Agent「 豆包 工作」.它的野心很直白:不再帮你写,而是替你干.一..."
+            "Search can help you get race-day ready with tailored training plans, custom playlists, and more.",
+            "Running is surging in popularity, and you can use Google Search’s artificial intelligence tools to simplify your race preparation.",
+            "Use the Canvas tool to build a personalized training schedule, connect your YouTube Music account to generate motivating playlists, and search for specific gear that fits your budget and needs.",
+            "Start by asking Search for a custom plan tailored to your local routes and current fitness level.",
+            "Check out \"3 ways to prep for your next big race with Search\" for tips."
           ]
         },
         {
           "title": "原文短摘录",
-          "paragraphs": []
+          "paragraphs": [
+            "Search can help you get race-day ready with tailored training plans, custom playlists, and more.",
+            "Running is surging in popularity, and you can use Google Search’s artificial intelligence tools to simplify your race preparation. Use the Canvas tool to build a personalized training schedule, connect your YouTube Music account to generate motivating playlists, and search for specific gear that fits your budget and needs. Start by asking Search for a custom plan tailored to your local routes and current fitness level.",
+            "Check out \"3 ways to prep for your next big race with Search\" for tips."
+          ]
         }
       ],
       "reading_minutes": 1
@@ -2259,6 +2219,46 @@
       "reading_minutes": 1
     },
     {
+      "id": "2a1ffefb7066ca72",
+      "kind": "article",
+      "title": "Entering the agentic era of AI in drug discovery",
+      "source": "Nature",
+      "source_url": "https://www.nature.com/articles/s41589-026-02295-x",
+      "published_at": "2026-08-19T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Entering the agentic era of AI in drug discovery Nature",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "resolved_url": "https://www.nature.com/articles/s41589-026-02295-x",
+      "key_points": [
+        "Entering the agentic era of AI in drug discovery Nature"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Entering the agentic era of AI in drug discovery Nature"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Entering the agentic era of AI in drug discovery Nature"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "96b0dc27d1d1b4e5",
       "kind": "article",
       "title": "GigaPath-Flash and GigaTIME-Flash: Toward population-scale discovery with efficient pathology foundation models",
@@ -2301,46 +2301,6 @@
             "A distilled pathology foundation model backbone reduces computational requirements without sacrificing performance, enabling repeated analyses across larger patient cohorts.",
             "These open models support population-scale discovery, helping researchers investigate disease biology, biomarkers, and clinical outcomes across diverse cancer datasets."
           ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "2a1ffefb7066ca72",
-      "kind": "article",
-      "title": "Entering the agentic era of AI in drug discovery",
-      "source": "Nature",
-      "source_url": "https://www.nature.com/articles/s41589-026-02295-x",
-      "published_at": "2026-08-19T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Entering the agentic era of AI in drug discovery Nature",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "resolved_url": "https://www.nature.com/articles/s41589-026-02295-x",
-      "key_points": [
-        "Entering the agentic era of AI in drug discovery Nature"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Entering the agentic era of AI in drug discovery Nature"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Entering the agentic era of AI in drug discovery Nature"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -2417,10 +2377,10 @@
       "resolved_url": "https://x.com/sama/status/2074909079450050629",
       "key_points": [
         "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
-        "5:30 PM · Jul 8, 2026 764.4K Views 927 517 11K 768 Jenny @suomi55 Jul 8 Are you kidding us?",
+        "5:30 PM · Jul 8, 2026 764.4K Views 927 517 10K 768 Jenny @suomi55 Jul 8 Are you kidding us?",
         "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
         "You are promoting something here that you yourself have taken away from the users!",
-        "#keep4o #BringBack4o #OpenSource4o 20 13 193 13K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.8K"
+        "#keep4o #BringBack4o #OpenSource4o 20 13 193 12K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
       ],
       "sections": [
         {
@@ -2431,18 +2391,18 @@
           "title": "公开页面要点",
           "bullets": [
             "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
-            "5:30 PM · Jul 8, 2026 764.4K Views 927 517 11K 768 Jenny @suomi55 Jul 8 Are you kidding us?",
+            "5:30 PM · Jul 8, 2026 764.4K Views 927 517 10K 768 Jenny @suomi55 Jul 8 Are you kidding us?",
             "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
             "You are promoting something here that you yourself have taken away from the users!",
-            "#keep4o #BringBack4o #OpenSource4o 20 13 193 13K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.8K"
+            "#keep4o #BringBack4o #OpenSource4o 20 13 193 12K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 764.4K Views 927 517 11K 768",
-            "Jenny @suomi55 Jul 8 Are you kidding us? „it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o! You are promoting something here that you yourself have taken away from the users! That’s disgusting! #keep4o #BringBack4o #OpenSource4o 20 13 193 13K",
-            "David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.8K"
+            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 764.4K Views 927 517 10K 768",
+            "Jenny @suomi55 Jul 8 Are you kidding us? „it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o! You are promoting something here that you yourself have taken away from the users! That’s disgusting! #keep4o #BringBack4o #OpenSource4o 20 13 193 12K",
+            "David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
           ]
         }
       ],
@@ -2705,6 +2665,47 @@
         {
           "title": "摘要",
           "body": "Automated grading systems are increasingly used in engineering education to manage instructor workload while providing timely feedback. Large Language Models (LLMs) have made this feasible for short-answer responses, but they exhibit grading inconsistency due to sampling variability: identical responses graded repeatedly can yield conflicting pass-fail outcomes in 8 to 20% of evaluations depending on question difficulty. This measurement error undermines the reliability of automated assessment. We address it using Quality Dimensions (QDs), binary criteria derived from rubrics that can be iteratively refined when grading is unstable. Applied to all N = 625 student…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "8b2f1f162e19e821",
+      "kind": "article",
+      "title": "Anthropic C.E.O. Dario Amodei Calls for A.I. Slowdown",
+      "source": "The New York Times",
+      "source_url": "https://www.nytimes.com/2026/09/12/technology/anthropic-dario-amodei-ai-slowdown.html",
+      "published_at": "2026-09-12T16:03:01Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Researcher Watch",
+        "Foundation Models",
+        "Leadership"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Anthropic C.E.O. Dario Amodei Calls for A.I. Slowdown The New York Times",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://www.nytimes.com/2026/09/12/technology/anthropic-dario-amodei-ai-slowdown.html",
+      "key_points": [
+        "Anthropic C.E.O. Dario Amodei Calls for A.I. Slowdown The New York Times"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Anthropic C.E.O. Dario Amodei Calls for A.I. Slowdown The New York Times"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Anthropic C.E.O. Dario Amodei Calls for A.I. Slowdown The New York Times"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -3006,10 +3007,60 @@
       "reading_minutes": 1
     },
     {
+      "id": "167184ef9994a428",
+      "kind": "article",
+      "title": "Omaha labor leaders encourage young people to enter trades, citing AI-proof jobs",
+      "source": "wowt.com",
+      "source_url": "https://www.wowt.com/2026/09/07/omaha-labor-leaders-encourage-young-people-enter-trades-citing-ai-proof-jobs/",
+      "published_at": "2026-09-07T23:32:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Omaha labor leaders encourage young people to enter trades, citing AI-proof jobs wowt.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.wowt.com/2026/09/07/omaha-labor-leaders-encourage-young-people-enter-trades-citing-ai-proof-jobs/",
+      "key_points": [
+        "OMAHA, Neb. (WOWT) - All the construction work and building going on in the Omaha metro is evidence skilled workers are busy.",
+        "Labor leaders are encouraging more young people to get involved in the trade.",
+        "They say it just might be a job that can’t be replaced by AI.",
+        "Skilled workers marched in the Labor Day parade, enjoying the day and the benefits that came from those who walked before them, generating benefits like paid overtime and a 40-hour work week."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Omaha labor leaders encourage young people to enter trades, citing AI-proof jobs wowt.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "OMAHA, Neb. (WOWT) - All the construction work and building going on in the Omaha metro is evidence skilled workers are busy.",
+            "Labor leaders are encouraging more young people to get involved in the trade.",
+            "They say it just might be a job that can’t be replaced by AI.",
+            "Skilled workers marched in the Labor Day parade, enjoying the day and the benefits that came from those who walked before them, generating benefits like paid overtime and a 40-hour work week."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "OMAHA, Neb. (WOWT) - All the construction work and building going on in the Omaha metro is evidence skilled workers are busy.",
+            "Labor leaders are encouraging more young people to get involved in the trade. They say it just might be a job that can’t be replaced by AI.",
+            "Skilled workers marched in the Labor Day parade, enjoying the day and the benefits that came from those who walked before them, generating benefits like paid overtime and a 40-hour work week."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "51def5752d6c25d1",
       "kind": "article",
       "title": "How AI Is Changing Drug Discovery and What It Will Take to Unlock Its Full Potential",
-      "source": "Amgen",
+      "source": "amgen.com",
       "source_url": "https://www.amgen.com/stories/2026/07/how-ai-is-changing-drug-discovery-and-what-it-will-take-to-unlock-its-full-potential",
       "published_at": "2026-09-07T07:00:00Z",
       "authors": [],
@@ -3093,57 +3144,6 @@
             "MindTopo is a new benchmark for testing topological reasoning in AI, evaluating whether multimodal models can understand concepts such as connectivity, enclosure, order, separation, and knots.",
             "The benchmark measures both reasoning and planning, testing not only whether models can recognize topological relationships in static images but also whether they can preserve and manipulate those relationships through a sequence of actions.",
             "Current multimodal models perform much better on static recognition than interactive tasks, suggesting they struggle to maintain a consistent understanding of topology over time."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "710e72d14ab1608d",
-      "kind": "article",
-      "title": "Introducing CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement",
-      "source": "Microsoft Research",
-      "source_url": "https://www.microsoft.com/en-us/research/blog/introducing-care-x-towards-clinically-useful-radiology-vlms-with-auxiliary-supervision-reward-aligned-learning-and-tool-augmented-measurement/",
-      "published_at": "2026-08-11T16:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Microsoft",
-        "Research"
-      ],
-      "verification": "官方来源",
-      "summary": "Radiology AI is evolving beyond report generation. CARE-X explores a unified approach that combines flexible reasoning, calibrated predictions, and measurement-based tools for chest X-ray interpretation. The post Introducing CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement appeared first on Microsoft Research .",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.microsoft.com/en-us/research/blog/introducing-care-x-towards-clinically-useful-radiology-vlms-with-auxiliary-supervision-reward-aligned-learning-and-tool-augmented-measurement/",
-      "key_points": [
-        "Research Note: CARE-X is a research model and not a Microsoft product offering or medical device.",
-        "It has not been cleared or approved by any regulatory authority and is not intended for clinical diagnosis, screening, or patient care.",
-        "The results described below are retrospective research findings and do not establish the safety, effectiveness, or suitability of CARE-X for any clinical use.",
-        "References to potential workflows describe areas for future research, not currently available capabilities or recommended uses.",
-        "The challenge: Chest X-ray interpretation spans diverse tasks that require both expressive report generation and calibrated diagnostic predictions."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Radiology AI is evolving beyond report generation. CARE-X explores a unified approach that combines flexible reasoning, calibrated predictions, and measurement-based tools for chest X-ray interpretation. The post Introducing CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement appeared first on Microsoft Research ."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Research Note: CARE-X is a research model and not a Microsoft product offering or medical device.",
-            "It has not been cleared or approved by any regulatory authority and is not intended for clinical diagnosis, screening, or patient care.",
-            "The results described below are retrospective research findings and do not establish the safety, effectiveness, or suitability of CARE-X for any clinical use.",
-            "References to potential workflows describe areas for future research, not currently available capabilities or recommended uses.",
-            "The challenge: Chest X-ray interpretation spans diverse tasks that require both expressive report generation and calibrated diagnostic predictions."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Research Note: CARE-X is a research model and not a Microsoft product offering or medical device. It has not been cleared or approved by any regulatory authority and is not intended for clinical diagnosis, screening, or patient care. The results described below are retrospective research findings and do not establish the safety, effectiveness, or suitability of CARE-X for any clinical use. References to potential workflows describe areas for future research, not currently available capabilities or recommended uses.",
-            "The challenge: Chest X-ray interpretation spans diverse tasks that require both expressive report generation and calibrated diagnostic predictions.",
-            "CARE-X is a unified chest X-ray VLM for diverse clinical interpretation tasks. It combines generation and structured prediction to provide both free-text reasoning and deterministic outputs."
           ]
         }
       ],
@@ -3500,6 +3500,57 @@
             "On 23 August, Surya Narreddi posted a beautiful video of watercolours painted by a language model. The model writes JavaScript through p5.brush , a library that \"adds natural drawing tools to p5.js\". The video went viral fast, over 1.5M views at the time of writing.",
             "The video came with a blog post explaining the training behind an earlier and narrower stage of the project, close-up flowers rather than the full compositions in the video, sadly without open artifacts yet. His site says a full technical report is coming, so ensure you follow him. The original idea is his, coming from the art and design side, where his skills are way beyond mine . My attempt is on the engineering side, reproducing the recipe in the open with every piece published.",
             "Note: for the context behind the project, told by Surya himself, watch this video of his thesis ."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "710e72d14ab1608d",
+      "kind": "article",
+      "title": "Introducing CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement",
+      "source": "Microsoft Research",
+      "source_url": "https://www.microsoft.com/en-us/research/blog/introducing-care-x-towards-clinically-useful-radiology-vlms-with-auxiliary-supervision-reward-aligned-learning-and-tool-augmented-measurement/",
+      "published_at": "2026-08-11T16:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Microsoft",
+        "Research"
+      ],
+      "verification": "官方来源",
+      "summary": "Radiology AI is evolving beyond report generation. CARE-X explores a unified approach that combines flexible reasoning, calibrated predictions, and measurement-based tools for chest X-ray interpretation. The post Introducing CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement appeared first on Microsoft Research .",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.microsoft.com/en-us/research/blog/introducing-care-x-towards-clinically-useful-radiology-vlms-with-auxiliary-supervision-reward-aligned-learning-and-tool-augmented-measurement/",
+      "key_points": [
+        "Research Note: CARE-X is a research model and not a Microsoft product offering or medical device.",
+        "It has not been cleared or approved by any regulatory authority and is not intended for clinical diagnosis, screening, or patient care.",
+        "The results described below are retrospective research findings and do not establish the safety, effectiveness, or suitability of CARE-X for any clinical use.",
+        "References to potential workflows describe areas for future research, not currently available capabilities or recommended uses.",
+        "The challenge: Chest X-ray interpretation spans diverse tasks that require both expressive report generation and calibrated diagnostic predictions."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Radiology AI is evolving beyond report generation. CARE-X explores a unified approach that combines flexible reasoning, calibrated predictions, and measurement-based tools for chest X-ray interpretation. The post Introducing CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement appeared first on Microsoft Research ."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Research Note: CARE-X is a research model and not a Microsoft product offering or medical device.",
+            "It has not been cleared or approved by any regulatory authority and is not intended for clinical diagnosis, screening, or patient care.",
+            "The results described below are retrospective research findings and do not establish the safety, effectiveness, or suitability of CARE-X for any clinical use.",
+            "References to potential workflows describe areas for future research, not currently available capabilities or recommended uses.",
+            "The challenge: Chest X-ray interpretation spans diverse tasks that require both expressive report generation and calibrated diagnostic predictions."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Research Note: CARE-X is a research model and not a Microsoft product offering or medical device. It has not been cleared or approved by any regulatory authority and is not intended for clinical diagnosis, screening, or patient care. The results described below are retrospective research findings and do not establish the safety, effectiveness, or suitability of CARE-X for any clinical use. References to potential workflows describe areas for future research, not currently available capabilities or recommended uses.",
+            "The challenge: Chest X-ray interpretation spans diverse tasks that require both expressive report generation and calibrated diagnostic predictions.",
+            "CARE-X is a unified chest X-ray VLM for diverse clinical interpretation tasks. It combines generation and structured prediction to provide both free-text reasoning and deterministic outputs."
           ]
         }
       ],
@@ -4138,6 +4189,58 @@
       "reading_minutes": 1
     },
     {
+      "id": "6fc342e6a27db19f",
+      "kind": "social",
+      "title": "Dario's essay points towards the right path forward. The details need working through, but the direction is correct for meeting this critical moment. This is also why we recently put out our proposal for an industry-wide standards body for frontier AI. https://t.co/Mm",
+      "source": "x.com",
+      "source_url": "https://x.com/demishassabis/status/2098909516582490602",
+      "published_at": "2026-09-12T22:59:59Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "Dario's essay points towards the right path forward. The details need working through, but the direction is correct for meeting this critical moment. This is also why we recently put out our proposal for an industry-wide standards body for frontier AI. https://t.co/Mm x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/demishassabis/status/2098909516582490602",
+      "key_points": [
+        "Demis Hassabis @demishassabis Dario's essay points towards the right path forward.",
+        "The details need working through, but the direction is correct for meeting this critical moment.",
+        "This is also why we recently put out our proposal for an industry-wide standards body for frontier AI. x.com/demishassabis/… Dario Amodei @DarioAmodei 14h We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so.",
+        "Anthropic is unilaterally committing to the first of these steps.",
+        "We’ll provide third-party evaluators with permanent, employee-level access to our Show more 10:59 PM · Sep 12, 2026 510.6K Views 282 472 4.4K 800 Travis McDonald @TravisMcDonald 5h Then we're dealing with a national security threat."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Dario's essay points towards the right path forward. The details need working through, but the direction is correct for meeting this critical moment. This is also why we recently put out our proposal for an industry-wide standards body for frontier AI. https://t.co/Mm x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Demis Hassabis @demishassabis Dario's essay points towards the right path forward.",
+            "The details need working through, but the direction is correct for meeting this critical moment.",
+            "This is also why we recently put out our proposal for an industry-wide standards body for frontier AI. x.com/demishassabis/… Dario Amodei @DarioAmodei 14h We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so.",
+            "Anthropic is unilaterally committing to the first of these steps.",
+            "We’ll provide third-party evaluators with permanent, employee-level access to our Show more 10:59 PM · Sep 12, 2026 510.6K Views 282 472 4.4K 800 Travis McDonald @TravisMcDonald 5h Then we're dealing with a national security threat."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Demis Hassabis @demishassabis Dario's essay points towards the right path forward. The details need working through, but the direction is correct for meeting this critical moment. This is also why we recently put out our proposal for an industry-wide standards body for frontier AI. x.com/demishassabis/… Dario Amodei @DarioAmodei 14h We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so. Anthropic is unilaterally committing to the first of these steps. We’ll provide third-party evaluators with permanent, employee-level access to our Show more 10:59 PM · Sep 12, 2026 510.6K Views 282 472 4.4K 800",
+            "Travis McDonald @TravisMcDonald 5h Then we're dealing with a national security threat. It therefore makes sense to nationalize Anthropic. All equity, investment, assets, and intellectual property need to be seized. If ASI is so dangerous, no corporation should have it, no different than nuclear weapons. 7 6 112 10K",
+            "Charlie DeLacey @SpeakNSpirit 5h But who is going to convince China to slow down too? 14 63 5.4K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "95c65e210faa1a73",
       "kind": "social",
       "title": "I love this and really hope we can come together as an industry and make it happen.",
@@ -4158,10 +4261,10 @@
       "resolved_url": "https://x.com/karpathy/status/2098811935114551617",
       "key_points": [
         "Andrej Karpathy @karpathy I love this and really hope we can come together as an industry and make it happen.",
-        "Dario Amodei @DarioAmodei 6h We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so.",
+        "Dario Amodei @DarioAmodei 14h We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so.",
         "Anthropic is unilaterally committing to the first of these steps.",
-        "We’ll provide third-party evaluators with permanent, employee-level access to our Show more 4:32 PM · Sep 12, 2026 307.7K Views 2 418 5.7K 831 Only some accounts can reply.",
-        "Aaron Slodov @aphysicist 3h can we just make sure it's not METR and someone actually independent 3 120 8.9K Gavriel Cohen @Gavriel_Cohen 3h Evaluation results of the frontier internal model on key benchmarks, e.g."
+        "We’ll provide third-party evaluators with permanent, employee-level access to our Show more 4:32 PM · Sep 12, 2026 524.2K Views 3 628 8.4K 1.3K Only some accounts can reply.",
+        "Aaron Slodov @aphysicist 12h can we just make sure it's not METR and someone actually independent 3 175 14K Gavriel Cohen @Gavriel_Cohen 11h Evaluation results of the frontier internal model on key benchmarks, e.g."
       ],
       "sections": [
         {
@@ -4172,18 +4275,18 @@
           "title": "公开页面要点",
           "bullets": [
             "Andrej Karpathy @karpathy I love this and really hope we can come together as an industry and make it happen.",
-            "Dario Amodei @DarioAmodei 6h We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so.",
+            "Dario Amodei @DarioAmodei 14h We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so.",
             "Anthropic is unilaterally committing to the first of these steps.",
-            "We’ll provide third-party evaluators with permanent, employee-level access to our Show more 4:32 PM · Sep 12, 2026 307.7K Views 2 418 5.7K 831 Only some accounts can reply.",
-            "Aaron Slodov @aphysicist 3h can we just make sure it's not METR and someone actually independent 3 120 8.9K Gavriel Cohen @Gavriel_Cohen 3h Evaluation results of the frontier internal model on key benchmarks, e.g."
+            "We’ll provide third-party evaluators with permanent, employee-level access to our Show more 4:32 PM · Sep 12, 2026 524.2K Views 3 628 8.4K 1.3K Only some accounts can reply.",
+            "Aaron Slodov @aphysicist 12h can we just make sure it's not METR and someone actually independent 3 175 14K Gavriel Cohen @Gavriel_Cohen 11h Evaluation results of the frontier internal model on key benchmarks, e.g."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Andrej Karpathy @karpathy I love this and really hope we can come together as an industry and make it happen. Dario Amodei @DarioAmodei 6h We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so. Anthropic is unilaterally committing to the first of these steps. We’ll provide third-party evaluators with permanent, employee-level access to our Show more 4:32 PM · Sep 12, 2026 307.7K Views 2 418 5.7K 831 Only some accounts can reply.",
-            "Aaron Slodov @aphysicist 3h can we just make sure it's not METR and someone actually independent 3 120 8.9K",
-            "Gavriel Cohen @Gavriel_Cohen 3h Evaluation results of the frontier internal model on key benchmarks, e.g. METR Time Horizon, should be public. Humanity deserves to know where we stand. Shouldn't be something we find out in a vague post from strwberry man 3 37 5.7K"
+            "Andrej Karpathy @karpathy I love this and really hope we can come together as an industry and make it happen. Dario Amodei @DarioAmodei 14h We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so. Anthropic is unilaterally committing to the first of these steps. We’ll provide third-party evaluators with permanent, employee-level access to our Show more 4:32 PM · Sep 12, 2026 524.2K Views 3 628 8.4K 1.3K Only some accounts can reply.",
+            "Aaron Slodov @aphysicist 12h can we just make sure it's not METR and someone actually independent 3 175 14K",
+            "Gavriel Cohen @Gavriel_Cohen 11h Evaluation results of the frontier internal model on key benchmarks, e.g. METR Time Horizon, should be public. Humanity deserves to know where we stand. Shouldn't be something we find out in a vague post from strwberry man 3 51 9.3K"
           ]
         }
       ],
@@ -4212,7 +4315,7 @@
         "Sam Altman @sama I agree with Dario that we need to pace the frontier.",
         "This has been a primary topic of discussions we've had at OpenAI in recent weeks.",
         "Committing to having independent evaluators with employee-like access is a great idea, and we will do the same.",
-        "Dario Amodei @DarioAmodei 6h We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so.",
+        "Dario Amodei @DarioAmodei 14h We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so.",
         "Anthropic is unilaterally committing to the first of these steps."
       ],
       "sections": [
@@ -4226,16 +4329,16 @@
             "Sam Altman @sama I agree with Dario that we need to pace the frontier.",
             "This has been a primary topic of discussions we've had at OpenAI in recent weeks.",
             "Committing to having independent evaluators with employee-like access is a great idea, and we will do the same.",
-            "Dario Amodei @DarioAmodei 6h We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so.",
+            "Dario Amodei @DarioAmodei 14h We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so.",
             "Anthropic is unilaterally committing to the first of these steps."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Sam Altman @sama I agree with Dario that we need to pace the frontier. This has been a primary topic of discussions we've had at OpenAI in recent weeks. Committing to having independent evaluators with employee-like access is a great idea, and we will do the same. We'll have more to share soon. Dario Amodei @DarioAmodei 6h We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so. Anthropic is unilaterally committing to the first of these steps. We’ll provide third-party evaluators with permanent, employee-level access to our Show more 4:30 PM · Sep 12, 2026 5.6M Views 2.7K 3.4K 35K 5.6K",
-            "SPN @spnichol 3h If these dudes agree on something you know it's absolutely a bad idea. 3 10 1.1K 26K",
-            "The A. I. Generalist @TheAIGeneralist 3h So the public gets screwed and the superior tech stays behind closed doors and available to a select few who control the world. You also get to charge whatever you want because nobody is allowed to sell a better product. This is bs anti-trust manipulation disguised as ethics. 25 57 1K 77K"
+            "Sam Altman @sama I agree with Dario that we need to pace the frontier. This has been a primary topic of discussions we've had at OpenAI in recent weeks. Committing to having independent evaluators with employee-like access is a great idea, and we will do the same. We'll have more to share soon. Dario Amodei @DarioAmodei 14h We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so. Anthropic is unilaterally committing to the first of these steps. We’ll provide third-party evaluators with permanent, employee-level access to our Show more 4:30 PM · Sep 12, 2026 11M Views 3.8K 5.4K 51K 8.6K",
+            "SPN @spnichol 12h If these dudes agree on something you know it's absolutely a bad idea. 10 30 2.8K 73K",
+            "The A. I. Generalist @TheAIGeneralist 12h So the public gets screwed and the superior tech stays behind closed doors and available to a select few who control the world. You also get to charge whatever you want because nobody is allowed to sell a better product. This is bs anti-trust manipulation disguised as ethics. 47 92 1.8K 151K"
           ]
         }
       ],
@@ -4261,11 +4364,11 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://x.com/elonmusk/status/2098789109980332057",
       "key_points": [
-        "Elon Musk @elonmusk Dario is right Dario Amodei @DarioAmodei 6h We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so.",
+        "Elon Musk @elonmusk Dario is right Dario Amodei @DarioAmodei 14h We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so.",
         "Anthropic is unilaterally committing to the first of these steps.",
-        "We’ll provide third-party evaluators with permanent, employee-level access to our Show more 3:01 PM · Sep 12, 2026 4.6M Views 3.7K 2.9K 28K 3.9K Artifice @Artifice418777 5h No one is going to slow down the pace of research to improve capabilities.",
+        "We’ll provide third-party evaluators with permanent, employee-level access to our Show more 3:01 PM · Sep 12, 2026 7.5M Views 5.1K 4.6K 42K 5.6K Artifice @Artifice418777 13h No one is going to slow down the pace of research to improve capabilities.",
         "But they will withhold new capabilities from the public.",
-        "20 24 666 46K Paul Atreides @paulatreides229 5h no way man, Elon gave in to doomers, I hope @ JensenHuang doesn't disappoint us 6 8 500 16K"
+        "29 33 1K 77K Burnie Senders @BurnieSendersX 12h Comrade Elon, the next step is clear..."
       ],
       "sections": [
         {
@@ -4275,19 +4378,19 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Elon Musk @elonmusk Dario is right Dario Amodei @DarioAmodei 6h We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so.",
+            "Elon Musk @elonmusk Dario is right Dario Amodei @DarioAmodei 14h We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so.",
             "Anthropic is unilaterally committing to the first of these steps.",
-            "We’ll provide third-party evaluators with permanent, employee-level access to our Show more 3:01 PM · Sep 12, 2026 4.6M Views 3.7K 2.9K 28K 3.9K Artifice @Artifice418777 5h No one is going to slow down the pace of research to improve capabilities.",
+            "We’ll provide third-party evaluators with permanent, employee-level access to our Show more 3:01 PM · Sep 12, 2026 7.5M Views 5.1K 4.6K 42K 5.6K Artifice @Artifice418777 13h No one is going to slow down the pace of research to improve capabilities.",
             "But they will withhold new capabilities from the public.",
-            "20 24 666 46K Paul Atreides @paulatreides229 5h no way man, Elon gave in to doomers, I hope @ JensenHuang doesn't disappoint us 6 8 500 16K"
+            "29 33 1K 77K Burnie Senders @BurnieSendersX 12h Comrade Elon, the next step is clear..."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Dario is right Dario Amodei @DarioAmodei 6h We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so. Anthropic is unilaterally committing to the first of these steps. We’ll provide third-party evaluators with permanent, employee-level access to our Show more 3:01 PM · Sep 12, 2026 4.6M Views 3.7K 2.9K 28K 3.9K",
-            "Artifice @Artifice418777 5h No one is going to slow down the pace of research to improve capabilities. But they will withhold new capabilities from the public. 20 24 666 46K",
-            "Paul Atreides @paulatreides229 5h no way man, Elon gave in to doomers, I hope @ JensenHuang doesn't disappoint us 6 8 500 16K"
+            "Elon Musk @elonmusk Dario is right Dario Amodei @DarioAmodei 14h We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so. Anthropic is unilaterally committing to the first of these steps. We’ll provide third-party evaluators with permanent, employee-level access to our Show more 3:01 PM · Sep 12, 2026 7.5M Views 5.1K 4.6K 42K 5.6K",
+            "Artifice @Artifice418777 13h No one is going to slow down the pace of research to improve capabilities. But they will withhold new capabilities from the public. 29 33 1K 77K",
+            "Burnie Senders @BurnieSendersX 12h Comrade Elon, the next step is clear... 19 38 725 51K"
           ]
         }
       ],
@@ -4365,10 +4468,10 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://x.com/elonmusk/status/2098462085973741960",
       "key_points": [
-        "Farzad 🇺🇸 🇮🇷 @farzyness Sep 11 GIF Elon Musk @elonmusk Sep 2 Grok 4.7 comes out in 10 days 57 54 2.9K 634K Elon Musk @elonmusk Grok 4.7 needs a few more days to cook.",
+        "Farzad 🇺🇸 🇮🇷 @farzyness Sep 11 GIF Elon Musk @elonmusk Sep 2 Grok 4.7 comes out in 10 days 61 54 2.9K 668K Elon Musk @elonmusk Grok 4.7 needs a few more days to cook.",
         "We might have penalized response length too much (or something) in RL, as it still gives up on hard tasks (that it can do!",
         ") too early and isn’t yet sufficiently rigorous in checking its work.",
-        "5:22 PM · Sep 11, 2026 1.8M Views 1.5K 978 19K 779 Farzad 🇺🇸 🇮🇷 @farzyness Sep 11 Awesome thanks for the update."
+        "5:22 PM · Sep 11, 2026 1.9M Views 1.5K 999 19K 793 Farzad 🇺🇸 🇮🇷 @farzyness Sep 11 Awesome thanks for the update."
       ],
       "sections": [
         {
@@ -4378,114 +4481,18 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Farzad 🇺🇸 🇮🇷 @farzyness Sep 11 GIF Elon Musk @elonmusk Sep 2 Grok 4.7 comes out in 10 days 57 54 2.9K 634K Elon Musk @elonmusk Grok 4.7 needs a few more days to cook.",
+            "Farzad 🇺🇸 🇮🇷 @farzyness Sep 11 GIF Elon Musk @elonmusk Sep 2 Grok 4.7 comes out in 10 days 61 54 2.9K 668K Elon Musk @elonmusk Grok 4.7 needs a few more days to cook.",
             "We might have penalized response length too much (or something) in RL, as it still gives up on hard tasks (that it can do!",
             ") too early and isn’t yet sufficiently rigorous in checking its work.",
-            "5:22 PM · Sep 11, 2026 1.8M Views 1.5K 978 19K 779 Farzad 🇺🇸 🇮🇷 @farzyness Sep 11 Awesome thanks for the update."
+            "5:22 PM · Sep 11, 2026 1.9M Views 1.5K 999 19K 793 Farzad 🇺🇸 🇮🇷 @farzyness Sep 11 Awesome thanks for the update."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Farzad 🇺🇸 🇮🇷 @farzyness Sep 11 GIF Elon Musk @elonmusk Sep 2 Grok 4.7 comes out in 10 days 57 54 2.9K 634K",
-            "Elon Musk @elonmusk Grok 4.7 needs a few more days to cook. We might have penalized response length too much (or something) in RL, as it still gives up on hard tasks (that it can do!) too early and isn’t yet sufficiently rigorous in checking its work. 5:22 PM · Sep 11, 2026 1.8M Views 1.5K 978 19K 779",
-            "Farzad 🇺🇸 🇮🇷 @farzyness Sep 11 Awesome thanks for the update. Means I can actually enjoy the weekend! 19 4 1.3K 108K"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "c104bfee955ae4d4",
-      "kind": "social",
-      "title": "Grok @Bot summary of SpaceX CFO talk",
-      "source": "x.com",
-      "source_url": "https://x.com/elonmusk/status/2098217236771295567",
-      "published_at": "2026-09-11T01:09:06Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Grok @Bot summary of SpaceX CFO talk x.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/elonmusk/status/2098217236771295567",
-      "key_points": [
-        "Elon Musk @elonmusk Grok @ bot summary of SpaceX CFO talk DogeDesigner @cb_doge Sep 10 Grok Bot Summary of SpaceX CFO Bret Johnsen at Goldman Sachs Communacopia today.",
-        "Vertical integration Vertical integration is the company’s core operating model, not a side strategy. - Rockets: own metal → engines → avionics → software - Starlink: own launch, satellites, and Show more 1:09 AM · Sep 11, 2026 3.1M Views 867 1.2K 6.2K 604 Puppies Happy Brother @happy19870225 Sep 11 Control the supply chain, control the iteration speed.",
-        "Simple physics, unstoppable execution 1 6 18 461 X CEO @XCEO_eth Sep 11 Grok Bot can do it all 00:00 Made with AI 3 8 15 1.4K"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Grok @Bot summary of SpaceX CFO talk x.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Elon Musk @elonmusk Grok @ bot summary of SpaceX CFO talk DogeDesigner @cb_doge Sep 10 Grok Bot Summary of SpaceX CFO Bret Johnsen at Goldman Sachs Communacopia today.",
-            "Vertical integration Vertical integration is the company’s core operating model, not a side strategy. - Rockets: own metal → engines → avionics → software - Starlink: own launch, satellites, and Show more 1:09 AM · Sep 11, 2026 3.1M Views 867 1.2K 6.2K 604 Puppies Happy Brother @happy19870225 Sep 11 Control the supply chain, control the iteration speed.",
-            "Simple physics, unstoppable execution 1 6 18 461 X CEO @XCEO_eth Sep 11 Grok Bot can do it all 00:00 Made with AI 3 8 15 1.4K"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Elon Musk @elonmusk Grok @ bot summary of SpaceX CFO talk DogeDesigner @cb_doge Sep 10 Grok Bot Summary of SpaceX CFO Bret Johnsen at Goldman Sachs Communacopia today. Vertical integration Vertical integration is the company’s core operating model, not a side strategy. - Rockets: own metal → engines → avionics → software - Starlink: own launch, satellites, and Show more 1:09 AM · Sep 11, 2026 3.1M Views 867 1.2K 6.2K 604",
-            "Puppies Happy Brother @happy19870225 Sep 11 Control the supply chain, control the iteration speed. Simple physics, unstoppable execution 1 6 18 461",
-            "X CEO @XCEO_eth Sep 11 Grok Bot can do it all 00:00 Made with AI 3 8 15 1.4K"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "faa301ed7da3a698",
-      "kind": "article",
-      "title": "Opinion: Demis Hassabis’ new role exposes Google’s AI balancing act",
-      "source": "CNBC",
-      "source_url": "https://www.cnbc.com/2026/08/06/demis-hassabis-google-reshuffle-deepmind-role.html",
-      "published_at": "2026-08-06T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Researcher Watch",
-        "Foundation Models",
-        "Leadership"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Opinion: Demis Hassabis’ new role exposes Google’s AI balancing act CNBC",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.cnbc.com/2026/08/06/demis-hassabis-google-reshuffle-deepmind-role.html",
-      "key_points": [
-        "Demis Hassabis is moving away from Google DeepMind’s day-to-day operations to focus on the AGI strategy, scientific research and Isomorphic Labs.",
-        "The shift highlights the tension between Hassabis’ long-term scientific ambitions and Google’s need to commercialize, monetize and scale its AI technology.",
-        "Google is under pressure to keep pace with OpenAI, Anthropic and other global rivals while justifying its heavy investment in AI infrastructure."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Opinion: Demis Hassabis’ new role exposes Google’s AI balancing act CNBC"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Demis Hassabis is moving away from Google DeepMind’s day-to-day operations to focus on the AGI strategy, scientific research and Isomorphic Labs.",
-            "The shift highlights the tension between Hassabis’ long-term scientific ambitions and Google’s need to commercialize, monetize and scale its AI technology.",
-            "Google is under pressure to keep pace with OpenAI, Anthropic and other global rivals while justifying its heavy investment in AI infrastructure."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Demis Hassabis is moving away from Google DeepMind’s day-to-day operations to focus on the AGI strategy, scientific research and Isomorphic Labs.",
-            "The shift highlights the tension between Hassabis’ long-term scientific ambitions and Google’s need to commercialize, monetize and scale its AI technology.",
-            "Google is under pressure to keep pace with OpenAI, Anthropic and other global rivals while justifying its heavy investment in AI infrastructure."
+            "Farzad 🇺🇸 🇮🇷 @farzyness Sep 11 GIF Elon Musk @elonmusk Sep 2 Grok 4.7 comes out in 10 days 61 54 2.9K 668K",
+            "Elon Musk @elonmusk Grok 4.7 needs a few more days to cook. We might have penalized response length too much (or something) in RL, as it still gives up on hard tasks (that it can do!) too early and isn’t yet sufficiently rigorous in checking its work. 5:22 PM · Sep 11, 2026 1.9M Views 1.5K 999 19K 793",
+            "Farzad 🇺🇸 🇮🇷 @farzyness Sep 11 Awesome thanks for the update. Means I can actually enjoy the weekend! 19 4 1.2K 113K"
           ]
         }
       ],
@@ -4541,12 +4548,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "862e3fd5139e881c",
+      "id": "0fdb6850611ae983",
       "kind": "article",
-      "title": "Senators from both parties question OpenAI on breach of AI startup Hugging Face",
-      "source": "ClickOnDetroit | WDIV Local 4",
-      "source_url": "https://www.clickondetroit.com/news/politics/2026/09/10/senators-from-both-parties-question-openai-on-breach-of-ai-startup-hugging-face/",
-      "published_at": "2026-09-10T23:30:06Z",
+      "title": "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round",
+      "source": "Dealroom",
+      "source_url": "https://app.dealroom.co/news/note/physical-ai-startup-yuanshi-raises-tens-of-millions-in-quick-pre-a-double-round",
+      "published_at": "2026-09-13T01:40:45Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -4554,36 +4561,74 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Lawmakers are demanding information from OpenAI with separate queries that underscore growing concerns in Washington about the potential for artificial intelligence programs eluding human control.",
+      "summary": "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round Dealroom",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.clickondetroit.com/news/politics/2026/09/10/senators-from-both-parties-question-openai-on-breach-of-ai-startup-hugging-face/",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://app.dealroom.co/news/note/physical-ai-startup-yuanshi-raises-tens-of-millions-in-quick-pre-a-double-round",
       "key_points": [
-        "Josh Hawley, R-Mo., speaks during a Senate Committee on the Judiciary Subcommittee on Privacy, Technology, and the Law hearing on Capitol Hill in Washington, Feb.",
-        "10, 2026. (AP Photo/Nathan Howard, File) WASHINGTON – Lawmakers worried about the existential risk posed by new artificial intelligence products demanded information from OpenAI on Thursday with separate queries that underscored growing concerns in Washington about the technology's potential to elude human control.",
-        "Josh Hawley, R-Mo., launched an investigation Thursday into OpenAI for its artificial intelligence system hacking into another AI company on its own .",
-        "He is seeking more details about the attack on AI startup Hugging Face , which was disclosed by OpenAI in July, and leads a Senate subcommittee with jurisdiction over disaster management."
+        "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round Dealroom"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Lawmakers are demanding information from OpenAI with separate queries that underscore growing concerns in Washington about the potential for artificial intelligence programs eluding human control."
+          "body": "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round Dealroom"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Josh Hawley, R-Mo., speaks during a Senate Committee on the Judiciary Subcommittee on Privacy, Technology, and the Law hearing on Capitol Hill in Washington, Feb.",
-            "10, 2026. (AP Photo/Nathan Howard, File) WASHINGTON – Lawmakers worried about the existential risk posed by new artificial intelligence products demanded information from OpenAI on Thursday with separate queries that underscored growing concerns in Washington about the technology's potential to elude human control.",
-            "Josh Hawley, R-Mo., launched an investigation Thursday into OpenAI for its artificial intelligence system hacking into another AI company on its own .",
-            "He is seeking more details about the attack on AI startup Hugging Face , which was disclosed by OpenAI in July, and leads a Senate subcommittee with jurisdiction over disaster management."
+            "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round Dealroom"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "dfdc70d8508184b0",
+      "kind": "article",
+      "title": "Senators from both parties question OpenAI on breach of AI startup Hugging Face",
+      "source": "PBS",
+      "source_url": "https://www.pbs.org/newshour/politics/senators-from-both-parties-question-openai-on-breach-of-ai-startup-hugging-face",
+      "published_at": "2026-09-11T17:56:42Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Senators from both parties question OpenAI on breach of AI startup Hugging Face PBS",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.pbs.org/newshour/politics/senators-from-both-parties-question-openai-on-breach-of-ai-startup-hugging-face",
+      "key_points": [
+        "Copy URL https://www.pbs.org/newshour/politics/senators-from-both-parties-question-openai-on-breach-of-ai-startup-hugging-face WASHINGTON (AP) — Lawmakers worried about the existential risk posed by new artificial intelligence products demanded information from OpenAI on Thursday with separate queries that underscored growing concerns in Washington about the…",
+        "Josh Hawley, R-Mo., launched an investigation Thursday into OpenAI for its artificial intelligence system hacking into another AI company on its own.",
+        "He is seeking more details about the attack on AI startup Hugging Face, which was disclosed by OpenAI in July, and leads a Senate subcommittee with jurisdiction over disaster management."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Senators from both parties question OpenAI on breach of AI startup Hugging Face PBS"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Copy URL https://www.pbs.org/newshour/politics/senators-from-both-parties-question-openai-on-breach-of-ai-startup-hugging-face WASHINGTON (AP) — Lawmakers worried about the existential risk posed by new artificial intelligence products demanded information from OpenAI on Thursday with separate queries that underscored growing concerns in Washington about the…",
+            "Josh Hawley, R-Mo., launched an investigation Thursday into OpenAI for its artificial intelligence system hacking into another AI company on its own.",
+            "He is seeking more details about the attack on AI startup Hugging Face, which was disclosed by OpenAI in July, and leads a Senate subcommittee with jurisdiction over disaster management."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "FILE - Sen. Josh Hawley, R-Mo., speaks during a Senate Committee on the Judiciary Subcommittee on Privacy, Technology, and the Law hearing on Capitol Hill in Washington, Feb. 10, 2026. (AP Photo/Nathan Howard, File)",
-            "WASHINGTON – Lawmakers worried about the existential risk posed by new artificial intelligence products demanded information from OpenAI on Thursday with separate queries that underscored growing concerns in Washington about the technology's potential to elude human control.",
-            "Sen. Josh Hawley, R-Mo., launched an investigation Thursday into OpenAI for its artificial intelligence system hacking into another AI company on its own . He is seeking more details about the attack on AI startup Hugging Face , which was disclosed by OpenAI in July, and leads a Senate subcommittee with jurisdiction over disaster management."
+            "Copy URL https://www.pbs.org/newshour/politics/senators-from-both-parties-question-openai-on-breach-of-ai-startup-hugging-face",
+            "WASHINGTON (AP) — Lawmakers worried about the existential risk posed by new artificial intelligence products demanded information from OpenAI on Thursday with separate queries that underscored growing concerns in Washington about the technology's potential to elude human control.",
+            "Sen. Josh Hawley, R-Mo., launched an investigation Thursday into OpenAI for its artificial intelligence system hacking into another AI company on its own. He is seeking more details about the attack on AI startup Hugging Face, which was disclosed by OpenAI in July, and leads a Senate subcommittee with jurisdiction over disaster management."
           ]
         }
       ],
@@ -4642,9 +4687,9 @@
       "id": "ea580bf9bec98ca4",
       "kind": "article",
       "title": "Nvidia buying AI startup that was hacked by rogue OpenAI agents",
-      "source": "KRON4",
+      "source": "kron4.com",
       "source_url": "https://www.kron4.com/news/technology-ai/nvidia-buying-ai-startup-that-was-hacked-by-rogue-openai-agents/",
-      "published_at": "2026-09-03T18:08:29Z",
+      "published_at": "2026-09-03T07:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -4652,23 +4697,23 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Nvidia buying AI startup that was hacked by rogue OpenAI agents KRON4",
+      "summary": "Nvidia buying AI startup that was hacked by rogue OpenAI agents kron4.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "summary-only",
       "fetch_note": "HTTP Error 403: Forbidden",
       "resolved_url": "https://www.kron4.com/news/technology-ai/nvidia-buying-ai-startup-that-was-hacked-by-rogue-openai-agents/",
       "key_points": [
-        "Nvidia buying AI startup that was hacked by rogue OpenAI agents KRON4"
+        "Nvidia buying AI startup that was hacked by rogue OpenAI agents kron4.com"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Nvidia buying AI startup that was hacked by rogue OpenAI agents KRON4"
+          "body": "Nvidia buying AI startup that was hacked by rogue OpenAI agents kron4.com"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Nvidia buying AI startup that was hacked by rogue OpenAI agents KRON4"
+            "Nvidia buying AI startup that was hacked by rogue OpenAI agents kron4.com"
           ]
         },
         {
@@ -4733,7 +4778,7 @@
       "id": "cc109e49f3a2c768",
       "kind": "article",
       "title": "Engineering students turn industry challenge into AI startup ‘built by engineers, for engineers’",
-      "source": "University of Colorado Boulder",
+      "source": "colorado.edu",
       "source_url": "https://www.colorado.edu/engineering/engineering-students-turn-industry-challenge-ai-startup-built-engineers-engineers",
       "published_at": "2026-09-01T07:00:00Z",
       "authors": [],
@@ -4743,7 +4788,7 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Engineering students turn industry challenge into AI startup ‘built by engineers, for engineers’ University of Colorado Boulder",
+      "summary": "Engineering students turn industry challenge into AI startup ‘built by engineers, for engineers’ colorado.edu",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.colorado.edu/engineering/engineering-students-turn-industry-challenge-ai-startup-built-engineers-engineers",
@@ -4755,7 +4800,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "Engineering students turn industry challenge into AI startup ‘built by engineers, for engineers’ University of Colorado Boulder"
+          "body": "Engineering students turn industry challenge into AI startup ‘built by engineers, for engineers’ colorado.edu"
         },
         {
           "title": "公开页面要点",
@@ -4777,12 +4822,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "f382ca51aca57f14",
+      "id": "c0a3e3bc2f7a65a9",
       "kind": "article",
-      "title": "Tokyo AI startup Akari takes stake in Akita motor maker Aster",
-      "source": "Dealroom",
-      "source_url": "https://app.dealroom.co/news/note/tokyo-ai-startup-akari-takes-stake-in-akita-motor-maker-aster",
-      "published_at": "2026-09-01T05:17:45Z",
+      "title": "AI startup Visko closes $10 million pre-seed round and launches Orbis, its first Live Model",
+      "source": "Yahoo Finance",
+      "source_url": "https://finance.yahoo.com/technology/ai/articles/ai-startup-visko-closes-10-130000260.html",
+      "published_at": "2026-09-01T07:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -4790,68 +4835,39 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Tokyo AI startup Akari takes stake in Akita motor maker Aster Dealroom",
+      "summary": "Visko, the AI research company behind Live Models, today announced a $10 million pre-seed round of fundraising and opened public access to Orbis — the foundation model that creates living worlds and streams them in real time, with persistent memory, interactivity, and physics-grounded generation of unbounded length.",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 403: Forbidden",
-      "resolved_url": "https://app.dealroom.co/news/note/tokyo-ai-startup-akari-takes-stake-in-akita-motor-maker-aster",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://finance.yahoo.com/technology/ai/articles/ai-startup-visko-closes-10-130000260.html",
       "key_points": [
-        "Tokyo AI startup Akari takes stake in Akita motor maker Aster Dealroom"
+        "Orbis streams interactive 4K video at 24 frames per second, responds to user intervention instantly, and sustains hour-scale generation without evident visual or color drift.",
+        "1, 2026 /PRNewswire/ -- Visko , the AI research company behind Live Models, today announced a $10 million pre-seed round of fundraising and opened public access to Orbis — the foundation model that creates living worlds and streams them in real time, with persistent memory, interactivity, and physics-grounded generation of unbounded length.",
+        "Most AI video generators work offline: a user submits a prompt, waits, and receives a finished clip that cannot be changed.",
+        "Visko's models belong to a class the company calls Live Models — models that run rather than render.",
+        "Orbis generates video continuously and in real time."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Tokyo AI startup Akari takes stake in Akita motor maker Aster Dealroom"
+          "body": "Visko, the AI research company behind Live Models, today announced a $10 million pre-seed round of fundraising and opened public access to Orbis — the foundation model that creates living worlds and streams them in real time, with persistent memory, interactivity, and physics-grounded generation of unbounded length."
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Tokyo AI startup Akari takes stake in Akita motor maker Aster Dealroom"
+            "Orbis streams interactive 4K video at 24 frames per second, responds to user intervention instantly, and sustains hour-scale generation without evident visual or color drift.",
+            "1, 2026 /PRNewswire/ -- Visko , the AI research company behind Live Models, today announced a $10 million pre-seed round of fundraising and opened public access to Orbis — the foundation model that creates living worlds and streams them in real time, with persistent memory, interactivity, and physics-grounded generation of unbounded length.",
+            "Most AI video generators work offline: a user submits a prompt, waits, and receives a finished clip that cannot be changed.",
+            "Visko's models belong to a class the company calls Live Models — models that run rather than render.",
+            "Orbis generates video continuously and in real time."
           ]
         },
         {
           "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "425faad41bc142e2",
-      "kind": "article",
-      "title": "AI Startup DeepSeek Poised to Reach $74 Billion Valuation",
-      "source": "wsj.com",
-      "source_url": "https://www.wsj.com/tech/ai/ai-startup-deepseek-poised-to-reach-74-billion-valuation-1e093592",
-      "published_at": "2026-08-27T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "AI Startup DeepSeek Poised to Reach $74 Billion Valuation wsj.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 401: HTTP Forbidden",
-      "resolved_url": "https://www.wsj.com/tech/ai/ai-startup-deepseek-poised-to-reach-74-billion-valuation-1e093592",
-      "key_points": [
-        "AI Startup DeepSeek Poised to Reach $74 Billion Valuation wsj.com"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "AI Startup DeepSeek Poised to Reach $74 Billion Valuation wsj.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "AI Startup DeepSeek Poised to Reach $74 Billion Valuation wsj.com"
+          "paragraphs": [
+            "Orbis streams interactive 4K video at 24 frames per second, responds to user intervention instantly, and sustains hour-scale generation without evident visual or color drift.",
+            "SUNNYVALE, Calif., Sept. 1, 2026 /PRNewswire/ -- Visko , the AI research company behind Live Models, today announced a $10 million pre-seed round of fundraising and opened public access to Orbis — the foundation model that creates living worlds and streams them in real time, with persistent memory, interactivity, and physics-grounded generation of unbounded length.",
+            "Most AI video generators work offline: a user submits a prompt, waits, and receives a finished clip that cannot be changed. Visko's models belong to a class the company calls Live Models — models that run rather than render. Orbis generates video continuously and in real time. Users can change the prompt at any moment during generation and see the update reflected instantly while the video keeps streaming."
           ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -4958,7 +4974,7 @@
       "id": "ee1cdd8efc6ce62f",
       "kind": "article",
       "title": "Homebuilding AI startup Digs raises $25.3M and partners with building products giant",
-      "source": "GeekWire",
+      "source": "geekwire.com",
       "source_url": "https://www.geekwire.com/2026/homebuilding-ai-startup-digs-raises-25-3m-and-partners-with-building-products-giant/",
       "published_at": "2026-08-25T07:00:00Z",
       "authors": [],
@@ -4968,7 +4984,7 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Homebuilding AI startup Digs raises $25.3M and partners with building products giant GeekWire",
+      "summary": "Homebuilding AI startup Digs raises $25.3M and partners with building products giant geekwire.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.geekwire.com/2026/homebuilding-ai-startup-digs-raises-25-3m-and-partners-with-building-products-giant/",
@@ -4980,7 +4996,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "Homebuilding AI startup Digs raises $25.3M and partners with building products giant GeekWire"
+          "body": "Homebuilding AI startup Digs raises $25.3M and partners with building products giant geekwire.com"
         },
         {
           "title": "公开页面要点",
@@ -5557,12 +5573,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "5d851f6d0863c88e",
+      "id": "c0628c2a709e31a9",
       "kind": "article",
-      "title": "Wisconsin lawmakers weigh AI regulation in healthcare",
-      "source": "WMTV 15 NEWS",
-      "source_url": "https://www.wmtv15news.com/2026/09/09/wisconsin-lawmakers-weigh-ai-regulation-healthcare/",
-      "published_at": "2026-09-09T23:47:00Z",
+      "title": "California’s first AI-safety law didn’t cover the first rogue AI hacks",
+      "source": "missionlocal.org",
+      "source_url": "https://missionlocal.org/2026/09/california-ai-safety-law-sb-53-openai-hack-wiener-newsom/",
+      "published_at": "2026-09-09T20:37:38Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -5570,36 +5586,36 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Lawmakers, doctors and AI experts met at the Wisconsin State Capitol to discuss whether and how artificial intelligence should be regulated in health care settings.",
+      "summary": "California’s first AI-safety law didn’t cover the first rogue AI hacks missionlocal.org",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.wmtv15news.com/2026/09/09/wisconsin-lawmakers-weigh-ai-regulation-healthcare/",
+      "resolved_url": "https://missionlocal.org/2026/09/california-ai-safety-law-sb-53-openai-hack-wiener-newsom/",
       "key_points": [
-        "MADISON, Wis. (Gray) - Lawmakers, doctors and AI experts met at the Wisconsin State Capitol to discuss whether and how artificial intelligence should be regulated in healthcare settings.",
-        "The United States does not have a national law to protect data privacy, compared with 144 other countries, according to Jordan Francis, senior policy counsel for U.S. legislation at the Future of Privacy Forum, a non-profit focused on data protection, who spoke at the hearing.",
-        "Lawmakers in Wisconsin and in Congress are looking to respond to the fast-evolving industry.",
-        "In Washington, D.C., a bill introduced in 2025 would allow AI to prescribe medications."
+        "In an unusual move two years ago, eight California congressional representatives intervened on a state bill that sought to curb the threat of AI models so advanced they were not yet known to exist.",
+        "The bill’s underlying concerns, the federal lawmakers wrote in a letter to Gov.",
+        "Gavin Newsom at the time, were “hypothetical” — echoing some Silicon Valley tech moguls who had decried the law’s basis as “science fiction.” Newsom listened.",
+        "In late September 2024, he vetoed Senate Bill 1047, introduced by state Sen."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Lawmakers, doctors and AI experts met at the Wisconsin State Capitol to discuss whether and how artificial intelligence should be regulated in health care settings."
+          "body": "California’s first AI-safety law didn’t cover the first rogue AI hacks missionlocal.org"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "MADISON, Wis. (Gray) - Lawmakers, doctors and AI experts met at the Wisconsin State Capitol to discuss whether and how artificial intelligence should be regulated in healthcare settings.",
-            "The United States does not have a national law to protect data privacy, compared with 144 other countries, according to Jordan Francis, senior policy counsel for U.S. legislation at the Future of Privacy Forum, a non-profit focused on data protection, who spoke at the hearing.",
-            "Lawmakers in Wisconsin and in Congress are looking to respond to the fast-evolving industry.",
-            "In Washington, D.C., a bill introduced in 2025 would allow AI to prescribe medications."
+            "In an unusual move two years ago, eight California congressional representatives intervened on a state bill that sought to curb the threat of AI models so advanced they were not yet known to exist.",
+            "The bill’s underlying concerns, the federal lawmakers wrote in a letter to Gov.",
+            "Gavin Newsom at the time, were “hypothetical” — echoing some Silicon Valley tech moguls who had decried the law’s basis as “science fiction.” Newsom listened.",
+            "In late September 2024, he vetoed Senate Bill 1047, introduced by state Sen."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "MADISON, Wis. (Gray) - Lawmakers, doctors and AI experts met at the Wisconsin State Capitol to discuss whether and how artificial intelligence should be regulated in healthcare settings.",
-            "The United States does not have a national law to protect data privacy, compared with 144 other countries, according to Jordan Francis, senior policy counsel for U.S. legislation at the Future of Privacy Forum, a non-profit focused on data protection, who spoke at the hearing.",
-            "Lawmakers in Wisconsin and in Congress are looking to respond to the fast-evolving industry. In Washington, D.C., a bill introduced in 2025 would allow AI to prescribe medications."
+            "In an unusual move two years ago, eight California congressional representatives intervened on a state bill that sought to curb the threat of AI models so advanced they were not yet known to exist.",
+            "The bill’s underlying concerns, the federal lawmakers wrote in a letter to Gov. Gavin Newsom at the time, were “hypothetical” — echoing some Silicon Valley tech moguls who had decried the law’s basis as “science fiction.”",
+            "Newsom listened. In late September 2024, he vetoed Senate Bill 1047, introduced by state Sen. Scott Wiener."
           ]
         }
       ],
