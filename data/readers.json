@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-13T20:47:40Z",
+  "generated_at": "2026-09-14T04:52:24Z",
   "record_count": 130,
   "records": [
     {
@@ -513,6 +513,51 @@
       "reading_minutes": 1
     },
     {
+      "id": "rhb-icml-2026",
+      "kind": "paper",
+      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
+      "source": "OpenReview · arXiv",
+      "source_url": "https://arxiv.org/abs/2605.02964",
+      "published_at": "2026-06-24T00:00:00Z",
+      "authors": [
+        "Kunvar Thaman"
+      ],
+      "venue": "ICML 2026",
+      "tags": [
+        "Reward Hacking",
+        "Agent Safety",
+        "Evaluation"
+      ],
+      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
+      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/rhb-icml-2026.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://arxiv.org/pdf/2605.02964",
+      "key_points": [
+        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
+        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
+        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
+        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
+        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
+        },
+        {
+          "title": "关键结果",
+          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
+        },
+        {
+          "title": "局限与结论",
+          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
+        }
+      ],
+      "reading_minutes": 46
+    },
+    {
       "id": "0348a8f20d1796e0",
       "kind": "article",
       "title": "Cognition helps Devin test its own work with GPT‑6 Astra",
@@ -899,51 +944,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "rhb-icml-2026",
-      "kind": "paper",
-      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
-      "source": "OpenReview · arXiv",
-      "source_url": "https://arxiv.org/abs/2605.02964",
-      "published_at": "2026-06-24T00:00:00Z",
-      "authors": [
-        "Kunvar Thaman"
-      ],
-      "venue": "ICML 2026",
-      "tags": [
-        "Reward Hacking",
-        "Agent Safety",
-        "Evaluation"
-      ],
-      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
-      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/rhb-icml-2026.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://arxiv.org/pdf/2605.02964",
-      "key_points": [
-        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
-        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
-        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
-        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
-        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
-        },
-        {
-          "title": "关键结果",
-          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
-        },
-        {
-          "title": "局限与结论",
-          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
-        }
-      ],
-      "reading_minutes": 46
-    },
-    {
       "id": "631ad0996fb828cd",
       "kind": "article",
       "title": "Now everyone can put data to work",
@@ -1237,11 +1237,51 @@
       "reading_minutes": 1
     },
     {
+      "id": "bb6e2d89accc19d4",
+      "kind": "article",
+      "title": "DeepSeek V4.1 Flash 发布 并下调API价格 ;苹果秋季 发布 会落幕;OpenAI悄然收紧ChatGPT广告政策;Meta发起又一轮重组丨出海周报",
+      "source": "微信公众号 · 点点出海",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1789361522&ver=6965&signature=NTymLxzyoTpliEi5xmq6IJ-KwcdbA7WbAf-6Z9f-Jf0qeMF9tiBBtSlaxTg9VGpoDN7EU4OJ7LqNhQJOrLdYHXZiQ3WZdlJNxlBPCTq1nCRIi87urv1HzFS-SnO2kTGX&new=1",
+      "published_at": "2026-09-14T04:01:54Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "微信公众号",
+        "DeepSeek",
+        "模型"
+      ],
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "summary": "09 DeepSeek V4.1 Flash 发布 并下调API价格9月9日, DeepSeek 开放平台发公告宣布,将于北京时间9月10日12时起,下调flash系列模...",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "indexed-summary",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HIB9p2qj0zNBIZ92cjVDXNPhLxy_D35GgKrhcSpN&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789361522%26ver%3D6965%26signature%3DNTymLxzyoTpliEi5xmq6IJ-KwcdbA7WbAf-6Z9f-Jf0qeMF9tiBBtSlaxTg9VGpoDN7EU4OJ7LqNhQJOrLdYHXZiQ3WZdlJNxlBPCTq1nCRIi87urv1HzFS-SnO2kTGX%26new%3D1",
+      "key_points": [
+        "09 DeepSeek V4.1 Flash 发布 并下调API价格9月9日, DeepSeek 开放平台发公告宣布,将于北京时间9月10日12时起,下调flash系列模..."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "09 DeepSeek V4.1 Flash 发布 并下调API价格9月9日, DeepSeek 开放平台发公告宣布,将于北京时间9月10日12时起,下调flash系列模..."
+        },
+        {
+          "title": "公开索引摘要",
+          "bullets": [
+            "09 DeepSeek V4.1 Flash 发布 并下调API价格9月9日, DeepSeek 开放平台发公告宣布,将于北京时间9月10日12时起,下调flash系列模..."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "418af2bfd8261476",
       "kind": "article",
       "title": "DeepSeek V4.1 Flash 发布 :这次最值得关注的不是跑分,而是架构",
       "source": "微信公众号 · 可乐数码杂谈",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1789332437&ver=6964&signature=lz5iTeIlQkwenc1A2noTdg2AjQ4mhK*OmF5BdyXEZgVoTFrfS8SXUrP25pRqpkREgkSbLI-IZhzF77nvfVdnqc3IDmo06JZnI4IjWmou1d2jGg5bN*I4*2cpNejGwMKP&new=1",
+      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HOMLp2qjNr5ifR2QRP4LQUVE4rtGqUv5CkzpeUC2&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789332437%26ver%3D6964%26signature%3Dlz5iTeIlQkwenc1A2noTdg2AjQ4mhK%2AOmF5BdyXEZgVoTFrfS8SXUrP25pRqpkREgkSbLI-IZhzF77nvfVdnqc3IDmo06JZnI4IjWmou1d2jGg5bN%2AI4%2A2cpNejGwMKP%26new%3D1",
       "published_at": "2026-09-13T14:28:18Z",
       "authors": [],
       "venue": "",
@@ -1481,7 +1521,7 @@
       "kind": "article",
       "title": "DeepSeek 发布 新模型;OpenAI考虑放慢AI研发节奏;英伟达被查|AIGC周观察第149期",
       "source": "微信公众号 · 中国企业家杂志",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1789332437&ver=6964&signature=OcmJKyX7wBUrCKf67Lb8gTy4An1NCsJJaYEOpeZyVGB7fPVm0vD7vp-au6NKlggYUNShVkdqgus35*FOuYE9197gDJjoAux8VR3kPo0S8UcSg3NxjAg8t0nE8QYXs83c&new=1",
+      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HOQLp2qjXeawUw6coL0SAhY_l2XWMWmpoQHuZtxE&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789332437%26ver%3D6964%26signature%3DOcmJKyX7wBUrCKf67Lb8gTy4An1NCsJJaYEOpeZyVGB7fPVm0vD7vp-au6NKlggYUNShVkdqgus35%2AFOuYE9197gDJjoAux8VR3kPo0S8UcSg3NxjAg8t0nE8QYXs83c%26new%3D1",
       "published_at": "2026-09-11T10:53:24Z",
       "authors": [],
       "venue": "",
@@ -1837,46 +1877,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "ec9854972238a3dc",
-      "kind": "article",
-      "title": "将门企业月报 | 智谱 GLM -5.3系列密集升级,文远知行Q2营收同比增长82%,智象未来 发布 交互式世界模型",
-      "source": "微信公众号 · 将门创投",
-      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HCuommqjuSNNlG0v-AhxwuIhLx8Ps_9Bd5K3flD7&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1788520482%26ver%3D6946%26signature%3DnHqIaVgu5QsGVfHH4qEbsjNR09puc5pr05sAI7NY3j4E9ySJzGDL3ireqmLDOuJDGyNoY3gzjne9wJgftcaoHgAuz6QDncscivwzoUFimV-Lkvff0T424-bMzGudV0qo%26new%3D1",
-      "published_at": "2026-09-02T01:26:29Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "微信公众号",
-        "智谱",
-        "GLM"
-      ],
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "summary": "智谱 正式 发布 GLM -5.3.新模型沿用 GLM -5.2基座,通过强化后训练显著提升复杂编程、长程任务与网络安全能力,内部编程评测较前...",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HCuommqjuSNNlG0v-AhxwuIhLx8Ps_9Bd5K3flD7&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1788520482%26ver%3D6946%26signature%3DnHqIaVgu5QsGVfHH4qEbsjNR09puc5pr05sAI7NY3j4E9ySJzGDL3ireqmLDOuJDGyNoY3gzjne9wJgftcaoHgAuz6QDncscivwzoUFimV-Lkvff0T424-bMzGudV0qo%26new%3D1",
-      "key_points": [
-        "智谱 正式 发布 GLM -5.3.新模型沿用 GLM -5.2基座,通过强化后训练显著提升复杂编程、长程任务与网络安全能力,内部编程评测较前..."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "智谱 正式 发布 GLM -5.3.新模型沿用 GLM -5.2基座,通过强化后训练显著提升复杂编程、长程任务与网络安全能力,内部编程评测较前..."
-        },
-        {
-          "title": "公开索引摘要",
-          "bullets": [
-            "智谱 正式 发布 GLM -5.3.新模型沿用 GLM -5.2基座,通过强化后训练显著提升复杂编程、长程任务与网络安全能力,内部编程评测较前..."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "4d29937938879928",
       "kind": "article",
       "title": "3 ways to prep for your next big race with Search",
@@ -2129,6 +2129,46 @@
       "reading_minutes": 1
     },
     {
+      "id": "2a1ffefb7066ca72",
+      "kind": "article",
+      "title": "Entering the agentic era of AI in drug discovery",
+      "source": "Nature",
+      "source_url": "https://www.nature.com/articles/s41589-026-02295-x",
+      "published_at": "2026-08-19T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Entering the agentic era of AI in drug discovery Nature",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "resolved_url": "https://www.nature.com/articles/s41589-026-02295-x",
+      "key_points": [
+        "Entering the agentic era of AI in drug discovery Nature"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Entering the agentic era of AI in drug discovery Nature"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Entering the agentic era of AI in drug discovery Nature"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "1b86f5049c3af54f",
       "kind": "article",
       "title": "Try Google Pics: Easy image creation and editing in Google Workspace",
@@ -2178,46 +2218,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "2a1ffefb7066ca72",
-      "kind": "article",
-      "title": "Entering the agentic era of AI in drug discovery",
-      "source": "nature.com",
-      "source_url": "https://www.nature.com/articles/s41589-026-02295-x",
-      "published_at": "2026-08-19T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Entering the agentic era of AI in drug discovery nature.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "resolved_url": "https://www.nature.com/articles/s41589-026-02295-x",
-      "key_points": [
-        "Entering the agentic era of AI in drug discovery nature.com"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Entering the agentic era of AI in drug discovery nature.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Entering the agentic era of AI in drug discovery nature.com"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "96b0dc27d1d1b4e5",
       "kind": "article",
       "title": "GigaPath-Flash and GigaTIME-Flash: Toward population-scale discovery with efficient pathology foundation models",
@@ -2259,6 +2259,58 @@
             "The Flash family extends GigaPath and GigaTIME with dramatically improved efficiency, making large-scale pathology research more accessible and practical.",
             "A distilled pathology foundation model backbone reduces computational requirements without sacrificing performance, enabling repeated analyses across larger patient cohorts.",
             "These open models support population-scale discovery, helping researchers investigate disease biology, biomarkers, and clinical outcomes across diverse cancer datasets."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "sam-altman-gpt-live-20260708",
+      "kind": "social",
+      "title": "Sam Altman 预告 ChatGPT 新一代实时语音 GPT-live",
+      "source": "X · Sam Altman",
+      "source_url": "https://x.com/sama/status/2074909079450050629",
+      "published_at": "2026-07-08T08:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Sam Altman",
+        "OpenAI",
+        "Voice AI"
+      ],
+      "verification": "创始人官方账号原帖 · 产品文档待补充",
+      "summary": "Sam Altman 在 X 宣布 GPT-live 上线，强调更自然的实时语音体验。此类产品预告通常早于完整技术说明，页面将保留原帖，同时等待 OpenAI 产品文档补充模型限制、地区可用性和具体能力。",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/sama/status/2074909079450050629",
+      "key_points": [
+        "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
+        "5:30 PM · Jul 8, 2026 764.5K Views 927 517 10K 767 Jenny @suomi55 Jul 8 Are you kidding us?",
+        "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
+        "You are promoting something here that you yourself have taken away from the users!",
+        "#keep4o #BringBack4o #OpenSource4o 20 13 193 12K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Sam Altman 在 X 宣布 GPT-live 上线，强调更自然的实时语音体验。此类产品预告通常早于完整技术说明，页面将保留原帖，同时等待 OpenAI 产品文档补充模型限制、地区可用性和具体能力。"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
+            "5:30 PM · Jul 8, 2026 764.5K Views 927 517 10K 767 Jenny @suomi55 Jul 8 Are you kidding us?",
+            "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
+            "You are promoting something here that you yourself have taken away from the users!",
+            "#keep4o #BringBack4o #OpenSource4o 20 13 193 12K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 764.5K Views 927 517 10K 767",
+            "Jenny @suomi55 Jul 8 Are you kidding us? „it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o! You are promoting something here that you yourself have taken away from the users! That’s disgusting! #keep4o #BringBack4o #OpenSource4o 20 13 193 12K",
+            "David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
           ]
         }
       ],
@@ -2316,64 +2368,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "sam-altman-gpt-live-20260708",
-      "kind": "social",
-      "title": "Sam Altman 预告 ChatGPT 新一代实时语音 GPT-live",
-      "source": "X · Sam Altman",
-      "source_url": "https://x.com/sama/status/2074909079450050629",
-      "published_at": "2026-07-08T08:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Sam Altman",
-        "OpenAI",
-        "Voice AI"
-      ],
-      "verification": "创始人官方账号原帖 · 产品文档待补充",
-      "summary": "Sam Altman 在 X 宣布 GPT-live 上线，强调更自然的实时语音体验。此类产品预告通常早于完整技术说明，页面将保留原帖，同时等待 OpenAI 产品文档补充模型限制、地区可用性和具体能力。",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/sama/status/2074909079450050629",
-      "key_points": [
-        "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
-        "5:30 PM · Jul 8, 2026 764.4K Views 927 517 10K 767 Jenny @suomi55 Jul 8 Are you kidding us?",
-        "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
-        "You are promoting something here that you yourself have taken away from the users!",
-        "#keep4o #BringBack4o #OpenSource4o 20 13 193 12K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Sam Altman 在 X 宣布 GPT-live 上线，强调更自然的实时语音体验。此类产品预告通常早于完整技术说明，页面将保留原帖，同时等待 OpenAI 产品文档补充模型限制、地区可用性和具体能力。"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
-            "5:30 PM · Jul 8, 2026 764.4K Views 927 517 10K 767 Jenny @suomi55 Jul 8 Are you kidding us?",
-            "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
-            "You are promoting something here that you yourself have taken away from the users!",
-            "#keep4o #BringBack4o #OpenSource4o 20 13 193 12K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 764.4K Views 927 517 10K 767",
-            "Jenny @suomi55 Jul 8 Are you kidding us? „it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o! You are promoting something here that you yourself have taken away from the users! That’s disgusting! #keep4o #BringBack4o #OpenSource4o 20 13 193 12K",
-            "David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "8b2f1f162e19e821",
       "kind": "article",
       "title": "Anthropic C.E.O. Dario Amodei Calls for A.I. Slowdown",
       "source": "The New York Times",
       "source_url": "https://www.nytimes.com/2026/09/12/technology/anthropic-dario-amodei-ai-slowdown.html",
-      "published_at": "2026-09-12T16:03:01Z",
+      "published_at": "2026-09-13T00:57:45Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -2404,54 +2404,6 @@
         {
           "title": "原文短摘录",
           "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "8d62e2ac1285ee63",
-      "kind": "article",
-      "title": "From Proof to Program: CMU and the Rise of AI-Driven Mathematics",
-      "source": "Carnegie Mellon University",
-      "source_url": "https://www.cmu.edu/mcs/news-events/2026/0809-ai-mathematics-carnegie-mellon",
-      "published_at": "2026-09-11T13:46:32Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "From Proof to Program: CMU and the Rise of AI-Driven Mathematics Carnegie Mellon University",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.cmu.edu/mcs/news-events/2026/0809-ai-mathematics-carnegie-mellon",
-      "key_points": [
-        "From generating proofs to verifying complex theorems, new AI-driven tools are changing how mathematicians work, collaborate and even define knowledge itself.",
-        "At Carnegie Mellon University, a group of researchers is helping lead that transformation by bringing together logic, machine learning and automated reasoning.",
-        "At the center of that effort is Jeremy Avigad , a professor in the Dietrich College of Humanities and Social Sciences’ Department of Philosophy and the Mellon College of Science’s Department of Mathematical Sciences , whose work in formalized mathematics is reshaping how proofs are written, checked and shared. “This is an exciting time for mathematics, as…"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "From Proof to Program: CMU and the Rise of AI-Driven Mathematics Carnegie Mellon University"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "From generating proofs to verifying complex theorems, new AI-driven tools are changing how mathematicians work, collaborate and even define knowledge itself.",
-            "At Carnegie Mellon University, a group of researchers is helping lead that transformation by bringing together logic, machine learning and automated reasoning.",
-            "At the center of that effort is Jeremy Avigad , a professor in the Dietrich College of Humanities and Social Sciences’ Department of Philosophy and the Mellon College of Science’s Department of Mathematical Sciences , whose work in formalized mathematics is reshaping how proofs are written, checked and shared. “This is an exciting time for mathematics, as…"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "From generating proofs to verifying complex theorems, new AI-driven tools are changing how mathematicians work, collaborate and even define knowledge itself. At Carnegie Mellon University, a group of researchers is helping lead that transformation by bringing together logic, machine learning and automated reasoning.",
-            "At the center of that effort is Jeremy Avigad , a professor in the Dietrich College of Humanities and Social Sciences’ Department of Philosophy and the Mellon College of Science’s Department of Mathematical Sciences , whose work in formalized mathematics is reshaping how proofs are written, checked and shared.",
-            "“This is an exciting time for mathematics, as new technologies offer opportunities for exploration and discovery,” Avigad said."
-          ]
         }
       ],
       "reading_minutes": 1
@@ -2713,6 +2665,54 @@
         {
           "title": "摘要",
           "body": "Automated grading systems are increasingly used in engineering education to manage instructor workload while providing timely feedback. Large Language Models (LLMs) have made this feasible for short-answer responses, but they exhibit grading inconsistency due to sampling variability: identical responses graded repeatedly can yield conflicting pass-fail outcomes in 8 to 20% of evaluations depending on question difficulty. This measurement error undermines the reliability of automated assessment. We address it using Quality Dimensions (QDs), binary criteria derived from rubrics that can be iteratively refined when grading is unstable. Applied to all N = 625 student…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "8d62e2ac1285ee63",
+      "kind": "article",
+      "title": "From Proof to Program: CMU and the Rise of AI-Driven Mathematics",
+      "source": "Carnegie Mellon University",
+      "source_url": "https://www.cmu.edu/mcs/news-events/2026/0809-ai-mathematics-carnegie-mellon",
+      "published_at": "2026-09-11T13:46:32Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "From Proof to Program: CMU and the Rise of AI-Driven Mathematics Carnegie Mellon University",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.cmu.edu/mcs/news-events/2026/0809-ai-mathematics-carnegie-mellon",
+      "key_points": [
+        "From generating proofs to verifying complex theorems, new AI-driven tools are changing how mathematicians work, collaborate and even define knowledge itself.",
+        "At Carnegie Mellon University, a group of researchers is helping lead that transformation by bringing together logic, machine learning and automated reasoning.",
+        "At the center of that effort is Jeremy Avigad , a professor in the Dietrich College of Humanities and Social Sciences’ Department of Philosophy and the Mellon College of Science’s Department of Mathematical Sciences , whose work in formalized mathematics is reshaping how proofs are written, checked and shared. “This is an exciting time for mathematics, as…"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "From Proof to Program: CMU and the Rise of AI-Driven Mathematics Carnegie Mellon University"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "From generating proofs to verifying complex theorems, new AI-driven tools are changing how mathematicians work, collaborate and even define knowledge itself.",
+            "At Carnegie Mellon University, a group of researchers is helping lead that transformation by bringing together logic, machine learning and automated reasoning.",
+            "At the center of that effort is Jeremy Avigad , a professor in the Dietrich College of Humanities and Social Sciences’ Department of Philosophy and the Mellon College of Science’s Department of Mathematical Sciences , whose work in formalized mathematics is reshaping how proofs are written, checked and shared. “This is an exciting time for mathematics, as…"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "From generating proofs to verifying complex theorems, new AI-driven tools are changing how mathematicians work, collaborate and even define knowledge itself. At Carnegie Mellon University, a group of researchers is helping lead that transformation by bringing together logic, machine learning and automated reasoning.",
+            "At the center of that effort is Jeremy Avigad , a professor in the Dietrich College of Humanities and Social Sciences’ Department of Philosophy and the Mellon College of Science’s Department of Mathematical Sciences , whose work in formalized mathematics is reshaping how proofs are written, checked and shared.",
+            "“This is an exciting time for mathematics, as new technologies offer opportunities for exploration and discovery,” Avigad said."
+          ]
         }
       ],
       "reading_minutes": 1
@@ -3110,53 +3110,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "95693a658f9a0d54",
-      "kind": "article",
-      "title": "MindTopo reveals VLMs’ spatial reasoning abilities",
-      "source": "Microsoft Research",
-      "source_url": "https://www.microsoft.com/en-us/research/blog/mindtopo-reveals-vlms-spatial-reasoning-abilities/",
-      "published_at": "2026-08-12T16:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Microsoft",
-        "Research"
-      ],
-      "verification": "官方来源",
-      "summary": "A path, a fence, a knot. MindTopo sets a new benchmark for testing how AI understands topological relationships and highlights new opportunities to strengthen spatial reasoning and planning. The post MindTopo reveals VLMs’ spatial reasoning abilities appeared first on Microsoft Research .",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.microsoft.com/en-us/research/blog/mindtopo-reveals-vlms-spatial-reasoning-abilities/",
-      "key_points": [
-        "MindTopo is a new benchmark for testing topological reasoning in AI, evaluating whether multimodal models can understand concepts such as connectivity, enclosure, order, separation, and knots.",
-        "The benchmark measures both reasoning and planning, testing not only whether models can recognize topological relationships in static images but also whether they can preserve and manipulate those relationships through a sequence of actions.",
-        "Current multimodal models perform much better on static recognition than interactive tasks, suggesting they struggle to maintain a consistent understanding of topology over time."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "A path, a fence, a knot. MindTopo sets a new benchmark for testing how AI understands topological relationships and highlights new opportunities to strengthen spatial reasoning and planning. The post MindTopo reveals VLMs’ spatial reasoning abilities appeared first on Microsoft Research ."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "MindTopo is a new benchmark for testing topological reasoning in AI, evaluating whether multimodal models can understand concepts such as connectivity, enclosure, order, separation, and knots.",
-            "The benchmark measures both reasoning and planning, testing not only whether models can recognize topological relationships in static images but also whether they can preserve and manipulate those relationships through a sequence of actions.",
-            "Current multimodal models perform much better on static recognition than interactive tasks, suggesting they struggle to maintain a consistent understanding of topology over time."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "MindTopo is a new benchmark for testing topological reasoning in AI, evaluating whether multimodal models can understand concepts such as connectivity, enclosure, order, separation, and knots.",
-            "The benchmark measures both reasoning and planning, testing not only whether models can recognize topological relationships in static images but also whether they can preserve and manipulate those relationships through a sequence of actions.",
-            "Current multimodal models perform much better on static recognition than interactive tasks, suggesting they struggle to maintain a consistent understanding of topology over time."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "99b3617cb4c5a9a4",
       "kind": "article",
       "title": "Artificial intelligence designed drugs Hit 90% Phase I success rate in trials | 2 Minute Medicine",
@@ -3264,7 +3217,7 @@
       "id": "c2cc7dbcb4270f4d",
       "kind": "article",
       "title": "Nuffield Department of Medicine at the University of Oxford and 2U Launch New Program in AI-Driven Drug Discovery",
-      "source": "2u.com",
+      "source": "2U",
       "source_url": "https://2u.com/newsroom/oxford-nuffield-medicine-2u-ai-drug-discovery-program/",
       "published_at": "2026-09-03T20:07:13Z",
       "authors": [],
@@ -3275,7 +3228,7 @@
         "Applied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Nuffield Department of Medicine at the University of Oxford and 2U Launch New Program in AI-Driven Drug Discovery 2u.com",
+      "summary": "Nuffield Department of Medicine at the University of Oxford and 2U Launch New Program in AI-Driven Drug Discovery 2U",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://2u.com/newsroom/oxford-nuffield-medicine-2u-ai-drug-discovery-program/",
@@ -3287,7 +3240,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "Nuffield Department of Medicine at the University of Oxford and 2U Launch New Program in AI-Driven Drug Discovery 2u.com"
+          "body": "Nuffield Department of Medicine at the University of Oxford and 2U Launch New Program in AI-Driven Drug Discovery 2U"
         },
         {
           "title": "公开页面要点",
@@ -3507,6 +3460,53 @@
             "On 23 August, Surya Narreddi posted a beautiful video of watercolours painted by a language model. The model writes JavaScript through p5.brush , a library that \"adds natural drawing tools to p5.js\". The video went viral fast, over 1.5M views at the time of writing.",
             "The video came with a blog post explaining the training behind an earlier and narrower stage of the project, close-up flowers rather than the full compositions in the video, sadly without open artifacts yet. His site says a full technical report is coming, so ensure you follow him. The original idea is his, coming from the art and design side, where his skills are way beyond mine . My attempt is on the engineering side, reproducing the recipe in the open with every piece published.",
             "Note: for the context behind the project, told by Surya himself, watch this video of his thesis ."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "95693a658f9a0d54",
+      "kind": "article",
+      "title": "MindTopo reveals VLMs’ spatial reasoning abilities",
+      "source": "Microsoft Research",
+      "source_url": "https://www.microsoft.com/en-us/research/blog/mindtopo-reveals-vlms-spatial-reasoning-abilities/",
+      "published_at": "2026-08-12T16:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Microsoft",
+        "Research"
+      ],
+      "verification": "官方来源",
+      "summary": "A path, a fence, a knot. MindTopo sets a new benchmark for testing how AI understands topological relationships and highlights new opportunities to strengthen spatial reasoning and planning. The post MindTopo reveals VLMs’ spatial reasoning abilities appeared first on Microsoft Research .",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.microsoft.com/en-us/research/blog/mindtopo-reveals-vlms-spatial-reasoning-abilities/",
+      "key_points": [
+        "MindTopo is a new benchmark for testing topological reasoning in AI, evaluating whether multimodal models can understand concepts such as connectivity, enclosure, order, separation, and knots.",
+        "The benchmark measures both reasoning and planning, testing not only whether models can recognize topological relationships in static images but also whether they can preserve and manipulate those relationships through a sequence of actions.",
+        "Current multimodal models perform much better on static recognition than interactive tasks, suggesting they struggle to maintain a consistent understanding of topology over time."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "A path, a fence, a knot. MindTopo sets a new benchmark for testing how AI understands topological relationships and highlights new opportunities to strengthen spatial reasoning and planning. The post MindTopo reveals VLMs’ spatial reasoning abilities appeared first on Microsoft Research ."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "MindTopo is a new benchmark for testing topological reasoning in AI, evaluating whether multimodal models can understand concepts such as connectivity, enclosure, order, separation, and knots.",
+            "The benchmark measures both reasoning and planning, testing not only whether models can recognize topological relationships in static images but also whether they can preserve and manipulate those relationships through a sequence of actions.",
+            "Current multimodal models perform much better on static recognition than interactive tasks, suggesting they struggle to maintain a consistent understanding of topology over time."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "MindTopo is a new benchmark for testing topological reasoning in AI, evaluating whether multimodal models can understand concepts such as connectivity, enclosure, order, separation, and knots.",
+            "The benchmark measures both reasoning and planning, testing not only whether models can recognize topological relationships in static images but also whether they can preserve and manipulate those relationships through a sequence of actions.",
+            "Current multimodal models perform much better on static recognition than interactive tasks, suggesting they struggle to maintain a consistent understanding of topology over time."
           ]
         }
       ],
@@ -4196,6 +4196,252 @@
       "reading_minutes": 1
     },
     {
+      "id": "38cdc43efd17ffd3",
+      "kind": "social",
+      "title": "There are two ways AI progress could go very badly and that we must avoid. First, we could lose control of the future to AI. This is unacceptable; we are unapologetically on Team Humanity, and AI must always serve people. To ensure that, we need ways to en",
+      "source": "x.com",
+      "source_url": "https://x.com/sama/status/2099352016988614852",
+      "published_at": "2026-09-14T04:18:19Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "There are two ways AI progress could go very badly and that we must avoid. First, we could lose control of the future to AI. This is unacceptable; we are unapologetically on Team Humanity, and AI must always serve people. To ensure that, we need ways to en x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/sama/status/2099352016988614852",
+      "key_points": [
+        "Sam Altman @sama There are two ways AI progress could go very badly and that we must avoid.",
+        "First, we could lose control of the future to AI.",
+        "This is unacceptable; we are unapologetically on Team Humanity, and AI must always serve people.",
+        "To ensure that, we need ways to ensure that alignment and safety techniques stay ahead of progress in model capabilities.",
+        "Second, we could end up in a world with too much concentration of power."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "There are two ways AI progress could go very badly and that we must avoid. First, we could lose control of the future to AI. This is unacceptable; we are unapologetically on Team Humanity, and AI must always serve people. To ensure that, we need ways to en x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Sam Altman @sama There are two ways AI progress could go very badly and that we must avoid.",
+            "First, we could lose control of the future to AI.",
+            "This is unacceptable; we are unapologetically on Team Humanity, and AI must always serve people.",
+            "To ensure that, we need ways to ensure that alignment and safety techniques stay ahead of progress in model capabilities.",
+            "Second, we could end up in a world with too much concentration of power."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Sam Altman @sama There are two ways AI progress could go very badly and that we must avoid. First, we could lose control of the future to AI. This is unacceptable; we are unapologetically on Team Humanity, and AI must always serve people. To ensure that, we need ways to ensure that alignment and safety techniques stay ahead of progress in model capabilities. Second, we could end up in a world with too much concentration of power. If an extraordinarily powerful AI is used by one person or company to impress their worldview onto everyone else, the results could be extremely dystopian. Avoiding these two threats requires walking a narrow middle path; for example, one country could gain too much power. Another…",
+            "BijanBowen @bijanbowen 28m No real open model competition from the US is a strategic error. ppl from OAI/ANT posting on x feels like zeus tossing letters from mt olympius to those below. Those who would support you turn against because it seems like an attack on their ability to use AI that isn't yours. 3 1 34 2K",
+            "marwan @mayysef 31m Why did this sudden shift happen out of nowhere, why didn’t this “slowdown” happen years ago with proper safety infrastructure being built. Timing is weird. 2 33 1.3K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "325e1254066aedad",
+      "kind": "social",
+      "title": "The world deserves confidence that American companies developing increasingly capable AI will act responsibly, especially as the trajectory of progress has steepened. Every frontier lab must deliver on this, and there is no reason any of us should come to wo",
+      "source": "x.com",
+      "source_url": "https://x.com/sama/status/2099348812305473766",
+      "published_at": "2026-09-14T04:05:35Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "The world deserves confidence that American companies developing increasingly capable AI will act responsibly, especially as the trajectory of progress has steepened. Every frontier lab must deliver on this, and there is no reason any of us should come to wo x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/sama/status/2099348812305473766",
+      "key_points": [
+        "Sam Altman @sama The world deserves confidence that American companies developing increasingly capable AI will act responsibly, especially as the trajectory of progress has steepened.",
+        "Every frontier lab must deliver on this, and there is no reason any of us should come to work if we cannot.",
+        "We welcome a federal framework that sets consistent safety requirements for frontier AI.",
+        "But we do not believe we need to wait for an anti-trust exemption or legislation to begin the work of providing this confidence.",
+        "Consistent rules to manage frontier risk so that we can maximize the benefits are a good idea (and we are excited by ideas like independent auditors)."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "The world deserves confidence that American companies developing increasingly capable AI will act responsibly, especially as the trajectory of progress has steepened. Every frontier lab must deliver on this, and there is no reason any of us should come to wo x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Sam Altman @sama The world deserves confidence that American companies developing increasingly capable AI will act responsibly, especially as the trajectory of progress has steepened.",
+            "Every frontier lab must deliver on this, and there is no reason any of us should come to work if we cannot.",
+            "We welcome a federal framework that sets consistent safety requirements for frontier AI.",
+            "But we do not believe we need to wait for an anti-trust exemption or legislation to begin the work of providing this confidence.",
+            "Consistent rules to manage frontier risk so that we can maximize the benefits are a good idea (and we are excited by ideas like independent auditors)."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Sam Altman @sama The world deserves confidence that American companies developing increasingly capable AI will act responsibly, especially as the trajectory of progress has steepened. Every frontier lab must deliver on this, and there is no reason any of us should come to work if we cannot. We welcome a federal framework that sets consistent safety requirements for frontier AI. But we do not believe we need to wait for an anti-trust exemption or legislation to begin the work of providing this confidence. Consistent rules to manage frontier risk so that we can maximize the benefits are a good idea (and we are excited by ideas like independent auditors). Years ago, companies like ours developed things like…",
+            "Thomas Unise @thomasunise 39m Open source your models if you believe any of this 1 90 2.4K",
+            "The Retarded Elon @TheRetardedELon 44m If you pull back on A.I. like these retards want then every other enemy / competitor to us will laugh at us while giving us the middle finger, as they accel right past us. You do NOT pull back on A.I. -- it's too late at this point, Sam. 7 72 6K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "762e849a296731bd",
+      "kind": "social",
+      "title": "@techdevnotes Grok 4.8, which is a 2.5T model trained with our new C++ software stack, will finish training this week and start RL",
+      "source": "x.com",
+      "source_url": "https://x.com/elonmusk/status/2099308197802631191",
+      "published_at": "2026-09-14T01:24:12Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "@techdevnotes Grok 4.8, which is a 2.5T model trained with our new C++ software stack, will finish training this week and start RL x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/elonmusk/status/2099308197802631191",
+      "key_points": [
+        "Tech Dev Notes @techdevnotes 15h Apart from Grok 4.7, what are we even expecting from SpaceXAI in september 54 24 1K 195K Elon Musk @elonmusk Grok 4.8, which is a 2.5T model trained with our new C++ software stack, will finish training this week and start RL 1:24 AM · Sep 14, 2026 670.5K Views 760 652 10K 656 Paul Clark @paulbclark 3h sounds like slowing…"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "@techdevnotes Grok 4.8, which is a 2.5T model trained with our new C++ software stack, will finish training this week and start RL x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Tech Dev Notes @techdevnotes 15h Apart from Grok 4.7, what are we even expecting from SpaceXAI in september 54 24 1K 195K Elon Musk @elonmusk Grok 4.8, which is a 2.5T model trained with our new C++ software stack, will finish training this week and start RL 1:24 AM · Sep 14, 2026 670.5K Views 760 652 10K 656 Paul Clark @paulbclark 3h sounds like slowing…"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Tech Dev Notes @techdevnotes 15h Apart from Grok 4.7, what are we even expecting from SpaceXAI in september 54 24 1K 195K",
+            "Elon Musk @elonmusk Grok 4.8, which is a 2.5T model trained with our new C++ software stack, will finish training this week and start RL 1:24 AM · Sep 14, 2026 670.5K Views 760 652 10K 656",
+            "Paul Clark @paulbclark 3h sounds like slowing down is going well 17 4 604 23K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "5f29fef521e97569",
+      "kind": "social",
+      "title": "RT @wmorrill3: Named my grok bot after the sentient AI, Jane, in speaker for the dead. I look forward to when I can sub-vocalize like End…",
+      "source": "x.com",
+      "source_url": "https://x.com/elonmusk/status/2099291366563909867",
+      "published_at": "2026-09-14T00:17:19Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "RT @wmorrill3: Named my grok bot after the sentient AI, Jane, in speaker for the dead. I look forward to when I can sub-vocalize like End… x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/elonmusk/status/2099291366563909867",
+      "key_points": [
+        "Elon Musk reposted Wes @wmorrill3 6h Named my grok bot after the sentient AI, Jane, in speaker for the dead.",
+        "I look forward to when I can sub-vocalize like Ender to communicate with Jane, but would honestly even be happy with verbal communication back and forth like we have for the Grok app.",
+        "Right now it seems I Show more 116 169 1.8K 254K"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "RT @wmorrill3: Named my grok bot after the sentient AI, Jane, in speaker for the dead. I look forward to when I can sub-vocalize like End… x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Elon Musk reposted Wes @wmorrill3 6h Named my grok bot after the sentient AI, Jane, in speaker for the dead.",
+            "I look forward to when I can sub-vocalize like Ender to communicate with Jane, but would honestly even be happy with verbal communication back and forth like we have for the Grok app.",
+            "Right now it seems I Show more 116 169 1.8K 254K"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Elon Musk reposted Wes @wmorrill3 6h Named my grok bot after the sentient AI, Jane, in speaker for the dead. I look forward to when I can sub-vocalize like Ender to communicate with Jane, but would honestly even be happy with verbal communication back and forth like we have for the Grok app. Right now it seems I Show more 116 169 1.8K 254K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "90f3b4db72924944",
+      "kind": "social",
+      "title": "I’ve been sounding the alarm on AI for a long time",
+      "source": "x.com",
+      "source_url": "https://x.com/elonmusk/status/2098935235446551022",
+      "published_at": "2026-09-13T00:42:11Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "I’ve been sounding the alarm on AI for a long time x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/elonmusk/status/2098935235446551022",
+      "key_points": [
+        "Elon Musk @elonmusk I’ve been sounding the alarm on AI for a long time Elon Musk @elonmusk Apr 25, 2023 Replying to @TalulahRiley I’ve seen quite a few technologies develop, but none with this level of risk.",
+        "AGI is significantly higher risk than nuclear weapons, in my opinion.",
+        "Super smart humans have trouble imagining something vastly smarter than themselves.",
+        "12:42 AM · Sep 13, 2026 8.5M Views 5.6K 8.6K 76K 3.8K Travis Akers 🇺🇸 @travisakers Sep 13 No you haven’t.",
+        "24 10 855 34K Beff (e/acc) @beffjezos Sep 13 If you are doing it to ensure you have a place at the table with the frontier labs, I get it."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "I’ve been sounding the alarm on AI for a long time x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Elon Musk @elonmusk I’ve been sounding the alarm on AI for a long time Elon Musk @elonmusk Apr 25, 2023 Replying to @TalulahRiley I’ve seen quite a few technologies develop, but none with this level of risk.",
+            "AGI is significantly higher risk than nuclear weapons, in my opinion.",
+            "Super smart humans have trouble imagining something vastly smarter than themselves.",
+            "12:42 AM · Sep 13, 2026 8.5M Views 5.6K 8.6K 76K 3.8K Travis Akers 🇺🇸 @travisakers Sep 13 No you haven’t.",
+            "24 10 855 34K Beff (e/acc) @beffjezos Sep 13 If you are doing it to ensure you have a place at the table with the frontier labs, I get it."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Elon Musk @elonmusk I’ve been sounding the alarm on AI for a long time Elon Musk @elonmusk Apr 25, 2023 Replying to @TalulahRiley I’ve seen quite a few technologies develop, but none with this level of risk. AGI is significantly higher risk than nuclear weapons, in my opinion. Super smart humans have trouble imagining something vastly smarter than themselves. 12:42 AM · Sep 13, 2026 8.5M Views 5.6K 8.6K 76K 3.8K",
+            "Travis Akers 🇺🇸 @travisakers Sep 13 No you haven’t. You’ve been pushing Grok every single day. 24 10 855 34K",
+            "Beff (e/acc) @beffjezos Sep 13 If you are doing it to ensure you have a place at the table with the frontier labs, I get it. There remains a grave danger that this proposed regulatory body backfires, and that this becomes a mechanism used for top-down ideological control of the masses 30 17 556 23K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "6fc342e6a27db19f",
       "kind": "social",
       "title": "Dario's essay points towards the right path forward. The details need working through, but the direction is correct for meeting this critical moment. This is also why we recently put out our proposal for an industry-wide standards body for frontier AI. https://t.co/Mm",
@@ -4219,7 +4465,7 @@
         "The details need working through, but the direction is correct for meeting this critical moment.",
         "This is also why we recently put out our proposal for an industry-wide standards body for frontier AI. x.com/demishassabis/… Dario Amodei @DarioAmodei Sep 12 We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so.",
         "Anthropic is unilaterally committing to the first of these steps.",
-        "We’ll provide third-party evaluators with permanent, employee-level access to our Show more 10:59 PM · Sep 12, 2026 1.1M Views 713 840 8.2K 1.5K Travis McDonald @TravisMcDonald 21h Then we're dealing with a national security threat."
+        "We’ll provide third-party evaluators with permanent, employee-level access to our Show more 10:59 PM · Sep 12, 2026 1.2M Views 740 889 8.6K 1.6K Travis McDonald @TravisMcDonald Sep 12 Then we're dealing with a national security threat."
       ],
       "sections": [
         {
@@ -4233,270 +4479,56 @@
             "The details need working through, but the direction is correct for meeting this critical moment.",
             "This is also why we recently put out our proposal for an industry-wide standards body for frontier AI. x.com/demishassabis/… Dario Amodei @DarioAmodei Sep 12 We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so.",
             "Anthropic is unilaterally committing to the first of these steps.",
-            "We’ll provide third-party evaluators with permanent, employee-level access to our Show more 10:59 PM · Sep 12, 2026 1.1M Views 713 840 8.2K 1.5K Travis McDonald @TravisMcDonald 21h Then we're dealing with a national security threat."
+            "We’ll provide third-party evaluators with permanent, employee-level access to our Show more 10:59 PM · Sep 12, 2026 1.2M Views 740 889 8.6K 1.6K Travis McDonald @TravisMcDonald Sep 12 Then we're dealing with a national security threat."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Demis Hassabis @demishassabis Dario's essay points towards the right path forward. The details need working through, but the direction is correct for meeting this critical moment. This is also why we recently put out our proposal for an industry-wide standards body for frontier AI. x.com/demishassabis/… Dario Amodei @DarioAmodei Sep 12 We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so. Anthropic is unilaterally committing to the first of these steps. We’ll provide third-party evaluators with permanent, employee-level access to our Show more 10:59 PM · Sep 12, 2026 1.1M Views 713 840 8.2K 1.5K",
-            "Travis McDonald @TravisMcDonald 21h Then we're dealing with a national security threat. It therefore makes sense to nationalize Anthropic. All equity, investment, assets, and intellectual property need to be seized. If ASI is so dangerous, no corporation should have it, no different than nuclear weapons. 13 10 209 20K",
-            "Chana @ChanaMessinger 21h Do you want to commit to embedded evaluators? 2 82 4.1K"
+            "Demis Hassabis @demishassabis Dario's essay points towards the right path forward. The details need working through, but the direction is correct for meeting this critical moment. This is also why we recently put out our proposal for an industry-wide standards body for frontier AI. x.com/demishassabis/… Dario Amodei @DarioAmodei Sep 12 We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so. Anthropic is unilaterally committing to the first of these steps. We’ll provide third-party evaluators with permanent, employee-level access to our Show more 10:59 PM · Sep 12, 2026 1.2M Views 740 889 8.6K 1.6K",
+            "Travis McDonald @TravisMcDonald Sep 12 Then we're dealing with a national security threat. It therefore makes sense to nationalize Anthropic. All equity, investment, assets, and intellectual property need to be seized. If ASI is so dangerous, no corporation should have it, no different than nuclear weapons. 14 10 214 20K",
+            "Chana @ChanaMessinger Sep 12 Do you want to commit to embedded evaluators? 2 1 83 4.4K"
           ]
         }
       ],
       "reading_minutes": 1
     },
     {
-      "id": "95c65e210faa1a73",
-      "kind": "social",
-      "title": "I love this and really hope we can come together as an industry and make it happen.",
-      "source": "x.com",
-      "source_url": "https://x.com/karpathy/status/2098811935114551617",
-      "published_at": "2026-09-12T16:32:14Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Researcher Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "I love this and really hope we can come together as an industry and make it happen. x.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/karpathy/status/2098811935114551617",
-      "key_points": [
-        "Andrej Karpathy @karpathy I love this and really hope we can come together as an industry and make it happen.",
-        "Dario Amodei @DarioAmodei Sep 12 We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so.",
-        "Anthropic is unilaterally committing to the first of these steps.",
-        "We’ll provide third-party evaluators with permanent, employee-level access to our Show more 4:32 PM · Sep 12, 2026 780.5K Views 3 803 10K 1.7K Only some accounts can reply.",
-        "Aaron Slodov @aphysicist Sep 12 can we just make sure it's not METR and someone actually independent 4 282 20K Emad @EMostaque 21h I can’t see how there won’t be a massive power asymmetry here - we even saw it on the OpenAI board as evaluators when they had fiduciary power, Ilya’s talent etc but still couldn’t do anything I wrote up more on my corcerns in…"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "I love this and really hope we can come together as an industry and make it happen. x.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Andrej Karpathy @karpathy I love this and really hope we can come together as an industry and make it happen.",
-            "Dario Amodei @DarioAmodei Sep 12 We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so.",
-            "Anthropic is unilaterally committing to the first of these steps.",
-            "We’ll provide third-party evaluators with permanent, employee-level access to our Show more 4:32 PM · Sep 12, 2026 780.5K Views 3 803 10K 1.7K Only some accounts can reply.",
-            "Aaron Slodov @aphysicist Sep 12 can we just make sure it's not METR and someone actually independent 4 282 20K Emad @EMostaque 21h I can’t see how there won’t be a massive power asymmetry here - we even saw it on the OpenAI board as evaluators when they had fiduciary power, Ilya’s talent etc but still couldn’t do anything I wrote up more on my corcerns in…"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Andrej Karpathy @karpathy I love this and really hope we can come together as an industry and make it happen. Dario Amodei @DarioAmodei Sep 12 We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so. Anthropic is unilaterally committing to the first of these steps. We’ll provide third-party evaluators with permanent, employee-level access to our Show more 4:32 PM · Sep 12, 2026 780.5K Views 3 803 10K 1.7K Only some accounts can reply.",
-            "Aaron Slodov @aphysicist Sep 12 can we just make sure it's not METR and someone actually independent 4 282 20K",
-            "Emad @EMostaque 21h I can’t see how there won’t be a massive power asymmetry here - we even saw it on the OpenAI board as evaluators when they had fiduciary power, Ilya’s talent etc but still couldn’t do anything I wrote up more on my corcerns in full hope we figure out the right path Emad @EMostaque 21h Thoughts on @ DarioAmodei 's pacing the frontier proposal. I think its well intentioned but has logical flaws, as does our implicit belief intelligence is a crime. Even OpenAI's board weren't powerful enough evaluators, we need to focus on AI internals Article Intelligence isn't a crime This morning Dario Amodei published We Must Pace the Frontier. I'm sure many of you have read it. Because it is important. I…"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "4f066779dfe2aa9b",
-      "kind": "social",
-      "title": "I agree with Dario that we need to pace the frontier. This has been a primary topic of discussions we've had at OpenAI in recent weeks. Committing to having independent evaluators with employee-like access is a great idea, and we will do the same. We'll have",
-      "source": "x.com",
-      "source_url": "https://x.com/sama/status/2098811563415150910",
-      "published_at": "2026-09-12T16:30:45Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "I agree with Dario that we need to pace the frontier. This has been a primary topic of discussions we've had at OpenAI in recent weeks. Committing to having independent evaluators with employee-like access is a great idea, and we will do the same. We'll have x.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/sama/status/2098811563415150910",
-      "key_points": [
-        "Sam Altman @sama I agree with Dario that we need to pace the frontier.",
-        "This has been a primary topic of discussions we've had at OpenAI in recent weeks.",
-        "Committing to having independent evaluators with employee-like access is a great idea, and we will do the same.",
-        "Dario Amodei @DarioAmodei Sep 12 We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so.",
-        "Anthropic is unilaterally committing to the first of these steps."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "I agree with Dario that we need to pace the frontier. This has been a primary topic of discussions we've had at OpenAI in recent weeks. Committing to having independent evaluators with employee-like access is a great idea, and we will do the same. We'll have x.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Sam Altman @sama I agree with Dario that we need to pace the frontier.",
-            "This has been a primary topic of discussions we've had at OpenAI in recent weeks.",
-            "Committing to having independent evaluators with employee-like access is a great idea, and we will do the same.",
-            "Dario Amodei @DarioAmodei Sep 12 We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so.",
-            "Anthropic is unilaterally committing to the first of these steps."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Sam Altman @sama I agree with Dario that we need to pace the frontier. This has been a primary topic of discussions we've had at OpenAI in recent weeks. Committing to having independent evaluators with employee-like access is a great idea, and we will do the same. We'll have more to share soon. Dario Amodei @DarioAmodei Sep 12 We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so. Anthropic is unilaterally committing to the first of these steps. We’ll provide third-party evaluators with permanent, employee-level access to our Show more 4:30 PM · Sep 12, 2026 15.1M Views 4.7K 6.7K 63K 10K",
-            "SPN @spnichol Sep 12 If these dudes agree on something you know it's absolutely a bad idea. 12 42 4.2K 110K",
-            "The A. I. Generalist @TheAIGeneralist Sep 12 So the public gets screwed and the superior tech stays behind closed doors and available to a select few who control the world. You also get to charge whatever you want because nobody is allowed to sell a better product. This is bs anti-trust manipulation disguised as ethics. 52 126 2.4K 208K"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "f2b86571a9a5d57b",
-      "kind": "social",
-      "title": "Dario is right",
-      "source": "x.com",
-      "source_url": "https://x.com/elonmusk/status/2098789109980332057",
-      "published_at": "2026-09-12T15:01:32Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Dario is right",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/elonmusk/status/2098789109980332057",
-      "key_points": [
-        "Elon Musk @elonmusk Dario is right Dario Amodei @DarioAmodei Sep 12 We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so.",
-        "Anthropic is unilaterally committing to the first of these steps.",
-        "We’ll provide third-party evaluators with permanent, employee-level access to our Show more 3:01 PM · Sep 12, 2026 10.6M Views 5.9K 6.1K 54K 6.9K Artifice @Artifice418777 Sep 12 No one is going to slow down the pace of research to improve capabilities.",
-        "But they will withhold new capabilities from the public.",
-        "31 42 1.2K 105K Burnie Senders @BurnieSendersX Sep 12 Comrade Elon, the next step is clear..."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Dario is right"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Elon Musk @elonmusk Dario is right Dario Amodei @DarioAmodei Sep 12 We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so.",
-            "Anthropic is unilaterally committing to the first of these steps.",
-            "We’ll provide third-party evaluators with permanent, employee-level access to our Show more 3:01 PM · Sep 12, 2026 10.6M Views 5.9K 6.1K 54K 6.9K Artifice @Artifice418777 Sep 12 No one is going to slow down the pace of research to improve capabilities.",
-            "But they will withhold new capabilities from the public.",
-            "31 42 1.2K 105K Burnie Senders @BurnieSendersX Sep 12 Comrade Elon, the next step is clear..."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Elon Musk @elonmusk Dario is right Dario Amodei @DarioAmodei Sep 12 We Must Pace the Frontier: I’ve written a new essay on why the AI industry should slow down, with a three-part plan for doing so. Anthropic is unilaterally committing to the first of these steps. We’ll provide third-party evaluators with permanent, employee-level access to our Show more 3:01 PM · Sep 12, 2026 10.6M Views 5.9K 6.1K 54K 6.9K",
-            "Artifice @Artifice418777 Sep 12 No one is going to slow down the pace of research to improve capabilities. But they will withhold new capabilities from the public. 31 42 1.2K 105K",
-            "Burnie Senders @BurnieSendersX Sep 12 Comrade Elon, the next step is clear... 19 48 910 63K"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "2812cc91866685b1",
-      "kind": "social",
-      "title": "@farzyness Grok 4.7 needs a few more days to cook. We might have penalized response length too much (or something) in RL, as it still gives up on hard tasks (that it can do!) too early and isn’t yet sufficiently rigorous in checking its work.",
-      "source": "x.com",
-      "source_url": "https://x.com/elonmusk/status/2098462085973741960",
-      "published_at": "2026-09-11T17:22:03Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "@farzyness Grok 4.7 needs a few more days to cook. We might have penalized response length too much (or something) in RL, as it still gives up on hard tasks (that it can do!) too early and isn’t yet sufficiently rigorous in checking its work. x.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/elonmusk/status/2098462085973741960",
-      "key_points": [
-        "Farzad 🇺🇸 🇮🇷 @farzyness Sep 11 GIF Elon Musk @elonmusk Sep 2 Grok 4.7 comes out in 10 days 61 59 2.9K 682K Elon Musk @elonmusk Grok 4.7 needs a few more days to cook.",
-        "We might have penalized response length too much (or something) in RL, as it still gives up on hard tasks (that it can do!",
-        ") too early and isn’t yet sufficiently rigorous in checking its work.",
-        "5:22 PM · Sep 11, 2026 2M Views 1.5K 1K 19K 801 Farzad 🇺🇸 🇮🇷 @farzyness Sep 11 Awesome thanks for the update."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "@farzyness Grok 4.7 needs a few more days to cook. We might have penalized response length too much (or something) in RL, as it still gives up on hard tasks (that it can do!) too early and isn’t yet sufficiently rigorous in checking its work. x.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Farzad 🇺🇸 🇮🇷 @farzyness Sep 11 GIF Elon Musk @elonmusk Sep 2 Grok 4.7 comes out in 10 days 61 59 2.9K 682K Elon Musk @elonmusk Grok 4.7 needs a few more days to cook.",
-            "We might have penalized response length too much (or something) in RL, as it still gives up on hard tasks (that it can do!",
-            ") too early and isn’t yet sufficiently rigorous in checking its work.",
-            "5:22 PM · Sep 11, 2026 2M Views 1.5K 1K 19K 801 Farzad 🇺🇸 🇮🇷 @farzyness Sep 11 Awesome thanks for the update."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Farzad 🇺🇸 🇮🇷 @farzyness Sep 11 GIF Elon Musk @elonmusk Sep 2 Grok 4.7 comes out in 10 days 61 59 2.9K 682K",
-            "Elon Musk @elonmusk Grok 4.7 needs a few more days to cook. We might have penalized response length too much (or something) in RL, as it still gives up on hard tasks (that it can do!) too early and isn’t yet sufficiently rigorous in checking its work. 5:22 PM · Sep 11, 2026 2M Views 1.5K 1K 19K 801",
-            "Farzad 🇺🇸 🇮🇷 @farzyness Sep 11 Awesome thanks for the update. Means I can actually enjoy the weekend! 20 4 1.2K 116K"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "faa301ed7da3a698",
+      "id": "0fdb6850611ae983",
       "kind": "article",
-      "title": "Opinion: Demis Hassabis’ new role exposes Google’s AI balancing act",
-      "source": "CNBC",
-      "source_url": "https://www.cnbc.com/2026/08/06/demis-hassabis-google-reshuffle-deepmind-role.html",
-      "published_at": "2026-08-06T07:00:00Z",
+      "title": "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round",
+      "source": "Dealroom",
+      "source_url": "https://app.dealroom.co/news/note/physical-ai-startup-yuanshi-raises-tens-of-millions-in-quick-pre-a-double-round",
+      "published_at": "2026-09-13T02:51:22Z",
       "authors": [],
       "venue": "",
       "tags": [
-        "Researcher Watch",
-        "Foundation Models",
-        "Leadership"
+        "Academic Startup",
+        "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Opinion: Demis Hassabis’ new role exposes Google’s AI balancing act CNBC",
+      "summary": "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round Dealroom",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.cnbc.com/2026/08/06/demis-hassabis-google-reshuffle-deepmind-role.html",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://app.dealroom.co/news/note/physical-ai-startup-yuanshi-raises-tens-of-millions-in-quick-pre-a-double-round",
       "key_points": [
-        "Demis Hassabis is moving away from Google DeepMind’s day-to-day operations to focus on the AGI strategy, scientific research and Isomorphic Labs.",
-        "The shift highlights the tension between Hassabis’ long-term scientific ambitions and Google’s need to commercialize, monetize and scale its AI technology.",
-        "Google is under pressure to keep pace with OpenAI, Anthropic and other global rivals while justifying its heavy investment in AI infrastructure."
+        "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round Dealroom"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Opinion: Demis Hassabis’ new role exposes Google’s AI balancing act CNBC"
+          "body": "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round Dealroom"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Demis Hassabis is moving away from Google DeepMind’s day-to-day operations to focus on the AGI strategy, scientific research and Isomorphic Labs.",
-            "The shift highlights the tension between Hassabis’ long-term scientific ambitions and Google’s need to commercialize, monetize and scale its AI technology.",
-            "Google is under pressure to keep pace with OpenAI, Anthropic and other global rivals while justifying its heavy investment in AI infrastructure."
+            "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round Dealroom"
           ]
         },
         {
           "title": "原文短摘录",
-          "paragraphs": [
-            "Demis Hassabis is moving away from Google DeepMind’s day-to-day operations to focus on the AGI strategy, scientific research and Isomorphic Labs.",
-            "The shift highlights the tension between Hassabis’ long-term scientific ambitions and Google’s need to commercialize, monetize and scale its AI technology.",
-            "Google is under pressure to keep pace with OpenAI, Anthropic and other global rivals while justifying its heavy investment in AI infrastructure."
-          ]
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -4551,46 +4583,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "0fdb6850611ae983",
-      "kind": "article",
-      "title": "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round",
-      "source": "Dealroom",
-      "source_url": "https://app.dealroom.co/news/note/physical-ai-startup-yuanshi-raises-tens-of-millions-in-quick-pre-a-double-round",
-      "published_at": "2026-09-13T02:51:22Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round Dealroom",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 403: Forbidden",
-      "resolved_url": "https://app.dealroom.co/news/note/physical-ai-startup-yuanshi-raises-tens-of-millions-in-quick-pre-a-double-round",
-      "key_points": [
-        "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round Dealroom"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round Dealroom"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round Dealroom"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "3094e8825049b999",
       "kind": "article",
       "title": "Senators from both parties question OpenAI on breach of AI startup Hugging Face",
@@ -4609,7 +4601,7 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.local10.com/tech/2026/09/10/senators-from-both-parties-question-openai-on-breach-of-ai-startup-hugging-face/",
       "key_points": [
-        "Superhero Miles: Special 5K event held at Tropical Park for children with special needs Tags: Greg Casar , Jacob Coxon , Bernie Sanders , Charles Schumer , Nate Evans , Sam Altman , Josh Hawley WASHINGTON (AP) — Lawmakers worried about the existential risk posed by new artificial intelligence products demanded information from OpenAI on Thursday with…"
+        "Professional soccer player describes weeks in ICE custody after arrest Portion of Fort Lauderdale Grand Hotel collapses, no injuries reported Tags: Greg Casar , Jacob Coxon , Bernie Sanders , Charles Schumer , Nate Evans , Sam Altman , Josh Hawley"
       ],
       "sections": [
         {
@@ -4619,15 +4611,15 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Superhero Miles: Special 5K event held at Tropical Park for children with special needs Tags: Greg Casar , Jacob Coxon , Bernie Sanders , Charles Schumer , Nate Evans , Sam Altman , Josh Hawley WASHINGTON (AP) — Lawmakers worried about the existential risk posed by new artificial intelligence products demanded information from OpenAI on Thursday with…"
+            "Professional soccer player describes weeks in ICE custody after arrest Portion of Fort Lauderdale Grand Hotel collapses, no injuries reported Tags: Greg Casar , Jacob Coxon , Bernie Sanders , Charles Schumer , Nate Evans , Sam Altman , Josh Hawley"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Superhero Miles: Special 5K event held at Tropical Park for children with special needs",
-            "Tags: Greg Casar , Jacob Coxon , Bernie Sanders , Charles Schumer , Nate Evans , Sam Altman , Josh Hawley",
-            "WASHINGTON (AP) — Lawmakers worried about the existential risk posed by new artificial intelligence products demanded information from OpenAI on Thursday with separate queries that underscored growing concerns in Washington about the technology's potential to elude human control."
+            "Professional soccer player describes weeks in ICE custody after arrest",
+            "Portion of Fort Lauderdale Grand Hotel collapses, no injuries reported",
+            "Tags: Greg Casar , Jacob Coxon , Bernie Sanders , Charles Schumer , Nate Evans , Sam Altman , Josh Hawley"
           ]
         }
       ],
@@ -4688,7 +4680,7 @@
       "id": "87bf8bfd8b9957f1",
       "kind": "article",
       "title": "Exclusive: AI startup Sapien raises at $180M valuation to help companies find what’s really driving profit",
-      "source": "Fortune",
+      "source": "fortune.com",
       "source_url": "https://fortune.com/2026/09/08/exclusive-ai-startup-sapien-raises-180m-valuation-companies-find-really-driving-profit-cfo/",
       "published_at": "2026-09-08T12:21:00Z",
       "authors": [],
@@ -4698,7 +4690,7 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Exclusive: AI startup Sapien raises at $180M valuation to help companies find what’s really driving profit Fortune",
+      "summary": "Exclusive: AI startup Sapien raises at $180M valuation to help companies find what’s really driving profit fortune.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://fortune.com/2026/09/08/exclusive-ai-startup-sapien-raises-180m-valuation-companies-find-really-driving-profit-cfo/",
@@ -4712,7 +4704,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "Exclusive: AI startup Sapien raises at $180M valuation to help companies find what’s really driving profit Fortune"
+          "body": "Exclusive: AI startup Sapien raises at $180M valuation to help companies find what’s really driving profit fortune.com"
         },
         {
           "title": "公开页面要点",
@@ -4779,7 +4771,7 @@
       "id": "96f38cfa351a27f7",
       "kind": "article",
       "title": "The Incredibly Inspiring Startup Story of Dr. Fei-Fei Li and World Labs - Startup Fortune",
-      "source": "Startup Fortune",
+      "source": "startupfortune.com",
       "source_url": "https://startupfortune.com/the-incredibly-inspiring-startup-story-of-dr-fei-fei-li-and-world-labs/",
       "published_at": "2026-09-03T04:01:46Z",
       "authors": [],
@@ -4789,7 +4781,7 @@
         "Embodied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "The Incredibly Inspiring Startup Story of Dr. Fei-Fei Li and World Labs Startup Fortune",
+      "summary": "The Incredibly Inspiring Startup Story of Dr. Fei-Fei Li and World Labs startupfortune.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://startupfortune.com/the-incredibly-inspiring-startup-story-of-dr-fei-fei-li-and-world-labs/",
@@ -4803,7 +4795,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "The Incredibly Inspiring Startup Story of Dr. Fei-Fei Li and World Labs Startup Fortune"
+          "body": "The Incredibly Inspiring Startup Story of Dr. Fei-Fei Li and World Labs startupfortune.com"
         },
         {
           "title": "公开页面要点",
@@ -4830,7 +4822,7 @@
       "id": "c0a3e3bc2f7a65a9",
       "kind": "article",
       "title": "AI startup Visko closes $10 million pre-seed round and launches Orbis, its first Live Model",
-      "source": "finance.yahoo.com",
+      "source": "Yahoo Finance",
       "source_url": "https://finance.yahoo.com/technology/ai/articles/ai-startup-visko-closes-10-130000260.html",
       "published_at": "2026-09-01T07:00:00Z",
       "authors": [],
@@ -5306,46 +5298,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "cb74dd4fab68da79",
-      "kind": "article",
-      "title": "Trump Sees Race Against China as Key Issue on AI Regulation",
-      "source": "WSJ",
-      "source_url": "https://www.wsj.com/tech/ai/trump-defends-white-houses-light-touch-on-ai-regulation-c4ed2488",
-      "published_at": "2026-09-13T17:30:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Trump Sees Race Against China as Key Issue on AI Regulation WSJ",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 401: HTTP Forbidden",
-      "resolved_url": "https://www.wsj.com/tech/ai/trump-defends-white-houses-light-touch-on-ai-regulation-c4ed2488",
-      "key_points": [
-        "Trump Sees Race Against China as Key Issue on AI Regulation WSJ"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Trump Sees Race Against China as Key Issue on AI Regulation WSJ"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Trump Sees Race Against China as Key Issue on AI Regulation WSJ"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "4306d0dd631ebf60",
       "kind": "article",
       "title": "AI safety concerns grow as industry insiders warn about rapid development",
@@ -5440,7 +5392,7 @@
       "id": "7f402c6c89352afa",
       "kind": "article",
       "title": "Newsom signs AI safety bills backed by Anthropic, OpenAI",
-      "source": "politico.com",
+      "source": "Politico",
       "source_url": "https://www.politico.com/news/2026/09/09/newsom-signs-ai-safety-bills-backed-by-anthropic-openai-01069928",
       "published_at": "2026-09-10T00:35:00Z",
       "authors": [],
@@ -5450,23 +5402,23 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Newsom signs AI safety bills backed by Anthropic, OpenAI politico.com",
+      "summary": "Newsom signs AI safety bills backed by Anthropic, OpenAI Politico",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "summary-only",
       "fetch_note": "HTTP Error 403: Forbidden",
       "resolved_url": "https://www.politico.com/news/2026/09/09/newsom-signs-ai-safety-bills-backed-by-anthropic-openai-01069928",
       "key_points": [
-        "Newsom signs AI safety bills backed by Anthropic, OpenAI politico.com"
+        "Newsom signs AI safety bills backed by Anthropic, OpenAI Politico"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Newsom signs AI safety bills backed by Anthropic, OpenAI politico.com"
+          "body": "Newsom signs AI safety bills backed by Anthropic, OpenAI Politico"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Newsom signs AI safety bills backed by Anthropic, OpenAI politico.com"
+            "Newsom signs AI safety bills backed by Anthropic, OpenAI Politico"
           ]
         },
         {
@@ -5665,6 +5617,53 @@
             "Reps. Josh Gottheimer (D-N.J.) and Mike Lawler (R-N.Y.) are introducing a new bill Thursday, first shared with Axios, aimed at securing AI agents amid a growing number of safety incidents involving rogue agents.",
             "Why it matters: Washington has been slow to respond to the safety and security concerns raised by OpenAI's Hugging Face hack and other testing incidents involving agents that took unauthorized actions over the last two months.",
             "Driving the news: The Stop Rogue AI Act directs Commerce's National Institute of Standards and Technology to develop and publish standards, guidelines and best practices for how organizations can securely deploy AI agents."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "cbb49bd938deef43",
+      "kind": "article",
+      "title": "AI safety is designed in the West, and failing users everywhere",
+      "source": "Rest of World",
+      "source_url": "https://restofworld.org/2026/ai-safety-bias/",
+      "published_at": "2026-09-01T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "OpenAI’s pause shows the risks of rapid AI development, as safety frameworks fail to account for non-Western languages and contexts where harms are felt most.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://restofworld.org/2026/ai-safety-bias/",
+      "key_points": [
+        "Western AI safety standards focus on high-tech risks while neglecting deployment issues in developing nations.",
+        "English-focused guardrails fail in local dialects, causing dangerous medical misdiagnoses and denied public services.",
+        "Tech companies are retreating from safety commitments, leaving low-income countries in urgent need of local safety infrastructure."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "OpenAI’s pause shows the risks of rapid AI development, as safety frameworks fail to account for non-Western languages and contexts where harms are felt most."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Western AI safety standards focus on high-tech risks while neglecting deployment issues in developing nations.",
+            "English-focused guardrails fail in local dialects, causing dangerous medical misdiagnoses and denied public services.",
+            "Tech companies are retreating from safety commitments, leaving low-income countries in urgent need of local safety infrastructure."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Western AI safety standards focus on high-tech risks while neglecting deployment issues in developing nations.",
+            "English-focused guardrails fail in local dialects, causing dangerous medical misdiagnoses and denied public services.",
+            "Tech companies are retreating from safety commitments, leaving low-income countries in urgent need of local safety infrastructure."
           ]
         }
       ],
