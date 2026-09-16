@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-16T16:51:46Z",
+  "generated_at": "2026-09-16T21:15:36Z",
   "item_count": 130,
   "category_counts": {
     "research": 20,
@@ -45,7 +45,7 @@
       "字节豆包 / Seed": 1
     },
     "people_watch_coverage": {
-      "Elon Musk / xAI": 3,
+      "Elon Musk / xAI": 2,
       "Sam Altman / OpenAI": 1,
       "Dario Amodei / Anthropic": 0,
       "Demis Hassabis / DeepMind": 1,
@@ -68,6 +68,12 @@
       "note": ""
     },
     {
+      "name": "NVIDIA AI",
+      "status": "ok",
+      "count": 6,
+      "note": ""
+    },
+    {
       "name": "OpenAI",
       "status": "ok",
       "count": 9,
@@ -80,12 +86,6 @@
       "note": ""
     },
     {
-      "name": "NVIDIA AI",
-      "status": "ok",
-      "count": 6,
-      "note": ""
-    },
-    {
       "name": "Google AI",
       "status": "ok",
       "count": 7,
@@ -95,6 +95,12 @@
       "name": "Google DeepMind",
       "status": "ok",
       "count": 8,
+      "note": ""
+    },
+    {
+      "name": "OpenAlex Conference Index",
+      "status": "ok",
+      "count": 20,
       "note": ""
     },
     {
@@ -116,27 +122,21 @@
       "note": ""
     },
     {
+      "name": "AI for Mathematics & Science",
+      "status": "ok",
+      "count": 12,
+      "note": ""
+    },
+    {
       "name": "AI for Biology, Medicine & Materials",
       "status": "ok",
       "count": 12,
       "note": ""
     },
     {
-      "name": "OpenAlex Conference Index",
+      "name": "AI Policy Monitor",
       "status": "ok",
-      "count": 20,
-      "note": ""
-    },
-    {
-      "name": "Anthropic",
-      "status": "ok",
-      "count": 8,
-      "note": ""
-    },
-    {
-      "name": "AI for Mathematics & Science",
-      "status": "ok",
-      "count": 12,
+      "count": 10,
       "note": ""
     },
     {
@@ -158,7 +158,7 @@
       "note": ""
     },
     {
-      "name": "AI Policy Monitor",
+      "name": "China AI · DeepSeek & Zhipu",
       "status": "ok",
       "count": 10,
       "note": ""
@@ -170,15 +170,9 @@
       "note": ""
     },
     {
-      "name": "Frontier Leaders on X",
+      "name": "Anthropic",
       "status": "ok",
-      "count": 10,
-      "note": ""
-    },
-    {
-      "name": "China AI · DeepSeek & Zhipu",
-      "status": "ok",
-      "count": 10,
+      "count": 8,
       "note": ""
     },
     {
@@ -188,15 +182,21 @@
       "note": ""
     },
     {
+      "name": "Agent & Reasoning Researchers",
+      "status": "ok",
+      "count": 8,
+      "note": ""
+    },
+    {
       "name": "Vision & World Model Researchers",
       "status": "ok",
       "count": 9,
       "note": ""
     },
     {
-      "name": "Agent & Reasoning Researchers",
+      "name": "Frontier Leaders on X",
       "status": "ok",
-      "count": 8,
+      "count": 10,
       "note": ""
     },
     {
@@ -417,6 +417,24 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=3493725cb0c7e10e",
+      "reader_status": "summary-only"
+    },
+    {
+      "id": "89fe3e9223fd1969",
+      "category": "frontier",
+      "title": "How to connect AI usage to business value",
+      "summary": "Learn how ChatGPT Work and Codex analytics help teams understand AI usage and spend, identify training needs, and connect adoption to business outcomes.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/how-to-connect-ai-usage-to-business-value",
+      "published_at": "2026-09-16T12:00:00Z",
+      "tags": [
+        "OpenAI",
+        "Official"
+      ],
+      "importance": 100,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=89fe3e9223fd1969",
       "reader_status": "summary-only"
     },
     {
@@ -679,24 +697,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "73abed25292da421",
-      "category": "frontier",
-      "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
-      "summary": "Learn how OpenAI evolved Habitat from a Python library into a globally distributed storage platform serving 1 billion ChatGPT users and 22M requests per second.",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
-      "published_at": "2026-09-11T10:00:00Z",
-      "tags": [
-        "OpenAI",
-        "Official"
-      ],
-      "importance": 99,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=73abed25292da421",
-      "reader_status": "summary-only"
-    },
-    {
       "id": "gpt5-protein-synthesis-20260205",
       "category": "impact",
       "title": "GPT-5 与自动化实验室将无细胞蛋白合成成本降低 40%",
@@ -735,12 +735,12 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "9041d0e12881ffcd",
+      "id": "8ecc5fce2edd1ddc",
       "category": "china",
       "title": "AI周刊 #100 - DeepSeek 发布 V4.1-Flash",
       "summary": "编辑:TimLi 本周热点 DeepSeek 发布 V4.1-Flash:552B backbone,KV cache 砍到 1/4,agent 跑分压过 Opus-5.0 - CED 架构 552B 总参 ...",
       "source": "微信公众号 · 印记中文",
-      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HC_Jqmqj-uIEIpoahhFKxI8oiuC3LyOJYNnvUOLo&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789577507%26ver%3D6970%26signature%3DdaTqiSESl7QRY9-8%2A0%2ALPEPjenhhBSIH2Nw06CdV0mtLov1iG80230J4f4pQ5RbxHUJwj7ONS4ysjSeeXyhHXiQlQWhZNz92bD9Vnst-l-cLijccNuc70SMXlRcdDD9c%26new%3D1",
+      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HAgHq2qj_Fp8-JRrwwoknNtg09ymfa2khlQBBtlW&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789593338%26ver%3D6971%26signature%3Dac5bsRZcmCi9iui35kyOeTfLr9Pl%2AklS3fJwXelXfa5adJkRfjFGwHl8lEUNpZ3XfpGHKlOE1ewmKDj7p7xFa6G6niuRiACmD-6b2ubxdT1yhQE0By4MwPeuHsgd9rqM%26new%3D1",
       "published_at": "2026-09-16T13:56:18Z",
       "tags": [
         "微信公众号",
@@ -750,17 +750,17 @@
       "importance": 93,
       "content_kind": "article",
       "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "reader_url": "./reader.html?id=9041d0e12881ffcd",
+      "reader_url": "./reader.html?id=8ecc5fce2edd1ddc",
       "index_url": "https://weixin.sogou.com/weixin?type=2&query=DeepSeek+%E5%8F%91%E5%B8%83",
       "reader_status": "indexed-summary"
     },
     {
-      "id": "93c565b094f28fb6",
+      "id": "cc52ceb7eb4ca1f5",
       "category": "china",
       "title": "DeepSeek 内蒙古招聘公告!",
       "summary": "DeepSeek 内蒙古招聘公告点击关注公众号,第一时间查看招聘信息企业介绍杭州深度求索人工智能基础技术研究有限公司(简称...",
       "source": "微信公众号 · 北疆人事讯息网",
-      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HC_JqmqjPHUXsTAidQ9RJ2r5nSKCtJQYobVIB1G3&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789577507%26ver%3D6970%26signature%3DR6KZen1e6qLa3n-yZNDR1Zw%2AW9zjPNx3nigVyf10OlXPCvvqaSJNbwt0d3pH4xsxP-Dg7AFcJHLnd45WkGCTKyQ-cQi69FPWsziJWEbxAt6pDeuMBZrptHyR6XBTNkiE%26new%3D1",
+      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HAgHq2qjz7aIRrL3ttyIGYweelcvGtTwymUNnJY_&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789593338%26ver%3D6971%26signature%3DAduEK69kl7067ralQxGKE5Y4z2CYQt8JEPDVQ6rGy7kfh6ZEIe3PlHw49KnQPAbFeyVlhv56z5Cgpe9a6jUzN%2AF1Trs4Vb9ecR3qCV-79Npx9oeVYkMnw9GpVMqwQknI%26new%3D1",
       "published_at": "2026-09-16T03:01:25Z",
       "tags": [
         "微信公众号",
@@ -770,7 +770,7 @@
       "importance": 93,
       "content_kind": "article",
       "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "reader_url": "./reader.html?id=93c565b094f28fb6",
+      "reader_url": "./reader.html?id=cc52ceb7eb4ca1f5",
       "index_url": "https://weixin.sogou.com/weixin?type=2&query=DeepSeek+%E5%8F%91%E5%B8%83",
       "reader_status": "indexed-summary"
     },
@@ -1471,11 +1471,31 @@
       "reader_status": "pdf-link-only"
     },
     {
+      "id": "5c9d8a9c4e643775",
+      "category": "voices",
+      "title": "Top A.I. Leaders Call for Slowing Down A.I. Development",
+      "summary": "Top A.I. Leaders Call for Slowing Down A.I. Development The New York Times",
+      "source": "The New York Times",
+      "url": "https://www.nytimes.com/2026/09/12/technology/anthropic-dario-amodei-ai-slowdown.html",
+      "published_at": "2026-09-14T07:00:00Z",
+      "tags": [
+        "Researcher Watch",
+        "Foundation Models",
+        "Leadership"
+      ],
+      "importance": 87,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=5c9d8a9c4e643775",
+      "index_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQOE1BV1Q4UUYxLVRfaDNJVXVRbnNaQmdUMjBzbWJWRWtTcjlROWZqUjAtVGlob2NHVlB1NHVfRU5FY1dWT1UxR3RHakpVUTdzSGdvRmR2UFR2dzZxdHJ0ZXlMb0NsMVd1MDM1aUZ2VlpPeG9zSDZxRFpFWjNhQ0psM2RVYW8tM0ZKdTdDdG93?oc=5",
+      "reader_status": "summary-only"
+    },
+    {
       "id": "54d9c83eb580491e",
       "category": "impact",
       "title": "How to Build the Unified Data Foundation Drug Discovery AI Depends On - Emerj Artificial Intelligence Research",
       "summary": "This article is sponsored by CDD Vault and was written, edited, and published in alignment with our Emerj sponsored content guidelines. Learn more about our thought leadership and content creation services on our Emerj Media Services page.​ Drug discovery is one of the slowest, costliest processes in enterprise R&D. Developing…",
-      "source": "Emerj Artificial Intelligence Research",
+      "source": "emerj.com",
       "url": "https://emerj.com/how-to-build-the-unified-data-foundation-drug-discovery-ai-depends-on/",
       "published_at": "2026-09-11T10:06:37Z",
       "tags": [
@@ -1514,8 +1534,8 @@
       "id": "1d353f3501e8a727",
       "category": "impact",
       "title": "Physics advance could improve how AI remembers and learns",
-      "summary": "Physics advance could improve how AI remembers and learns Stanford Report",
-      "source": "Stanford Report",
+      "summary": "Physics advance could improve how AI remembers and learns news.stanford.edu",
+      "source": "news.stanford.edu",
       "url": "https://news.stanford.edu/stories/2026/09/spin-glass-memory-ai-research",
       "published_at": "2026-09-10T16:36:49Z",
       "tags": [
@@ -1605,11 +1625,31 @@
       "reader_status": "summary-only"
     },
     {
+      "id": "046243721bdb8314",
+      "category": "impact",
+      "title": "OpenAI says AI model solved one of mathematics' Millennium Prize Problems",
+      "summary": "OpenAI says AI model solved one of mathematics' Millennium Prize Problems Anadolu Ajansı",
+      "source": "Anadolu Ajansı",
+      "url": "https://www.aa.com.tr/en/science-technology/openai-says-ai-model-solved-one-of-mathematics-millennium-prize-problems/4051344",
+      "published_at": "2026-09-08T07:00:00Z",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "importance": 86,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=046243721bdb8314",
+      "index_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNR1l0SnF6Qzl1d1NMbjJENmF0VERnQTd6aGJDT2gxUC0tdFk3MDlmblM2djRYalBkRmFEVGlzb2pQQWw3b0RhQjJUUFlKZ1BtWVdqQlNJVndETXVVYVBuRENTTWJOaWtsVnJpUWJ3MXN5cFh4VFd2MFJyaGVTSXJuOWJZRTdZYkw2SHloTzQzS1R0WER0S2tEWTVJUHZpb1dOM0hPaWhkT05BSW1fX0VNOE5VNE5QWDh6SjRxR2h0Z3Aydw?oc=5",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "bac582d94c2b9f9b",
       "category": "impact",
       "title": "Opinion: AI will only revolutionize drug discovery and development if we play to its strengths",
-      "summary": "Opinion: AI will only revolutionize drug discovery and development if we play to its strengths biospace.com",
-      "source": "biospace.com",
+      "summary": "Opinion: AI will only revolutionize drug discovery and development if we play to its strengths BioSpace",
+      "source": "BioSpace",
       "url": "https://www.biospace.com/drug-development/opinion-ai-will-only-revolutionize-drug-discovery-and-development-if-we-play-to-its-strengths",
       "published_at": "2026-09-08T05:02:33Z",
       "tags": [
@@ -1642,46 +1682,6 @@
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=167184ef9994a428",
       "index_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPZjlMMnVGWE56UVFhV09lRVFkR25IVzJ5aThfQllJWDVIVHhMZUZjNmRoOE9JV3pXNE5YaUZQdm43TktxYUJ0MEFzVU9SWS1fZENsa0hOalMxLVFoTVhZM3N4bHV2RjFxb0xVdWM5U3RuMzl0SGNtNENUamRoTnhITFY5SW9Ea1MyS1ZLZ3JHVHBUMTR1Q3RKeDZLNkdJWnI4a0lLMFBJUEtRVWtWYVHSAcIBQVVfeXFMTlVfeTBsaGhUTU9FN3VHZklpUEoxSERDclB4U2VxZlY0TmdQMnVSRDBObWFfaEtkem1iZjVyTV9HVmo1MkJwMGN3eFhvcVBVWmRNQTB5MzI1Wms5OW5Jci1OdkhRZTJTREtsckJJUl9XVGhET3dsb1pHU3lzeW1KOUhhRkp6UTZ2WlJIOV9WQ0ZuR1J1TkFjMTJKd2NPU1YyMXRJc284UkFYb2p1YXJXTXlBbmZDQlhFeUVSS0QwVnY2LUE?oc=5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "51def5752d6c25d1",
-      "category": "impact",
-      "title": "How AI Is Changing Drug Discovery and What It Will Take to Unlock Its Full Potential",
-      "summary": "Scientists from Amgen and leading academic institutions recently came together to film Meeting the Moment, a roundtable conversation exploring how AI is shaping drug discovery and what it will take for the field to reach its full potential.",
-      "source": "Amgen",
-      "url": "https://www.amgen.com/stories/2026/07/how-ai-is-changing-drug-discovery-and-what-it-will-take-to-unlock-its-full-potential",
-      "published_at": "2026-09-07T07:00:00Z",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "importance": 86,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=51def5752d6c25d1",
-      "index_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQMnRQQXBULTBHQ0E5a1gtMm5UWXJFUkVTRUxyRVd0Y1BweEdjcFhkbG1wRk1wZlJTMndLYkxFMWVHbTM1YVZLTUlQcHhlMy1saDZ6VDdtNUJzZzhLMU1UYjIyQW0tNlNVcWk2bjk0d21TRUJXX1NMQlR2MUlLUkpoTjdJM1V0TzBrRXZJWHkybV9PMExiSVVMWWppa2MwdjdZYzZzaHg2S2h1OFVqQXE3VjFJOXRCcU95SktVd0s5QQ?oc=5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "a97eeeb6c04d32cc",
-      "category": "impact",
-      "title": "Formalizing Fermat's Last Theorem",
-      "summary": "Formalizing Fermat's Last Theorem Anthropic",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
-      "published_at": "2026-09-04T07:00:00Z",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "importance": 86,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=a97eeeb6c04d32cc",
-      "index_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFAyWFpGbGlCLVpoN2ZBUGs1UUZNSXJDaHNZNWZoV0g1RFVLc3BKbi1Nc2xVUWZ6SWZPR2JsanI3X1BIb25vZURqckE0Q1ltM1U3RnZXRkR1STVYei1VQ00tenotVjhNS0FfV2lIQ25WTXY5VlRPamc?oc=5",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -1718,6 +1718,26 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=710e72d14ab1608d",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "a97eeeb6c04d32cc",
+      "category": "impact",
+      "title": "Formalizing Fermat's Last Theorem",
+      "summary": "Formalizing Fermat's Last Theorem Anthropic",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
+      "published_at": "2026-09-04T07:00:00Z",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "importance": 85,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=a97eeeb6c04d32cc",
+      "index_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFAyWFpGbGlCLVpoN2ZBUGs1UUZNSXJDaHNZNWZoV0g1RFVLc3BKbi1Nc2xVUWZ6SWZPR2JsanI3X1BIb25vZURqckE0Q1ltM1U3RnZXRkR1STVYei1VQ00tenotVjhNS0FfV2lIQ25WTXY5VlRPamc?oc=5",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -1778,8 +1798,8 @@
       "id": "ea6a07fab59330fc",
       "category": "startups",
       "title": "KAIST, POSTECH, UNIST and Chosun University run AI startup talent hubs for graduate students",
-      "summary": "KAIST, POSTECH, UNIST and Chosun University run AI startup talent hubs for graduate students dongascience.com",
-      "source": "dongascience.com",
+      "summary": "KAIST, POSTECH, UNIST and Chosun University run AI startup talent hubs for graduate students DongA Science",
+      "source": "DongA Science",
       "url": "https://www.dongascience.com/en/news/79725",
       "published_at": "2026-09-02T07:00:00Z",
       "tags": [
@@ -2174,25 +2194,6 @@
       "reader_status": "abstract-only"
     },
     {
-      "id": "07300289e063b700",
-      "category": "startups",
-      "title": "Valor, Point72 back General Intuition at $6B valuation as AI startup pushes into robotics | TechCrunch",
-      "summary": "General Intuition, the startup building a foundation model that trains generalized AI agents how to move through space and time, is in talks to raise at a $6 billion pre-money valuation from new investors including Valor Ventures, Point72 Ventures, and Seven Seven Six.",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/08/24/valor-point72-back-general-intuition-at-6b-valuation-as-ai-startup-pushes-into-robotics/",
-      "published_at": "2026-08-24T07:00:00Z",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "importance": 82,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=07300289e063b700",
-      "index_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNbncxd3NuTzh6dVBpYzZtb25BdlhWUnhjQ0lobHNCSFppV1M0aDQ3Rm83Tk9tRHNZNlIxX3JkTE1XWTZzdVkyNW9kMGdFTm1CcWtSQTVBT3RJWkxzNXNyMm5ueDg0MUZ0OVdTX2ZET1h4OHNqVTg0VncwMFM0QjRYNDhyRG90ZGdIU3R4UjN6V1p5UTkzUURobERIS19qMUhxSTlXWGkzbTFDdWlpN2hacWU5clhJTmNBMi1LaXNMVQ?oc=5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "8fad5f96cf88a620",
       "category": "voices",
       "title": "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan",
@@ -2230,26 +2231,6 @@
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=78d60b903b5f1722",
       "index_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPRzBWLTFCcW1Xc3hMN3IwRXNvdnR1dWF2SExVVlkwM2gybEJaOUtQaU5MTllzQVg1SHdESWFGQloyS3owYzhKWFE3aEh1ZnYxZ1FMOVkzdURkN3NmM0FKQUp4NnRka3BPd0ppVmNPa204dm1TcGtwZ1J0RDYzTTlNZkhNNGZGTTRKN3pKSXFRMjJnbkNFdThTZ2Q3WDloS2tQWHE5b01tcHdpTVVyT0FCRklodFA?oc=5",
-      "reader_status": "summary-only"
-    },
-    {
-      "id": "9943969fce7ee83e",
-      "category": "voices",
-      "title": "Fei-Fei Li",
-      "summary": "Fei-Fei Li American Academy of Arts and Sciences",
-      "source": "American Academy of Arts and Sciences",
-      "url": "https://www.amacad.org/person/fei-fei-li",
-      "published_at": "2026-08-10T07:00:00Z",
-      "tags": [
-        "Researcher Watch",
-        "Vision",
-        "World Models"
-      ],
-      "importance": 81,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=9943969fce7ee83e",
-      "index_url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1QVlV6aHQzcF9GRk44dzk3QWd4VXZhdzRWeUktUjhDelBTWmpoZjZ5QzRlLWxicWdYQkxkTXNnX3B0QTVLTXhsSEFXWEwyNEt0anc?oc=5",
       "reader_status": "summary-only"
     },
     {
@@ -2293,26 +2274,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "3f8296678fac8ff8",
-      "category": "voices",
-      "title": "@rob2628 They should use @Grok to help solve this!",
-      "summary": "@rob2628 They should use @Grok to help solve this! x.com",
-      "source": "x.com",
-      "url": "https://x.com/elonmusk/status/2099919301893378084",
-      "published_at": "2026-09-15T17:52:30Z",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "importance": 80,
-      "content_kind": "social",
-      "verification": "公开平台索引，需查看原帖",
-      "reader_url": "./reader.html?id=3f8296678fac8ff8",
-      "index_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9jZmw5QU1vX2hDa1pudW9XOEJMNkFaVXNXamllZ0JvRHdlZmUyYXQ2MUlaVHU3cGhZRVh0YjExbGNIeWRiSWZ0NGw5cE9xUXFZR0J6UE5VeWttQUVhb1E?oc=5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "516ac0668ad9e293",
       "category": "voices",
       "title": "@deredleritt3r It’s not a secret. It’s a combination of the HF incident, the capabilities of this new model, the concerning trajectory of monitorability, and the speed of improvement in capabilities.",
@@ -2353,24 +2314,63 @@
       "reader_status": "summary-only"
     },
     {
-      "id": "5c9d8a9c4e643775",
+      "id": "4545d59411c9fa97",
       "category": "voices",
-      "title": "Top A.I. Leaders Call for Slowing Down A.I. Development",
-      "summary": "Top A.I. Leaders Call for Slowing Down A.I. Development nytimes.com",
-      "source": "nytimes.com",
-      "url": "https://www.nytimes.com/2026/09/12/technology/anthropic-dario-amodei-ai-slowdown.html",
-      "published_at": "2026-09-14T07:00:00Z",
+      "title": "@ericxing AI folks who live in the discrete world of bits and tokens don't always understand how incredibly messy the real world is.",
+      "summary": "@ericxing AI folks who live in the discrete world of bits and tokens don't always understand how incredibly messy the real world is. x.com",
+      "source": "x.com",
+      "url": "https://x.com/ylecun/status/2099496673990815862",
+      "published_at": "2026-09-14T13:53:08Z",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "importance": 80,
+      "content_kind": "social",
+      "verification": "公开平台索引，需查看原帖",
+      "reader_url": "./reader.html?id=4545d59411c9fa97",
+      "index_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9Sc0RuNUE0NVJMV1B4dGJNbEgtSDRzRnBwOEZQQS1EWDRaVi1iWWhCYVJFMzJjVU56TjNwR2FWaUs1bUxTTktsX1VienVlLUJyZUtvdlU3ZHRBY0E?oc=5",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "9943969fce7ee83e",
+      "category": "voices",
+      "title": "Fei-Fei Li",
+      "summary": "Fei-Fei Li American Academy of Arts and Sciences",
+      "source": "American Academy of Arts and Sciences",
+      "url": "https://www.amacad.org/person/fei-fei-li",
+      "published_at": "2026-08-10T07:00:00Z",
       "tags": [
         "Researcher Watch",
-        "Foundation Models",
-        "Leadership"
+        "Vision",
+        "World Models"
       ],
       "importance": 80,
       "content_kind": "article",
       "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=5c9d8a9c4e643775",
-      "index_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQOE1BV1Q4UUYxLVRfaDNJVXVRbnNaQmdUMjBzbWJWRWtTcjlROWZqUjAtVGlob2NHVlB1NHVfRU5FY1dWT1UxR3RHakpVUTdzSGdvRmR2UFR2dzZxdHJ0ZXlMb0NsMVd1MDM1aUZ2VlpPeG9zSDZxRFpFWjNhQ0psM2RVYW8tM0ZKdTdDdG93?oc=5",
+      "reader_url": "./reader.html?id=9943969fce7ee83e",
+      "index_url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1QVlV6aHQzcF9GRk44dzk3QWd4VXZhdzRWeUktUjhDelBTWmpoZjZ5QzRlLWxicWdYQkxkTXNnX3B0QTVLTXhsSEFXWEwyNEt0anc?oc=5",
       "reader_status": "summary-only"
+    },
+    {
+      "id": "08683fee2d0a769b",
+      "category": "startups",
+      "title": "Little-known AI startup Micro1 tries to trump Google's bid for banrkupt Spirit Airlines’ data",
+      "summary": "Little-known AI startup Micro1 tries to trump Google's bid for banrkupt Spirit Airlines’ data Fortune",
+      "source": "Fortune",
+      "url": "https://fortune.com/2026/09/14/micro1-tries-to-beat-googles-bid-to-buy-bankrupt-spirit-airlines-data-for-12-5-million-highlighting-value-of-data-to-ai-companies/",
+      "published_at": "2026-09-14T13:06:00Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 79,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=08683fee2d0a769b",
+      "index_url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQMEZfbW05VUlpMEh0b3ZfRy0taF9ZTnBucWxKQXNkU29qbU9pRzBLYUp5YVZpdnNRX0VySkhQbFgzTWVpZHNEN2NwaWUxYjBReXFWQlFyNVU0aTRGbnA2ME9ENmxuSEJVODZjOWU2QXdUQWdJaS1KUkFBV1R0eDRFbzl4RzBHLXdQbHpONWFMNDRpdE1DM2JQMUtXU293a3dXN1ZDSnZkQmRQbVZrZG1HMnpjQmpNT2tXOGJwOG5nQTFOR2tzX1VlaTlSa0RlTVNldEYxRXhBVlZsQlBJY3JBTFV3SzNGaEJJYUJjNTVuOWRrcTA?oc=5",
+      "reader_status": "public-page-excerpt"
     },
     {
       "id": "7d71223c113e68d0",
@@ -2486,23 +2486,42 @@
       "reader_status": "summary-only"
     },
     {
-      "id": "d0eec51a702fc422",
+      "id": "af5193e70b176b57",
       "category": "startups",
-      "title": "The Anthropic-Physical Intelligence rumor roiling AI Twitter | TechCrunch",
-      "summary": "The Anthropic-Physical Intelligence rumor roiling AI Twitter TechCrunch",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/07/21/the-anthropic-physical-intelligence-rumor-roiling-ai-twitter/",
-      "published_at": "2026-07-21T07:00:00Z",
+      "title": "AI startup Visko closes $10 million pre-seed round and launches Orbis, its first Live Model",
+      "summary": "AI startup Visko closes $10 million pre-seed round and launches Orbis, its first Live Model PR Newswire",
+      "source": "PR Newswire",
+      "url": "https://www.prnewswire.com/news-releases/ai-startup-visko-closes-10-million-pre-seed-round-and-launches-orbis-its-first-live-model-302865890.html",
+      "published_at": "2026-09-01T07:00:00Z",
       "tags": [
-        "Founder Watch",
-        "Embodied AI"
+        "Academic Startup",
+        "Funding"
       ],
       "importance": 76,
       "content_kind": "article",
       "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=d0eec51a702fc422",
-      "index_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOLTFxVXJLb0pHbEh1cER6U1lybHBRWHpYaFZjY19RMUpmTGNRRTBBZ3M1TDAxclFMbEdnVERtUEpFaHRSVlY0djY3Tk1tYTA4a1RpUkFGaEh0LWNZVjh3VWQ4U2ZwZGFwX01QT3BkVVFmdUNja3NMNlBveXlwV1BMNGplTGJlanhBcFRlR2hnSG9PNFdYSUZQOS16VQ?oc=5",
+      "reader_url": "./reader.html?id=af5193e70b176b57",
+      "index_url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQVGRLUXRuejRWRUVuVW5NTmt3LTBlalMxUnVnTk1ObVVGQVpzRGJhcWVudXRhT00xTlFxS0pxWlo3djlmYnpIYjVaREEzMVdQUWRNZ1VZSUxab2N0N0p2UTFHT1A5MktEQkNLSW56emR5b2U1QjlJMHBoTTBIdjV0NnM1ekRrelZEMDU3V1dDSFM5VWtDVjhwMEJDWFpjRVh4d24tR01nTHdNYl9hemg1UnN1akw0cUJUS01fZmhlWHNnSzFKMkh0LVBZOWNqcUZMRGZUV3U5NDZaM3IxUVE?oc=5",
       "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "8b491ce1467cac97",
+      "category": "opensource",
+      "title": "After OpenAI’s Bots Went Rogue, Watchdogs Were Kept on a Short Leash",
+      "summary": "After OpenAI’s Bots Went Rogue, Watchdogs Were Kept on a Short Leash The New York Times",
+      "source": "The New York Times",
+      "url": "https://www.nytimes.com/2026/09/03/technology/openai-hugging-face-hack.html",
+      "published_at": "2026-09-03T07:00:00Z",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "importance": 75,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=8b491ce1467cac97",
+      "index_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOME1hSWlLYzY2a3I4TFBudWk0SkdZWDlVOE96LUJuNFJ0dkc1YVFYQnZBaVRETjc5VHBtUDVod1B1SDhxX0dKMHk0azh2a2stTjAtanNLdjBzLWlNQzFPUGh6TTQzczFzQ1Y5QlNCTlBxelFLVm9yQV9KZ1ZYRFphbA?oc=5",
+      "reader_status": "summary-only"
     },
     {
       "id": "ff99908014b6a658",
@@ -2562,41 +2581,22 @@
       "reader_status": "summary-only"
     },
     {
-      "id": "ee1cdd8efc6ce62f",
+      "id": "d0eec51a702fc422",
       "category": "startups",
-      "title": "Homebuilding AI startup Digs raises $25.3M and partners with building products giant",
-      "summary": "Homebuilding AI startup Digs raises $25.3M and partners with building products giant geekwire.com",
-      "source": "geekwire.com",
-      "url": "https://www.geekwire.com/2026/homebuilding-ai-startup-digs-raises-25-3m-and-partners-with-building-products-giant/",
-      "published_at": "2026-08-25T07:00:00Z",
+      "title": "The Anthropic-Physical Intelligence rumor roiling AI Twitter | TechCrunch",
+      "summary": "The Anthropic-Physical Intelligence rumor roiling AI Twitter TechCrunch",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/07/21/the-anthropic-physical-intelligence-rumor-roiling-ai-twitter/",
+      "published_at": "2026-07-21T07:00:00Z",
       "tags": [
-        "Academic Startup",
-        "Funding"
+        "Founder Watch",
+        "Embodied AI"
       ],
       "importance": 75,
       "content_kind": "article",
       "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=ee1cdd8efc6ce62f",
-      "index_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQNmlSVlRyVHpWVDB1R3pUU1Q0dUxaYmNBVVdOSkg3LTB2RE9DUmRYMGxUd0NUNndJeXZEb2hVcWdqNl9naHRpVm5VRURvdk5JRDYxWnhkdTl1cEp4V0tTRXNEMHYtXzMwdnB3djRwNUU5UWx5RlcwT1RKbjZyTGdGRkFENE5rbVZGTmVXSEUzS3BaMWllbU12eHJYYlRzRERRWnRUYnY3T25udEhMNnVlWS0xOEM?oc=5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "861e9fe4ce02d5b1",
-      "category": "startups",
-      "title": "Moonshot AI: what the Chinese AI startup does and builds",
-      "summary": "Moonshot AI: what the Chinese AI startup does and builds qz.com",
-      "source": "qz.com",
-      "url": "https://qz.com/what-is-moonshot-ai",
-      "published_at": "2026-08-25T07:00:00Z",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "importance": 75,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=861e9fe4ce02d5b1",
-      "index_url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5qdTZOWVFSdmhUTExRek5Wd2ZDVDFuQm1ydHJxcWRnRVpIczdLWDBWSUFWNDh0SzJTVVg4UjJQNlgtSXVVOWlpZkNB?oc=5",
+      "reader_url": "./reader.html?id=d0eec51a702fc422",
+      "index_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOLTFxVXJLb0pHbEh1cER6U1lybHBRWHpYaFZjY19RMUpmTGNRRTBBZ3M1TDAxclFMbEdnVERtUEpFaHRSVlY0djY3Tk1tYTA4a1RpUkFGaEh0LWNZVjh3VWQ4U2ZwZGFwX01QT3BkVVFmdUNja3NMNlBveXlwV1BMNGplTGJlanhBcFRlR2hnSG9PNFdYSUZQOS16VQ?oc=5",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2637,13 +2637,13 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "cd9066ae30038b11",
+      "id": "ee1cdd8efc6ce62f",
       "category": "startups",
-      "title": "Why Jeff Dean says he left Google after 27 years to build a small AI startup",
-      "summary": "Why Jeff Dean says he left Google after 27 years to build a small AI startup Business Insider",
-      "source": "Business Insider",
-      "url": "https://www.businessinsider.com/why-jeff-dean-left-google-ai-startup-discovery-loop-2026-8",
-      "published_at": "2026-08-20T07:00:00Z",
+      "title": "Homebuilding AI startup Digs raises $25.3M and partners with building products giant",
+      "summary": "Homebuilding AI startup Digs raises $25.3M and partners with building products giant GeekWire",
+      "source": "GeekWire",
+      "url": "https://www.geekwire.com/2026/homebuilding-ai-startup-digs-raises-25-3m-and-partners-with-building-products-giant/",
+      "published_at": "2026-08-25T07:00:00Z",
       "tags": [
         "Academic Startup",
         "Funding"
@@ -2651,8 +2651,46 @@
       "importance": 74,
       "content_kind": "article",
       "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=cd9066ae30038b11",
-      "index_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPOXVQb2wwTW5ZZllqbk00TlZva1hRU18xQndreHE3S0huZU1XSVpJbjU2aWFraEhISUxvMVlaQW5jdjJEeEVFSExnc3dETnZTR0NCaDZ6Q1ZWMjVrODJydWhDWEZDS1RDUWNJeFRMNDM1Zk4tQUh4NUpTUTViblBZRkF0M0ZGbnlwNENWLU1Qb0pKV0Js?oc=5",
+      "reader_url": "./reader.html?id=ee1cdd8efc6ce62f",
+      "index_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQNmlSVlRyVHpWVDB1R3pUU1Q0dUxaYmNBVVdOSkg3LTB2RE9DUmRYMGxUd0NUNndJeXZEb2hVcWdqNl9naHRpVm5VRURvdk5JRDYxWnhkdTl1cEp4V0tTRXNEMHYtXzMwdnB3djRwNUU5UWx5RlcwT1RKbjZyTGdGRkFENE5rbVZGTmVXSEUzS3BaMWllbU12eHJYYlRzRERRWnRUYnY3T25udEhMNnVlWS0xOEM?oc=5",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "861e9fe4ce02d5b1",
+      "category": "startups",
+      "title": "Moonshot AI: what the Chinese AI startup does and builds",
+      "summary": "Moonshot AI: what the Chinese AI startup does and builds qz.com",
+      "source": "qz.com",
+      "url": "https://qz.com/what-is-moonshot-ai",
+      "published_at": "2026-08-25T07:00:00Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 74,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=861e9fe4ce02d5b1",
+      "index_url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5qdTZOWVFSdmhUTExRek5Wd2ZDVDFuQm1ydHJxcWRnRVpIczdLWDBWSUFWNDh0SzJTVVg4UjJQNlgtSXVVOWlpZkNB?oc=5",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "66b70bc48d9352d6",
+      "category": "policy",
+      "title": "The Forensic Gap in AI Safety Laws",
+      "summary": "State AI laws require developers to report safety incidents—but not what investigation follows or what evidence they must keep.",
+      "source": "Lawfare",
+      "url": "https://www.lawfaremedia.org/article/the-forensic-gap-in-ai-safety-laws",
+      "published_at": "2026-09-16T17:06:38Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 72,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=66b70bc48d9352d6",
+      "index_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1ra194Z1VTUnNSS0FHSXc5cDRQSm9WWHlBZ2M1RTdlYTY1VW5BYjdIb2d4aE5mWU1nVFRrT3RncjVrYjlGZlE5dmRIbzI0Y19IMDNZVlVONTlHVXY4aXZpeWN6Y2FvOXhZeWdfM05nUlhoeXJwcDlFX0VzOA?oc=5",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2675,25 +2713,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "143cc48ba1e69859",
-      "category": "policy",
-      "title": "AI Regulation in APAC: Diverging Approaches Across the Region",
-      "summary": "The past 12 months have seen a significant acceleration in the enactment of AI regulation across the Asia-Pacific (APAC) region. We explore these developments, from comprehensive legislative frameworks to targeted content labelling rules.",
-      "source": "Latham & Watkins LLP",
-      "url": "https://www.lw.com/en/insights/ai-regulation-in-apac-diverging-approaches-across-the-region",
-      "published_at": "2026-09-15T19:12:36Z",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "importance": 72,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=143cc48ba1e69859",
-      "index_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWXNQbHJDWFdhc3Z4NEtQTDFvRnkzbjE4SVZwWDRnZEtRaGowSlpiRHhBZHFLTUxoN3hGZ29ndzR6cHM0c2tTR295Zi1sRFItTnRldU9wcmRLV3FtdWV0U2pLaUxCbVdJOXU5aENyaWFpN1Q0cEJwWWktSWwyNUhYM2UteUZPYTZwbklzZFpvVkpUaWlxc1E?oc=5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "b20c099714e81635",
       "category": "policy",
       "title": "The AI safety vibe shift",
@@ -2713,6 +2732,25 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "489b8a360475dbbd",
+      "category": "policy",
+      "title": "The AI policy window is open. We need to act.",
+      "summary": "The AI policy window is open. We need to act. OpenAI",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/ai-policy-window/",
+      "published_at": "2026-09-09T23:56:53Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 71,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=489b8a360475dbbd",
+      "index_url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE16Nk92bjU2QkFrUWR3enpvc2JRd2RDR2JMRDJpb0RvbFdpOEVDTEtfbVBvbm5NTllaOUNmR1ZDTmtoYXFLalVMSlBtZEpqckZaaTJfMw?oc=5",
+      "reader_status": "summary-only"
+    },
+    {
       "id": "55ed709e6a8eff6c",
       "category": "policy",
       "title": "AFT, UFT and Microsoft announce ‘National AI Safety & Privacy Standard’ for schools to protect students, families and educators",
@@ -2729,25 +2767,6 @@
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=55ed709e6a8eff6c",
       "index_url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPRmNKZTltcDZfN0FiMkRwTlBoOHFreWxRQk5zcTROb0JUeURrb0VILUNQSnZXV3JadXZuYU5NQ0NCQXRRcE1Wa29rM1lub2EtUl80bl9aLXJhQjJkY2tOcWJLUFJMR1VSYlNibXpmN0JJQmoySkV1blFqcUFza3o4cDZsak41eTVlV0JuMWV0Sm9KczNUaGk3NEVDd0FLVEYzcUhHZUtiaG9MVWZ1R19rZkh5ZDZtX0MxUTh1eldsQzVzNHhJZkliN19wYmVtM3AtV212WHY2REJOU0FWc1pqZ0NUMU1sRkRNUFdpU1lkLXE0dzRtRmdSLXNadw?oc=5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "a8f359760d99ae59",
-      "category": "opensource",
-      "title": "Open-Source AI & Open Models Reading List",
-      "summary": "Open-Source AI & Open Models Reading List Interconnects AI",
-      "source": "Interconnects AI",
-      "url": "https://www.interconnects.ai/p/open-source-ai-reading-list",
-      "published_at": "2026-09-11T12:36:25Z",
-      "tags": [
-        "Open Source",
-        "Models & Tools"
-      ],
-      "importance": 69,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=a8f359760d99ae59",
-      "index_url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBhRVhlNkJITVp3RWRoZ21EN191QzM1T3dLZ19GSUxqVHJ3TlItWW1LYXhwWFlqWXNIMVNTcVVjZU9vZFlCNllhczhETWRINUFYb3RaYU14MkQ1R3ZXYlhEY1hRWUttV1I4Q2c?oc=5",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2806,25 +2825,6 @@
       "reader_url": "./reader.html?id=7587cefac521f711",
       "index_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNTEtDUkt0MmpsaVJwUzhNX0NWMkxid2hUN2M5TlpFUmVGakw0VXRhdzFacU5DOVRqc2N1c2kxQThmTkphOHFOQ2VuSUJXZ1psRHc5VllISEVkRkptSXRhUzl1Mmo3QjFUb0NWZmo0UGE3X3dzdE5semlwQkxBY0dzdWItbWF1S0MtN1JZUXNzWDFsR0FpWS1oM2dtUWJzMXl5SC1yMU1qNkZPUdIBrwFBVV95cUxNUE1ES3VydkJuZWU2WXc0dW5VUm1UMlBILXhPa1lFaEJpNHQ3ellYbmdDZWNLM2dkUktkdlM0Xzh6bjVCOFpwM0hGamZNUl96SF9fRktLZXdReTdRV2NLS3oxU3lPUDR3aWhEZ3JNdXlKT3V1ZnRtU3dxZF9GcHNrODhVOFpMelktWWtvb1BWTWs1cG1LZ0FwNndVT2VEaFpQV0sxTkxDd1FKcmN2MVZN?oc=5",
       "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "45c5ca8b36fc039c",
-      "category": "policy",
-      "title": "OpenAI supports California’s bill to advance youth AI safety",
-      "summary": "OpenAI supports California’s bill to advance youth AI safety OpenAI",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety/",
-      "published_at": "2026-08-31T07:00:00Z",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "importance": 69,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=45c5ca8b36fc039c",
-      "index_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNQ0puazl3MjhZNm1TdmpZZnRleXRud0NLMEFETVJVeE96d29BcmIwRmRRbmVOdE5GaGZTOUJidkk1c0xOSG9XSm5NR3lnbURta2NJN0JwSnduMUJBaDVPNWNPTkVXaHc3TFpUY3NUMEhKNXlFaHROMXRfUmFxbEFhQkV3?oc=5",
-      "reader_status": "summary-only"
     },
     {
       "id": "8a5e4e1b4e85d62d",
