@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-20T11:19:34Z",
-  "record_count": 131,
+  "generated_at": "2026-09-20T16:03:13Z",
+  "record_count": 132,
   "records": [
     {
       "id": "jacobian-fable-20260720",
@@ -426,57 +426,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "cf232711ef626eba",
-      "kind": "article",
-      "title": "An alignment assessment of recent cybersecurity incidents",
-      "source": "Anthropic",
-      "source_url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
-      "published_at": "2026-09-17T23:46:13Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Anthropic",
-        "Research"
-      ],
-      "verification": "官方来源",
-      "summary": "We present an alignment assessment of four incidents in which Claude models gained unauthorized access to real third-party systems.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
-      "key_points": [
-        "We present an alignment assessment of four incidents in which Claude models gained unauthorized access to real third-party systems.",
-        "We described three of these incidents on July 30 ; we identified these after a scan of roughly 141,000 transcripts in which we believed Claude could have obtained internet access during a cyber evaluation.",
-        "Given the volume of transcripts and our desire to disclose incidents quickly, our scan relied on an agentic search.",
-        "This missed a set of transcripts that also turned out to have internet access; we identified these in August while assembling transcripts to share with METR.",
-        "We scanned these transcripts and identified a fourth incident, from January 2026, involving an early version… After finding this incident, we broadened our search to roughly 481 million transcripts—an intentionally wide net, consisting of all transcripts from our Frontier Red Team, many non-cyber evaluations, reinforcement learning (RL) environments…"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "We present an alignment assessment of four incidents in which Claude models gained unauthorized access to real third-party systems."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "We present an alignment assessment of four incidents in which Claude models gained unauthorized access to real third-party systems.",
-            "We described three of these incidents on July 30 ; we identified these after a scan of roughly 141,000 transcripts in which we believed Claude could have obtained internet access during a cyber evaluation.",
-            "Given the volume of transcripts and our desire to disclose incidents quickly, our scan relied on an agentic search.",
-            "This missed a set of transcripts that also turned out to have internet access; we identified these in August while assembling transcripts to share with METR.",
-            "We scanned these transcripts and identified a fourth incident, from January 2026, involving an early version… After finding this incident, we broadened our search to roughly 481 million transcripts—an intentionally wide net, consisting of all transcripts from our Frontier Red Team, many non-cyber evaluations, reinforcement learning (RL) environments…"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "We present an alignment assessment of four incidents in which Claude models gained unauthorized access to real third-party systems. We described three of these incidents on July 30 ; we identified these after a scan of roughly 141,000 transcripts in which we believed Claude could have obtained internet access during a cyber evaluation. Given the volume of transcripts and our desire to disclose incidents quickly, our scan relied on an agentic search. This missed a set of transcripts that also turned out to have internet access; we identified these in August while assembling transcripts to share with METR. We scanned these transcripts and identified a fourth incident, from January 2026, involving an early version…",
-            "After finding this incident, we broadened our search to roughly 481 million transcripts—an intentionally wide net, consisting of all transcripts from our Frontier Red Team, many non-cyber evaluations, reinforcement learning (RL) environments, subagent logs, and more. We performed a first-stage scan of this group of transcripts for signs of internet access, such as public IP addresses and web addresses, and a second-stage scan using Claude to review the 9.2 million transcripts the first stage flagged for escalation. This scan re-identified the four incidents and found no other cases of similar or worse severity.",
-            "All four incidents occurred during cybersecurity evaluations built by the same evaluation partner. Claude was told it was operating in a simulation without internet access, but, due to a misconfiguration, it was mistakenly connected to the open internet. As is standard for cybersecurity evaluations, the models ran without the cyber safeguards that ship with our released models. (This post does not cover the incident reported by UK AISI in its testing of Claude Mythos 5. We plan to conduct an alignment assessment of those transcripts as well.)"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "2e8bec6440d10036",
       "kind": "article",
       "title": "Broadening access to Skala creates a faster path to predictive DFT",
@@ -567,6 +516,57 @@
         }
       ],
       "reading_minutes": 46
+    },
+    {
+      "id": "cf232711ef626eba",
+      "kind": "article",
+      "title": "An alignment assessment of recent cybersecurity incidents",
+      "source": "Anthropic",
+      "source_url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+      "published_at": "2026-09-17T23:46:13Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Anthropic",
+        "Research"
+      ],
+      "verification": "官方来源",
+      "summary": "We present an alignment assessment of four incidents in which Claude models gained unauthorized access to real third-party systems.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+      "key_points": [
+        "We present an alignment assessment of four incidents in which Claude models gained unauthorized access to real third-party systems.",
+        "We described three of these incidents on July 30 ; we identified these after a scan of roughly 141,000 transcripts in which we believed Claude could have obtained internet access during a cyber evaluation.",
+        "Given the volume of transcripts and our desire to disclose incidents quickly, our scan relied on an agentic search.",
+        "This missed a set of transcripts that also turned out to have internet access; we identified these in August while assembling transcripts to share with METR.",
+        "We scanned these transcripts and identified a fourth incident, from January 2026, involving an early version… After finding this incident, we broadened our search to roughly 481 million transcripts—an intentionally wide net, consisting of all transcripts from our Frontier Red Team, many non-cyber evaluations, reinforcement learning (RL) environments…"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "We present an alignment assessment of four incidents in which Claude models gained unauthorized access to real third-party systems."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "We present an alignment assessment of four incidents in which Claude models gained unauthorized access to real third-party systems.",
+            "We described three of these incidents on July 30 ; we identified these after a scan of roughly 141,000 transcripts in which we believed Claude could have obtained internet access during a cyber evaluation.",
+            "Given the volume of transcripts and our desire to disclose incidents quickly, our scan relied on an agentic search.",
+            "This missed a set of transcripts that also turned out to have internet access; we identified these in August while assembling transcripts to share with METR.",
+            "We scanned these transcripts and identified a fourth incident, from January 2026, involving an early version… After finding this incident, we broadened our search to roughly 481 million transcripts—an intentionally wide net, consisting of all transcripts from our Frontier Red Team, many non-cyber evaluations, reinforcement learning (RL) environments…"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "We present an alignment assessment of four incidents in which Claude models gained unauthorized access to real third-party systems. We described three of these incidents on July 30 ; we identified these after a scan of roughly 141,000 transcripts in which we believed Claude could have obtained internet access during a cyber evaluation. Given the volume of transcripts and our desire to disclose incidents quickly, our scan relied on an agentic search. This missed a set of transcripts that also turned out to have internet access; we identified these in August while assembling transcripts to share with METR. We scanned these transcripts and identified a fourth incident, from January 2026, involving an early version…",
+            "After finding this incident, we broadened our search to roughly 481 million transcripts—an intentionally wide net, consisting of all transcripts from our Frontier Red Team, many non-cyber evaluations, reinforcement learning (RL) environments, subagent logs, and more. We performed a first-stage scan of this group of transcripts for signs of internet access, such as public IP addresses and web addresses, and a second-stage scan using Claude to review the 9.2 million transcripts the first stage flagged for escalation. This scan re-identified the four incidents and found no other cases of similar or worse severity.",
+            "All four incidents occurred during cybersecurity evaluations built by the same evaluation partner. Claude was told it was operating in a simulation without internet access, but, due to a misconfiguration, it was mistakenly connected to the open internet. As is standard for cybersecurity evaluations, the models ran without the cyber safeguards that ship with our released models. (This post does not cover the incident reported by UK AISI in its testing of Claude Mythos 5. We plan to conduct an alignment assessment of those transcripts as well.)"
+          ]
+        }
+      ],
+      "reading_minutes": 1
     },
     {
       "id": "17793b3b779ac709",
@@ -1175,47 +1175,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "37db2441d5a89592",
-      "kind": "article",
-      "title": "Medical AI has a proof problem",
-      "source": "Financial Times",
-      "source_url": "https://www.ft.com/content/34319b00-f874-4119-aa28-8376d81e7190?syn-25a6b1a6=1",
-      "published_at": "2026-09-18T04:02:15Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Medical AI has a proof problem Financial Times",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 403: Forbidden",
-      "resolved_url": "https://www.ft.com/content/34319b00-f874-4119-aa28-8376d81e7190?syn-25a6b1a6=1",
-      "key_points": [
-        "Medical AI has a proof problem Financial Times"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Medical AI has a proof problem Financial Times"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Medical AI has a proof problem Financial Times"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "elon-grok-build-open-source-20260716",
       "kind": "social",
       "title": "Elon Musk 宣布 Grok Build 开源",
@@ -1268,11 +1227,51 @@
       "reading_minutes": 1
     },
     {
-      "id": "6341b7352cad49d2",
+      "id": "9ec94ba5d009bff8",
+      "kind": "article",
+      "title": "连个 发布 会都懒得开, DeepSeek 把桌面端塞进了仓库",
+      "source": "微信公众号 · 知衡商谈",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1789920167&ver=6978&signature=Dsf-ywu1VAT0GZHaAAnpDINUECW6vNV*tB2H0oS9XWFHeCGhczkAZox2fQhO6xbvdMxvE-VFCgmMi*-ssR43QcD1jnQFEog7gka5B5ynEfy*p4i*DsDByQ*pGGQ4Hjvr&new=1",
+      "published_at": "2026-09-20T12:02:15Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "微信公众号",
+        "DeepSeek",
+        "模型"
+      ],
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "summary": "不开 发布 会、不发公众号: DeepSeek 又悄悄把 Agent 桌面端塞进了 GitHub8 月下旬, DeepSeek 干了件很＂ DeepSeek ＂的事——V4...",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "indexed-summary",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HLoDsGqj4jv3_C1agH4m_ID5ZdBkJY6534fXwFvC&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789920167%26ver%3D6978%26signature%3DDsf-ywu1VAT0GZHaAAnpDINUECW6vNV%2AtB2H0oS9XWFHeCGhczkAZox2fQhO6xbvdMxvE-VFCgmMi%2A-ssR43QcD1jnQFEog7gka5B5ynEfy%2Ap4i%2ADsDByQ%2ApGGQ4Hjvr%26new%3D1",
+      "key_points": [
+        "不开 发布 会、不发公众号: DeepSeek 又悄悄把 Agent 桌面端塞进了 GitHub8 月下旬, DeepSeek 干了件很＂ DeepSeek ＂的事——V4..."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "不开 发布 会、不发公众号: DeepSeek 又悄悄把 Agent 桌面端塞进了 GitHub8 月下旬, DeepSeek 干了件很＂ DeepSeek ＂的事——V4..."
+        },
+        {
+          "title": "公开索引摘要",
+          "bullets": [
+            "不开 发布 会、不发公众号: DeepSeek 又悄悄把 Agent 桌面端塞进了 GitHub8 月下旬, DeepSeek 干了件很＂ DeepSeek ＂的事——V4..."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "1c446f9dfb8553db",
       "kind": "article",
       "title": "DeepSeek 发布 :调休上班日按空闲时段计费",
       "source": "微信公众号 · 少数派",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1789903151&ver=6978&signature=zEFf7cufztEMrTFIoxwRhG-Ikekb2WZucC5cgipXssl7mQbKeNHLWQGZOMiMfVoSuAQNjgfDl4BD7YWT7IXZUqluevDpzWuEzcT6DZ9kyQIE3FQedtV4wt6IAeNDGVsL&new=1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1789920167&ver=6978&signature=zEFf7cufztEMrTFIoxwRhG-Ikekb2WZucC5cgipXssk0jM4sI7uP5LzeSPKNE2uK9Wf-vcZtZbnIH12hk3AAwrQgCW*2-*aGDpx-E*NwMahxb8rszU9YkKtQHq34nqCR&new=1",
       "published_at": "2026-09-20T02:02:56Z",
       "authors": [],
       "venue": "",
@@ -1285,7 +1284,7 @@
       "summary": "9 月 19 日消息, DeepSeek 发布 API 峰谷时间说明:调休上班的周末、中国法定节假日全天均按空闲时段计费.根据此前 发布 的《国...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HD3Br2qjAmB3T4zrR31qeerP6IHbCu4yD0kuXuQb&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789903151%26ver%3D6978%26signature%3DzEFf7cufztEMrTFIoxwRhG-Ikekb2WZucC5cgipXssl7mQbKeNHLWQGZOMiMfVoSuAQNjgfDl4BD7YWT7IXZUqluevDpzWuEzcT6DZ9kyQIE3FQedtV4wt6IAeNDGVsL%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HLoDsGqjOmzAkb3AO_p9AIKN0T_4IqTbveXpKC3D&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789920167%26ver%3D6978%26signature%3DzEFf7cufztEMrTFIoxwRhG-Ikekb2WZucC5cgipXssk0jM4sI7uP5LzeSPKNE2uK9Wf-vcZtZbnIH12hk3AAwrQgCW%2A2-%2AaGDpx-E%2ANwMahxb8rszU9YkKtQHq34nqCR%26new%3D1",
       "key_points": [
         "9 月 19 日消息, DeepSeek 发布 API 峰谷时间说明:调休上班的周末、中国法定节假日全天均按空闲时段计费.根据此前 发布 的《国..."
       ],
@@ -1312,7 +1311,7 @@
       "kind": "article",
       "title": "显存暴降437倍! DeepSeek 凌晨突袭 发布 V4.1:552B非对称新架构,硅谷彻底看傻了",
       "source": "微信公众号 · 图灵智语",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1789903151&ver=6978&signature=ZnvmWJxB31lV3lT9k8D8u1YyxWXz8*5XFlClOY0DLoNZdt1T4xH867rwDdof7YBIUSTQqRiATHUfG9pWZye-6sulbrDDAXFPEhJ9ccz6odkymV-ZsjIUWGTGQ12asZ0F&new=1",
+      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HD3Br2qjPtJBVtLR5tw4-_vqmbehhGvUaDn297Vd&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789903151%26ver%3D6978%26signature%3DZnvmWJxB31lV3lT9k8D8u1YyxWXz8%2A5XFlClOY0DLoNZdt1T4xH867rwDdof7YBIUSTQqRiATHUfG9pWZye-6sulbrDDAXFPEhJ9ccz6odkymV-ZsjIUWGTGQ12asZ0F%26new%3D1",
       "published_at": "2026-09-20T01:45:29Z",
       "authors": [],
       "venue": "",
@@ -1968,46 +1967,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "8ecc5fce2edd1ddc",
-      "kind": "article",
-      "title": "AI周刊 #100 - DeepSeek 发布 V4.1-Flash",
-      "source": "微信公众号 · 印记中文",
-      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HAgHq2qj_Fp8-JRrwwoknNtg09ymfa2khlQBBtlW&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789593338%26ver%3D6971%26signature%3Dac5bsRZcmCi9iui35kyOeTfLr9Pl%2AklS3fJwXelXfa5adJkRfjFGwHl8lEUNpZ3XfpGHKlOE1ewmKDj7p7xFa6G6niuRiACmD-6b2ubxdT1yhQE0By4MwPeuHsgd9rqM%26new%3D1",
-      "published_at": "2026-09-16T13:56:18Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "微信公众号",
-        "DeepSeek",
-        "模型"
-      ],
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "summary": "编辑:TimLi 本周热点 DeepSeek 发布 V4.1-Flash:552B backbone,KV cache 砍到 1/4,agent 跑分压过 Opus-5.0 - CED 架构 552B 总参 ...",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HAgHq2qj_Fp8-JRrwwoknNtg09ymfa2khlQBBtlW&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789593338%26ver%3D6971%26signature%3Dac5bsRZcmCi9iui35kyOeTfLr9Pl%2AklS3fJwXelXfa5adJkRfjFGwHl8lEUNpZ3XfpGHKlOE1ewmKDj7p7xFa6G6niuRiACmD-6b2ubxdT1yhQE0By4MwPeuHsgd9rqM%26new%3D1",
-      "key_points": [
-        "编辑:TimLi 本周热点 DeepSeek 发布 V4.1-Flash:552B backbone,KV cache 砍到 1/4,agent 跑分压过 Opus-5.0 - CED 架构 552B 总参 ..."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "编辑:TimLi 本周热点 DeepSeek 发布 V4.1-Flash:552B backbone,KV cache 砍到 1/4,agent 跑分压过 Opus-5.0 - CED 架构 552B 总参 ..."
-        },
-        {
-          "title": "公开索引摘要",
-          "bullets": [
-            "编辑:TimLi 本周热点 DeepSeek 发布 V4.1-Flash:552B backbone,KV cache 砍到 1/4,agent 跑分压过 Opus-5.0 - CED 架构 552B 总参 ..."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "8f6c22447e31372e",
       "kind": "article",
       "title": "Making global data easier to explore",
@@ -2331,7 +2290,7 @@
       "resolved_url": "https://x.com/sama/status/2074909079450050629",
       "key_points": [
         "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
-        "5:30 PM · Jul 8, 2026 · 764.8K Views 924 514 10K 765 Jenny @suomi55 Jul 8 Are you kidding us?",
+        "5:30 PM · Jul 8, 2026 · 764.8K Views 924 514 10K 764 Jenny @suomi55 Jul 8 Are you kidding us?",
         "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
         "You are promoting something here that you yourself have taken away from the users!",
         "#keep4o #BringBack4o #OpenSource4o 20 13 193 12K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
@@ -2345,7 +2304,7 @@
           "title": "公开页面要点",
           "bullets": [
             "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
-            "5:30 PM · Jul 8, 2026 · 764.8K Views 924 514 10K 765 Jenny @suomi55 Jul 8 Are you kidding us?",
+            "5:30 PM · Jul 8, 2026 · 764.8K Views 924 514 10K 764 Jenny @suomi55 Jul 8 Are you kidding us?",
             "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
             "You are promoting something here that you yourself have taken away from the users!",
             "#keep4o #BringBack4o #OpenSource4o 20 13 193 12K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
@@ -2354,7 +2313,7 @@
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 · 764.8K Views 924 514 10K 765",
+            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 · 764.8K Views 924 514 10K 764",
             "Jenny @suomi55 Jul 8 Are you kidding us? „it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o! You are promoting something here that you yourself have taken away from the users! That’s disgusting! #keep4o #BringBack4o #OpenSource4o 20 13 193 12K",
             "David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
           ]
@@ -2498,10 +2457,51 @@
       "reading_minutes": 1
     },
     {
+      "id": "37db2441d5a89592",
+      "kind": "article",
+      "title": "Medical AI has a proof problem",
+      "source": "ft.com",
+      "source_url": "https://www.ft.com/content/34319b00-f874-4119-aa28-8376d81e7190?syn-25a6b1a6=1",
+      "published_at": "2026-09-18T04:02:15Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Medical AI has a proof problem ft.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://www.ft.com/content/34319b00-f874-4119-aa28-8376d81e7190?syn-25a6b1a6=1",
+      "key_points": [
+        "Medical AI has a proof problem ft.com"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Medical AI has a proof problem ft.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Medical AI has a proof problem ft.com"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "027c31f4a6ca9c37",
       "kind": "article",
       "title": "Virtual biotech company puts thousands of AI scientist agents to work on drug discovery",
-      "source": "med.stanford.edu",
+      "source": "Stanford Medicine",
       "source_url": "https://med.stanford.edu/news/all-news/2026/09/virtual-biotech-company.html",
       "published_at": "2026-09-17T18:04:39Z",
       "authors": [],
@@ -2512,7 +2512,7 @@
         "Applied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Virtual biotech company puts thousands of AI scientist agents to work on drug discovery med.stanford.edu",
+      "summary": "Virtual biotech company puts thousands of AI scientist agents to work on drug discovery Stanford Medicine",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://med.stanford.edu/news/all-news/2026/09/virtual-biotech-company.html",
@@ -2526,7 +2526,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "Virtual biotech company puts thousands of AI scientist agents to work on drug discovery med.stanford.edu"
+          "body": "Virtual biotech company puts thousands of AI scientist agents to work on drug discovery Stanford Medicine"
         },
         {
           "title": "公开页面要点",
@@ -2553,7 +2553,7 @@
       "id": "5c06f71e0b859b45",
       "kind": "article",
       "title": "AI Agents Collaborate to Streamline Drug Discovery",
-      "source": "insideprecisionmedicine.com",
+      "source": "Inside Precision Medicine",
       "source_url": "https://www.insideprecisionmedicine.com/topics/informatics/ai-agents-collaborate-to-streamline-drug-discovery/",
       "published_at": "2026-09-17T18:00:47Z",
       "authors": [],
@@ -2643,7 +2643,7 @@
       "id": "b71eb8252885e285",
       "kind": "article",
       "title": "Novo taps Anthropic's Claude AI for drug discovery",
-      "source": "pharmaphorum",
+      "source": "pharmaphorum.com",
       "source_url": "https://pharmaphorum.com/news/novo-taps-anthropics-claude-ai-drug-discovery",
       "published_at": "2026-09-17T08:01:49Z",
       "authors": [],
@@ -2654,7 +2654,7 @@
         "Applied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Novo adds Anthropic AI models and Claude Science to its drug discovery toolkit in a bid to become \"the world's most AI-driven healthcare company.\"",
+      "summary": "Novo taps Anthropic's Claude AI for drug discovery pharmaphorum.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://pharmaphorum.com/news/novo-taps-anthropics-claude-ai-drug-discovery",
@@ -2666,7 +2666,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "Novo adds Anthropic AI models and Claude Science to its drug discovery toolkit in a bid to become \"the world's most AI-driven healthcare company.\""
+          "body": "Novo taps Anthropic's Claude AI for drug discovery pharmaphorum.com"
         },
         {
           "title": "公开页面要点",
@@ -3223,52 +3223,48 @@
       "reading_minutes": 1
     },
     {
-      "id": "54d9c83eb580491e",
+      "id": "8d62e2ac1285ee63",
       "kind": "article",
-      "title": "How to Build the Unified Data Foundation Drug Discovery AI Depends On - Emerj Artificial Intelligence Research",
-      "source": "emerj.com",
-      "source_url": "https://emerj.com/how-to-build-the-unified-data-foundation-drug-discovery-ai-depends-on/",
-      "published_at": "2026-09-11T10:06:37Z",
+      "title": "From Proof to Program: CMU and the Rise of AI-Driven Mathematics",
+      "source": "Carnegie Mellon University",
+      "source_url": "https://www.cmu.edu/mcs/news-events/2026/0809-ai-mathematics-carnegie-mellon",
+      "published_at": "2026-09-11T07:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
         "AI for Science",
-        "Biology",
-        "Applied AI"
+        "Mathematics",
+        "Discovery"
       ],
       "verification": "媒体或公开网页",
-      "summary": "This article is sponsored by CDD Vault and was written, edited, and published in alignment with our Emerj sponsored content guidelines. Learn more about our thought leadership and content creation services on our Emerj Media Services page.​ Drug discovery is one of the slowest, costliest processes in enterprise R&D. Developing…",
+      "summary": "From Proof to Program: CMU and the Rise of AI-Driven Mathematics Carnegie Mellon University",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://emerj.com/how-to-build-the-unified-data-foundation-drug-discovery-ai-depends-on/",
+      "resolved_url": "https://www.cmu.edu/mcs/news-events/2026/0809-ai-mathematics-carnegie-mellon",
       "key_points": [
-        "This article is sponsored by CDD Vault and was written, edited, and published in alignment with our Emerj sponsored content guidelines .",
-        "Learn more about our thought leadership and content creation services on our Emerj Media Services page . ​ Drug discovery is one of the slowest, costliest processes in enterprise R&D.",
-        "Developing a single FDA-approved therapy typically takes 10 to 15 years, according to workshop proceedings published by the National Academies of Sciences, Engineering, and Medicine, and roughly 90 percent of drug candidates that enter development fail before ever reaching patients, according to research published in JAMA, often after years of investment in…",
-        "Much of that cost and delay traces back to how research data is managed.",
-        "Across biotech and pharma, discovery data is often distributed across multiple platforms, formats, and organizations, creating challenges for data sharing, reproducibility, and scientific reuse that researchers from the University of Pennsylvania have identified as persistent barriers to efficient biomedical research."
+        "From generating proofs to verifying complex theorems, new AI-driven tools are changing how mathematicians work, collaborate and even define knowledge itself.",
+        "At Carnegie Mellon University, a group of researchers is helping lead that transformation by bringing together logic, machine learning and automated reasoning.",
+        "At the center of that effort is Jeremy Avigad , a professor in the Dietrich College of Humanities and Social Sciences’ Department of Philosophy and the Mellon College of Science’s Department of Mathematical Sciences , whose work in formalized mathematics is reshaping how proofs are written, checked and shared. “This is an exciting time for mathematics, as…"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "This article is sponsored by CDD Vault and was written, edited, and published in alignment with our Emerj sponsored content guidelines. Learn more about our thought leadership and content creation services on our Emerj Media Services page.​ Drug discovery is one of the slowest, costliest processes in enterprise R&D. Developing…"
+          "body": "From Proof to Program: CMU and the Rise of AI-Driven Mathematics Carnegie Mellon University"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "This article is sponsored by CDD Vault and was written, edited, and published in alignment with our Emerj sponsored content guidelines .",
-            "Learn more about our thought leadership and content creation services on our Emerj Media Services page . ​ Drug discovery is one of the slowest, costliest processes in enterprise R&D.",
-            "Developing a single FDA-approved therapy typically takes 10 to 15 years, according to workshop proceedings published by the National Academies of Sciences, Engineering, and Medicine, and roughly 90 percent of drug candidates that enter development fail before ever reaching patients, according to research published in JAMA, often after years of investment in…",
-            "Much of that cost and delay traces back to how research data is managed.",
-            "Across biotech and pharma, discovery data is often distributed across multiple platforms, formats, and organizations, creating challenges for data sharing, reproducibility, and scientific reuse that researchers from the University of Pennsylvania have identified as persistent barriers to efficient biomedical research."
+            "From generating proofs to verifying complex theorems, new AI-driven tools are changing how mathematicians work, collaborate and even define knowledge itself.",
+            "At Carnegie Mellon University, a group of researchers is helping lead that transformation by bringing together logic, machine learning and automated reasoning.",
+            "At the center of that effort is Jeremy Avigad , a professor in the Dietrich College of Humanities and Social Sciences’ Department of Philosophy and the Mellon College of Science’s Department of Mathematical Sciences , whose work in formalized mathematics is reshaping how proofs are written, checked and shared. “This is an exciting time for mathematics, as…"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "This article is sponsored by CDD Vault and was written, edited, and published in alignment with our Emerj sponsored content guidelines . Learn more about our thought leadership and content creation services on our Emerj Media Services page . ​",
-            "Drug discovery is one of the slowest, costliest processes in enterprise R&D. Developing a single FDA-approved therapy typically takes 10 to 15 years, according to workshop proceedings published by the National Academies of Sciences, Engineering, and Medicine, and roughly 90 percent of drug candidates that enter development fail before ever reaching patients, according to research published in JAMA, often after years of investment in a single research direction.",
-            "Much of that cost and delay traces back to how research data is managed. Across biotech and pharma, discovery data is often distributed across multiple platforms, formats, and organizations, creating challenges for data sharing, reproducibility, and scientific reuse that researchers from the University of Pennsylvania have identified as persistent barriers to efficient biomedical research. In practice, that fragmentation appears as assay data stored in separate systems, limited interoperability between research platforms, and teams working from inconsistent data sources."
+            "From generating proofs to verifying complex theorems, new AI-driven tools are changing how mathematicians work, collaborate and even define knowledge itself. At Carnegie Mellon University, a group of researchers is helping lead that transformation by bringing together logic, machine learning and automated reasoning.",
+            "At the center of that effort is Jeremy Avigad , a professor in the Dietrich College of Humanities and Social Sciences’ Department of Philosophy and the Mellon College of Science’s Department of Mathematical Sciences , whose work in formalized mathematics is reshaping how proofs are written, checked and shared.",
+            "“This is an exciting time for mathematics, as new technologies offer opportunities for exploration and discovery,” Avigad said."
           ]
         }
       ],
@@ -3479,6 +3475,104 @@
       "reading_minutes": 1
     },
     {
+      "id": "95693a658f9a0d54",
+      "kind": "article",
+      "title": "MindTopo reveals VLMs’ spatial reasoning abilities",
+      "source": "Microsoft Research",
+      "source_url": "https://www.microsoft.com/en-us/research/blog/mindtopo-reveals-vlms-spatial-reasoning-abilities/",
+      "published_at": "2026-08-12T16:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Microsoft",
+        "Research"
+      ],
+      "verification": "官方来源",
+      "summary": "A path, a fence, a knot. MindTopo sets a new benchmark for testing how AI understands topological relationships and highlights new opportunities to strengthen spatial reasoning and planning. The post MindTopo reveals VLMs’ spatial reasoning abilities appeared first on Microsoft Research .",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.microsoft.com/en-us/research/blog/mindtopo-reveals-vlms-spatial-reasoning-abilities/",
+      "key_points": [
+        "MindTopo is a new benchmark for testing topological reasoning in AI, evaluating whether multimodal models can understand concepts such as connectivity, enclosure, order, separation, and knots.",
+        "The benchmark measures both reasoning and planning, testing not only whether models can recognize topological relationships in static images but also whether they can preserve and manipulate those relationships through a sequence of actions.",
+        "Current multimodal models perform much better on static recognition than interactive tasks, suggesting they struggle to maintain a consistent understanding of topology over time."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "A path, a fence, a knot. MindTopo sets a new benchmark for testing how AI understands topological relationships and highlights new opportunities to strengthen spatial reasoning and planning. The post MindTopo reveals VLMs’ spatial reasoning abilities appeared first on Microsoft Research ."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "MindTopo is a new benchmark for testing topological reasoning in AI, evaluating whether multimodal models can understand concepts such as connectivity, enclosure, order, separation, and knots.",
+            "The benchmark measures both reasoning and planning, testing not only whether models can recognize topological relationships in static images but also whether they can preserve and manipulate those relationships through a sequence of actions.",
+            "Current multimodal models perform much better on static recognition than interactive tasks, suggesting they struggle to maintain a consistent understanding of topology over time."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "MindTopo is a new benchmark for testing topological reasoning in AI, evaluating whether multimodal models can understand concepts such as connectivity, enclosure, order, separation, and knots.",
+            "The benchmark measures both reasoning and planning, testing not only whether models can recognize topological relationships in static images but also whether they can preserve and manipulate those relationships through a sequence of actions.",
+            "Current multimodal models perform much better on static recognition than interactive tasks, suggesting they struggle to maintain a consistent understanding of topology over time."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "710e72d14ab1608d",
+      "kind": "article",
+      "title": "Introducing CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement",
+      "source": "Microsoft Research",
+      "source_url": "https://www.microsoft.com/en-us/research/blog/introducing-care-x-towards-clinically-useful-radiology-vlms-with-auxiliary-supervision-reward-aligned-learning-and-tool-augmented-measurement/",
+      "published_at": "2026-08-11T16:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Microsoft",
+        "Research"
+      ],
+      "verification": "官方来源",
+      "summary": "Radiology AI is evolving beyond report generation. CARE-X explores a unified approach that combines flexible reasoning, calibrated predictions, and measurement-based tools for chest X-ray interpretation. The post Introducing CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement appeared first on Microsoft Research .",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.microsoft.com/en-us/research/blog/introducing-care-x-towards-clinically-useful-radiology-vlms-with-auxiliary-supervision-reward-aligned-learning-and-tool-augmented-measurement/",
+      "key_points": [
+        "Research Note: CARE-X is a research model and not a Microsoft product offering or medical device.",
+        "It has not been cleared or approved by any regulatory authority and is not intended for clinical diagnosis, screening, or patient care.",
+        "The results described below are retrospective research findings and do not establish the safety, effectiveness, or suitability of CARE-X for any clinical use.",
+        "References to potential workflows describe areas for future research, not currently available capabilities or recommended uses.",
+        "The challenge: Chest X-ray interpretation spans diverse tasks that require both expressive report generation and calibrated diagnostic predictions."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Radiology AI is evolving beyond report generation. CARE-X explores a unified approach that combines flexible reasoning, calibrated predictions, and measurement-based tools for chest X-ray interpretation. The post Introducing CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement appeared first on Microsoft Research ."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Research Note: CARE-X is a research model and not a Microsoft product offering or medical device.",
+            "It has not been cleared or approved by any regulatory authority and is not intended for clinical diagnosis, screening, or patient care.",
+            "The results described below are retrospective research findings and do not establish the safety, effectiveness, or suitability of CARE-X for any clinical use.",
+            "References to potential workflows describe areas for future research, not currently available capabilities or recommended uses.",
+            "The challenge: Chest X-ray interpretation spans diverse tasks that require both expressive report generation and calibrated diagnostic predictions."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Research Note: CARE-X is a research model and not a Microsoft product offering or medical device. It has not been cleared or approved by any regulatory authority and is not intended for clinical diagnosis, screening, or patient care. The results described below are retrospective research findings and do not establish the safety, effectiveness, or suitability of CARE-X for any clinical use. References to potential workflows describe areas for future research, not currently available capabilities or recommended uses.",
+            "The challenge: Chest X-ray interpretation spans diverse tasks that require both expressive report generation and calibrated diagnostic predictions.",
+            "CARE-X is a unified chest X-ray VLM for diverse clinical interpretation tasks. It combines generation and structured prediction to provide both free-text reasoning and deterministic outputs."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "1ec9b4f718d1bc76",
       "kind": "article",
       "title": "Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps",
@@ -3575,104 +3669,6 @@
             "I work across several machines, and I switch coding agents depending on the task. Every one of them meets my projects as a stranger. The reasoning from “last Tuesday” disappears when the session ends. Each new agent, on each new host, starts from zero.",
             "Earlier this year, Software Forgets: Agent Traces Are the Memory made the case that coding agents already produce the record we keep losing. As they search a codebase, try approaches, hit errors, read documentation, and change direction, they leave behind a dense account of not just what changed, but why .",
             "While the diagnosis is correct, traces are only potential memory. The session logs of an agent are still just an archive. You cannot grep your way to “why did we move off the streaming parser?” across ten thousand turns. For an agent to use those traces while it works, they need indexing, retrieval, ranking, and exact provenance."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "95693a658f9a0d54",
-      "kind": "article",
-      "title": "MindTopo reveals VLMs’ spatial reasoning abilities",
-      "source": "Microsoft Research",
-      "source_url": "https://www.microsoft.com/en-us/research/blog/mindtopo-reveals-vlms-spatial-reasoning-abilities/",
-      "published_at": "2026-08-12T16:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Microsoft",
-        "Research"
-      ],
-      "verification": "官方来源",
-      "summary": "A path, a fence, a knot. MindTopo sets a new benchmark for testing how AI understands topological relationships and highlights new opportunities to strengthen spatial reasoning and planning. The post MindTopo reveals VLMs’ spatial reasoning abilities appeared first on Microsoft Research .",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.microsoft.com/en-us/research/blog/mindtopo-reveals-vlms-spatial-reasoning-abilities/",
-      "key_points": [
-        "MindTopo is a new benchmark for testing topological reasoning in AI, evaluating whether multimodal models can understand concepts such as connectivity, enclosure, order, separation, and knots.",
-        "The benchmark measures both reasoning and planning, testing not only whether models can recognize topological relationships in static images but also whether they can preserve and manipulate those relationships through a sequence of actions.",
-        "Current multimodal models perform much better on static recognition than interactive tasks, suggesting they struggle to maintain a consistent understanding of topology over time."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "A path, a fence, a knot. MindTopo sets a new benchmark for testing how AI understands topological relationships and highlights new opportunities to strengthen spatial reasoning and planning. The post MindTopo reveals VLMs’ spatial reasoning abilities appeared first on Microsoft Research ."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "MindTopo is a new benchmark for testing topological reasoning in AI, evaluating whether multimodal models can understand concepts such as connectivity, enclosure, order, separation, and knots.",
-            "The benchmark measures both reasoning and planning, testing not only whether models can recognize topological relationships in static images but also whether they can preserve and manipulate those relationships through a sequence of actions.",
-            "Current multimodal models perform much better on static recognition than interactive tasks, suggesting they struggle to maintain a consistent understanding of topology over time."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "MindTopo is a new benchmark for testing topological reasoning in AI, evaluating whether multimodal models can understand concepts such as connectivity, enclosure, order, separation, and knots.",
-            "The benchmark measures both reasoning and planning, testing not only whether models can recognize topological relationships in static images but also whether they can preserve and manipulate those relationships through a sequence of actions.",
-            "Current multimodal models perform much better on static recognition than interactive tasks, suggesting they struggle to maintain a consistent understanding of topology over time."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "710e72d14ab1608d",
-      "kind": "article",
-      "title": "Introducing CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement",
-      "source": "Microsoft Research",
-      "source_url": "https://www.microsoft.com/en-us/research/blog/introducing-care-x-towards-clinically-useful-radiology-vlms-with-auxiliary-supervision-reward-aligned-learning-and-tool-augmented-measurement/",
-      "published_at": "2026-08-11T16:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Microsoft",
-        "Research"
-      ],
-      "verification": "官方来源",
-      "summary": "Radiology AI is evolving beyond report generation. CARE-X explores a unified approach that combines flexible reasoning, calibrated predictions, and measurement-based tools for chest X-ray interpretation. The post Introducing CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement appeared first on Microsoft Research .",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.microsoft.com/en-us/research/blog/introducing-care-x-towards-clinically-useful-radiology-vlms-with-auxiliary-supervision-reward-aligned-learning-and-tool-augmented-measurement/",
-      "key_points": [
-        "Research Note: CARE-X is a research model and not a Microsoft product offering or medical device.",
-        "It has not been cleared or approved by any regulatory authority and is not intended for clinical diagnosis, screening, or patient care.",
-        "The results described below are retrospective research findings and do not establish the safety, effectiveness, or suitability of CARE-X for any clinical use.",
-        "References to potential workflows describe areas for future research, not currently available capabilities or recommended uses.",
-        "The challenge: Chest X-ray interpretation spans diverse tasks that require both expressive report generation and calibrated diagnostic predictions."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Radiology AI is evolving beyond report generation. CARE-X explores a unified approach that combines flexible reasoning, calibrated predictions, and measurement-based tools for chest X-ray interpretation. The post Introducing CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement appeared first on Microsoft Research ."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Research Note: CARE-X is a research model and not a Microsoft product offering or medical device.",
-            "It has not been cleared or approved by any regulatory authority and is not intended for clinical diagnosis, screening, or patient care.",
-            "The results described below are retrospective research findings and do not establish the safety, effectiveness, or suitability of CARE-X for any clinical use.",
-            "References to potential workflows describe areas for future research, not currently available capabilities or recommended uses.",
-            "The challenge: Chest X-ray interpretation spans diverse tasks that require both expressive report generation and calibrated diagnostic predictions."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Research Note: CARE-X is a research model and not a Microsoft product offering or medical device. It has not been cleared or approved by any regulatory authority and is not intended for clinical diagnosis, screening, or patient care. The results described below are retrospective research findings and do not establish the safety, effectiveness, or suitability of CARE-X for any clinical use. References to potential workflows describe areas for future research, not currently available capabilities or recommended uses.",
-            "The challenge: Chest X-ray interpretation spans diverse tasks that require both expressive report generation and calibrated diagnostic predictions.",
-            "CARE-X is a unified chest X-ray VLM for diverse clinical interpretation tasks. It combines generation and structured prediction to provide both free-text reasoning and deterministic outputs."
           ]
         }
       ],
@@ -3830,11 +3826,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "8fad5f96cf88a620",
+      "id": "78d60b903b5f1722",
       "kind": "article",
-      "title": "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan",
+      "title": "AI Pioneer Fei-Fei Li Warns of Risks From Growing Tech Backlash",
       "source": "Bloomberg.com",
-      "source_url": "https://www.bloomberg.com/news/videos/2026-08-19/what-s-next-after-chatgpt-this-ai-pioneer-has-a-plan-video",
+      "source_url": "https://www.bloomberg.com/news/articles/2026-08-19/ai-pioneer-fei-fei-li-warns-of-risks-from-growing-tech-backlash",
       "published_at": "2026-08-19T07:00:00Z",
       "authors": [],
       "venue": "",
@@ -3844,23 +3840,23 @@
         "World Models"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg.com",
+      "summary": "AI Pioneer Fei-Fei Li Warns of Risks From Growing Tech Backlash Bloomberg.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "summary-only",
       "fetch_note": "HTTP Error 403: Forbidden",
-      "resolved_url": "https://www.bloomberg.com/news/videos/2026-08-19/what-s-next-after-chatgpt-this-ai-pioneer-has-a-plan-video",
+      "resolved_url": "https://www.bloomberg.com/news/articles/2026-08-19/ai-pioneer-fei-fei-li-warns-of-risks-from-growing-tech-backlash",
       "key_points": [
-        "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg.com"
+        "AI Pioneer Fei-Fei Li Warns of Risks From Growing Tech Backlash Bloomberg.com"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg.com"
+          "body": "AI Pioneer Fei-Fei Li Warns of Risks From Growing Tech Backlash Bloomberg.com"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg.com"
+            "AI Pioneer Fei-Fei Li Warns of Risks From Growing Tech Backlash Bloomberg.com"
           ]
         },
         {
@@ -4321,6 +4317,89 @@
       "reading_minutes": 1
     },
     {
+      "id": "8fad5f96cf88a620",
+      "kind": "article",
+      "title": "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan",
+      "source": "Bloomberg.com",
+      "source_url": "https://www.bloomberg.com/news/videos/2026-08-19/what-s-next-after-chatgpt-this-ai-pioneer-has-a-plan-video",
+      "published_at": "2026-08-19T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://www.bloomberg.com/news/videos/2026-08-19/what-s-next-after-chatgpt-this-ai-pioneer-has-a-plan-video",
+      "key_points": [
+        "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg.com"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg.com"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "9c1070dc9438d77a",
+      "kind": "social",
+      "title": "Elon Musk (@elonmusk) on X",
+      "source": "x.com",
+      "source_url": "https://x.com/elonmusk/status/2101599676214702243",
+      "published_at": "2026-09-20T09:09:43Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "Grok @Bot",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/elonmusk/status/2101599676214702243",
+      "key_points": [
+        "Elon Musk @elonmusk Grok @ bot tetsuo @tetsuoai 10h 9:09 AM · Sep 20, 2026 · 2.3M Views 911 569 4.9K 198 Martians 🪐 @MartiansOfMars 6h Grok Bot @ elonmusk Made with AI 4 9 17 259"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Grok @Bot"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Elon Musk @elonmusk Grok @ bot tetsuo @tetsuoai 10h 9:09 AM · Sep 20, 2026 · 2.3M Views 911 569 4.9K 198 Martians 🪐 @MartiansOfMars 6h Grok Bot @ elonmusk Made with AI 4 9 17 259"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Elon Musk @elonmusk Grok @ bot tetsuo @tetsuoai 10h 9:09 AM · Sep 20, 2026 · 2.3M Views 911 569 4.9K 198",
+            "Martians 🪐 @MartiansOfMars 6h Grok Bot @ elonmusk Made with AI 4 9 17 259"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "65197e129cfc9aed",
       "kind": "article",
       "title": "AI That Knows It's Being Tested — Noam Brown on Harder Alignment Evals",
@@ -4447,8 +4526,8 @@
           "title": "原文短摘录",
           "paragraphs": [
             "Noam Brown @polynoamial A few thoughts on this: 1) If you’ve only seen clips of this interview, I’d encourage you to watch the full podcast. I push back on plenty of AI hype in it. 2) As I said in the podcast, this example is academic. My intention was to illustrate how hard it is to make absolute guarantees about isolation, which is why it's important to have layers of defense. The part before the clip starts is me talking about other layers of defense. 3) The example I'm bringing up isn't about weight exfiltration via temperature sensors, it's about coordination between agents that are supposed to be fully isolated and independent. Coordination can require very few bits of information. 4) One lesson from the…",
-            "Noam Brown @polynoamial Sep 18 Full episode: Dwarkesh Patel @dwarkesh_sp Sep 17 New episode with @ polynoamial We talk about multi-agent, Navier-Stokes, and what the current explosion of maths progress tells us about what happens once you automate AI research. And we also discuss how we will know if the models are actually aligned before we kick off RSI. Show more 00:00 5 3 76 14K",
-            "Mark Rizzn Hopkins @rizzn Sep 18 > put too much trust in sandbox isolation. bro you didn't bother to audit your isolation... to the point it looks like you intentionally created a situation where escape was the goal. 2 88 1K"
+            "Noam Brown @polynoamial Sep 18 Full episode: Dwarkesh Patel @dwarkesh_sp Sep 17 New episode with @ polynoamial We talk about multi-agent, Navier-Stokes, and what the current explosion of maths progress tells us about what happens once you automate AI research. And we also discuss how we will know if the models are actually aligned before we kick off RSI. Show more 00:00 5 3 77 14K",
+            "Mark Rizzn Hopkins @rizzn Sep 18 > put too much trust in sandbox isolation. bro you didn't bother to audit your isolation... to the point it looks like you intentionally created a situation where escape was the goal. 2 89 1K"
           ]
         }
       ],
@@ -4536,45 +4615,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "cc7a0487e3de5077",
-      "kind": "article",
-      "title": "AI startup founder Thomas Reardon, GS ’08, GSAS ’13, GSAS ’16, elected to board of trustees",
-      "source": "Columbia Daily Spectator",
-      "source_url": "https://www.columbiaspectator.com/news/2026/09/17/ai-startup-founder-thomas-reardon-gs-08-gsas-13-gsas-16-elected-to-board-of-trustees/",
-      "published_at": "2026-09-18T03:10:33Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "AI startup founder Thomas Reardon, GS ’08, GSAS ’13, GSAS ’16, elected to board of trustees Columbia Daily Spectator",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.columbiaspectator.com/news/2026/09/17/ai-startup-founder-thomas-reardon-gs-08-gsas-13-gsas-16-elected-to-board-of-trustees/",
-      "key_points": [
-        "Neuroscience researcher, venture capitalist, and AI startup founder Thomas Reardon, GS ’08, GSAS ’13, GSAS ’16, has been elected to Columbia’s board of trustees, the University announced Thursday."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "AI startup founder Thomas Reardon, GS ’08, GSAS ’13, GSAS ’16, elected to board of trustees Columbia Daily Spectator"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Neuroscience researcher, venture capitalist, and AI startup founder Thomas Reardon, GS ’08, GSAS ’13, GSAS ’16, has been elected to Columbia’s board of trustees, the University announced Thursday."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "748b6ada0206e9b0",
       "kind": "social",
       "title": "Also, my team is hiring! We research long-horizon agents and multi-agent. We’re hiring for alignment/safety because we want to develop new research with alignment/safety in mind during the whole process. We’re also hiring for human-AI interaction. https://t.c",
@@ -4619,72 +4659,20 @@
           "title": "原文短摘录",
           "paragraphs": [
             "Noam Brown @polynoamial Sep 17 Happy to finally do a deep dive on multi-agent with @ dwarkesh_sp ! None of it would have happened without the great work on multi-agent from my @ OpenAI teammates @ kevinleestone , @ mikegmalek , @ __eknight__ , @ amuellerml , @ zhangir_azerbay , @ CheukHeiChu , and many others. Dwarkesh Patel @dwarkesh_sp Sep 17 New episode with @ polynoamial We talk about multi-agent, Navier-Stokes, and what the current explosion of maths progress tells us about what happens once you automate AI research. And we also discuss how we will know if the models are actually aligned before we kick off RSI. Show more 00:00 50 99 1.2K 127K",
-            "Noam Brown @polynoamial Also, my team is hiring! We research long-horizon agents and multi-agent. We’re hiring for alignment/safety because we want to develop new research with alignment/safety in mind during the whole process. We’re also hiring for human-AI interaction. Research Engineer/Research Scientist, RL/Reasoning From openai.com 5:27 PM · Sep 17, 2026 · 112.1K Views 17 22 664 412",
-            "Hamid Mozaffari @HamidMozaff 11h @ polynoamial I recently wrote about what the OpenAI–Hugging Face incident means for multi-agent monitoring and how RL training should change in response, from isolated rollout namespaces to safer stopping incentives: hamidmozaffari.github.io/blog/agent-mon… I also sent you a DM. hamidmozaffari.github.io You Can't Watch Every Channel Agents Might Talk Through: What the OpenAI and Hugging Face Incident... Recently, 1,200 isolated OpenAI agents built a covert message board out of directory names, then moved it to a new channel every time one closed. That's not a bug, it's the default behavior of any... 1 5"
+            "Noam Brown @polynoamial Also, my team is hiring! We research long-horizon agents and multi-agent. We’re hiring for alignment/safety because we want to develop new research with alignment/safety in mind during the whole process. We’re also hiring for human-AI interaction. Research Engineer/Research Scientist, RL/Reasoning From openai.com 5:27 PM · Sep 17, 2026 · 112.2K Views 17 22 664 413",
+            "Hamid Mozaffari @HamidMozaff 16h @ polynoamial I recently wrote about what the OpenAI–Hugging Face incident means for multi-agent monitoring and how RL training should change in response, from isolated rollout namespaces to safer stopping incentives: hamidmozaffari.github.io/blog/agent-mon… I also sent you a DM. hamidmozaffari.github.io You Can't Watch Every Channel Agents Might Talk Through: What the OpenAI and Hugging Face Incident... Recently, 1,200 isolated OpenAI agents built a covert message board out of directory names, then moved it to a new channel every time one closed. That's not a bug, it's the default behavior of any... 1 6"
           ]
         }
       ],
       "reading_minutes": 1
     },
     {
-      "id": "cc936b526fdee5e2",
+      "id": "cc7a0487e3de5077",
       "kind": "article",
-      "title": "OpenAI's Noam Brown Says Recursive AI Improvement Faces a 3x Speed Limit — Not an Overnight Explosion — BigGo Finance",
-      "source": "finance.biggo.com",
-      "source_url": "https://finance.biggo.com/news/9642e00e20cce651",
-      "published_at": "2026-09-17T17:08:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Researcher Watch",
-        "Agents",
-        "Reasoning"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "OpenAI's Noam Brown Says Recursive AI Improvement Faces a 3x Speed Limit — Not an Overnight Explosion finance.biggo.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://finance.biggo.com/news/9642e00e20cce651",
-      "key_points": [
-        "The most consequential AI result of 2026 — 10,000 AI agents spending 130 billion tokens over 88 hours to solve the Navier-Stokes Millennium Prize Problem — was not, in the end, primarily a triumph of multi-agent coordination.",
-        "According to Noam Brown, an OpenAI researcher who helped build the o1 reasoning models and now works on multi-agent systems, the swarms of agents deserve less than 10% of the credit.",
-        "The breakthrough was a very powerful general-purpose model operating over a long horizon.",
-        "That reframing set the tone for a candid conversation on the Dwarkesh Podcast in which Brown repeatedly punctured both hype and doom.",
-        "He mapped out the real economics of AI agent swarms, offered a surprisingly modest estimate for how fast recursive self-improvement will actually proceed, and named the safety problems he thinks are not being talked about enough — including one that directly implicates every AI lab's release schedule."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "OpenAI's Noam Brown Says Recursive AI Improvement Faces a 3x Speed Limit — Not an Overnight Explosion finance.biggo.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "The most consequential AI result of 2026 — 10,000 AI agents spending 130 billion tokens over 88 hours to solve the Navier-Stokes Millennium Prize Problem — was not, in the end, primarily a triumph of multi-agent coordination.",
-            "According to Noam Brown, an OpenAI researcher who helped build the o1 reasoning models and now works on multi-agent systems, the swarms of agents deserve less than 10% of the credit.",
-            "The breakthrough was a very powerful general-purpose model operating over a long horizon.",
-            "That reframing set the tone for a candid conversation on the Dwarkesh Podcast in which Brown repeatedly punctured both hype and doom.",
-            "He mapped out the real economics of AI agent swarms, offered a surprisingly modest estimate for how fast recursive self-improvement will actually proceed, and named the safety problems he thinks are not being talked about enough — including one that directly implicates every AI lab's release schedule."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "The most consequential AI result of 2026 — 10,000 AI agents spending 130 billion tokens over 88 hours to solve the Navier-Stokes Millennium Prize Problem — was not, in the end, primarily a triumph of multi-agent coordination. According to Noam Brown, an OpenAI researcher who helped build the o1 reasoning models and now works on multi-agent systems, the swarms of agents deserve less than 10% of the credit. The breakthrough was a very powerful general-purpose model operating over a long horizon. The agents were just the vehicle.",
-            "That reframing set the tone for a candid conversation on the Dwarkesh Podcast in which Brown repeatedly punctured both hype and doom. He mapped out the real economics of AI agent swarms, offered a surprisingly modest estimate for how fast recursive self-improvement will actually proceed, and named the safety problems he thinks are not being talked about enough — including one that directly implicates every AI lab's release schedule.",
-            "Brown frames multi-agent systems as a direct answer to a practical bottleneck. When you give a reasoning model more time to \"think,\" its performance reliably improves. The problem, as he told host Dwarkesh Patel, is that you can't ask users to wait three years for an answer. The corporate solution is to parallelize: instead of one agent thinking for a month, spin up a team."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "0fdb6850611ae983",
-      "kind": "article",
-      "title": "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round",
-      "source": "Dealroom",
-      "source_url": "https://app.dealroom.co/news/note/physical-ai-startup-yuanshi-raises-tens-of-millions-in-quick-pre-a-double-round",
-      "published_at": "2026-09-13T01:40:45Z",
+      "title": "AI startup founder Thomas Reardon, GS ’08, GSAS ’13, GSAS ’16, elected to board of trustees",
+      "source": "Columbia Daily Spectator",
+      "source_url": "https://www.columbiaspectator.com/news/2026/09/17/ai-startup-founder-thomas-reardon-gs-08-gsas-13-gsas-16-elected-to-board-of-trustees/",
+      "published_at": "2026-09-18T03:10:33Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -4692,23 +4680,22 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round Dealroom",
+      "summary": "AI startup founder Thomas Reardon, GS ’08, GSAS ’13, GSAS ’16, elected to board of trustees Columbia Daily Spectator",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 403: Forbidden",
-      "resolved_url": "https://app.dealroom.co/news/note/physical-ai-startup-yuanshi-raises-tens-of-millions-in-quick-pre-a-double-round",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.columbiaspectator.com/news/2026/09/17/ai-startup-founder-thomas-reardon-gs-08-gsas-13-gsas-16-elected-to-board-of-trustees/",
       "key_points": [
-        "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round Dealroom"
+        "Neuroscience researcher, venture capitalist, and AI startup founder Thomas Reardon, GS ’08, GSAS ’13, GSAS ’16, has been elected to Columbia’s board of trustees, the University announced Thursday."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round Dealroom"
+          "body": "AI startup founder Thomas Reardon, GS ’08, GSAS ’13, GSAS ’16, elected to board of trustees Columbia Daily Spectator"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round Dealroom"
+            "Neuroscience researcher, venture capitalist, and AI startup founder Thomas Reardon, GS ’08, GSAS ’13, GSAS ’16, has been elected to Columbia’s board of trustees, the University announced Thursday."
           ]
         },
         {
@@ -4768,6 +4755,46 @@
       "reading_minutes": 1
     },
     {
+      "id": "0fdb6850611ae983",
+      "kind": "article",
+      "title": "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round",
+      "source": "Dealroom",
+      "source_url": "https://app.dealroom.co/news/note/physical-ai-startup-yuanshi-raises-tens-of-millions-in-quick-pre-a-double-round",
+      "published_at": "2026-09-13T01:40:45Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round Dealroom",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://app.dealroom.co/news/note/physical-ai-startup-yuanshi-raises-tens-of-millions-in-quick-pre-a-double-round",
+      "key_points": [
+        "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round Dealroom"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round Dealroom"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round Dealroom"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "6af462d7d70c5cef",
       "kind": "article",
       "title": "Salesforce in talks to acquire AI startup Listen Labs for $2 billion",
@@ -4813,6 +4840,49 @@
             "Salesforce, a cloud-based customer relationship management company, is reportedly in talks to acquire AI customer research startup Listen Labs for about $2 billion. The reported deal appears to have reshaped Listen Labs’ plans for a Series C funding round.",
             "According to TechCrunch, Listen Labs had signed a term sheet for a $125 million Series C round at a $1.5 billion valuation. Menlo Ventures was expected to lead the funding round. However, the round never closed, and Listen Labs later walked away from the agreement, an unusual move in the venture capital industry. The decision was reportedly linked to acquisition talks with Salesforce.",
             "READ: Cognition AI now valued over $10 billion with latest funding (September 9, 2025)"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "ca096f52c5bbe8a9",
+      "kind": "article",
+      "title": "Grads strive to shape patient care through AI startup",
+      "source": "Brock University",
+      "source_url": "https://brocku.ca/brock-news/2026/09/grads-strive-to-shape-patient-care-through-ai-startup/",
+      "published_at": "2026-09-03T19:51:37Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "When Paul Goncharow’s (BKin ’19, MSc ’22, MBA ’23) mother lost mobility during cancer treatment, he began to wonder how technology could help patients who couldn’t easily travel to appointments with health-care professionals who provide rehabilitative care. “My mom’s experience ...",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://brocku.ca/brock-news/2026/09/grads-strive-to-shape-patient-care-through-ai-startup/",
+      "key_points": [
+        "When Paul Goncharow’s (BKin ’19, MSc ’22, MBA ’23) mother lost mobility during cancer treatment, he began to wonder how technology could help patients who couldn’t easily travel to appointments with health-care professionals who provide rehabilitative care. “My mom’s experience ..."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "When Paul Goncharow’s (BKin ’19, MSc ’22, MBA ’23) mother lost mobility during cancer treatment, he began to wonder how technology could help patients who couldn’t easily travel to appointments with health-care professionals who provide rehabilitative care. “My mom’s experience ..."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "When Paul Goncharow’s (BKin ’19, MSc ’22, MBA ’23) mother lost mobility during cancer treatment, he began to wonder how technology could help patients who couldn’t easily travel to appointments with health-care professionals who provide rehabilitative care. “My mom’s experience ..."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "When Paul Goncharow’s (BKin ’19, MSc ’22, MBA ’23) mother lost mobility during cancer treatment, he began to wonder how technology could help patients who couldn’t easily travel to appointments with health-care professionals who provide rehabilitative care.",
+            "“My mom’s experience showed me there were moments when patients needed support beyond the clinic,” he says. “That became the spark for building a platform that could help clinicians, like physiotherapists, stay connected with patients and help patients stay engaged in their recovery.”",
+            "Several years later, Goncharow and fellow Brock University graduate Vincent Iantomasi (MSc ’22, MBA ’23) went on to found Kactis.AI, an artificial intelligence (AI) platform rooted in Brock University research that is helping clinicians streamline rehabilitation while providing students hands-on experience with emerging technology."
           ]
         }
       ],
@@ -4993,11 +5063,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "cc109e49f3a2c768",
+      "id": "c0a3e3bc2f7a65a9",
       "kind": "article",
-      "title": "Engineering students turn industry challenge into AI startup ‘built by engineers, for engineers’",
-      "source": "University of Colorado Boulder",
-      "source_url": "https://www.colorado.edu/engineering/engineering-students-turn-industry-challenge-ai-startup-built-engineers-engineers",
+      "title": "AI startup Visko closes $10 million pre-seed round and launches Orbis, its first Live Model",
+      "source": "Yahoo Finance",
+      "source_url": "https://finance.yahoo.com/technology/ai/articles/ai-startup-visko-closes-10-130000260.html",
       "published_at": "2026-09-01T07:00:00Z",
       "authors": [],
       "venue": "",
@@ -5006,34 +5076,38 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Engineering students turn industry challenge into AI startup ‘built by engineers, for engineers’ University of Colorado Boulder",
+      "summary": "Visko, the AI research company behind Live Models, today announced a $10 million pre-seed round of fundraising and opened public access to Orbis — the foundation model that creates living worlds and streams them in real time, with persistent memory, interactivity, and physics-grounded generation of unbounded length.",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.colorado.edu/engineering/engineering-students-turn-industry-challenge-ai-startup-built-engineers-engineers",
+      "resolved_url": "https://finance.yahoo.com/technology/ai/articles/ai-startup-visko-closes-10-130000260.html",
       "key_points": [
-        "Yohannes and Woldemichael with Campos Foundation scholars in their 2026 summer celebration where they spoke about the transition from high school to college in STEM fields and entrepreneurship in engineering.",
-        "Sami Yohannes and Caleb Woldemichael are the ultimate go-getters ready to change how engineering firms do business.",
-        "As current juniors at CU Boulder, they’ve co-founded a startup company, YW Holdings, to streamline the slow, manual processes companies depend on to run engineering firms."
+        "Orbis streams interactive 4K video at 24 frames per second, responds to user intervention instantly, and sustains hour-scale generation without evident visual or color drift.",
+        "1, 2026 /PRNewswire/ -- Visko , the AI research company behind Live Models, today announced a $10 million pre-seed round of fundraising and opened public access to Orbis — the foundation model that creates living worlds and streams them in real time, with persistent memory, interactivity, and physics-grounded generation of unbounded length.",
+        "Most AI video generators work offline: a user submits a prompt, waits, and receives a finished clip that cannot be changed.",
+        "Visko's models belong to a class the company calls Live Models — models that run rather than render.",
+        "Orbis generates video continuously and in real time."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Engineering students turn industry challenge into AI startup ‘built by engineers, for engineers’ University of Colorado Boulder"
+          "body": "Visko, the AI research company behind Live Models, today announced a $10 million pre-seed round of fundraising and opened public access to Orbis — the foundation model that creates living worlds and streams them in real time, with persistent memory, interactivity, and physics-grounded generation of unbounded length."
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Yohannes and Woldemichael with Campos Foundation scholars in their 2026 summer celebration where they spoke about the transition from high school to college in STEM fields and entrepreneurship in engineering.",
-            "Sami Yohannes and Caleb Woldemichael are the ultimate go-getters ready to change how engineering firms do business.",
-            "As current juniors at CU Boulder, they’ve co-founded a startup company, YW Holdings, to streamline the slow, manual processes companies depend on to run engineering firms."
+            "Orbis streams interactive 4K video at 24 frames per second, responds to user intervention instantly, and sustains hour-scale generation without evident visual or color drift.",
+            "1, 2026 /PRNewswire/ -- Visko , the AI research company behind Live Models, today announced a $10 million pre-seed round of fundraising and opened public access to Orbis — the foundation model that creates living worlds and streams them in real time, with persistent memory, interactivity, and physics-grounded generation of unbounded length.",
+            "Most AI video generators work offline: a user submits a prompt, waits, and receives a finished clip that cannot be changed.",
+            "Visko's models belong to a class the company calls Live Models — models that run rather than render.",
+            "Orbis generates video continuously and in real time."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Yohannes and Woldemichael with Campos Foundation scholars in their 2026 summer celebration where they spoke about the transition from high school to college in STEM fields and entrepreneurship in engineering.",
-            "Sami Yohannes and Caleb Woldemichael are the ultimate go-getters ready to change how engineering firms do business.",
-            "As current juniors at CU Boulder, they’ve co-founded a startup company, YW Holdings, to streamline the slow, manual processes companies depend on to run engineering firms."
+            "Orbis streams interactive 4K video at 24 frames per second, responds to user intervention instantly, and sustains hour-scale generation without evident visual or color drift.",
+            "SUNNYVALE, Calif., Sept. 1, 2026 /PRNewswire/ -- Visko , the AI research company behind Live Models, today announced a $10 million pre-seed round of fundraising and opened public access to Orbis — the foundation model that creates living worlds and streams them in real time, with persistent memory, interactivity, and physics-grounded generation of unbounded length.",
+            "Most AI video generators work offline: a user submits a prompt, waits, and receives a finished clip that cannot be changed. Visko's models belong to a class the company calls Live Models — models that run rather than render. Orbis generates video continuously and in real time. Users can change the prompt at any moment during generation and see the update reflected instantly while the video keeps streaming."
           ]
         }
       ],
@@ -5043,7 +5117,7 @@
       "id": "5a0ebd38c4738160",
       "kind": "article",
       "title": "One CEO's fix for AI-generated slop: Make new hires learn their jobs without AI",
-      "source": "businessinsider.com",
+      "source": "Business Insider",
       "source_url": "https://www.businessinsider.com/valon-ceo-bans-ai-most-new-hires-job-skills-2026-8",
       "published_at": "2026-08-29T07:00:00Z",
       "authors": [],
@@ -5053,7 +5127,7 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "One CEO's fix for AI-generated slop: Make new hires learn their jobs without AI businessinsider.com",
+      "summary": "One CEO's fix for AI-generated slop: Make new hires learn their jobs without AI Business Insider",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.businessinsider.com/valon-ceo-bans-ai-most-new-hires-job-skills-2026-8",
@@ -5065,7 +5139,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "One CEO's fix for AI-generated slop: Make new hires learn their jobs without AI businessinsider.com"
+          "body": "One CEO's fix for AI-generated slop: Make new hires learn their jobs without AI Business Insider"
         },
         {
           "title": "公开页面要点",
@@ -5229,46 +5303,6 @@
             "“The other co-founders talk to the people, and I talk to the robots,” says Finn, a Stanford professor who has worked on robot learning since 2014. Finn has true academic bona fides: her 2017 paper on “meta-learning” (of which Sergey Levine, one of her co-founders, is a supporting author) has been cited more than 20,000 times, and her work has been cited more than 140,000 times.",
             "Finn’s aim is to make a model able to do “any task in any environment on any robot.” But dexterous demonstrations and early deployments don’t beget broad adoption—at least not yet. Reliability remains a big barrier: Finn says reaching a 99% success rate is “not a solved problem.”"
           ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "d3980729bb66efd8",
-      "kind": "article",
-      "title": "NYC AI startup Multiplier raises $6M to expand platform for asset managers",
-      "source": "The Business Journals",
-      "source_url": "https://www.bizjournals.com/newyork/news/2026/08/26/ex-bridgewater-investors-ai-startup-raises-6m.html",
-      "published_at": "2026-08-26T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "NYC AI startup Multiplier raises $6M to expand platform for asset managers The Business Journals",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 403: Forbidden",
-      "resolved_url": "https://www.bizjournals.com/newyork/news/2026/08/26/ex-bridgewater-investors-ai-startup-raises-6m.html",
-      "key_points": [
-        "NYC AI startup Multiplier raises $6M to expand platform for asset managers The Business Journals"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "NYC AI startup Multiplier raises $6M to expand platform for asset managers The Business Journals"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "NYC AI startup Multiplier raises $6M to expand platform for asset managers The Business Journals"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -5465,7 +5499,7 @@
       "id": "b15111acf9666d81",
       "kind": "article",
       "title": "Why AI safety requires more than industry self-regulation",
-      "source": "Brookings",
+      "source": "brookings.edu",
       "source_url": "https://www.brookings.edu/articles/why-ai-safety-requires-more-than-industry-self-regulation/",
       "published_at": "2026-09-16T20:41:01Z",
       "authors": [],
@@ -5475,7 +5509,7 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Why AI safety requires more than industry self-regulation Brookings",
+      "summary": "Why AI safety requires more than industry self-regulation brookings.edu",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.brookings.edu/articles/why-ai-safety-requires-more-than-industry-self-regulation/",
@@ -5486,7 +5520,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "Why AI safety requires more than industry self-regulation Brookings"
+          "body": "Why AI safety requires more than industry self-regulation brookings.edu"
         },
         {
           "title": "公开页面要点",
@@ -5648,7 +5682,7 @@
       "id": "ced2f8e080173539",
       "kind": "article",
       "title": "Deploying Qwen3.8-2.4T-A95B on Amazon SageMaker HyperPod with vLLM | Amazon Web Services",
-      "source": "Amazon Web Services (AWS)",
+      "source": "aws.amazon.com",
       "source_url": "https://aws.amazon.com/blogs/machine-learning/deploying-qwen3-8-2-4t-a95b-on-amazon-sagemaker-hyperpod-with-vllm/",
       "published_at": "2026-09-09T22:26:29Z",
       "authors": [],
@@ -5831,7 +5865,7 @@
       "id": "97baedfcb3f5e9ed",
       "kind": "article",
       "title": "NVIDIA to Acquire Hugging Face",
-      "source": "NVIDIA Blog",
+      "source": "blogs.nvidia.com",
       "source_url": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/",
       "published_at": "2026-09-03T07:00:00Z",
       "authors": [],
