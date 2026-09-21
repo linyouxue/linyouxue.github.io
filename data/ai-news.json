@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-21T04:52:05Z",
+  "generated_at": "2026-09-21T12:43:54Z",
   "item_count": 83,
   "category_counts": {
     "research": 20,
@@ -98,15 +98,15 @@
       "note": ""
     },
     {
-      "name": "Microsoft Research",
-      "status": "ok",
-      "count": 6,
-      "note": ""
-    },
-    {
       "name": "OpenAlex Conference Index",
       "status": "ok",
       "count": 20,
+      "note": ""
+    },
+    {
+      "name": "Microsoft Research",
+      "status": "ok",
+      "count": 6,
       "note": ""
     },
     {
@@ -122,7 +122,7 @@
       "note": ""
     },
     {
-      "name": "AI for Biology, Medicine & Materials",
+      "name": "AI for Mathematics & Science",
       "status": "error",
       "count": 0,
       "note": "HTTP Error 503: Service Unavailable"
@@ -134,13 +134,13 @@
       "note": "HTTP Error 503: Service Unavailable"
     },
     {
-      "name": "Frontier Lab Monitor",
+      "name": "AI Policy Monitor",
       "status": "error",
       "count": 0,
       "note": "HTTP Error 503: Service Unavailable"
     },
     {
-      "name": "AI Policy Monitor",
+      "name": "AI for Biology, Medicine & Materials",
       "status": "error",
       "count": 0,
       "note": "HTTP Error 503: Service Unavailable"
@@ -152,13 +152,13 @@
       "note": "HTTP Error 503: Service Unavailable"
     },
     {
-      "name": "Open Source AI Monitor",
+      "name": "Frontier Lab Monitor",
       "status": "error",
       "count": 0,
       "note": "HTTP Error 503: Service Unavailable"
     },
     {
-      "name": "AI for Mathematics & Science",
+      "name": "Open Source AI Monitor",
       "status": "error",
       "count": 0,
       "note": "HTTP Error 503: Service Unavailable"
@@ -170,25 +170,13 @@
       "note": "HTTP Error 503: Service Unavailable"
     },
     {
-      "name": "China AI · Tencent & ByteDance",
+      "name": "Vision & World Model Researchers",
       "status": "error",
       "count": 0,
       "note": "HTTP Error 503: Service Unavailable"
     },
     {
       "name": "Core AI Researchers on X",
-      "status": "error",
-      "count": 0,
-      "note": "HTTP Error 503: Service Unavailable"
-    },
-    {
-      "name": "Agent & Reasoning Researchers",
-      "status": "error",
-      "count": 0,
-      "note": "HTTP Error 503: Service Unavailable"
-    },
-    {
-      "name": "Vision & World Model Researchers",
       "status": "error",
       "count": 0,
       "note": "HTTP Error 503: Service Unavailable"
@@ -201,6 +189,18 @@
     },
     {
       "name": "China AI · DeepSeek & Zhipu",
+      "status": "error",
+      "count": 0,
+      "note": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "name": "China AI · Tencent & ByteDance",
+      "status": "error",
+      "count": 0,
+      "note": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "name": "Agent & Reasoning Researchers",
       "status": "error",
       "count": 0,
       "note": "HTTP Error 503: Service Unavailable"
@@ -348,42 +348,6 @@
       "cached_pdf": "./papers/bace-gecco-2026.pdf"
     },
     {
-      "id": "402c929a293f4553",
-      "category": "frontier",
-      "title": "Partnering with Accenture on embedded evaluation",
-      "summary": "We’re partnering with Accenture on independent evaluation of frontier AI—part of our recent commitment to embed evaluators at Anthropic. Both we and Accenture expect to invest at least $1 billion to build capacity in this area over the next five years.",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/news/accenture-embedded-evaluation",
-      "published_at": "2026-09-18T20:02:00Z",
-      "tags": [
-        "Anthropic",
-        "Official"
-      ],
-      "importance": 100,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=402c929a293f4553",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "b50540a04369135a",
-      "category": "frontier",
-      "title": "How Claude is uplifting biomolecular modeling",
-      "summary": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling",
-      "published_at": "2026-09-18T19:19:41Z",
-      "tags": [
-        "Anthropic",
-        "Research"
-      ],
-      "importance": 100,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=b50540a04369135a",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "2e8bec6440d10036",
       "category": "impact",
       "title": "Broadening access to Skala creates a faster path to predictive DFT",
@@ -425,6 +389,42 @@
       "reader_url": "./reader.html?id=rhb-icml-2026",
       "reader_status": "open-pdf-cached",
       "cached_pdf": "./papers/rhb-icml-2026.pdf"
+    },
+    {
+      "id": "402c929a293f4553",
+      "category": "frontier",
+      "title": "Partnering with Accenture on embedded evaluation",
+      "summary": "We’re partnering with Accenture on independent evaluation of frontier AI—part of our recent commitment to embed evaluators at Anthropic. Both we and Accenture expect to invest at least $1 billion to build capacity in this area over the next five years.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/accenture-embedded-evaluation",
+      "published_at": "2026-09-18T20:02:00Z",
+      "tags": [
+        "Anthropic",
+        "Official"
+      ],
+      "importance": 99,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=402c929a293f4553",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "b50540a04369135a",
+      "category": "frontier",
+      "title": "How Claude is uplifting biomolecular modeling",
+      "summary": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling",
+      "published_at": "2026-09-18T19:19:41Z",
+      "tags": [
+        "Anthropic",
+        "Research"
+      ],
+      "importance": 99,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=b50540a04369135a",
+      "reader_status": "public-page-excerpt"
     },
     {
       "id": "5bec41a17f29646b",
@@ -817,12 +817,12 @@
       "reader_status": "indexed-summary"
     },
     {
-      "id": "657eb2f915f64527",
+      "id": "0f86fa4918b6035e",
       "category": "china",
       "title": "智谱 发布 GLM -5.3-FlashX:推理速度冲至 200 tokens/s,国产算力 Infra Agent 闭环启动",
       "summary": "1 �� 智谱 发布 GLM -5.3-FlashX:推理速度冲至 200 tokens/s,国产算力 Infra Agent 闭环启动 智谱 9/18 正式推出 GLM -5.3-FlashX,...",
       "source": "微信公众号 · 泽哥tellyou",
-      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HHXyrmqjwhOpFwMWLZfZ4EjZMpssfGOQks2JE4fI&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789850219%26ver%3D6976%26signature%3DViJdAKIsHddG8CuPQnLoyJlZGPYzz-dtOSvI7euYjBwlf6sQw-O817ckwONJ8DdkCyazbz0cVJbTogkEGJYwji4c%2AnVYDtAU0YygfRn-Zb3ngED2gHAqU4XSlXsSSIg%2A%26new%3D1",
+      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HLYmsWqjSQ6SbSqregtHS_M9Tn20VRdXLlPfxJqI&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789994639%26ver%3D6980%26signature%3DeEUBSUxhyDmCi0C1gaq2nm6T6dAQe2b5jTrIZ9oeDlsK6U0JXHNVHfH6vB44GRHGR6Gj8IA2N6bQ139XxHIRexMBew7jfTUVVjF2NybkZ2Sc6wLiNp75cKL-ZMDRPBEm%26new%3D1",
       "published_at": "2026-09-19T02:18:12Z",
       "tags": [
         "微信公众号",
@@ -832,7 +832,7 @@
       "importance": 93,
       "content_kind": "article",
       "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "reader_url": "./reader.html?id=657eb2f915f64527",
+      "reader_url": "./reader.html?id=0f86fa4918b6035e",
       "index_url": "https://weixin.sogou.com/weixin?type=2&query=%E6%99%BA%E8%B0%B1+GLM+%E5%8F%91%E5%B8%83",
       "reader_status": "indexed-summary"
     },
@@ -1586,7 +1586,7 @@
         "Microsoft",
         "Research"
       ],
-      "importance": 83,
+      "importance": 82,
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=a207c7a8d743e837",
