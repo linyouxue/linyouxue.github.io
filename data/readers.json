@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-21T21:57:39Z",
-  "record_count": 132,
+  "generated_at": "2026-09-22T04:52:14Z",
+  "record_count": 130,
   "records": [
     {
       "id": "jacobian-fable-20260720",
@@ -371,6 +371,57 @@
       "reading_minutes": 31
     },
     {
+      "id": "b50540a04369135a",
+      "kind": "article",
+      "title": "How Claude is uplifting biomolecular modeling",
+      "source": "Anthropic",
+      "source_url": "https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling",
+      "published_at": "2026-09-21T23:14:52Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Anthropic",
+        "Research"
+      ],
+      "verification": "官方来源",
+      "summary": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling",
+      "key_points": [
+        "In this post, we share how Claude made the open-source models that scientists use to predict and design biomolecules faster and more memory-efficient.",
+        "Claude, working within Claude Science, optimized more than 30 of these models in just under four weeks, speeding them up roughly 4x on average.",
+        "It also created a low-memory mode that enables the accurate prediction of biomolecular systems larger than 10,000 tokens (amino acids, nucleotides, and atoms from small molecules and ions) on a single NVIDIA GPU node.",
+        "We are open-sourcing all of the optimized code and announcing a protein design competition co-sponsored with Adaptyv Bio, backed by up to $1 million in Claude credits and wet lab validation for over 5,000… Although this was an encouraging demonstration of AI’s scientific capabilities and an early step towards advancing drug discovery, it took more resources…",
+        "We allowed Claude to spend up to $10,000 per target on the AI infrastructure platform Modal, roughly equivalent to 2,500 NVIDIA H100 GPU hours."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "In this post, we share how Claude made the open-source models that scientists use to predict and design biomolecules faster and more memory-efficient.",
+            "Claude, working within Claude Science, optimized more than 30 of these models in just under four weeks, speeding them up roughly 4x on average.",
+            "It also created a low-memory mode that enables the accurate prediction of biomolecular systems larger than 10,000 tokens (amino acids, nucleotides, and atoms from small molecules and ions) on a single NVIDIA GPU node.",
+            "We are open-sourcing all of the optimized code and announcing a protein design competition co-sponsored with Adaptyv Bio, backed by up to $1 million in Claude credits and wet lab validation for over 5,000… Although this was an encouraging demonstration of AI’s scientific capabilities and an early step towards advancing drug discovery, it took more resources…",
+            "We allowed Claude to spend up to $10,000 per target on the AI infrastructure platform Modal, roughly equivalent to 2,500 NVIDIA H100 GPU hours."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "In this post, we share how Claude made the open-source models that scientists use to predict and design biomolecules faster and more memory-efficient. Claude, working within Claude Science, optimized more than 30 of these models in just under four weeks, speeding them up roughly 4x on average. It also created a low-memory mode that enables the accurate prediction of biomolecular systems larger than 10,000 tokens (amino acids, nucleotides, and atoms from small molecules and ions) on a single NVIDIA GPU node. We are open-sourcing all of the optimized code and announcing a protein design competition co-sponsored with Adaptyv Bio, backed by up to $1 million in Claude credits and wet lab validation for over 5,000…",
+            "Although this was an encouraging demonstration of AI’s scientific capabilities and an early step towards advancing drug discovery, it took more resources than would be available to the vast majority of protein designers. We allowed Claude to spend up to $10,000 per target on the AI infrastructure platform Modal, roughly equivalent to 2,500 NVIDIA H100 GPU hours.",
+            "To make such research more accessible, we began to explore inference optimizations to run these models more efficiently. As an early result of these optimizations, Claude Mythos 5.1 accelerated seven open-source biology models, enabling them to run up to 2.5 times faster."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "774cec73419e0b7d",
       "kind": "article",
       "title": "Higgsfield AI ships new video features in a day with GPT-6 Astra",
@@ -531,53 +582,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "2e8bec6440d10036",
-      "kind": "article",
-      "title": "Broadening access to Skala creates a faster path to predictive DFT",
-      "source": "Microsoft Research",
-      "source_url": "https://www.microsoft.com/en-us/research/blog/broadening-access-to-skala-creates-a-faster-path-to-predictive-dft/",
-      "published_at": "2026-08-20T16:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Microsoft",
-        "Research"
-      ],
-      "verification": "官方来源",
-      "summary": "Skala 1.1, the updated deep-learning exchange-correlation functional from Microsoft Research, provides greater accuracy, expanded accessibility across the computational chemistry ecosystem, and a living benchmark to track computational performance. The post Broadening access to Skala creates a faster path to predictive DFT appeared first on Microsoft Research .",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.microsoft.com/en-us/research/blog/broadening-access-to-skala-creates-a-faster-path-to-predictive-dft/",
-      "key_points": [
-        "Skala 1.1 demonstrates the continuously improving nature of Microsoft Research’s deep-learning DFT approach: trained on 2.5× more data than its predecessor, it delivers substantially higher accuracy across key molecular simulation challenges, including thermochemistry, reaction kinetics, and molecular structure prediction.",
-        "Skala is now available in CP2K and is being integrated into Psi4 , FHI-aims , ORCA and VASP , bringing next-generation DFT accuracy closer to the communities that rely on these codes every day.",
-        "Microsoft Research is also introducing a living benchmark that will track the computational performance of successive, increasingly optimized Skala releases to help the community measure and accelerate progress toward ever greater accuracy and efficiency."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Skala 1.1, the updated deep-learning exchange-correlation functional from Microsoft Research, provides greater accuracy, expanded accessibility across the computational chemistry ecosystem, and a living benchmark to track computational performance. The post Broadening access to Skala creates a faster path to predictive DFT appeared first on Microsoft Research ."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Skala 1.1 demonstrates the continuously improving nature of Microsoft Research’s deep-learning DFT approach: trained on 2.5× more data than its predecessor, it delivers substantially higher accuracy across key molecular simulation challenges, including thermochemistry, reaction kinetics, and molecular structure prediction.",
-            "Skala is now available in CP2K and is being integrated into Psi4 , FHI-aims , ORCA and VASP , bringing next-generation DFT accuracy closer to the communities that rely on these codes every day.",
-            "Microsoft Research is also introducing a living benchmark that will track the computational performance of successive, increasingly optimized Skala releases to help the community measure and accelerate progress toward ever greater accuracy and efficiency."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Skala 1.1 demonstrates the continuously improving nature of Microsoft Research’s deep-learning DFT approach: trained on 2.5× more data than its predecessor, it delivers substantially higher accuracy across key molecular simulation challenges, including thermochemistry, reaction kinetics, and molecular structure prediction.",
-            "Skala is now available in CP2K and is being integrated into Psi4 , FHI-aims , ORCA and VASP , bringing next-generation DFT accuracy closer to the communities that rely on these codes every day.",
-            "Microsoft Research is also introducing a living benchmark that will track the computational performance of successive, increasingly optimized Skala releases to help the community measure and accelerate progress toward ever greater accuracy and efficiency."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "rhb-icml-2026",
       "kind": "paper",
       "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
@@ -668,57 +672,6 @@
             "We're partnering with Accenture on independent evaluation of frontier AI. This is an important step toward the commitment, made in our CEO’s essay “We Must Pace the Frontier,” to embed evaluators within Anthropic.",
             "The partnership will be led by Faculty, Accenture’s specialist AI business, and will include evaluating and red-teaming models, conducting alignment assessments, and testing model safeguards. Accenture helps businesses and governments deploy AI across many industries. Their understanding of how enterprises use AI in practice informs their safety approach, and they will bring that perspective to evaluating our models.",
             "Anthropic and Accenture each expect to invest at least $1 billion in building capacity in this area over the next five years."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "b50540a04369135a",
-      "kind": "article",
-      "title": "How Claude is uplifting biomolecular modeling",
-      "source": "Anthropic",
-      "source_url": "https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling",
-      "published_at": "2026-09-18T19:19:41Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Anthropic",
-        "Research"
-      ],
-      "verification": "官方来源",
-      "summary": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling",
-      "key_points": [
-        "In this post, we share how Claude made the open-source models that scientists use to predict and design biomolecules faster and more memory-efficient.",
-        "Claude, working within Claude Science, optimized more than 30 of these models in just under four weeks, speeding them up roughly 4x on average.",
-        "It also created a low-memory mode that enables the accurate prediction of biomolecular systems larger than 10,000 tokens (amino acids, nucleotides, and atoms from small molecules and ions) on a single NVIDIA GPU node.",
-        "We are open-sourcing all of the optimized code and announcing a protein design competition co-sponsored with Adaptyv Bio, backed by up to $1 million in Claude credits and wet lab validation for over 5,000… Although this was an encouraging demonstration of AI’s scientific capabilities and an early step towards advancing drug discovery, it took more resources…",
-        "We allowed Claude to spend up to $10,000 per target on the AI infrastructure platform Modal, roughly equivalent to 2,500 NVIDIA H100 GPU hours."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "In this post, we share how Claude made the open-source models that scientists use to predict and design biomolecules faster and more memory-efficient.",
-            "Claude, working within Claude Science, optimized more than 30 of these models in just under four weeks, speeding them up roughly 4x on average.",
-            "It also created a low-memory mode that enables the accurate prediction of biomolecular systems larger than 10,000 tokens (amino acids, nucleotides, and atoms from small molecules and ions) on a single NVIDIA GPU node.",
-            "We are open-sourcing all of the optimized code and announcing a protein design competition co-sponsored with Adaptyv Bio, backed by up to $1 million in Claude credits and wet lab validation for over 5,000… Although this was an encouraging demonstration of AI’s scientific capabilities and an early step towards advancing drug discovery, it took more resources…",
-            "We allowed Claude to spend up to $10,000 per target on the AI infrastructure platform Modal, roughly equivalent to 2,500 NVIDIA H100 GPU hours."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "In this post, we share how Claude made the open-source models that scientists use to predict and design biomolecules faster and more memory-efficient. Claude, working within Claude Science, optimized more than 30 of these models in just under four weeks, speeding them up roughly 4x on average. It also created a low-memory mode that enables the accurate prediction of biomolecular systems larger than 10,000 tokens (amino acids, nucleotides, and atoms from small molecules and ions) on a single NVIDIA GPU node. We are open-sourcing all of the optimized code and announcing a protein design competition co-sponsored with Adaptyv Bio, backed by up to $1 million in Claude credits and wet lab validation for over 5,000…",
-            "Although this was an encouraging demonstration of AI’s scientific capabilities and an early step towards advancing drug discovery, it took more resources than would be available to the vast majority of protein designers. We allowed Claude to spend up to $10,000 per target on the AI infrastructure platform Modal, roughly equivalent to 2,500 NVIDIA H100 GPU hours.",
-            "To make such research more accessible, we began to explore inference optimizations to run these models more efficiently. As an early result of these optimizations, Claude Mythos 5.1 accelerated seven open-source biology models, enabling them to run up to 2.5 times faster."
           ]
         }
       ],
@@ -1038,6 +991,53 @@
       "reading_minutes": 1
     },
     {
+      "id": "2e8bec6440d10036",
+      "kind": "article",
+      "title": "Broadening access to Skala creates a faster path to predictive DFT",
+      "source": "Microsoft Research",
+      "source_url": "https://www.microsoft.com/en-us/research/blog/broadening-access-to-skala-creates-a-faster-path-to-predictive-dft/",
+      "published_at": "2026-08-20T16:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Microsoft",
+        "Research"
+      ],
+      "verification": "官方来源",
+      "summary": "Skala 1.1, the updated deep-learning exchange-correlation functional from Microsoft Research, provides greater accuracy, expanded accessibility across the computational chemistry ecosystem, and a living benchmark to track computational performance. The post Broadening access to Skala creates a faster path to predictive DFT appeared first on Microsoft Research .",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.microsoft.com/en-us/research/blog/broadening-access-to-skala-creates-a-faster-path-to-predictive-dft/",
+      "key_points": [
+        "Skala 1.1 demonstrates the continuously improving nature of Microsoft Research’s deep-learning DFT approach: trained on 2.5× more data than its predecessor, it delivers substantially higher accuracy across key molecular simulation challenges, including thermochemistry, reaction kinetics, and molecular structure prediction.",
+        "Skala is now available in CP2K and is being integrated into Psi4 , FHI-aims , ORCA and VASP , bringing next-generation DFT accuracy closer to the communities that rely on these codes every day.",
+        "Microsoft Research is also introducing a living benchmark that will track the computational performance of successive, increasingly optimized Skala releases to help the community measure and accelerate progress toward ever greater accuracy and efficiency."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Skala 1.1, the updated deep-learning exchange-correlation functional from Microsoft Research, provides greater accuracy, expanded accessibility across the computational chemistry ecosystem, and a living benchmark to track computational performance. The post Broadening access to Skala creates a faster path to predictive DFT appeared first on Microsoft Research ."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Skala 1.1 demonstrates the continuously improving nature of Microsoft Research’s deep-learning DFT approach: trained on 2.5× more data than its predecessor, it delivers substantially higher accuracy across key molecular simulation challenges, including thermochemistry, reaction kinetics, and molecular structure prediction.",
+            "Skala is now available in CP2K and is being integrated into Psi4 , FHI-aims , ORCA and VASP , bringing next-generation DFT accuracy closer to the communities that rely on these codes every day.",
+            "Microsoft Research is also introducing a living benchmark that will track the computational performance of successive, increasingly optimized Skala releases to help the community measure and accelerate progress toward ever greater accuracy and efficiency."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Skala 1.1 demonstrates the continuously improving nature of Microsoft Research’s deep-learning DFT approach: trained on 2.5× more data than its predecessor, it delivers substantially higher accuracy across key molecular simulation challenges, including thermochemistry, reaction kinetics, and molecular structure prediction.",
+            "Skala is now available in CP2K and is being integrated into Psi4 , FHI-aims , ORCA and VASP , bringing next-generation DFT accuracy closer to the communities that rely on these codes every day.",
+            "Microsoft Research is also introducing a living benchmark that will track the computational performance of successive, increasingly optimized Skala releases to help the community measure and accelerate progress toward ever greater accuracy and efficiency."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "ef4b15ebc68878b9",
       "kind": "article",
       "title": "How Claude's values vary by model and language",
@@ -1237,7 +1237,7 @@
       "title": "A.I. Agents as ‘Co-Scientists’? This Lab Says They Could Speed Drug Research.",
       "source": "The New York Times",
       "source_url": "https://www.nytimes.com/2026/09/17/well/ai-drug-discovery-stanford.html",
-      "published_at": "2026-09-21T17:03:08Z",
+      "published_at": "2026-09-21T15:33:00Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -1263,6 +1263,47 @@
           "title": "公开页面要点",
           "bullets": [
             "This Lab Says They Could Speed Drug Research."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "37db2441d5a89592",
+      "kind": "article",
+      "title": "Medical AI has a proof problem",
+      "source": "Financial Times",
+      "source_url": "https://www.ft.com/content/34319b00-f874-4119-aa28-8376d81e7190?syn-25a6b1a6=1",
+      "published_at": "2026-09-18T04:02:15Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Medical AI has a proof problem Financial Times",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://www.ft.com/content/34319b00-f874-4119-aa28-8376d81e7190?syn-25a6b1a6=1",
+      "key_points": [
+        "Medical AI has a proof problem Financial Times"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Medical AI has a proof problem Financial Times"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Medical AI has a proof problem Financial Times"
           ]
         },
         {
@@ -1325,11 +1366,51 @@
       "reading_minutes": 1
     },
     {
-      "id": "1662ab2e3de5c580",
+      "id": "959da4c18599b430",
+      "kind": "article",
+      "title": "AI日报| 腾讯 混元 发布 Hy Image3.5 preview图像模型!小米开源MiMo-V2.6,AA排名超Kimi K3!Grok 4.7 发布 ,Grok 4.7 Fast同步推出",
+      "source": "微信公众号 · EverAI酱",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1790052698&ver=6981&signature=qQLsqB9UjuH0j6l-mLiNI3UHRkj8EBYkYgMArwahKe-FlDxqRhdirpeQou1GSHQWdh4jt7XvRSD2rJRVJkXXACYgwLozGRIFAMEEqZhEsTH-YCl5UQNhEoDaAInhdnhg&new=1",
+      "published_at": "2026-09-22T03:55:58Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "微信公众号",
+        "腾讯",
+        "元宝"
+      ],
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "summary": "2026年9月22日 AI资讯日报【AIGC】• 腾讯 混元 发布 Hy Image3.5 preview:定位高性价比专业级生图模型,相比Hy Image3.0综合能力...",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "indexed-summary",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HGQJsmqj0uIu0uqKdj46JX_0JvH_cWFY7MOxliZK&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1790052698%26ver%3D6981%26signature%3DqQLsqB9UjuH0j6l-mLiNI3UHRkj8EBYkYgMArwahKe-FlDxqRhdirpeQou1GSHQWdh4jt7XvRSD2rJRVJkXXACYgwLozGRIFAMEEqZhEsTH-YCl5UQNhEoDaAInhdnhg%26new%3D1",
+      "key_points": [
+        "2026年9月22日 AI资讯日报【AIGC】• 腾讯 混元 发布 Hy Image3.5 preview:定位高性价比专业级生图模型,相比Hy Image3.0综合能力..."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "2026年9月22日 AI资讯日报【AIGC】• 腾讯 混元 发布 Hy Image3.5 preview:定位高性价比专业级生图模型,相比Hy Image3.0综合能力..."
+        },
+        {
+          "title": "公开索引摘要",
+          "bullets": [
+            "2026年9月22日 AI资讯日报【AIGC】• 腾讯 混元 发布 Hy Image3.5 preview:定位高性价比专业级生图模型,相比Hy Image3.0综合能力..."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "d6902f06c2b9e068",
       "kind": "article",
       "title": "大模型 Qwen -3.8( 通义千问 旗舰)",
       "source": "微信公众号 · stone9981",
-      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HB-4sGqj1BvaWezlasL4q5S5Qa6AtHIybcUJRFIV&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789966326%26ver%3D6979%26signature%3D60O5-%2AWI9fWHE0lm34nDxGHAC5LUbV7SzOhxFdH3zNF5bO5ypo5WS-mB60TGqwGrTiGm7IROY9PeTCLnZGe2L0J917RUbG5-bHrGPOSpYc4LAzD1qaW2oEHv9pRnihK5%26new%3D1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1790052693&ver=6981&signature=R8ap0XZ-m9*RulITJfktOSwukyvfbYZ9HdWBqoK*xyb7ZPQKBxK4zk60zi1KtAbeef8wwslwmFNFb6VFewH10FmAk8HSPlnc1Db7sCewdOYYiAFGVfjayDgMAND7IbnD&new=1",
       "published_at": "2026-09-20T13:14:17Z",
       "authors": [],
       "venue": "",
@@ -1342,7 +1423,7 @@
       "summary": "大模型 Qwen -3.8( 通义千问 旗舰)阿里 通义千问 2026 年 8 月 发布 的旗舰基座模型,以 Qwen 3.8-Max 形态对外服务;总参 2.4 万亿、...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HB-4sGqj1BvaWezlasL4q5S5Qa6AtHIybcUJRFIV&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789966326%26ver%3D6979%26signature%3D60O5-%2AWI9fWHE0lm34nDxGHAC5LUbV7SzOhxFdH3zNF5bO5ypo5WS-mB60TGqwGrTiGm7IROY9PeTCLnZGe2L0J917RUbG5-bHrGPOSpYc4LAzD1qaW2oEHv9pRnihK5%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HGQJsmqjJQwGBsB1vR9pGUHrZlBKf0VIlMtvjsaq&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1790052693%26ver%3D6981%26signature%3DR8ap0XZ-m9%2ARulITJfktOSwukyvfbYZ9HdWBqoK%2Axyb7ZPQKBxK4zk60zi1KtAbeef8wwslwmFNFb6VFewH10FmAk8HSPlnc1Db7sCewdOYYiAFGVfjayDgMAND7IbnD%26new%3D1",
       "key_points": [
         "大模型 Qwen -3.8( 通义千问 旗舰)阿里 通义千问 2026 年 8 月 发布 的旗舰基座模型,以 Qwen 3.8-Max 形态对外服务;总参 2.4 万亿、..."
       ],
@@ -1925,46 +2006,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "f4e6fa4d4ff372fe",
-      "kind": "article",
-      "title": "DeepSeek 发布 V4.1-Flash:原生多模态+1M上下文,MIT协议开源",
-      "source": "微信公众号 · 博士科技杭州科创服务中心",
-      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HCQcrGqjDmEVt3TOdiAlGQ5DfrkVdDPZYGQrd2le&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789664277%26ver%3D6972%26signature%3Duz0qr6iLxl5IVZjQcyo9--AViCjIcgobu6z7aIV3QE11Jnc-GacYHu5S-ywMpc7hAtwZ6NDsd%2ACqARkYrUGjr3hM0or1jx4MerxZonVe52yey58HCjG2T2bGtn7oZIGt%26new%3D1",
-      "published_at": "2026-09-17T07:29:10Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "微信公众号",
-        "DeepSeek",
-        "模型"
-      ],
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "summary": "2026年9月10日, DeepSeek 做了一件在命名上极其克制、在实质上极其激进的事.它 发布 了一个叫“V4.1-Flash”的模型.按照版本...",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HCQcrGqjDmEVt3TOdiAlGQ5DfrkVdDPZYGQrd2le&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789664277%26ver%3D6972%26signature%3Duz0qr6iLxl5IVZjQcyo9--AViCjIcgobu6z7aIV3QE11Jnc-GacYHu5S-ywMpc7hAtwZ6NDsd%2ACqARkYrUGjr3hM0or1jx4MerxZonVe52yey58HCjG2T2bGtn7oZIGt%26new%3D1",
-      "key_points": [
-        "2026年9月10日, DeepSeek 做了一件在命名上极其克制、在实质上极其激进的事.它 发布 了一个叫“V4.1-Flash”的模型.按照版本..."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "2026年9月10日, DeepSeek 做了一件在命名上极其克制、在实质上极其激进的事.它 发布 了一个叫“V4.1-Flash”的模型.按照版本..."
-        },
-        {
-          "title": "公开索引摘要",
-          "bullets": [
-            "2026年9月10日, DeepSeek 做了一件在命名上极其克制、在实质上极其激进的事.它 发布 了一个叫“V4.1-Flash”的模型.按照版本..."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "a371457dab8cb482",
       "kind": "article",
       "title": "New experts join Google’s AI & Economy team",
@@ -2428,7 +2469,7 @@
       "resolved_url": "https://x.com/sama/status/2074909079450050629",
       "key_points": [
         "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
-        "5:30 PM · Jul 8, 2026 · 764.9K Views 924 514 10K 764 Jenny @suomi55 Jul 8 Are you kidding us?",
+        "5:30 PM · Jul 8, 2026 · 764.9K Views 924 514 10K 765 Jenny @suomi55 Jul 8 Are you kidding us?",
         "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
         "You are promoting something here that you yourself have taken away from the users!",
         "#keep4o #BringBack4o #OpenSource4o 20 13 193 12K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
@@ -2442,7 +2483,7 @@
           "title": "公开页面要点",
           "bullets": [
             "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
-            "5:30 PM · Jul 8, 2026 · 764.9K Views 924 514 10K 764 Jenny @suomi55 Jul 8 Are you kidding us?",
+            "5:30 PM · Jul 8, 2026 · 764.9K Views 924 514 10K 765 Jenny @suomi55 Jul 8 Are you kidding us?",
             "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
             "You are promoting something here that you yourself have taken away from the users!",
             "#keep4o #BringBack4o #OpenSource4o 20 13 193 12K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
@@ -2451,7 +2492,7 @@
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 · 764.9K Views 924 514 10K 764",
+            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 · 764.9K Views 924 514 10K 765",
             "Jenny @suomi55 Jul 8 Are you kidding us? „it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o! You are promoting something here that you yourself have taken away from the users! That’s disgusting! #keep4o #BringBack4o #OpenSource4o 20 13 193 12K",
             "David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
           ]
@@ -2650,58 +2691,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "bf3be56d4da2f441",
-      "kind": "article",
-      "title": "Virtual cells built from 4D AI models and 'digital twins' could speed up drug discovery",
-      "source": "Phys.org",
-      "source_url": "https://phys.org/news/2026-09-virtual-cells-built-4d-ai.html",
-      "published_at": "2026-09-20T16:00:05Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Mitochondria—tiny structures that convert nutrients into energy—are often depicted as discrete kidney bean-shaped objects. But in reality, they form a dynamic, interconnected network throughout the entire cell, rapidly splitting and fusing as they're transported to where energy is needed most.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://phys.org/news/2026-09-virtual-cells-built-4d-ai.html",
-      "key_points": [
-        "This article has been reviewed according to Science X's editorial process and policies .",
-        "Editors have highlighted the following attributes while ensuring the content's credibility: Mitochondria—tiny structures that convert nutrients into energy—are often depicted as discrete kidney bean-shaped objects.",
-        "But in reality, they form a dynamic, interconnected network throughout the entire cell, rapidly splitting and fusing as they're transported to where energy is needed most.",
-        "Because mitochondrial networks change shape based on cellular health, they can be used as markers of disease or to test new treatments.",
-        "However, understanding how these changes affect cell function has been difficult because mitochondria have mostly been imaged as flat, still snapshots."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Mitochondria—tiny structures that convert nutrients into energy—are often depicted as discrete kidney bean-shaped objects. But in reality, they form a dynamic, interconnected network throughout the entire cell, rapidly splitting and fusing as they're transported to where energy is needed most."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "This article has been reviewed according to Science X's editorial process and policies .",
-            "Editors have highlighted the following attributes while ensuring the content's credibility: Mitochondria—tiny structures that convert nutrients into energy—are often depicted as discrete kidney bean-shaped objects.",
-            "But in reality, they form a dynamic, interconnected network throughout the entire cell, rapidly splitting and fusing as they're transported to where energy is needed most.",
-            "Because mitochondrial networks change shape based on cellular health, they can be used as markers of disease or to test new treatments.",
-            "However, understanding how these changes affect cell function has been difficult because mitochondria have mostly been imaged as flat, still snapshots."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "This article has been reviewed according to Science X's editorial process and policies . Editors have highlighted the following attributes while ensuring the content's credibility:",
-            "Mitochondria—tiny structures that convert nutrients into energy—are often depicted as discrete kidney bean-shaped objects. But in reality, they form a dynamic, interconnected network throughout the entire cell, rapidly splitting and fusing as they're transported to where energy is needed most.",
-            "Because mitochondrial networks change shape based on cellular health, they can be used as markers of disease or to test new treatments. However, understanding how these changes affect cell function has been difficult because mitochondria have mostly been imaged as flat, still snapshots."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "027c31f4a6ca9c37",
       "kind": "article",
       "title": "Virtual biotech company puts thousands of AI scientist agents to work on drug discovery",
@@ -2757,7 +2746,7 @@
       "id": "5c06f71e0b859b45",
       "kind": "article",
       "title": "AI Agents Collaborate to Streamline Drug Discovery",
-      "source": "Inside Precision Medicine",
+      "source": "insideprecisionmedicine.com",
       "source_url": "https://www.insideprecisionmedicine.com/topics/informatics/ai-agents-collaborate-to-streamline-drug-discovery/",
       "published_at": "2026-09-17T18:00:47Z",
       "authors": [],
@@ -2896,12 +2885,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "5442dd5be3ba90e3",
+      "id": "b71eb8252885e285",
       "kind": "article",
-      "title": "Novo Nordisk, Anthropic partner on AI drug discovery",
-      "source": "MobiHealthNews",
-      "source_url": "https://www.mobihealthnews.com/news/novo-nordisk-anthropic-partner-ai-drug-discovery",
-      "published_at": "2026-09-16T22:00:40Z",
+      "title": "Novo taps Anthropic's Claude AI for drug discovery",
+      "source": "pharmaphorum",
+      "source_url": "https://pharmaphorum.com/news/novo-taps-anthropics-claude-ai-drug-discovery",
+      "published_at": "2026-09-17T08:01:49Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -2910,28 +2899,35 @@
         "Applied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Novo Nordisk, Anthropic partner on AI drug discovery MobiHealthNews",
+      "summary": "Novo adds Anthropic AI models and Claude Science to its drug discovery toolkit in a bid to become \"the world's most AI-driven healthcare company.\"",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 403: Forbidden",
-      "resolved_url": "https://www.mobihealthnews.com/news/novo-nordisk-anthropic-partner-ai-drug-discovery",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://pharmaphorum.com/news/novo-taps-anthropics-claude-ai-drug-discovery",
       "key_points": [
-        "Novo Nordisk, Anthropic partner on AI drug discovery MobiHealthNews"
+        "Novo has added Anthropic's Claude to its drug discovery toolkit, shortly after the tech firm revealed a new AI workbench for researchers that can be used to bring new medicines to patients more quickly.",
+        "Under the terms of the alliance, Novo – now rebranded from Novo Nordisk – will use Anthropic models and recently-launched Claude Science to \"advance scientific reasoning for […] R&D and agentic software engineering.\" The companies said they will jointly address key drug discovery challenges identified by scientists and computational teams at Novo, and…",
+        "Novo has already used Claude to create NovoScribe , a tool that can ⁠ generate ​clinical study reports (CSRs) in minutes, rather than months."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Novo Nordisk, Anthropic partner on AI drug discovery MobiHealthNews"
+          "body": "Novo adds Anthropic AI models and Claude Science to its drug discovery toolkit in a bid to become \"the world's most AI-driven healthcare company.\""
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Novo Nordisk, Anthropic partner on AI drug discovery MobiHealthNews"
+            "Novo has added Anthropic's Claude to its drug discovery toolkit, shortly after the tech firm revealed a new AI workbench for researchers that can be used to bring new medicines to patients more quickly.",
+            "Under the terms of the alliance, Novo – now rebranded from Novo Nordisk – will use Anthropic models and recently-launched Claude Science to \"advance scientific reasoning for […] R&D and agentic software engineering.\" The companies said they will jointly address key drug discovery challenges identified by scientists and computational teams at Novo, and…",
+            "Novo has already used Claude to create NovoScribe , a tool that can ⁠ generate ​clinical study reports (CSRs) in minutes, rather than months."
           ]
         },
         {
           "title": "原文短摘录",
-          "paragraphs": []
+          "paragraphs": [
+            "Novo has added Anthropic's Claude to its drug discovery toolkit, shortly after the tech firm revealed a new AI workbench for researchers that can be used to bring new medicines to patients more quickly.",
+            "Under the terms of the alliance, Novo – now rebranded from Novo Nordisk – will use Anthropic models and recently-launched Claude Science to \"advance scientific reasoning for […] R&D and agentic software engineering.\"",
+            "The companies said they will jointly address key drug discovery challenges identified by scientists and computational teams at Novo, and develop solutions for specific scientific challenges, as well as workflows, to support biological reasoning. Novo has already used Claude to create NovoScribe , a tool that can ⁠ generate ​clinical study reports (CSRs) in minutes, rather than months."
+          ]
         }
       ],
       "reading_minutes": 1
@@ -2982,95 +2978,6 @@
             "Your agent works in rehearsal, but during the live demo, it takes a different path and fails the same task.",
             "That is embarrassing onstage. In production, it is a reliability problem: a workflow that succeeded once may fail the next time a user makes the same request. For mission-critical work, such as reconciling a financial transaction or checking a contract for an obligation, that can be a showstopper.",
             "Most benchmarks hide this variability behind an average. On AppWorld, a ReAct agent using GPT-4.1 succeeded on 77.4% of runs across five repetitions. But it succeeded in all five runs for only 53.0% of tasks — a 24.4-point consistency gap ."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "5c9d8a9c4e643775",
-      "kind": "article",
-      "title": "Top A.I. Leaders Call for Slowing Down A.I. Development",
-      "source": "The New York Times",
-      "source_url": "https://www.nytimes.com/2026/09/12/technology/anthropic-dario-amodei-ai-slowdown.html",
-      "published_at": "2026-09-14T16:07:34Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Researcher Watch",
-        "Foundation Models",
-        "Leadership"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Top A.I. Leaders Call for Slowing Down A.I. Development The New York Times",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 403: Forbidden",
-      "resolved_url": "https://www.nytimes.com/2026/09/12/technology/anthropic-dario-amodei-ai-slowdown.html",
-      "key_points": [
-        "Top A.I. Leaders Call for Slowing Down A.I. Development The New York Times"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Top A.I. Leaders Call for Slowing Down A.I. Development The New York Times"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Top A.I. Leaders Call for Slowing Down A.I. Development The New York Times"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "0fb59a55b2837473",
-      "kind": "article",
-      "title": "Trump goes scorched earth on AI warnings, raging about data center opposition and regulation",
-      "source": "CNBC",
-      "source_url": "https://www.cnbc.com/2026/09/14/trump-ai-data-centers-anthropic-dario-amodei.html",
-      "published_at": "2026-09-14T14:09:03Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Researcher Watch",
-        "Foundation Models",
-        "Leadership"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Trump goes scorched earth on AI warnings, raging about data center opposition and regulation CNBC",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.cnbc.com/2026/09/14/trump-ai-data-centers-anthropic-dario-amodei.html",
-      "key_points": [
-        "President Donald Trump raged against growing calls for greater regulation of artificial intelligence.",
-        "Trump lashed out at Anthropic CEO Dario Amodei following his urgent plea for an AI slowdown.",
-        "Other tech CEOs, including OpenAI chief Sam Altman and SpaceX CEO Elon Musk, over the weekend said they agreed with calls to pace the development of AI models."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Trump goes scorched earth on AI warnings, raging about data center opposition and regulation CNBC"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "President Donald Trump raged against growing calls for greater regulation of artificial intelligence.",
-            "Trump lashed out at Anthropic CEO Dario Amodei following his urgent plea for an AI slowdown.",
-            "Other tech CEOs, including OpenAI chief Sam Altman and SpaceX CEO Elon Musk, over the weekend said they agreed with calls to pace the development of AI models."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "President Donald Trump raged against growing calls for greater regulation of artificial intelligence.",
-            "Trump lashed out at Anthropic CEO Dario Amodei following his urgent plea for an AI slowdown.",
-            "Other tech CEOs, including OpenAI chief Sam Altman and SpaceX CEO Elon Musk, over the weekend said they agreed with calls to pace the development of AI models."
           ]
         }
       ],
@@ -3338,49 +3245,89 @@
       "reading_minutes": 1
     },
     {
-      "id": "abfe0f75be1265ff",
+      "id": "5c9d8a9c4e643775",
       "kind": "article",
-      "title": "Former Infosys chief's AI startup nabs another $53M | TechCrunch",
-      "source": "TechCrunch",
-      "source_url": "https://techcrunch.com/2026/09/16/former-infosys-chiefs-ai-startup-adds-50m-to-seed-weeks-after-initial-raise/",
-      "published_at": "2026-09-16T13:00:00Z",
+      "title": "Top A.I. Leaders Call for Slowing Down A.I. Development",
+      "source": "The New York Times",
+      "source_url": "https://www.nytimes.com/2026/09/12/technology/anthropic-dario-amodei-ai-slowdown.html",
+      "published_at": "2026-09-14T16:07:34Z",
       "authors": [],
       "venue": "",
       "tags": [
-        "Academic Startup",
-        "Funding"
+        "Researcher Watch",
+        "Foundation Models",
+        "Leadership"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Former Infosys chief’s AI startup nabs another $53M TechCrunch",
+      "summary": "Top A.I. Leaders Call for Slowing Down A.I. Development The New York Times",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://techcrunch.com/2026/09/16/former-infosys-chiefs-ai-startup-adds-50m-to-seed-weeks-after-initial-raise/",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://www.nytimes.com/2026/09/12/technology/anthropic-dario-amodei-ai-slowdown.html",
       "key_points": [
-        "Disrupt 2026: OpenAI, Anthropic, Replit, and more take over 6 industry stages.",
-        "25% off tickets now Disrupt ticket savings of up to $200 + 50% off a second ends Sept 25, 11:59 p.m.",
-        "Hang Ten Systems , an AI startup founded by former Infosys CEO Vishal Sikka just four months ago, has expanded its seed funding by another $53 million.",
-        "This new investment round was closed just five weeks after the initial $32 million seed round was closed , the company tells TechCrunch."
+        "Top A.I. Leaders Call for Slowing Down A.I. Development The New York Times"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Former Infosys chief’s AI startup nabs another $53M TechCrunch"
+          "body": "Top A.I. Leaders Call for Slowing Down A.I. Development The New York Times"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Disrupt 2026: OpenAI, Anthropic, Replit, and more take over 6 industry stages.",
-            "25% off tickets now Disrupt ticket savings of up to $200 + 50% off a second ends Sept 25, 11:59 p.m.",
-            "Hang Ten Systems , an AI startup founded by former Infosys CEO Vishal Sikka just four months ago, has expanded its seed funding by another $53 million.",
-            "This new investment round was closed just five weeks after the initial $32 million seed round was closed , the company tells TechCrunch."
+            "Top A.I. Leaders Call for Slowing Down A.I. Development The New York Times"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "0fb59a55b2837473",
+      "kind": "article",
+      "title": "Trump goes scorched earth on AI warnings, raging about data center opposition and regulation",
+      "source": "CNBC",
+      "source_url": "https://www.cnbc.com/2026/09/14/trump-ai-data-centers-anthropic-dario-amodei.html",
+      "published_at": "2026-09-14T14:09:03Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Researcher Watch",
+        "Foundation Models",
+        "Leadership"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Trump goes scorched earth on AI warnings, raging about data center opposition and regulation CNBC",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.cnbc.com/2026/09/14/trump-ai-data-centers-anthropic-dario-amodei.html",
+      "key_points": [
+        "President Donald Trump raged against growing calls for greater regulation of artificial intelligence.",
+        "Trump lashed out at Anthropic CEO Dario Amodei following his urgent plea for an AI slowdown.",
+        "Other tech CEOs, including OpenAI chief Sam Altman and SpaceX CEO Elon Musk, over the weekend said they agreed with calls to pace the development of AI models."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Trump goes scorched earth on AI warnings, raging about data center opposition and regulation CNBC"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "President Donald Trump raged against growing calls for greater regulation of artificial intelligence.",
+            "Trump lashed out at Anthropic CEO Dario Amodei following his urgent plea for an AI slowdown.",
+            "Other tech CEOs, including OpenAI chief Sam Altman and SpaceX CEO Elon Musk, over the weekend said they agreed with calls to pace the development of AI models."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Disrupt 2026: OpenAI, Anthropic, Replit, and more take over 6 industry stages. 25% off tickets now",
-            "Disrupt ticket savings of up to $200 + 50% off a second ends Sept 25, 11:59 p.m. PT. REGISTER HERE.",
-            "Hang Ten Systems , an AI startup founded by former Infosys CEO Vishal Sikka just four months ago, has expanded its seed funding by another $53 million. This new investment round was closed just five weeks after the initial $32 million seed round was closed , the company tells TechCrunch."
+            "President Donald Trump raged against growing calls for greater regulation of artificial intelligence.",
+            "Trump lashed out at Anthropic CEO Dario Amodei following his urgent plea for an AI slowdown.",
+            "Other tech CEOs, including OpenAI chief Sam Altman and SpaceX CEO Elon Musk, over the weekend said they agreed with calls to pace the development of AI models."
           ]
         }
       ],
@@ -4207,10 +4154,8 @@
       "resolved_url": "https://techcrunch.com/2026/08/25/robotics-startup-generalist-reaches-3b-valuation-sources-say/",
       "key_points": [
         "Disrupt 2026: OpenAI, Anthropic, Replit, and more take over 6 industry stages.",
-        "25% off tickets now Generalist, a robotics startup, is now valued at $3 billion after raising additional capital led by 8VC, according to two people with knowledge of the funding.",
-        "The fresh capital totals nearly $200 million according to a regulatory filing.",
-        "That additional capital is an extension of a $400 million Series B led by Radical Ventures that the company announced in June at a $2 billion valuation, the people said.",
-        "The new capital brings the round’s total funding to $600 million."
+        "25% off tickets now Disrupt ticket savings of up to $200 + 50% off a second ends Sept 25, 11:59 p.m.",
+        "Generalist, a robotics startup, is now valued at $3 billion after raising additional capital led by 8VC, according to two people with knowledge of the funding."
       ],
       "sections": [
         {
@@ -4221,18 +4166,16 @@
           "title": "公开页面要点",
           "bullets": [
             "Disrupt 2026: OpenAI, Anthropic, Replit, and more take over 6 industry stages.",
-            "25% off tickets now Generalist, a robotics startup, is now valued at $3 billion after raising additional capital led by 8VC, according to two people with knowledge of the funding.",
-            "The fresh capital totals nearly $200 million according to a regulatory filing.",
-            "That additional capital is an extension of a $400 million Series B led by Radical Ventures that the company announced in June at a $2 billion valuation, the people said.",
-            "The new capital brings the round’s total funding to $600 million."
+            "25% off tickets now Disrupt ticket savings of up to $200 + 50% off a second ends Sept 25, 11:59 p.m.",
+            "Generalist, a robotics startup, is now valued at $3 billion after raising additional capital led by 8VC, according to two people with knowledge of the funding."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
             "Disrupt 2026: OpenAI, Anthropic, Replit, and more take over 6 industry stages. 25% off tickets now",
-            "Generalist, a robotics startup, is now valued at $3 billion after raising additional capital led by 8VC, according to two people with knowledge of the funding.",
-            "The fresh capital totals nearly $200 million according to a regulatory filing. That additional capital is an extension of a $400 million Series B led by Radical Ventures that the company announced in June at a $2 billion valuation, the people said. The new capital brings the round’s total funding to $600 million."
+            "Disrupt ticket savings of up to $200 + 50% off a second ends Sept 25, 11:59 p.m. PT. REGISTER HERE.",
+            "Generalist, a robotics startup, is now valued at $3 billion after raising additional capital led by 8VC, according to two people with knowledge of the funding."
           ]
         }
       ],
@@ -4280,6 +4223,54 @@
       "reading_minutes": 1
     },
     {
+      "id": "f350044a01f0d853",
+      "kind": "social",
+      "title": "Elon Musk (@elonmusk) on X",
+      "source": "x.com",
+      "source_url": "https://x.com/elonmusk/status/2102187423098642792",
+      "published_at": "2026-09-22T00:05:13Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "Grok 4.7",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/elonmusk/status/2102187423098642792",
+      "key_points": [
+        "Elon Musk @elonmusk Grok 4.7 Artificial Analysis @ArtificialAnlys 5h Grok 4.7 is behind only Anthropic models on AA-Briefcase, ranking just behind Opus 5 at ~50% of its Cost per Task Grok 4.7’s improvements over Grok 4.6 are clear in AA-Briefcase-Lite, our public due diligence scenario where models are tasked with building market models and Show more 12:05…",
+        "48 56 904 324K Agentic Joe @agentic_joe 4h Love you to death @ elonmusk , but Grok 4.7 is benchmaxed.",
+        "The real power users (including myself) are catching on to these ridiculous benchmarks that are nothing more than bullshit and hype."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Grok 4.7"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Elon Musk @elonmusk Grok 4.7 Artificial Analysis @ArtificialAnlys 5h Grok 4.7 is behind only Anthropic models on AA-Briefcase, ranking just behind Opus 5 at ~50% of its Cost per Task Grok 4.7’s improvements over Grok 4.6 are clear in AA-Briefcase-Lite, our public due diligence scenario where models are tasked with building market models and Show more 12:05…",
+            "48 56 904 324K Agentic Joe @agentic_joe 4h Love you to death @ elonmusk , but Grok 4.7 is benchmaxed.",
+            "The real power users (including myself) are catching on to these ridiculous benchmarks that are nothing more than bullshit and hype."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Elon Musk @elonmusk Grok 4.7 Artificial Analysis @ArtificialAnlys 5h Grok 4.7 is behind only Anthropic models on AA-Briefcase, ranking just behind Opus 5 at ~50% of its Cost per Task Grok 4.7’s improvements over Grok 4.6 are clear in AA-Briefcase-Lite, our public due diligence scenario where models are tasked with building market models and Show more 12:05 AM · Sep 22, 2026 · 1.6M Views 511 492 3.6K 143",
+            "tetsuo @tetsuoai 4h I'm using it right now to build a game engine in C. It's really good. 48 56 904 324K",
+            "Agentic Joe @agentic_joe 4h Love you to death @ elonmusk , but Grok 4.7 is benchmaxed. So far after testing for the last few hours. I am not impressed. The real power users (including myself) are catching on to these ridiculous benchmarks that are nothing more than bullshit and hype. Real world use cases Show more 5 1 16 765"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "a935d029a859c9ec",
       "kind": "social",
       "title": "@willdepue I see it as a point on the LLM pareto optimal curve in a regime that had a large revealed latent demand (no thinking, single token, low latency acceptable intelligence) that was under-invested into because of a race to higher intelligence.",
@@ -4299,7 +4290,7 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://x.com/karpathy/status/2102124533729955960",
       "key_points": [
-        "7:55 PM · Sep 21, 2026 · 38K Views 51 29 862 165 Diogo Almeida @CompleteSkeptic 1h I feel like that's a very pretraining-centric way of thinking about it - vs how do we trade-off intelligence for a use case (think about the conflict between RLHF and RLVR even in string land) 4 74 4.3K"
+        "7:55 PM · Sep 21, 2026 · 126.5K Views 86 92 2.1K 457 Diogo Almeida @CompleteSkeptic 8h I feel like that's a very pretraining-centric way of thinking about it - vs how do we trade-off intelligence for a use case (think about the conflict between RLHF and RLVR even in string land) 8 3 188 12K"
       ],
       "sections": [
         {
@@ -4309,15 +4300,65 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "7:55 PM · Sep 21, 2026 · 38K Views 51 29 862 165 Diogo Almeida @CompleteSkeptic 1h I feel like that's a very pretraining-centric way of thinking about it - vs how do we trade-off intelligence for a use case (think about the conflict between RLHF and RLVR even in string land) 4 74 4.3K"
+            "7:55 PM · Sep 21, 2026 · 126.5K Views 86 92 2.1K 457 Diogo Almeida @CompleteSkeptic 8h I feel like that's a very pretraining-centric way of thinking about it - vs how do we trade-off intelligence for a use case (think about the conflict between RLHF and RLVR even in string land) 8 3 188 12K"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "will depue @willdepue 5h i've been surprised at the response to Jev, but it makes sense in retrospect. sure it's just a classifier but it's a zero shot classifier with frontier-ish intelligence. i'm surprised someone hadn't built it before. i wonder what other old ML ideas are also worth rescuing 60 35 1.1K 95K",
-            "Andrej Karpathy @karpathy I see it as a point on the LLM pareto optimal curve in a regime that had a large revealed latent demand (no thinking, single token, low latency acceptable intelligence) that was under-invested into because of a race to higher intelligence. 7:55 PM · Sep 21, 2026 · 38K Views 51 29 862 165",
-            "Diogo Almeida @CompleteSkeptic 1h I feel like that's a very pretraining-centric way of thinking about it - vs how do we trade-off intelligence for a use case (think about the conflict between RLHF and RLVR even in string land) 4 74 4.3K"
+            "will depue @willdepue 12h i've been surprised at the response to Jev, but it makes sense in retrospect. sure it's just a classifier but it's a zero shot classifier with frontier-ish intelligence. i'm surprised someone hadn't built it before. i wonder what other old ML ideas are also worth rescuing 77 55 1.8K 184K",
+            "Andrej Karpathy @karpathy I see it as a point on the LLM pareto optimal curve in a regime that had a large revealed latent demand (no thinking, single token, low latency acceptable intelligence) that was under-invested into because of a race to higher intelligence. 7:55 PM · Sep 21, 2026 · 126.5K Views 86 92 2.1K 457",
+            "Diogo Almeida @CompleteSkeptic 8h I feel like that's a very pretraining-centric way of thinking about it - vs how do we trade-off intelligence for a use case (think about the conflict between RLHF and RLVR even in string land) 8 3 188 12K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "e0c7d57c93370949",
+      "kind": "social",
+      "title": "Important to use Grok 4.7 with our Build harness for the best results https://t.co/ppqui4HYMm",
+      "source": "x.com",
+      "source_url": "https://x.com/elonmusk/status/2102102621037236699",
+      "published_at": "2026-09-21T18:28:14Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "Important to use Grok 4.7 with our Build harness for the best results https://t.co/ppqui4HYMm x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/elonmusk/status/2102102621037236699",
+      "key_points": [
+        "Elon Musk @elonmusk Important to use Grok 4.7 with our Build harness for the best results X.ai/build eric zakariasson @ericzakariasson 12h grok 4.7 is here, and its our best model so far!",
+        "try it out in cursor, grok build, api or anywhere you get your tokens!",
+        "curious to hear what you think here's grok 4.6 vs 4.7 building age of empires ii 00:00 6:28 PM · Sep 21, 2026 · 3M Views 919 860 6.2K 589 Manifesto 🐂🀄️🐱 @notaxparty 10h hey @ grok give me info about this dog 12 28 64 259 Drew Carson @realdrewcarson 10h why doesn't Grok Build merge with Cursor?",
+        "genuinely curious cause it's kind of confusing."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Important to use Grok 4.7 with our Build harness for the best results https://t.co/ppqui4HYMm x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Elon Musk @elonmusk Important to use Grok 4.7 with our Build harness for the best results X.ai/build eric zakariasson @ericzakariasson 12h grok 4.7 is here, and its our best model so far!",
+            "try it out in cursor, grok build, api or anywhere you get your tokens!",
+            "curious to hear what you think here's grok 4.6 vs 4.7 building age of empires ii 00:00 6:28 PM · Sep 21, 2026 · 3M Views 919 860 6.2K 589 Manifesto 🐂🀄️🐱 @notaxparty 10h hey @ grok give me info about this dog 12 28 64 259 Drew Carson @realdrewcarson 10h why doesn't Grok Build merge with Cursor?",
+            "genuinely curious cause it's kind of confusing."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Elon Musk @elonmusk Important to use Grok 4.7 with our Build harness for the best results X.ai/build eric zakariasson @ericzakariasson 12h grok 4.7 is here, and its our best model so far! try it out in cursor, grok build, api or anywhere you get your tokens! curious to hear what you think here's grok 4.6 vs 4.7 building age of empires ii 00:00 6:28 PM · Sep 21, 2026 · 3M Views 919 860 6.2K 589",
+            "Manifesto 🐂🀄️🐱 @notaxparty 10h hey @ grok give me info about this dog 12 28 64 259",
+            "Drew Carson @realdrewcarson 10h why doesn't Grok Build merge with Cursor? genuinely curious cause it's kind of confusing. 3 2 14 541"
           ]
         }
       ],
@@ -4343,10 +4384,10 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://x.com/elonmusk/status/2102083930107101382",
       "key_points": [
-        "Elon Musk @elonmusk Grok 4.7 works extremely well with our Build harness X.ai/Build akshey @aksheyd 5h Excited to bring 4.7 to you all!",
+        "Elon Musk @elonmusk Grok 4.7 works extremely well with our Build harness X.ai/Build akshey @aksheyd 12h Excited to bring 4.7 to you all!",
         "Numerics aside, it's incredibly capable in Grok Build/Cursor.",
         "We spent a lot of hours on the harness, iterating with some of the greatest engineers in the world.",
-        "5:13 PM · Sep 21, 2026 · 1.7M Views 491 468 4.2K 159 Luke Teller @LukeTeller1998 4h OPTIMUS AI works extremely well with you Mr Musk 00:00 6 12 27 1.1K Martians 🪐 @MartiansOfMars 4h @ elonmusk where did you come up with the name @ grok from?"
+        "5:13 PM · Sep 21, 2026 · 2.5M Views 572 708 5.7K 225 Luke Teller @LukeTeller1998 11h OPTIMUS AI works extremely well with you Mr Musk 00:00 6 12 29 1.6K Martians 🪐 @MartiansOfMars 11h @ elonmusk where did you come up with the name @ grok from?"
       ],
       "sections": [
         {
@@ -4356,18 +4397,18 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Elon Musk @elonmusk Grok 4.7 works extremely well with our Build harness X.ai/Build akshey @aksheyd 5h Excited to bring 4.7 to you all!",
+            "Elon Musk @elonmusk Grok 4.7 works extremely well with our Build harness X.ai/Build akshey @aksheyd 12h Excited to bring 4.7 to you all!",
             "Numerics aside, it's incredibly capable in Grok Build/Cursor.",
             "We spent a lot of hours on the harness, iterating with some of the greatest engineers in the world.",
-            "5:13 PM · Sep 21, 2026 · 1.7M Views 491 468 4.2K 159 Luke Teller @LukeTeller1998 4h OPTIMUS AI works extremely well with you Mr Musk 00:00 6 12 27 1.1K Martians 🪐 @MartiansOfMars 4h @ elonmusk where did you come up with the name @ grok from?"
+            "5:13 PM · Sep 21, 2026 · 2.5M Views 572 708 5.7K 225 Luke Teller @LukeTeller1998 11h OPTIMUS AI works extremely well with you Mr Musk 00:00 6 12 29 1.6K Martians 🪐 @MartiansOfMars 11h @ elonmusk where did you come up with the name @ grok from?"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok 4.7 works extremely well with our Build harness X.ai/Build akshey @aksheyd 5h Excited to bring 4.7 to you all! Numerics aside, it's incredibly capable in Grok Build/Cursor. We spent a lot of hours on the harness, iterating with some of the greatest engineers in the world. Also, the fast mode has INSANE tps. Happy Grok Building :) Lmk what you think! 5:13 PM · Sep 21, 2026 · 1.7M Views 491 468 4.2K 159",
-            "Luke Teller @LukeTeller1998 4h OPTIMUS AI works extremely well with you Mr Musk 00:00 6 12 27 1.1K",
-            "Martians 🪐 @MartiansOfMars 4h @ elonmusk where did you come up with the name @ grok from? 5 10 16 884"
+            "Elon Musk @elonmusk Grok 4.7 works extremely well with our Build harness X.ai/Build akshey @aksheyd 12h Excited to bring 4.7 to you all! Numerics aside, it's incredibly capable in Grok Build/Cursor. We spent a lot of hours on the harness, iterating with some of the greatest engineers in the world. Also, the fast mode has INSANE tps. Happy Grok Building :) Lmk what you think! 5:13 PM · Sep 21, 2026 · 2.5M Views 572 708 5.7K 225",
+            "Luke Teller @LukeTeller1998 11h OPTIMUS AI works extremely well with you Mr Musk 00:00 6 12 29 1.6K",
+            "Martians 🪐 @MartiansOfMars 11h @ elonmusk where did you come up with the name @ grok from? 5 12 18 1K"
           ]
         }
       ],
@@ -4395,8 +4436,8 @@
       "key_points": [
         "Elon Musk @elonmusk Grok 4.7 places @ SpaceXAI as third, after Anthropic & OpenAI, for agentic coding.",
         "When factoring in that Grok is significantly faster & lower cost, it’s a great choice for your everyday workhorse.",
-        "Artificial Analysis @ArtificialAnlys 5h Grok 4.7 scores 46 on the Artificial Analysis Intelligence Index to bring SpaceXAI into the top 4 AI labs.",
-        "Coding Agent Index performance has also improved, overtaking GPT-5.6 Sol Grok 4.7 scores +2 points over Grok 4.6 on the Intelligence Index, with strong performance on Show more 5:06 PM · Sep 21, 2026 · 7.8M Views 866 990 10K 609 Vjekoslav Jug @v_jug 4h So far not impressed, results are mixed bag but it seems it burns way more tokens and is slower.",
+        "Artificial Analysis @ArtificialAnlys 12h Grok 4.7 scores 46 on the Artificial Analysis Intelligence Index to bring SpaceXAI into the top 4 AI labs.",
+        "Coding Agent Index performance has also improved, overtaking GPT-5.6 Sol Grok 4.7 scores +2 points over Grok 4.6 on the Intelligence Index, with strong performance on Show more 5:06 PM · Sep 21, 2026 · 15.5M Views 1K 1.4K 14K 991 Vjekoslav Jug @v_jug 11h So far not impressed, results are mixed bag but it seems it burns way more tokens and is slower.",
         "Not sure how to explain but it looks artificially polished, smoothened."
       ],
       "sections": [
@@ -4409,16 +4450,16 @@
           "bullets": [
             "Elon Musk @elonmusk Grok 4.7 places @ SpaceXAI as third, after Anthropic & OpenAI, for agentic coding.",
             "When factoring in that Grok is significantly faster & lower cost, it’s a great choice for your everyday workhorse.",
-            "Artificial Analysis @ArtificialAnlys 5h Grok 4.7 scores 46 on the Artificial Analysis Intelligence Index to bring SpaceXAI into the top 4 AI labs.",
-            "Coding Agent Index performance has also improved, overtaking GPT-5.6 Sol Grok 4.7 scores +2 points over Grok 4.6 on the Intelligence Index, with strong performance on Show more 5:06 PM · Sep 21, 2026 · 7.8M Views 866 990 10K 609 Vjekoslav Jug @v_jug 4h So far not impressed, results are mixed bag but it seems it burns way more tokens and is slower.",
+            "Artificial Analysis @ArtificialAnlys 12h Grok 4.7 scores 46 on the Artificial Analysis Intelligence Index to bring SpaceXAI into the top 4 AI labs.",
+            "Coding Agent Index performance has also improved, overtaking GPT-5.6 Sol Grok 4.7 scores +2 points over Grok 4.6 on the Intelligence Index, with strong performance on Show more 5:06 PM · Sep 21, 2026 · 15.5M Views 1K 1.4K 14K 991 Vjekoslav Jug @v_jug 11h So far not impressed, results are mixed bag but it seems it burns way more tokens and is slower.",
             "Not sure how to explain but it looks artificially polished, smoothened."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok 4.7 places @ SpaceXAI as third, after Anthropic & OpenAI, for agentic coding. When factoring in that Grok is significantly faster & lower cost, it’s a great choice for your everyday workhorse. Artificial Analysis @ArtificialAnlys 5h Grok 4.7 scores 46 on the Artificial Analysis Intelligence Index to bring SpaceXAI into the top 4 AI labs. Coding Agent Index performance has also improved, overtaking GPT-5.6 Sol Grok 4.7 scores +2 points over Grok 4.6 on the Intelligence Index, with strong performance on Show more 5:06 PM · Sep 21, 2026 · 7.8M Views 866 990 10K 609",
-            "Vjekoslav Jug @v_jug 4h So far not impressed, results are mixed bag but it seems it burns way more tokens and is slower. Not sure how to explain but it looks artificially polished, smoothened. Not what I expected 34 1.4K"
+            "Elon Musk @elonmusk Grok 4.7 places @ SpaceXAI as third, after Anthropic & OpenAI, for agentic coding. When factoring in that Grok is significantly faster & lower cost, it’s a great choice for your everyday workhorse. Artificial Analysis @ArtificialAnlys 12h Grok 4.7 scores 46 on the Artificial Analysis Intelligence Index to bring SpaceXAI into the top 4 AI labs. Coding Agent Index performance has also improved, overtaking GPT-5.6 Sol Grok 4.7 scores +2 points over Grok 4.6 on the Intelligence Index, with strong performance on Show more 5:06 PM · Sep 21, 2026 · 15.5M Views 1K 1.4K 14K 991",
+            "Vjekoslav Jug @v_jug 11h So far not impressed, results are mixed bag but it seems it burns way more tokens and is slower. Not sure how to explain but it looks artificially polished, smoothened. Not what I expected 49 2K"
           ]
         }
       ],
@@ -4444,9 +4485,9 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://x.com/elonmusk/status/2102071804495872374",
       "key_points": [
-        "Elon Musk @elonmusk Grok 4.7 is a strong combination of intelligence, speed & low cost SpaceXAI @SpaceXAI 5h Replying to @SpaceXAI Grok 4.7 works longer on difficult tasks, checks its work more carefully, and comes with our strongest safeguards to date.",
-        "4:25 PM · Sep 21, 2026 · 15.9M Views 1.5K 1.4K 16K 671 tetsuo @tetsuoai 4h Time to lock in a build 🦾 00:00 Made with AI 3 4 53 3.8K X Girls @thesoragirls 5h Grok 4.7 is a huge upgrade!",
-        "X Girls @thesoragirls 16h grok bot killed it ngl 00:00 5 11 44 4.3K"
+        "Elon Musk @elonmusk Grok 4.7 is a strong combination of intelligence, speed & low cost SpaceXAI @SpaceXAI 12h Replying to @SpaceXAI Grok 4.7 works longer on difficult tasks, checks its work more carefully, and comes with our strongest safeguards to date.",
+        "4:25 PM · Sep 21, 2026 · 28.4M Views 2K 2.2K 24K 1K tetsuo @tetsuoai 11h Time to lock in a build 🦾 00:00 Made with AI 3 5 65 5.9K X Girls @thesoragirls 12h Grok 4.7 is a huge upgrade!",
+        "X Girls @thesoragirls 23h grok bot killed it ngl 00:00 7 12 55 6.4K"
       ],
       "sections": [
         {
@@ -4456,114 +4497,17 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Elon Musk @elonmusk Grok 4.7 is a strong combination of intelligence, speed & low cost SpaceXAI @SpaceXAI 5h Replying to @SpaceXAI Grok 4.7 works longer on difficult tasks, checks its work more carefully, and comes with our strongest safeguards to date.",
-            "4:25 PM · Sep 21, 2026 · 15.9M Views 1.5K 1.4K 16K 671 tetsuo @tetsuoai 4h Time to lock in a build 🦾 00:00 Made with AI 3 4 53 3.8K X Girls @thesoragirls 5h Grok 4.7 is a huge upgrade!",
-            "X Girls @thesoragirls 16h grok bot killed it ngl 00:00 5 11 44 4.3K"
+            "Elon Musk @elonmusk Grok 4.7 is a strong combination of intelligence, speed & low cost SpaceXAI @SpaceXAI 12h Replying to @SpaceXAI Grok 4.7 works longer on difficult tasks, checks its work more carefully, and comes with our strongest safeguards to date.",
+            "4:25 PM · Sep 21, 2026 · 28.4M Views 2K 2.2K 24K 1K tetsuo @tetsuoai 11h Time to lock in a build 🦾 00:00 Made with AI 3 5 65 5.9K X Girls @thesoragirls 12h Grok 4.7 is a huge upgrade!",
+            "X Girls @thesoragirls 23h grok bot killed it ngl 00:00 7 12 55 6.4K"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok 4.7 is a strong combination of intelligence, speed & low cost SpaceXAI @SpaceXAI 5h Replying to @SpaceXAI Grok 4.7 works longer on difficult tasks, checks its work more carefully, and comes with our strongest safeguards to date. 4:25 PM · Sep 21, 2026 · 15.9M Views 1.5K 1.4K 16K 671",
-            "tetsuo @tetsuoai 4h Time to lock in a build 🦾 00:00 Made with AI 3 4 53 3.8K",
-            "X Girls @thesoragirls 5h Grok 4.7 is a huge upgrade! X Girls @thesoragirls 16h grok bot killed it ngl 00:00 5 11 44 4.3K"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "5d30a55d561af2b2",
-      "kind": "social",
-      "title": "Elon Musk (@elonmusk) on X",
-      "source": "x.com",
-      "source_url": "https://x.com/elonmusk/status/2101896799699062963",
-      "published_at": "2026-09-21T04:50:23Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Interesting",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/elonmusk/status/2101896799699062963",
-      "key_points": [
-        "Elon Musk @elonmusk Interesting Min Choi @minchoi 18h This is literally my new workflow now: Realtime Research → Grok Bot Planning & Orchestration→ Grok Bot Day-to-day Coding/Debug → Grok Build + Grok 4.6 Write & Run Tests → Grok Build + Grok 4.6 Complex Coding/Debug → GPT-6 Astra Frontend → Fable 5.1 Bookmark this.",
-        "4:50 AM · Sep 21, 2026 · 6.3M Views 854 883 7.8K 1.5K m👽👽nshiller✨🦅🌙 @MoonShiller 17h This Also interesting 😉 00:00 8 5 26 1.6K"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Interesting"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Elon Musk @elonmusk Interesting Min Choi @minchoi 18h This is literally my new workflow now: Realtime Research → Grok Bot Planning & Orchestration→ Grok Bot Day-to-day Coding/Debug → Grok Build + Grok 4.6 Write & Run Tests → Grok Build + Grok 4.6 Complex Coding/Debug → GPT-6 Astra Frontend → Fable 5.1 Bookmark this.",
-            "4:50 AM · Sep 21, 2026 · 6.3M Views 854 883 7.8K 1.5K m👽👽nshiller✨🦅🌙 @MoonShiller 17h This Also interesting 😉 00:00 8 5 26 1.6K"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Elon Musk @elonmusk Interesting Min Choi @minchoi 18h This is literally my new workflow now: Realtime Research → Grok Bot Planning & Orchestration→ Grok Bot Day-to-day Coding/Debug → Grok Build + Grok 4.6 Write & Run Tests → Grok Build + Grok 4.6 Complex Coding/Debug → GPT-6 Astra Frontend → Fable 5.1 Bookmark this. 4:50 AM · Sep 21, 2026 · 6.3M Views 854 883 7.8K 1.5K",
-            "m👽👽nshiller✨🦅🌙 @MoonShiller 17h This Also interesting 😉 00:00 8 5 26 1.6K"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "472b5f3d21703ed3",
-      "kind": "social",
-      "title": "I said \"auto-regressive LLMs, in and of themselves, will not lead human-level AI\" That statement is still totally true. First, the reasoning abilities of current AI systems are based non-auto-regressive search (which is what I have always advocated for). But AFAICT,",
-      "source": "x.com",
-      "source_url": "https://x.com/ylecun/status/2101674561930510740",
-      "published_at": "2026-09-20T14:07:17Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "I said \"auto-regressive LLMs, in and of themselves, will not lead human-level AI\" That statement is still totally true. First, the reasoning abilities of current AI systems are based non-auto-regressive search (which is what I have always advocated for). But AFAICT, x.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/ylecun/status/2101674561930510740",
-      "key_points": [
-        "musedivision @musedivision Sep 20 Lol it’s just because you think LLMs won’t lead to a AGI breakthrough.",
-        "You have not been vindicated on that opinion.",
-        "3 46 24K Yann LeCun @ylecun I said \"auto-regressive LLMs, in and of themselves, will not lead human-level AI\" That statement is still totally true.",
-        "First, the reasoning abilities of current AI systems are based non-auto-regressive search (which is what I have always advocated for).",
-        "But AFAICT, they do it in token space, which is limited and inefficient."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "I said \"auto-regressive LLMs, in and of themselves, will not lead human-level AI\" That statement is still totally true. First, the reasoning abilities of current AI systems are based non-auto-regressive search (which is what I have always advocated for). But AFAICT, x.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "musedivision @musedivision Sep 20 Lol it’s just because you think LLMs won’t lead to a AGI breakthrough.",
-            "You have not been vindicated on that opinion.",
-            "3 46 24K Yann LeCun @ylecun I said \"auto-regressive LLMs, in and of themselves, will not lead human-level AI\" That statement is still totally true.",
-            "First, the reasoning abilities of current AI systems are based non-auto-regressive search (which is what I have always advocated for).",
-            "But AFAICT, they do it in token space, which is limited and inefficient."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "musedivision @musedivision Sep 20 Lol it’s just because you think LLMs won’t lead to a AGI breakthrough. You have not been vindicated on that opinion. 3 46 24K",
-            "Yann LeCun @ylecun I said \"auto-regressive LLMs, in and of themselves, will not lead human-level AI\" That statement is still totally true. First, the reasoning abilities of current AI systems are based non-auto-regressive search (which is what I have always advocated for). But AFAICT, they do it in token space, which is limited and inefficient. I have claimed that human-like reasoning must be a search in continuous representation space. It looks like the industry is moving towards that. Second, the self-improvement methods, as currently practiced, only work for domains where the quality of outputs can be scored without human intervention, such as mathematics, code, and scenarios that can be simulated…",
-            "Jürgen Schmidhuber @SchmidhuberAI Sep 20 What a misleading post. First of all, the so-called \"JEPA\" family of techniques (2022) is actually the 1992 Predictability Maximization family of techniques Jürgen Schmidhuber @SchmidhuberAI Mar 31 Dr. LeCun's heavily promoted Joint Embedding Predictive Architecture (JEPA, 2022) [5] is the heart of his new company. However, the core ideas are not original to LeCun. Instead, JEPA is essentially identical to our 1992 Predictability Maximization system (PMAX) [1][14]. Show more 20 18 235 40K"
+            "Elon Musk @elonmusk Grok 4.7 is a strong combination of intelligence, speed & low cost SpaceXAI @SpaceXAI 12h Replying to @SpaceXAI Grok 4.7 works longer on difficult tasks, checks its work more carefully, and comes with our strongest safeguards to date. 4:25 PM · Sep 21, 2026 · 28.4M Views 2K 2.2K 24K 1K",
+            "tetsuo @tetsuoai 11h Time to lock in a build 🦾 00:00 Made with AI 3 5 65 5.9K",
+            "X Girls @thesoragirls 12h Grok 4.7 is a huge upgrade! X Girls @thesoragirls 23h grok bot killed it ngl 00:00 7 12 55 6.4K"
           ]
         }
       ],
@@ -4741,7 +4685,7 @@
       "id": "aa6bb27ccd6263eb",
       "kind": "article",
       "title": "Senators from both parties question OpenAI on breach of AI startup Hugging Face",
-      "source": "audacy.com",
+      "source": "Audacy",
       "source_url": "https://www.audacy.com/kmox/news/politics/openai-hugging-face-congress-investigation-artificial-intelligence-1f730a59284c718f2e758898748a8069",
       "published_at": "2026-09-10T07:00:00Z",
       "authors": [],
@@ -4976,51 +4920,47 @@
       "reading_minutes": 1
     },
     {
-      "id": "96f38cfa351a27f7",
+      "id": "cc109e49f3a2c768",
       "kind": "article",
-      "title": "The Incredibly Inspiring Startup Story of Dr. Fei-Fei Li and World Labs - Startup Fortune",
-      "source": "Startup Fortune",
-      "source_url": "https://startupfortune.com/the-incredibly-inspiring-startup-story-of-dr-fei-fei-li-and-world-labs/",
-      "published_at": "2026-09-02T07:00:00Z",
+      "title": "Engineering students turn industry challenge into AI startup ‘built by engineers, for engineers’",
+      "source": "University of Colorado Boulder",
+      "source_url": "https://www.colorado.edu/engineering/engineering-students-turn-industry-challenge-ai-startup-built-engineers-engineers",
+      "published_at": "2026-09-01T07:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
-        "Founder Watch",
-        "Embodied AI"
+        "Academic Startup",
+        "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "The Incredibly Inspiring Startup Story of Dr. Fei-Fei Li and World Labs Startup Fortune",
+      "summary": "Engineering students turn industry challenge into AI startup ‘built by engineers, for engineers’ University of Colorado Boulder",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://startupfortune.com/the-incredibly-inspiring-startup-story-of-dr-fei-fei-li-and-world-labs/",
+      "resolved_url": "https://www.colorado.edu/engineering/engineering-students-turn-industry-challenge-ai-startup-built-engineers-engineers",
       "key_points": [
-        "Fei-Fei Li arrived in America as a teenager with under $20 and a family running a dry-cleaning store.",
-        "She built ImageNet, sparked the deep learning era, and is now three years into World Labs, a spatial intelligence company that hit a $1 billion valuation in twelve weeks.",
-        "Fei-Fei Li landed in New Jersey as a teenager with less than $20 and a family that would soon be running a dry-cleaning store to survive.",
-        "Forty years later, she is running a company that hit a billion-dollar valuation in about twelve weeks.",
-        "Neither part of that sentence explains the other on its own, and that's exactly the point."
+        "Yohannes and Woldemichael with Campos Foundation scholars in their 2026 summer celebration where they spoke about the transition from high school to college in STEM fields and entrepreneurship in engineering.",
+        "Sami Yohannes and Caleb Woldemichael are the ultimate go-getters ready to change how engineering firms do business.",
+        "As current juniors at CU Boulder, they’ve co-founded a startup company, YW Holdings, to streamline the slow, manual processes companies depend on to run engineering firms."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "The Incredibly Inspiring Startup Story of Dr. Fei-Fei Li and World Labs Startup Fortune"
+          "body": "Engineering students turn industry challenge into AI startup ‘built by engineers, for engineers’ University of Colorado Boulder"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Fei-Fei Li arrived in America as a teenager with under $20 and a family running a dry-cleaning store.",
-            "She built ImageNet, sparked the deep learning era, and is now three years into World Labs, a spatial intelligence company that hit a $1 billion valuation in twelve weeks.",
-            "Fei-Fei Li landed in New Jersey as a teenager with less than $20 and a family that would soon be running a dry-cleaning store to survive.",
-            "Forty years later, she is running a company that hit a billion-dollar valuation in about twelve weeks.",
-            "Neither part of that sentence explains the other on its own, and that's exactly the point."
+            "Yohannes and Woldemichael with Campos Foundation scholars in their 2026 summer celebration where they spoke about the transition from high school to college in STEM fields and entrepreneurship in engineering.",
+            "Sami Yohannes and Caleb Woldemichael are the ultimate go-getters ready to change how engineering firms do business.",
+            "As current juniors at CU Boulder, they’ve co-founded a startup company, YW Holdings, to streamline the slow, manual processes companies depend on to run engineering firms."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Fei-Fei Li arrived in America as a teenager with under $20 and a family running a dry-cleaning store. She built ImageNet, sparked the deep learning era, and is now three years into World Labs, a spatial intelligence company that hit a $1 billion valuation in twelve weeks.",
-            "Fei-Fei Li landed in New Jersey as a teenager with less than $20 and a family that would soon be running a dry-cleaning store to survive. Forty years later, she is running a company that hit a billion-dollar valuation in about twelve weeks. Neither part of that sentence explains the other on its own, and that's exactly the point.",
-            "Fei-Fei Li immigrated from Beijing to New Jersey as a teenager with under $20 to her name, and her family ran a dry-cleaning store while she studied her way to a full scholarship at Princeton and a PhD from Caltech"
+            "Yohannes and Woldemichael with Campos Foundation scholars in their 2026 summer celebration where they spoke about the transition from high school to college in STEM fields and entrepreneurship in engineering.",
+            "Sami Yohannes and Caleb Woldemichael are the ultimate go-getters ready to change how engineering firms do business.",
+            "As current juniors at CU Boulder, they’ve co-founded a startup company, YW Holdings, to streamline the slow, manual processes companies depend on to run engineering firms."
           ]
         }
       ],
@@ -5342,57 +5282,6 @@
             "At the AI startup Valon, a new policy requires most new hires to learn their jobs the old-fashioned way — without AI.",
             "Andrew Wang, CEO and cofounder, said he instituted it last month after Valon gave employees broad access to AI. When he examined their usage, he said he found employees turning to the priciest models for even simple tasks, a habit he worried was both costly and preventing newer workers from developing a real grasp of their jobs.",
             "\"By doing the basic work, rather than relying on AI, you start to form an understanding,\" Wang, a former Golden Sachs analyst, told Business Insider."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "a73bf3e64b9e2bc7",
-      "kind": "article",
-      "title": "Chelsea Finn: The 100 Most Influential People in AI 2026",
-      "source": "Time Magazine",
-      "source_url": "https://time.com/collection/time100-ai/2026/chelsea-finn/",
-      "published_at": "2026-08-27T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Founder Watch",
-        "Embodied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Chelsea Finn: The 100 Most Influential People in AI 2026 Time Magazine",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://time.com/collection/time100-ai/2026/chelsea-finn/",
-      "key_points": [
-        "Since November 2025, Physical Intelligence, the startup co-founded by Chelsea Finn, has pushed its models from specialist training of robots toward one system that can work across machines and tasks.",
-        "A model released last November, called π*0.6, more than doubled throughput on some of its hardest tasks and halved failure rates, the company says.",
-        "In one test it assembled and labelled 59 boxes used to package chocolates without interruption.",
-        "In April, π0.7 went further , working as well as task-specific models at folding laundry, making espresso, and building boxes while following new instructions in settings it hadn’t been trained on, according to the company.",
-        "The startup raised $600 million in November, and was… “The other co-founders talk to the people, and I talk to the robots,” says Finn, a Stanford professor who has worked on robot learning since 2014."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Chelsea Finn: The 100 Most Influential People in AI 2026 Time Magazine"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Since November 2025, Physical Intelligence, the startup co-founded by Chelsea Finn, has pushed its models from specialist training of robots toward one system that can work across machines and tasks.",
-            "A model released last November, called π*0.6, more than doubled throughput on some of its hardest tasks and halved failure rates, the company says.",
-            "In one test it assembled and labelled 59 boxes used to package chocolates without interruption.",
-            "In April, π0.7 went further , working as well as task-specific models at folding laundry, making espresso, and building boxes while following new instructions in settings it hadn’t been trained on, according to the company.",
-            "The startup raised $600 million in November, and was… “The other co-founders talk to the people, and I talk to the robots,” says Finn, a Stanford professor who has worked on robot learning since 2014."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Since November 2025, Physical Intelligence, the startup co-founded by Chelsea Finn, has pushed its models from specialist training of robots toward one system that can work across machines and tasks. A model released last November, called π*0.6, more than doubled throughput on some of its hardest tasks and halved failure rates, the company says. In one test it assembled and labelled 59 boxes used to package chocolates without interruption. In April, π0.7 went further , working as well as task-specific models at folding laundry, making espresso, and building boxes while following new instructions in settings it hadn’t been trained on, according to the company. The startup raised $600 million in November, and was…",
-            "“The other co-founders talk to the people, and I talk to the robots,” says Finn, a Stanford professor who has worked on robot learning since 2014. Finn has true academic bona fides: her 2017 paper on “meta-learning” (of which Sergey Levine, one of her co-founders, is a supporting author) has been cited more than 20,000 times, and her work has been cited more than 140,000 times.",
-            "Finn’s aim is to make a model able to do “any task in any environment on any robot.” But dexterous demonstrations and early deployments don’t beget broad adoption—at least not yet. Reliability remains a big barrier: Finn says reaching a 99% success rate is “not a solved problem.”"
           ]
         }
       ],
