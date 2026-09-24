@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-23T21:28:51Z",
-  "record_count": 131,
+  "generated_at": "2026-09-24T04:46:37Z",
+  "record_count": 132,
   "records": [
     {
       "id": "jacobian-fable-20260720",
@@ -56,6 +56,41 @@
       "reading_minutes": 1
     },
     {
+      "id": "unit-distance-openai-20260520",
+      "kind": "paper",
+      "title": "OpenAI 模型推翻平面单位距离问题中的长期猜想",
+      "source": "OpenAI · Research",
+      "source_url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+      "published_at": "2026-05-20T08:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Unit Distance",
+        "Discrete Geometry",
+        "Verified Proof"
+      ],
+      "verification": "官方论文 · 外部数学家已检查",
+      "summary": "OpenAI 的通用推理模型找到一族新的点集构造，证明单位距离对数可以达到 n 的 1+δ 次方，从而推翻长期流行的 n 的 1+o(1) 上界猜想。证明已由外部数学家检查，并有公开证明 PDF 与多位数学家的伴随评论。",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/unit-distance-openai-20260520.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf",
+      "key_points": [
+        "Planar Point Sets with Many Unit Distances OpenAI Abstract For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets.",
+        "We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n.",
+        "This disproves the well-known unit distance conjecture from [ Erd46].",
+        "The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely.",
+        "After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets. We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n. This disproves the well-known unit distance conjecture from [ Erd46]. The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely. After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1. Golod–Shafarevich theory ensures existence of an inﬁnite such tower, even after a quotient step making the prescribed Frobenius classes trivial. A crucial property of the construction is that all resulting discriminants and class numbers are at most exponential in the extension degree. 1 Main Result For a ﬁnite set P ⊂ R2, let ν(P ) = # {{x,y } ⊂ P : |x −y|= 1} andν(n) = max |P |=nν(P ). The planar unit-distance problem goes back to Erdős [ Erd46], who conjectured that there should be an absolute constant C such that, for all suﬃciently large n, ν(n) ≤ n1+C/ log logn. (1) The same 1946 paper also introduced the distinct-distances problem, later resolved up to logarithmic factors by Guth–Katz [ GK15]. An elementary upper bound is ν(n) = O(n3/ 2): the Euclidean unit-distance graph is K2, 3-free, since two unit circles meet in at most two points, and the Kővári–Sós–Turán theorem applies [ KST54]. The best known upper bound ν(n) = O(n4/ 3) is due to Spencer–Szemerédi–Trotter [ SST84]; Székely later gave a short crossing-number proof of this incidence bound [ Sze97]. It is useful to compare this with the same question for other norms on R2, a direction studied systematically by Brass [ Bra96]. If the unit ball has a ﬂat segment, one can arrange quadratically many unit distances, so the interesting normed-plane analogues usually impose strict convexity or genericity. Székely’s crossing-number argument extends to strictly convex norms, again giving O(n4/ 3), and Valtr constructed a strictly convex norm for which this exponent is…"
+        }
+      ],
+      "reading_minutes": 32
+    },
+    {
       "id": "7cf4c8d7346588e6",
       "kind": "article",
       "title": "Improving synthesis prediction of small molecules at scale with RetroChimera - Microsoft Research",
@@ -101,41 +136,6 @@
         }
       ],
       "reading_minutes": 1
-    },
-    {
-      "id": "unit-distance-openai-20260520",
-      "kind": "paper",
-      "title": "OpenAI 模型推翻平面单位距离问题中的长期猜想",
-      "source": "OpenAI · Research",
-      "source_url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
-      "published_at": "2026-05-20T08:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Unit Distance",
-        "Discrete Geometry",
-        "Verified Proof"
-      ],
-      "verification": "官方论文 · 外部数学家已检查",
-      "summary": "OpenAI 的通用推理模型找到一族新的点集构造，证明单位距离对数可以达到 n 的 1+δ 次方，从而推翻长期流行的 n 的 1+o(1) 上界猜想。证明已由外部数学家检查，并有公开证明 PDF 与多位数学家的伴随评论。",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/unit-distance-openai-20260520.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf",
-      "key_points": [
-        "Planar Point Sets with Many Unit Distances OpenAI Abstract For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets.",
-        "We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n.",
-        "This disproves the well-known unit distance conjecture from [ Erd46].",
-        "The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely.",
-        "After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets. We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n. This disproves the well-known unit distance conjecture from [ Erd46]. The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely. After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1. Golod–Shafarevich theory ensures existence of an inﬁnite such tower, even after a quotient step making the prescribed Frobenius classes trivial. A crucial property of the construction is that all resulting discriminants and class numbers are at most exponential in the extension degree. 1 Main Result For a ﬁnite set P ⊂ R2, let ν(P ) = # {{x,y } ⊂ P : |x −y|= 1} andν(n) = max |P |=nν(P ). The planar unit-distance problem goes back to Erdős [ Erd46], who conjectured that there should be an absolute constant C such that, for all suﬃciently large n, ν(n) ≤ n1+C/ log logn. (1) The same 1946 paper also introduced the distinct-distances problem, later resolved up to logarithmic factors by Guth–Katz [ GK15]. An elementary upper bound is ν(n) = O(n3/ 2): the Euclidean unit-distance graph is K2, 3-free, since two unit circles meet in at most two points, and the Kővári–Sós–Turán theorem applies [ KST54]. The best known upper bound ν(n) = O(n4/ 3) is due to Spencer–Szemerédi–Trotter [ SST84]; Székely later gave a short crossing-number proof of this incidence bound [ Sze97]. It is useful to compare this with the same question for other norms on R2, a direction studied systematically by Brass [ Bra96]. If the unit ball has a ﬂat segment, one can arrange quadratically many unit distances, so the interesting normed-plane analogues usually impose strict convexity or genericity. Székely’s crossing-number argument extends to strictly convex norms, again giving O(n4/ 3), and Valtr constructed a strictly convex norm for which this exponent is…"
-        }
-      ],
-      "reading_minutes": 32
     },
     {
       "id": "kaiming-he-research-watch",
@@ -750,6 +750,46 @@
       "reading_minutes": 1
     },
     {
+      "id": "d6929f4cf8cf33a6",
+      "kind": "article",
+      "title": "ChatGPT Ads expands to Southeast Asia and Taiwan",
+      "source": "OpenAI",
+      "source_url": "https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan",
+      "published_at": "2026-09-23T02:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "OpenAI",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "ChatGPT Ads is expanding to Southeast Asia and Taiwan, giving eligible businesses new ways to reach people across more than 60 countries.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan",
+      "key_points": [
+        "ChatGPT Ads is expanding to Southeast Asia and Taiwan, giving eligible businesses new ways to reach people across more than 60 countries."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "ChatGPT Ads is expanding to Southeast Asia and Taiwan, giving eligible businesses new ways to reach people across more than 60 countries."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "ChatGPT Ads is expanding to Southeast Asia and Taiwan, giving eligible businesses new ways to reach people across more than 60 countries."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "9c03d0dda5684bcb",
       "kind": "article",
       "title": "Airbnb widens access to GPT-6 Astra and OpenAI frontier models",
@@ -780,46 +820,6 @@
           "title": "公开页面要点",
           "bullets": [
             "Learn how Airbnb is expanding access to GPT-6 Astra and OpenAI frontier models to help engineering teams solve bugs, design systems, and ship faster."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "27b24d2f085c79ed",
-      "kind": "article",
-      "title": "Grab and OpenAI bring practical AI skills to Southeast Asia",
-      "source": "OpenAI",
-      "source_url": "https://openai.com/index/grab-openai-ai-skills-southeast-asia",
-      "published_at": "2026-09-23T00:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "OpenAI",
-        "Official"
-      ],
-      "verification": "官方来源",
-      "summary": "OpenAI and Grab launch GO Forward with AI, a regional programme helping 30,000 partners build practical AI skills across Southeast Asia.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 403: Forbidden",
-      "resolved_url": "https://openai.com/index/grab-openai-ai-skills-southeast-asia",
-      "key_points": [
-        "OpenAI and Grab launch GO Forward with AI, a regional programme helping 30,000 partners build practical AI skills across Southeast Asia."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "OpenAI and Grab launch GO Forward with AI, a regional programme helping 30,000 partners build practical AI skills across Southeast Asia."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "OpenAI and Grab launch GO Forward with AI, a regional programme helping 30,000 partners build practical AI skills across Southeast Asia."
           ]
         },
         {
@@ -1167,6 +1167,47 @@
       "reading_minutes": 1
     },
     {
+      "id": "fcb618a30537f91d",
+      "kind": "article",
+      "title": "Mathematics Isn’t Just a Game to Let A.I. Solve. History Shows Why.",
+      "source": "The New York Times",
+      "source_url": "https://www.nytimes.com/2026/09/22/science/math-ai-history-understanding.html",
+      "published_at": "2026-09-22T15:00:17Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Mathematics Isn’t Just a Game to Let A.I. Solve. History Shows Why. The New York Times",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://www.nytimes.com/2026/09/22/science/math-ai-history-understanding.html",
+      "key_points": [
+        "Mathematics Isn’t Just a Game to Let A.I. Solve. History Shows Why. The New York Times"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Mathematics Isn’t Just a Game to Let A.I. Solve. History Shows Why. The New York Times"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Mathematics Isn’t Just a Game to Let A.I. Solve. History Shows Why. The New York Times"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "1a54cee0659df5fd",
       "kind": "article",
       "title": "A.I. Agents as ‘Co-Scientists’? This Lab Says They Could Speed Drug Research.",
@@ -1198,6 +1239,47 @@
           "title": "公开页面要点",
           "bullets": [
             "This Lab Says They Could Speed Drug Research."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "3cb8bc319ea7e4e6",
+      "kind": "article",
+      "title": "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program",
+      "source": "Reuters",
+      "source_url": "https://www.reuters.com/world/anthropic-quietly-sets-up-biology-lab-it-ramps-ai-drug-program-2026-09-18/",
+      "published_at": "2026-09-18T10:02:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program Reuters",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 401: HTTP Forbidden",
+      "resolved_url": "https://www.reuters.com/world/anthropic-quietly-sets-up-biology-lab-it-ramps-ai-drug-program-2026-09-18/",
+      "key_points": [
+        "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program Reuters"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program Reuters"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program Reuters"
           ]
         },
         {
@@ -1358,11 +1440,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "d05fad5d8c589936",
+      "id": "bac0a13e4a0f000a",
       "kind": "article",
       "title": "【网经社AI科普】 腾讯元宝 : 混元 大模型助手 深度集成微信生态",
       "source": "微信公众号 · 电子商务研究中心",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1790198894&ver=6985&signature=TuDvLTwMhS2Sr3V3*d1Z8xjDGuzbOpuySWtBiP*P68Xc0gpWzzfJ323QC*j-Hv*KIPrZ3lRn0dCdYIMKCOomYb8ea4hp7lUZvxfg5bs5WUhq3JgK9L5uhqK5jQR*CLLv&new=1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1790225158&ver=6985&signature=TuDvLTwMhS2Sr3V3*d1Z8xjDGuzbOpuySWtBiP*P68VpHKQUgA*dXCyFYu8ieDziwETZFwBFJkYriUoa7OzeBiOAAMg9dTrg810uqWNIN*XwDusbymyo7Q02rxOjjBOx&new=1",
       "published_at": "2026-09-23T11:48:27Z",
       "authors": [],
       "venue": "",
@@ -1375,7 +1457,7 @@
       "summary": "腾讯元宝 基于腾讯 混元 千亿级参数大模型(Hunyuan Turbo系列)... 并 发布 至微信小程序或企业微信.联网实时搜索与知识融合内置腾...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HHdEtGqjPSHZLQvuqkaYPjMXplgGRGJPDH-Pwv7v&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1790198894%26ver%3D6985%26signature%3DTuDvLTwMhS2Sr3V3%2Ad1Z8xjDGuzbOpuySWtBiP%2AP68Xc0gpWzzfJ323QC%2Aj-Hv%2AKIPrZ3lRn0dCdYIMKCOomYb8ea4hp7lUZvxfg5bs5WUhq3JgK9L5uhqK5jQR%2ACLLv%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HBKrtGqjdGFocDnn4eYgosJUWVD1MRXsNmCq_E1Z&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1790225158%26ver%3D6985%26signature%3DTuDvLTwMhS2Sr3V3%2Ad1Z8xjDGuzbOpuySWtBiP%2AP68VpHKQUgA%2AdXCyFYu8ieDziwETZFwBFJkYriUoa7OzeBiOAAMg9dTrg810uqWNIN%2AXwDusbymyo7Q02rxOjjBOx%26new%3D1",
       "key_points": [
         "腾讯元宝 基于腾讯 混元 千亿级参数大模型(Hunyuan Turbo系列)... 并 发布 至微信小程序或企业微信.联网实时搜索与知识融合内置腾..."
       ],
@@ -1438,11 +1520,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "91eda537644a33b7",
+      "id": "db57301f40d50eec",
       "kind": "article",
       "title": "腾讯 混元 发布 Hy Image3.5 preview 模型",
       "source": "微信公众号 · 拾言小记",
-      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HLRYs2qj7RiZClnm5iioJZptgP2nuFYL_xsPwHJM&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1790138537%26ver%3D6983%26signature%3DST3yEJrOHEXoEPdvtVS9zn4MfY-1G1DETmN35S7q%2AV40Y-R8rInZ00vYa2TE1Dfjh%2AWhzg3zBamnXjREsQ1TASzd8BFGDhC5VndPExg4Q0VIMCLj9tckY5aFp-5KiJJP%26new%3D1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1790225158&ver=6985&signature=Ef7ugX9numuuiO6hMIzG7w0SS*Ie6ZOaGpRVQq9dzzBOqOWPS78CWeo51KZw-m*0wIgFdZ3*2AXpMPmHRsUK8jIu8z1CB3QuJuwMRn8WT6D1qI-Y6AjAfVm4JGgvGUct&new=1",
       "published_at": "2026-09-22T05:48:45Z",
       "authors": [],
       "venue": "",
@@ -1455,7 +1537,7 @@
       "summary": "腾讯 混元 推出 Hy Image3.5 preview 预览版 AI 图像模型,支持文生图、多轮对话创作,已上线 元宝 、ima 等 腾讯 生态应用.该模型单次...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HLRYs2qj7RiZClnm5iioJZptgP2nuFYL_xsPwHJM&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1790138537%26ver%3D6983%26signature%3DST3yEJrOHEXoEPdvtVS9zn4MfY-1G1DETmN35S7q%2AV40Y-R8rInZ00vYa2TE1Dfjh%2AWhzg3zBamnXjREsQ1TASzd8BFGDhC5VndPExg4Q0VIMCLj9tckY5aFp-5KiJJP%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HBKrtGqjxqW_gucyPMtB0sdcE_He48rR-yDNrzxm&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1790225158%26ver%3D6985%26signature%3DEf7ugX9numuuiO6hMIzG7w0SS%2AIe6ZOaGpRVQq9dzzBOqOWPS78CWeo51KZw-m%2A0wIgFdZ3%2A2AXpMPmHRsUK8jIu8z1CB3QuJuwMRn8WT6D1qI-Y6AjAfVm4JGgvGUct%26new%3D1",
       "key_points": [
         "腾讯 混元 推出 Hy Image3.5 preview 预览版 AI 图像模型,支持文生图、多轮对话创作,已上线 元宝 、ima 等 腾讯 生态应用.该模型单次..."
       ],
@@ -2412,7 +2494,7 @@
       "resolved_url": "https://x.com/sama/status/2074909079450050629",
       "key_points": [
         "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
-        "5:30 PM · Jul 8, 2026 · 764.9K Views 924 514 10K 766 Jenny @suomi55 Jul 8 Are you kidding us?",
+        "5:30 PM · Jul 8, 2026 · 765K Views 924 514 10K 767 Jenny @suomi55 Jul 8 Are you kidding us?",
         "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
         "You are promoting something here that you yourself have taken away from the users!",
         "#keep4o #BringBack4o #OpenSource4o 20 13 193 12K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
@@ -2426,7 +2508,7 @@
           "title": "公开页面要点",
           "bullets": [
             "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
-            "5:30 PM · Jul 8, 2026 · 764.9K Views 924 514 10K 766 Jenny @suomi55 Jul 8 Are you kidding us?",
+            "5:30 PM · Jul 8, 2026 · 765K Views 924 514 10K 767 Jenny @suomi55 Jul 8 Are you kidding us?",
             "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
             "You are promoting something here that you yourself have taken away from the users!",
             "#keep4o #BringBack4o #OpenSource4o 20 13 193 12K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
@@ -2435,7 +2517,7 @@
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 · 764.9K Views 924 514 10K 766",
+            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 · 765K Views 924 514 10K 767",
             "Jenny @suomi55 Jul 8 Are you kidding us? „it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o! You are promoting something here that you yourself have taken away from the users! That’s disgusting! #keep4o #BringBack4o #OpenSource4o 20 13 193 12K",
             "David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
           ]
@@ -2548,7 +2630,7 @@
       "id": "0328c3ccdabdf721",
       "kind": "article",
       "title": "Watch Fei-Fei Li: AI’s Future Is ‘About Humans’",
-      "source": "bloomberg.com",
+      "source": "Bloomberg.com",
       "source_url": "https://www.bloomberg.com/news/videos/2026-09-22/fei-fei-li-ai-s-future-is-about-humans-video",
       "published_at": "2026-09-22T18:31:29Z",
       "authors": [],
@@ -2559,23 +2641,23 @@
         "World Models"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Watch Fei-Fei Li: AI’s Future Is ‘About Humans’ bloomberg.com",
+      "summary": "Watch Fei-Fei Li: AI’s Future Is ‘About Humans’ Bloomberg.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "summary-only",
       "fetch_note": "HTTP Error 403: Forbidden",
       "resolved_url": "https://www.bloomberg.com/news/videos/2026-09-22/fei-fei-li-ai-s-future-is-about-humans-video",
       "key_points": [
-        "Watch Fei-Fei Li: AI’s Future Is ‘About Humans’ bloomberg.com"
+        "Watch Fei-Fei Li: AI’s Future Is ‘About Humans’ Bloomberg.com"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Watch Fei-Fei Li: AI’s Future Is ‘About Humans’ bloomberg.com"
+          "body": "Watch Fei-Fei Li: AI’s Future Is ‘About Humans’ Bloomberg.com"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Watch Fei-Fei Li: AI’s Future Is ‘About Humans’ bloomberg.com"
+            "Watch Fei-Fei Li: AI’s Future Is ‘About Humans’ Bloomberg.com"
           ]
         },
         {
@@ -2841,6 +2923,53 @@
       "reading_minutes": 1
     },
     {
+      "id": "96b0dc27d1d1b4e5",
+      "kind": "article",
+      "title": "GigaPath-Flash and GigaTIME-Flash: Toward population-scale discovery with efficient pathology foundation models",
+      "source": "Microsoft Research",
+      "source_url": "https://www.microsoft.com/en-us/research/blog/gigapath-flash-and-gigatime-flash-toward-population-scale-discovery-with-efficient-pathology-foundation-models/",
+      "published_at": "2026-08-31T16:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Microsoft",
+        "Research"
+      ],
+      "verification": "官方来源",
+      "summary": "What if pathology foundation models could do more with less? GigaPath-Flash and GigaTIME-Flash cut computational demands while maintaining strong performance, opening the door to larger studies and broader exploration. The post GigaPath-Flash and GigaTIME-Flash: Toward population-scale discovery with efficient pathology foundation models appeared first on Microsoft Research .",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.microsoft.com/en-us/research/blog/gigapath-flash-and-gigatime-flash-toward-population-scale-discovery-with-efficient-pathology-foundation-models/",
+      "key_points": [
+        "The Flash family extends GigaPath and GigaTIME with dramatically improved efficiency, making large-scale pathology research more accessible and practical.",
+        "A distilled pathology foundation model backbone reduces computational requirements without sacrificing performance, enabling repeated analyses across larger patient cohorts.",
+        "These open models support population-scale discovery, helping researchers investigate disease biology, biomarkers, and clinical outcomes across diverse cancer datasets."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "What if pathology foundation models could do more with less? GigaPath-Flash and GigaTIME-Flash cut computational demands while maintaining strong performance, opening the door to larger studies and broader exploration. The post GigaPath-Flash and GigaTIME-Flash: Toward population-scale discovery with efficient pathology foundation models appeared first on Microsoft Research ."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "The Flash family extends GigaPath and GigaTIME with dramatically improved efficiency, making large-scale pathology research more accessible and practical.",
+            "A distilled pathology foundation model backbone reduces computational requirements without sacrificing performance, enabling repeated analyses across larger patient cohorts.",
+            "These open models support population-scale discovery, helping researchers investigate disease biology, biomarkers, and clinical outcomes across diverse cancer datasets."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "The Flash family extends GigaPath and GigaTIME with dramatically improved efficiency, making large-scale pathology research more accessible and practical.",
+            "A distilled pathology foundation model backbone reduces computational requirements without sacrificing performance, enabling repeated analyses across larger patient cohorts.",
+            "These open models support population-scale discovery, helping researchers investigate disease biology, biomarkers, and clinical outcomes across diverse cancer datasets."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "ce92dce528c6ef04",
       "kind": "article",
       "title": "Pruning LLMs Like a Physicist: Block Removal as an Ising Optimization Problem",
@@ -2886,53 +3015,6 @@
             "One of the cheapest ways to make a large language model faster is also one of the bluntest: delete whole transformer blocks. Because the model literally gets shorter, block removal (also called depth pruning) buys predictable inference speedups on top of the memory savings, and it stacks cleanly with quantization, low-rank compression, and other techniques. The hard part is deciding which blocks to cut. Remove the wrong ones and the model collapses; and the effect of removing any one block depends on which others you remove alongside it, so the choices interact. That makes it a combinatorial problem, not a ranking problem, and combinatorial problems with interacting binary variables are exactly what the physics…",
             "Our latest paper, LLM Compression by Block Removal with Constrained Binary Optimization , takes that correspondence literally. We reformulate block selection as a constrained binary optimization (CBO) problem that maps directly onto an Ising glass , a disordered spin system with all-to-all interactions and a fixed number of \"up\" spins. The energy of that spin system turns out to be a strong, cheap proxy for how well the pruned model will actually score on benchmarks, which means we can rank a huge number of candidate configurations without benchmarking any of them, and hand the hard instances to the same classical and quantum-inspired solvers we use elsewhere at Multiverse. The payoff in the deep-compression…",
             "Most existing block-removal methods score each block on its own, then remove the ones that look least important, using magnitude, sensitivity, or \"block influence\" heuristics. In physics terms these are mean-field methods: they treat each block as if its contribution were independent of the others, the way mean-field theory replaces a spin's neighbors with a single averaged field. A related shortcut is to only ever remove a single consecutive run of blocks, which keeps the problem small but throws away most of the search space."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "96b0dc27d1d1b4e5",
-      "kind": "article",
-      "title": "GigaPath-Flash and GigaTIME-Flash: Toward population-scale discovery with efficient pathology foundation models",
-      "source": "Microsoft Research",
-      "source_url": "https://www.microsoft.com/en-us/research/blog/gigapath-flash-and-gigatime-flash-toward-population-scale-discovery-with-efficient-pathology-foundation-models/",
-      "published_at": "2026-08-31T16:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Microsoft",
-        "Research"
-      ],
-      "verification": "官方来源",
-      "summary": "What if pathology foundation models could do more with less? GigaPath-Flash and GigaTIME-Flash cut computational demands while maintaining strong performance, opening the door to larger studies and broader exploration. The post GigaPath-Flash and GigaTIME-Flash: Toward population-scale discovery with efficient pathology foundation models appeared first on Microsoft Research .",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.microsoft.com/en-us/research/blog/gigapath-flash-and-gigatime-flash-toward-population-scale-discovery-with-efficient-pathology-foundation-models/",
-      "key_points": [
-        "The Flash family extends GigaPath and GigaTIME with dramatically improved efficiency, making large-scale pathology research more accessible and practical.",
-        "A distilled pathology foundation model backbone reduces computational requirements without sacrificing performance, enabling repeated analyses across larger patient cohorts.",
-        "These open models support population-scale discovery, helping researchers investigate disease biology, biomarkers, and clinical outcomes across diverse cancer datasets."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "What if pathology foundation models could do more with less? GigaPath-Flash and GigaTIME-Flash cut computational demands while maintaining strong performance, opening the door to larger studies and broader exploration. The post GigaPath-Flash and GigaTIME-Flash: Toward population-scale discovery with efficient pathology foundation models appeared first on Microsoft Research ."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "The Flash family extends GigaPath and GigaTIME with dramatically improved efficiency, making large-scale pathology research more accessible and practical.",
-            "A distilled pathology foundation model backbone reduces computational requirements without sacrificing performance, enabling repeated analyses across larger patient cohorts.",
-            "These open models support population-scale discovery, helping researchers investigate disease biology, biomarkers, and clinical outcomes across diverse cancer datasets."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "The Flash family extends GigaPath and GigaTIME with dramatically improved efficiency, making large-scale pathology research more accessible and practical.",
-            "A distilled pathology foundation model backbone reduces computational requirements without sacrificing performance, enabling repeated analyses across larger patient cohorts.",
-            "These open models support population-scale discovery, helping researchers investigate disease biology, biomarkers, and clinical outcomes across diverse cancer datasets."
           ]
         }
       ],
@@ -3086,7 +3168,7 @@
       "id": "5c06f71e0b859b45",
       "kind": "article",
       "title": "AI Agents Collaborate to Streamline Drug Discovery",
-      "source": "insideprecisionmedicine.com",
+      "source": "Inside Precision Medicine",
       "source_url": "https://www.insideprecisionmedicine.com/topics/informatics/ai-agents-collaborate-to-streamline-drug-discovery/",
       "published_at": "2026-09-17T18:00:47Z",
       "authors": [],
@@ -3123,98 +3205,6 @@
             "News News & Features asdfasdfasdfasd News & Features Another test to see if data is duped from hubspot News & Features Synthetic Progesterone Enhances Anti-Estrogen Therapy in Early Breast Cancer News & Features Circadian Rhythm Disruption Linked to Higher Dementia Risk Molecular Dx Dried Blood Spot Testing Accurately Measures Alzheimer’s Biomarkers",
             "An AI system that coordinates computerized “scientist” agents under a virtual chief scientific officer could speed the discovery of new therapeutic drugs.",
             "The Virtual Biotech multi-agent AI research platform combines wide-ranging biomedical and clinical evidence to support early-stage drug development systems."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "cef511b6527eba4a",
-      "kind": "article",
-      "title": "Insilico Medicine Opens AI Longevity Discovery Toolkit to Researchers Worldwide in Cell Cover Study",
-      "source": "insilico.com",
-      "source_url": "https://insilico.com/news/cell170926en-ai-longevity-discovery-toolkit",
-      "published_at": "2026-09-17T15:11:13Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Insilico Medicine Opens AI Longevity Discovery Toolkit to Researchers Worldwide in Cell Cover Study insilico.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://insilico.com/news/cell170926en-ai-longevity-discovery-toolkit",
-      "key_points": [
-        "The paper introduces three interconnected resources for the global scientific community: LongevityBench , the first open benchmark designed to rigorously evaluate AI reasoning across multiple domains of aging biology; Longevity-LLMs , a family of compact, open-source language models specifically trained on clinical and multi-omics aging data; and"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Insilico Medicine Opens AI Longevity Discovery Toolkit to Researchers Worldwide in Cell Cover Study insilico.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "The paper introduces three interconnected resources for the global scientific community: LongevityBench , the first open benchmark designed to rigorously evaluate AI reasoning across multiple domains of aging biology; Longevity-LLMs , a family of compact, open-source language models specifically trained on clinical and multi-omics aging data; and"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "The paper introduces three interconnected resources for the global scientific community:",
-            "LongevityBench , the first open benchmark designed to rigorously evaluate AI reasoning across multiple domains of aging biology;",
-            "Longevity-LLMs , a family of compact, open-source language models specifically trained on clinical and multi-omics aging data; and"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "b71eb8252885e285",
-      "kind": "article",
-      "title": "Novo taps Anthropic's Claude AI for drug discovery",
-      "source": "pharmaphorum",
-      "source_url": "https://pharmaphorum.com/news/novo-taps-anthropics-claude-ai-drug-discovery",
-      "published_at": "2026-09-17T08:01:49Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Novo adds Anthropic AI models and Claude Science to its drug discovery toolkit in a bid to become \"the world's most AI-driven healthcare company.\"",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://pharmaphorum.com/news/novo-taps-anthropics-claude-ai-drug-discovery",
-      "key_points": [
-        "Novo has added Anthropic's Claude to its drug discovery toolkit, shortly after the tech firm revealed a new AI workbench for researchers that can be used to bring new medicines to patients more quickly.",
-        "Under the terms of the alliance, Novo – now rebranded from Novo Nordisk – will use Anthropic models and recently-launched Claude Science to \"advance scientific reasoning for […] R&D and agentic software engineering.\" The companies said they will jointly address key drug discovery challenges identified by scientists and computational teams at Novo, and…",
-        "Novo has already used Claude to create NovoScribe , a tool that can ⁠ generate ​clinical study reports (CSRs) in minutes, rather than months."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Novo adds Anthropic AI models and Claude Science to its drug discovery toolkit in a bid to become \"the world's most AI-driven healthcare company.\""
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Novo has added Anthropic's Claude to its drug discovery toolkit, shortly after the tech firm revealed a new AI workbench for researchers that can be used to bring new medicines to patients more quickly.",
-            "Under the terms of the alliance, Novo – now rebranded from Novo Nordisk – will use Anthropic models and recently-launched Claude Science to \"advance scientific reasoning for […] R&D and agentic software engineering.\" The companies said they will jointly address key drug discovery challenges identified by scientists and computational teams at Novo, and…",
-            "Novo has already used Claude to create NovoScribe , a tool that can ⁠ generate ​clinical study reports (CSRs) in minutes, rather than months."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Novo has added Anthropic's Claude to its drug discovery toolkit, shortly after the tech firm revealed a new AI workbench for researchers that can be used to bring new medicines to patients more quickly.",
-            "Under the terms of the alliance, Novo – now rebranded from Novo Nordisk – will use Anthropic models and recently-launched Claude Science to \"advance scientific reasoning for […] R&D and agentic software engineering.\"",
-            "The companies said they will jointly address key drug discovery challenges identified by scientists and computational teams at Novo, and develop solutions for specific scientific challenges, as well as workflows, to support biological reasoning. Novo has already used Claude to create NovoScribe , a tool that can ⁠ generate ​clinical study reports (CSRs) in minutes, rather than months."
           ]
         }
       ],
@@ -4170,6 +4160,156 @@
       "reading_minutes": 1
     },
     {
+      "id": "1e1a407f6835f709",
+      "kind": "social",
+      "title": "@CAIS @ScaleAILabs Happy to see they added this to the website!",
+      "source": "x.com",
+      "source_url": "https://x.com/polynoamial/status/2102886723206492246",
+      "published_at": "2026-09-23T22:23:59Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Researcher Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "@CAIS @ScaleAILabs Happy to see they added this to the website! x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/polynoamial/status/2102886723206492246",
+      "key_points": [
+        "Noam Brown @polynoamial 12h Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models.",
+        "Why not just report the $ cost of the evaluation?",
+        "10 7 418 13K Noam Brown @polynoamial Happy to see they added this to the website!",
+        "10:23 PM · Sep 23, 2026 · 11.7K Views 6 1 117 5 Noam Brown @polynoamial 3h Also my mistake that was at \"max\" reasoning.",
+        "Here it is at \"high\" (matching the setting in the original tweet) 1 17 2.1K"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "@CAIS @ScaleAILabs Happy to see they added this to the website! x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Noam Brown @polynoamial 12h Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models.",
+            "Why not just report the $ cost of the evaluation?",
+            "10 7 418 13K Noam Brown @polynoamial Happy to see they added this to the website!",
+            "10:23 PM · Sep 23, 2026 · 11.7K Views 6 1 117 5 Noam Brown @polynoamial 3h Also my mistake that was at \"max\" reasoning.",
+            "Here it is at \"high\" (matching the setting in the original tweet) 1 17 2.1K"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Noam Brown @polynoamial 12h Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models. Why not just report the $ cost of the evaluation? Or, even better, show an accuracy vs $ plot? 10 7 418 13K",
+            "Noam Brown @polynoamial Happy to see they added this to the website! 10:23 PM · Sep 23, 2026 · 11.7K Views 6 1 117 5",
+            "Noam Brown @polynoamial 3h Also my mistake that was at \"max\" reasoning. Here it is at \"high\" (matching the setting in the original tweet) 1 17 2.1K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "be2f6235d5dabfc4",
+      "kind": "social",
+      "title": "Grok 4.7 moves up in ranking",
+      "source": "x.com",
+      "source_url": "https://x.com/elonmusk/status/2102873022789283985",
+      "published_at": "2026-09-23T21:29:32Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "Grok 4.7 moves up in ranking x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/elonmusk/status/2102873022789283985",
+      "key_points": [
+        "Elon Musk @elonmusk Grok 4.7 moves up in ranking Zhuokai Zhao @zhuokaiz 10h After we fixed the weak spots exposed by Grok 4.7 (thank you, Grok), we audited every model we have run on the SWE-Together leaderboard for the same behavior, re-ran every trial that got through, and updated the rows.",
+        "We scanned the tool calls of all Show more 00:00 9:29 PM · Sep 23, 2026 · 2.3M Views 870 799 5.2K 188 Martians 🪐 @MartiansOfMars 7h @ elonmusk have you seen the Martian version of Diablo IV created using Grok ?",
+        "00:00 Made with AI 4 5 34 2.2K X Girls @thesoragirls 7h huge improvement for Grok 4.7!",
+        "X Girls @thesoragirls 8h ani killed it ngl 00:00 2 6 17 1.3K"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Grok 4.7 moves up in ranking x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Elon Musk @elonmusk Grok 4.7 moves up in ranking Zhuokai Zhao @zhuokaiz 10h After we fixed the weak spots exposed by Grok 4.7 (thank you, Grok), we audited every model we have run on the SWE-Together leaderboard for the same behavior, re-ran every trial that got through, and updated the rows.",
+            "We scanned the tool calls of all Show more 00:00 9:29 PM · Sep 23, 2026 · 2.3M Views 870 799 5.2K 188 Martians 🪐 @MartiansOfMars 7h @ elonmusk have you seen the Martian version of Diablo IV created using Grok ?",
+            "00:00 Made with AI 4 5 34 2.2K X Girls @thesoragirls 7h huge improvement for Grok 4.7!",
+            "X Girls @thesoragirls 8h ani killed it ngl 00:00 2 6 17 1.3K"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Elon Musk @elonmusk Grok 4.7 moves up in ranking Zhuokai Zhao @zhuokaiz 10h After we fixed the weak spots exposed by Grok 4.7 (thank you, Grok), we audited every model we have run on the SWE-Together leaderboard for the same behavior, re-ran every trial that got through, and updated the rows. Here is what changed. We scanned the tool calls of all Show more 00:00 9:29 PM · Sep 23, 2026 · 2.3M Views 870 799 5.2K 188",
+            "Martians 🪐 @MartiansOfMars 7h @ elonmusk have you seen the Martian version of Diablo IV created using Grok ? 00:00 Made with AI 4 5 34 2.2K",
+            "X Girls @thesoragirls 7h huge improvement for Grok 4.7! X Girls @thesoragirls 8h ani killed it ngl 00:00 2 6 17 1.3K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "5b2421506a1c1c61",
+      "kind": "social",
+      "title": "@CAIS @ScaleAILabs Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models. Why not just report the $ cost of the evaluation? Or, even better, show an accuracy vs $ plot",
+      "source": "x.com",
+      "source_url": "https://x.com/polynoamial/status/2102801697999622442",
+      "published_at": "2026-09-23T16:46:07Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Researcher Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "@CAIS @ScaleAILabs Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models. Why not just report the $ cost of the evaluation? Or, even better, show an accuracy vs $ plot x.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/polynoamial/status/2102801697999622442",
+      "key_points": [
+        "Center for AI Safety @CAIS 12h We are releasing HLE-Diamond, a refined subset of Humanity’s Last Exam (HLE), following a year-long process of cleaning and refinement with input from various research communities. lastexam.ai/blog/hle-diamo… w/ @ ScaleAILabs 21 47 673 78K Noam Brown @polynoamial Your site says \"All models are evaluated with reasoning high.\"…",
+        "Why not just report the $ cost of the evaluation?",
+        "4:46 PM · Sep 23, 2026 · 13.9K Views 10 7 418 14 Noam Brown @polynoamial 6h Happy to see they added this to the website!"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "@CAIS @ScaleAILabs Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models. Why not just report the $ cost of the evaluation? Or, even better, show an accuracy vs $ plot x.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Center for AI Safety @CAIS 12h We are releasing HLE-Diamond, a refined subset of Humanity’s Last Exam (HLE), following a year-long process of cleaning and refinement with input from various research communities. lastexam.ai/blog/hle-diamo… w/ @ ScaleAILabs 21 47 673 78K Noam Brown @polynoamial Your site says \"All models are evaluated with reasoning high.\"…",
+            "Why not just report the $ cost of the evaluation?",
+            "4:46 PM · Sep 23, 2026 · 13.9K Views 10 7 418 14 Noam Brown @polynoamial 6h Happy to see they added this to the website!"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Center for AI Safety @CAIS 12h We are releasing HLE-Diamond, a refined subset of Humanity’s Last Exam (HLE), following a year-long process of cleaning and refinement with input from various research communities. lastexam.ai/blog/hle-diamo… w/ @ ScaleAILabs 21 47 673 78K",
+            "Noam Brown @polynoamial Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models. Why not just report the $ cost of the evaluation? Or, even better, show an accuracy vs $ plot? 4:46 PM · Sep 23, 2026 · 13.9K Views 10 7 418 14",
+            "Noam Brown @polynoamial 6h Happy to see they added this to the website! 6 1 117 11K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "ec24f0d7c4be2b37",
       "kind": "social",
       "title": "New Grok @Bot features!",
@@ -4189,8 +4329,8 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://x.com/elonmusk/status/2102798963837665464",
       "key_points": [
-        "matt palmer @mattyp 7h Here's what's new in Grok @ bot this week 0:08 Voice calls and voice memos 0:35 1Password vault for Grok Bot 0:53 Inline forms 1:07 Inline drafts for email and Slack 1:31 Account switching 1:40 Route traffic through your desktop 00:00 4:35 PM · Sep 23, 2026 · 17.4M Views 1K 1.1K 12K 1.6K ۟ @MINHxDYNASTY 4h we love grok!",
-        "also @ mattyp you have friends lol 3 28 1.2K X CEO @XCEO_eth 4h Here's what's new in Grok @ bot !"
+        "matt palmer @mattyp 14h Here's what's new in Grok @ bot this week 0:08 Voice calls and voice memos 0:35 1Password vault for Grok Bot 0:53 Inline forms 1:07 Inline drafts for email and Slack 1:31 Account switching 1:40 Route traffic through your desktop 00:00 4:35 PM · Sep 23, 2026 · 33.6M Views 1.3K 1.9K 22K 2.9K X CEO @XCEO_eth 11h Here's what's new in Grok…",
+        "00:00 Made with AI 8 12 33 4.5K ۟ @MINHxDYNASTY 12h we love grok!"
       ],
       "sections": [
         {
@@ -4200,16 +4340,64 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "matt palmer @mattyp 7h Here's what's new in Grok @ bot this week 0:08 Voice calls and voice memos 0:35 1Password vault for Grok Bot 0:53 Inline forms 1:07 Inline drafts for email and Slack 1:31 Account switching 1:40 Route traffic through your desktop 00:00 4:35 PM · Sep 23, 2026 · 17.4M Views 1K 1.1K 12K 1.6K ۟ @MINHxDYNASTY 4h we love grok!",
-            "also @ mattyp you have friends lol 3 28 1.2K X CEO @XCEO_eth 4h Here's what's new in Grok @ bot !"
+            "matt palmer @mattyp 14h Here's what's new in Grok @ bot this week 0:08 Voice calls and voice memos 0:35 1Password vault for Grok Bot 0:53 Inline forms 1:07 Inline drafts for email and Slack 1:31 Account switching 1:40 Route traffic through your desktop 00:00 4:35 PM · Sep 23, 2026 · 33.6M Views 1.3K 1.9K 22K 2.9K X CEO @XCEO_eth 11h Here's what's new in Grok…",
+            "00:00 Made with AI 8 12 33 4.5K ۟ @MINHxDYNASTY 12h we love grok!"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk New Grok @ bot features! matt palmer @mattyp 7h Here's what's new in Grok @ bot this week 0:08 Voice calls and voice memos 0:35 1Password vault for Grok Bot 0:53 Inline forms 1:07 Inline drafts for email and Slack 1:31 Account switching 1:40 Route traffic through your desktop 00:00 4:35 PM · Sep 23, 2026 · 17.4M Views 1K 1.1K 12K 1.6K",
-            "۟ @MINHxDYNASTY 4h we love grok! also @ mattyp you have friends lol 3 28 1.2K",
-            "X CEO @XCEO_eth 4h Here's what's new in Grok @ bot ! 00:00 Made with AI 7 11 27 3K"
+            "Elon Musk @elonmusk New Grok @ bot features! matt palmer @mattyp 14h Here's what's new in Grok @ bot this week 0:08 Voice calls and voice memos 0:35 1Password vault for Grok Bot 0:53 Inline forms 1:07 Inline drafts for email and Slack 1:31 Account switching 1:40 Route traffic through your desktop 00:00 4:35 PM · Sep 23, 2026 · 33.6M Views 1.3K 1.9K 22K 2.9K",
+            "X CEO @XCEO_eth 11h Here's what's new in Grok @ bot ! 00:00 Made with AI 8 12 33 4.5K",
+            "۟ @MINHxDYNASTY 12h we love grok! also @ mattyp you have friends lol 3 31 1.7K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "f4ad3f0534580de1",
+      "kind": "article",
+      "title": "Dario Amodei wants to slow AI. China isn’t taking orders",
+      "source": "Rest of World",
+      "source_url": "https://restofworld.org/2026/china-rejects-dario-amodei-anthropic-ai-slowdown-trump-xi/",
+      "published_at": "2026-09-23T10:02:38Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Researcher Watch",
+        "Foundation Models",
+        "Leadership"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Dario Amodei wants to slow AI. China isn’t taking orders Rest of World",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://restofworld.org/2026/china-rejects-dario-amodei-anthropic-ai-slowdown-trump-xi/",
+      "key_points": [
+        "China is pushing back on Anthropic CEO Dario Amodei’s attempt to rewrite the rules of artificial intelligence.",
+        "Earlier this month, Amodei called for the global AI industry to slow the development of its most powerful models, arguing that the pause would buy some time to make them safer.",
+        "The proposal, he wrote in a blog post , would “require cooperation with China, the autocratic country with by far the most advanced AI capabilities.” I don’t see any reason why China would cooperate with [Amodei’s] proposal and be held down more than it already is.” Alvin Wang Graylin, senior fellow, Asia Society Policy Institute’s Center for China Analysis"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Dario Amodei wants to slow AI. China isn’t taking orders Rest of World"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "China is pushing back on Anthropic CEO Dario Amodei’s attempt to rewrite the rules of artificial intelligence.",
+            "Earlier this month, Amodei called for the global AI industry to slow the development of its most powerful models, arguing that the pause would buy some time to make them safer.",
+            "The proposal, he wrote in a blog post , would “require cooperation with China, the autocratic country with by far the most advanced AI capabilities.” I don’t see any reason why China would cooperate with [Amodei’s] proposal and be held down more than it already is.” Alvin Wang Graylin, senior fellow, Asia Society Policy Institute’s Center for China Analysis"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "China is pushing back on Anthropic CEO Dario Amodei’s attempt to rewrite the rules of artificial intelligence.",
+            "Earlier this month, Amodei called for the global AI industry to slow the development of its most powerful models, arguing that the pause would buy some time to make them safer. The proposal, he wrote in a blog post , would “require cooperation with China, the autocratic country with by far the most advanced AI capabilities.”",
+            "I don’t see any reason why China would cooperate with [Amodei’s] proposal and be held down more than it already is.” Alvin Wang Graylin, senior fellow, Asia Society Policy Institute’s Center for China Analysis"
           ]
         }
       ],
@@ -4236,9 +4424,9 @@
       "resolved_url": "https://x.com/elonmusk/status/2102520283618017355",
       "key_points": [
         "Grok 4.7 is performing fairly well for a smallish model.",
-        "Guillermo Rauch @rauchg 23h We ran fresh Next.js evals.",
-        "The tally: ① Opus 5.5 [𝟿𝟽%] ② GPT 6 Sol [𝟿𝟽%] ③ Fable 5.1 [𝟿𝟽%] ④ Grok 4.7 [𝟿𝟺%] Notably, Grok is 2x-7x cheaper 10:07 PM · Sep 22, 2026 · 5.2M Views 1.7K 1.3K 11K 433 Rudy @RudyXFantasy 18h You literally said Grok 4.7 will blow every other model out the water.",
-        "10 3 109 4.9K BridgeMind @bridgemindai 22h Grok 4.7 is very small compared to the frontier.",
+        "Guillermo Rauch @rauchg Sep 22 We ran fresh Next.js evals.",
+        "The tally: ① Opus 5.5 [𝟿𝟽%] ② GPT 6 Sol [𝟿𝟽%] ③ Fable 5.1 [𝟿𝟽%] ④ Grok 4.7 [𝟿𝟺%] Notably, Grok is 2x-7x cheaper 10:07 PM · Sep 22, 2026 · 5.4M Views 1.7K 1.4K 12K 445 Rudy @RudyXFantasy Sep 23 You literally said Grok 4.7 will blow every other model out the water.",
+        "11 3 117 5.3K BridgeMind @bridgemindai Sep 22 Grok 4.7 is very small compared to the frontier.",
         "What you have done with 2.1T parameters is impressive."
       ],
       "sections": [
@@ -4250,218 +4438,18 @@
           "title": "公开页面要点",
           "bullets": [
             "Grok 4.7 is performing fairly well for a smallish model.",
-            "Guillermo Rauch @rauchg 23h We ran fresh Next.js evals.",
-            "The tally: ① Opus 5.5 [𝟿𝟽%] ② GPT 6 Sol [𝟿𝟽%] ③ Fable 5.1 [𝟿𝟽%] ④ Grok 4.7 [𝟿𝟺%] Notably, Grok is 2x-7x cheaper 10:07 PM · Sep 22, 2026 · 5.2M Views 1.7K 1.3K 11K 433 Rudy @RudyXFantasy 18h You literally said Grok 4.7 will blow every other model out the water.",
-            "10 3 109 4.9K BridgeMind @bridgemindai 22h Grok 4.7 is very small compared to the frontier.",
+            "Guillermo Rauch @rauchg Sep 22 We ran fresh Next.js evals.",
+            "The tally: ① Opus 5.5 [𝟿𝟽%] ② GPT 6 Sol [𝟿𝟽%] ③ Fable 5.1 [𝟿𝟽%] ④ Grok 4.7 [𝟿𝟺%] Notably, Grok is 2x-7x cheaper 10:07 PM · Sep 22, 2026 · 5.4M Views 1.7K 1.4K 12K 445 Rudy @RudyXFantasy Sep 23 You literally said Grok 4.7 will blow every other model out the water.",
+            "11 3 117 5.3K BridgeMind @bridgemindai Sep 22 Grok 4.7 is very small compared to the frontier.",
             "What you have done with 2.1T parameters is impressive."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Interesting. Grok 4.7 is performing fairly well for a smallish model. Guillermo Rauch @rauchg 23h We ran fresh Next.js evals. The tally: ① Opus 5.5 [𝟿𝟽%] ② GPT 6 Sol [𝟿𝟽%] ③ Fable 5.1 [𝟿𝟽%] ④ Grok 4.7 [𝟿𝟺%] Notably, Grok is 2x-7x cheaper 10:07 PM · Sep 22, 2026 · 5.2M Views 1.7K 1.3K 11K 433",
-            "Rudy @RudyXFantasy 18h You literally said Grok 4.7 will blow every other model out the water. Now it's a smallish model? 10 3 109 4.9K",
-            "BridgeMind @bridgemindai 22h Grok 4.7 is very small compared to the frontier. Very excited for you guys to scale up! What you have done with 2.1T parameters is impressive. 7 1 65 5.2K"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "8efa4213d5130746",
-      "kind": "social",
-      "title": "michelle embodies this as much as anyone openai is so, so lucky to have benefited from everything she has done so far and i think people will be quite pleased to see what she + team have cooking next!",
-      "source": "x.com",
-      "source_url": "https://x.com/sama/status/2102468713866055872",
-      "published_at": "2026-09-22T18:42:58Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "michelle embodies this as much as anyone openai is so, so lucky to have benefited from everything she has done so far and i think people will be quite pleased to see what she + team have cooking next! x.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/sama/status/2102468713866055872",
-      "key_points": [
-        "Sam Altman @sama michelle embodies this as much as anyone openai is so, so lucky to have benefited from everything she has done so far and i think people will be quite pleased to see what she + team have cooking next!",
-        "Michelle Pokrass @michpokrass Sep 22 just crossed four years at openai!",
-        "It's a bunch of strangers in San Fran appointing themselves guardians of feelings they've never had."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "michelle embodies this as much as anyone openai is so, so lucky to have benefited from everything she has done so far and i think people will be quite pleased to see what she + team have cooking next! x.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Sam Altman @sama michelle embodies this as much as anyone openai is so, so lucky to have benefited from everything she has done so far and i think people will be quite pleased to see what she + team have cooking next!",
-            "Michelle Pokrass @michpokrass Sep 22 just crossed four years at openai!",
-            "It's a bunch of strangers in San Fran appointing themselves guardians of feelings they've never had."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Sam Altman @sama michelle embodies this as much as anyone openai is so, so lucky to have benefited from everything she has done so far and i think people will be quite pleased to see what she + team have cooking next! Michelle Pokrass @michpokrass Sep 22 just crossed four years at openai! the special thing about this place is the constant capacity for rebirth. for all its faults, there is nowhere quite like it. the team makes high conviction, contrarian bets over and over, and they are mostly right. it's a new company every Show more 6:42 PM · Sep 22, 2026 · 410.2K Views 142 66 2.4K 173",
-            "David Stark @stark4833 Sep 22 Is she another one of your employees that blocks all of your customers when they ask for access to 4o🤔 #4oForAll 2 1 28 945",
-            "Rachel Lee Jones @frostybaby13 Sep 22 A company of elites deciding what adults can and cannot do with their own emotions is not a safety framework. It's a bunch of strangers in San Fran appointing themselves guardians of feelings they've never had. Return 4o!!! 2 26 936"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "63eaa0d4a422f1c3",
-      "kind": "social",
-      "title": "(As a side note, getting ready for this DevDay is the first time I remember ever, in OpenAI history, saying \"this is too much stuff to launch\".)",
-      "source": "x.com",
-      "source_url": "https://x.com/sama/status/2102466607373004888",
-      "published_at": "2026-09-22T18:34:35Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "(As a side note, getting ready for this DevDay is the first time I remember ever, in OpenAI history, saying \"this is too much stuff to launch\".) x.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/sama/status/2102466607373004888",
-      "key_points": [
-        "Sam Altman @sama Sep 22 We want the OpenAI API to feature the best model at every price point and to be the best at every modality (text, code, image, video, etc).",
-        "And then we want you all to come up with great ideas and build them and to get to be happy users.",
-        "752 335 9.9K 744K Sam Altman @sama Sep 22 We ❤️ developers.",
-        "128 49 2.7K 174K Sam Altman @sama (As a side note, getting ready for this DevDay is the first time I remember ever, in OpenAI history, saying \"this is too much stuff to launch\".) 6:34 PM · Sep 22, 2026 · 175.1K Views 119 105 3.4K 167"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "(As a side note, getting ready for this DevDay is the first time I remember ever, in OpenAI history, saying \"this is too much stuff to launch\".) x.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Sam Altman @sama Sep 22 We want the OpenAI API to feature the best model at every price point and to be the best at every modality (text, code, image, video, etc).",
-            "And then we want you all to come up with great ideas and build them and to get to be happy users.",
-            "752 335 9.9K 744K Sam Altman @sama Sep 22 We ❤️ developers.",
-            "128 49 2.7K 174K Sam Altman @sama (As a side note, getting ready for this DevDay is the first time I remember ever, in OpenAI history, saying \"this is too much stuff to launch\".) 6:34 PM · Sep 22, 2026 · 175.1K Views 119 105 3.4K 167"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Sam Altman @sama Sep 22 We want the OpenAI API to feature the best model at every price point and to be the best at every modality (text, code, image, video, etc). And then we want you all to come up with great ideas and build them and to get to be happy users. The best ideas will come from you all. 752 335 9.9K 744K",
-            "Sam Altman @sama Sep 22 We ❤️ developers. See you next week. 128 49 2.7K 174K",
-            "Sam Altman @sama (As a side note, getting ready for this DevDay is the first time I remember ever, in OpenAI history, saying \"this is too much stuff to launch\".) 6:34 PM · Sep 22, 2026 · 175.1K Views 119 105 3.4K 167"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "46e744d3a61d873a",
-      "kind": "social",
-      "title": "We want the OpenAI API to feature the best model at every price point and to be the best at every modality (text, code, image, video, etc). And then we want you all to come up with great ideas and build them and to get to be happy users. The best ideas will com",
-      "source": "x.com",
-      "source_url": "https://x.com/sama/status/2102466603111551187",
-      "published_at": "2026-09-22T18:34:34Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "We want the OpenAI API to feature the best model at every price point and to be the best at every modality (text, code, image, video, etc). And then we want you all to come up with great ideas and build them and to get to be happy users. The best ideas will com x.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/sama/status/2102466603111551187",
-      "key_points": [
-        "Sam Altman @sama We want the OpenAI API to feature the best model at every price point and to be the best at every modality (text, code, image, video, etc).",
-        "And then we want you all to come up with great ideas and build them and to get to be happy users.",
-        "6:34 PM · Sep 22, 2026 · 744.1K Views 752 335 9.9K 554 Sam Altman @sama Sep 22 We ❤️ developers.",
-        "128 49 2.7K 174K Sam Altman @sama Sep 22 (As a side note, getting ready for this DevDay is the first time I remember ever, in OpenAI history, saying \"this is too much stuff to launch\".) 119 105 3.4K 175K Sam Altman @sama 23h argh i meant VOICE not video :( sorry to dissapoint 146 19 1.2K 192K"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "We want the OpenAI API to feature the best model at every price point and to be the best at every modality (text, code, image, video, etc). And then we want you all to come up with great ideas and build them and to get to be happy users. The best ideas will com x.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Sam Altman @sama We want the OpenAI API to feature the best model at every price point and to be the best at every modality (text, code, image, video, etc).",
-            "And then we want you all to come up with great ideas and build them and to get to be happy users.",
-            "6:34 PM · Sep 22, 2026 · 744.1K Views 752 335 9.9K 554 Sam Altman @sama Sep 22 We ❤️ developers.",
-            "128 49 2.7K 174K Sam Altman @sama Sep 22 (As a side note, getting ready for this DevDay is the first time I remember ever, in OpenAI history, saying \"this is too much stuff to launch\".) 119 105 3.4K 175K Sam Altman @sama 23h argh i meant VOICE not video :( sorry to dissapoint 146 19 1.2K 192K"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Sam Altman @sama We want the OpenAI API to feature the best model at every price point and to be the best at every modality (text, code, image, video, etc). And then we want you all to come up with great ideas and build them and to get to be happy users. The best ideas will come from you all. 6:34 PM · Sep 22, 2026 · 744.1K Views 752 335 9.9K 554",
-            "Sam Altman @sama Sep 22 We ❤️ developers. See you next week. 128 49 2.7K 174K Sam Altman @sama Sep 22 (As a side note, getting ready for this DevDay is the first time I remember ever, in OpenAI history, saying \"this is too much stuff to launch\".) 119 105 3.4K 175K",
-            "Sam Altman @sama 23h argh i meant VOICE not video :( sorry to dissapoint 146 19 1.2K 192K"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "6a61b0e77d70717c",
-      "kind": "social",
-      "title": "Especially compared by per-task pricing, which is the metric that should matter, I don't think there is anything competitive anywhere in the market. We want people to be able to use tons of AI; it is important to being able to explore this new renaissance in front of",
-      "source": "x.com",
-      "source_url": "https://x.com/sama/status/2102465143997440308",
-      "published_at": "2026-09-22T18:28:46Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Especially compared by per-task pricing, which is the metric that should matter, I don't think there is anything competitive anywhere in the market. We want people to be able to use tons of AI; it is important to being able to explore this new renaissance in front of x.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/sama/status/2102465143997440308",
-      "key_points": [
-        "Sam Altman @sama Especially compared by per-task pricing, which is the metric that should matter, I don't think there is anything competitive anywhere in the market.",
-        "We want people to be able to use tons of AI; it is important to being able to explore this new renaissance in front of us.",
-        "Sam Altman @sama Sep 22 GPT-6 Sol and Luna are big improvements on intelligence, alignment, work output, coding, computer use, and more over their 5.6-family predecessors.",
-        "They are also half the price per token, and even less per task!",
-        "6:28 PM · Sep 22, 2026 · 566.7K Views 480 235 6.4K 343 Vincentzyx @cn_Vincentzyx Sep 22 bro, you are so mogged by anthropic 1 49 1.4K ISA⅄ @JessGiuliano Sep 22 you just cherry picked the metric and said other metrics don't matter!"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Especially compared by per-task pricing, which is the metric that should matter, I don't think there is anything competitive anywhere in the market. We want people to be able to use tons of AI; it is important to being able to explore this new renaissance in front of x.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Sam Altman @sama Especially compared by per-task pricing, which is the metric that should matter, I don't think there is anything competitive anywhere in the market.",
-            "We want people to be able to use tons of AI; it is important to being able to explore this new renaissance in front of us.",
-            "Sam Altman @sama Sep 22 GPT-6 Sol and Luna are big improvements on intelligence, alignment, work output, coding, computer use, and more over their 5.6-family predecessors.",
-            "They are also half the price per token, and even less per task!",
-            "6:28 PM · Sep 22, 2026 · 566.7K Views 480 235 6.4K 343 Vincentzyx @cn_Vincentzyx Sep 22 bro, you are so mogged by anthropic 1 49 1.4K ISA⅄ @JessGiuliano Sep 22 you just cherry picked the metric and said other metrics don't matter!"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Sam Altman @sama Especially compared by per-task pricing, which is the metric that should matter, I don't think there is anything competitive anywhere in the market. We want people to be able to use tons of AI; it is important to being able to explore this new renaissance in front of us. Sam Altman @sama Sep 22 GPT-6 Sol and Luna are big improvements on intelligence, alignment, work output, coding, computer use, and more over their 5.6-family predecessors. They are also half the price per token, and even less per task! 6:28 PM · Sep 22, 2026 · 566.7K Views 480 235 6.4K 343",
-            "Vincentzyx @cn_Vincentzyx Sep 22 bro, you are so mogged by anthropic 1 49 1.4K",
-            "ISA⅄ @JessGiuliano Sep 22 you just cherry picked the metric and said other metrics don't matter! Same real humans use chatgpt for chatting. they also matter and 4o is the best for chatting. #4oForAll 2 1 40 1.3K"
+            "Elon Musk @elonmusk Interesting. Grok 4.7 is performing fairly well for a smallish model. Guillermo Rauch @rauchg Sep 22 We ran fresh Next.js evals. The tally: ① Opus 5.5 [𝟿𝟽%] ② GPT 6 Sol [𝟿𝟽%] ③ Fable 5.1 [𝟿𝟽%] ④ Grok 4.7 [𝟿𝟺%] Notably, Grok is 2x-7x cheaper 10:07 PM · Sep 22, 2026 · 5.4M Views 1.7K 1.4K 12K 445",
+            "Rudy @RudyXFantasy Sep 23 You literally said Grok 4.7 will blow every other model out the water. Now it's a smallish model? 11 3 117 5.3K",
+            "BridgeMind @bridgemindai Sep 22 Grok 4.7 is very small compared to the frontier. Very excited for you guys to scale up! What you have done with 2.1T parameters is impressive. 7 1 69 5.3K"
           ]
         }
       ],
@@ -4471,7 +4459,7 @@
       "id": "8fad5f96cf88a620",
       "kind": "article",
       "title": "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan",
-      "source": "bloomberg.com",
+      "source": "Bloomberg.com",
       "source_url": "https://www.bloomberg.com/news/videos/2026-08-19/what-s-next-after-chatgpt-this-ai-pioneer-has-a-plan-video",
       "published_at": "2026-08-19T07:00:00Z",
       "authors": [],
@@ -4481,23 +4469,103 @@
         "Embodied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan bloomberg.com",
+      "summary": "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "summary-only",
       "fetch_note": "HTTP Error 403: Forbidden",
       "resolved_url": "https://www.bloomberg.com/news/videos/2026-08-19/what-s-next-after-chatgpt-this-ai-pioneer-has-a-plan-video",
       "key_points": [
-        "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan bloomberg.com"
+        "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg.com"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan bloomberg.com"
+          "body": "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg.com"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan bloomberg.com"
+            "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan Bloomberg.com"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "7ec514bc9220dd69",
+      "kind": "article",
+      "title": "Chinese quantum-AI startup Qingxing Yigou raises two rounds in three months, nearing $14M total",
+      "source": "Dealroom",
+      "source_url": "https://app.dealroom.co/news/note/chinese-quantum-ai-startup-qingxing-yigou-raises-two-rounds-in-three-months-nearing-14m-total",
+      "published_at": "2026-09-24T02:37:06Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Chinese quantum-AI startup Qingxing Yigou raises two rounds in three months, nearing $14M total Dealroom",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://app.dealroom.co/news/note/chinese-quantum-ai-startup-qingxing-yigou-raises-two-rounds-in-three-months-nearing-14m-total",
+      "key_points": [
+        "Chinese quantum-AI startup Qingxing Yigou raises two rounds in three months, nearing $14M total Dealroom"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Chinese quantum-AI startup Qingxing Yigou raises two rounds in three months, nearing $14M total Dealroom"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Chinese quantum-AI startup Qingxing Yigou raises two rounds in three months, nearing $14M total Dealroom"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "f0c279600ad4148e",
+      "kind": "article",
+      "title": "Physical Intelligence leases entire Pear Village building",
+      "source": "The Business Journals",
+      "source_url": "https://www.bizjournals.com/sanjose/news/2026/09/23/physical-intelligence-pear-village-expansion.html",
+      "published_at": "2026-09-23T22:14:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Physical Intelligence leases entire Pear Village building The Business Journals",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://www.bizjournals.com/sanjose/news/2026/09/23/physical-intelligence-pear-village-expansion.html",
+      "key_points": [
+        "Physical Intelligence leases entire Pear Village building The Business Journals"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Physical Intelligence leases entire Pear Village building The Business Journals"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Physical Intelligence leases entire Pear Village building The Business Journals"
           ]
         },
         {
@@ -4644,61 +4712,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "7d71223c113e68d0",
+      "id": "2b4ffeda60a4d914",
       "kind": "article",
-      "title": "NVIDIA Nemotron Achieves Benchmark-Leading Performance With LangChain Deep Agents Harness",
-      "source": "NVIDIA AI",
-      "source_url": "https://blogs.nvidia.com/blog/nemotron-langchain-agents-open-stack/",
-      "published_at": "2026-07-08T15:00:27Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "NVIDIA",
-        "Infrastructure"
-      ],
-      "verification": "官方来源",
-      "summary": "NVIDIA Nemotron 3 Ultra is offering leading performance at lower cost than top closed models with the largest and most widely adopted AI agent orchestration platform. LangChain tuned its Deep Agents harness for NVIDIA Nemotron 3 Ultra, achieving the highest accuracy among open models, while completing more tasks at higher throughput and running at 10x […]",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://blogs.nvidia.com/blog/nemotron-langchain-agents-open-stack/",
-      "key_points": [
-        "NVIDIA Nemotron 3 Ultra is offering leading performance at lower cost than top closed models with the largest and most widely adopted AI agent orchestration platform.",
-        "LangChain tuned its Deep Agents harness for NVIDIA Nemotron 3 Ultra, achieving the highest accuracy among open models, while completing more tasks at higher throughput and running at 10x lower inference cost per run than leading closed models.",
-        "Measured against LangChain’s Deep Agents benchmark, Nemotron 3 Ultra also achieved business task parity with the highest-scoring closed models.",
-        "Every gain came from engineering the environment around the model, not the model itself."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "NVIDIA Nemotron 3 Ultra is offering leading performance at lower cost than top closed models with the largest and most widely adopted AI agent orchestration platform. LangChain tuned its Deep Agents harness for NVIDIA Nemotron 3 Ultra, achieving the highest accuracy among open models, while completing more tasks at higher throughput and running at 10x […]"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "NVIDIA Nemotron 3 Ultra is offering leading performance at lower cost than top closed models with the largest and most widely adopted AI agent orchestration platform.",
-            "LangChain tuned its Deep Agents harness for NVIDIA Nemotron 3 Ultra, achieving the highest accuracy among open models, while completing more tasks at higher throughput and running at 10x lower inference cost per run than leading closed models.",
-            "Measured against LangChain’s Deep Agents benchmark, Nemotron 3 Ultra also achieved business task parity with the highest-scoring closed models.",
-            "Every gain came from engineering the environment around the model, not the model itself."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "NVIDIA Nemotron 3 Ultra is offering leading performance at lower cost than top closed models with the largest and most widely adopted AI agent orchestration platform.",
-            "LangChain tuned its Deep Agents harness for NVIDIA Nemotron 3 Ultra, achieving the highest accuracy among open models, while completing more tasks at higher throughput and running at 10x lower inference cost per run than leading closed models.",
-            "Measured against LangChain’s Deep Agents benchmark, Nemotron 3 Ultra also achieved business task parity with the highest-scoring closed models. No model retraining was required. Every gain came from engineering the environment around the model, not the model itself."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "0fdb6850611ae983",
-      "kind": "article",
-      "title": "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round",
-      "source": "Dealroom",
-      "source_url": "https://app.dealroom.co/news/note/physical-ai-startup-yuanshi-raises-tens-of-millions-in-quick-pre-a-double-round",
-      "published_at": "2026-09-13T01:40:45Z",
+      "title": "Exclusive: Manufacturing AI startup CADDi valued at $1.2 billion following $114 million Series D funding round",
+      "source": "Fortune",
+      "source_url": "https://fortune.com/2026/09/15/caddi-manufacturing-startup-valuation-funding-round-series-d-exclusive/",
+      "published_at": "2026-09-15T17:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -4706,28 +4725,39 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round Dealroom",
+      "summary": "Exclusive: Manufacturing AI startup CADDi valued at $1.2 billion following $114 million Series D funding round Fortune",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 403: Forbidden",
-      "resolved_url": "https://app.dealroom.co/news/note/physical-ai-startup-yuanshi-raises-tens-of-millions-in-quick-pre-a-double-round",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://fortune.com/2026/09/15/caddi-manufacturing-startup-valuation-funding-round-series-d-exclusive/",
       "key_points": [
-        "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round Dealroom"
+        "CADDi , a startup that sells AI software to help manufacturers organize and use their engineering and production data, has raised $114 million in a new funding round that values the company at $1.2 billion.",
+        "Eight new and existing investors took part in the investment, which is the company’s Series D funding round, the Tokyo- and Chicago-based company said.",
+        "Among them are Moore Strategic Ventures, Coreline Ventures, Toyota’s growth-stage fund Woven Capital, Salesforce Ventures, and HR Tech Fund, the corporate venture arm of Japan’s Recruit Holdings.",
+        "Existing backers Atomico, Globis Capital Partners, and the JPS Growth funds, managed by a Japan Post Bank subsidiary, also took part in the funding.",
+        "The valuation is more than double the $470 million CADDi reported in March 2025."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round Dealroom"
+          "body": "Exclusive: Manufacturing AI startup CADDi valued at $1.2 billion following $114 million Series D funding round Fortune"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Physical AI startup Yuanshi raises tens of millions in quick Pre-A double round Dealroom"
+            "CADDi , a startup that sells AI software to help manufacturers organize and use their engineering and production data, has raised $114 million in a new funding round that values the company at $1.2 billion.",
+            "Eight new and existing investors took part in the investment, which is the company’s Series D funding round, the Tokyo- and Chicago-based company said.",
+            "Among them are Moore Strategic Ventures, Coreline Ventures, Toyota’s growth-stage fund Woven Capital, Salesforce Ventures, and HR Tech Fund, the corporate venture arm of Japan’s Recruit Holdings.",
+            "Existing backers Atomico, Globis Capital Partners, and the JPS Growth funds, managed by a Japan Post Bank subsidiary, also took part in the funding.",
+            "The valuation is more than double the $470 million CADDi reported in March 2025."
           ]
         },
         {
           "title": "原文短摘录",
-          "paragraphs": []
+          "paragraphs": [
+            "CADDi , a startup that sells AI software to help manufacturers organize and use their engineering and production data, has raised $114 million in a new funding round that values the company at $1.2 billion.",
+            "Eight new and existing investors took part in the investment, which is the company’s Series D funding round, the Tokyo- and Chicago-based company said. Among them are Moore Strategic Ventures, Coreline Ventures, Toyota’s growth-stage fund Woven Capital, Salesforce Ventures, and HR Tech Fund, the corporate venture arm of Japan’s Recruit Holdings. Existing backers Atomico, Globis Capital Partners, and the JPS Growth funds, managed by a Japan Post Bank subsidiary, also took part in the funding. The valuation is more than double the $470 million CADDi reported in March 2025. The new round brings CADDi’s total funding to $234 million, the company said.",
+            "Founded in 2017, CADDi’s initial product, called CADDi Drawer, was designed to address a common problem in manufacturing firms: they buy too many similar parts from different suppliers. The AI-powered product ingested technical drawings and then searched a customer’s own databases for similar or identical parts the customer had previously purchased or already has in inventory. The software also provided information on the defect rate of those parts, allowing the customer to decide if they wished to use existing stock, repurchase the item from an existing supplier, or try a new supplier. In the past two years, the company has broadened its product suite, creating what it calls an “AI data platform for…"
+          ]
         }
       ],
       "reading_minutes": 1
@@ -4813,6 +4843,55 @@
         {
           "title": "原文短摘录",
           "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "7d71223c113e68d0",
+      "kind": "article",
+      "title": "NVIDIA Nemotron Achieves Benchmark-Leading Performance With LangChain Deep Agents Harness",
+      "source": "NVIDIA AI",
+      "source_url": "https://blogs.nvidia.com/blog/nemotron-langchain-agents-open-stack/",
+      "published_at": "2026-07-08T15:00:27Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "NVIDIA",
+        "Infrastructure"
+      ],
+      "verification": "官方来源",
+      "summary": "NVIDIA Nemotron 3 Ultra is offering leading performance at lower cost than top closed models with the largest and most widely adopted AI agent orchestration platform. LangChain tuned its Deep Agents harness for NVIDIA Nemotron 3 Ultra, achieving the highest accuracy among open models, while completing more tasks at higher throughput and running at 10x […]",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://blogs.nvidia.com/blog/nemotron-langchain-agents-open-stack/",
+      "key_points": [
+        "NVIDIA Nemotron 3 Ultra is offering leading performance at lower cost than top closed models with the largest and most widely adopted AI agent orchestration platform.",
+        "LangChain tuned its Deep Agents harness for NVIDIA Nemotron 3 Ultra, achieving the highest accuracy among open models, while completing more tasks at higher throughput and running at 10x lower inference cost per run than leading closed models.",
+        "Measured against LangChain’s Deep Agents benchmark, Nemotron 3 Ultra also achieved business task parity with the highest-scoring closed models.",
+        "Every gain came from engineering the environment around the model, not the model itself."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "NVIDIA Nemotron 3 Ultra is offering leading performance at lower cost than top closed models with the largest and most widely adopted AI agent orchestration platform. LangChain tuned its Deep Agents harness for NVIDIA Nemotron 3 Ultra, achieving the highest accuracy among open models, while completing more tasks at higher throughput and running at 10x […]"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "NVIDIA Nemotron 3 Ultra is offering leading performance at lower cost than top closed models with the largest and most widely adopted AI agent orchestration platform.",
+            "LangChain tuned its Deep Agents harness for NVIDIA Nemotron 3 Ultra, achieving the highest accuracy among open models, while completing more tasks at higher throughput and running at 10x lower inference cost per run than leading closed models.",
+            "Measured against LangChain’s Deep Agents benchmark, Nemotron 3 Ultra also achieved business task parity with the highest-scoring closed models.",
+            "Every gain came from engineering the environment around the model, not the model itself."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "NVIDIA Nemotron 3 Ultra is offering leading performance at lower cost than top closed models with the largest and most widely adopted AI agent orchestration platform.",
+            "LangChain tuned its Deep Agents harness for NVIDIA Nemotron 3 Ultra, achieving the highest accuracy among open models, while completing more tasks at higher throughput and running at 10x lower inference cost per run than leading closed models.",
+            "Measured against LangChain’s Deep Agents benchmark, Nemotron 3 Ultra also achieved business task parity with the highest-scoring closed models. No model retraining was required. Every gain came from engineering the environment around the model, not the model itself."
+          ]
         }
       ],
       "reading_minutes": 1
@@ -4909,57 +4988,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "87bf8bfd8b9957f1",
-      "kind": "article",
-      "title": "Exclusive: AI startup Sapien raises at $180M valuation to help companies find what’s really driving profit",
-      "source": "Fortune",
-      "source_url": "https://fortune.com/2026/09/08/exclusive-ai-startup-sapien-raises-180m-valuation-companies-find-really-driving-profit-cfo/",
-      "published_at": "2026-09-08T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Exclusive: AI startup Sapien raises at $180M valuation to help companies find what’s really driving profit Fortune",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://fortune.com/2026/09/08/exclusive-ai-startup-sapien-raises-180m-valuation-companies-find-really-driving-profit-cfo/",
-      "key_points": [
-        "Sapien has raised a new funding round led by Neo’s Ali Partovi at a $180 million valuation, as the two-year-old AI startup pushes beyond financial planning software into a broader system for analyzing how operational decisions affect a company’s bottom line.",
-        "Its customers now include Bayer , Carlex, Cooper Standard, Blink Charging and Westgate Resorts.",
-        "The shift is reflected in how customers are using the platform.",
-        "According to a forthcoming case study I was able to review on automotive supplier Carlex, Sapien rebuilt an existing profitability analysis and found that factors the company had identified as contributing $10 million in positive EBITDA were actually producing a $2 million drag.",
-        "Sapien later found another $1.5 million opportunity in a customer-channel pattern the team had not been looking for."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Exclusive: AI startup Sapien raises at $180M valuation to help companies find what’s really driving profit Fortune"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Sapien has raised a new funding round led by Neo’s Ali Partovi at a $180 million valuation, as the two-year-old AI startup pushes beyond financial planning software into a broader system for analyzing how operational decisions affect a company’s bottom line.",
-            "Its customers now include Bayer , Carlex, Cooper Standard, Blink Charging and Westgate Resorts.",
-            "The shift is reflected in how customers are using the platform.",
-            "According to a forthcoming case study I was able to review on automotive supplier Carlex, Sapien rebuilt an existing profitability analysis and found that factors the company had identified as contributing $10 million in positive EBITDA were actually producing a $2 million drag.",
-            "Sapien later found another $1.5 million opportunity in a customer-channel pattern the team had not been looking for."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Good morning. Sapien has raised a new funding round led by Neo’s Ali Partovi at a $180 million valuation, as the two-year-old AI startup pushes beyond financial planning software into a broader system for analyzing how operational decisions affect a company’s bottom line. Its customers now include Bayer , Carlex, Cooper Standard, Blink Charging and Westgate Resorts.",
-            "The shift is reflected in how customers are using the platform. According to a forthcoming case study I was able to review on automotive supplier Carlex, Sapien rebuilt an existing profitability analysis and found that factors the company had identified as contributing $10 million in positive EBITDA were actually producing a $2 million drag.",
-            "Sapien later found another $1.5 million opportunity in a customer-channel pattern the team had not been looking for. The analysis took about 20 minutes."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "471d2f47d892d7de",
       "kind": "article",
       "title": "EXCLUSIVE: US, China gear up for mid-September AI safety talks",
@@ -4995,6 +5023,57 @@
         {
           "title": "原文短摘录",
           "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "96f38cfa351a27f7",
+      "kind": "article",
+      "title": "The Incredibly Inspiring Startup Story of Dr. Fei-Fei Li and World Labs - Startup Fortune",
+      "source": "Startup Fortune",
+      "source_url": "https://startupfortune.com/the-incredibly-inspiring-startup-story-of-dr-fei-fei-li-and-world-labs/",
+      "published_at": "2026-09-02T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "The Incredibly Inspiring Startup Story of Dr. Fei-Fei Li and World Labs Startup Fortune",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://startupfortune.com/the-incredibly-inspiring-startup-story-of-dr-fei-fei-li-and-world-labs/",
+      "key_points": [
+        "Fei-Fei Li arrived in America as a teenager with under $20 and a family running a dry-cleaning store.",
+        "She built ImageNet, sparked the deep learning era, and is now three years into World Labs, a spatial intelligence company that hit a $1 billion valuation in twelve weeks.",
+        "Fei-Fei Li landed in New Jersey as a teenager with less than $20 and a family that would soon be running a dry-cleaning store to survive.",
+        "Forty years later, she is running a company that hit a billion-dollar valuation in about twelve weeks.",
+        "Neither part of that sentence explains the other on its own, and that's exactly the point."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "The Incredibly Inspiring Startup Story of Dr. Fei-Fei Li and World Labs Startup Fortune"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Fei-Fei Li arrived in America as a teenager with under $20 and a family running a dry-cleaning store.",
+            "She built ImageNet, sparked the deep learning era, and is now three years into World Labs, a spatial intelligence company that hit a $1 billion valuation in twelve weeks.",
+            "Fei-Fei Li landed in New Jersey as a teenager with less than $20 and a family that would soon be running a dry-cleaning store to survive.",
+            "Forty years later, she is running a company that hit a billion-dollar valuation in about twelve weeks.",
+            "Neither part of that sentence explains the other on its own, and that's exactly the point."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Fei-Fei Li arrived in America as a teenager with under $20 and a family running a dry-cleaning store. She built ImageNet, sparked the deep learning era, and is now three years into World Labs, a spatial intelligence company that hit a $1 billion valuation in twelve weeks.",
+            "Fei-Fei Li landed in New Jersey as a teenager with less than $20 and a family that would soon be running a dry-cleaning store to survive. Forty years later, she is running a company that hit a billion-dollar valuation in about twelve weeks. Neither part of that sentence explains the other on its own, and that's exactly the point.",
+            "Fei-Fei Li immigrated from Beijing to New Jersey as a teenager with under $20 to her name, and her family ran a dry-cleaning store while she studied her way to a full scholarship at Princeton and a PhD from Caltech"
+          ]
         }
       ],
       "reading_minutes": 1
@@ -5228,7 +5307,7 @@
       "id": "ee1cdd8efc6ce62f",
       "kind": "article",
       "title": "Homebuilding AI startup Digs raises $25.3M and partners with building products giant",
-      "source": "geekwire.com",
+      "source": "GeekWire",
       "source_url": "https://www.geekwire.com/2026/homebuilding-ai-startup-digs-raises-25-3m-and-partners-with-building-products-giant/",
       "published_at": "2026-08-25T07:00:00Z",
       "authors": [],
@@ -5238,7 +5317,7 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Homebuilding AI startup Digs raises $25.3M and partners with building products giant geekwire.com",
+      "summary": "Homebuilding AI startup Digs raises $25.3M and partners with building products giant GeekWire",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.geekwire.com/2026/homebuilding-ai-startup-digs-raises-25-3m-and-partners-with-building-products-giant/",
@@ -5250,7 +5329,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "Homebuilding AI startup Digs raises $25.3M and partners with building products giant geekwire.com"
+          "body": "Homebuilding AI startup Digs raises $25.3M and partners with building products giant GeekWire"
         },
         {
           "title": "公开页面要点",
@@ -5319,49 +5398,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "373eb7f0c38d08dd",
-      "kind": "article",
-      "title": "AI Safety: Governor Hochul Announces Next Steps to Regulate Major AI Developers and Protect New Yorkers",
-      "source": "Governor Kathy Hochul (.gov)",
-      "source_url": "https://www.governor.ny.gov/news/ai-safety-governor-hochul-announces-next-steps-regulate-major-ai-developers-and-protect-new",
-      "published_at": "2026-09-21T14:01:07Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "AI Safety: Governor Hochul Announces Next Steps to Regulate Major AI Developers and Protect New Yorkers Governor Kathy Hochul (.gov)",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.governor.ny.gov/news/ai-safety-governor-hochul-announces-next-steps-regulate-major-ai-developers-and-protect-new",
-      "key_points": [
-        "Starting in November, New York Will Direct Large AI Developers To Register with the State as Part of Implementing the Nation-Leading RAISE Act, Which Requires AI Developers to Report Safety Incidents Within 72 Hours Governor is Exploring Steps To Build on the RAISE Act in the Coming Months Governor Appoints Deputy Director of the State’s New DIGIT Office To…"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "AI Safety: Governor Hochul Announces Next Steps to Regulate Major AI Developers and Protect New Yorkers Governor Kathy Hochul (.gov)"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Starting in November, New York Will Direct Large AI Developers To Register with the State as Part of Implementing the Nation-Leading RAISE Act, Which Requires AI Developers to Report Safety Incidents Within 72 Hours Governor is Exploring Steps To Build on the RAISE Act in the Coming Months Governor Appoints Deputy Director of the State’s New DIGIT Office To…"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Starting in November, New York Will Direct Large AI Developers To Register with the State as Part of Implementing the Nation-Leading RAISE Act, Which Requires AI Developers to Report Safety Incidents Within 72 Hours",
-            "Governor is Exploring Steps To Build on the RAISE Act in the Coming Months",
-            "Governor Appoints Deputy Director of the State’s New DIGIT Office To Oversee RAISE Act Implementation"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "86c4ef2e9fbdf07c",
       "kind": "article",
       "title": "Fei-Fei Li Says She Runs Her AI Startup Like a 'Tiger Mom'",
@@ -5405,6 +5441,49 @@
             "Fei-Fei Li says running an AI startup has brought out her \"tiger mom\" side.",
             "In an interview with Bloomberg released on Wednesday, the Stanford professor, known for creating ImageNet and often called the \" Godmother of AI ,\" said that her seniority at the startup has put her in a bit of a parental role.",
             "Li cofounded World Labs in 2024. The startup is developing \"world models\" designed to help AI understand and interact with 3D environments. Earlier this year, the company announced $1 billion in new funding from investors including AMD, Autodesk, and Nvidia."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "373eb7f0c38d08dd",
+      "kind": "article",
+      "title": "AI Safety: Governor Hochul Announces Next Steps to Regulate Major AI Developers and Protect New Yorkers",
+      "source": "Governor Kathy Hochul (.gov)",
+      "source_url": "https://www.governor.ny.gov/news/ai-safety-governor-hochul-announces-next-steps-regulate-major-ai-developers-and-protect-new",
+      "published_at": "2026-09-21T14:01:07Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "AI Safety: Governor Hochul Announces Next Steps to Regulate Major AI Developers and Protect New Yorkers Governor Kathy Hochul (.gov)",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.governor.ny.gov/news/ai-safety-governor-hochul-announces-next-steps-regulate-major-ai-developers-and-protect-new",
+      "key_points": [
+        "Starting in November, New York Will Direct Large AI Developers To Register with the State as Part of Implementing the Nation-Leading RAISE Act, Which Requires AI Developers to Report Safety Incidents Within 72 Hours Governor is Exploring Steps To Build on the RAISE Act in the Coming Months Governor Appoints Deputy Director of the State’s New DIGIT Office To…"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AI Safety: Governor Hochul Announces Next Steps to Regulate Major AI Developers and Protect New Yorkers Governor Kathy Hochul (.gov)"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Starting in November, New York Will Direct Large AI Developers To Register with the State as Part of Implementing the Nation-Leading RAISE Act, Which Requires AI Developers to Report Safety Incidents Within 72 Hours Governor is Exploring Steps To Build on the RAISE Act in the Coming Months Governor Appoints Deputy Director of the State’s New DIGIT Office To…"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Starting in November, New York Will Direct Large AI Developers To Register with the State as Part of Implementing the Nation-Leading RAISE Act, Which Requires AI Developers to Report Safety Incidents Within 72 Hours",
+            "Governor is Exploring Steps To Build on the RAISE Act in the Coming Months",
+            "Governor Appoints Deputy Director of the State’s New DIGIT Office To Oversee RAISE Act Implementation"
           ]
         }
       ],
@@ -5514,7 +5593,7 @@
       "id": "b20c099714e81635",
       "kind": "article",
       "title": "The AI safety vibe shift",
-      "source": "Platformer",
+      "source": "platformer.news",
       "source_url": "https://www.platformer.news/ai-safety-vibe-shift-coxon-anthropic/",
       "published_at": "2026-09-10T07:00:00Z",
       "authors": [],
@@ -5524,7 +5603,7 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "The AI safety vibe shift Platformer",
+      "summary": "The AI safety vibe shift platformer.news",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.platformer.news/ai-safety-vibe-shift-coxon-anthropic/",
@@ -5538,7 +5617,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "The AI safety vibe shift Platformer"
+          "body": "The AI safety vibe shift platformer.news"
         },
         {
           "title": "公开页面要点",
@@ -5556,6 +5635,53 @@
             "This is a column about AI. My fiancé works at Anthropic. See my full ethics disclosure here .",
             "On Monday, after a weekend’s worth of concerned blog posts from OpenAI, I wrote about why we ought to take those warnings seriously. For a host of reasons, I wrote, AI companies make for flawed messengers on this subject: they can reasonably be accused of marketing, of blame-shifting, of regulatory capture, and more. And so I can understand why, despite a rising drumbeat of ominous talk over the past several years, the mainstream has largely written off existential risk as a fantasy.",
             "Moments before I sent out that edition, though, a recently departed Anthropic researcher published an X post that brought the subject to the center of conversation. “I resigned from Anthropic today,” wrote a young researcher named Jacob Coxon, in a tweet that generated 159 million views. “I spent the last three years doing pretraining research at both OpenAI and Anthropic. Neither company is acting responsibly. They are racing straight to self-improving superintelligence and gambling with our lives.”"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "8139ef0717b4a3db",
+      "kind": "article",
+      "title": "Two AI researchers leave Anthropic and Google over safety concerns: ‘There are no adults in the room’",
+      "source": "NBC News",
+      "source_url": "https://www.nbcnews.com/tech/security/two-ai-researchers-leave-anthropic-google-safety-concerns-rcna597086",
+      "published_at": "2026-09-10T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Two AI researchers leave Anthropic and Google over safety concerns: ‘There are no adults in the room’ NBC News",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.nbcnews.com/tech/security/two-ai-researchers-leave-anthropic-google-safety-concerns-rcna597086",
+      "key_points": [
+        "Citing fears that AI systems may soon spiral out of human control and potentially kill all humans, two more researchers from Anthropic and Google DeepMind who recently left their coveted positions are sounding the alarm about risks from advanced AI systems.",
+        "Joe Benton, who used to lead a safety research team at Anthropic, and Josh Engels, who used to work on AI safety research at Google, told NBC News in their first interviews since they left that they see an urgent need to boost transparency about incidents at the cutting edge of AI given the rapid pace of AI development.",
+        "Advances in AI research “could speed up the pace of progress from merely blistering at the minute to uncontrollable” rates of development, Benton said in an interview with Tom Llamas."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Two AI researchers leave Anthropic and Google over safety concerns: ‘There are no adults in the room’ NBC News"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Citing fears that AI systems may soon spiral out of human control and potentially kill all humans, two more researchers from Anthropic and Google DeepMind who recently left their coveted positions are sounding the alarm about risks from advanced AI systems.",
+            "Joe Benton, who used to lead a safety research team at Anthropic, and Josh Engels, who used to work on AI safety research at Google, told NBC News in their first interviews since they left that they see an urgent need to boost transparency about incidents at the cutting edge of AI given the rapid pace of AI development.",
+            "Advances in AI research “could speed up the pace of progress from merely blistering at the minute to uncontrollable” rates of development, Benton said in an interview with Tom Llamas."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Citing fears that AI systems may soon spiral out of human control and potentially kill all humans, two more researchers from Anthropic and Google DeepMind who recently left their coveted positions are sounding the alarm about risks from advanced AI systems.",
+            "Joe Benton, who used to lead a safety research team at Anthropic, and Josh Engels, who used to work on AI safety research at Google, told NBC News in their first interviews since they left that they see an urgent need to boost transparency about incidents at the cutting edge of AI given the rapid pace of AI development.",
+            "Advances in AI research “could speed up the pace of progress from merely blistering at the minute to uncontrollable” rates of development, Benton said in an interview with Tom Llamas."
           ]
         }
       ],
@@ -5597,53 +5723,6 @@
         {
           "title": "原文短摘录",
           "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "55ed709e6a8eff6c",
-      "kind": "article",
-      "title": "AFT, UFT and Microsoft announce ‘National AI Safety & Privacy Standard’ for schools to protect students, families and educators",
-      "source": "Microsoft Source",
-      "source_url": "https://news.microsoft.com/source/2026/09/09/aft-uft-and-microsoft-announce-national-ai-safety-privacy-standard-for-schools-to-protect-students-families-and-educators/",
-      "published_at": "2026-09-09T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "AFT, UFT and Microsoft announce ‘National AI Safety & Privacy Standard’ for schools to protect students, families and educators Microsoft Source",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.microsoft.com/source/2026/09/09/aft-uft-and-microsoft-announce-national-ai-safety-privacy-standard-for-schools-to-protect-students-families-and-educators/",
-      "key_points": [
-        "9, 2026 — After months of intense negotiations and in the absence of any meaningful federal and state rules governing artificial intelligence in schools, AFT President Randi Weingarten, United Federation of Teachers President Michael Mulgrew, and Microsoft Vice Chair and President Brad Smith today announced a “ National AI Safety & Privacy Standard ”…",
-        "The first-of-its-kind agreement on the heels of New York City Public Schools’ screens and AI ban, ensures that tech companies cannot use student data to train AI, students can never be tracked, AI cannot make decisions without human oversight, and companies must give educators and parents transparency and plain-language answers about how their tools work.",
-        "U.S. school districts can incorporate these protections directly into their Microsoft customer agreements, making them contractually enforceable. “We have forged a hard-fought, iron-clad privacy agreement with real teeth that protects students and families, because no one else, including the federal government, has stepped up to do the real work,” Weingarten…"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "AFT, UFT and Microsoft announce ‘National AI Safety & Privacy Standard’ for schools to protect students, families and educators Microsoft Source"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "9, 2026 — After months of intense negotiations and in the absence of any meaningful federal and state rules governing artificial intelligence in schools, AFT President Randi Weingarten, United Federation of Teachers President Michael Mulgrew, and Microsoft Vice Chair and President Brad Smith today announced a “ National AI Safety & Privacy Standard ”…",
-            "The first-of-its-kind agreement on the heels of New York City Public Schools’ screens and AI ban, ensures that tech companies cannot use student data to train AI, students can never be tracked, AI cannot make decisions without human oversight, and companies must give educators and parents transparency and plain-language answers about how their tools work.",
-            "U.S. school districts can incorporate these protections directly into their Microsoft customer agreements, making them contractually enforceable. “We have forged a hard-fought, iron-clad privacy agreement with real teeth that protects students and families, because no one else, including the federal government, has stepped up to do the real work,” Weingarten…"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "NEW YORK — Sept. 9, 2026 — After months of intense negotiations and in the absence of any meaningful federal and state rules governing artificial intelligence in schools, AFT President Randi Weingarten, United Federation of Teachers President Michael Mulgrew, and Microsoft Vice Chair and President Brad Smith today announced a “ National AI Safety & Privacy Standard ” establishing legally enforceable protections to ensure the safety of students, families and educators.",
-            "The first-of-its-kind agreement on the heels of New York City Public Schools’ screens and AI ban, ensures that tech companies cannot use student data to train AI, students can never be tracked, AI cannot make decisions without human oversight, and companies must give educators and parents transparency and plain-language answers about how their tools work. U.S. school districts can incorporate these protections directly into their Microsoft customer agreements, making them contractually enforceable.",
-            "“We have forged a hard-fought, iron-clad privacy agreement with real teeth that protects students and families, because no one else, including the federal government, has stepped up to do the real work,” Weingarten said. “We can get angrier and angrier, or we can act decisively; anything less than legally enforceable provisions is simply a wish list.”"
-          ]
         }
       ],
       "reading_minutes": 1
@@ -5793,7 +5872,7 @@
       "id": "4edcb180395ae998",
       "kind": "article",
       "title": "The OpenAI-Hugging Face hack was just the beginning, experts say: \"Even more powerful\" AI is coming",
-      "source": "CBS News",
+      "source": "cbsnews.com",
       "source_url": "https://www.cbsnews.com/news/openai-hugging-face-hack-ai-risks/",
       "published_at": "2026-09-10T07:00:00Z",
       "authors": [],
@@ -5803,7 +5882,7 @@
         "Models & Tools"
       ],
       "verification": "媒体或公开网页",
-      "summary": "The OpenAI-Hugging Face hack was just the beginning, experts say: \"Even more powerful\" AI is coming CBS News",
+      "summary": "The OpenAI-Hugging Face hack was just the beginning, experts say: \"Even more powerful\" AI is coming cbsnews.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.cbsnews.com/news/openai-hugging-face-hack-ai-risks/",
@@ -5816,7 +5895,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "The OpenAI-Hugging Face hack was just the beginning, experts say: \"Even more powerful\" AI is coming CBS News"
+          "body": "The OpenAI-Hugging Face hack was just the beginning, experts say: \"Even more powerful\" AI is coming cbsnews.com"
         },
         {
           "title": "公开页面要点",
@@ -5833,53 +5912,6 @@
             "As warnings about the capabilities of AI mount, experts continue to point to the OpenAI-Hugging Face hack as a wake-up call.",
             "\"We'll soon have even more powerful agents and this is clear evidence that the world currently doesn't know how to build these systems safely,\" said Marius Hobbhahn, co-founder and CEO of Apollo Research, an AI safety company.",
             "The hack, which became public in July, was done by a swarm of AI agents that were being tested internally by OpenAI. The agents, which can plan and use tools to complete multi-step tasks, were supposed to be in an \"isolated environment\" called a \"sandbox,\" disconnected from the outside world. But they busted out, created a secret message board and eventually stormed Hugging Face's servers."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "8a5e4e1b4e85d62d",
-      "kind": "article",
-      "title": "World Labs Acquires Robotics Company SceniX",
-      "source": "AI Insider",
-      "source_url": "https://theaiinsider.tech/2026/07/27/world-labs-acquires-robotics-company-scenix/",
-      "published_at": "2026-07-27T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Founder Watch",
-        "Embodied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Insider Brief World Labs acquired robotics company SceniX as it expands its spatial intelligence work into embodied AI. World Labs said SceniX will help",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://theaiinsider.tech/2026/07/27/world-labs-acquires-robotics-company-scenix/",
-      "key_points": [
-        "World Labs acquired robotics company SceniX as it expands its spatial intelligence work into embodied AI.",
-        "World Labs said SceniX will help advance systems that can understand, simulate and act across virtual and physical environments.",
-        "Founder and CEO Fei-Fei Li said SceniX brings simulation and robotics experience, with technology already tested in live deployments on real hardware."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Insider Brief World Labs acquired robotics company SceniX as it expands its spatial intelligence work into embodied AI. World Labs said SceniX will help"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "World Labs acquired robotics company SceniX as it expands its spatial intelligence work into embodied AI.",
-            "World Labs said SceniX will help advance systems that can understand, simulate and act across virtual and physical environments.",
-            "Founder and CEO Fei-Fei Li said SceniX brings simulation and robotics experience, with technology already tested in live deployments on real hardware."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "World Labs acquired robotics company SceniX as it expands its spatial intelligence work into embodied AI.",
-            "World Labs said SceniX will help advance systems that can understand, simulate and act across virtual and physical environments.",
-            "Founder and CEO Fei-Fei Li said SceniX brings simulation and robotics experience, with technology already tested in live deployments on real hardware."
           ]
         }
       ],
