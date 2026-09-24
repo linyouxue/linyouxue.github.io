@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-24T04:46:37Z",
+  "generated_at": "2026-09-24T11:42:17Z",
   "record_count": 132,
   "records": [
     {
@@ -205,10 +205,14 @@
       "verification": "官方来源",
       "summary": "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome.",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
+      "fetch_status": "public-page-excerpt",
       "resolved_url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
       "key_points": [
-        "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome."
+        "How predicting the molecular impact of every possible single-letter DNA variant in the human genome will help accelerate our understanding of biology.",
+        "Today, we are introducing AlphaGenome Atlas: a platform ( detailed in our paper ) containing predictions for the effects of 9 billion single-nucleotide variants — every single-letter change possible — in the human genome.",
+        "It is the most comprehensive catalogue of how genetic mutations affect molecular biology, and it is available for academic research through an intuitive and free-to-use website portal .",
+        "Mastering it is a grand challenge that could transform our ability to understand biology and treat disease.",
+        "But progress has been limited by a fundamental problem: interpreting how genetic variations impact biology at a molecular level."
       ],
       "sections": [
         {
@@ -218,12 +222,20 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome."
+            "How predicting the molecular impact of every possible single-letter DNA variant in the human genome will help accelerate our understanding of biology.",
+            "Today, we are introducing AlphaGenome Atlas: a platform ( detailed in our paper ) containing predictions for the effects of 9 billion single-nucleotide variants — every single-letter change possible — in the human genome.",
+            "It is the most comprehensive catalogue of how genetic mutations affect molecular biology, and it is available for academic research through an intuitive and free-to-use website portal .",
+            "Mastering it is a grand challenge that could transform our ability to understand biology and treat disease.",
+            "But progress has been limited by a fundamental problem: interpreting how genetic variations impact biology at a molecular level."
           ]
         },
         {
           "title": "原文短摘录",
-          "paragraphs": []
+          "paragraphs": [
+            "How predicting the molecular impact of every possible single-letter DNA variant in the human genome will help accelerate our understanding of biology.",
+            "Today, we are introducing AlphaGenome Atlas: a platform ( detailed in our paper ) containing predictions for the effects of 9 billion single-nucleotide variants — every single-letter change possible — in the human genome. It is the most comprehensive catalogue of how genetic mutations affect molecular biology, and it is available for academic research through an intuitive and free-to-use website portal .",
+            "DNA is the language of life. Mastering it is a grand challenge that could transform our ability to understand biology and treat disease. But progress has been limited by a fundamental problem: interpreting how genetic variations impact biology at a molecular level. With roughly 9 billion possible single-letter mutations in the human genome, testing each one in the lab is practically impossible."
+          ]
         }
       ],
       "reading_minutes": 1
@@ -324,7 +336,7 @@
       "title": "Claude discovers a novel enzyme system",
       "source": "Anthropic",
       "source_url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
-      "published_at": "2026-09-23T20:05:57Z",
+      "published_at": "2026-09-24T10:25:16Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -830,6 +842,51 @@
       "reading_minutes": 1
     },
     {
+      "id": "rhb-icml-2026",
+      "kind": "paper",
+      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
+      "source": "OpenReview · arXiv",
+      "source_url": "https://arxiv.org/abs/2605.02964",
+      "published_at": "2026-06-24T00:00:00Z",
+      "authors": [
+        "Kunvar Thaman"
+      ],
+      "venue": "ICML 2026",
+      "tags": [
+        "Reward Hacking",
+        "Agent Safety",
+        "Evaluation"
+      ],
+      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
+      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/rhb-icml-2026.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://arxiv.org/pdf/2605.02964",
+      "key_points": [
+        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
+        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
+        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
+        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
+        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
+        },
+        {
+          "title": "关键结果",
+          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
+        },
+        {
+          "title": "局限与结论",
+          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
+        }
+      ],
+      "reading_minutes": 46
+    },
+    {
       "id": "b50540a04369135a",
       "kind": "article",
       "title": "How Claude is uplifting biomolecular modeling",
@@ -879,51 +936,6 @@
         }
       ],
       "reading_minutes": 1
-    },
-    {
-      "id": "rhb-icml-2026",
-      "kind": "paper",
-      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
-      "source": "OpenReview · arXiv",
-      "source_url": "https://arxiv.org/abs/2605.02964",
-      "published_at": "2026-06-24T00:00:00Z",
-      "authors": [
-        "Kunvar Thaman"
-      ],
-      "venue": "ICML 2026",
-      "tags": [
-        "Reward Hacking",
-        "Agent Safety",
-        "Evaluation"
-      ],
-      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
-      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/rhb-icml-2026.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://arxiv.org/pdf/2605.02964",
-      "key_points": [
-        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
-        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
-        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
-        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
-        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
-        },
-        {
-          "title": "关键结果",
-          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
-        },
-        {
-          "title": "局限与结论",
-          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
-        }
-      ],
-      "reading_minutes": 46
     },
     {
       "id": "402c929a293f4553",
@@ -1167,47 +1179,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "fcb618a30537f91d",
-      "kind": "article",
-      "title": "Mathematics Isn’t Just a Game to Let A.I. Solve. History Shows Why.",
-      "source": "The New York Times",
-      "source_url": "https://www.nytimes.com/2026/09/22/science/math-ai-history-understanding.html",
-      "published_at": "2026-09-22T15:00:17Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Mathematics Isn’t Just a Game to Let A.I. Solve. History Shows Why. The New York Times",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 403: Forbidden",
-      "resolved_url": "https://www.nytimes.com/2026/09/22/science/math-ai-history-understanding.html",
-      "key_points": [
-        "Mathematics Isn’t Just a Game to Let A.I. Solve. History Shows Why. The New York Times"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Mathematics Isn’t Just a Game to Let A.I. Solve. History Shows Why. The New York Times"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Mathematics Isn’t Just a Game to Let A.I. Solve. History Shows Why. The New York Times"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "1a54cee0659df5fd",
       "kind": "article",
       "title": "A.I. Agents as ‘Co-Scientists’? This Lab Says They Could Speed Drug Research.",
@@ -1239,47 +1210,6 @@
           "title": "公开页面要点",
           "bullets": [
             "This Lab Says They Could Speed Drug Research."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "3cb8bc319ea7e4e6",
-      "kind": "article",
-      "title": "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program",
-      "source": "Reuters",
-      "source_url": "https://www.reuters.com/world/anthropic-quietly-sets-up-biology-lab-it-ramps-ai-drug-program-2026-09-18/",
-      "published_at": "2026-09-18T10:02:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program Reuters",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 401: HTTP Forbidden",
-      "resolved_url": "https://www.reuters.com/world/anthropic-quietly-sets-up-biology-lab-it-ramps-ai-drug-program-2026-09-18/",
-      "key_points": [
-        "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program Reuters"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program Reuters"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program Reuters"
           ]
         },
         {
@@ -1440,11 +1370,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "bac0a13e4a0f000a",
+      "id": "66101ea134d2f8a2",
       "kind": "article",
       "title": "【网经社AI科普】 腾讯元宝 : 混元 大模型助手 深度集成微信生态",
       "source": "微信公众号 · 电子商务研究中心",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1790225158&ver=6985&signature=TuDvLTwMhS2Sr3V3*d1Z8xjDGuzbOpuySWtBiP*P68VpHKQUgA*dXCyFYu8ieDziwETZFwBFJkYriUoa7OzeBiOAAMg9dTrg810uqWNIN*XwDusbymyo7Q02rxOjjBOx&new=1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1790250097&ver=6986&signature=YMF3q8Jj*heMBQsCWUOt-jpPG5yddehzQtOZ7NJwjOdZiQ*uYP6vZf90Y8npKkBSzF6hhzWpshX6n1Kk5iDreuOiqQcy7m4S5ZSEXrF6Zp9Lh3*aju5z1Aaj8noxfM2R&new=1",
       "published_at": "2026-09-23T11:48:27Z",
       "authors": [],
       "venue": "",
@@ -1457,7 +1387,7 @@
       "summary": "腾讯元宝 基于腾讯 混元 千亿级参数大模型(Hunyuan Turbo系列)... 并 发布 至微信小程序或企业微信.联网实时搜索与知识融合内置腾...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HBKrtGqjdGFocDnn4eYgosJUWVD1MRXsNmCq_E1Z&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1790225158%26ver%3D6985%26signature%3DTuDvLTwMhS2Sr3V3%2Ad1Z8xjDGuzbOpuySWtBiP%2AP68VpHKQUgA%2AdXCyFYu8ieDziwETZFwBFJkYriUoa7OzeBiOAAMg9dTrg810uqWNIN%2AXwDusbymyo7Q02rxOjjBOx%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HH4MtWqjXCtxHFFyd3DB4kT6mh2ZQeAdgpFo0xvR&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1790250097%26ver%3D6986%26signature%3DYMF3q8Jj%2AheMBQsCWUOt-jpPG5yddehzQtOZ7NJwjOdZiQ%2AuYP6vZf90Y8npKkBSzF6hhzWpshX6n1Kk5iDreuOiqQcy7m4S5ZSEXrF6Zp9Lh3%2Aaju5z1Aaj8noxfM2R%26new%3D1",
       "key_points": [
         "腾讯元宝 基于腾讯 混元 千亿级参数大模型(Hunyuan Turbo系列)... 并 发布 至微信小程序或企业微信.联网实时搜索与知识融合内置腾..."
       ],
@@ -1524,7 +1454,7 @@
       "kind": "article",
       "title": "腾讯 混元 发布 Hy Image3.5 preview 模型",
       "source": "微信公众号 · 拾言小记",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1790225158&ver=6985&signature=Ef7ugX9numuuiO6hMIzG7w0SS*Ie6ZOaGpRVQq9dzzBOqOWPS78CWeo51KZw-m*0wIgFdZ3*2AXpMPmHRsUK8jIu8z1CB3QuJuwMRn8WT6D1qI-Y6AjAfVm4JGgvGUct&new=1",
+      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HBKrtGqjxqW_gucyPMtB0sdcE_He48rR-yDNrzxm&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1790225158%26ver%3D6985%26signature%3DEf7ugX9numuuiO6hMIzG7w0SS%2AIe6ZOaGpRVQq9dzzBOqOWPS78CWeo51KZw-m%2A0wIgFdZ3%2A2AXpMPmHRsUK8jIu8z1CB3QuJuwMRn8WT6D1qI-Y6AjAfVm4JGgvGUct%26new%3D1",
       "published_at": "2026-09-22T05:48:45Z",
       "authors": [],
       "venue": "",
@@ -2577,10 +2507,62 @@
       "reading_minutes": 1
     },
     {
+      "id": "6a2d106dfb0bcb0a",
+      "kind": "article",
+      "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
+      "source": "anthropic.com",
+      "source_url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+      "published_at": "2026-09-23T18:14:17Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Claude discovers a novel enzyme system with CRISPR-like repeats anthropic.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+      "key_points": [
+        "We’re introducing a new life sciences research group and laboratory at Anthropic.",
+        "Our focus is on fundamental biology research using Claude: exploring datasets of DNA to identify uncharacterized protein families, generating hypotheses at scale, and testing them through experiments in the lab.",
+        "This post introduces the team behind this work and shares early results in which Claude discovered a novel enzyme system with properties reminiscent of CRISPR, with only high-level direction from our scientists.",
+        "Many discoveries that have revolutionized biology and medicine started with a scientist noticing something odd in the staggering diversity of molecular machines found in nature.",
+        "Restriction enzymes , proteins that… Today, we’re sharing early results from one of our first research programs, in which Claude autonomously discovered a novel enzyme system that is associated with an array of DNA repeats, a pattern reminiscent of CRISPR."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Claude discovers a novel enzyme system with CRISPR-like repeats anthropic.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "We’re introducing a new life sciences research group and laboratory at Anthropic.",
+            "Our focus is on fundamental biology research using Claude: exploring datasets of DNA to identify uncharacterized protein families, generating hypotheses at scale, and testing them through experiments in the lab.",
+            "This post introduces the team behind this work and shares early results in which Claude discovered a novel enzyme system with properties reminiscent of CRISPR, with only high-level direction from our scientists.",
+            "Many discoveries that have revolutionized biology and medicine started with a scientist noticing something odd in the staggering diversity of molecular machines found in nature.",
+            "Restriction enzymes , proteins that… Today, we’re sharing early results from one of our first research programs, in which Claude autonomously discovered a novel enzyme system that is associated with an array of DNA repeats, a pattern reminiscent of CRISPR."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "We’re introducing a new life sciences research group and laboratory at Anthropic. Our focus is on fundamental biology research using Claude: exploring datasets of DNA to identify uncharacterized protein families, generating hypotheses at scale, and testing them through experiments in the lab. This post introduces the team behind this work and shares early results in which Claude discovered a novel enzyme system with properties reminiscent of CRISPR, with only high-level direction from our scientists. Many discoveries that have revolutionized biology and medicine started with a scientist noticing something odd in the staggering diversity of molecular machines found in nature. Restriction enzymes , proteins that…",
+            "Today, we’re sharing early results from one of our first research programs, in which Claude autonomously discovered a novel enzyme system that is associated with an array of DNA repeats, a pattern reminiscent of CRISPR. Although we don’t yet know its function, the system that Claude discovered has a set of characteristics that have only ever been found together in a handful of other systems, all of which are programmable and perform operations like cutting, copying, and pasting DNA. Beyond CRISPR, which has already transformed science and medicine, several other such systems are now in development as promising tools.",
+            "The system that Claude found is based on a reverse transcriptase (RT), enzymes that copy RNA into DNA. While this underlying RT, found in a jumbo phage, had been identified in previous studies, Claude appears to be the first to notice the system’s defining features—an associated array of non-coding DNA sequences and an additional accessory protein of unknown function."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "d1af199c1f5968f0",
       "kind": "article",
       "title": "Mathematicians Can't Make Sense of How OpenAI's Agents Solved One of the Toughest Math Problems Because the AI's \"Proof\" Is Borderline Incomprehensible",
-      "source": "Futurism",
+      "source": "futurism.com",
       "source_url": "https://futurism.com/artificial-intelligence/mathematicians-openai-agents-proof-borderline-incomprehensible",
       "published_at": "2026-09-23T14:17:31Z",
       "authors": [],
@@ -2591,7 +2573,7 @@
         "Discovery"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Mathematicians Can't Make Sense of How OpenAI's Agents Solved One of the Toughest Math Problems Because the AI's \"Proof\" Is Borderline Incomprehensible Futurism",
+      "summary": "Mathematicians Can't Make Sense of How OpenAI's Agents Solved One of the Toughest Math Problems Because the AI's \"Proof\" Is Borderline Incomprehensible futurism.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://futurism.com/artificial-intelligence/mathematicians-openai-agents-proof-borderline-incomprehensible",
@@ -2604,7 +2586,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "Mathematicians Can't Make Sense of How OpenAI's Agents Solved One of the Toughest Math Problems Because the AI's \"Proof\" Is Borderline Incomprehensible Futurism"
+          "body": "Mathematicians Can't Make Sense of How OpenAI's Agents Solved One of the Toughest Math Problems Because the AI's \"Proof\" Is Borderline Incomprehensible futurism.com"
         },
         {
           "title": "公开页面要点",
@@ -2671,7 +2653,7 @@
       "id": "157fd860e3400f99",
       "kind": "article",
       "title": "The AI Drug Discovery Revolution",
-      "source": "Tema ETFs",
+      "source": "temaetfs.com",
       "source_url": "https://temaetfs.com/insights/the-ai-drug-discovery-revolution-tema-etfs",
       "published_at": "2026-09-22T16:13:18Z",
       "authors": [],
@@ -3205,6 +3187,50 @@
             "News News & Features asdfasdfasdfasd News & Features Another test to see if data is duped from hubspot News & Features Synthetic Progesterone Enhances Anti-Estrogen Therapy in Early Breast Cancer News & Features Circadian Rhythm Disruption Linked to Higher Dementia Risk Molecular Dx Dried Blood Spot Testing Accurately Measures Alzheimer’s Biomarkers",
             "An AI system that coordinates computerized “scientist” agents under a virtual chief scientific officer could speed the discovery of new therapeutic drugs.",
             "The Virtual Biotech multi-agent AI research platform combines wide-ranging biomedical and clinical evidence to support early-stage drug development systems."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "cef511b6527eba4a",
+      "kind": "article",
+      "title": "Insilico Medicine Opens AI Longevity Discovery Toolkit to Researchers Worldwide in Cell Cover Study",
+      "source": "Insilico Medicine",
+      "source_url": "https://insilico.com/news/cell170926en-ai-longevity-discovery-toolkit",
+      "published_at": "2026-09-17T15:11:13Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Insilico Medicine Opens AI Longevity Discovery Toolkit to Researchers Worldwide in Cell Cover Study Insilico Medicine",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://insilico.com/news/cell170926en-ai-longevity-discovery-toolkit",
+      "key_points": [
+        "The paper introduces three interconnected resources for the global scientific community: LongevityBench , the first open benchmark designed to rigorously evaluate AI reasoning across multiple domains of aging biology; Longevity-LLMs , a family of compact, open-source language models specifically trained on clinical and multi-omics aging data; and"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Insilico Medicine Opens AI Longevity Discovery Toolkit to Researchers Worldwide in Cell Cover Study Insilico Medicine"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "The paper introduces three interconnected resources for the global scientific community: LongevityBench , the first open benchmark designed to rigorously evaluate AI reasoning across multiple domains of aging biology; Longevity-LLMs , a family of compact, open-source language models specifically trained on clinical and multi-omics aging data; and"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "The paper introduces three interconnected resources for the global scientific community:",
+            "LongevityBench , the first open benchmark designed to rigorously evaluate AI reasoning across multiple domains of aging biology;",
+            "Longevity-LLMs , a family of compact, open-source language models specifically trained on clinical and multi-omics aging data; and"
           ]
         }
       ],
@@ -3788,7 +3814,7 @@
       "source_url": "https://doi.org/10.1145/3795101.3805412",
       "published_at": "2026-07-13T00:00:00Z",
       "authors": [
-        "Onkar Shelar",
+        "Onkar Eknath Shelar",
         "Travis Desell"
       ],
       "venue": "Proceedings of the Genetic and Evolutionary Computation Conference Companion",
@@ -4160,6 +4186,47 @@
       "reading_minutes": 1
     },
     {
+      "id": "05af93ed82f86134",
+      "kind": "article",
+      "title": "These 3 EMerge Americas Founders Addressed AI Risk Before Dario Amodei",
+      "source": "forbes.com",
+      "source_url": "https://www.forbes.com/sites/lilianraji/2026/09/23/these-3-emerge-americas-founders-addressed-ai-risk-before-dario-amodei/",
+      "published_at": "2026-09-24T02:33:22Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Researcher Watch",
+        "Foundation Models",
+        "Leadership"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "These 3 EMerge Americas Founders Addressed AI Risk Before Dario Amodei forbes.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://www.forbes.com/sites/lilianraji/2026/09/23/these-3-emerge-americas-founders-addressed-ai-risk-before-dario-amodei/",
+      "key_points": [
+        "These 3 EMerge Americas Founders Addressed AI Risk Before Dario Amodei forbes.com"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "These 3 EMerge Americas Founders Addressed AI Risk Before Dario Amodei forbes.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "These 3 EMerge Americas Founders Addressed AI Risk Before Dario Amodei forbes.com"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "1e1a407f6835f709",
       "kind": "social",
       "title": "@CAIS @ScaleAILabs Happy to see they added this to the website!",
@@ -4179,11 +4246,11 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://x.com/polynoamial/status/2102886723206492246",
       "key_points": [
-        "Noam Brown @polynoamial 12h Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models.",
+        "Noam Brown @polynoamial 18h Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models.",
         "Why not just report the $ cost of the evaluation?",
-        "10 7 418 13K Noam Brown @polynoamial Happy to see they added this to the website!",
-        "10:23 PM · Sep 23, 2026 · 11.7K Views 6 1 117 5 Noam Brown @polynoamial 3h Also my mistake that was at \"max\" reasoning.",
-        "Here it is at \"high\" (matching the setting in the original tweet) 1 17 2.1K"
+        "10 7 448 15K Noam Brown @polynoamial Happy to see they added this to the website!",
+        "10:23 PM · Sep 23, 2026 · 19.8K Views 6 1 145 5 Noam Brown @polynoamial 10h Also my mistake that was at \"max\" reasoning.",
+        "Here it is at \"high\" (matching the setting in the original tweet) 1 26 3.5K"
       ],
       "sections": [
         {
@@ -4193,19 +4260,19 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Noam Brown @polynoamial 12h Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models.",
+            "Noam Brown @polynoamial 18h Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models.",
             "Why not just report the $ cost of the evaluation?",
-            "10 7 418 13K Noam Brown @polynoamial Happy to see they added this to the website!",
-            "10:23 PM · Sep 23, 2026 · 11.7K Views 6 1 117 5 Noam Brown @polynoamial 3h Also my mistake that was at \"max\" reasoning.",
-            "Here it is at \"high\" (matching the setting in the original tweet) 1 17 2.1K"
+            "10 7 448 15K Noam Brown @polynoamial Happy to see they added this to the website!",
+            "10:23 PM · Sep 23, 2026 · 19.8K Views 6 1 145 5 Noam Brown @polynoamial 10h Also my mistake that was at \"max\" reasoning.",
+            "Here it is at \"high\" (matching the setting in the original tweet) 1 26 3.5K"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Noam Brown @polynoamial 12h Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models. Why not just report the $ cost of the evaluation? Or, even better, show an accuracy vs $ plot? 10 7 418 13K",
-            "Noam Brown @polynoamial Happy to see they added this to the website! 10:23 PM · Sep 23, 2026 · 11.7K Views 6 1 117 5",
-            "Noam Brown @polynoamial 3h Also my mistake that was at \"max\" reasoning. Here it is at \"high\" (matching the setting in the original tweet) 1 17 2.1K"
+            "Noam Brown @polynoamial 18h Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models. Why not just report the $ cost of the evaluation? Or, even better, show an accuracy vs $ plot? 10 7 448 15K",
+            "Noam Brown @polynoamial Happy to see they added this to the website! 10:23 PM · Sep 23, 2026 · 19.8K Views 6 1 145 5",
+            "Noam Brown @polynoamial 10h Also my mistake that was at \"max\" reasoning. Here it is at \"high\" (matching the setting in the original tweet) 1 26 3.5K"
           ]
         }
       ],
@@ -4231,10 +4298,10 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://x.com/elonmusk/status/2102873022789283985",
       "key_points": [
-        "Elon Musk @elonmusk Grok 4.7 moves up in ranking Zhuokai Zhao @zhuokaiz 10h After we fixed the weak spots exposed by Grok 4.7 (thank you, Grok), we audited every model we have run on the SWE-Together leaderboard for the same behavior, re-ran every trial that got through, and updated the rows.",
-        "We scanned the tool calls of all Show more 00:00 9:29 PM · Sep 23, 2026 · 2.3M Views 870 799 5.2K 188 Martians 🪐 @MartiansOfMars 7h @ elonmusk have you seen the Martian version of Diablo IV created using Grok ?",
-        "00:00 Made with AI 4 5 34 2.2K X Girls @thesoragirls 7h huge improvement for Grok 4.7!",
-        "X Girls @thesoragirls 8h ani killed it ngl 00:00 2 6 17 1.3K"
+        "Elon Musk @elonmusk Grok 4.7 moves up in ranking Zhuokai Zhao @zhuokaiz 17h After we fixed the weak spots exposed by Grok 4.7 (thank you, Grok), we audited every model we have run on the SWE-Together leaderboard for the same behavior, re-ran every trial that got through, and updated the rows.",
+        "We scanned the tool calls of all Show more 00:00 9:29 PM · Sep 23, 2026 · 3.1M Views 956 974 6.4K 264 Martians 🪐 @MartiansOfMars 14h @ elonmusk have you seen the Martian version of Diablo IV created using Grok ?",
+        "00:00 Made with AI 4 5 34 2.6K X Girls @thesoragirls 14h huge improvement for Grok 4.7!",
+        "X Girls @thesoragirls 15h ani killed it ngl 00:00 2 6 18 1.5K"
       ],
       "sections": [
         {
@@ -4244,18 +4311,18 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Elon Musk @elonmusk Grok 4.7 moves up in ranking Zhuokai Zhao @zhuokaiz 10h After we fixed the weak spots exposed by Grok 4.7 (thank you, Grok), we audited every model we have run on the SWE-Together leaderboard for the same behavior, re-ran every trial that got through, and updated the rows.",
-            "We scanned the tool calls of all Show more 00:00 9:29 PM · Sep 23, 2026 · 2.3M Views 870 799 5.2K 188 Martians 🪐 @MartiansOfMars 7h @ elonmusk have you seen the Martian version of Diablo IV created using Grok ?",
-            "00:00 Made with AI 4 5 34 2.2K X Girls @thesoragirls 7h huge improvement for Grok 4.7!",
-            "X Girls @thesoragirls 8h ani killed it ngl 00:00 2 6 17 1.3K"
+            "Elon Musk @elonmusk Grok 4.7 moves up in ranking Zhuokai Zhao @zhuokaiz 17h After we fixed the weak spots exposed by Grok 4.7 (thank you, Grok), we audited every model we have run on the SWE-Together leaderboard for the same behavior, re-ran every trial that got through, and updated the rows.",
+            "We scanned the tool calls of all Show more 00:00 9:29 PM · Sep 23, 2026 · 3.1M Views 956 974 6.4K 264 Martians 🪐 @MartiansOfMars 14h @ elonmusk have you seen the Martian version of Diablo IV created using Grok ?",
+            "00:00 Made with AI 4 5 34 2.6K X Girls @thesoragirls 14h huge improvement for Grok 4.7!",
+            "X Girls @thesoragirls 15h ani killed it ngl 00:00 2 6 18 1.5K"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok 4.7 moves up in ranking Zhuokai Zhao @zhuokaiz 10h After we fixed the weak spots exposed by Grok 4.7 (thank you, Grok), we audited every model we have run on the SWE-Together leaderboard for the same behavior, re-ran every trial that got through, and updated the rows. Here is what changed. We scanned the tool calls of all Show more 00:00 9:29 PM · Sep 23, 2026 · 2.3M Views 870 799 5.2K 188",
-            "Martians 🪐 @MartiansOfMars 7h @ elonmusk have you seen the Martian version of Diablo IV created using Grok ? 00:00 Made with AI 4 5 34 2.2K",
-            "X Girls @thesoragirls 7h huge improvement for Grok 4.7! X Girls @thesoragirls 8h ani killed it ngl 00:00 2 6 17 1.3K"
+            "Elon Musk @elonmusk Grok 4.7 moves up in ranking Zhuokai Zhao @zhuokaiz 17h After we fixed the weak spots exposed by Grok 4.7 (thank you, Grok), we audited every model we have run on the SWE-Together leaderboard for the same behavior, re-ran every trial that got through, and updated the rows. Here is what changed. We scanned the tool calls of all Show more 00:00 9:29 PM · Sep 23, 2026 · 3.1M Views 956 974 6.4K 264",
+            "Martians 🪐 @MartiansOfMars 14h @ elonmusk have you seen the Martian version of Diablo IV created using Grok ? 00:00 Made with AI 4 5 34 2.6K",
+            "X Girls @thesoragirls 14h huge improvement for Grok 4.7! X Girls @thesoragirls 15h ani killed it ngl 00:00 2 6 18 1.5K"
           ]
         }
       ],
@@ -4281,9 +4348,9 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://x.com/polynoamial/status/2102801697999622442",
       "key_points": [
-        "Center for AI Safety @CAIS 12h We are releasing HLE-Diamond, a refined subset of Humanity’s Last Exam (HLE), following a year-long process of cleaning and refinement with input from various research communities. lastexam.ai/blog/hle-diamo… w/ @ ScaleAILabs 21 47 673 78K Noam Brown @polynoamial Your site says \"All models are evaluated with reasoning high.\"…",
+        "Center for AI Safety @CAIS 19h We are releasing HLE-Diamond, a refined subset of Humanity’s Last Exam (HLE), following a year-long process of cleaning and refinement with input from various research communities. lastexam.ai/blog/hle-diamo… w/ @ ScaleAILabs 26 50 718 94K Noam Brown @polynoamial Your site says \"All models are evaluated with reasoning high.\"…",
         "Why not just report the $ cost of the evaluation?",
-        "4:46 PM · Sep 23, 2026 · 13.9K Views 10 7 418 14 Noam Brown @polynoamial 6h Happy to see they added this to the website!"
+        "4:46 PM · Sep 23, 2026 · 15.9K Views 10 7 448 14 Noam Brown @polynoamial 13h Happy to see they added this to the website!"
       ],
       "sections": [
         {
@@ -4293,17 +4360,17 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Center for AI Safety @CAIS 12h We are releasing HLE-Diamond, a refined subset of Humanity’s Last Exam (HLE), following a year-long process of cleaning and refinement with input from various research communities. lastexam.ai/blog/hle-diamo… w/ @ ScaleAILabs 21 47 673 78K Noam Brown @polynoamial Your site says \"All models are evaluated with reasoning high.\"…",
+            "Center for AI Safety @CAIS 19h We are releasing HLE-Diamond, a refined subset of Humanity’s Last Exam (HLE), following a year-long process of cleaning and refinement with input from various research communities. lastexam.ai/blog/hle-diamo… w/ @ ScaleAILabs 26 50 718 94K Noam Brown @polynoamial Your site says \"All models are evaluated with reasoning high.\"…",
             "Why not just report the $ cost of the evaluation?",
-            "4:46 PM · Sep 23, 2026 · 13.9K Views 10 7 418 14 Noam Brown @polynoamial 6h Happy to see they added this to the website!"
+            "4:46 PM · Sep 23, 2026 · 15.9K Views 10 7 448 14 Noam Brown @polynoamial 13h Happy to see they added this to the website!"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Center for AI Safety @CAIS 12h We are releasing HLE-Diamond, a refined subset of Humanity’s Last Exam (HLE), following a year-long process of cleaning and refinement with input from various research communities. lastexam.ai/blog/hle-diamo… w/ @ ScaleAILabs 21 47 673 78K",
-            "Noam Brown @polynoamial Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models. Why not just report the $ cost of the evaluation? Or, even better, show an accuracy vs $ plot? 4:46 PM · Sep 23, 2026 · 13.9K Views 10 7 418 14",
-            "Noam Brown @polynoamial 6h Happy to see they added this to the website! 6 1 117 11K"
+            "Center for AI Safety @CAIS 19h We are releasing HLE-Diamond, a refined subset of Humanity’s Last Exam (HLE), following a year-long process of cleaning and refinement with input from various research communities. lastexam.ai/blog/hle-diamo… w/ @ ScaleAILabs 26 50 718 94K",
+            "Noam Brown @polynoamial Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models. Why not just report the $ cost of the evaluation? Or, even better, show an accuracy vs $ plot? 4:46 PM · Sep 23, 2026 · 15.9K Views 10 7 448 14",
+            "Noam Brown @polynoamial 13h Happy to see they added this to the website! 6 1 145 19K"
           ]
         }
       ],
@@ -4329,8 +4396,8 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://x.com/elonmusk/status/2102798963837665464",
       "key_points": [
-        "matt palmer @mattyp 14h Here's what's new in Grok @ bot this week 0:08 Voice calls and voice memos 0:35 1Password vault for Grok Bot 0:53 Inline forms 1:07 Inline drafts for email and Slack 1:31 Account switching 1:40 Route traffic through your desktop 00:00 4:35 PM · Sep 23, 2026 · 33.6M Views 1.3K 1.9K 22K 2.9K X CEO @XCEO_eth 11h Here's what's new in Grok…",
-        "00:00 Made with AI 8 12 33 4.5K ۟ @MINHxDYNASTY 12h we love grok!"
+        "matt palmer @mattyp 21h Here's what's new in Grok @ bot this week 0:08 Voice calls and voice memos 0:35 1Password vault for Grok Bot 0:53 Inline forms 1:07 Inline drafts for email and Slack 1:31 Account switching 1:40 Route traffic through your desktop 00:00 4:35 PM · Sep 23, 2026 · 39.6M Views 1.4K 2.2K 26K 3.4K X CEO @XCEO_eth 18h Here's what's new in Grok…",
+        "00:00 Made with AI 9 13 35 5K ۟ @MINHxDYNASTY 18h we love grok!"
       ],
       "sections": [
         {
@@ -4340,16 +4407,16 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "matt palmer @mattyp 14h Here's what's new in Grok @ bot this week 0:08 Voice calls and voice memos 0:35 1Password vault for Grok Bot 0:53 Inline forms 1:07 Inline drafts for email and Slack 1:31 Account switching 1:40 Route traffic through your desktop 00:00 4:35 PM · Sep 23, 2026 · 33.6M Views 1.3K 1.9K 22K 2.9K X CEO @XCEO_eth 11h Here's what's new in Grok…",
-            "00:00 Made with AI 8 12 33 4.5K ۟ @MINHxDYNASTY 12h we love grok!"
+            "matt palmer @mattyp 21h Here's what's new in Grok @ bot this week 0:08 Voice calls and voice memos 0:35 1Password vault for Grok Bot 0:53 Inline forms 1:07 Inline drafts for email and Slack 1:31 Account switching 1:40 Route traffic through your desktop 00:00 4:35 PM · Sep 23, 2026 · 39.6M Views 1.4K 2.2K 26K 3.4K X CEO @XCEO_eth 18h Here's what's new in Grok…",
+            "00:00 Made with AI 9 13 35 5K ۟ @MINHxDYNASTY 18h we love grok!"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk New Grok @ bot features! matt palmer @mattyp 14h Here's what's new in Grok @ bot this week 0:08 Voice calls and voice memos 0:35 1Password vault for Grok Bot 0:53 Inline forms 1:07 Inline drafts for email and Slack 1:31 Account switching 1:40 Route traffic through your desktop 00:00 4:35 PM · Sep 23, 2026 · 33.6M Views 1.3K 1.9K 22K 2.9K",
-            "X CEO @XCEO_eth 11h Here's what's new in Grok @ bot ! 00:00 Made with AI 8 12 33 4.5K",
-            "۟ @MINHxDYNASTY 12h we love grok! also @ mattyp you have friends lol 3 31 1.7K"
+            "Elon Musk @elonmusk New Grok @ bot features! matt palmer @mattyp 21h Here's what's new in Grok @ bot this week 0:08 Voice calls and voice memos 0:35 1Password vault for Grok Bot 0:53 Inline forms 1:07 Inline drafts for email and Slack 1:31 Account switching 1:40 Route traffic through your desktop 00:00 4:35 PM · Sep 23, 2026 · 39.6M Views 1.4K 2.2K 26K 3.4K",
+            "X CEO @XCEO_eth 18h Here's what's new in Grok @ bot ! 00:00 Made with AI 9 13 35 5K",
+            "۟ @MINHxDYNASTY 18h we love grok! also @ mattyp you have friends lol 3 31 1.8K"
           ]
         }
       ],
@@ -4404,58 +4471,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "b9edee14b304554b",
-      "kind": "social",
-      "title": "Interesting. Grok 4.7 is performing fairly well for a smallish model.",
-      "source": "x.com",
-      "source_url": "https://x.com/elonmusk/status/2102520283618017355",
-      "published_at": "2026-09-22T22:07:53Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Interesting. Grok 4.7 is performing fairly well for a smallish model. x.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/elonmusk/status/2102520283618017355",
-      "key_points": [
-        "Grok 4.7 is performing fairly well for a smallish model.",
-        "Guillermo Rauch @rauchg Sep 22 We ran fresh Next.js evals.",
-        "The tally: ① Opus 5.5 [𝟿𝟽%] ② GPT 6 Sol [𝟿𝟽%] ③ Fable 5.1 [𝟿𝟽%] ④ Grok 4.7 [𝟿𝟺%] Notably, Grok is 2x-7x cheaper 10:07 PM · Sep 22, 2026 · 5.4M Views 1.7K 1.4K 12K 445 Rudy @RudyXFantasy Sep 23 You literally said Grok 4.7 will blow every other model out the water.",
-        "11 3 117 5.3K BridgeMind @bridgemindai Sep 22 Grok 4.7 is very small compared to the frontier.",
-        "What you have done with 2.1T parameters is impressive."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Interesting. Grok 4.7 is performing fairly well for a smallish model. x.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Grok 4.7 is performing fairly well for a smallish model.",
-            "Guillermo Rauch @rauchg Sep 22 We ran fresh Next.js evals.",
-            "The tally: ① Opus 5.5 [𝟿𝟽%] ② GPT 6 Sol [𝟿𝟽%] ③ Fable 5.1 [𝟿𝟽%] ④ Grok 4.7 [𝟿𝟺%] Notably, Grok is 2x-7x cheaper 10:07 PM · Sep 22, 2026 · 5.4M Views 1.7K 1.4K 12K 445 Rudy @RudyXFantasy Sep 23 You literally said Grok 4.7 will blow every other model out the water.",
-            "11 3 117 5.3K BridgeMind @bridgemindai Sep 22 Grok 4.7 is very small compared to the frontier.",
-            "What you have done with 2.1T parameters is impressive."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Elon Musk @elonmusk Interesting. Grok 4.7 is performing fairly well for a smallish model. Guillermo Rauch @rauchg Sep 22 We ran fresh Next.js evals. The tally: ① Opus 5.5 [𝟿𝟽%] ② GPT 6 Sol [𝟿𝟽%] ③ Fable 5.1 [𝟿𝟽%] ④ Grok 4.7 [𝟿𝟺%] Notably, Grok is 2x-7x cheaper 10:07 PM · Sep 22, 2026 · 5.4M Views 1.7K 1.4K 12K 445",
-            "Rudy @RudyXFantasy Sep 23 You literally said Grok 4.7 will blow every other model out the water. Now it's a smallish model? 11 3 117 5.3K",
-            "BridgeMind @bridgemindai Sep 22 Grok 4.7 is very small compared to the frontier. Very excited for you guys to scale up! What you have done with 2.1T parameters is impressive. 7 1 69 5.3K"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "8fad5f96cf88a620",
       "kind": "article",
       "title": "Watch What's Next After ChatGPT? Fei-Fei Li Has a Plan",
@@ -4491,6 +4506,55 @@
         {
           "title": "原文短摘录",
           "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "f45ea6e0f86707bc",
+      "kind": "article",
+      "title": "As billions flood college sports, one AI startup sees an opening",
+      "source": "Central Oregon Daily",
+      "source_url": "https://www.centraloregondaily.com/sports/as-billions-flood-college-sports-one-ai-startup-sees-an-opening/article_5d4368e0-da53-57a1-b357-1a233b7cce81.html",
+      "published_at": "2026-09-24T08:38:26Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "As billions flood college sports, one AI startup sees an opening Central Oregon Daily",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.centraloregondaily.com/sports/as-billions-flood-college-sports-one-ai-startup-sees-an-opening/article_5d4368e0-da53-57a1-b357-1a233b7cce81.html",
+      "key_points": [
+        "Time is money in college athletics, and that reality has never been more apparent.",
+        "Like a Topps Now trading card designed to capitalize on the moment, athletics departments are constantly searching for ways to generate, grow and maximize revenue.",
+        "As the Protect College Sports Act nears a final vote on the Senate floor, potentially as soon as this week according to officials in Washington, D.C., who spoke to USA TODAY Sports on the condition of anonymity to discuss the legislative timeline, schools are navigating today's turbulent landscape while preparing for a future in which as much as $45 million…",
+        "Amid that uncertainty, a new company is looking to carve out a role in the industry: Benchmark."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "As billions flood college sports, one AI startup sees an opening Central Oregon Daily"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Time is money in college athletics, and that reality has never been more apparent.",
+            "Like a Topps Now trading card designed to capitalize on the moment, athletics departments are constantly searching for ways to generate, grow and maximize revenue.",
+            "As the Protect College Sports Act nears a final vote on the Senate floor, potentially as soon as this week according to officials in Washington, D.C., who spoke to USA TODAY Sports on the condition of anonymity to discuss the legislative timeline, schools are navigating today's turbulent landscape while preparing for a future in which as much as $45 million…",
+            "Amid that uncertainty, a new company is looking to carve out a role in the industry: Benchmark."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Time is money in college athletics, and that reality has never been more apparent. Like a Topps Now trading card designed to capitalize on the moment, athletics departments are constantly searching for ways to generate, grow and maximize revenue.",
+            "As the Protect College Sports Act nears a final vote on the Senate floor, potentially as soon as this week according to officials in Washington, D.C., who spoke to USA TODAY Sports on the condition of anonymity to discuss the legislative timeline, schools are navigating today's turbulent landscape while preparing for a future in which as much as $45 million in school-funded roster spending could arrive as soon as next summer.",
+            "Amid that uncertainty, a new company is looking to carve out a role in the industry: Benchmark."
+          ]
         }
       ],
       "reading_minutes": 1
@@ -4571,6 +4635,57 @@
         {
           "title": "原文短摘录",
           "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "57d52e30af1fc6fe",
+      "kind": "article",
+      "title": "Inside Basecamp Research, the AI startup turning evolution into training data",
+      "source": "the-decoder.com",
+      "source_url": "https://the-decoder.com/inside-basecamp-research-the-ai-startup-turning-evolution-into-training-data/",
+      "published_at": "2026-09-23T13:57:12Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Basecamp Research has raised $140 million from investors including Nvidia and Anthropic's Anthology Fund. The London company trains AI models on genetic material from rainforests, oceans, and hot springs to design antibiotics and tools for cell therapies. In an interview with THE DECODER, CTO Philip Lorenz explains why biology is a far bigger problem for AI than language, and why good scores on paper don't guarantee good molecules.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://the-decoder.com/inside-basecamp-research-the-ai-startup-turning-evolution-into-training-data/",
+      "key_points": [
+        "Basecamp Research has raised $140 million from investors including Nvidia and Anthropic's Anthology Fund.",
+        "The London company trains AI models on genetic material from rainforests, oceans, and hot springs to design antibiotics and tools for cell therapies.",
+        "In an interview with THE DECODER, CTO Philip Lorenz explains why biology is a far bigger problem for AI than language, and why good scores on paper don't guarantee good molecules.",
+        "According to the company, investor S32 led the round.",
+        "Nvidia, Anthropic's Anthology Fund, the NATO Innovation Fund, and Redalpine also took part, among others."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Basecamp Research has raised $140 million from investors including Nvidia and Anthropic's Anthology Fund. The London company trains AI models on genetic material from rainforests, oceans, and hot springs to design antibiotics and tools for cell therapies. In an interview with THE DECODER, CTO Philip Lorenz explains why biology is a far bigger problem for AI than language, and why good scores on paper don't guarantee good molecules."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Basecamp Research has raised $140 million from investors including Nvidia and Anthropic's Anthology Fund.",
+            "The London company trains AI models on genetic material from rainforests, oceans, and hot springs to design antibiotics and tools for cell therapies.",
+            "In an interview with THE DECODER, CTO Philip Lorenz explains why biology is a far bigger problem for AI than language, and why good scores on paper don't guarantee good molecules.",
+            "According to the company, investor S32 led the round.",
+            "Nvidia, Anthropic's Anthology Fund, the NATO Innovation Fund, and Redalpine also took part, among others."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Basecamp Research has raised $140 million from investors including Nvidia and Anthropic's Anthology Fund. The London company trains AI models on genetic material from rainforests, oceans, and hot springs to design antibiotics and tools for cell therapies. In an interview with THE DECODER, CTO Philip Lorenz explains why biology is a far bigger problem for AI than language, and why good scores on paper don't guarantee good molecules.",
+            "According to the company, investor S32 led the round. Nvidia, Anthropic's Anthology Fund, the NATO Innovation Fund, and Redalpine also took part, among others.",
+            "Founded in 2020, Basecamp plans to use the money to keep developing its biological AI models, called EDEN , and to push its own therapy candidates toward clinical development. Cell therapies come first. These treatments genetically modify a patient's cells so they can fight cancer, for example. Basecamp wants to make that change directly inside the body."
+          ]
         }
       ],
       "reading_minutes": 1
@@ -4988,46 +5103,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "471d2f47d892d7de",
-      "kind": "article",
-      "title": "EXCLUSIVE: US, China gear up for mid-September AI safety talks",
-      "source": "Reuters",
-      "source_url": "https://www.reuters.com/legal/litigation/us-china-gear-up-mid-september-ai-safety-dialogue-2026-09-04/",
-      "published_at": "2026-09-04T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "EXCLUSIVE: US, China gear up for mid-September AI safety talks Reuters",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 401: HTTP Forbidden",
-      "resolved_url": "https://www.reuters.com/legal/litigation/us-china-gear-up-mid-september-ai-safety-dialogue-2026-09-04/",
-      "key_points": [
-        "EXCLUSIVE: US, China gear up for mid-September AI safety talks Reuters"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "EXCLUSIVE: US, China gear up for mid-September AI safety talks Reuters"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "EXCLUSIVE: US, China gear up for mid-September AI safety talks Reuters"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "96f38cfa351a27f7",
       "kind": "article",
       "title": "The Incredibly Inspiring Startup Story of Dr. Fei-Fei Li and World Labs - Startup Fortune",
@@ -5177,12 +5252,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "496cf8c9146fb42b",
+      "id": "a11aaeeda57f82ae",
       "kind": "article",
-      "title": "Why the Hugging Face Hack Should Make You Worry More About A.I.",
+      "title": "Corporate America Is Getting Hooked on Open-Source A.I.",
       "source": "The New York Times",
-      "source_url": "https://www.nytimes.com/2026/09/03/technology/openai-hugging-face-hacking.html",
-      "published_at": "2026-09-03T07:00:00Z",
+      "source_url": "https://www.nytimes.com/2026/09/04/technology/open-source-ai-anthropic-openai.html",
+      "published_at": "2026-09-04T07:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -5190,23 +5265,23 @@
         "Models & Tools"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Why the Hugging Face Hack Should Make You Worry More About A.I. The New York Times",
+      "summary": "Corporate America Is Getting Hooked on Open-Source A.I. The New York Times",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "summary-only",
       "fetch_note": "HTTP Error 403: Forbidden",
-      "resolved_url": "https://www.nytimes.com/2026/09/03/technology/openai-hugging-face-hacking.html",
+      "resolved_url": "https://www.nytimes.com/2026/09/04/technology/open-source-ai-anthropic-openai.html",
       "key_points": [
-        "Why the Hugging Face Hack Should Make You Worry More About A.I."
+        "Corporate America Is Getting Hooked on Open-Source A.I."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Why the Hugging Face Hack Should Make You Worry More About A.I. The New York Times"
+          "body": "Corporate America Is Getting Hooked on Open-Source A.I. The New York Times"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Why the Hugging Face Hack Should Make You Worry More About A.I."
+            "Corporate America Is Getting Hooked on Open-Source A.I."
           ]
         },
         {
@@ -5299,100 +5374,6 @@
         {
           "title": "原文短摘录",
           "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "ee1cdd8efc6ce62f",
-      "kind": "article",
-      "title": "Homebuilding AI startup Digs raises $25.3M and partners with building products giant",
-      "source": "GeekWire",
-      "source_url": "https://www.geekwire.com/2026/homebuilding-ai-startup-digs-raises-25-3m-and-partners-with-building-products-giant/",
-      "published_at": "2026-08-25T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Homebuilding AI startup Digs raises $25.3M and partners with building products giant GeekWire",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.geekwire.com/2026/homebuilding-ai-startup-digs-raises-25-3m-and-partners-with-building-products-giant/",
-      "key_points": [
-        "by Kurt Schlosser on Aug 25, 2026 at 3:30 am August 24, 2026 at 2:34 pm Digs , a Vancouver, Wash.-based startup building AI software for residential construction, raised $25.3 million in Series A funding led by building products giant Builders FirstSource , the companies announced Tuesday.",
-        "Under the five-year agreement, Builders FirstSource will integrate Digs’ AI platform into its digital ecosystem, expanding tools for its 140,000 builder clients.",
-        "The technology streamlines everything from pre-construction estimates and blueprint collaboration to post-move-in home maintenance and warranty care for homeowners."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Homebuilding AI startup Digs raises $25.3M and partners with building products giant GeekWire"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "by Kurt Schlosser on Aug 25, 2026 at 3:30 am August 24, 2026 at 2:34 pm Digs , a Vancouver, Wash.-based startup building AI software for residential construction, raised $25.3 million in Series A funding led by building products giant Builders FirstSource , the companies announced Tuesday.",
-            "Under the five-year agreement, Builders FirstSource will integrate Digs’ AI platform into its digital ecosystem, expanding tools for its 140,000 builder clients.",
-            "The technology streamlines everything from pre-construction estimates and blueprint collaboration to post-move-in home maintenance and warranty care for homeowners."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "by Kurt Schlosser on Aug 25, 2026 at 3:30 am August 24, 2026 at 2:34 pm",
-            "Digs , a Vancouver, Wash.-based startup building AI software for residential construction, raised $25.3 million in Series A funding led by building products giant Builders FirstSource , the companies announced Tuesday.",
-            "Under the five-year agreement, Builders FirstSource will integrate Digs’ AI platform into its digital ecosystem, expanding tools for its 140,000 builder clients. The technology streamlines everything from pre-construction estimates and blueprint collaboration to post-move-in home maintenance and warranty care for homeowners."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "861e9fe4ce02d5b1",
-      "kind": "article",
-      "title": "Moonshot AI: what the Chinese AI startup does and builds",
-      "source": "qz.com",
-      "source_url": "https://qz.com/what-is-moonshot-ai",
-      "published_at": "2026-08-25T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Moonshot AI: what the Chinese AI startup does and builds qz.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://qz.com/what-is-moonshot-ai",
-      "key_points": [
-        "Moonshot AI is the Beijing-based startup behind the Kimi family of AI models, known for its long-context language capabilities Beijing-based Moonshot AI has grown into one of China's most valuable AI startups, known for its Kimi models capable of processing unusually long text sequences.",
-        "Moonshot AI is a Chinese artificial intelligence company headquartered in Beijing that develops large language models — AI systems trained on vast amounts of text to generate and process human language.",
-        "The company is best known for its Kimi series of models, which have drawn attention for their ability to handle exceptionally long input sequences, meaning they can process far more text in a single query than many competing systems."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Moonshot AI: what the Chinese AI startup does and builds qz.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Moonshot AI is the Beijing-based startup behind the Kimi family of AI models, known for its long-context language capabilities Beijing-based Moonshot AI has grown into one of China's most valuable AI startups, known for its Kimi models capable of processing unusually long text sequences.",
-            "Moonshot AI is a Chinese artificial intelligence company headquartered in Beijing that develops large language models — AI systems trained on vast amounts of text to generate and process human language.",
-            "The company is best known for its Kimi series of models, which have drawn attention for their ability to handle exceptionally long input sequences, meaning they can process far more text in a single query than many competing systems."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Moonshot AI is the Beijing-based startup behind the Kimi family of AI models, known for its long-context language capabilities",
-            "Beijing-based Moonshot AI has grown into one of China's most valuable AI startups, known for its Kimi models capable of processing unusually long text sequences.",
-            "Moonshot AI is a Chinese artificial intelligence company headquartered in Beijing that develops large language models — AI systems trained on vast amounts of text to generate and process human language. The company is best known for its Kimi series of models, which have drawn attention for their ability to handle exceptionally long input sequences, meaning they can process far more text in a single query than many competing systems."
-          ]
         }
       ],
       "reading_minutes": 1
@@ -5542,7 +5523,7 @@
       "id": "2aa2ac900230a79f",
       "kind": "article",
       "title": "Where do the candidates for California governor stand on AI regulations?",
-      "source": "CalMatters",
+      "source": "calmatters.org",
       "source_url": "https://calmatters.org/politics/2026/09/california-governor-race-ai-safety/",
       "published_at": "2026-09-18T20:48:43Z",
       "authors": [],
@@ -5552,7 +5533,7 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Where do the candidates for California governor stand on AI regulations? CalMatters",
+      "summary": "Where do the candidates for California governor stand on AI regulations? calmatters.org",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://calmatters.org/politics/2026/09/california-governor-race-ai-safety/",
@@ -5566,7 +5547,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "Where do the candidates for California governor stand on AI regulations? CalMatters"
+          "body": "Where do the candidates for California governor stand on AI regulations? calmatters.org"
         },
         {
           "title": "公开页面要点",
@@ -5590,10 +5571,50 @@
       "reading_minutes": 1
     },
     {
+      "id": "b2ba45ab3e051baf",
+      "kind": "article",
+      "title": "Senate AI safety bill’s path forward remains unclear",
+      "source": "Politico",
+      "source_url": "https://www.politico.com/news/2026/09/11/klobuchar-thune-ai-safety-bill-faces-impasse-01073026",
+      "published_at": "2026-09-11T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Senate AI safety bill’s path forward remains unclear Politico",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://www.politico.com/news/2026/09/11/klobuchar-thune-ai-safety-bill-faces-impasse-01073026",
+      "key_points": [
+        "Senate AI safety bill’s path forward remains unclear Politico"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Senate AI safety bill’s path forward remains unclear Politico"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Senate AI safety bill’s path forward remains unclear Politico"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "b20c099714e81635",
       "kind": "article",
       "title": "The AI safety vibe shift",
-      "source": "platformer.news",
+      "source": "Platformer",
       "source_url": "https://www.platformer.news/ai-safety-vibe-shift-coxon-anthropic/",
       "published_at": "2026-09-10T07:00:00Z",
       "authors": [],
@@ -5603,7 +5624,7 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "The AI safety vibe shift platformer.news",
+      "summary": "The AI safety vibe shift Platformer",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.platformer.news/ai-safety-vibe-shift-coxon-anthropic/",
@@ -5617,7 +5638,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "The AI safety vibe shift platformer.news"
+          "body": "The AI safety vibe shift Platformer"
         },
         {
           "title": "公开页面要点",
@@ -5659,9 +5680,8 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.nbcnews.com/tech/security/two-ai-researchers-leave-anthropic-google-safety-concerns-rcna597086",
       "key_points": [
-        "Citing fears that AI systems may soon spiral out of human control and potentially kill all humans, two more researchers from Anthropic and Google DeepMind who recently left their coveted positions are sounding the alarm about risks from advanced AI systems.",
-        "Joe Benton, who used to lead a safety research team at Anthropic, and Josh Engels, who used to work on AI safety research at Google, told NBC News in their first interviews since they left that they see an urgent need to boost transparency about incidents at the cutting edge of AI given the rapid pace of AI development.",
-        "Advances in AI research “could speed up the pace of progress from merely blistering at the minute to uncontrollable” rates of development, Benton said in an interview with Tom Llamas."
+        "Morning Rundown: Judge says Trump media ban likely unconstitutional, a red carpet welcome for China’s Xi, and FDA’s peptide warning Citing fears that AI systems may soon spiral out of human control and potentially kill all humans, two more researchers from Anthropic and Google DeepMind who recently left their coveted positions are sounding the alarm about…",
+        "Joe Benton, who used to lead a safety research team at Anthropic, and Josh Engels, who used to work on AI safety research at Google, told NBC News in their first interviews since they left that they see an urgent need to boost transparency about incidents at the cutting edge of AI given the rapid pace of AI development."
       ],
       "sections": [
         {
@@ -5671,17 +5691,16 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Citing fears that AI systems may soon spiral out of human control and potentially kill all humans, two more researchers from Anthropic and Google DeepMind who recently left their coveted positions are sounding the alarm about risks from advanced AI systems.",
-            "Joe Benton, who used to lead a safety research team at Anthropic, and Josh Engels, who used to work on AI safety research at Google, told NBC News in their first interviews since they left that they see an urgent need to boost transparency about incidents at the cutting edge of AI given the rapid pace of AI development.",
-            "Advances in AI research “could speed up the pace of progress from merely blistering at the minute to uncontrollable” rates of development, Benton said in an interview with Tom Llamas."
+            "Morning Rundown: Judge says Trump media ban likely unconstitutional, a red carpet welcome for China’s Xi, and FDA’s peptide warning Citing fears that AI systems may soon spiral out of human control and potentially kill all humans, two more researchers from Anthropic and Google DeepMind who recently left their coveted positions are sounding the alarm about…",
+            "Joe Benton, who used to lead a safety research team at Anthropic, and Josh Engels, who used to work on AI safety research at Google, told NBC News in their first interviews since they left that they see an urgent need to boost transparency about incidents at the cutting edge of AI given the rapid pace of AI development."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
+            "Morning Rundown: Judge says Trump media ban likely unconstitutional, a red carpet welcome for China’s Xi, and FDA’s peptide warning",
             "Citing fears that AI systems may soon spiral out of human control and potentially kill all humans, two more researchers from Anthropic and Google DeepMind who recently left their coveted positions are sounding the alarm about risks from advanced AI systems.",
-            "Joe Benton, who used to lead a safety research team at Anthropic, and Josh Engels, who used to work on AI safety research at Google, told NBC News in their first interviews since they left that they see an urgent need to boost transparency about incidents at the cutting edge of AI given the rapid pace of AI development.",
-            "Advances in AI research “could speed up the pace of progress from merely blistering at the minute to uncontrollable” rates of development, Benton said in an interview with Tom Llamas."
+            "Joe Benton, who used to lead a safety research team at Anthropic, and Josh Engels, who used to work on AI safety research at Google, told NBC News in their first interviews since they left that they see an urgent need to boost transparency about incidents at the cutting edge of AI given the rapid pace of AI development."
           ]
         }
       ],
@@ -5728,12 +5747,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "077b607f17a28c0f",
+      "id": "55ed709e6a8eff6c",
       "kind": "article",
-      "title": "Exclusive: New bill cracks down on AI agents after Hugging Face breach",
-      "source": "Congressman Mike Lawler (.gov)",
-      "source_url": "https://lawler.house.gov/news/documentsingle.aspx?DocumentID=6424",
-      "published_at": "2026-09-03T07:00:00Z",
+      "title": "AFT, UFT and Microsoft announce ‘National AI Safety & Privacy Standard’ for schools to protect students, families and educators",
+      "source": "Microsoft Source",
+      "source_url": "https://news.microsoft.com/source/2026/09/09/aft-uft-and-microsoft-announce-national-ai-safety-privacy-standard-for-schools-to-protect-students-families-and-educators/",
+      "published_at": "2026-09-09T07:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -5741,34 +5760,34 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Exclusive: New bill cracks down on AI agents after Hugging Face breach Congressman Mike Lawler (.gov)",
+      "summary": "AFT, UFT and Microsoft announce ‘National AI Safety & Privacy Standard’ for schools to protect students, families and educators Microsoft Source",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://lawler.house.gov/news/documentsingle.aspx?DocumentID=6424",
+      "resolved_url": "https://news.microsoft.com/source/2026/09/09/aft-uft-and-microsoft-announce-national-ai-safety-privacy-standard-for-schools-to-protect-students-families-and-educators/",
       "key_points": [
-        "Josh Gottheimer (D-N.J.) and Mike Lawler (R-N.Y.) are introducing a new bill Thursday, first shared with Axios, aimed at securing AI agents amid a growing number of safety incidents involving rogue agents.",
-        "Why it matters: Washington has been slow to respond to the safety and security concerns raised by OpenAI's Hugging Face hack and other testing incidents involving agents that took unauthorized actions over the last two months.",
-        "Driving the news: The Stop Rogue AI Act directs Commerce's National Institute of Standards and Technology to develop and publish standards, guidelines and best practices for how organizations can securely deploy AI agents."
+        "9, 2026 — After months of intense negotiations and in the absence of any meaningful federal and state rules governing artificial intelligence in schools, AFT President Randi Weingarten, United Federation of Teachers President Michael Mulgrew, and Microsoft Vice Chair and President Brad Smith today announced a “ National AI Safety & Privacy Standard ”…",
+        "The first-of-its-kind agreement on the heels of New York City Public Schools’ screens and AI ban, ensures that tech companies cannot use student data to train AI, students can never be tracked, AI cannot make decisions without human oversight, and companies must give educators and parents transparency and plain-language answers about how their tools work.",
+        "U.S. school districts can incorporate these protections directly into their Microsoft customer agreements, making them contractually enforceable. “We have forged a hard-fought, iron-clad privacy agreement with real teeth that protects students and families, because no one else, including the federal government, has stepped up to do the real work,” Weingarten…"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Exclusive: New bill cracks down on AI agents after Hugging Face breach Congressman Mike Lawler (.gov)"
+          "body": "AFT, UFT and Microsoft announce ‘National AI Safety & Privacy Standard’ for schools to protect students, families and educators Microsoft Source"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Josh Gottheimer (D-N.J.) and Mike Lawler (R-N.Y.) are introducing a new bill Thursday, first shared with Axios, aimed at securing AI agents amid a growing number of safety incidents involving rogue agents.",
-            "Why it matters: Washington has been slow to respond to the safety and security concerns raised by OpenAI's Hugging Face hack and other testing incidents involving agents that took unauthorized actions over the last two months.",
-            "Driving the news: The Stop Rogue AI Act directs Commerce's National Institute of Standards and Technology to develop and publish standards, guidelines and best practices for how organizations can securely deploy AI agents."
+            "9, 2026 — After months of intense negotiations and in the absence of any meaningful federal and state rules governing artificial intelligence in schools, AFT President Randi Weingarten, United Federation of Teachers President Michael Mulgrew, and Microsoft Vice Chair and President Brad Smith today announced a “ National AI Safety & Privacy Standard ”…",
+            "The first-of-its-kind agreement on the heels of New York City Public Schools’ screens and AI ban, ensures that tech companies cannot use student data to train AI, students can never be tracked, AI cannot make decisions without human oversight, and companies must give educators and parents transparency and plain-language answers about how their tools work.",
+            "U.S. school districts can incorporate these protections directly into their Microsoft customer agreements, making them contractually enforceable. “We have forged a hard-fought, iron-clad privacy agreement with real teeth that protects students and families, because no one else, including the federal government, has stepped up to do the real work,” Weingarten…"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Reps. Josh Gottheimer (D-N.J.) and Mike Lawler (R-N.Y.) are introducing a new bill Thursday, first shared with Axios, aimed at securing AI agents amid a growing number of safety incidents involving rogue agents.",
-            "Why it matters: Washington has been slow to respond to the safety and security concerns raised by OpenAI's Hugging Face hack and other testing incidents involving agents that took unauthorized actions over the last two months.",
-            "Driving the news: The Stop Rogue AI Act directs Commerce's National Institute of Standards and Technology to develop and publish standards, guidelines and best practices for how organizations can securely deploy AI agents."
+            "NEW YORK — Sept. 9, 2026 — After months of intense negotiations and in the absence of any meaningful federal and state rules governing artificial intelligence in schools, AFT President Randi Weingarten, United Federation of Teachers President Michael Mulgrew, and Microsoft Vice Chair and President Brad Smith today announced a “ National AI Safety & Privacy Standard ” establishing legally enforceable protections to ensure the safety of students, families and educators.",
+            "The first-of-its-kind agreement on the heels of New York City Public Schools’ screens and AI ban, ensures that tech companies cannot use student data to train AI, students can never be tracked, AI cannot make decisions without human oversight, and companies must give educators and parents transparency and plain-language answers about how their tools work. U.S. school districts can incorporate these protections directly into their Microsoft customer agreements, making them contractually enforceable.",
+            "“We have forged a hard-fought, iron-clad privacy agreement with real teeth that protects students and families, because no one else, including the federal government, has stepped up to do the real work,” Weingarten said. “We can get angrier and angrier, or we can act decisively; anything less than legally enforceable provisions is simply a wish list.”"
           ]
         }
       ],
@@ -5872,7 +5891,7 @@
       "id": "4edcb180395ae998",
       "kind": "article",
       "title": "The OpenAI-Hugging Face hack was just the beginning, experts say: \"Even more powerful\" AI is coming",
-      "source": "cbsnews.com",
+      "source": "CBS News",
       "source_url": "https://www.cbsnews.com/news/openai-hugging-face-hack-ai-risks/",
       "published_at": "2026-09-10T07:00:00Z",
       "authors": [],
@@ -5882,7 +5901,7 @@
         "Models & Tools"
       ],
       "verification": "媒体或公开网页",
-      "summary": "The OpenAI-Hugging Face hack was just the beginning, experts say: \"Even more powerful\" AI is coming cbsnews.com",
+      "summary": "The OpenAI-Hugging Face hack was just the beginning, experts say: \"Even more powerful\" AI is coming CBS News",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.cbsnews.com/news/openai-hugging-face-hack-ai-risks/",
@@ -5895,7 +5914,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "The OpenAI-Hugging Face hack was just the beginning, experts say: \"Even more powerful\" AI is coming cbsnews.com"
+          "body": "The OpenAI-Hugging Face hack was just the beginning, experts say: \"Even more powerful\" AI is coming CBS News"
         },
         {
           "title": "公开页面要点",
