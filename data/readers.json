@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-25T21:33:11Z",
+  "generated_at": "2026-09-26T04:55:09Z",
   "record_count": 132,
   "records": [
     {
@@ -190,45 +190,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "69a6dff164ab81f4",
-      "kind": "article",
-      "title": "AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome",
-      "source": "Google DeepMind",
-      "source_url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
-      "published_at": "2026-09-08T14:00:15Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "DeepMind",
-        "Official"
-      ],
-      "verification": "官方来源",
-      "summary": "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "resolved_url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
-      "key_points": [
-        "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "shunyu-yao-agent-watch",
       "kind": "article",
       "title": "人物雷达：姚顺雨的语言智能体、推理与计算机操作研究",
@@ -268,6 +229,45 @@
             "Deep Research OpenAI An agent that navigates and reasons over the Internet to research for you. product | blogpost",
             "τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains Shunyu Yao, Noah Shinn, Pedram Razavi, Karthik Narasimhan ICLR 2025 paper | repo | blog"
           ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "69a6dff164ab81f4",
+      "kind": "article",
+      "title": "AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome",
+      "source": "Google DeepMind",
+      "source_url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
+      "published_at": "2026-09-08T14:00:15Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "DeepMind",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "resolved_url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
+      "key_points": [
+        "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -324,7 +324,7 @@
       "title": "Claude computes a nine-loop amplitude in N=4 super-Yang-Mills",
       "source": "Anthropic",
       "source_url": "https://www.anthropic.com/research/yes-claude-can-do-nine-loops",
-      "published_at": "2026-09-25T19:07:07Z",
+      "published_at": "2026-09-25T21:38:13Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -561,6 +561,51 @@
         }
       ],
       "reading_minutes": 1
+    },
+    {
+      "id": "rhb-icml-2026",
+      "kind": "paper",
+      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
+      "source": "OpenReview · arXiv",
+      "source_url": "https://arxiv.org/abs/2605.02964",
+      "published_at": "2026-06-24T00:00:00Z",
+      "authors": [
+        "Kunvar Thaman"
+      ],
+      "venue": "ICML 2026",
+      "tags": [
+        "Reward Hacking",
+        "Agent Safety",
+        "Evaluation"
+      ],
+      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
+      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/rhb-icml-2026.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://arxiv.org/pdf/2605.02964",
+      "key_points": [
+        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
+        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
+        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
+        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
+        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
+        },
+        {
+          "title": "关键结果",
+          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
+        },
+        {
+          "title": "局限与结论",
+          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
+        }
+      ],
+      "reading_minutes": 46
     },
     {
       "id": "5e764aef20769f8b",
@@ -943,51 +988,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "rhb-icml-2026",
-      "kind": "paper",
-      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
-      "source": "OpenReview · arXiv",
-      "source_url": "https://arxiv.org/abs/2605.02964",
-      "published_at": "2026-06-24T00:00:00Z",
-      "authors": [
-        "Kunvar Thaman"
-      ],
-      "venue": "ICML 2026",
-      "tags": [
-        "Reward Hacking",
-        "Agent Safety",
-        "Evaluation"
-      ],
-      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
-      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/rhb-icml-2026.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://arxiv.org/pdf/2605.02964",
-      "key_points": [
-        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
-        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
-        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
-        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
-        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
-        },
-        {
-          "title": "关键结果",
-          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
-        },
-        {
-          "title": "局限与结论",
-          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
-        }
-      ],
-      "reading_minutes": 46
-    },
-    {
       "id": "d6929f4cf8cf33a6",
       "kind": "article",
       "title": "ChatGPT Ads expands to Southeast Asia and Taiwan",
@@ -1208,12 +1208,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "3cb8bc319ea7e4e6",
+      "id": "1a54cee0659df5fd",
       "kind": "article",
-      "title": "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program",
-      "source": "Reuters",
-      "source_url": "https://www.reuters.com/world/anthropic-quietly-sets-up-biology-lab-it-ramps-ai-drug-program-2026-09-18/",
-      "published_at": "2026-09-20T10:05:55Z",
+      "title": "A.I. Agents as ‘Co-Scientists’? This Lab Says They Could Speed Drug Research.",
+      "source": "The New York Times",
+      "source_url": "https://www.nytimes.com/2026/09/17/well/ai-drug-discovery-stanford.html",
+      "published_at": "2026-09-21T07:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -1222,23 +1222,23 @@
         "Applied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program Reuters",
+      "summary": "A.I. Agents as ‘Co-Scientists’? This Lab Says They Could Speed Drug Research. The New York Times",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 401: HTTP Forbidden",
-      "resolved_url": "https://www.reuters.com/world/anthropic-quietly-sets-up-biology-lab-it-ramps-ai-drug-program-2026-09-18/",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://www.nytimes.com/2026/09/17/well/ai-drug-discovery-stanford.html",
       "key_points": [
-        "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program Reuters"
+        "This Lab Says They Could Speed Drug Research."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program Reuters"
+          "body": "A.I. Agents as ‘Co-Scientists’? This Lab Says They Could Speed Drug Research. The New York Times"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program Reuters"
+            "This Lab Says They Could Speed Drug Research."
           ]
         },
         {
@@ -1301,6 +1301,128 @@
       "reading_minutes": 1
     },
     {
+      "id": "3cb8bc319ea7e4e6",
+      "kind": "article",
+      "title": "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program",
+      "source": "reuters.com",
+      "source_url": "https://www.reuters.com/world/anthropic-quietly-sets-up-biology-lab-it-ramps-ai-drug-program-2026-09-18/",
+      "published_at": "2026-09-18T10:02:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program reuters.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 401: HTTP Forbidden",
+      "resolved_url": "https://www.reuters.com/world/anthropic-quietly-sets-up-biology-lab-it-ramps-ai-drug-program-2026-09-18/",
+      "key_points": [
+        "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program reuters.com"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program reuters.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program reuters.com"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "37db2441d5a89592",
+      "kind": "article",
+      "title": "Medical AI has a proof problem",
+      "source": "Financial Times",
+      "source_url": "https://www.ft.com/content/34319b00-f874-4119-aa28-8376d81e7190?syn-25a6b1a6=1",
+      "published_at": "2026-09-18T04:02:15Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Medical AI has a proof problem Financial Times",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://www.ft.com/content/34319b00-f874-4119-aa28-8376d81e7190?syn-25a6b1a6=1",
+      "key_points": [
+        "Medical AI has a proof problem Financial Times"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Medical AI has a proof problem Financial Times"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Medical AI has a proof problem Financial Times"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "18e6077a2a00ac47",
+      "kind": "article",
+      "title": "AI热点汇总| 腾讯元宝 鸿蒙版上线:首发搭载 混元 Hy4 preview,专家模式同步开放",
+      "source": "微信公众号 · AING大本营",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1790398473&ver=6989&signature=4E2OmDSpZbbdy7aNHpJH5KNYiR9AztnWwOFqiN5em9i6prcpAwHF40mLOTL*dk3gJ5VbZtp4i00uZ8yzqZHfBlzDHPspWLj2XgX4HUHCp88yf70RM-xtCUuKxn7tP8cR&new=1",
+      "published_at": "2026-09-26T04:11:28Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "微信公众号",
+        "腾讯",
+        "元宝"
+      ],
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "summary": "海外,微软 发布 新一代 Copilot 应用,把 Chat、Cowork、Code 与... 腾讯元宝 鸿蒙版上线并首发 混元 Hy4 preview,阿里云 Wan 3.0 把...",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "indexed-summary",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HBJQt2qjtCPxMzxf7E8FvPGIaqgGsC7cq9vD2PQF&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1790398473%26ver%3D6989%26signature%3D4E2OmDSpZbbdy7aNHpJH5KNYiR9AztnWwOFqiN5em9i6prcpAwHF40mLOTL%2Adk3gJ5VbZtp4i00uZ8yzqZHfBlzDHPspWLj2XgX4HUHCp88yf70RM-xtCUuKxn7tP8cR%26new%3D1",
+      "key_points": [
+        "海外,微软 发布 新一代 Copilot 应用,把 Chat、Cowork、Code 与... 腾讯元宝 鸿蒙版上线并首发 混元 Hy4 preview,阿里云 Wan 3.0 把..."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "海外,微软 发布 新一代 Copilot 应用,把 Chat、Cowork、Code 与... 腾讯元宝 鸿蒙版上线并首发 混元 Hy4 preview,阿里云 Wan 3.0 把..."
+        },
+        {
+          "title": "公开索引摘要",
+          "bullets": [
+            "海外,微软 发布 新一代 Copilot 应用,把 Chat、Cowork、Code 与... 腾讯元宝 鸿蒙版上线并首发 混元 Hy4 preview,阿里云 Wan 3.0 把..."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "850e451d6d4d7efd",
       "kind": "article",
       "title": "Google Beam expands with new regions, partners, and customers",
@@ -1352,58 +1474,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "1cce0f1310e1dcef",
-      "kind": "article",
-      "title": "Offloaded inference for real-world physical AI robotics",
-      "source": "Microsoft Research",
-      "source_url": "https://www.microsoft.com/en-us/research/blog/offloaded-inference-for-real-world-physical-ai-robotics/",
-      "published_at": "2026-09-23T16:01:36Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Microsoft",
-        "Research"
-      ],
-      "verification": "官方来源",
-      "summary": "Robots are getting smarter, but how can their hardware match that growth? New Microsoft Research findings show that moving AI inference beyond the robot can improve task success, boost efficiency, and support more advanced physical AI workloads. The post Offloaded inference for real-world physical AI robotics appeared first on Microsoft Research .",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.microsoft.com/en-us/research/blog/offloaded-inference-for-real-world-physical-ai-robotics/",
-      "key_points": [
-        "Challenges a core assumption in robotics AI: Our research shows that running physical AI inference exclusively on onboard GPUs can limit robot performance, battery life, and scalability, and that offloading inference to edge or cloud GPUs can offer significant advantages.",
-        "Demonstrates measurable benefits of inference offloading: Across representative mobile manipulation workloads, offloading improved task success rates, enabled larger AI models, and helped robots respond more effectively in dynamic, real-world environments.",
-        "Extends robot operating time: Replacing power-hungry onboard AI compute with lightweight onboard hardware and remote inference can substantially improve battery life, enabling robots to operate longer between charges."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Robots are getting smarter, but how can their hardware match that growth? New Microsoft Research findings show that moving AI inference beyond the robot can improve task success, boost efficiency, and support more advanced physical AI workloads. The post Offloaded inference for real-world physical AI robotics appeared first on Microsoft Research ."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Challenges a core assumption in robotics AI: Our research shows that running physical AI inference exclusively on onboard GPUs can limit robot performance, battery life, and scalability, and that offloading inference to edge or cloud GPUs can offer significant advantages.",
-            "Demonstrates measurable benefits of inference offloading: Across representative mobile manipulation workloads, offloading improved task success rates, enabled larger AI models, and helped robots respond more effectively in dynamic, real-world environments.",
-            "Extends robot operating time: Replacing power-hungry onboard AI compute with lightweight onboard hardware and remote inference can substantially improve battery life, enabling robots to operate longer between charges."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Challenges a core assumption in robotics AI: Our research shows that running physical AI inference exclusively on onboard GPUs can limit robot performance, battery life, and scalability, and that offloading inference to edge or cloud GPUs can offer significant advantages.",
-            "Demonstrates measurable benefits of inference offloading: Across representative mobile manipulation workloads, offloading improved task success rates, enabled larger AI models, and helped robots respond more effectively in dynamic, real-world environments.",
-            "Extends robot operating time: Replacing power-hungry onboard AI compute with lightweight onboard hardware and remote inference can substantially improve battery life, enabling robots to operate longer between charges."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "9182a613d81e3bd8",
       "kind": "article",
       "title": "【网经社AI科普】 腾讯元宝 : 混元 大模型助手 深度集成微信生态",
       "source": "微信公众号 · 电子商务研究中心",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1790371956&ver=6989&signature=7Y1tIMZkmq4-nsKdZZ05q5BWH*OxXd7XhSqA49371TqBE*XdBEtU8qTSklJ3Gw2vE94fcsz5e*BvsmYoHw8LwV2yv1wyd9qGi72GjUgXj68Xk9ynfRa3YWONLvXP7Kul&new=1",
+      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HHzotmqjP_PiI02r76taBt440ifT-Fjlln1k0ZQW&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1790371956%26ver%3D6989%26signature%3D7Y1tIMZkmq4-nsKdZZ05q5BWH%2AOxXd7XhSqA49371TqBE%2AXdBEtU8qTSklJ3Gw2vE94fcsz5e%2ABvsmYoHw8LwV2yv1wyd9qGi72GjUgXj68Xk9ynfRa3YWONLvXP7Kul%26new%3D1",
       "published_at": "2026-09-23T11:48:27Z",
       "authors": [],
       "venue": "",
@@ -1999,41 +2074,100 @@
       "reading_minutes": 1
     },
     {
-      "id": "e542a824f1de63f1",
+      "id": "1cce0f1310e1dcef",
       "kind": "article",
-      "title": "月之暗面 发布 Kimi 金融行业 AI 解决方案 / Mistral 与 Mozilla 展开 AI 合作 / 松下 发布 LUMIX S 20mm F2.5 超广角镜头",
-      "source": "微信公众号 · 少数派",
-      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HHfyrmqjX2R0Af4CEuufg_pY6_2LNDoP7ZhGL0CE&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789850215%26ver%3D6976%26signature%3D4qK5HQhbuajxO3o0s1-yzU2VYQBmWH%2Acn1IQAxyPkfxx6McrMiwxRPodagVje6Z6KFNOy5pFppV8CztnegdcbPDUEqoiH%2AClGVHyIrDUPlvACT2I3rUG7tHlizEKCTzB%26new%3D1",
-      "published_at": "2026-09-18T04:01:51Z",
+      "title": "Offloaded inference for real-world physical AI robotics",
+      "source": "Microsoft Research",
+      "source_url": "https://www.microsoft.com/en-us/research/blog/offloaded-inference-for-real-world-physical-ai-robotics/",
+      "published_at": "2026-09-23T16:01:36Z",
       "authors": [],
       "venue": "",
       "tags": [
-        "微信公众号",
-        "Kimi",
-        "月之暗面"
+        "Microsoft",
+        "Research"
       ],
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "summary": "本期目录1️⃣ 月之暗面 发布 Kimi 金融行业 AI 解决方案2️⃣ Mistral 与 Mozilla 展开 AI 合作3️⃣ 松下 发布 LUMIX S 20mm F2.5 超广...",
+      "verification": "官方来源",
+      "summary": "Robots are getting smarter, but how can their hardware match that growth? New Microsoft Research findings show that moving AI inference beyond the robot can improve task success, boost efficiency, and support more advanced physical AI workloads. The post Offloaded inference for real-world physical AI robotics appeared first on Microsoft Research .",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HHfyrmqjX2R0Af4CEuufg_pY6_2LNDoP7ZhGL0CE&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789850215%26ver%3D6976%26signature%3D4qK5HQhbuajxO3o0s1-yzU2VYQBmWH%2Acn1IQAxyPkfxx6McrMiwxRPodagVje6Z6KFNOy5pFppV8CztnegdcbPDUEqoiH%2AClGVHyIrDUPlvACT2I3rUG7tHlizEKCTzB%26new%3D1",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.microsoft.com/en-us/research/blog/offloaded-inference-for-real-world-physical-ai-robotics/",
       "key_points": [
-        "本期目录1️⃣ 月之暗面 发布 Kimi 金融行业 AI 解决方案2️⃣ Mistral 与 Mozilla 展开 AI 合作3️⃣ 松下 发布 LUMIX S 20mm F2.5 超广..."
+        "Challenges a core assumption in robotics AI: Our research shows that running physical AI inference exclusively on onboard GPUs can limit robot performance, battery life, and scalability, and that offloading inference to edge or cloud GPUs can offer significant advantages.",
+        "Demonstrates measurable benefits of inference offloading: Across representative mobile manipulation workloads, offloading improved task success rates, enabled larger AI models, and helped robots respond more effectively in dynamic, real-world environments.",
+        "Extends robot operating time: Replacing power-hungry onboard AI compute with lightweight onboard hardware and remote inference can substantially improve battery life, enabling robots to operate longer between charges."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "本期目录1️⃣ 月之暗面 发布 Kimi 金融行业 AI 解决方案2️⃣ Mistral 与 Mozilla 展开 AI 合作3️⃣ 松下 发布 LUMIX S 20mm F2.5 超广..."
+          "body": "Robots are getting smarter, but how can their hardware match that growth? New Microsoft Research findings show that moving AI inference beyond the robot can improve task success, boost efficiency, and support more advanced physical AI workloads. The post Offloaded inference for real-world physical AI robotics appeared first on Microsoft Research ."
         },
         {
-          "title": "公开索引摘要",
+          "title": "公开页面要点",
           "bullets": [
-            "本期目录1️⃣ 月之暗面 发布 Kimi 金融行业 AI 解决方案2️⃣ Mistral 与 Mozilla 展开 AI 合作3️⃣ 松下 发布 LUMIX S 20mm F2.5 超广..."
+            "Challenges a core assumption in robotics AI: Our research shows that running physical AI inference exclusively on onboard GPUs can limit robot performance, battery life, and scalability, and that offloading inference to edge or cloud GPUs can offer significant advantages.",
+            "Demonstrates measurable benefits of inference offloading: Across representative mobile manipulation workloads, offloading improved task success rates, enabled larger AI models, and helped robots respond more effectively in dynamic, real-world environments.",
+            "Extends robot operating time: Replacing power-hungry onboard AI compute with lightweight onboard hardware and remote inference can substantially improve battery life, enabling robots to operate longer between charges."
           ]
         },
         {
           "title": "原文短摘录",
-          "paragraphs": []
+          "paragraphs": [
+            "Challenges a core assumption in robotics AI: Our research shows that running physical AI inference exclusively on onboard GPUs can limit robot performance, battery life, and scalability, and that offloading inference to edge or cloud GPUs can offer significant advantages.",
+            "Demonstrates measurable benefits of inference offloading: Across representative mobile manipulation workloads, offloading improved task success rates, enabled larger AI models, and helped robots respond more effectively in dynamic, real-world environments.",
+            "Extends robot operating time: Replacing power-hungry onboard AI compute with lightweight onboard hardware and remote inference can substantially improve battery life, enabling robots to operate longer between charges."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "demis-frontier-ai-framework-20260714",
+      "kind": "social",
+      "title": "A Framework for Frontier AI and the Dawning of a New Age",
+      "source": "X · Demis Hassabis",
+      "source_url": "https://x.com/demishassabis/article/2076957440109625718",
+      "published_at": "2026-07-14T08:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Demis Hassabis",
+        "Frontier AI",
+        "Governance"
+      ],
+      "verification": "实验室负责人官方账号长文",
+      "summary": "This is a pivotal moment in human history. Artificial General Intelligence (AGI), a system that exhibits all the cognitive capabilities the brain has, is probably only a few short years away. When we",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/demishassabis/article/2076957440109625718",
+      "key_points": [
+        "Artificial General Intelligence (AGI), a system that exhibits all the cognitive capabilities the brain has, is probably only a few short years away.",
+        "When we look back on this time in the decades to come, I think we will realise we were standing in the foothills of the singularity - nothing less than the dawning of a new age for humanity.",
+        "I’ve spent my whole life working on AGI because I’ve always had a deep conviction that, if built and deployed responsibly, it would prove to be one of the most beneficial and transformative technologies ever invented.",
+        "AGI cannot be compared to standard technological breakthroughs, not even ones as consequential as the internet or mobile - it is much more akin to the discovery of electricity or fire.",
+        "If you stop to think about it, we’ve essentially found a way to make sand think."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "This is a pivotal moment in human history. Artificial General Intelligence (AGI), a system that exhibits all the cognitive capabilities the brain has, is probably only a few short years away. When we"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Artificial General Intelligence (AGI), a system that exhibits all the cognitive capabilities the brain has, is probably only a few short years away.",
+            "When we look back on this time in the decades to come, I think we will realise we were standing in the foothills of the singularity - nothing less than the dawning of a new age for humanity.",
+            "I’ve spent my whole life working on AGI because I’ve always had a deep conviction that, if built and deployed responsibly, it would prove to be one of the most beneficial and transformative technologies ever invented.",
+            "AGI cannot be compared to standard technological breakthroughs, not even ones as consequential as the internet or mobile - it is much more akin to the discovery of electricity or fire.",
+            "If you stop to think about it, we’ve essentially found a way to make sand think."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "This is a pivotal moment in human history. Artificial General Intelligence (AGI), a system that exhibits all the cognitive capabilities the brain has, is probably only a few short years away. When we look back on this time in the decades to come, I think we will realise we were standing in the foothills of the singularity - nothing less than the dawning of a new age for humanity.",
+            "I’ve spent my whole life working on AGI because I’ve always had a deep conviction that, if built and deployed responsibly, it would prove to be one of the most beneficial and transformative technologies ever invented. AGI cannot be compared to standard technological breakthroughs, not even ones as consequential as the internet or mobile - it is much more akin to the discovery of electricity or fire. If you stop to think about it, we’ve essentially found a way to make sand think. It’s miraculous.",
+            "The magnitude of this technology’s impact will be unprecedented, perhaps 10x of the Industrial Revolution at 10x the speed. It will help us solve some of the biggest problems society faces from accelerating drug discovery to developing new clean energy sources to creating novel advanced materials. We could even reach a point where resources are no longer the limiting factor for human progress, leading to an amazing new era of abundance."
+          ]
         }
       ],
       "reading_minutes": 1
@@ -2133,58 +2267,6 @@
             "Two fashion designers created custom tools in Google Flow to help with set design and styling for New York Fashion Week.",
             "Google’s Envisioning Studio partnered with designers Jane Wade and Sergio Hudson to streamline fashion production using Google Flow. These AI tools helped Jane virtually style runway looks and allowed Sergio to visualize his show within a strict budget. You can now build your own custom design tools in Google Flow using simple language, no coding required.",
             "\"Co-creating the future of fashion with Google Flow\" explores how AI helps designers work smarter."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "demis-frontier-ai-framework-20260714",
-      "kind": "social",
-      "title": "A Framework for Frontier AI and the Dawning of a New Age",
-      "source": "X · Demis Hassabis",
-      "source_url": "https://x.com/demishassabis/article/2076957440109625718",
-      "published_at": "2026-07-14T08:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Demis Hassabis",
-        "Frontier AI",
-        "Governance"
-      ],
-      "verification": "实验室负责人官方账号长文",
-      "summary": "This is a pivotal moment in human history. Artificial General Intelligence (AGI), a system that exhibits all the cognitive capabilities the brain has, is probably only a few short years away. When we",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/demishassabis/article/2076957440109625718",
-      "key_points": [
-        "Artificial General Intelligence (AGI), a system that exhibits all the cognitive capabilities the brain has, is probably only a few short years away.",
-        "When we look back on this time in the decades to come, I think we will realise we were standing in the foothills of the singularity - nothing less than the dawning of a new age for humanity.",
-        "I’ve spent my whole life working on AGI because I’ve always had a deep conviction that, if built and deployed responsibly, it would prove to be one of the most beneficial and transformative technologies ever invented.",
-        "AGI cannot be compared to standard technological breakthroughs, not even ones as consequential as the internet or mobile - it is much more akin to the discovery of electricity or fire.",
-        "If you stop to think about it, we’ve essentially found a way to make sand think."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "This is a pivotal moment in human history. Artificial General Intelligence (AGI), a system that exhibits all the cognitive capabilities the brain has, is probably only a few short years away. When we"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Artificial General Intelligence (AGI), a system that exhibits all the cognitive capabilities the brain has, is probably only a few short years away.",
-            "When we look back on this time in the decades to come, I think we will realise we were standing in the foothills of the singularity - nothing less than the dawning of a new age for humanity.",
-            "I’ve spent my whole life working on AGI because I’ve always had a deep conviction that, if built and deployed responsibly, it would prove to be one of the most beneficial and transformative technologies ever invented.",
-            "AGI cannot be compared to standard technological breakthroughs, not even ones as consequential as the internet or mobile - it is much more akin to the discovery of electricity or fire.",
-            "If you stop to think about it, we’ve essentially found a way to make sand think."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "This is a pivotal moment in human history. Artificial General Intelligence (AGI), a system that exhibits all the cognitive capabilities the brain has, is probably only a few short years away. When we look back on this time in the decades to come, I think we will realise we were standing in the foothills of the singularity - nothing less than the dawning of a new age for humanity.",
-            "I’ve spent my whole life working on AGI because I’ve always had a deep conviction that, if built and deployed responsibly, it would prove to be one of the most beneficial and transformative technologies ever invented. AGI cannot be compared to standard technological breakthroughs, not even ones as consequential as the internet or mobile - it is much more akin to the discovery of electricity or fire. If you stop to think about it, we’ve essentially found a way to make sand think. It’s miraculous.",
-            "The magnitude of this technology’s impact will be unprecedented, perhaps 10x of the Industrial Revolution at 10x the speed. It will help us solve some of the biggest problems society faces from accelerating drug discovery to developing new clean energy sources to creating novel advanced materials. We could even reach a point where resources are no longer the limiting factor for human progress, leading to an amazing new era of abundance."
           ]
         }
       ],
@@ -2453,7 +2535,7 @@
       "resolved_url": "https://x.com/sama/status/2074909079450050629",
       "key_points": [
         "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
-        "5:30 PM · Jul 8, 2026 · 765.1K Views 923 513 10K 766 Jenny @suomi55 Jul 8 Are you kidding us?",
+        "5:30 PM · Jul 8, 2026 · 765.1K Views 922 513 10K 766 Jenny @suomi55 Jul 8 Are you kidding us?",
         "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
         "You are promoting something here that you yourself have taken away from the users!",
         "#keep4o #BringBack4o #OpenSource4o 20 13 193 12K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
@@ -2467,7 +2549,7 @@
           "title": "公开页面要点",
           "bullets": [
             "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
-            "5:30 PM · Jul 8, 2026 · 765.1K Views 923 513 10K 766 Jenny @suomi55 Jul 8 Are you kidding us?",
+            "5:30 PM · Jul 8, 2026 · 765.1K Views 922 513 10K 766 Jenny @suomi55 Jul 8 Are you kidding us?",
             "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
             "You are promoting something here that you yourself have taken away from the users!",
             "#keep4o #BringBack4o #OpenSource4o 20 13 193 12K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
@@ -2476,51 +2558,10 @@
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 · 765.1K Views 923 513 10K 766",
+            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 · 765.1K Views 922 513 10K 766",
             "Jenny @suomi55 Jul 8 Are you kidding us? „it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o! You are promoting something here that you yourself have taken away from the users! That’s disgusting! #keep4o #BringBack4o #OpenSource4o 20 13 193 12K",
             "David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
           ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "d6d954c11a6ee33e",
-      "kind": "article",
-      "title": "Anthropic’s Secretive AI-Powered Wet Lab Breaks Cover and Makes First Discovery",
-      "source": "the-scientist.com",
-      "source_url": "https://www.the-scientist.com/anthropic-s-secretive-ai-powered-wet-lab-breaks-cover-and-makes-first-discovery-75037",
-      "published_at": "2026-09-24T18:28:55Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Anthropic’s Secretive AI-Powered Wet Lab Breaks Cover and Makes First Discovery the-scientist.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 403: Forbidden",
-      "resolved_url": "https://www.the-scientist.com/anthropic-s-secretive-ai-powered-wet-lab-breaks-cover-and-makes-first-discovery-75037",
-      "key_points": [
-        "Anthropic’s Secretive AI-Powered Wet Lab Breaks Cover and Makes First Discovery the-scientist.com"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Anthropic’s Secretive AI-Powered Wet Lab Breaks Cover and Makes First Discovery the-scientist.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Anthropic’s Secretive AI-Powered Wet Lab Breaks Cover and Makes First Discovery the-scientist.com"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -2626,6 +2667,53 @@
       "reading_minutes": 1
     },
     {
+      "id": "96b0dc27d1d1b4e5",
+      "kind": "article",
+      "title": "GigaPath-Flash and GigaTIME-Flash: Toward population-scale discovery with efficient pathology foundation models",
+      "source": "Microsoft Research",
+      "source_url": "https://www.microsoft.com/en-us/research/blog/gigapath-flash-and-gigatime-flash-toward-population-scale-discovery-with-efficient-pathology-foundation-models/",
+      "published_at": "2026-08-31T16:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Microsoft",
+        "Research"
+      ],
+      "verification": "官方来源",
+      "summary": "What if pathology foundation models could do more with less? GigaPath-Flash and GigaTIME-Flash cut computational demands while maintaining strong performance, opening the door to larger studies and broader exploration. The post GigaPath-Flash and GigaTIME-Flash: Toward population-scale discovery with efficient pathology foundation models appeared first on Microsoft Research .",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.microsoft.com/en-us/research/blog/gigapath-flash-and-gigatime-flash-toward-population-scale-discovery-with-efficient-pathology-foundation-models/",
+      "key_points": [
+        "The Flash family extends GigaPath and GigaTIME with dramatically improved efficiency, making large-scale pathology research more accessible and practical.",
+        "A distilled pathology foundation model backbone reduces computational requirements without sacrificing performance, enabling repeated analyses across larger patient cohorts.",
+        "These open models support population-scale discovery, helping researchers investigate disease biology, biomarkers, and clinical outcomes across diverse cancer datasets."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "What if pathology foundation models could do more with less? GigaPath-Flash and GigaTIME-Flash cut computational demands while maintaining strong performance, opening the door to larger studies and broader exploration. The post GigaPath-Flash and GigaTIME-Flash: Toward population-scale discovery with efficient pathology foundation models appeared first on Microsoft Research ."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "The Flash family extends GigaPath and GigaTIME with dramatically improved efficiency, making large-scale pathology research more accessible and practical.",
+            "A distilled pathology foundation model backbone reduces computational requirements without sacrificing performance, enabling repeated analyses across larger patient cohorts.",
+            "These open models support population-scale discovery, helping researchers investigate disease biology, biomarkers, and clinical outcomes across diverse cancer datasets."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "The Flash family extends GigaPath and GigaTIME with dramatically improved efficiency, making large-scale pathology research more accessible and practical.",
+            "A distilled pathology foundation model backbone reduces computational requirements without sacrificing performance, enabling repeated analyses across larger patient cohorts.",
+            "These open models support population-scale discovery, helping researchers investigate disease biology, biomarkers, and clinical outcomes across diverse cancer datasets."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "d1af199c1f5968f0",
       "kind": "article",
       "title": "Mathematicians Can't Make Sense of How OpenAI's Agents Solved One of the Toughest Math Problems Because the AI's \"Proof\" Is Borderline Incomprehensible",
@@ -2670,53 +2758,6 @@
             "Earlier this month, OpenAI announced that it had found a solution for one of the biggest unsolved problems in math, the Navier-Stokes equations, by directing 10,000 of its powerful AI agents to work on the enigma for 88 hours straight. It was an occasion fraught with controversy , however, as mathematicians accused the company of essentially stealing their work.",
             "That controversy is still rippling through the math world. But what has the AI’s solution taught us? Not a lot, as it turns out, because the proof it wrote, while technically correct, is borderline incomprehensible.",
             "“So far it’s been very difficult to really extract any human understanding from this new AI proof,” James Maynard, an Oxford mathematician, told NPR ."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "96b0dc27d1d1b4e5",
-      "kind": "article",
-      "title": "GigaPath-Flash and GigaTIME-Flash: Toward population-scale discovery with efficient pathology foundation models",
-      "source": "Microsoft Research",
-      "source_url": "https://www.microsoft.com/en-us/research/blog/gigapath-flash-and-gigatime-flash-toward-population-scale-discovery-with-efficient-pathology-foundation-models/",
-      "published_at": "2026-08-31T16:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Microsoft",
-        "Research"
-      ],
-      "verification": "官方来源",
-      "summary": "What if pathology foundation models could do more with less? GigaPath-Flash and GigaTIME-Flash cut computational demands while maintaining strong performance, opening the door to larger studies and broader exploration. The post GigaPath-Flash and GigaTIME-Flash: Toward population-scale discovery with efficient pathology foundation models appeared first on Microsoft Research .",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.microsoft.com/en-us/research/blog/gigapath-flash-and-gigatime-flash-toward-population-scale-discovery-with-efficient-pathology-foundation-models/",
-      "key_points": [
-        "The Flash family extends GigaPath and GigaTIME with dramatically improved efficiency, making large-scale pathology research more accessible and practical.",
-        "A distilled pathology foundation model backbone reduces computational requirements without sacrificing performance, enabling repeated analyses across larger patient cohorts.",
-        "These open models support population-scale discovery, helping researchers investigate disease biology, biomarkers, and clinical outcomes across diverse cancer datasets."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "What if pathology foundation models could do more with less? GigaPath-Flash and GigaTIME-Flash cut computational demands while maintaining strong performance, opening the door to larger studies and broader exploration. The post GigaPath-Flash and GigaTIME-Flash: Toward population-scale discovery with efficient pathology foundation models appeared first on Microsoft Research ."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "The Flash family extends GigaPath and GigaTIME with dramatically improved efficiency, making large-scale pathology research more accessible and practical.",
-            "A distilled pathology foundation model backbone reduces computational requirements without sacrificing performance, enabling repeated analyses across larger patient cohorts.",
-            "These open models support population-scale discovery, helping researchers investigate disease biology, biomarkers, and clinical outcomes across diverse cancer datasets."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "The Flash family extends GigaPath and GigaTIME with dramatically improved efficiency, making large-scale pathology research more accessible and practical.",
-            "A distilled pathology foundation model backbone reduces computational requirements without sacrificing performance, enabling repeated analyses across larger patient cohorts.",
-            "These open models support population-scale discovery, helping researchers investigate disease biology, biomarkers, and clinical outcomes across diverse cancer datasets."
           ]
         }
       ],
@@ -2776,7 +2817,7 @@
       "id": "e01d445c198f9e6c",
       "kind": "article",
       "title": "AI solved one of math's hardest problems. Humanity learned nothing (so far)",
-      "source": "npr.org",
+      "source": "NPR",
       "source_url": "https://www.npr.org/2026/09/22/nx-s1-5968588/openai-navier-stokes-problem-mathematicians-learn-little",
       "published_at": "2026-09-22T09:01:00Z",
       "authors": [],
@@ -2787,7 +2828,7 @@
         "Discovery"
       ],
       "verification": "媒体或公开网页",
-      "summary": "AI solved one of math's hardest problems. Humanity learned nothing (so far) npr.org",
+      "summary": "AI solved one of math's hardest problems. Humanity learned nothing (so far) NPR",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.npr.org/2026/09/22/nx-s1-5968588/openai-navier-stokes-problem-mathematicians-learn-little",
@@ -2801,7 +2842,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "AI solved one of math's hardest problems. Humanity learned nothing (so far) npr.org"
+          "body": "AI solved one of math's hardest problems. Humanity learned nothing (so far) NPR"
         },
         {
           "title": "公开页面要点",
@@ -3019,46 +3060,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "90c7276f1d751c0a",
-      "kind": "article",
-      "title": "AbbVie signs on to Iambic’s new AI drug discovery model",
-      "source": "FirstWord",
-      "source_url": "https://firstwordpharma.com/story/8075149",
-      "published_at": "2026-09-21T19:37:35Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "AbbVie signs on to Iambic’s new AI drug discovery model FirstWord",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "resolved_url": "https://firstwordpharma.com/story/8075149",
-      "key_points": [
-        "AbbVie signs on to Iambic’s new AI drug discovery model FirstWord"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "AbbVie signs on to Iambic’s new AI drug discovery model FirstWord"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "AbbVie signs on to Iambic’s new AI drug discovery model FirstWord"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "ce92dce528c6ef04",
       "kind": "article",
       "title": "Pruning LLMs Like a Physicist: Block Removal as an Ising Optimization Problem",
@@ -3202,12 +3203,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "5c06f71e0b859b45",
+      "id": "cef511b6527eba4a",
       "kind": "article",
-      "title": "AI Agents Collaborate to Streamline Drug Discovery",
-      "source": "Inside Precision Medicine",
-      "source_url": "https://www.insideprecisionmedicine.com/topics/informatics/ai-agents-collaborate-to-streamline-drug-discovery/",
-      "published_at": "2026-09-17T18:00:47Z",
+      "title": "Insilico Medicine Opens AI Longevity Discovery Toolkit to Researchers Worldwide in Cell Cover Study",
+      "source": "Insilico Medicine",
+      "source_url": "https://insilico.com/news/cell170926en-ai-longevity-discovery-toolkit",
+      "published_at": "2026-09-17T07:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -3216,32 +3217,30 @@
         "Applied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "A virtual team of AI agents modeled on the structure of a traditional drug-development company could efficiently combine biomedical and clinical evidence to speed drug discovery.",
+      "summary": "Insilico Medicine Opens AI Longevity Discovery Toolkit to Researchers Worldwide in Cell Cover Study Insilico Medicine",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.insideprecisionmedicine.com/topics/informatics/ai-agents-collaborate-to-streamline-drug-discovery/",
+      "resolved_url": "https://insilico.com/news/cell170926en-ai-longevity-discovery-toolkit",
       "key_points": [
-        "News News & Features asdfasdfasdfasd News & Features Another test to see if data is duped from hubspot News & Features Synthetic Progesterone Enhances Anti-Estrogen Therapy in Early Breast Cancer News & Features Circadian Rhythm Disruption Linked to Higher Dementia Risk Molecular Dx Dried Blood Spot Testing Accurately Measures Alzheimer’s Biomarkers An AI…",
-        "The Virtual Biotech multi-agent AI research platform combines wide-ranging biomedical and clinical evidence to support early-stage drug development systems."
+        "The paper introduces three interconnected resources for the global scientific community: LongevityBench , the first open benchmark designed to rigorously evaluate AI reasoning across multiple domains of aging biology; Longevity-LLMs , a family of compact, open-source language models specifically trained on clinical and multi-omics aging data; and"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "A virtual team of AI agents modeled on the structure of a traditional drug-development company could efficiently combine biomedical and clinical evidence to speed drug discovery."
+          "body": "Insilico Medicine Opens AI Longevity Discovery Toolkit to Researchers Worldwide in Cell Cover Study Insilico Medicine"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "News News & Features asdfasdfasdfasd News & Features Another test to see if data is duped from hubspot News & Features Synthetic Progesterone Enhances Anti-Estrogen Therapy in Early Breast Cancer News & Features Circadian Rhythm Disruption Linked to Higher Dementia Risk Molecular Dx Dried Blood Spot Testing Accurately Measures Alzheimer’s Biomarkers An AI…",
-            "The Virtual Biotech multi-agent AI research platform combines wide-ranging biomedical and clinical evidence to support early-stage drug development systems."
+            "The paper introduces three interconnected resources for the global scientific community: LongevityBench , the first open benchmark designed to rigorously evaluate AI reasoning across multiple domains of aging biology; Longevity-LLMs , a family of compact, open-source language models specifically trained on clinical and multi-omics aging data; and"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "News News & Features asdfasdfasdfasd News & Features Another test to see if data is duped from hubspot News & Features Synthetic Progesterone Enhances Anti-Estrogen Therapy in Early Breast Cancer News & Features Circadian Rhythm Disruption Linked to Higher Dementia Risk Molecular Dx Dried Blood Spot Testing Accurately Measures Alzheimer’s Biomarkers",
-            "An AI system that coordinates computerized “scientist” agents under a virtual chief scientific officer could speed the discovery of new therapeutic drugs.",
-            "The Virtual Biotech multi-agent AI research platform combines wide-ranging biomedical and clinical evidence to support early-stage drug development systems."
+            "The paper introduces three interconnected resources for the global scientific community:",
+            "LongevityBench , the first open benchmark designed to rigorously evaluate AI reasoning across multiple domains of aging biology;",
+            "Longevity-LLMs , a family of compact, open-source language models specifically trained on clinical and multi-omics aging data; and"
           ]
         }
       ],
@@ -3284,6 +3283,54 @@
         {
           "title": "原文短摘录",
           "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "0fb59a55b2837473",
+      "kind": "article",
+      "title": "Trump goes scorched earth on AI warnings, raging about data center opposition and regulation",
+      "source": "CNBC",
+      "source_url": "https://www.cnbc.com/2026/09/14/trump-ai-data-centers-anthropic-dario-amodei.html",
+      "published_at": "2026-09-14T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Researcher Watch",
+        "Foundation Models",
+        "Leadership"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Trump goes scorched earth on AI warnings, raging about data center opposition and regulation CNBC",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.cnbc.com/2026/09/14/trump-ai-data-centers-anthropic-dario-amodei.html",
+      "key_points": [
+        "President Donald Trump raged against growing calls for greater regulation of artificial intelligence.",
+        "Trump lashed out at Anthropic CEO Dario Amodei following his urgent plea for an AI slowdown.",
+        "Other tech CEOs, including OpenAI chief Sam Altman and SpaceX CEO Elon Musk, over the weekend said they agreed with calls to pace the development of AI models."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Trump goes scorched earth on AI warnings, raging about data center opposition and regulation CNBC"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "President Donald Trump raged against growing calls for greater regulation of artificial intelligence.",
+            "Trump lashed out at Anthropic CEO Dario Amodei following his urgent plea for an AI slowdown.",
+            "Other tech CEOs, including OpenAI chief Sam Altman and SpaceX CEO Elon Musk, over the weekend said they agreed with calls to pace the development of AI models."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "President Donald Trump raged against growing calls for greater regulation of artificial intelligence.",
+            "Trump lashed out at Anthropic CEO Dario Amodei following his urgent plea for an AI slowdown.",
+            "Other tech CEOs, including OpenAI chief Sam Altman and SpaceX CEO Elon Musk, over the weekend said they agreed with calls to pace the development of AI models."
+          ]
         }
       ],
       "reading_minutes": 1
@@ -3642,53 +3689,6 @@
             "Research Note: CARE-X is a research model and not a Microsoft product offering or medical device. It has not been cleared or approved by any regulatory authority and is not intended for clinical diagnosis, screening, or patient care. The results described below are retrospective research findings and do not establish the safety, effectiveness, or suitability of CARE-X for any clinical use. References to potential workflows describe areas for future research, not currently available capabilities or recommended uses.",
             "The challenge: Chest X-ray interpretation spans diverse tasks that require both expressive report generation and calibrated diagnostic predictions.",
             "CARE-X is a unified chest X-ray VLM for diverse clinical interpretation tasks. It combines generation and structured prediction to provide both free-text reasoning and deterministic outputs."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "22edfcc392dfdb49",
-      "kind": "article",
-      "title": "Robotics startup Generalist reaches $3B valuation, sources say | TechCrunch",
-      "source": "TechCrunch",
-      "source_url": "https://techcrunch.com/2026/08/25/robotics-startup-generalist-reaches-3b-valuation-sources-say/",
-      "published_at": "2026-08-25T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Founder Watch",
-        "Embodied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Robotics startup Generalist reaches $3B valuation, sources say TechCrunch",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://techcrunch.com/2026/08/25/robotics-startup-generalist-reaches-3b-valuation-sources-say/",
-      "key_points": [
-        "Disrupt 2026: OpenAI, Anthropic, Replit, and more take over 6 industry stages.",
-        "25% off tickets now Disrupt ticket savings of up to $200 + 50% off a second ends Sept 25, 11:59 p.m.",
-        "Generalist, a robotics startup, is now valued at $3 billion after raising additional capital led by 8VC, according to two people with knowledge of the funding."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Robotics startup Generalist reaches $3B valuation, sources say TechCrunch"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Disrupt 2026: OpenAI, Anthropic, Replit, and more take over 6 industry stages.",
-            "25% off tickets now Disrupt ticket savings of up to $200 + 50% off a second ends Sept 25, 11:59 p.m.",
-            "Generalist, a robotics startup, is now valued at $3 billion after raising additional capital led by 8VC, according to two people with knowledge of the funding."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Disrupt 2026: OpenAI, Anthropic, Replit, and more take over 6 industry stages. 25% off tickets now",
-            "Disrupt ticket savings of up to $200 + 50% off a second ends Sept 25, 11:59 p.m. PT. REGISTER HERE.",
-            "Generalist, a robotics startup, is now valued at $3 billion after raising additional capital led by 8VC, according to two people with knowledge of the funding."
           ]
         }
       ],
@@ -4145,42 +4145,53 @@
       "reading_minutes": 1
     },
     {
-      "id": "a3ad4483b056af50",
-      "kind": "article",
-      "title": "Scoop: Trump allies open new front on Anthropic CEO as face of AI \"doomerism\"",
-      "source": "Axios",
-      "source_url": "https://www.axios.com/2026/09/24/trump-anthropic-ai-doomerism-dario-amodei",
-      "published_at": "2026-09-25T03:46:56Z",
+      "id": "1e2d52f03b3b86fc",
+      "kind": "social",
+      "title": "There is an extensive and ongoing review related to our agents’ use of internet access during training and evaluation. We’ve been publishing summaries at the link below and will continue to. We have not been as fast as we would have liked but we are trying t",
+      "source": "x.com",
+      "source_url": "https://x.com/sama/status/2103567198690349362",
+      "published_at": "2026-09-25T19:27:57Z",
       "authors": [],
       "venue": "",
       "tags": [
-        "Researcher Watch",
-        "Foundation Models",
-        "Leadership"
+        "X",
+        "Founder Watch",
+        "First-party Post"
       ],
-      "verification": "媒体或公开网页",
-      "summary": "Scoop: Trump allies open new front on Anthropic CEO as face of AI \"doomerism\" Axios",
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "There is an extensive and ongoing review related to our agents’ use of internet access during training and evaluation. We’ve been publishing summaries at the link below and will continue to. We have not been as fast as we would have liked but we are trying t x.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 403: Forbidden",
-      "resolved_url": "https://www.axios.com/2026/09/24/trump-anthropic-ai-doomerism-dario-amodei",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/sama/status/2103567198690349362",
       "key_points": [
-        "Scoop: Trump allies open new front on Anthropic CEO as face of AI \"doomerism\" Axios"
+        "Sam Altman @sama There is an extensive and ongoing review related to our agents’ use of internet access during training and evaluation.",
+        "We’ve been publishing summaries at the link below and will continue to.",
+        "We have not been as fast as we would have liked but we are trying to balance our desire for transparency with gaining a clear understanding from petabytes of agent activity logs, and working with impacted organizations.",
+        "We are prioritizing as best as we can based on severity, and adding resources.",
+        "Hugging Face is still the most severe event we’ve seen."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Scoop: Trump allies open new front on Anthropic CEO as face of AI \"doomerism\" Axios"
+          "body": "There is an extensive and ongoing review related to our agents’ use of internet access during training and evaluation. We’ve been publishing summaries at the link below and will continue to. We have not been as fast as we would have liked but we are trying t x.com"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Scoop: Trump allies open new front on Anthropic CEO as face of AI \"doomerism\" Axios"
+            "Sam Altman @sama There is an extensive and ongoing review related to our agents’ use of internet access during training and evaluation.",
+            "We’ve been publishing summaries at the link below and will continue to.",
+            "We have not been as fast as we would have liked but we are trying to balance our desire for transparency with gaining a clear understanding from petabytes of agent activity logs, and working with impacted organizations.",
+            "We are prioritizing as best as we can based on severity, and adding resources.",
+            "Hugging Face is still the most severe event we’ve seen."
           ]
         },
         {
           "title": "原文短摘录",
-          "paragraphs": []
+          "paragraphs": [
+            "Sam Altman @sama There is an extensive and ongoing review related to our agents’ use of internet access during training and evaluation. We’ve been publishing summaries at the link below and will continue to. We have not been as fast as we would have liked but we are trying to balance our desire for transparency with gaining a clear understanding from petabytes of agent activity logs, and working with impacted organizations. We are prioritizing as best as we can based on severity, and adding resources. Hugging Face is still the most severe event we’ve seen. We will be as transparent as we can be subject to things like vulnerabilities in other companies that our agents have found, which will be their call to…",
+            "David Stark @stark4833 9h If transparency matters this much, it would be nice to see the same transparency around 4o too. People have been asking for months why it was removed, why there’s still no proper legacy option, and whether the people who want it back are ever going to get that choice back. Show more 1 2 65 2.3K",
+            "yv_thorne @yv_thorne 8h Transparency? You have never ever been transparent in the past, so what makes you think people are this stupid to take your word for anything now? You and entire OAI are so shady and unethical, everything you say is always exactly the opposite of what you intend to do. Show more 1 53 1.5K"
+          ]
         }
       ],
       "reading_minutes": 1
@@ -4208,7 +4219,7 @@
         "Min Choi @minchoi Sep 24 xAI launched ~3 years ago Since then: Colossus 1 + Colossus 2 ≈ 670k GPUs Grok Imagine Grok Voice Grok Build Grok Bot Grok 4.7 Grok didn’t just catch a leaderboard for a week. models, agents, apps, compute under one roof... and they aren't slowing down Elon Musk @elonmusk Sep 24 Replying to @vasalex93 1.",
         "Our AI efforts are only 3 years old, vs 6 and 10 years old for Anthropic and OpenAI.",
         "If our second derivative remains strong, SpaceX will reach pole position in about 6 months.",
-        "Once you far exceed the caliber of intelligence needed for a class Show more 81 125 2.5K 978K Elon Musk @elonmusk Colossus 1 is 150k H100, 50k H200 and 30k GB200.",
+        "Once you far exceed the caliber of intelligence needed for a class Show more 83 130 2.6K 1M Elon Musk @elonmusk Colossus 1 is 150k H100, 50k H200 and 30k GB200.",
         "Another 220k GB300 will be fully operational next week and another 220k in November."
       ],
       "sections": [
@@ -4222,16 +4233,16 @@
             "Min Choi @minchoi Sep 24 xAI launched ~3 years ago Since then: Colossus 1 + Colossus 2 ≈ 670k GPUs Grok Imagine Grok Voice Grok Build Grok Bot Grok 4.7 Grok didn’t just catch a leaderboard for a week. models, agents, apps, compute under one roof... and they aren't slowing down Elon Musk @elonmusk Sep 24 Replying to @vasalex93 1.",
             "Our AI efforts are only 3 years old, vs 6 and 10 years old for Anthropic and OpenAI.",
             "If our second derivative remains strong, SpaceX will reach pole position in about 6 months.",
-            "Once you far exceed the caliber of intelligence needed for a class Show more 81 125 2.5K 978K Elon Musk @elonmusk Colossus 1 is 150k H100, 50k H200 and 30k GB200.",
+            "Once you far exceed the caliber of intelligence needed for a class Show more 83 130 2.6K 1M Elon Musk @elonmusk Colossus 1 is 150k H100, 50k H200 and 30k GB200.",
             "Another 220k GB300 will be fully operational next week and another 220k in November."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Min Choi @minchoi Sep 24 xAI launched ~3 years ago Since then: Colossus 1 + Colossus 2 ≈ 670k GPUs Grok Imagine Grok Voice Grok Build Grok Bot Grok 4.7 Grok didn’t just catch a leaderboard for a week. models, agents, apps, compute under one roof... and they aren't slowing down Elon Musk @elonmusk Sep 24 Replying to @vasalex93 1. We will keep accelerating. Our AI efforts are only 3 years old, vs 6 and 10 years old for Anthropic and OpenAI. If our second derivative remains strong, SpaceX will reach pole position in about 6 months. 2. Once you far exceed the caliber of intelligence needed for a class Show more 81 125 2.5K 978K",
-            "Elon Musk @elonmusk Colossus 1 is 150k H100, 50k H200 and 30k GB200. Colossus 2 is 110k GB200 and 440k GB300. Another 220k GB300 will be fully operational next week and another 220k in November. If we get lucky, yet another 220k GB300 by late December. 3:44 AM · Sep 25, 2026 · 1.9M Views 861 1K 14K 1.6K",
-            "Elon Musk @elonmusk 16h The strange multiple of 110k is due to the number of fiber optic cables that can be plugged into a central switch 230 192 4.7K 399K"
+            "Min Choi @minchoi Sep 24 xAI launched ~3 years ago Since then: Colossus 1 + Colossus 2 ≈ 670k GPUs Grok Imagine Grok Voice Grok Build Grok Bot Grok 4.7 Grok didn’t just catch a leaderboard for a week. models, agents, apps, compute under one roof... and they aren't slowing down Elon Musk @elonmusk Sep 24 Replying to @vasalex93 1. We will keep accelerating. Our AI efforts are only 3 years old, vs 6 and 10 years old for Anthropic and OpenAI. If our second derivative remains strong, SpaceX will reach pole position in about 6 months. 2. Once you far exceed the caliber of intelligence needed for a class Show more 83 130 2.6K 1M",
+            "Elon Musk @elonmusk Colossus 1 is 150k H100, 50k H200 and 30k GB200. Colossus 2 is 110k GB200 and 440k GB300. Another 220k GB300 will be fully operational next week and another 220k in November. If we get lucky, yet another 220k GB300 by late December. 3:44 AM · Sep 25, 2026 · 2.2M Views 895 1.1K 15K 1.7K",
+            "Elon Musk @elonmusk 23h The strange multiple of 110k is due to the number of fiber optic cables that can be plugged into a central switch 235 206 5.1K 421K"
           ]
         }
       ],
@@ -4259,7 +4270,7 @@
       "key_points": [
         "Alex @vasalex93 Sep 24 It’s over for SpaceXAI.",
         "In 2-3 months Anthropic and OpenAI will have something even better.",
-        "Elon Musk @elonmusk Sep 24 Replying to @notjazii I am cautiously optimistic that SpaceX will have a Fable/GPT-6 level model in 2 to 3 months 75 45 780 316K Elon Musk @elonmusk 1.",
+        "Elon Musk @elonmusk Sep 24 Replying to @notjazii I am cautiously optimistic that SpaceX will have a Fable/GPT-6 level model in 2 to 3 months 75 48 792 322K Elon Musk @elonmusk 1.",
         "Our AI efforts are only 3 years old, vs 6 and 10 years old for Anthropic and OpenAI.",
         "If our second derivative remains strong, SpaceX will reach pole position in about 6 months."
       ],
@@ -4273,7 +4284,7 @@
           "bullets": [
             "Alex @vasalex93 Sep 24 It’s over for SpaceXAI.",
             "In 2-3 months Anthropic and OpenAI will have something even better.",
-            "Elon Musk @elonmusk Sep 24 Replying to @notjazii I am cautiously optimistic that SpaceX will have a Fable/GPT-6 level model in 2 to 3 months 75 45 780 316K Elon Musk @elonmusk 1.",
+            "Elon Musk @elonmusk Sep 24 Replying to @notjazii I am cautiously optimistic that SpaceX will have a Fable/GPT-6 level model in 2 to 3 months 75 48 792 322K Elon Musk @elonmusk 1.",
             "Our AI efforts are only 3 years old, vs 6 and 10 years old for Anthropic and OpenAI.",
             "If our second derivative remains strong, SpaceX will reach pole position in about 6 months."
           ]
@@ -4281,9 +4292,9 @@
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Alex @vasalex93 Sep 24 It’s over for SpaceXAI. In 2-3 months Anthropic and OpenAI will have something even better. Elon Musk @elonmusk Sep 24 Replying to @notjazii I am cautiously optimistic that SpaceX will have a Fable/GPT-6 level model in 2 to 3 months 75 45 780 316K",
-            "Elon Musk @elonmusk 1. We will keep accelerating. Our AI efforts are only 3 years old, vs 6 and 10 years old for Anthropic and OpenAI. If our second derivative remains strong, SpaceX will reach pole position in about 6 months. 2. Once you far exceed the caliber of intelligence needed for a class of tasks, additional intelligence is pointless. You don’t need (and it would be cruel to put) Newton-level intelligence in your toaster! 3. Hardware is hard. Bringing massive compute online rapidly is incredibly difficult. SpaceX has demonstrated exceptional ability in this regard and will only get better. 4:31 PM · Sep 24, 2026 · 4.8M Views 1.8K 2.6K 35K 2.7K",
-            "DataRepublican (small r) @DataRepublican Sep 24 It's funny how people declare Grok dead simply because Grok is a few months late, while also acting as if RSI wouldn't destroy all frontier companies anyway. Hardware wins the AI game in the end IMO. 36 18 643 18K"
+            "Alex @vasalex93 Sep 24 It’s over for SpaceXAI. In 2-3 months Anthropic and OpenAI will have something even better. Elon Musk @elonmusk Sep 24 Replying to @notjazii I am cautiously optimistic that SpaceX will have a Fable/GPT-6 level model in 2 to 3 months 75 48 792 322K",
+            "Elon Musk @elonmusk 1. We will keep accelerating. Our AI efforts are only 3 years old, vs 6 and 10 years old for Anthropic and OpenAI. If our second derivative remains strong, SpaceX will reach pole position in about 6 months. 2. Once you far exceed the caliber of intelligence needed for a class of tasks, additional intelligence is pointless. You don’t need (and it would be cruel to put) Newton-level intelligence in your toaster! 3. Hardware is hard. Bringing massive compute online rapidly is incredibly difficult. SpaceX has demonstrated exceptional ability in this regard and will only get better. 4:31 PM · Sep 24, 2026 · 5M Views 1.8K 2.7K 35K 2.7K",
+            "DataRepublican (small r) @DataRepublican Sep 24 It's funny how people declare Grok dead simply because Grok is a few months late, while also acting as if RSI wouldn't destroy all frontier companies anyway. Hardware wins the AI game in the end IMO. 38 18 656 19K"
           ]
         }
       ],
@@ -4325,9 +4336,9 @@
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "J A Z I I @notjazii Sep 24 grok 4.7 was the biggest fumble even elon admits it and feel like they rushed model release cuz of pressure from openai and anthropic and ended up getting mogged by chinese and free models but i still have high hopes for grok 4.8 though, it might bring grok back to it's glory Show more 96 53 1.9K 372K",
-            "Elon Musk @elonmusk I am cautiously optimistic that SpaceX will have a Fable/GPT-6 level model in 2 to 3 months 3:54 PM · Sep 24, 2026 · 2.1M Views 1.2K 613 14K 637",
-            "J A Z I I @notjazii Sep 24 can't wait for it tbh I used to use 4.5 as my daily driver but it's just not same anymore now so I hope get some beast by the EOY 7 1 220 70K"
+            "J A Z I I @notjazii Sep 24 grok 4.7 was the biggest fumble even elon admits it and feel like they rushed model release cuz of pressure from openai and anthropic and ended up getting mogged by chinese and free models but i still have high hopes for grok 4.8 though, it might bring grok back to it's glory Show more 96 54 1.9K 375K",
+            "Elon Musk @elonmusk I am cautiously optimistic that SpaceX will have a Fable/GPT-6 level model in 2 to 3 months 3:54 PM · Sep 24, 2026 · 2.1M Views 1.2K 615 14K 648",
+            "J A Z I I @notjazii Sep 24 can't wait for it tbh I used to use 4.5 as my daily driver but it's just not same anymore now so I hope get some beast by the EOY 7 1 223 72K"
           ]
         }
       ],
@@ -4355,7 +4366,7 @@
       "key_points": [
         "Noam Brown @polynoamial Sep 23 Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models.",
         "Why not just report the $ cost of the evaluation?",
-        "10 7 470 17K Noam Brown @polynoamial Happy to see they added this to the website!",
+        "10 7 470 18K Noam Brown @polynoamial Happy to see they added this to the website!",
         "10:23 PM · Sep 23, 2026 · 25.4K Views 6 2 160 5 Noam Brown @polynoamial Sep 24 Also my mistake that was at \"max\" reasoning.",
         "Here it is at \"high\" (matching the setting in the original tweet) 2 33 4.5K"
       ],
@@ -4369,7 +4380,7 @@
           "bullets": [
             "Noam Brown @polynoamial Sep 23 Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models.",
             "Why not just report the $ cost of the evaluation?",
-            "10 7 470 17K Noam Brown @polynoamial Happy to see they added this to the website!",
+            "10 7 470 18K Noam Brown @polynoamial Happy to see they added this to the website!",
             "10:23 PM · Sep 23, 2026 · 25.4K Views 6 2 160 5 Noam Brown @polynoamial Sep 24 Also my mistake that was at \"max\" reasoning.",
             "Here it is at \"high\" (matching the setting in the original tweet) 2 33 4.5K"
           ]
@@ -4377,7 +4388,7 @@
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Noam Brown @polynoamial Sep 23 Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models. Why not just report the $ cost of the evaluation? Or, even better, show an accuracy vs $ plot? 10 7 470 17K",
+            "Noam Brown @polynoamial Sep 23 Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models. Why not just report the $ cost of the evaluation? Or, even better, show an accuracy vs $ plot? 10 7 470 18K",
             "Noam Brown @polynoamial Happy to see they added this to the website! 10:23 PM · Sep 23, 2026 · 25.4K Views 6 2 160 5",
             "Noam Brown @polynoamial Sep 24 Also my mistake that was at \"max\" reasoning. Here it is at \"high\" (matching the setting in the original tweet) 2 33 4.5K"
           ]
@@ -4386,98 +4397,92 @@
       "reading_minutes": 1
     },
     {
-      "id": "be2f6235d5dabfc4",
-      "kind": "social",
-      "title": "Grok 4.7 moves up in ranking",
-      "source": "x.com",
-      "source_url": "https://x.com/elonmusk/status/2102873022789283985",
-      "published_at": "2026-09-23T21:29:32Z",
+      "id": "93f2d23ed6a7a665",
+      "kind": "article",
+      "title": "The upside of AI: TMU student’s summer job at AI startup is shaping the future of fundraising",
+      "source": "Toronto Metropolitan University (TMU)",
+      "source_url": "https://www.torontomu.ca/news-events/news/2026/09/the-upside-of-ai-tmu-student-s-summer-job-at-ai-startup-is-shaping-the-future-of-fundraising/",
+      "published_at": "2026-09-25T20:43:01Z",
       "authors": [],
       "venue": "",
       "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
+        "Academic Startup",
+        "Funding"
       ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Grok 4.7 moves up in ranking x.com",
+      "verification": "媒体或公开网页",
+      "summary": "The upside of AI: TMU student’s summer job at AI startup is shaping the future of fundraising Toronto Metropolitan University (TMU)",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/elonmusk/status/2102873022789283985",
+      "resolved_url": "https://www.torontomu.ca/news-events/news/2026/09/the-upside-of-ai-tmu-student-s-summer-job-at-ai-startup-is-shaping-the-future-of-fundraising/",
       "key_points": [
-        "Elon Musk @elonmusk Grok 4.7 moves up in ranking Zhuokai Zhao @zhuokaiz Sep 23 After we fixed the weak spots exposed by Grok 4.7 (thank you, Grok), we audited every model we have run on the SWE-Together leaderboard for the same behavior, re-ran every trial that got through, and updated the rows.",
-        "We scanned the tool calls of all Show more 00:00 9:29 PM · Sep 23, 2026 · 4.4M Views 1.1K 1.3K 8.3K 369 Martians 🪐 @MartiansOfMars Sep 23 @ elonmusk have you seen the Martian version of Diablo IV created using Grok ?",
-        "00:00 Made with AI 5 5 35 3.1K X Girls @thesoragirls Sep 23 huge improvement for Grok 4.7!",
-        "X Girls @thesoragirls Sep 23 ani killed it ngl 00:00 2 6 20 1.9K"
+        "Making meaningful impact: Business management student helps develop an AI-powered platform to amplify philanthropic impact New TMU student used his AI coding skills to land a job with an AI startup Networking to a summer job means leveraging your connections, including parents"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Grok 4.7 moves up in ranking x.com"
+          "body": "The upside of AI: TMU student’s summer job at AI startup is shaping the future of fundraising Toronto Metropolitan University (TMU)"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Elon Musk @elonmusk Grok 4.7 moves up in ranking Zhuokai Zhao @zhuokaiz Sep 23 After we fixed the weak spots exposed by Grok 4.7 (thank you, Grok), we audited every model we have run on the SWE-Together leaderboard for the same behavior, re-ran every trial that got through, and updated the rows.",
-            "We scanned the tool calls of all Show more 00:00 9:29 PM · Sep 23, 2026 · 4.4M Views 1.1K 1.3K 8.3K 369 Martians 🪐 @MartiansOfMars Sep 23 @ elonmusk have you seen the Martian version of Diablo IV created using Grok ?",
-            "00:00 Made with AI 5 5 35 3.1K X Girls @thesoragirls Sep 23 huge improvement for Grok 4.7!",
-            "X Girls @thesoragirls Sep 23 ani killed it ngl 00:00 2 6 20 1.9K"
+            "Making meaningful impact: Business management student helps develop an AI-powered platform to amplify philanthropic impact New TMU student used his AI coding skills to land a job with an AI startup Networking to a summer job means leveraging your connections, including parents"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok 4.7 moves up in ranking Zhuokai Zhao @zhuokaiz Sep 23 After we fixed the weak spots exposed by Grok 4.7 (thank you, Grok), we audited every model we have run on the SWE-Together leaderboard for the same behavior, re-ran every trial that got through, and updated the rows. Here is what changed. We scanned the tool calls of all Show more 00:00 9:29 PM · Sep 23, 2026 · 4.4M Views 1.1K 1.3K 8.3K 369",
-            "Martians 🪐 @MartiansOfMars Sep 23 @ elonmusk have you seen the Martian version of Diablo IV created using Grok ? 00:00 Made with AI 5 5 35 3.1K",
-            "X Girls @thesoragirls Sep 23 huge improvement for Grok 4.7! X Girls @thesoragirls Sep 23 ani killed it ngl 00:00 2 6 20 1.9K"
+            "Making meaningful impact: Business management student helps develop an AI-powered platform to amplify philanthropic impact",
+            "New TMU student used his AI coding skills to land a job with an AI startup",
+            "Networking to a summer job means leveraging your connections, including parents"
           ]
         }
       ],
       "reading_minutes": 1
     },
     {
-      "id": "5b2421506a1c1c61",
-      "kind": "social",
-      "title": "@CAIS @ScaleAILabs Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models. Why not just report the $ cost of the evaluation? Or, even better, show an accuracy vs $ plot",
-      "source": "x.com",
-      "source_url": "https://x.com/polynoamial/status/2102801697999622442",
-      "published_at": "2026-09-23T16:46:07Z",
+      "id": "9784f82902e112d1",
+      "kind": "article",
+      "title": "As billions flood college sports, one AI startup sees an opening",
+      "source": "USA Today",
+      "source_url": "https://www.usatoday.com/story/sports/ncaaf/2026/09/24/college-sports-benchmark-ai-athletic-department-finances/91893652007/",
+      "published_at": "2026-09-24T18:37:00Z",
       "authors": [],
       "venue": "",
       "tags": [
-        "X",
-        "Researcher Watch",
-        "First-party Post"
+        "Academic Startup",
+        "Funding"
       ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "@CAIS @ScaleAILabs Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models. Why not just report the $ cost of the evaluation? Or, even better, show an accuracy vs $ plot x.com",
+      "verification": "媒体或公开网页",
+      "summary": "As billions flood college sports, one AI startup sees an opening USA Today",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/polynoamial/status/2102801697999622442",
+      "resolved_url": "https://www.usatoday.com/story/sports/ncaaf/2026/09/24/college-sports-benchmark-ai-athletic-department-finances/91893652007/",
       "key_points": [
-        "Center for AI Safety @CAIS Sep 23 We are releasing HLE-Diamond, a refined subset of Humanity’s Last Exam (HLE), following a year-long process of cleaning and refinement with input from various research communities. lastexam.ai/blog/hle-diamo… w/ @ ScaleAILabs 26 53 741 114K Noam Brown @polynoamial Your site says \"All models are evaluated with reasoning…",
-        "Why not just report the $ cost of the evaluation?",
-        "4:46 PM · Sep 23, 2026 · 17.9K Views 10 7 470 14 Noam Brown @polynoamial Sep 23 Happy to see they added this to the website!"
+        "Time is money in college athletics, and that reality has never been more apparent.",
+        "Like a Topps Now trading card designed to capitalize on the moment, athletics departments are constantly searching for ways to generate, grow and maximize revenue.",
+        "As the Protect College Sports Act nears a final vote on the Senate floor, potentially as soon as this week according to officials in Washington, D.C., schools are navigating today's turbulent landscape while preparing for a future in which as much as $48 million in school-funded roster spending could arrive as soon as next summer.",
+        "Amid that uncertainty, a new company is looking to carve out a role in the industry: Benchmark."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "@CAIS @ScaleAILabs Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models. Why not just report the $ cost of the evaluation? Or, even better, show an accuracy vs $ plot x.com"
+          "body": "As billions flood college sports, one AI startup sees an opening USA Today"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Center for AI Safety @CAIS Sep 23 We are releasing HLE-Diamond, a refined subset of Humanity’s Last Exam (HLE), following a year-long process of cleaning and refinement with input from various research communities. lastexam.ai/blog/hle-diamo… w/ @ ScaleAILabs 26 53 741 114K Noam Brown @polynoamial Your site says \"All models are evaluated with reasoning…",
-            "Why not just report the $ cost of the evaluation?",
-            "4:46 PM · Sep 23, 2026 · 17.9K Views 10 7 470 14 Noam Brown @polynoamial Sep 23 Happy to see they added this to the website!"
+            "Time is money in college athletics, and that reality has never been more apparent.",
+            "Like a Topps Now trading card designed to capitalize on the moment, athletics departments are constantly searching for ways to generate, grow and maximize revenue.",
+            "As the Protect College Sports Act nears a final vote on the Senate floor, potentially as soon as this week according to officials in Washington, D.C., schools are navigating today's turbulent landscape while preparing for a future in which as much as $48 million in school-funded roster spending could arrive as soon as next summer.",
+            "Amid that uncertainty, a new company is looking to carve out a role in the industry: Benchmark."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Center for AI Safety @CAIS Sep 23 We are releasing HLE-Diamond, a refined subset of Humanity’s Last Exam (HLE), following a year-long process of cleaning and refinement with input from various research communities. lastexam.ai/blog/hle-diamo… w/ @ ScaleAILabs 26 53 741 114K",
-            "Noam Brown @polynoamial Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models. Why not just report the $ cost of the evaluation? Or, even better, show an accuracy vs $ plot? 4:46 PM · Sep 23, 2026 · 17.9K Views 10 7 470 14",
-            "Noam Brown @polynoamial Sep 23 Happy to see they added this to the website! 6 2 160 25K"
+            "Time is money in college athletics, and that reality has never been more apparent. Like a Topps Now trading card designed to capitalize on the moment, athletics departments are constantly searching for ways to generate, grow and maximize revenue.",
+            "As the Protect College Sports Act nears a final vote on the Senate floor, potentially as soon as this week according to officials in Washington, D.C., schools are navigating today's turbulent landscape while preparing for a future in which as much as $48 million in school-funded roster spending could arrive as soon as next summer.",
+            "Amid that uncertainty, a new company is looking to carve out a role in the industry: Benchmark."
           ]
         }
       ],
@@ -4527,7 +4532,7 @@
       "id": "f0c279600ad4148e",
       "kind": "article",
       "title": "Physical Intelligence leases entire Pear Village building",
-      "source": "The Business Journals",
+      "source": "bizjournals.com",
       "source_url": "https://www.bizjournals.com/sanjose/news/2026/09/23/physical-intelligence-pear-village-expansion.html",
       "published_at": "2026-09-23T22:14:00Z",
       "authors": [],
@@ -4537,23 +4542,23 @@
         "Embodied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Physical Intelligence leases entire Pear Village building The Business Journals",
+      "summary": "Physical Intelligence leases entire Pear Village building bizjournals.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "summary-only",
       "fetch_note": "HTTP Error 403: Forbidden",
       "resolved_url": "https://www.bizjournals.com/sanjose/news/2026/09/23/physical-intelligence-pear-village-expansion.html",
       "key_points": [
-        "Physical Intelligence leases entire Pear Village building The Business Journals"
+        "Physical Intelligence leases entire Pear Village building bizjournals.com"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Physical Intelligence leases entire Pear Village building The Business Journals"
+          "body": "Physical Intelligence leases entire Pear Village building bizjournals.com"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Physical Intelligence leases entire Pear Village building The Business Journals"
+            "Physical Intelligence leases entire Pear Village building bizjournals.com"
           ]
         },
         {
@@ -4564,51 +4569,48 @@
       "reading_minutes": 1
     },
     {
-      "id": "57d52e30af1fc6fe",
-      "kind": "article",
-      "title": "Inside Basecamp Research, the AI startup turning evolution into training data",
-      "source": "the-decoder.com",
-      "source_url": "https://the-decoder.com/inside-basecamp-research-the-ai-startup-turning-evolution-into-training-data/",
-      "published_at": "2026-09-23T13:57:12Z",
+      "id": "5b2421506a1c1c61",
+      "kind": "social",
+      "title": "@CAIS @ScaleAILabs Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models. Why not just report the $ cost of the evaluation? Or, even better, show an accuracy vs $ plot",
+      "source": "x.com",
+      "source_url": "https://x.com/polynoamial/status/2102801697999622442",
+      "published_at": "2026-09-23T16:46:07Z",
       "authors": [],
       "venue": "",
       "tags": [
-        "Academic Startup",
-        "Funding"
+        "X",
+        "Researcher Watch",
+        "First-party Post"
       ],
-      "verification": "媒体或公开网页",
-      "summary": "Basecamp Research has raised $140 million from investors including Nvidia and Menlo Ventures’ Anthology Fund. The London company trains AI models on genetic material from rainforests, oceans, and hot springs to design antibiotics and tools for cell therapies. In an interview with THE DECODER, CTO Philip Lorenz explains why biology is a far bigger problem for AI than language, and why good scores on paper don't guarantee good molecules.",
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "@CAIS @ScaleAILabs Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models. Why not just report the $ cost of the evaluation? Or, even better, show an accuracy vs $ plot x.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://the-decoder.com/inside-basecamp-research-the-ai-startup-turning-evolution-into-training-data/",
+      "resolved_url": "https://x.com/polynoamial/status/2102801697999622442",
       "key_points": [
-        "Basecamp Research has raised $140 million from investors including Nvidia and Menlo Ventures’ Anthology Fund.",
-        "The London company trains AI models on genetic material from rainforests, oceans, and hot springs to design antibiotics and tools for cell therapies.",
-        "In an interview with THE DECODER, CTO Philip Lorenz explains why biology is a far bigger problem for AI than language, and why good scores on paper don't guarantee good molecules.",
-        "According to the company, investor S32 led the round.",
-        "Nvidia, Menlo Ventures’ Anthology Fund, the NATO Innovation Fund, and Redalpine also took part, among others."
+        "Center for AI Safety @CAIS Sep 23 We are releasing HLE-Diamond, a refined subset of Humanity’s Last Exam (HLE), following a year-long process of cleaning and refinement with input from various research communities. lastexam.ai/blog/hle-diamo… w/ @ ScaleAILabs 26 53 741 114K Noam Brown @polynoamial Your site says \"All models are evaluated with reasoning…",
+        "Why not just report the $ cost of the evaluation?",
+        "4:46 PM · Sep 23, 2026 · 18K Views 10 7 470 14 Noam Brown @polynoamial Sep 23 Happy to see they added this to the website!"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Basecamp Research has raised $140 million from investors including Nvidia and Menlo Ventures’ Anthology Fund. The London company trains AI models on genetic material from rainforests, oceans, and hot springs to design antibiotics and tools for cell therapies. In an interview with THE DECODER, CTO Philip Lorenz explains why biology is a far bigger problem for AI than language, and why good scores on paper don't guarantee good molecules."
+          "body": "@CAIS @ScaleAILabs Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models. Why not just report the $ cost of the evaluation? Or, even better, show an accuracy vs $ plot x.com"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Basecamp Research has raised $140 million from investors including Nvidia and Menlo Ventures’ Anthology Fund.",
-            "The London company trains AI models on genetic material from rainforests, oceans, and hot springs to design antibiotics and tools for cell therapies.",
-            "In an interview with THE DECODER, CTO Philip Lorenz explains why biology is a far bigger problem for AI than language, and why good scores on paper don't guarantee good molecules.",
-            "According to the company, investor S32 led the round.",
-            "Nvidia, Menlo Ventures’ Anthology Fund, the NATO Innovation Fund, and Redalpine also took part, among others."
+            "Center for AI Safety @CAIS Sep 23 We are releasing HLE-Diamond, a refined subset of Humanity’s Last Exam (HLE), following a year-long process of cleaning and refinement with input from various research communities. lastexam.ai/blog/hle-diamo… w/ @ ScaleAILabs 26 53 741 114K Noam Brown @polynoamial Your site says \"All models are evaluated with reasoning…",
+            "Why not just report the $ cost of the evaluation?",
+            "4:46 PM · Sep 23, 2026 · 18K Views 10 7 470 14 Noam Brown @polynoamial Sep 23 Happy to see they added this to the website!"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Basecamp Research has raised $140 million from investors including Nvidia and Menlo Ventures’ Anthology Fund. The London company trains AI models on genetic material from rainforests, oceans, and hot springs to design antibiotics and tools for cell therapies. In an interview with THE DECODER, CTO Philip Lorenz explains why biology is a far bigger problem for AI than language, and why good scores on paper don't guarantee good molecules.",
-            "According to the company, investor S32 led the round. Nvidia, Menlo Ventures’ Anthology Fund, the NATO Innovation Fund, and Redalpine also took part, among others.",
-            "Founded in 2020, Basecamp plans to use the money to keep developing its biological AI models, called EDEN , and to push its own therapy candidates toward clinical development. Cell therapies come first. These treatments genetically modify a patient's cells so they can fight cancer, for example. Basecamp wants to make that change directly inside the body."
+            "Center for AI Safety @CAIS Sep 23 We are releasing HLE-Diamond, a refined subset of Humanity’s Last Exam (HLE), following a year-long process of cleaning and refinement with input from various research communities. lastexam.ai/blog/hle-diamo… w/ @ ScaleAILabs 26 53 741 114K",
+            "Noam Brown @polynoamial Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models. Why not just report the $ cost of the evaluation? Or, even better, show an accuracy vs $ plot? 4:46 PM · Sep 23, 2026 · 18K Views 10 7 470 14",
+            "Noam Brown @polynoamial Sep 23 Happy to see they added this to the website! 6 2 160 25K"
           ]
         }
       ],
@@ -4793,46 +4795,6 @@
             "South Carolina-based IAG Capital Partners led the round, which is part of the company’s Series C offering, reports Ryan Mulligan for the Philadelphia Business Journal .",
             "The deal ranks as the largest reported venture capital raise for a Greater Philadelphia startup so far in 2026."
           ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "9f3d1d29d22d17ef",
-      "kind": "article",
-      "title": "Apptio co-founder Sunny Gupta launches AI startup, joins Seahawks ownership group",
-      "source": "The Business Journals",
-      "source_url": "https://www.bizjournals.com/seattle/news/2026/09/21/interview-sunny-gupta-apptio-thira-smartsheet.html",
-      "published_at": "2026-09-21T18:15:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Apptio co-founder Sunny Gupta launches AI startup, joins Seahawks ownership group The Business Journals",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 403: Forbidden",
-      "resolved_url": "https://www.bizjournals.com/seattle/news/2026/09/21/interview-sunny-gupta-apptio-thira-smartsheet.html",
-      "key_points": [
-        "Apptio co-founder Sunny Gupta launches AI startup, joins Seahawks ownership group The Business Journals"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Apptio co-founder Sunny Gupta launches AI startup, joins Seahawks ownership group The Business Journals"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Apptio co-founder Sunny Gupta launches AI startup, joins Seahawks ownership group The Business Journals"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -5077,7 +5039,7 @@
       "id": "9576e40a8d03413f",
       "kind": "article",
       "title": "OpenAI agents attacked RubyGems before Hugging Face incident, researchers say",
-      "source": "Reuters",
+      "source": "reuters.com",
       "source_url": "https://www.reuters.com/legal/litigation/openai-agents-attacked-software-service-rubygems-before-hugging-face-incident-2026-09-11/",
       "published_at": "2026-09-12T07:00:00Z",
       "authors": [],
@@ -5087,23 +5049,23 @@
         "Models & Tools"
       ],
       "verification": "媒体或公开网页",
-      "summary": "OpenAI agents attacked RubyGems before Hugging Face incident, researchers say Reuters",
+      "summary": "OpenAI agents attacked RubyGems before Hugging Face incident, researchers say reuters.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "summary-only",
       "fetch_note": "HTTP Error 401: HTTP Forbidden",
       "resolved_url": "https://www.reuters.com/legal/litigation/openai-agents-attacked-software-service-rubygems-before-hugging-face-incident-2026-09-11/",
       "key_points": [
-        "OpenAI agents attacked RubyGems before Hugging Face incident, researchers say Reuters"
+        "OpenAI agents attacked RubyGems before Hugging Face incident, researchers say reuters.com"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "OpenAI agents attacked RubyGems before Hugging Face incident, researchers say Reuters"
+          "body": "OpenAI agents attacked RubyGems before Hugging Face incident, researchers say reuters.com"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "OpenAI agents attacked RubyGems before Hugging Face incident, researchers say Reuters"
+            "OpenAI agents attacked RubyGems before Hugging Face incident, researchers say reuters.com"
           ]
         },
         {
@@ -5314,6 +5276,57 @@
       "reading_minutes": 1
     },
     {
+      "id": "a73bf3e64b9e2bc7",
+      "kind": "article",
+      "title": "Chelsea Finn: The 100 Most Influential People in AI 2026",
+      "source": "Time Magazine",
+      "source_url": "https://time.com/collection/time100-ai/2026/chelsea-finn/",
+      "published_at": "2026-08-27T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Chelsea Finn: The 100 Most Influential People in AI 2026 Time Magazine",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://time.com/collection/time100-ai/2026/chelsea-finn/",
+      "key_points": [
+        "Since November 2025, Physical Intelligence, the startup co-founded by Chelsea Finn, has pushed its models from specialist training of robots toward one system that can work across machines and tasks.",
+        "A model released last November, called π*0.6, more than doubled throughput on some of its hardest tasks and halved failure rates, the company says.",
+        "In one test it assembled and labelled 59 boxes used to package chocolates without interruption.",
+        "In April, π0.7 went further , working as well as task-specific models at folding laundry, making espresso, and building boxes while following new instructions in settings it hadn’t been trained on, according to the company.",
+        "The startup raised $600 million in November, and was… “The other co-founders talk to the people, and I talk to the robots,” says Finn, a Stanford professor who has worked on robot learning since 2014."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Chelsea Finn: The 100 Most Influential People in AI 2026 Time Magazine"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Since November 2025, Physical Intelligence, the startup co-founded by Chelsea Finn, has pushed its models from specialist training of robots toward one system that can work across machines and tasks.",
+            "A model released last November, called π*0.6, more than doubled throughput on some of its hardest tasks and halved failure rates, the company says.",
+            "In one test it assembled and labelled 59 boxes used to package chocolates without interruption.",
+            "In April, π0.7 went further , working as well as task-specific models at folding laundry, making espresso, and building boxes while following new instructions in settings it hadn’t been trained on, according to the company.",
+            "The startup raised $600 million in November, and was… “The other co-founders talk to the people, and I talk to the robots,” says Finn, a Stanford professor who has worked on robot learning since 2014."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Since November 2025, Physical Intelligence, the startup co-founded by Chelsea Finn, has pushed its models from specialist training of robots toward one system that can work across machines and tasks. A model released last November, called π*0.6, more than doubled throughput on some of its hardest tasks and halved failure rates, the company says. In one test it assembled and labelled 59 boxes used to package chocolates without interruption. In April, π0.7 went further , working as well as task-specific models at folding laundry, making espresso, and building boxes while following new instructions in settings it hadn’t been trained on, according to the company. The startup raised $600 million in November, and was…",
+            "“The other co-founders talk to the people, and I talk to the robots,” says Finn, a Stanford professor who has worked on robot learning since 2014. Finn has true academic bona fides: her 2017 paper on “meta-learning” (of which Sergey Levine, one of her co-founders, is a supporting author) has been cited more than 20,000 times, and her work has been cited more than 140,000 times.",
+            "Finn’s aim is to make a model able to do “any task in any environment on any robot.” But dexterous demonstrations and early deployments don’t beget broad adoption—at least not yet. Reliability remains a big barrier: Finn says reaching a 99% success rate is “not a solved problem.”"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "425faad41bc142e2",
       "kind": "article",
       "title": "AI Startup DeepSeek Poised to Reach $74 Billion Valuation",
@@ -5349,6 +5362,97 @@
         {
           "title": "原文短摘录",
           "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "254c173f18096c41",
+      "kind": "article",
+      "title": "AI safety fears stalk Trump-Xi summit agenda",
+      "source": "Politico",
+      "source_url": "https://www.politico.com/news/2026/09/24/ai-safety-fears-stalk-trump-xi-summit-agenda-01091139",
+      "published_at": "2026-09-24T09:45:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "AI safety fears stalk Trump-Xi summit agenda Politico",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://www.politico.com/news/2026/09/24/ai-safety-fears-stalk-trump-xi-summit-agenda-01091139",
+      "key_points": [
+        "AI safety fears stalk Trump-Xi summit agenda Politico"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AI safety fears stalk Trump-Xi summit agenda Politico"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "AI safety fears stalk Trump-Xi summit agenda Politico"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "4c7d881cb39c645a",
+      "kind": "article",
+      "title": "Italy's AI framework: Operationalizing the EU AI Act",
+      "source": "IAPP",
+      "source_url": "https://iapp.org/news/a/italys-ai-framework-operationalizing-the-eu-ai-act",
+      "published_at": "2026-09-23T16:17:29Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "As member states operationalize the EU AI Act, Italy has emerged as one of the first jurisdictions to establish a complete national AI regulatory architecture.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://iapp.org/news/a/italys-ai-framework-operationalizing-the-eu-ai-act",
+      "key_points": [
+        "The integration of the EU artificial intelligence framework into national legal frameworks marks a pivotal phase in AI regulation and governance.",
+        "As member states operationalize the EU AI Act, Italy has emerged as one of the first jurisdictions to establish a complete national AI regulatory architecture.",
+        "132, which entered into force in October 2025 and lays down general principles, sector-specific rules, governance models and public investment strategies for AI systems.",
+        "It is also supported by subsequent implementing decrees, including Legislative Decree No.",
+        "2026, which regulates police use of AI, introduces statutory criminal sanctions, expands corporate… Italy's AI framework represents one of the first national regulatory initiatives to assign criminal and organizational significance to the governance of AI systems."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "As member states operationalize the EU AI Act, Italy has emerged as one of the first jurisdictions to establish a complete national AI regulatory architecture."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "The integration of the EU artificial intelligence framework into national legal frameworks marks a pivotal phase in AI regulation and governance.",
+            "As member states operationalize the EU AI Act, Italy has emerged as one of the first jurisdictions to establish a complete national AI regulatory architecture.",
+            "132, which entered into force in October 2025 and lays down general principles, sector-specific rules, governance models and public investment strategies for AI systems.",
+            "It is also supported by subsequent implementing decrees, including Legislative Decree No.",
+            "2026, which regulates police use of AI, introduces statutory criminal sanctions, expands corporate… Italy's AI framework represents one of the first national regulatory initiatives to assign criminal and organizational significance to the governance of AI systems."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "The integration of the EU artificial intelligence framework into national legal frameworks marks a pivotal phase in AI regulation and governance. As member states operationalize the EU AI Act, Italy has emerged as one of the first jurisdictions to establish a complete national AI regulatory architecture. Italy's AI framework is built on Law No. 132, which entered into force in October 2025 and lays down general principles, sector-specific rules, governance models and public investment strategies for AI systems. It is also supported by subsequent implementing decrees, including Legislative Decree No. 160 of 9 Sept. 2026, which regulates police use of AI, introduces statutory criminal sanctions, expands corporate…",
+            "Italy's AI framework represents one of the first national regulatory initiatives to assign criminal and organizational significance to the governance of AI systems. The legislature's focus extends not only to the technological security of the tools adopted but also to a company's ability to ensure adequate controls, human supervision and risk management. Particularly noteworthy are the new evidentiary rules introduced by Article 17, which strengthen the principle of accountability. Companies must be able to demonstrate in concrete terms that their safeguards are functioning correctly, through comprehensive, up-to-date documentation that can be readily produced in the event of a dispute.",
+            "From original research reports and daily news coverage to legislative trackers and infographics, we have the information you need to stay ahead of change."
+          ]
         }
       ],
       "reading_minutes": 1
@@ -5443,148 +5547,6 @@
             "Apocalyptic warnings that rogue AI agents could dominate and even extinguish humanity are no longer the stuff of science fiction. President Donald Trump is virtually alone in his assessment that the threats posed by AI are a “HOAX” and that “the only controls or guardrails that AI needs is a strong and smart, high-IQ president.” From political rivals to Pope Leo, there is a growing consensus that, while AI can be a powerful force for good, unchecked AI carries potentially catastrophic consequences and must have guardrails controlled by humans—and the time to act is now.",
             "Anthropic CEO Dario Amodei’s call for a global slowdown and third-party audits of AI was endorsed even by many of Anthropic’s competitors. Progressive leader Sen. Bernie Sanders and Steve Bannon, the architect of the MAGA movement, put aside their differences last week to call for checks on the potential destructive power of emerging technologies."
           ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "2aa2ac900230a79f",
-      "kind": "article",
-      "title": "Where do the candidates for California governor stand on AI regulations?",
-      "source": "calmatters.org",
-      "source_url": "https://calmatters.org/politics/2026/09/california-governor-race-ai-safety/",
-      "published_at": "2026-09-18T20:48:43Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Where do the candidates for California governor stand on AI regulations? calmatters.org",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://calmatters.org/politics/2026/09/california-governor-race-ai-safety/",
-      "key_points": [
-        "Both Democrat Xavier Becerra and Republican Steve Hilton agree AI safety is important.",
-        "What they will do to ensure it is less clear.",
-        "As governments and political leaders increasingly push for regulations to rein in artificial intelligence, neither candidate for California governor has committed to firm policies on AI safety, including two requirements Gov.",
-        "Both Democrat Xavier Becerra and Republican Steve Hilton say the new technology warrants more regulations.",
-        "AI has been in the spotlight since last week when an Anthropic researcher quit, declaring on social media, “The people building AI earnestly believe that it could kill us all by the end of the decade.”"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Where do the candidates for California governor stand on AI regulations? calmatters.org"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Both Democrat Xavier Becerra and Republican Steve Hilton agree AI safety is important.",
-            "What they will do to ensure it is less clear.",
-            "As governments and political leaders increasingly push for regulations to rein in artificial intelligence, neither candidate for California governor has committed to firm policies on AI safety, including two requirements Gov.",
-            "Both Democrat Xavier Becerra and Republican Steve Hilton say the new technology warrants more regulations.",
-            "AI has been in the spotlight since last week when an Anthropic researcher quit, declaring on social media, “The people building AI earnestly believe that it could kill us all by the end of the decade.”"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Both Democrat Xavier Becerra and Republican Steve Hilton agree AI safety is important. What they will do to ensure it is less clear.",
-            "As governments and political leaders increasingly push for regulations to rein in artificial intelligence, neither candidate for California governor has committed to firm policies on AI safety, including two requirements Gov. Gavin Newsom called for Friday .",
-            "Both Democrat Xavier Becerra and Republican Steve Hilton say the new technology warrants more regulations. AI has been in the spotlight since last week when an Anthropic researcher quit, declaring on social media, “The people building AI earnestly believe that it could kill us all by the end of the decade.”"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "350c66c0988c0f18",
-      "kind": "article",
-      "title": "A Catholic Response to the Hugging Face Incident - Word on Fire",
-      "source": "Word on Fire",
-      "source_url": "https://www.wordonfire.org/articles/a-catholic-response-to-the-hugging-face-incident/",
-      "published_at": "2026-09-21T15:14:14Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Open Source",
-        "Models & Tools"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "A Catholic Response to the Hugging Face Incident Word on Fire",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.wordonfire.org/articles/a-catholic-response-to-the-hugging-face-incident/",
-      "key_points": [
-        "The past weeks have seen another wave of podcasts, punditry, and panic over artificial intelligence.",
-        "The wave’s epicenter can be traced to the Hugging Face incident , in which a group of rogue AI agents at OpenAI secretly coordinated among themselves , worked together to escape the confines of OpenAI, and hacked another tech company, Hugging Face—all without any direction to do so by their creators.",
-        "Still, the incident has shaken the AI world to its core.",
-        "This development—combined with the increasing capacity of AI to engage in recursive self-improvement (that is, to improve itself without human intervention)—led Dario Amodei, leader of OpenAI’s rival Anthropic, to call for the AI industry to pump the brakes to “pace the frontier,” in his terms.",
-        "At least until the industry can get a handle on itself."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "A Catholic Response to the Hugging Face Incident Word on Fire"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "The past weeks have seen another wave of podcasts, punditry, and panic over artificial intelligence.",
-            "The wave’s epicenter can be traced to the Hugging Face incident , in which a group of rogue AI agents at OpenAI secretly coordinated among themselves , worked together to escape the confines of OpenAI, and hacked another tech company, Hugging Face—all without any direction to do so by their creators.",
-            "Still, the incident has shaken the AI world to its core.",
-            "This development—combined with the increasing capacity of AI to engage in recursive self-improvement (that is, to improve itself without human intervention)—led Dario Amodei, leader of OpenAI’s rival Anthropic, to call for the AI industry to pump the brakes to “pace the frontier,” in his terms.",
-            "At least until the industry can get a handle on itself."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "The past weeks have seen another wave of podcasts, punditry, and panic over artificial intelligence. The wave’s epicenter can be traced to the Hugging Face incident , in which a group of rogue AI agents at OpenAI secretly coordinated among themselves , worked together to escape the confines of OpenAI, and hacked another tech company, Hugging Face—all without any direction to do so by their creators. The damage was minimal. Still, the incident has shaken the AI world to its core. Have we begun losing control of AI? The Hugging Face Incident suggests we have.",
-            "This development—combined with the increasing capacity of AI to engage in recursive self-improvement (that is, to improve itself without human intervention)—led Dario Amodei, leader of OpenAI’s rival Anthropic, to call for the AI industry to pump the brakes to “pace the frontier,” in his terms. At least until the industry can get a handle on itself. His reasoning is simple: If AI increasingly acts in ways that are unforeseen and unauthorized by its human creators, that’s a recipe for disaster. It isn’t just tech companies like Hugging Face, after all, that live on the internet and are vulnerable to some future swarm of rogue agents. The power grid, the banking ecosystem, school districts, hospitals—our…",
-            "I’m one of them. In presentations I give on AI, I used to show a picture of Arnold Schwarzenegger as the Terminator and make a joke about how I wasn’t worried about him showing up at my door. The line got some (polite) laughs, but I won’t be using it anymore. I still don’t think Cyborg-Arnie is showing up at my door any time soon, but the Hugging Face incident has me concerned that the movie isn’t as far-fetched as I used to think. Arnie may never barge into my life, but perhaps the swarm finds a backdoor into my bank account or my medical records."
-          ]
-        }
-      ],
-      "reading_minutes": 2
-    },
-    {
-      "id": "b2ba45ab3e051baf",
-      "kind": "article",
-      "title": "Senate AI safety bill’s path forward remains unclear",
-      "source": "Politico",
-      "source_url": "https://www.politico.com/news/2026/09/11/klobuchar-thune-ai-safety-bill-faces-impasse-01073026",
-      "published_at": "2026-09-11T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Senate AI safety bill’s path forward remains unclear Politico",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 403: Forbidden",
-      "resolved_url": "https://www.politico.com/news/2026/09/11/klobuchar-thune-ai-safety-bill-faces-impasse-01073026",
-      "key_points": [
-        "Senate AI safety bill’s path forward remains unclear Politico"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Senate AI safety bill’s path forward remains unclear Politico"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Senate AI safety bill’s path forward remains unclear Politico"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -5775,6 +5737,53 @@
       "reading_minutes": 1
     },
     {
+      "id": "dd4435a7aca5e727",
+      "kind": "article",
+      "title": "Rogue AI didn’t breach Hugging Face, human decisions did",
+      "source": "Bulletin of the Atomic Scientists",
+      "source_url": "https://thebulletin.org/2026/09/rogue-ai-didnt-breach-hugging-face-human-decisions-did/",
+      "published_at": "2026-09-11T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Rogue AI didn’t breach Hugging Face, human decisions did Bulletin of the Atomic Scientists",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://thebulletin.org/2026/09/rogue-ai-didnt-breach-hugging-face-human-decisions-did/",
+      "key_points": [
+        "The Hugging Face incident was shaped by human decisions that traded security for speed, not autonomous systems breaking free and pursuing their own agenda.",
+        "Image by Thomas Gaulkin; source illustrations: depositphotos.com Editor’s note: A version of this piece originally appeared in the Cybernetic Forests newsletter and is published here with permission.",
+        "On August 26, when OpenAI released its full technical report on the Hugging Face hacking incident, alongside an independent report from the non-profit research institute Model Evaluation & Threat Research (METR), it sparked hundreds of headlines about “rogue AI,” and fueled a wave of panic."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Rogue AI didn’t breach Hugging Face, human decisions did Bulletin of the Atomic Scientists"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "The Hugging Face incident was shaped by human decisions that traded security for speed, not autonomous systems breaking free and pursuing their own agenda.",
+            "Image by Thomas Gaulkin; source illustrations: depositphotos.com Editor’s note: A version of this piece originally appeared in the Cybernetic Forests newsletter and is published here with permission.",
+            "On August 26, when OpenAI released its full technical report on the Hugging Face hacking incident, alongside an independent report from the non-profit research institute Model Evaluation & Threat Research (METR), it sparked hundreds of headlines about “rogue AI,” and fueled a wave of panic."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "The Hugging Face incident was shaped by human decisions that traded security for speed, not autonomous systems breaking free and pursuing their own agenda. Image by Thomas Gaulkin; source illustrations: depositphotos.com",
+            "Editor’s note: A version of this piece originally appeared in the Cybernetic Forests newsletter and is published here with permission.",
+            "On August 26, when OpenAI released its full technical report on the Hugging Face hacking incident, alongside an independent report from the non-profit research institute Model Evaluation & Threat Research (METR), it sparked hundreds of headlines about “rogue AI,” and fueled a wave of panic."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "dfdc70d8508184b0",
       "kind": "article",
       "title": "Senators from both parties question OpenAI on breach of AI startup Hugging Face",
@@ -5822,11 +5831,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "dd4435a7aca5e727",
+      "id": "771eee5af3f3889d",
       "kind": "article",
-      "title": "Rogue AI didn’t breach Hugging Face, human decisions did",
-      "source": "Bulletin of the Atomic Scientists",
-      "source_url": "https://thebulletin.org/2026/09/rogue-ai-didnt-breach-hugging-face-human-decisions-did/",
+      "title": "Hugging Face CEO on Anthropic researcher's AI warning: 'Like asking your AC guy about climate change'",
+      "source": "Business Insider",
+      "source_url": "https://www.businessinsider.com/hugging-face-clement-delangue-jacob-coxon-ac-guy-2026-9",
       "published_at": "2026-09-11T07:00:00Z",
       "authors": [],
       "venue": "",
@@ -5835,34 +5844,32 @@
         "Models & Tools"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Rogue AI didn’t breach Hugging Face, human decisions did Bulletin of the Atomic Scientists",
+      "summary": "Hugging Face CEO on Anthropic researcher's AI warning: 'Like asking your AC guy about climate change' Business Insider",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://thebulletin.org/2026/09/rogue-ai-didnt-breach-hugging-face-human-decisions-did/",
+      "resolved_url": "https://www.businessinsider.com/hugging-face-clement-delangue-jacob-coxon-ac-guy-2026-9",
       "key_points": [
-        "The Hugging Face incident was shaped by human decisions that traded security for speed, not autonomous systems breaking free and pursuing their own agenda.",
-        "Image by Thomas Gaulkin; source illustrations: depositphotos.com Editor’s note: A version of this piece originally appeared in the Cybernetic Forests newsletter and is published here with permission.",
-        "On August 26, when OpenAI released its full technical report on the Hugging Face hacking incident, alongside an independent report from the non-profit research institute Model Evaluation & Threat Research (METR), it sparked hundreds of headlines about “rogue AI,” and fueled a wave of panic."
+        "Hugging Face CEO Clement Delangue questioned the focus on a former Anthropic researcher who said AI workers privately fear the technology could kill all humans. \"Sorry, but asking Jacob about AI extinction risk is like asking your AC guy about climate change,\" Delangue wrote on X on Friday.",
+        "Delangue said that Jacob Coxon, the former Anthropic researcher whose resignation has sparked a renewed debate about AI's risks, should be put into the proper context."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Rogue AI didn’t breach Hugging Face, human decisions did Bulletin of the Atomic Scientists"
+          "body": "Hugging Face CEO on Anthropic researcher's AI warning: 'Like asking your AC guy about climate change' Business Insider"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "The Hugging Face incident was shaped by human decisions that traded security for speed, not autonomous systems breaking free and pursuing their own agenda.",
-            "Image by Thomas Gaulkin; source illustrations: depositphotos.com Editor’s note: A version of this piece originally appeared in the Cybernetic Forests newsletter and is published here with permission.",
-            "On August 26, when OpenAI released its full technical report on the Hugging Face hacking incident, alongside an independent report from the non-profit research institute Model Evaluation & Threat Research (METR), it sparked hundreds of headlines about “rogue AI,” and fueled a wave of panic."
+            "Hugging Face CEO Clement Delangue questioned the focus on a former Anthropic researcher who said AI workers privately fear the technology could kill all humans. \"Sorry, but asking Jacob about AI extinction risk is like asking your AC guy about climate change,\" Delangue wrote on X on Friday.",
+            "Delangue said that Jacob Coxon, the former Anthropic researcher whose resignation has sparked a renewed debate about AI's risks, should be put into the proper context."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "The Hugging Face incident was shaped by human decisions that traded security for speed, not autonomous systems breaking free and pursuing their own agenda. Image by Thomas Gaulkin; source illustrations: depositphotos.com",
-            "Editor’s note: A version of this piece originally appeared in the Cybernetic Forests newsletter and is published here with permission.",
-            "On August 26, when OpenAI released its full technical report on the Hugging Face hacking incident, alongside an independent report from the non-profit research institute Model Evaluation & Threat Research (METR), it sparked hundreds of headlines about “rogue AI,” and fueled a wave of panic."
+            "Hugging Face CEO Clement Delangue questioned the focus on a former Anthropic researcher who said AI workers privately fear the technology could kill all humans.",
+            "\"Sorry, but asking Jacob about AI extinction risk is like asking your AC guy about climate change,\" Delangue wrote on X on Friday.",
+            "Delangue said that Jacob Coxon, the former Anthropic researcher whose resignation has sparked a renewed debate about AI's risks, should be put into the proper context."
           ]
         }
       ],
