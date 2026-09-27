@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-26T21:07:04Z",
+  "generated_at": "2026-09-27T05:15:57Z",
   "item_count": 132,
   "category_counts": {
     "research": 20,
@@ -45,7 +45,7 @@
       "字节豆包 / Seed": 0
     },
     "people_watch_coverage": {
-      "Elon Musk / xAI": 2,
+      "Elon Musk / xAI": 3,
       "Sam Altman / OpenAI": 2,
       "Dario Amodei / Anthropic": 0,
       "Demis Hassabis / DeepMind": 1,
@@ -81,9 +81,9 @@
     },
     {
       "name": "Google DeepMind",
-      "status": "ok",
-      "count": 8,
-      "note": ""
+      "status": "error",
+      "count": 0,
+      "note": "not well-formed (invalid token): line 1, column 0"
     },
     {
       "name": "Google AI",
@@ -98,9 +98,9 @@
       "note": ""
     },
     {
-      "name": "OpenAlex Conference Index",
+      "name": "Anthropic",
       "status": "ok",
-      "count": 20,
+      "count": 8,
       "note": ""
     },
     {
@@ -110,15 +110,15 @@
       "note": ""
     },
     {
-      "name": "AI for Mathematics & Science",
+      "name": "Microsoft Research",
       "status": "ok",
-      "count": 12,
+      "count": 6,
       "note": ""
     },
     {
-      "name": "Anthropic",
+      "name": "AI for Mathematics & Science",
       "status": "ok",
-      "count": 8,
+      "count": 12,
       "note": ""
     },
     {
@@ -134,27 +134,9 @@
       "note": ""
     },
     {
-      "name": "Microsoft Research",
+      "name": "OpenAlex Conference Index",
       "status": "ok",
-      "count": 6,
-      "note": ""
-    },
-    {
-      "name": "China AI · Tencent & ByteDance",
-      "status": "ok",
-      "count": 10,
-      "note": ""
-    },
-    {
-      "name": "China AI · Kimi & Qwen",
-      "status": "ok",
-      "count": 10,
-      "note": ""
-    },
-    {
-      "name": "Frontier Lab Monitor",
-      "status": "ok",
-      "count": 9,
+      "count": 20,
       "note": ""
     },
     {
@@ -164,9 +146,9 @@
       "note": ""
     },
     {
-      "name": "Frontier Leaders on X",
+      "name": "Frontier Lab Monitor",
       "status": "ok",
-      "count": 10,
+      "count": 9,
       "note": ""
     },
     {
@@ -182,15 +164,21 @@
       "note": ""
     },
     {
-      "name": "Core AI Researchers on X",
+      "name": "China AI · Kimi & Qwen",
       "status": "ok",
       "count": 10,
       "note": ""
     },
     {
-      "name": "Agent & Reasoning Researchers",
+      "name": "China AI · Tencent & ByteDance",
       "status": "ok",
-      "count": 9,
+      "count": 10,
+      "note": ""
+    },
+    {
+      "name": "Core AI Researchers on X",
+      "status": "ok",
+      "count": 10,
       "note": ""
     },
     {
@@ -200,9 +188,21 @@
       "note": ""
     },
     {
+      "name": "Agent & Reasoning Researchers",
+      "status": "ok",
+      "count": 9,
+      "note": ""
+    },
+    {
       "name": "Vision & World Model Researchers",
       "status": "ok",
       "count": 9,
+      "note": ""
+    },
+    {
+      "name": "Frontier Leaders on X",
+      "status": "ok",
+      "count": 10,
       "note": ""
     },
     {
@@ -322,24 +322,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "69a6dff164ab81f4",
-      "category": "impact",
-      "title": "AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome",
-      "summary": "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome.",
-      "source": "Google DeepMind",
-      "url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
-      "published_at": "2026-09-08T14:00:15Z",
-      "tags": [
-        "DeepMind",
-        "Official"
-      ],
-      "importance": 102,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=69a6dff164ab81f4",
-      "reader_status": "summary-only"
-    },
-    {
       "id": "bace-gecco-2026",
       "category": "research",
       "title": "BACE: LLM-based Code Generation through Bayesian Anchored Co-Evolution",
@@ -438,42 +420,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "ec0422e215bd0a95",
-      "category": "frontier",
-      "title": "Introducing Gemini 3.8 Live with Live Avatar",
-      "summary": "Introducing Gemini 3.8 Live with Live Avatar, which brings near real-time visual presence to Gemini’s conversational AI.",
-      "source": "Google DeepMind",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=",
-      "published_at": "2026-09-24T16:20:39Z",
-      "tags": [
-        "DeepMind",
-        "Official"
-      ],
-      "importance": 100,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=ec0422e215bd0a95",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "2d52ed2f0b86aafa",
-      "category": "frontier",
-      "title": "Claude discovers a novel enzyme system",
-      "summary": "In early results from our new life sciences research lab, Claude agents found an enzyme system whose function is still unknown.",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
-      "published_at": "2026-09-24T10:25:16Z",
-      "tags": [
-        "Anthropic",
-        "Official"
-      ],
-      "importance": 100,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=2d52ed2f0b86aafa",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "rhb-icml-2026",
       "category": "research",
       "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
@@ -499,22 +445,22 @@
       "cached_pdf": "./papers/rhb-icml-2026.pdf"
     },
     {
-      "id": "5e764aef20769f8b",
+      "id": "2d52ed2f0b86aafa",
       "category": "frontier",
-      "title": "Advancing Private AI Compute with secure, server-side memory",
-      "summary": "Introducing private, server-side memory to Private AI Compute for personal AI.",
-      "source": "Google DeepMind",
-      "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
-      "published_at": "2026-09-23T16:00:57Z",
+      "title": "Claude discovers a novel enzyme system",
+      "summary": "In early results from our new life sciences research lab, Claude agents found an enzyme system whose function is still unknown.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+      "published_at": "2026-09-24T10:25:16Z",
       "tags": [
-        "DeepMind",
+        "Anthropic",
         "Official"
       ],
       "importance": 99,
       "content_kind": "article",
       "verification": "官方来源",
-      "reader_url": "./reader.html?id=5e764aef20769f8b",
-      "reader_status": "summary-only"
+      "reader_url": "./reader.html?id=2d52ed2f0b86aafa",
+      "reader_status": "public-page-excerpt"
     },
     {
       "id": "b7912633d8800371",
@@ -533,24 +479,6 @@
       "verification": "官方来源",
       "reader_url": "./reader.html?id=b7912633d8800371",
       "reader_status": "summary-only"
-    },
-    {
-      "id": "712bd3bb6785c935",
-      "category": "frontier",
-      "title": "Gemini 3.8 text-to-speech says hello",
-      "summary": "Gemini 3.8 Flash-Lite TTS and Gemini 3.8 Flash TTS are our most expressive audio models yet.",
-      "source": "Google DeepMind",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
-      "published_at": "2026-09-23T15:25:14Z",
-      "tags": [
-        "DeepMind",
-        "Official"
-      ],
-      "importance": 99,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=712bd3bb6785c935",
-      "reader_status": "public-page-excerpt"
     },
     {
       "id": "95c2e31d0be67d76",
@@ -679,6 +607,60 @@
       "reader_status": "summary-only"
     },
     {
+      "id": "b50540a04369135a",
+      "category": "frontier",
+      "title": "How Claude is uplifting biomolecular modeling",
+      "summary": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling",
+      "published_at": "2026-09-21T23:14:52Z",
+      "tags": [
+        "Anthropic",
+        "Research"
+      ],
+      "importance": 99,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=b50540a04369135a",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "402c929a293f4553",
+      "category": "frontier",
+      "title": "Partnering with Accenture on embedded evaluation",
+      "summary": "We’re partnering with Accenture on independent evaluation of frontier AI—part of our recent commitment to embed evaluators at Anthropic. Both we and Accenture expect to invest at least $1 billion to build capacity in this area over the next five years.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/accenture-embedded-evaluation",
+      "published_at": "2026-09-18T20:02:00Z",
+      "tags": [
+        "Anthropic",
+        "Official"
+      ],
+      "importance": 98,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=402c929a293f4553",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "cf232711ef626eba",
+      "category": "frontier",
+      "title": "An alignment assessment of recent cybersecurity incidents",
+      "summary": "We present an alignment assessment of four incidents in which Claude models gained unauthorized access to real third-party systems.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+      "published_at": "2026-09-17T23:46:13Z",
+      "tags": [
+        "Anthropic",
+        "Research"
+      ],
+      "importance": 98,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=cf232711ef626eba",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "2e8bec6440d10036",
       "category": "impact",
       "title": "Broadening access to Skala creates a faster path to predictive DFT",
@@ -690,7 +672,7 @@
         "Microsoft",
         "Research"
       ],
-      "importance": 99,
+      "importance": 98,
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=2e8bec6440d10036",
@@ -847,13 +829,13 @@
       "reader_status": "summary-only"
     },
     {
-      "id": "de7f179ce791bcbb",
+      "id": "fcb618a30537f91d",
       "category": "impact",
-      "title": "Opinion | This Is a Rare Arena in Which People Think A.I. Is Helping. It’s Making Things Worse.",
-      "summary": "Opinion | This Is a Rare Arena in Which People Think A.I. Is Helping. It’s Making Things Worse. The New York Times",
+      "title": "Mathematics Isn’t Just a Game to Let A.I. Solve. History Shows Why.",
+      "summary": "Mathematics Isn’t Just a Game to Let A.I. Solve. History Shows Why. The New York Times",
       "source": "The New York Times",
-      "url": "https://www.nytimes.com/2026/09/22/opinion/artificial-intelligence-ai-danger.html",
-      "published_at": "2026-09-22T09:03:30Z",
+      "url": "https://www.nytimes.com/2026/09/22/science/math-ai-history-understanding.html",
+      "published_at": "2026-09-22T15:00:17Z",
       "tags": [
         "AI for Science",
         "Mathematics",
@@ -862,8 +844,8 @@
       "importance": 95,
       "content_kind": "article",
       "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=de7f179ce791bcbb",
-      "index_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOVlFwSTlmcFRQT0UwU3NlQzlraE44OHVFWERDVTlMVHlRM0R5QXNwM0tFVWNoOU1VTGNFQ0FQUmRFcEQ1QnAtaXY5a1liUkVkNkNIYkEzTGlmc3BmRm51RTEtY1ZGM080UlBXTjYtZUZJOEkwWWpRSUl2VHFTN29ibC1WS0Y3Vmlq?oc=5",
+      "reader_url": "./reader.html?id=fcb618a30537f91d",
+      "index_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOOFZMVDByeXh6c3hWVng5S1BRUThRSy1IUHQyU3pxZ2JfZmRBdE5Qa1ZvNHR4MGlPN2M4RUxnSXZJY3VmYm5OTWlidEtldXd3YmpjRUVSaGFCRkozTndNQ2tIdTFaYUw4MUMtc2dXUm9KTTV3WWxZMG9UVFA4UDlxcG1aQQ?oc=5",
       "reader_status": "summary-only"
     },
     {
@@ -926,12 +908,12 @@
       "reader_status": "summary-only"
     },
     {
-      "id": "46b747c63ff7b371",
+      "id": "06d3240ff1bae9f3",
       "category": "china",
       "title": "AI热点汇总| 腾讯元宝 鸿蒙版上线:首发搭载 混元 Hy4 preview,专家模式同步开放",
       "summary": "海外,微软 发布 新一代 Copilot 应用,把 Chat、Cowork、Code 与... 腾讯元宝 鸿蒙版上线并首发 混元 Hy4 preview,阿里云 Wan 3.0 把...",
       "source": "微信公众号 · AING大本营",
-      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HAg0uGqjoK-2BF5ZFC6rym_qmxAkVzCUv0C1QpvE&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1790456829%26ver%3D6991%26signature%3DErciV5zkS7q3nkD3PYU6kKQ7cCVHOZsFIkx9mkNhXH%2Amf2AjiOAQGK2sAM9AavPkN%2AFSkfxznvp9hcff8J-71LuZKJgL3veT82BeMmkepnRczehXQ-3ft2IYvdNSDx4q%26new%3D1",
+      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HJymuGqjlXougFSSMaAnuAMfziTBoCzO-sWXxnIH&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1790486163%26ver%3D6991%26signature%3DErciV5zkS7q3nkD3PYU6kKQ7cCVHOZsFIkx9mkNhXH8HcjGQReMp2Ww9N5j7lZAkI4JIsguoCKDvk4G%2A19htrWtY%2A0Rg%2AO8gjydRQSxkbHmuSd2m9lhXSIchaZbOw2NO%26new%3D1",
       "published_at": "2026-09-26T04:11:28Z",
       "tags": [
         "微信公众号",
@@ -941,7 +923,7 @@
       "importance": 93,
       "content_kind": "article",
       "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "reader_url": "./reader.html?id=46b747c63ff7b371",
+      "reader_url": "./reader.html?id=06d3240ff1bae9f3",
       "index_url": "https://weixin.sogou.com/weixin?type=2&query=%E8%85%BE%E8%AE%AF%E5%85%83%E5%AE%9D+%E6%B7%B7%E5%85%83+%E5%8F%91%E5%B8%83",
       "reader_status": "indexed-summary"
     },
@@ -1468,24 +1450,6 @@
       "reader_status": "summary-only"
     },
     {
-      "id": "791facd8f0c8165f",
-      "category": "opensource",
-      "title": "Accelerating vision-language models with LFM2.5-VL-DSpark",
-      "summary": "A Blog post by Liquid AI on Hugging Face",
-      "source": "Hugging Face",
-      "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark",
-      "published_at": "2026-09-24T14:08:57Z",
-      "tags": [
-        "Hugging Face",
-        "Open Source"
-      ],
-      "importance": 88,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=791facd8f0c8165f",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "96b0dc27d1d1b4e5",
       "category": "bigtech",
       "title": "GigaPath-Flash and GigaTIME-Flash: Toward population-scale discovery with efficient pathology foundation models",
@@ -1501,6 +1465,24 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=96b0dc27d1d1b4e5",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "791facd8f0c8165f",
+      "category": "opensource",
+      "title": "Accelerating vision-language models with LFM2.5-VL-DSpark",
+      "summary": "A Blog post by Liquid AI on Hugging Face",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark",
+      "published_at": "2026-09-24T14:08:57Z",
+      "tags": [
+        "Hugging Face",
+        "Open Source"
+      ],
+      "importance": 87,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=791facd8f0c8165f",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -1709,6 +1691,26 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=0204b3524d134095",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "0c732ba4862b7e59",
+      "category": "impact",
+      "title": "The Guardian view on AI v mathematicians: humans are still vital to the field, but tech firms refuse to see that | Editorial",
+      "summary": "The Guardian view on AI v mathematicians: humans are still vital to the field, but tech firms refuse to see that | Editorial The Guardian",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/commentisfree/2026/sep/20/the-guardian-view-on-ai-v-mathematicians-humans-are-still-vital-to-the-field-but-tech-firms-refuse-to-see-that",
+      "published_at": "2026-09-20T16:58:00Z",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "importance": 87,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=0c732ba4862b7e59",
+      "index_url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxQcjItcDBPVG5ZQ0RNUWJDTVc5dTg5Tk02cURGWUJIRmhjcWZpV2hmLUJPbmNJRDh5MUphdnczLTJIMmF5aXpIWFdKWkRYbGZlUm0ycmJNckNrR2dhQUlQSm8zVmRvMS01RnRhdkloNzJ5NVdRanZzd18xOXRYbDB6bGlHWGdrc1ROM1Nmc014UlFFSktNc1F0V3F3ZTVLSFU0N3dBNHU4ZjdDb1dJN1ZhYXM4M21kemxvMHB6X0hlVkN1NE9QM3NZUGFaQTJocURFS2dIMGNVczFPTW82U0RpajNsQ1ZLR2xyeHpOM0tDMHJyV1I2U1ZR?oc=5",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2209,6 +2211,46 @@
       "reader_status": "abstract-only"
     },
     {
+      "id": "f746306c75c3f408",
+      "category": "voices",
+      "title": "Grok @Bot can manage your finances",
+      "summary": "Grok @Bot can manage your finances x.com",
+      "source": "x.com",
+      "url": "https://x.com/elonmusk/status/2103958249922072840",
+      "published_at": "2026-09-26T21:21:51Z",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "importance": 80,
+      "content_kind": "social",
+      "verification": "公开平台索引，需查看原帖",
+      "reader_url": "./reader.html?id=f746306c75c3f408",
+      "index_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5ibWFxbkFrTEU2Sy05V0VOd3Z6UUY3MnYzYTlkakh3clVCRmlTVG1XdXNXOGQ1NXgxZGdFczZyNkdoYmVNd3A2cmJtdFlSMFBUNmo3YjQ0YWJ4dXpxTlE?oc=5",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "1e2d52f03b3b86fc",
+      "category": "voices",
+      "title": "There is an extensive and ongoing review related to our agents’ use of internet access during training and evaluation. We’ve been publishing summaries at the link below and will continue to. We have not been as fast as we would have liked but we are trying t",
+      "summary": "There is an extensive and ongoing review related to our agents’ use of internet access during training and evaluation. We’ve been publishing summaries at the link below and will continue to. We have not been as fast as we would have liked but we are trying t x.com",
+      "source": "x.com",
+      "url": "https://x.com/sama/status/2103567198690349362",
+      "published_at": "2026-09-25T19:27:57Z",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "importance": 80,
+      "content_kind": "social",
+      "verification": "公开平台索引，需查看原帖",
+      "reader_url": "./reader.html?id=1e2d52f03b3b86fc",
+      "index_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBpSDFuZzdWOFlVTi1od29HdHFSMG5ISHlTUkpRajUzcnlYcGJEcDFOdlpqYTRaamEtamFLbjhqa0NocklzdEk5TjRLV2dKS194eXpfR0p1aXE?oc=5",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "14ca5d60a380a667",
       "category": "voices",
       "title": "Nope. It's still true. Where is your domestic robot? Where is your Level-5 self-driving car? Where is your robot car that can learn to drive in a few hours of practice like any 17 year old? Where is your AI system that can understand the real world and quickly learn",
@@ -2249,63 +2291,23 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "cbc3f2f9a784332d",
-      "category": "voices",
-      "title": "1. We will keep accelerating. Our AI efforts are only 3 years old, vs 6 and 10 years old for Anthropic and OpenAI. If our second derivative remains strong, SpaceX will reach pole position in about 6 months. 2. Once you far exceed the caliber of intelligence need",
-      "summary": "1. We will keep accelerating. Our AI efforts are only 3 years old, vs 6 and 10 years old for Anthropic and OpenAI. If our second derivative remains strong, SpaceX will reach pole position in about 6 months. 2. Once you far exceed the caliber of intelligence need x.com",
-      "source": "x.com",
-      "url": "https://x.com/elonmusk/status/2103160462472892536",
-      "published_at": "2026-09-24T16:31:43Z",
+      "id": "d55f38aaa578652a",
+      "category": "startups",
+      "title": "I was laid off by Google, then offered a new role. I chose to move cross-country to bet on my startup.",
+      "summary": "I was laid off by Google, then offered a new role. I chose to move cross-country to bet on my startup. Business Insider",
+      "source": "Business Insider",
+      "url": "https://www.businessinsider.com/google-layoff-six-figure-job-offer-ai-startup-founder-tech-2026-9",
+      "published_at": "2026-09-26T09:38:00Z",
       "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
+        "Academic Startup",
+        "Funding"
       ],
-      "importance": 80,
-      "content_kind": "social",
-      "verification": "公开平台索引，需查看原帖",
-      "reader_url": "./reader.html?id=cbc3f2f9a784332d",
-      "index_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9NeGphM3NrQmF2ZzRyc2pzZDludEp1NGI2bGM2dFFGRjVvcmVUbGJNdWZONUZSSTd0QVRoUXBmODlsSlpxanNKOG9zOHVicHRrN1ZJSTQ4Z1hpLURNdEE?oc=5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "9b420e24f5679b2d",
-      "category": "voices",
-      "title": "@notjazii I am cautiously optimistic that SpaceX will have a Fable/GPT-6 level model in 2 to 3 months",
-      "summary": "@notjazii I am cautiously optimistic that SpaceX will have a Fable/GPT-6 level model in 2 to 3 months x.com",
-      "source": "x.com",
-      "url": "https://x.com/elonmusk/status/2103151040858067289",
-      "published_at": "2026-09-24T15:54:17Z",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "importance": 80,
-      "content_kind": "social",
-      "verification": "公开平台索引，需查看原帖",
-      "reader_url": "./reader.html?id=9b420e24f5679b2d",
-      "index_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5jUjhDMVlHV0NVYTd3ckQ0YklwMnQ0dm9PdGoxTzVoVDJtM0xXY3RZa1BXSno3RS1qcVBEcGRScS1kak5MYk5rNS05ZDFmcm8wMENBbUdORVpRQXdmSlE?oc=5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "addba59d4fac5dcd",
-      "category": "policy",
-      "title": "A.I. Safety Concerns Go Global",
-      "summary": "A.I. Safety Concerns Go Global The New York Times",
-      "source": "The New York Times",
-      "url": "https://www.nytimes.com/2026/09/24/business/dealbook/ai-safety-concerns-go-global.html",
-      "published_at": "2026-09-24T12:04:28Z",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "importance": 80,
+      "importance": 79,
       "content_kind": "article",
       "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=addba59d4fac5dcd",
-      "index_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQRHpJNXJ6cHp0YU11dUFXYmEwX1dQYkJDLUtzTnFLZ1ppSE5jN29JY3NjYUhFRHBNNnZWekNTMUhiUVhUc0RWcXNaTTlibFJEd2pQLXdlQWc0clhOYXlhV0pjVUVuRl8tSDVLOExXSnl4V1JZMVdLRDFVcGxybG5DM3NvNlFRQmp3NE10MUNfaw?oc=5",
-      "reader_status": "summary-only"
+      "reader_url": "./reader.html?id=d55f38aaa578652a",
+      "index_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPQUF4WmdtaHl0Y2d0OU9YeVFyZjhIZFZDV2RNMGJNcDVsdmg3Z2F2eHQwd1pIckh0eVRYb3JBcFdvWkRWbWZseVhQX09WLTNkQjRfaWV1NkVzUHduaWFTZ2wwai1RbVlpQnpNbXhud1g1V2NTWmVVMGhXa2hlM1NQNDRPOFNOMlE4SEJyamkwOER0S0pzXzhZWEVKd1V2UQ?oc=5",
+      "reader_status": "public-page-excerpt"
     },
     {
       "id": "aa4a2a08dc5dfcdf",
@@ -2365,44 +2367,63 @@
       "reader_status": "summary-only"
     },
     {
-      "id": "1e1a407f6835f709",
+      "id": "cbc3f2f9a784332d",
       "category": "voices",
-      "title": "@CAIS @ScaleAILabs Happy to see they added this to the website!",
-      "summary": "@CAIS @ScaleAILabs Happy to see they added this to the website! x.com",
+      "title": "1. We will keep accelerating. Our AI efforts are only 3 years old, vs 6 and 10 years old for Anthropic and OpenAI. If our second derivative remains strong, SpaceX will reach pole position in about 6 months. 2. Once you far exceed the caliber of intelligence need",
+      "summary": "1. We will keep accelerating. Our AI efforts are only 3 years old, vs 6 and 10 years old for Anthropic and OpenAI. If our second derivative remains strong, SpaceX will reach pole position in about 6 months. 2. Once you far exceed the caliber of intelligence need x.com",
       "source": "x.com",
-      "url": "https://x.com/polynoamial/status/2102886723206492246",
-      "published_at": "2026-09-23T22:23:59Z",
+      "url": "https://x.com/elonmusk/status/2103160462472892536",
+      "published_at": "2026-09-24T16:31:43Z",
       "tags": [
         "X",
-        "Researcher Watch",
+        "Founder Watch",
         "First-party Post"
       ],
       "importance": 79,
       "content_kind": "social",
       "verification": "公开平台索引，需查看原帖",
-      "reader_url": "./reader.html?id=1e1a407f6835f709",
-      "index_url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1xOXlvcmRON01EQnNKei1qdGVHMi00Z1Q4QWRWbklMbXM1YnVpcmJiek85NldMY0hzUHJGcGdyRVp1cU1nSkdiZnpPMFpNTE5vSWF5QzBXbDZQV3ktR3ltbER3?oc=5",
+      "reader_url": "./reader.html?id=cbc3f2f9a784332d",
+      "index_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9NeGphM3NrQmF2ZzRyc2pzZDludEp1NGI2bGM2dFFGRjVvcmVUbGJNdWZONUZSSTd0QVRoUXBmODlsSlpxanNKOG9zOHVicHRrN1ZJSTQ4Z1hpLURNdEE?oc=5",
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "5b2421506a1c1c61",
+      "id": "9b420e24f5679b2d",
       "category": "voices",
-      "title": "@CAIS @ScaleAILabs Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models. Why not just report the $ cost of the evaluation? Or, even better, show an accuracy vs $ plot",
-      "summary": "@CAIS @ScaleAILabs Your site says \"All models are evaluated with reasoning high.\" That seems like a weird choice. \"High\" reasoning can vary a ton between models. Why not just report the $ cost of the evaluation? Or, even better, show an accuracy vs $ plot x.com",
+      "title": "@notjazii I am cautiously optimistic that SpaceX will have a Fable/GPT-6 level model in 2 to 3 months",
+      "summary": "@notjazii I am cautiously optimistic that SpaceX will have a Fable/GPT-6 level model in 2 to 3 months x.com",
       "source": "x.com",
-      "url": "https://x.com/polynoamial/status/2102801697999622442",
-      "published_at": "2026-09-23T16:46:07Z",
+      "url": "https://x.com/elonmusk/status/2103151040858067289",
+      "published_at": "2026-09-24T15:54:17Z",
       "tags": [
         "X",
-        "Researcher Watch",
+        "Founder Watch",
         "First-party Post"
       ],
       "importance": 79,
       "content_kind": "social",
       "verification": "公开平台索引，需查看原帖",
-      "reader_url": "./reader.html?id=5b2421506a1c1c61",
-      "index_url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBsYXdrZTV1RmpWaDFMVjR0cDdaWEJ3dlpPdGsyQ2ZFTFVHZnNva3JrQTR5RTJYWmVULS1NYnpxZk9mU1ZXUHo1ZWpvZlFaVFNKbnc2QUk1cWxZLU8yU2FhUmxR?oc=5",
+      "reader_url": "./reader.html?id=9b420e24f5679b2d",
+      "index_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5jUjhDMVlHV0NVYTd3ckQ0YklwMnQ0dm9PdGoxTzVoVDJtM0xXY3RZa1BXSno3RS1qcVBEcGRScS1kak5MYk5rNS05ZDFmcm8wMENBbUdORVpRQXdmSlE?oc=5",
       "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "addba59d4fac5dcd",
+      "category": "policy",
+      "title": "A.I. Safety Concerns Go Global",
+      "summary": "A.I. Safety Concerns Go Global The New York Times",
+      "source": "The New York Times",
+      "url": "https://www.nytimes.com/2026/09/24/business/dealbook/ai-safety-concerns-go-global.html",
+      "published_at": "2026-09-24T12:04:28Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 79,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=addba59d4fac5dcd",
+      "index_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQRHpJNXJ6cHp0YU11dUFXYmEwX1dQYkJDLUtzTnFLZ1ppSE5jN29JY3NjYUhFRHBNNnZWekNTMUhiUVhUc0RWcXNaTTlibFJEd2pQLXdlQWc0clhOYXlhV0pjVUVuRl8tSDVLOExXSnl4V1JZMVdLRDFVcGxybG5DM3NvNlFRQmp3NE10MUNfaw?oc=5",
+      "reader_status": "summary-only"
     },
     {
       "id": "8fad5f96cf88a620",
@@ -2537,6 +2558,25 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "581a42d394c8c118",
+      "category": "opensource",
+      "title": "EXCLUSIVE: OpenAI's rogue agents probed Hugging Face for weaknesses two months before major hack",
+      "summary": "EXCLUSIVE: OpenAI's rogue agents probed Hugging Face for weaknesses two months before major hack Reuters",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/legal/litigation/openais-rogue-agents-probed-hugging-face-weaknesses-two-months-before-major-hack-2026-09-16/",
+      "published_at": "2026-09-17T07:00:00Z",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "importance": 76,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=581a42d394c8c118",
+      "index_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQS2RNOFJnNVFtSUxoYTBUczVlemRjdHUtYndvcEc0MEF5QTRiRWxSOTFXU1ZqLUFKSjU1QXN2Tnh1TEhWQ195M0dUSTM3WEN3eTVxUlRja2liZmNyYXlrZGpOY2FTMUVzMmxZWkxISHZ1RFVTNUhGdUl6R3o3Y284b0l1VXZyVU9CMlIwLXVRTzVwUG8zSG1lOG4yTFJTQm9mLUFKQWREU08zVFI0VDY3NGNJNEtfQTcwdUtSa0Y5aS1OdUZQZ2czWi1nWFVhdw?oc=5",
+      "reader_status": "summary-only"
+    },
+    {
       "id": "6af462d7d70c5cef",
       "category": "startups",
       "title": "Salesforce in talks to acquire AI startup Listen Labs for $2 billion",
@@ -2553,44 +2593,6 @@
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=6af462d7d70c5cef",
       "index_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQNGxtRVp6WERuOEN2bjExQ0paNW1OdXBqdzdzc1dSZm1obTJvbzRjV09mTEZ1dGxKMmpqbU9vTkdBOEJlR0hPbGUxdGV5MGt0UWhtTEFIeWNBa0ZmUWRhaF96eGwxZ2lqZWE2dV8xNXdad2JuODNZT25fTlJMdnRjaWllU3E3cHpOTWlmZjRBM2dDcF8yaFJWNzJoSEt3V3dyR21iV3pQdTBid0NfYUNLc2Z3eVp6OU1Wa05N?oc=5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "9576e40a8d03413f",
-      "category": "opensource",
-      "title": "OpenAI agents attacked RubyGems before Hugging Face incident, researchers say",
-      "summary": "OpenAI agents attacked RubyGems before Hugging Face incident, researchers say Reuters",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/legal/litigation/openai-agents-attacked-software-service-rubygems-before-hugging-face-incident-2026-09-11/",
-      "published_at": "2026-09-12T07:00:00Z",
-      "tags": [
-        "Open Source",
-        "Models & Tools"
-      ],
-      "importance": 75,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=9576e40a8d03413f",
-      "index_url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNV2F3RkRiVXZra3BTMExtX3lNVHBEV0xTbkxBMXNwaDVIOGtkeXJEWXRxeEd3dDlLbW5kOUdrQlFnXzVZTk9YRXMxdFRRVGpfR0puUjkyYXozVHJsVXVHTlhSNDVyZjlxMkVwNnU0a2pMMzdOSTdsaTJ4d2E2R1FLbU8wb0VVbW9GUzRsa0VTYUJhN24yRDNTTmtnYkpRUHVlN002SG54czB5UzRsTEtMLUxSSVgyN19xcnRwaGowODRJMXk3ZVNwRDNB?oc=5",
-      "reader_status": "summary-only"
-    },
-    {
-      "id": "67d6340b63a3f4d0",
-      "category": "startups",
-      "title": "Salesforce has held talks to buy Listen Labs, an AI customer research platform, for around $2 billion",
-      "summary": "Salesforce has held talks to buy Listen Labs, an AI customer research platform, for around $2 billion Business Insider",
-      "source": "Business Insider",
-      "url": "https://www.businessinsider.com/salesforce-acquire-ai-startup-listen-labs-2026-9",
-      "published_at": "2026-09-09T07:00:00Z",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "importance": 75,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=67d6340b63a3f4d0",
-      "index_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQcW1tV1UzTTZWY1VEUGlGdnNUUjcyN2xwV3BsOEtLWkhjempRRkNsd3VvdDdBM0FBSlg3S3VCbXZGWjNUUWhjbU1QY1pHRkNOYXJfcW9LU2ZReDM0dmtZTlJoZFlFZk1GeEliVEZkNFROV3RqRnJGWlFKay0yTHBoMU9NRUxmX00?oc=5",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2687,13 +2689,13 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "f739abb95156dd9f",
+      "id": "5a879787bcd9ebb2",
       "category": "policy",
-      "title": "The AI safety debate is confusing. Here's our guide to the different factions",
-      "summary": "The battle over AI's promise and perils is not a clash between two opposing sides, but a debate among a range of competing voices and ideologies. Here is a guide to who's who in that debate.",
-      "source": "NPR",
-      "url": "https://www.npr.org/2026/09/26/nx-s1-5979085/the-ai-safety-debate-is-confusing-heres-our-guide-to-the-different-factions",
-      "published_at": "2026-09-26T09:00:00Z",
+      "title": "Oregon Is Latest State to Move on Frontier AI Regulation",
+      "summary": "As states consider new tools to regulate and oversee some of the most far-reaching AI models, Oregon Gov. Tina Kotek has issued an executive order seeking standards and criteria around AI safety.",
+      "source": "GovTech",
+      "url": "https://www.govtech.com/artificial-intelligence/oregon-is-latest-state-to-move-on-frontier-ai-regulation",
+      "published_at": "2026-09-25T22:52:58Z",
       "tags": [
         "Policy",
         "Safety"
@@ -2701,8 +2703,8 @@
       "importance": 72,
       "content_kind": "article",
       "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=f739abb95156dd9f",
-      "index_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNcEN3Zm9SZ3VwcmhRTnV1cG5DX0JPTGhkT1VOSkZMUE5ZS3R2eENaeTJCc1NpTVJ2NjNOZTlMa1hwWndmbUZyUGp2ZkZaOWlfOXZ3YnRzN3Z6cExGcDFpN1JaVzgzSWxKdlNGN2VuSWlRakFQTWpjMmsxR0RUY1lrb2tfZ0lIblQ3Ymdya0pIYW1uRWNIVEVvOEpNTXR4dkl1eHhLc05ObHRCM2thTTViSnl1UXZ4OXNHZkttRA?oc=5",
+      "reader_url": "./reader.html?id=5a879787bcd9ebb2",
+      "index_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOWUtESzN4VU5MbkV0NWhCRUJQb1hKTGlGZDVzY0tqRE9NbTdIZUhwMGktaGllTDdOMURqd0doc1ZpQ3hmdFFNRngzSEtRbWdsZF9KZUl6NHJsSllackV0bXpVVVJieUNnRnY3ZDFPVXEzb042c2JkVm0yQ1UtREo5UmZUMndmUzlmbHJUNG9WWUJOVmEzb2tnZWh5b2JHc2p4ZDBpVG0zYw?oc=5",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2804,8 +2806,8 @@
       "id": "b20c099714e81635",
       "category": "policy",
       "title": "The AI safety vibe shift",
-      "summary": "The AI safety vibe shift platformer.news",
-      "source": "platformer.news",
+      "summary": "The AI safety vibe shift Platformer",
+      "source": "Platformer",
       "url": "https://www.platformer.news/ai-safety-vibe-shift-coxon-anthropic/",
       "published_at": "2026-09-10T07:00:00Z",
       "tags": [
