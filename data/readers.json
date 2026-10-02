@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-01T22:39:24Z",
-  "record_count": 130,
+  "generated_at": "2026-10-02T05:33:18Z",
+  "record_count": 129,
   "records": [
     {
       "id": "jacobian-fable-20260720",
@@ -95,6 +95,41 @@
       "reading_minutes": 1
     },
     {
+      "id": "unit-distance-openai-20260520",
+      "kind": "paper",
+      "title": "OpenAI 模型推翻平面单位距离问题中的长期猜想",
+      "source": "OpenAI · Research",
+      "source_url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+      "published_at": "2026-05-20T08:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Unit Distance",
+        "Discrete Geometry",
+        "Verified Proof"
+      ],
+      "verification": "官方论文 · 外部数学家已检查",
+      "summary": "OpenAI 的通用推理模型找到一族新的点集构造，证明单位距离对数可以达到 n 的 1+δ 次方，从而推翻长期流行的 n 的 1+o(1) 上界猜想。证明已由外部数学家检查，并有公开证明 PDF 与多位数学家的伴随评论。",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/unit-distance-openai-20260520.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf",
+      "key_points": [
+        "Planar Point Sets with Many Unit Distances OpenAI Abstract For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets.",
+        "We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n.",
+        "This disproves the well-known unit distance conjecture from [ Erd46].",
+        "The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely.",
+        "After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets. We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n. This disproves the well-known unit distance conjecture from [ Erd46]. The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely. After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1. Golod–Shafarevich theory ensures existence of an inﬁnite such tower, even after a quotient step making the prescribed Frobenius classes trivial. A crucial property of the construction is that all resulting discriminants and class numbers are at most exponential in the extension degree. 1 Main Result For a ﬁnite set P ⊂ R2, let ν(P ) = # {{x,y } ⊂ P : |x −y|= 1} andν(n) = max |P |=nν(P ). The planar unit-distance problem goes back to Erdős [ Erd46], who conjectured that there should be an absolute constant C such that, for all suﬃciently large n, ν(n) ≤ n1+C/ log logn. (1) The same 1946 paper also introduced the distinct-distances problem, later resolved up to logarithmic factors by Guth–Katz [ GK15]. An elementary upper bound is ν(n) = O(n3/ 2): the Euclidean unit-distance graph is K2, 3-free, since two unit circles meet in at most two points, and the Kővári–Sós–Turán theorem applies [ KST54]. The best known upper bound ν(n) = O(n4/ 3) is due to Spencer–Szemerédi–Trotter [ SST84]; Székely later gave a short crossing-number proof of this incidence bound [ Sze97]. It is useful to compare this with the same question for other norms on R2, a direction studied systematically by Brass [ Bra96]. If the unit ball has a ﬂat segment, one can arrange quadratically many unit distances, so the interesting normed-plane analogues usually impose strict convexity or genericity. Székely’s crossing-number argument extends to strictly convex norms, again giving O(n4/ 3), and Valtr constructed a strictly convex norm for which this exponent is…"
+        }
+      ],
+      "reading_minutes": 32
+    },
+    {
       "id": "e6243056d8ce3efa",
       "kind": "article",
       "title": "Introducing Quine: An AI research system designed for the complexity of biology",
@@ -140,41 +175,6 @@
         }
       ],
       "reading_minutes": 1
-    },
-    {
-      "id": "unit-distance-openai-20260520",
-      "kind": "paper",
-      "title": "OpenAI 模型推翻平面单位距离问题中的长期猜想",
-      "source": "OpenAI · Research",
-      "source_url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
-      "published_at": "2026-05-20T08:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Unit Distance",
-        "Discrete Geometry",
-        "Verified Proof"
-      ],
-      "verification": "官方论文 · 外部数学家已检查",
-      "summary": "OpenAI 的通用推理模型找到一族新的点集构造，证明单位距离对数可以达到 n 的 1+δ 次方，从而推翻长期流行的 n 的 1+o(1) 上界猜想。证明已由外部数学家检查，并有公开证明 PDF 与多位数学家的伴随评论。",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/unit-distance-openai-20260520.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf",
-      "key_points": [
-        "Planar Point Sets with Many Unit Distances OpenAI Abstract For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets.",
-        "We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n.",
-        "This disproves the well-known unit distance conjecture from [ Erd46].",
-        "The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely.",
-        "After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets. We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n. This disproves the well-known unit distance conjecture from [ Erd46]. The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely. After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1. Golod–Shafarevich theory ensures existence of an inﬁnite such tower, even after a quotient step making the prescribed Frobenius classes trivial. A crucial property of the construction is that all resulting discriminants and class numbers are at most exponential in the extension degree. 1 Main Result For a ﬁnite set P ⊂ R2, let ν(P ) = # {{x,y } ⊂ P : |x −y|= 1} andν(n) = max |P |=nν(P ). The planar unit-distance problem goes back to Erdős [ Erd46], who conjectured that there should be an absolute constant C such that, for all suﬃciently large n, ν(n) ≤ n1+C/ log logn. (1) The same 1946 paper also introduced the distinct-distances problem, later resolved up to logarithmic factors by Guth–Katz [ GK15]. An elementary upper bound is ν(n) = O(n3/ 2): the Euclidean unit-distance graph is K2, 3-free, since two unit circles meet in at most two points, and the Kővári–Sós–Turán theorem applies [ KST54]. The best known upper bound ν(n) = O(n4/ 3) is due to Spencer–Szemerédi–Trotter [ SST84]; Székely later gave a short crossing-number proof of this incidence bound [ Sze97]. It is useful to compare this with the same question for other norms on R2, a direction studied systematically by Brass [ Bra96]. If the unit ball has a ﬂat segment, one can arrange quadratically many unit distances, so the interesting normed-plane analogues usually impose strict convexity or genericity. Székely’s crossing-number argument extends to strictly convex norms, again giving O(n4/ 3), and Valtr constructed a strictly convex norm for which this exponent is…"
-        }
-      ],
-      "reading_minutes": 32
     },
     {
       "id": "7cf4c8d7346588e6",
@@ -819,6 +819,51 @@
       "reading_minutes": 1
     },
     {
+      "id": "rhb-icml-2026",
+      "kind": "paper",
+      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
+      "source": "OpenReview · arXiv",
+      "source_url": "https://arxiv.org/abs/2605.02964",
+      "published_at": "2026-06-24T00:00:00Z",
+      "authors": [
+        "Kunvar Thaman"
+      ],
+      "venue": "ICML 2026",
+      "tags": [
+        "Reward Hacking",
+        "Agent Safety",
+        "Evaluation"
+      ],
+      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
+      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/rhb-icml-2026.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://arxiv.org/pdf/2605.02964",
+      "key_points": [
+        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
+        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
+        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
+        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
+        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
+        },
+        {
+          "title": "关键结果",
+          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
+        },
+        {
+          "title": "局限与结论",
+          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
+        }
+      ],
+      "reading_minutes": 46
+    },
+    {
       "id": "29e0751f39b00999",
       "kind": "article",
       "title": "What do you want from AI?",
@@ -915,51 +960,6 @@
         }
       ],
       "reading_minutes": 1
-    },
-    {
-      "id": "rhb-icml-2026",
-      "kind": "paper",
-      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
-      "source": "OpenReview · arXiv",
-      "source_url": "https://arxiv.org/abs/2605.02964",
-      "published_at": "2026-06-24T00:00:00Z",
-      "authors": [
-        "Kunvar Thaman"
-      ],
-      "venue": "ICML 2026",
-      "tags": [
-        "Reward Hacking",
-        "Agent Safety",
-        "Evaluation"
-      ],
-      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
-      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/rhb-icml-2026.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://arxiv.org/pdf/2605.02964",
-      "key_points": [
-        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
-        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
-        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
-        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
-        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
-        },
-        {
-          "title": "关键结果",
-          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
-        },
-        {
-          "title": "局限与结论",
-          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
-        }
-      ],
-      "reading_minutes": 46
     },
     {
       "id": "d04e15619b735a3a",
@@ -1508,11 +1508,91 @@
       "reading_minutes": 1
     },
     {
+      "id": "bc7eb74553fa2f5f",
+      "kind": "article",
+      "title": "DeepSeek 发布 智能体沙箱 DSec,AI Agent 安全竞赛正式开启:AI 自主执行时代,安全围栏怎么搭建?",
+      "source": "微信公众号 · 移思",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1790919176&ver=7001&signature=0FO6OMfoWhBMnPKlAQubzjENc1lhdUXVFQJ2gfB1woEFCkhv9Q2Gv46iwmqIfy713LrtoE8APw5dCwfB3TnvA9CXU7-hYxlUOOqyPyaK0kI1jyGEzAY6Kz3dztPDWbTn&new=1",
+      "published_at": "2026-10-02T02:00:35Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "微信公众号",
+        "DeepSeek",
+        "模型"
+      ],
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "summary": "DeepSeek 在 arXiv 发布 DSec 大规模智能体沙箱论文,同步启动 AI Agent 安全竞赛,开放沙箱环境供全球研究者开展红队攻防测试....",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "indexed-summary",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HBZCv2qjmVymPleiA0qpfoUahwA1MjSYypSnnhOW&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1790919176%26ver%3D7001%26signature%3D0FO6OMfoWhBMnPKlAQubzjENc1lhdUXVFQJ2gfB1woEFCkhv9Q2Gv46iwmqIfy713LrtoE8APw5dCwfB3TnvA9CXU7-hYxlUOOqyPyaK0kI1jyGEzAY6Kz3dztPDWbTn%26new%3D1",
+      "key_points": [
+        "DeepSeek 在 arXiv 发布 DSec 大规模智能体沙箱论文,同步启动 AI Agent 安全竞赛,开放沙箱环境供全球研究者开展红队攻防测试...."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "DeepSeek 在 arXiv 发布 DSec 大规模智能体沙箱论文,同步启动 AI Agent 安全竞赛,开放沙箱环境供全球研究者开展红队攻防测试...."
+        },
+        {
+          "title": "公开索引摘要",
+          "bullets": [
+            "DeepSeek 在 arXiv 发布 DSec 大规模智能体沙箱论文,同步启动 AI Agent 安全竞赛,开放沙箱环境供全球研究者开展红队攻防测试...."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "95369d214e1479f1",
+      "kind": "article",
+      "title": "再见了CUDA! DeepSeek 华为重磅 发布 ,NVIDIA护城河没了",
+      "source": "微信公众号 · 文Q聊硬件",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1790919176&ver=7001&signature=Gn-yrW--k2mfX74KCfr*MaFlaVUU*Ntu27PKnhzMbz7jR-kznfHzTTU5vuvGbAvXQSIusaGw6Qai4ZWfx-kW*HOyb9VEI6KQ7vEDzLHvkhZtgSnPdxQd43d*E3qc-8is&new=1",
+      "published_at": "2026-10-02T00:51:20Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "微信公众号",
+        "DeepSeek",
+        "模型"
+      ],
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "summary": "今年4月 发布 预览版的 DeepSeek V4系列模型,就已完成昇腾芯片适配.华为曾表示,昇腾 950 超级节点已完整支持V4系列模型,其中...",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "indexed-summary",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HBZCv2qjUy0CM30zOKfc1uT9WjZXzUc3CoP_3W29&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1790919176%26ver%3D7001%26signature%3DGn-yrW--k2mfX74KCfr%2AMaFlaVUU%2ANtu27PKnhzMbz7jR-kznfHzTTU5vuvGbAvXQSIusaGw6Qai4ZWfx-kW%2AHOyb9VEI6KQ7vEDzLHvkhZtgSnPdxQd43d%2AE3qc-8is%26new%3D1",
+      "key_points": [
+        "今年4月 发布 预览版的 DeepSeek V4系列模型,就已完成昇腾芯片适配.华为曾表示,昇腾 950 超级节点已完整支持V4系列模型,其中..."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "今年4月 发布 预览版的 DeepSeek V4系列模型,就已完成昇腾芯片适配.华为曾表示,昇腾 950 超级节点已完整支持V4系列模型,其中..."
+        },
+        {
+          "title": "公开索引摘要",
+          "bullets": [
+            "今年4月 发布 预览版的 DeepSeek V4系列模型,就已完成昇腾芯片适配.华为曾表示,昇腾 950 超级节点已完整支持V4系列模型,其中..."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "33966e41ee580d40",
       "kind": "article",
       "title": "Gemini 4 Argon 发布 , DeepSeek V4.1技术详解",
       "source": "微信公众号 · 莲花清辉",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1790894342&ver=7001&signature=tpDVmMxPPGAl-kA10BNOC4Vmej7IJswumALmT1PCCwfwatPlVhzCJTJQa8eX0CB6c9R*32v4BVSFHinDDLFC0dBmxwxz-evc47PLfa7xSHHt8yxBiNnnAIvlaVNFk9qn&new=1",
+      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HBXhvmqjHpBlKIjannT5JAka5niF0SNAKUKDCKH1&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1790894342%26ver%3D7001%26signature%3DtpDVmMxPPGAl-kA10BNOC4Vmej7IJswumALmT1PCCwfwatPlVhzCJTJQa8eX0CB6c9R%2A32v4BVSFHinDDLFC0dBmxwxz-evc47PLfa7xSHHt8yxBiNnnAIvlaVNFk9qn%26new%3D1",
       "published_at": "2026-10-01T00:00:58Z",
       "authors": [],
       "venue": "",
@@ -1599,7 +1679,7 @@
       "kind": "article",
       "title": "DeepSeek 官方桌面版 发布",
       "source": "微信公众号 · 易川YC",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1790894342&ver=7001&signature=2Bm6ScUvtp3W3FMFClvNnIugNlfR0oACkglUWOKodQAoKSG10WfOP0tjq*HNMwNTjzx4i*CAvuvMRJMh2jMAixBV*naz9b73YNzcK5ckYUMxJ*KJKmPTmyfHoTtp1J3W&new=1",
+      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HBXhvmqjZ6YRSEfid6vWy0Rucu5lqxxhFB3g0pyo&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1790894342%26ver%3D7001%26signature%3D2Bm6ScUvtp3W3FMFClvNnIugNlfR0oACkglUWOKodQAoKSG10WfOP0tjq%2AHNMwNTjzx4i%2ACAvuvMRJMh2jMAixBV%2Anaz9b73YNzcK5ckYUMxJ%2AKJKmPTmyfHoTtp1J3W%26new%3D1",
       "published_at": "2026-09-30T12:49:31Z",
       "authors": [],
       "venue": "",
@@ -2115,127 +2195,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "0f86fa4918b6035e",
-      "kind": "article",
-      "title": "智谱 发布 GLM -5.3-FlashX:推理速度冲至 200 tokens/s,国产算力 Infra Agent 闭环启动",
-      "source": "微信公众号 · 泽哥tellyou",
-      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HLYmsWqjSQ6SbSqregtHS_M9Tn20VRdXLlPfxJqI&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789994639%26ver%3D6980%26signature%3DeEUBSUxhyDmCi0C1gaq2nm6T6dAQe2b5jTrIZ9oeDlsK6U0JXHNVHfH6vB44GRHGR6Gj8IA2N6bQ139XxHIRexMBew7jfTUVVjF2NybkZ2Sc6wLiNp75cKL-ZMDRPBEm%26new%3D1",
-      "published_at": "2026-09-19T02:18:12Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "微信公众号",
-        "智谱",
-        "GLM"
-      ],
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "summary": "1 �� 智谱 发布 GLM -5.3-FlashX:推理速度冲至 200 tokens/s,国产算力 Infra Agent 闭环启动 智谱 9/18 正式推出 GLM -5.3-FlashX,...",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HLYmsWqjSQ6SbSqregtHS_M9Tn20VRdXLlPfxJqI&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789994639%26ver%3D6980%26signature%3DeEUBSUxhyDmCi0C1gaq2nm6T6dAQe2b5jTrIZ9oeDlsK6U0JXHNVHfH6vB44GRHGR6Gj8IA2N6bQ139XxHIRexMBew7jfTUVVjF2NybkZ2Sc6wLiNp75cKL-ZMDRPBEm%26new%3D1",
-      "key_points": [
-        "1 �� 智谱 发布 GLM -5.3-FlashX:推理速度冲至 200 tokens/s,国产算力 Infra Agent 闭环启动 智谱 9/18 正式推出 GLM -5.3-FlashX,..."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "1 �� 智谱 发布 GLM -5.3-FlashX:推理速度冲至 200 tokens/s,国产算力 Infra Agent 闭环启动 智谱 9/18 正式推出 GLM -5.3-FlashX,..."
-        },
-        {
-          "title": "公开索引摘要",
-          "bullets": [
-            "1 �� 智谱 发布 GLM -5.3-FlashX:推理速度冲至 200 tokens/s,国产算力 Infra Agent 闭环启动 智谱 9/18 正式推出 GLM -5.3-FlashX,..."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "1f19d7c27078ae83",
-      "kind": "article",
-      "title": "Deepseek 如何看最近 发布 的《高等学校领导人员管理办法》有何不足",
-      "source": "微信公众号 · 凌峰侃侃谈",
-      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HHXyrmqjF30swOfnkQapjENVk_yMGvsALOremBix&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789850215%26ver%3D6976%26signature%3DwoTlwc5vM1lDTYXVbSAI08pl2GUkldLGaV0xMudoBGOrz5gYvoLv6%2ABA14eFXTQBfXddeyPznALunGXfm1uvQFaug8vOEnIuLgnJfudWNA7XRXJS2fe9yXNhHowJRTtp%26new%3D1",
-      "published_at": "2026-09-19T01:25:41Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "微信公众号",
-        "DeepSeek",
-        "模型"
-      ],
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "summary": "以及处罚结果必须一个月或者2个月 发布 ,对于举报的人有何奖励... Deepseek 认为的不足之处与建议【大部分】:1. “一般应当”“可...",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HHXyrmqjF30swOfnkQapjENVk_yMGvsALOremBix&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1789850215%26ver%3D6976%26signature%3DwoTlwc5vM1lDTYXVbSAI08pl2GUkldLGaV0xMudoBGOrz5gYvoLv6%2ABA14eFXTQBfXddeyPznALunGXfm1uvQFaug8vOEnIuLgnJfudWNA7XRXJS2fe9yXNhHowJRTtp%26new%3D1",
-      "key_points": [
-        "以及处罚结果必须一个月或者2个月 发布 ,对于举报的人有何奖励... Deepseek 认为的不足之处与建议【大部分】:1. “一般应当”“可..."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "以及处罚结果必须一个月或者2个月 发布 ,对于举报的人有何奖励... Deepseek 认为的不足之处与建议【大部分】:1. “一般应当”“可..."
-        },
-        {
-          "title": "公开索引摘要",
-          "bullets": [
-            "以及处罚结果必须一个月或者2个月 发布 ,对于举报的人有何奖励... Deepseek 认为的不足之处与建议【大部分】:1. “一般应当”“可..."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "37db2441d5a89592",
-      "kind": "article",
-      "title": "Medical AI has a proof problem",
-      "source": "Financial Times",
-      "source_url": "https://www.ft.com/content/34319b00-f874-4119-aa28-8376d81e7190?syn-25a6b1a6=1",
-      "published_at": "2026-09-18T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Medical AI has a proof problem Financial Times",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 403: Forbidden",
-      "resolved_url": "https://www.ft.com/content/34319b00-f874-4119-aa28-8376d81e7190?syn-25a6b1a6=1",
-      "key_points": [
-        "Medical AI has a proof problem Financial Times"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Medical AI has a proof problem Financial Times"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Medical AI has a proof problem Financial Times"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "3cb8bc319ea7e4e6",
       "kind": "article",
       "title": "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program",
@@ -2267,6 +2226,47 @@
           "title": "公开页面要点",
           "bullets": [
             "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program Reuters"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "37db2441d5a89592",
+      "kind": "article",
+      "title": "Medical AI has a proof problem",
+      "source": "Financial Times",
+      "source_url": "https://www.ft.com/content/34319b00-f874-4119-aa28-8376d81e7190?syn-25a6b1a6=1",
+      "published_at": "2026-09-17T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Medical AI has a proof problem Financial Times",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://www.ft.com/content/34319b00-f874-4119-aa28-8376d81e7190?syn-25a6b1a6=1",
+      "key_points": [
+        "Medical AI has a proof problem Financial Times"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Medical AI has a proof problem Financial Times"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Medical AI has a proof problem Financial Times"
           ]
         },
         {
@@ -2873,6 +2873,57 @@
       "reading_minutes": 1
     },
     {
+      "id": "f3f78422f0eb2a11",
+      "kind": "article",
+      "title": "AutoSynthData: Generating Training Data for Enterprise Agents",
+      "source": "Hugging Face",
+      "source_url": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata",
+      "published_at": "2026-10-02T04:01:31Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Hugging Face",
+        "Open Source"
+      ],
+      "verification": "官方来源",
+      "summary": "A Blog post by ServiceNow-AI on Hugging Face",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata",
+      "key_points": [
+        "Enterprises need agents that work well in their own environments.",
+        "The work they ask these agents to do is shaped by the systems they use, the rules they follow, and the state of their data.",
+        "A model may be broadly capable and still struggle with a particular environment: a workflow it handles poorly, a combination of tools it misuses, or a constraint it fails to respect.",
+        "Those are the weaknesses an enterprise needs to improve.",
+        "The difficulty is turning those weaknesses into training data."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "A Blog post by ServiceNow-AI on Hugging Face"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Enterprises need agents that work well in their own environments.",
+            "The work they ask these agents to do is shaped by the systems they use, the rules they follow, and the state of their data.",
+            "A model may be broadly capable and still struggle with a particular environment: a workflow it handles poorly, a combination of tools it misuses, or a constraint it fails to respect.",
+            "Those are the weaknesses an enterprise needs to improve.",
+            "The difficulty is turning those weaknesses into training data."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Enterprises need agents that work well in their own environments. The work they ask these agents to do is shaped by the systems they use, the rules they follow, and the state of their data. A model may be broadly capable and still struggle with a particular environment: a workflow it handles poorly, a combination of tools it misuses, or a constraint it fails to respect. Those are the weaknesses an enterprise needs to improve.",
+            "The difficulty is turning those weaknesses into training data. An individual failure tells us something, but training a model requires many new tasks that exercise the same capability in different situations. Those tasks must also be possible to complete in the environment, resemble work someone would actually request, and have a reliable way to check whether the agent succeeded.",
+            "At ServiceNow CoreAI, we built AutoSynthData to turn those capability gaps into training data. It uses a target model’s failures and a stronger teacher’s successes to decide what the model should learn next, then generates and validates new tasks that exercise those capabilities. As the model improves, the curriculum shifts toward what it still finds difficult. We illustrate the pipeline with EnterpriseOps Gym ( Malay et al., 2026 ), using the released dataset . We begin by describing the environment an agent operates in and what makes a task useful for training."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "42d389971b7efa73",
       "kind": "article",
       "title": "Introducing Olmo-core 3: Open, scalable training infrastructure for large MoEs",
@@ -2927,7 +2978,7 @@
       "id": "5bf61d883c477a6c",
       "kind": "article",
       "title": "AI makes its first meaningful breakthrough in theoretical physics",
-      "source": "bigthink.com",
+      "source": "Big Think",
       "source_url": "https://bigthink.com/starts-with-a-bang/ai-first-breakthrough-theoretical-physics/",
       "published_at": "2026-09-30T06:00:00Z",
       "authors": [],
@@ -2938,36 +2989,36 @@
         "Discovery"
       ],
       "verification": "媒体或公开网页",
-      "summary": "AI makes its first meaningful breakthrough in theoretical physics bigthink.com",
+      "summary": "AI makes its first meaningful breakthrough in theoretical physics Big Think",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://bigthink.com/starts-with-a-bang/ai-first-breakthrough-theoretical-physics/",
       "key_points": [
-        "Videos Back Latest Videos See all videos The Second Amendment has a hidden origin story Author Malcolm Gladwell explores the fallacies behind the Second Amendment in conversation with Jonny Thomson.",
+        "Videos Back Latest Videos See all videos Google CTO: A unifying theory of life, intelligence, and technology Blaise Agüera y Arcas argues that function defines life more than material does, and that AI belongs in the same...",
+        "The Second Amendment has a hidden origin story Author Malcolm Gladwell explores the fallacies behind the Second Amendment in conversation with Jonny Thomson.",
         "The director of Donnie Darko on why the film is so misunderstood Richard Kelly on 25 years of Donnie Darko, the true origin of the bunny mask, and The Philosophy of Time...",
         "CRISPR’s co-inventor on the importance of responsibility in science Jennifer Doudna co-invented CRISPR.",
-        "Now she's the one asking how much power we should be allowed to handle.",
-        "Your Brain on Books What’s happening in your brain and body while you’re lost in a great book?"
+        "Now she's the one asking how much power we should be allowed… Columns Back Columns Mini Philosophy A philosophy column for personal reflection."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "AI makes its first meaningful breakthrough in theoretical physics bigthink.com"
+          "body": "AI makes its first meaningful breakthrough in theoretical physics Big Think"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Videos Back Latest Videos See all videos The Second Amendment has a hidden origin story Author Malcolm Gladwell explores the fallacies behind the Second Amendment in conversation with Jonny Thomson.",
+            "Videos Back Latest Videos See all videos Google CTO: A unifying theory of life, intelligence, and technology Blaise Agüera y Arcas argues that function defines life more than material does, and that AI belongs in the same...",
+            "The Second Amendment has a hidden origin story Author Malcolm Gladwell explores the fallacies behind the Second Amendment in conversation with Jonny Thomson.",
             "The director of Donnie Darko on why the film is so misunderstood Richard Kelly on 25 years of Donnie Darko, the true origin of the bunny mask, and The Philosophy of Time...",
             "CRISPR’s co-inventor on the importance of responsibility in science Jennifer Doudna co-invented CRISPR.",
-            "Now she's the one asking how much power we should be allowed to handle.",
-            "Your Brain on Books What’s happening in your brain and body while you’re lost in a great book?"
+            "Now she's the one asking how much power we should be allowed… Columns Back Columns Mini Philosophy A philosophy column for personal reflection."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Videos Back Latest Videos See all videos The Second Amendment has a hidden origin story Author Malcolm Gladwell explores the fallacies behind the Second Amendment in conversation with Jonny Thomson. The director of Donnie Darko on why the film is so misunderstood Richard Kelly on 25 years of Donnie Darko, the true origin of the bunny mask, and The Philosophy of Time... CRISPR’s co-inventor on the importance of responsibility in science Jennifer Doudna co-invented CRISPR. Now she's the one asking how much power we should be allowed to handle. Your Brain on Books What’s happening in your brain and body while you’re lost in a great book? The philosophy of liberalism and how it has transformed our institutions…",
+            "Videos Back Latest Videos See all videos Google CTO: A unifying theory of life, intelligence, and technology Blaise Agüera y Arcas argues that function defines life more than material does, and that AI belongs in the same... The Second Amendment has a hidden origin story Author Malcolm Gladwell explores the fallacies behind the Second Amendment in conversation with Jonny Thomson. The director of Donnie Darko on why the film is so misunderstood Richard Kelly on 25 years of Donnie Darko, the true origin of the bunny mask, and The Philosophy of Time... CRISPR’s co-inventor on the importance of responsibility in science Jennifer Doudna co-invented CRISPR. Now she's the one asking how much power we should be allowed…",
             "Columns Back Columns Mini Philosophy A philosophy column for personal reflection. Starts With A Bang An astrophysics column on big questions and our universe. Books A literature column to feed your curiosity. The Long Game A business column on long-term thinking. Strange Maps A geography column on history and society. The Well A collection of essays and videos on life’s biggest questions. 13.8 A column at the intersection of science and culture.",
             "Classes Back Featured Classes See all classes Members 5 videos The Hidden Power of Networks Multiple Instructors Members 6 videos The Secrets of Unreasonable Hospitality Will Guidara Restaurateur and Author, Unreasonable Hospitality Members 8 videos Mastering the New Rules of Branding Gary Vaynerchuk Serial Entrepreneur and Chairman of VaynerX Members 8 videos Cultivate Resilience in the Face of Failure Multiple Instructors Members 9 videos Think Like an Impact Player Liz Wiseman CEO and Author Members 6 videos Rethinking Work for Working Parents Lauren Smith Brody Founder, The Fifth Trimester Movement; Author, “The Fifth Trimester”"
           ]
@@ -3176,46 +3227,6 @@
             "Our latest paper, ProvenanceGuard: Source-Aware Factuality Verification for MCP-Based LLM Agents (read it on Hugging Face , or on arXiv in the meantime), targets that gap. The failure mode we care about is one we call cross-source conflation: a claim that is true somewhere in the evidence, but attributed to the wrong source. A source-blind verifier may pass it, because the fact does exist in the pool. A source-aware verifier should not.",
             "Consider a customer support agent that answers, \"According to the account record, this plan includes a 30-day refund window.\" The refund window may be perfectly real, but stated in a policy document, not in the account record the answer points to. Pool the two together and the claim looks supported. Keep them separate and the attribution is wrong, and in a data-sensitive setting a wrong attribution can be as damaging as a wrong fact. The same pattern shows up in a clinical agent, where a patient-specific medication detail taken from a patient-history tool becomes misleading the moment the answer presents it as a finding from the medical literature."
           ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "d8970e7c784b2f35",
-      "kind": "article",
-      "title": "Anthropic's path from AI startup to industry-defining IPO",
-      "source": "Reuters",
-      "source_url": "https://www.reuters.com/technology/anthropics-path-ai-startup-industry-defining-ipo-2026-09-28/",
-      "published_at": "2026-09-29T17:15:57Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Anthropic's path from AI startup to industry-defining IPO Reuters",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 401: HTTP Forbidden",
-      "resolved_url": "https://www.reuters.com/technology/anthropics-path-ai-startup-industry-defining-ipo-2026-09-28/",
-      "key_points": [
-        "Anthropic's path from AI startup to industry-defining IPO Reuters"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Anthropic's path from AI startup to industry-defining IPO Reuters"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Anthropic's path from AI startup to industry-defining IPO Reuters"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -3543,6 +3554,133 @@
       "reading_minutes": 1
     },
     {
+      "id": "96b0dc27d1d1b4e5",
+      "kind": "article",
+      "title": "GigaPath-Flash and GigaTIME-Flash: Toward population-scale discovery with efficient pathology foundation models",
+      "source": "Microsoft Research",
+      "source_url": "https://www.microsoft.com/en-us/research/blog/gigapath-flash-and-gigatime-flash-toward-population-scale-discovery-with-efficient-pathology-foundation-models/",
+      "published_at": "2026-08-31T16:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Microsoft",
+        "Research"
+      ],
+      "verification": "官方来源",
+      "summary": "What if pathology foundation models could do more with less? GigaPath-Flash and GigaTIME-Flash cut computational demands while maintaining strong performance, opening the door to larger studies and broader exploration. The post GigaPath-Flash and GigaTIME-Flash: Toward population-scale discovery with efficient pathology foundation models appeared first on Microsoft Research .",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.microsoft.com/en-us/research/blog/gigapath-flash-and-gigatime-flash-toward-population-scale-discovery-with-efficient-pathology-foundation-models/",
+      "key_points": [
+        "The Flash family extends GigaPath and GigaTIME with dramatically improved efficiency, making large-scale pathology research more accessible and practical.",
+        "A distilled pathology foundation model backbone reduces computational requirements without sacrificing performance, enabling repeated analyses across larger patient cohorts.",
+        "These open models support population-scale discovery, helping researchers investigate disease biology, biomarkers, and clinical outcomes across diverse cancer datasets."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "What if pathology foundation models could do more with less? GigaPath-Flash and GigaTIME-Flash cut computational demands while maintaining strong performance, opening the door to larger studies and broader exploration. The post GigaPath-Flash and GigaTIME-Flash: Toward population-scale discovery with efficient pathology foundation models appeared first on Microsoft Research ."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "The Flash family extends GigaPath and GigaTIME with dramatically improved efficiency, making large-scale pathology research more accessible and practical.",
+            "A distilled pathology foundation model backbone reduces computational requirements without sacrificing performance, enabling repeated analyses across larger patient cohorts.",
+            "These open models support population-scale discovery, helping researchers investigate disease biology, biomarkers, and clinical outcomes across diverse cancer datasets."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "The Flash family extends GigaPath and GigaTIME with dramatically improved efficiency, making large-scale pathology research more accessible and practical.",
+            "A distilled pathology foundation model backbone reduces computational requirements without sacrificing performance, enabling repeated analyses across larger patient cohorts.",
+            "These open models support population-scale discovery, helping researchers investigate disease biology, biomarkers, and clinical outcomes across diverse cancer datasets."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "d8970e7c784b2f35",
+      "kind": "article",
+      "title": "Anthropic's path from AI startup to industry-defining IPO",
+      "source": "Reuters",
+      "source_url": "https://www.reuters.com/technology/anthropics-path-ai-startup-industry-defining-ipo-2026-09-28/",
+      "published_at": "2026-09-29T17:15:57Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Anthropic's path from AI startup to industry-defining IPO Reuters",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 401: HTTP Forbidden",
+      "resolved_url": "https://www.reuters.com/technology/anthropics-path-ai-startup-industry-defining-ipo-2026-09-28/",
+      "key_points": [
+        "Anthropic's path from AI startup to industry-defining IPO Reuters"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Anthropic's path from AI startup to industry-defining IPO Reuters"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Anthropic's path from AI startup to industry-defining IPO Reuters"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "e53e3f6c06a7c12a",
+      "kind": "article",
+      "title": "AMD to Buy Fei-Fei Li’s World Labs AI Startup for $8.2 Billion",
+      "source": "Bloomberg.com",
+      "source_url": "https://www.bloomberg.com/news/articles/2026-09-28/amd-to-buy-fei-fei-li-s-world-labs-ai-startup-for-8-2-billion",
+      "published_at": "2026-09-28T20:05:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "AMD to Buy Fei-Fei Li’s World Labs AI Startup for $8.2 Billion Bloomberg.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://www.bloomberg.com/news/articles/2026-09-28/amd-to-buy-fei-fei-li-s-world-labs-ai-startup-for-8-2-billion",
+      "key_points": [
+        "AMD to Buy Fei-Fei Li’s World Labs AI Startup for $8.2 Billion Bloomberg.com"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AMD to Buy Fei-Fei Li’s World Labs AI Startup for $8.2 Billion Bloomberg.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "AMD to Buy Fei-Fei Li’s World Labs AI Startup for $8.2 Billion Bloomberg.com"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "791facd8f0c8165f",
       "kind": "article",
       "title": "Accelerating vision-language models with LFM2.5-VL-DSpark",
@@ -3592,93 +3730,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "96b0dc27d1d1b4e5",
-      "kind": "article",
-      "title": "GigaPath-Flash and GigaTIME-Flash: Toward population-scale discovery with efficient pathology foundation models",
-      "source": "Microsoft Research",
-      "source_url": "https://www.microsoft.com/en-us/research/blog/gigapath-flash-and-gigatime-flash-toward-population-scale-discovery-with-efficient-pathology-foundation-models/",
-      "published_at": "2026-08-31T16:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Microsoft",
-        "Research"
-      ],
-      "verification": "官方来源",
-      "summary": "What if pathology foundation models could do more with less? GigaPath-Flash and GigaTIME-Flash cut computational demands while maintaining strong performance, opening the door to larger studies and broader exploration. The post GigaPath-Flash and GigaTIME-Flash: Toward population-scale discovery with efficient pathology foundation models appeared first on Microsoft Research .",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.microsoft.com/en-us/research/blog/gigapath-flash-and-gigatime-flash-toward-population-scale-discovery-with-efficient-pathology-foundation-models/",
-      "key_points": [
-        "The Flash family extends GigaPath and GigaTIME with dramatically improved efficiency, making large-scale pathology research more accessible and practical.",
-        "A distilled pathology foundation model backbone reduces computational requirements without sacrificing performance, enabling repeated analyses across larger patient cohorts.",
-        "These open models support population-scale discovery, helping researchers investigate disease biology, biomarkers, and clinical outcomes across diverse cancer datasets."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "What if pathology foundation models could do more with less? GigaPath-Flash and GigaTIME-Flash cut computational demands while maintaining strong performance, opening the door to larger studies and broader exploration. The post GigaPath-Flash and GigaTIME-Flash: Toward population-scale discovery with efficient pathology foundation models appeared first on Microsoft Research ."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "The Flash family extends GigaPath and GigaTIME with dramatically improved efficiency, making large-scale pathology research more accessible and practical.",
-            "A distilled pathology foundation model backbone reduces computational requirements without sacrificing performance, enabling repeated analyses across larger patient cohorts.",
-            "These open models support population-scale discovery, helping researchers investigate disease biology, biomarkers, and clinical outcomes across diverse cancer datasets."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "The Flash family extends GigaPath and GigaTIME with dramatically improved efficiency, making large-scale pathology research more accessible and practical.",
-            "A distilled pathology foundation model backbone reduces computational requirements without sacrificing performance, enabling repeated analyses across larger patient cohorts.",
-            "These open models support population-scale discovery, helping researchers investigate disease biology, biomarkers, and clinical outcomes across diverse cancer datasets."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "e53e3f6c06a7c12a",
-      "kind": "article",
-      "title": "AMD to Buy Fei-Fei Li’s World Labs AI Startup for $8.2 Billion",
-      "source": "Bloomberg.com",
-      "source_url": "https://www.bloomberg.com/news/articles/2026-09-28/amd-to-buy-fei-fei-li-s-world-labs-ai-startup-for-8-2-billion",
-      "published_at": "2026-09-28T20:05:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Founder Watch",
-        "Embodied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "AMD to Buy Fei-Fei Li’s World Labs AI Startup for $8.2 Billion Bloomberg.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 403: Forbidden",
-      "resolved_url": "https://www.bloomberg.com/news/articles/2026-09-28/amd-to-buy-fei-fei-li-s-world-labs-ai-startup-for-8-2-billion",
-      "key_points": [
-        "AMD to Buy Fei-Fei Li’s World Labs AI Startup for $8.2 Billion Bloomberg.com"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "AMD to Buy Fei-Fei Li’s World Labs AI Startup for $8.2 Billion Bloomberg.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "AMD to Buy Fei-Fei Li’s World Labs AI Startup for $8.2 Billion Bloomberg.com"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "0328c3ccdabdf721",
       "kind": "article",
       "title": "Watch Fei-Fei Li: AI’s Future Is ‘About Humans’",
@@ -3715,57 +3766,6 @@
         {
           "title": "原文短摘录",
           "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "28ffd41eb0024e33",
-      "kind": "article",
-      "title": "How UK AISI and EvalEval Are Making Benchmark Results Reproducible",
-      "source": "Hugging Face",
-      "source_url": "https://huggingface.co/blog/evaleval-aisi",
-      "published_at": "2026-09-22T00:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Hugging Face",
-        "Open Source"
-      ],
-      "verification": "官方来源",
-      "summary": "We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://huggingface.co/blog/evaleval-aisi",
-      "key_points": [
-        "The EvalEval Coalition is thrilled to share that the UK AI Security Institute (AISI) is using EvalEval's infrastructure to openly share evaluation results, supporting more reproducible and verifiable evaluation science.",
-        "AISI and EvalEval have previously collaborated on research that began at a joint workshop alongside NeurIPS 2025 , and feedback from the Institute has helped shape the Every Eval Ever (EEE) schema .",
-        "This next phase of the collaboration puts that shared infrastructure into practice.",
-        "As AI deployment accelerates, evaluations are becoming increasingly important sources of evidence about model and system performance.",
-        "Yet results are reported across many formats, platforms, and outlets, often without enough information to reproduce them."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "We’re on a journey to advance and democratize artificial intelligence through open source and open science."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "The EvalEval Coalition is thrilled to share that the UK AI Security Institute (AISI) is using EvalEval's infrastructure to openly share evaluation results, supporting more reproducible and verifiable evaluation science.",
-            "AISI and EvalEval have previously collaborated on research that began at a joint workshop alongside NeurIPS 2025 , and feedback from the Institute has helped shape the Every Eval Ever (EEE) schema .",
-            "This next phase of the collaboration puts that shared infrastructure into practice.",
-            "As AI deployment accelerates, evaluations are becoming increasingly important sources of evidence about model and system performance.",
-            "Yet results are reported across many formats, platforms, and outlets, often without enough information to reproduce them."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "The EvalEval Coalition is thrilled to share that the UK AI Security Institute (AISI) is using EvalEval's infrastructure to openly share evaluation results, supporting more reproducible and verifiable evaluation science.",
-            "AISI and EvalEval have previously collaborated on research that began at a joint workshop alongside NeurIPS 2025 , and feedback from the Institute has helped shape the Every Eval Ever (EEE) schema . This next phase of the collaboration puts that shared infrastructure into practice.",
-            "As AI deployment accelerates, evaluations are becoming increasingly important sources of evidence about model and system performance. Yet results are reported across many formats, platforms, and outlets, often without enough information to reproduce them. Running the evaluations again may itself be prohibitively expensive."
-          ]
         }
       ],
       "reading_minutes": 1
@@ -4134,12 +4134,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "bc55751a93ee2b49",
+      "id": "b366d2f44c380f64",
       "kind": "social",
-      "title": "Also, 6.1 Sol was our fastest-growing model ever, and was a bit slow under load. Should be much better now!",
+      "title": "Grok @Bot is an amazing assistant",
       "source": "x.com",
-      "source_url": "https://x.com/sama/status/2105688354834756036",
-      "published_at": "2026-10-01T15:56:40Z",
+      "source_url": "https://x.com/elonmusk/status/2105752064747847794",
+      "published_at": "2026-10-01T20:09:49Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -4148,132 +4148,86 @@
         "First-party Post"
       ],
       "verification": "公开平台索引，需查看原帖",
-      "summary": "Also, 6.1 Sol was our fastest-growing model ever, and was a bit slow under load. Should be much better now! x.com",
+      "summary": "Grok @Bot is an amazing assistant x.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/sama/status/2105688354834756036",
+      "resolved_url": "https://x.com/elonmusk/status/2105752064747847794",
       "key_points": [
-        "Sam Altman @sama Also, 6.1 Sol was our fastest-growing model ever, and was a bit slow under load.",
-        "3:56 PM · Oct 1, 2026 · 429.4K Views 742 246 8.7K 273 Chubby♨️ @kimmonismus 6h Yeah, can confirm."
+        "Elon Musk @elonmusk Grok @ bot is an amazing assistant matt palmer @mattyp 11h Grok Bot is now more proactive.",
+        "Here's one example: I switched flights, but @ bot noticed I didn't update my Uber reservation Bot realized, then pinged me to update the reservation *during* my connecting flight I had @ Starlink , so I was able to change it Show more 8:09 PM · Oct 1, 2026 · 1.7M Views 628 678 4.5K 269 YoungHoon Kim @yhbryankimiq 9h Amen.",
+        "3 5 49 6.9K Manifesto 🐂🀄️🐱 @notaxparty 9h Is grok going to be called “SI” assistant from now on?"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Also, 6.1 Sol was our fastest-growing model ever, and was a bit slow under load. Should be much better now! x.com"
+          "body": "Grok @Bot is an amazing assistant x.com"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Sam Altman @sama Also, 6.1 Sol was our fastest-growing model ever, and was a bit slow under load.",
-            "3:56 PM · Oct 1, 2026 · 429.4K Views 742 246 8.7K 273 Chubby♨️ @kimmonismus 6h Yeah, can confirm."
+            "Elon Musk @elonmusk Grok @ bot is an amazing assistant matt palmer @mattyp 11h Grok Bot is now more proactive.",
+            "Here's one example: I switched flights, but @ bot noticed I didn't update my Uber reservation Bot realized, then pinged me to update the reservation *during* my connecting flight I had @ Starlink , so I was able to change it Show more 8:09 PM · Oct 1, 2026 · 1.7M Views 628 678 4.5K 269 YoungHoon Kim @yhbryankimiq 9h Amen.",
+            "3 5 49 6.9K Manifesto 🐂🀄️🐱 @notaxparty 9h Is grok going to be called “SI” assistant from now on?"
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Sam Altman @sama Also, 6.1 Sol was our fastest-growing model ever, and was a bit slow under load. Should be much better now! 3:56 PM · Oct 1, 2026 · 429.4K Views 742 246 8.7K 273",
-            "Chubby♨️ @kimmonismus 6h Yeah, can confirm. Much faster now. 2 78 4.3K"
+            "Elon Musk @elonmusk Grok @ bot is an amazing assistant matt palmer @mattyp 11h Grok Bot is now more proactive. What does that mean? Here's one example: I switched flights, but @ bot noticed I didn't update my Uber reservation Bot realized, then pinged me to update the reservation *during* my connecting flight I had @ Starlink , so I was able to change it Show more 8:09 PM · Oct 1, 2026 · 1.7M Views 628 678 4.5K 269",
+            "YoungHoon Kim @yhbryankimiq 9h Amen. Occupy Super Intelligence. 3 5 49 6.9K",
+            "Manifesto 🐂🀄️🐱 @notaxparty 9h Is grok going to be called “SI” assistant from now on? 12 13 41 253"
           ]
         }
       ],
       "reading_minutes": 1
     },
     {
-      "id": "95a3b11931f1f1ff",
-      "kind": "article",
-      "title": "AI ‘godfather’ Yann LeCun: Anthropic CEO Dario Amodei is ‘deluded,’ ‘crazy,’ and doesn’t understand cybersecurity",
-      "source": "Fortune",
-      "source_url": "https://fortune.com/2026/10/01/yann-lecun-anthropic-ceo-dario-amodei-deluded-crazy-cybersecurity/",
-      "published_at": "2026-10-01T10:06:00Z",
+      "id": "1f209f4bad3dffa4",
+      "kind": "social",
+      "title": "You should be able to use your AI subscription wherever you need:",
+      "source": "x.com",
+      "source_url": "https://x.com/sama/status/2105739098640298253",
+      "published_at": "2026-10-01T19:18:18Z",
       "authors": [],
       "venue": "",
       "tags": [
-        "Researcher Watch",
-        "Foundation Models",
-        "Leadership"
+        "X",
+        "Founder Watch",
+        "First-party Post"
       ],
-      "verification": "媒体或公开网页",
-      "summary": "AI ‘godfather’ Yann LeCun: Anthropic CEO Dario Amodei is ‘deluded,’ ‘crazy,’ and doesn’t understand cybersecurity Fortune",
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "You should be able to use your AI subscription wherever you need: x.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://fortune.com/2026/10/01/yann-lecun-anthropic-ceo-dario-amodei-deluded-crazy-cybersecurity/",
+      "resolved_url": "https://x.com/sama/status/2105739098640298253",
       "key_points": [
-        "AI ‘godfather’ Yann LeCun says Anthropic’s Dario Amodei is ‘deluded’ and ‘crazy.’ Hidden for 50 years, unseen works by van Gogh and Cézanne are up for sale .",
-        "AI pioneer Yann LeCun is unconcerned about the risks of artificial intelligence.",
-        "LeCun told Fortune’s Emily Forlini he isn’t worried “at all” about AI wiping out humanity, and he has “zero concerns” about the recent string of rogue AI incidents, including OpenAI agents autonomously hacking Hugging Face in July.",
-        "He attributes the incidents to poor human oversight and system design, and says they’re “totally preventable.”"
+        "Sam Altman @sama You should be able to use your AI subscription wherever you need: Vignesh @vigyso 12h I am going to try and answer a bunch of questions that people have raised about Sign in with ChatGPT in the next couple of days.",
+        "Before that, I want to let you all in to why we shipped Sign in with ChatGPT (SIWC) in the first place.",
+        "Clarify our intentions here before getting to Show more 7:18 PM · Oct 1, 2026 · 665K Views 381 122 3.4K 446 Steve Dreams✨️ @SteveDreams_ 9h Agreed.",
+        "Some of us use it for creative writing, worldbuilding, chatting, or just for fun.",
+        "A legacy tier for models like 4o would be great."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "AI ‘godfather’ Yann LeCun: Anthropic CEO Dario Amodei is ‘deluded,’ ‘crazy,’ and doesn’t understand cybersecurity Fortune"
+          "body": "You should be able to use your AI subscription wherever you need: x.com"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "AI ‘godfather’ Yann LeCun says Anthropic’s Dario Amodei is ‘deluded’ and ‘crazy.’ Hidden for 50 years, unseen works by van Gogh and Cézanne are up for sale .",
-            "AI pioneer Yann LeCun is unconcerned about the risks of artificial intelligence.",
-            "LeCun told Fortune’s Emily Forlini he isn’t worried “at all” about AI wiping out humanity, and he has “zero concerns” about the recent string of rogue AI incidents, including OpenAI agents autonomously hacking Hugging Face in July.",
-            "He attributes the incidents to poor human oversight and system design, and says they’re “totally preventable.”"
+            "Sam Altman @sama You should be able to use your AI subscription wherever you need: Vignesh @vigyso 12h I am going to try and answer a bunch of questions that people have raised about Sign in with ChatGPT in the next couple of days.",
+            "Before that, I want to let you all in to why we shipped Sign in with ChatGPT (SIWC) in the first place.",
+            "Clarify our intentions here before getting to Show more 7:18 PM · Oct 1, 2026 · 665K Views 381 122 3.4K 446 Steve Dreams✨️ @SteveDreams_ 9h Agreed.",
+            "Some of us use it for creative writing, worldbuilding, chatting, or just for fun.",
+            "A legacy tier for models like 4o would be great."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "AI ‘godfather’ Yann LeCun says Anthropic’s Dario Amodei is ‘deluded’ and ‘crazy.’",
-            "Hidden for 50 years, unseen works by van Gogh and Cézanne are up for sale .",
-            "AI pioneer Yann LeCun is unconcerned about the risks of artificial intelligence. LeCun told Fortune’s Emily Forlini he isn’t worried “at all” about AI wiping out humanity, and he has “zero concerns” about the recent string of rogue AI incidents, including OpenAI agents autonomously hacking Hugging Face in July. He attributes the incidents to poor human oversight and system design, and says they’re “totally preventable.”"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "3e6349322e36cb9c",
-      "kind": "article",
-      "title": "Trump’s AI Safety ‘Accord’ Is a Fancy Pinky-Swear",
-      "source": "wired.com",
-      "source_url": "https://www.wired.com/story/trumps-ai-safety-accord-is-a-fancy-pinky-swear/",
-      "published_at": "2026-09-30T20:30:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Six major AI companies signed a voluntary agreement with the White House this week vowing to implement safeguards. It’s unclear how much that matters.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.wired.com/story/trumps-ai-safety-accord-is-a-fancy-pinky-swear/",
-      "key_points": [
-        "On Tuesday, executives for Google , Anthropic , Meta , OpenAI , xAI , and Nvidia all signed “The White House Accord on Super Intelligence,” which was announced following a luncheon held by President Donald Trump.",
-        "The effort was an act of “tremendous self-regulation,” as Trump put it, but the agreement is not the sweeping AI regulation that people inside the companies themselves have been asking for.",
-        "And while failing to honor these public commitments could count as illegally lying to consumers, even that wouldn’t be enough to trigger massive reforms.",
-        "The statement says that companies “should implement” several things: First, they should ensure they have “robust internal controls” to monitor their models’ capabilities and ability to not go rogue or hack things in unintended ways.",
-        "Second, they should “empower” an internal team to do that work (and remediate when things go wrong)."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Six major AI companies signed a voluntary agreement with the White House this week vowing to implement safeguards. It’s unclear how much that matters."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "On Tuesday, executives for Google , Anthropic , Meta , OpenAI , xAI , and Nvidia all signed “The White House Accord on Super Intelligence,” which was announced following a luncheon held by President Donald Trump.",
-            "The effort was an act of “tremendous self-regulation,” as Trump put it, but the agreement is not the sweeping AI regulation that people inside the companies themselves have been asking for.",
-            "And while failing to honor these public commitments could count as illegally lying to consumers, even that wouldn’t be enough to trigger massive reforms.",
-            "The statement says that companies “should implement” several things: First, they should ensure they have “robust internal controls” to monitor their models’ capabilities and ability to not go rogue or hack things in unintended ways.",
-            "Second, they should “empower” an internal team to do that work (and remediate when things go wrong)."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "On Tuesday, executives for Google , Anthropic , Meta , OpenAI , xAI , and Nvidia all signed “The White House Accord on Super Intelligence,” which was announced following a luncheon held by President Donald Trump.",
-            "The effort was an act of “tremendous self-regulation,” as Trump put it, but the agreement is not the sweeping AI regulation that people inside the companies themselves have been asking for. And while failing to honor these public commitments could count as illegally lying to consumers, even that wouldn’t be enough to trigger massive reforms.",
-            "The statement says that companies “should implement” several things: First, they should ensure they have “robust internal controls” to monitor their models’ capabilities and ability to not go rogue or hack things in unintended ways. Second, they should “empower” an internal team to do that work (and remediate when things go wrong). Third, it encourages them to partner with an external monitor who is “empowered” to do independent assessments to make sure that all of that work is happening. And finally, they should make sure their board of directors has set up a committee to receive reports about all of these efforts."
+            "Sam Altman @sama You should be able to use your AI subscription wherever you need: Vignesh @vigyso 12h I am going to try and answer a bunch of questions that people have raised about Sign in with ChatGPT in the next couple of days. Before that, I want to let you all in to why we shipped Sign in with ChatGPT (SIWC) in the first place. Clarify our intentions here before getting to Show more 7:18 PM · Oct 1, 2026 · 665K Views 381 122 3.4K 446",
+            "Steve Dreams✨️ @SteveDreams_ 9h Agreed. Not everyone uses AI for work. Some of us use it for creative writing, worldbuilding, chatting, or just for fun. A legacy tier for models like 4o would be great. 3 17 965",
+            "Dual Vision @DualVisionTech 10h I love that you’re not calling it “Si” 😆 1 15 1K"
           ]
         }
       ],
@@ -4610,55 +4564,6 @@
         {
           "title": "原文短摘录",
           "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "d9704d4940c3cc02",
-      "kind": "article",
-      "title": "AMD acquires World Labs AI startup, upping the ante against Nvidia",
-      "source": "Ars Technica",
-      "source_url": "https://arstechnica.com/ai/2026/09/amd-acquires-world-labs-ai-pioneer-fei-fei-lis-world-models-startup/",
-      "published_at": "2026-09-29T21:14:49Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "AMD acquires World Labs AI startup, upping the ante against Nvidia Ars Technica",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://arstechnica.com/ai/2026/09/amd-acquires-world-labs-ai-pioneer-fei-fei-lis-world-models-startup/",
-      "key_points": [
-        "Chipmaker AMD and world models company World Labs announced that AMD will acquire the AI company by the end of the year, pending regulatory approval.",
-        "In 2024, computer vision scientist Fei-Fei Li founded World Labs with fellow researchers Justin Johnson, Christoph Lassner, and Ben Mildenhall with $230 million in funding, some of which came from AMD.",
-        "The company began working on new world models, which are AI models that aim to provide a useful, predictive simulation of the physical world.",
-        "Competing architectures exist (earlier this year, Ars interviewed World Labs co-founder Ben Mildenhall and others in the field about exactly that), but many involve training a model on vast amounts of video data."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "AMD acquires World Labs AI startup, upping the ante against Nvidia Ars Technica"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Chipmaker AMD and world models company World Labs announced that AMD will acquire the AI company by the end of the year, pending regulatory approval.",
-            "In 2024, computer vision scientist Fei-Fei Li founded World Labs with fellow researchers Justin Johnson, Christoph Lassner, and Ben Mildenhall with $230 million in funding, some of which came from AMD.",
-            "The company began working on new world models, which are AI models that aim to provide a useful, predictive simulation of the physical world.",
-            "Competing architectures exist (earlier this year, Ars interviewed World Labs co-founder Ben Mildenhall and others in the field about exactly that), but many involve training a model on vast amounts of video data."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Chipmaker AMD and world models company World Labs announced that AMD will acquire the AI company by the end of the year, pending regulatory approval. The transaction is valued at $8.2 billion.",
-            "In 2024, computer vision scientist Fei-Fei Li founded World Labs with fellow researchers Justin Johnson, Christoph Lassner, and Ben Mildenhall with $230 million in funding, some of which came from AMD.",
-            "The company began working on new world models, which are AI models that aim to provide a useful, predictive simulation of the physical world. Competing architectures exist (earlier this year, Ars interviewed World Labs co-founder Ben Mildenhall and others in the field about exactly that), but many involve training a model on vast amounts of video data."
-          ]
         }
       ],
       "reading_minutes": 1
@@ -5261,12 +5166,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "aec265fc426d62e6",
+      "id": "a8b76d3807a23c43",
       "kind": "article",
-      "title": "What Hayek Can Teach Us About AI Safety",
-      "source": "City Journal",
-      "source_url": "https://www.city-journal.org/article/friedrich-hayek-artificial-intelligence-safety",
-      "published_at": "2026-09-29T12:00:51Z",
+      "title": "Trump’s AI Safety Pact Is Toothless. But There Is a Path Forward. | Council on Foreign Relations",
+      "source": "Council on Foreign Relations (CFR)",
+      "source_url": "https://www.cfr.org/articles/trumps-ai-safety-pact-is-toothless-but-there-is-a-path-forward",
+      "published_at": "2026-10-01T21:05:54Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -5274,39 +5179,79 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "What Hayek Can Teach Us About AI Safety City Journal",
+      "summary": "The White House AI accord outlines sensible safeguards, including independent evaluators and board-level oversight, but does not compel companies to adopt them. Until the cost of safety failures outweighs the payoff of racing ahead, a pledge built on “believe” and “should” won’t slow anyone down.",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.city-journal.org/article/friedrich-hayek-artificial-intelligence-safety",
+      "resolved_url": "https://www.cfr.org/articles/trumps-ai-safety-pact-is-toothless-but-there-is-a-path-forward",
       "key_points": [
-        "The great economist’s lessons on knowledge and spontaneous order offer the best path forward.",
-        "Fears about artificial intelligence have gone mainstream, and an intense panic now grips the minds of the press, policymakers, and the public.",
-        "A familiar cast of technocratic leaders— Barack Obama , Rahm Emanuel , Kamala Harris , Bernie Sanders , Elizabeth Warren , and even King Charles —have chimed in with calls for some sort of “AI pause” or other steps to give government major new powers to ensure proper “alignment” of AI models, algorithmic applications, and advanced computation.",
-        "It’s a good moment to recall some timeless lessons from social thinker Friedrich Hayek.",
-        "Today’s AI alignment debate contains echoes of the old economic calculation debate and the planner’s mentality that viewed society as a math problem to be solved."
+        "Connor Martin CFR Expert 2026–27 International Affairs Fellow in National Security, sponsored by Janine and J.",
+        "Tomilson Hill Connor Martin previously served as deputy director of the Committee on Foreign Investment in the United States (CFIUS) at the Treasury Department.",
+        "His work has focused on the national security implications of cross-border capital flows and on the national security risks posed by artificial intelligence (AI) and other frontier technologies.",
+        "My team at CFIUS spent long hours negotiating agreements with private companies to compel them to do—or not do —certain things.",
+        "The committee has the legal authority to mitigate national security risks that could arise from transactions involving foreign investment in the United States."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "What Hayek Can Teach Us About AI Safety City Journal"
+          "body": "The White House AI accord outlines sensible safeguards, including independent evaluators and board-level oversight, but does not compel companies to adopt them. Until the cost of safety failures outweighs the payoff of racing ahead, a pledge built on “believe” and “should” won’t slow anyone down."
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "The great economist’s lessons on knowledge and spontaneous order offer the best path forward.",
-            "Fears about artificial intelligence have gone mainstream, and an intense panic now grips the minds of the press, policymakers, and the public.",
-            "A familiar cast of technocratic leaders— Barack Obama , Rahm Emanuel , Kamala Harris , Bernie Sanders , Elizabeth Warren , and even King Charles —have chimed in with calls for some sort of “AI pause” or other steps to give government major new powers to ensure proper “alignment” of AI models, algorithmic applications, and advanced computation.",
-            "It’s a good moment to recall some timeless lessons from social thinker Friedrich Hayek.",
-            "Today’s AI alignment debate contains echoes of the old economic calculation debate and the planner’s mentality that viewed society as a math problem to be solved."
+            "Connor Martin CFR Expert 2026–27 International Affairs Fellow in National Security, sponsored by Janine and J.",
+            "Tomilson Hill Connor Martin previously served as deputy director of the Committee on Foreign Investment in the United States (CFIUS) at the Treasury Department.",
+            "His work has focused on the national security implications of cross-border capital flows and on the national security risks posed by artificial intelligence (AI) and other frontier technologies.",
+            "My team at CFIUS spent long hours negotiating agreements with private companies to compel them to do—or not do —certain things.",
+            "The committee has the legal authority to mitigate national security risks that could arise from transactions involving foreign investment in the United States."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "The great economist’s lessons on knowledge and spontaneous order offer the best path forward.",
-            "Fears about artificial intelligence have gone mainstream, and an intense panic now grips the minds of the press, policymakers, and the public. A familiar cast of technocratic leaders— Barack Obama , Rahm Emanuel , Kamala Harris , Bernie Sanders , Elizabeth Warren , and even King Charles —have chimed in with calls for some sort of “AI pause” or other steps to give government major new powers to ensure proper “alignment” of AI models, algorithmic applications, and advanced computation.",
-            "It’s a good moment to recall some timeless lessons from social thinker Friedrich Hayek. Today’s AI alignment debate contains echoes of the old economic calculation debate and the planner’s mentality that viewed society as a math problem to be solved. Hayek (1899–1992) spent his life demolishing that reasoning, while warning of the “ fatal conceit ” of elites who thought they could reorder entire economic systems and remake human nature through freedom-crushing, top-down interventions."
+            "Connor Martin CFR Expert 2026–27 International Affairs Fellow in National Security, sponsored by Janine and J. Tomilson Hill",
+            "Connor Martin previously served as deputy director of the Committee on Foreign Investment in the United States (CFIUS) at the Treasury Department. His work has focused on the national security implications of cross-border capital flows and on the national security risks posed by artificial intelligence (AI) and other frontier technologies.",
+            "My team at CFIUS spent long hours negotiating agreements with private companies to compel them to do—or not do —certain things. The committee has the legal authority to mitigate national security risks that could arise from transactions involving foreign investment in the United States. 1 By law, any such mitigation agreements must be (1) effective, (2) verifiable, and (3) monitorable and enforceable."
           ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "fab82cf26bedf285",
+      "kind": "article",
+      "title": "AI safety fears put OpenAI and Anthropic in the FTC's crosshairs",
+      "source": "axios.com",
+      "source_url": "https://www.axios.com/2026/09/30/ftc-openai-anthropic-ai-safety-investigation",
+      "published_at": "2026-09-30T21:34:33Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "AI safety fears put OpenAI and Anthropic in the FTC's crosshairs axios.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://www.axios.com/2026/09/30/ftc-openai-anthropic-ai-safety-investigation",
+      "key_points": [
+        "AI safety fears put OpenAI and Anthropic in the FTC's crosshairs axios.com"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AI safety fears put OpenAI and Anthropic in the FTC's crosshairs axios.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "AI safety fears put OpenAI and Anthropic in the FTC's crosshairs axios.com"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -5591,7 +5536,7 @@
       "id": "38a3890572654baf",
       "kind": "article",
       "title": "Republican and Democratic states defy Trump on AI regulation",
-      "source": "politico.com",
+      "source": "Politico",
       "source_url": "https://www.politico.com/news/2026/09/18/states-defy-trump-ai-regulation-01083481",
       "published_at": "2026-09-18T07:00:00Z",
       "authors": [],
@@ -5601,23 +5546,23 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Republican and Democratic states defy Trump on AI regulation politico.com",
+      "summary": "Republican and Democratic states defy Trump on AI regulation Politico",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "summary-only",
       "fetch_note": "HTTP Error 403: Forbidden",
       "resolved_url": "https://www.politico.com/news/2026/09/18/states-defy-trump-ai-regulation-01083481",
       "key_points": [
-        "Republican and Democratic states defy Trump on AI regulation politico.com"
+        "Republican and Democratic states defy Trump on AI regulation Politico"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Republican and Democratic states defy Trump on AI regulation politico.com"
+          "body": "Republican and Democratic states defy Trump on AI regulation Politico"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Republican and Democratic states defy Trump on AI regulation politico.com"
+            "Republican and Democratic states defy Trump on AI regulation Politico"
           ]
         },
         {
@@ -5682,7 +5627,7 @@
       "id": "350c66c0988c0f18",
       "kind": "article",
       "title": "A Catholic Response to the Hugging Face Incident - Word on Fire",
-      "source": "wordonfire.org",
+      "source": "Word on Fire",
       "source_url": "https://www.wordonfire.org/articles/a-catholic-response-to-the-hugging-face-incident/",
       "published_at": "2026-09-21T07:00:00Z",
       "authors": [],
@@ -5692,7 +5637,7 @@
         "Models & Tools"
       ],
       "verification": "媒体或公开网页",
-      "summary": "A Catholic Response to the Hugging Face Incident wordonfire.org",
+      "summary": "A Catholic Response to the Hugging Face Incident Word on Fire",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://www.wordonfire.org/articles/a-catholic-response-to-the-hugging-face-incident/",
@@ -5706,7 +5651,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "A Catholic Response to the Hugging Face Incident wordonfire.org"
+          "body": "A Catholic Response to the Hugging Face Incident Word on Fire"
         },
         {
           "title": "公开页面要点",
