@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-05T05:35:02Z",
-  "record_count": 130,
+  "generated_at": "2026-10-05T14:32:07Z",
+  "record_count": 129,
   "records": [
     {
       "id": "jacobian-fable-20260720",
@@ -335,10 +335,14 @@
       "verification": "官方来源",
       "summary": "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome.",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
+      "fetch_status": "public-page-excerpt",
       "resolved_url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
       "key_points": [
-        "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome."
+        "How predicting the molecular impact of every possible single-letter DNA variant in the human genome will help accelerate our understanding of biology.",
+        "Today, we are introducing AlphaGenome Atlas: a platform ( detailed in our paper ) containing predictions for the effects of 9 billion single-nucleotide variants — every single-letter change possible — in the human genome.",
+        "It is the most comprehensive catalogue of how genetic mutations affect molecular biology, and it is available for academic research through an intuitive and free-to-use website portal .",
+        "Mastering it is a grand challenge that could transform our ability to understand biology and treat disease.",
+        "But progress has been limited by a fundamental problem: interpreting how genetic variations impact biology at a molecular level."
       ],
       "sections": [
         {
@@ -348,12 +352,20 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome."
+            "How predicting the molecular impact of every possible single-letter DNA variant in the human genome will help accelerate our understanding of biology.",
+            "Today, we are introducing AlphaGenome Atlas: a platform ( detailed in our paper ) containing predictions for the effects of 9 billion single-nucleotide variants — every single-letter change possible — in the human genome.",
+            "It is the most comprehensive catalogue of how genetic mutations affect molecular biology, and it is available for academic research through an intuitive and free-to-use website portal .",
+            "Mastering it is a grand challenge that could transform our ability to understand biology and treat disease.",
+            "But progress has been limited by a fundamental problem: interpreting how genetic variations impact biology at a molecular level."
           ]
         },
         {
           "title": "原文短摘录",
-          "paragraphs": []
+          "paragraphs": [
+            "How predicting the molecular impact of every possible single-letter DNA variant in the human genome will help accelerate our understanding of biology.",
+            "Today, we are introducing AlphaGenome Atlas: a platform ( detailed in our paper ) containing predictions for the effects of 9 billion single-nucleotide variants — every single-letter change possible — in the human genome. It is the most comprehensive catalogue of how genetic mutations affect molecular biology, and it is available for academic research through an intuitive and free-to-use website portal .",
+            "DNA is the language of life. Mastering it is a grand challenge that could transform our ability to understand biology and treat disease. But progress has been limited by a fundamental problem: interpreting how genetic variations impact biology at a molecular level. With roughly 9 billion possible single-letter mutations in the human genome, testing each one in the lab is practically impossible."
+          ]
         }
       ],
       "reading_minutes": 1
@@ -405,6 +417,91 @@
       "reading_minutes": 31
     },
     {
+      "id": "85e0e863eca26a38",
+      "kind": "article",
+      "title": "Building advertising for the way people use AI",
+      "source": "OpenAI",
+      "source_url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement",
+      "published_at": "2026-10-05T10:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "OpenAI",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "OpenAI introduces a new visual ad format in ChatGPT and expands measurement tools, attribution partnerships, and brand suitability for advertisers.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement",
+      "key_points": [
+        "OpenAI introduces a new visual ad format in ChatGPT and expands measurement tools, attribution partnerships, and brand suitability for advertisers."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "OpenAI introduces a new visual ad format in ChatGPT and expands measurement tools, attribution partnerships, and brand suitability for advertisers."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "OpenAI introduces a new visual ad format in ChatGPT and expands measurement tools, attribution partnerships, and brand suitability for advertisers."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "rhb-icml-2026",
+      "kind": "paper",
+      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
+      "source": "OpenReview · arXiv",
+      "source_url": "https://arxiv.org/abs/2605.02964",
+      "published_at": "2026-06-24T00:00:00Z",
+      "authors": [
+        "Kunvar Thaman"
+      ],
+      "venue": "ICML 2026",
+      "tags": [
+        "Reward Hacking",
+        "Agent Safety",
+        "Evaluation"
+      ],
+      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
+      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/rhb-icml-2026.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://arxiv.org/pdf/2605.02964",
+      "key_points": [
+        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
+        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
+        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
+        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
+        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
+        },
+        {
+          "title": "关键结果",
+          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
+        },
+        {
+          "title": "局限与结论",
+          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
+        }
+      ],
+      "reading_minutes": 46
+    },
+    {
       "id": "fba94b1414d1429f",
       "kind": "article",
       "title": "Claude Frontier Academy: $100M to train 10,000 engineers",
@@ -454,51 +551,6 @@
         }
       ],
       "reading_minutes": 1
-    },
-    {
-      "id": "rhb-icml-2026",
-      "kind": "paper",
-      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
-      "source": "OpenReview · arXiv",
-      "source_url": "https://arxiv.org/abs/2605.02964",
-      "published_at": "2026-06-24T00:00:00Z",
-      "authors": [
-        "Kunvar Thaman"
-      ],
-      "venue": "ICML 2026",
-      "tags": [
-        "Reward Hacking",
-        "Agent Safety",
-        "Evaluation"
-      ],
-      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
-      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/rhb-icml-2026.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://arxiv.org/pdf/2605.02964",
-      "key_points": [
-        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
-        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
-        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
-        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
-        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
-        },
-        {
-          "title": "关键结果",
-          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
-        },
-        {
-          "title": "局限与结论",
-          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
-        }
-      ],
-      "reading_minutes": 46
     },
     {
       "id": "a692cc9be0716e82",
@@ -1121,46 +1173,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "d04e15619b735a3a",
-      "kind": "article",
-      "title": "Introducing GPT-6.1 Sol",
-      "source": "OpenAI",
-      "source_url": "https://openai.com/index/introducing-gpt-6-1-sol",
-      "published_at": "2026-09-29T10:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "OpenAI",
-        "Official"
-      ],
-      "verification": "官方来源",
-      "summary": "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s standard API input and output token prices.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 403: Forbidden",
-      "resolved_url": "https://openai.com/index/introducing-gpt-6-1-sol",
-      "key_points": [
-        "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s standard API input and output token prices."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s standard API input and output token prices."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s standard API input and output token prices."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "gpt5-protein-synthesis-20260205",
       "kind": "article",
       "title": "GPT-5 与自动化实验室将无细胞蛋白合成成本降低 40%",
@@ -1197,6 +1209,693 @@
         {
           "title": "原文短摘录",
           "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "5eb59280a293269c",
+      "kind": "paper",
+      "title": "CHORUS: Designing Human–AI Multi-Agent Collaboration for Professional Translators",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1145/3776574.3831126",
+      "published_at": "2026-10-02T00:00:00Z",
+      "authors": [
+        "George X. Wang",
+        "Jiaqian Hu",
+        "Guande Wu",
+        "Jing Qian"
+      ],
+      "venue": "INTERNATIONAL CONFERENCE ON MULTIMODAL INTERACTION",
+      "tags": [
+        "Natural Language Processing Techniques",
+        "professional translation",
+        "multi-agent AI",
+        "human-AI collaboration"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "Despite the widespread use of automatic AI translation systems in daily language tasks, professional translation remains crucial in domain-specific and high-stakes scenarios. Yet professional translators rarely rely on these systems in their everyday practice due to a lack of detailed support for the translation process, matching professional styles, and accountability for the final outcome. To bridge the gap, we present CHORUS, a mixed-initiative translation system that supports the translation process and personal style as translators work. A formative study found that incorporating MQM theory may be beneficial for achieving professional translation, and that the system…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "Despite the widespread use of automatic AI translation systems in daily language tasks, professional translation remains crucial in domain-specific and high-stakes scenarios.",
+        "Yet professional translators rarely rely on these systems in their everyday practice due to a lack of detailed support for the translation process, matching professional styles, and accountability for the final outcome.",
+        "To bridge the gap, we present CHORUS, a mixed-initiative translation system that supports the translation process and personal style as translators work.",
+        "A formative study found that incorporating MQM theory may be beneficial for achieving professional translation, and that the system…"
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Despite the widespread use of automatic AI translation systems in daily language tasks, professional translation remains crucial in domain-specific and high-stakes scenarios. Yet professional translators rarely rely on these systems in their everyday practice due to a lack of detailed support for the translation process, matching professional styles, and accountability for the final outcome. To bridge the gap, we present CHORUS, a mixed-initiative translation system that supports the translation process and personal style as translators work. A formative study found that incorporating MQM theory may be beneficial for achieving professional translation, and that the system…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "8502d1884a7e9aa9",
+      "kind": "paper",
+      "title": "Using Machine Mental Imagery for Representing Common Ground in Situated Dialogue",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1145/3776574.3831160",
+      "published_at": "2026-10-02T00:00:00Z",
+      "authors": [
+        "Biswesh Mohapatra",
+        "Giovanni Duca",
+        "Laurent Romary",
+        "Justine Cassell"
+      ],
+      "venue": "INTERNATIONAL CONFERENCE ON MULTIMODAL INTERACTION",
+      "tags": [
+        "Speech and dialogue systems",
+        "situated dialogue",
+        "common ground",
+        "mental imagery"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "Situated dialogue requires speakers to maintain a reliable representation of shared context rather than reasoning only over isolated utterances. Current conversational agents often struggle with this requirement, especially when the common ground must be preserved beyond the immediate context window. In such settings, fine-grained distinctions are frequently compressed into purely textual representations, leading to a critical failure mode we call representational blur, in which similar but distinct entities collapse into interchangeable descriptions. This semantic flattening creates an illusion of grounding, where agents appear locally coherent but fail to track shared…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "Situated dialogue requires speakers to maintain a reliable representation of shared context rather than reasoning only over isolated utterances.",
+        "Current conversational agents often struggle with this requirement, especially when the common ground must be preserved beyond the immediate context window.",
+        "In such settings, fine-grained distinctions are frequently compressed into purely textual representations, leading to a critical failure mode we call representational blur, in which similar but distinct entities collapse into interchangeable descriptions.",
+        "This semantic flattening creates an illusion of grounding, where agents appear locally coherent but fail to track shared…"
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Situated dialogue requires speakers to maintain a reliable representation of shared context rather than reasoning only over isolated utterances. Current conversational agents often struggle with this requirement, especially when the common ground must be preserved beyond the immediate context window. In such settings, fine-grained distinctions are frequently compressed into purely textual representations, leading to a critical failure mode we call representational blur, in which similar but distinct entities collapse into interchangeable descriptions. This semantic flattening creates an illusion of grounding, where agents appear locally coherent but fail to track shared…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "97509319845d95c1",
+      "kind": "paper",
+      "title": "FAIR_XAI: Improving Multimodal Foundation Model Fairness via Explainability for Wellbeing Assessment",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1145/3776574.3831199",
+      "published_at": "2026-10-02T00:00:00Z",
+      "authors": [
+        "Sophie Chiang",
+        "Tom Brennan",
+        "Fethiye Irmak Doğan",
+        "Jiaee Cheong",
+        "Hatice Güneş"
+      ],
+      "venue": "INTERNATIONAL CONFERENCE ON MULTIMODAL INTERACTION",
+      "tags": [
+        "Explainable Artificial Intelligence (XAI)",
+        "vision-language models",
+        "well-being assessment",
+        "depression prediction"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "In recent years, the integration of multimodal machine learning in wellbeing assessment has offered transformative potential for monitoring mental health. However, with the rapid advancement of Vision-Language Models (VLMs), their deployment in clinical settings has raised concerns due to their lack of transparency and potential for bias. While previous research has explored the intersection of fairness and Explainable AI (XAI), its application to VLMs for wellbeing assessment and depression prediction remains under-explored. This work investigates VLM performance across laboratory (AFAR-BSFT) and naturalistic (E-DAIC) datasets, focusing on diagnostic reliability and…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "In recent years, the integration of multimodal machine learning in wellbeing assessment has offered transformative potential for monitoring mental health.",
+        "However, with the rapid advancement of Vision-Language Models (VLMs), their deployment in clinical settings has raised concerns due to their lack of transparency and potential for bias.",
+        "While previous research has explored the intersection of fairness and Explainable AI (XAI), its application to VLMs for wellbeing assessment and depression prediction remains under-explored.",
+        "This work investigates VLM performance across laboratory (AFAR-BSFT) and naturalistic (E-DAIC) datasets, focusing on diagnostic reliability and…"
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "In recent years, the integration of multimodal machine learning in wellbeing assessment has offered transformative potential for monitoring mental health. However, with the rapid advancement of Vision-Language Models (VLMs), their deployment in clinical settings has raised concerns due to their lack of transparency and potential for bias. While previous research has explored the intersection of fairness and Explainable AI (XAI), its application to VLMs for wellbeing assessment and depression prediction remains under-explored. This work investigates VLM performance across laboratory (AFAR-BSFT) and naturalistic (E-DAIC) datasets, focusing on diagnostic reliability and…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "c3adce64e9456dea",
+      "kind": "paper",
+      "title": "AFA: Identity-Aware Memory for Preventing Persona Confusion in Multi-User Dialogue",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1145/3776574.3831190",
+      "published_at": "2026-10-02T00:00:00Z",
+      "authors": [
+        "Mohammad Al-Ratrout",
+        "Pavan Uttej Ravva",
+        "Shayla Sharmin",
+        "Aditya Raikwar",
+        "Ju Young Shin"
+      ],
+      "venue": "INTERNATIONAL CONFERENCE ON MULTIMODAL INTERACTION",
+      "tags": [
+        "Speech and dialogue systems",
+        "voice assistants",
+        "personalized dialogue",
+        "speaker identification"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "When multiple people share a single voice assistant, the system conflates their histories: one resident’s preferences can leak into another’s responses, eroding utility and trust. We call this failure mode persona confusion, and we show it is a measurable problem in today’s single-user dialogue systems when deployed in shared environments. We present the Adaptive Friend Agent (AFA), a modular framework that combines voice-based speaker identification with per-user memory stores to enable identity-aware, personalized dialogue across multiple users. To support training and evaluation, we construct PAT (Personalized Agent chaT), a synthetic dataset of 57,791 persona-grounded…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "When multiple people share a single voice assistant, the system conflates their histories: one resident’s preferences can leak into another’s responses, eroding utility and trust.",
+        "We call this failure mode persona confusion, and we show it is a measurable problem in today’s single-user dialogue systems when deployed in shared environments.",
+        "We present the Adaptive Friend Agent (AFA), a modular framework that combines voice-based speaker identification with per-user memory stores to enable identity-aware, personalized dialogue across multiple users.",
+        "To support training and evaluation, we construct PAT (Personalized Agent chaT), a synthetic dataset of 57,791 persona-grounded…"
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "When multiple people share a single voice assistant, the system conflates their histories: one resident’s preferences can leak into another’s responses, eroding utility and trust. We call this failure mode persona confusion, and we show it is a measurable problem in today’s single-user dialogue systems when deployed in shared environments. We present the Adaptive Friend Agent (AFA), a modular framework that combines voice-based speaker identification with per-user memory stores to enable identity-aware, personalized dialogue across multiple users. To support training and evaluation, we construct PAT (Personalized Agent chaT), a synthetic dataset of 57,791 persona-grounded…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "3d0f2eaf4b8932f1",
+      "kind": "paper",
+      "title": "Real-time Generation of Listener Nodding via Prediction of Kinematic Parameters for Avatar Dialogue Systems",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1145/3776574.3831145",
+      "published_at": "2026-10-02T00:00:00Z",
+      "authors": [
+        "Kazuomi Kato",
+        "Koji Inoue",
+        "Taiga Mori",
+        "Divesh Lala",
+        "Tatsuya Kawahara"
+      ],
+      "venue": "INTERNATIONAL CONFERENCE ON MULTIMODAL INTERACTION",
+      "tags": [
+        "Speech and dialogue systems",
+        "nonverbal cues",
+        "real-time prediction",
+        "fine-tuning"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "In human dialogue, we achieve smooth communication by expressing nonverbal cues such as eye contact, nodding, and facial expressions with precise timing. It is expected for conversational avatars to express these cues appropriately to realize natural and human-like interactions. This study focuses on nodding, which is crucial for demonstrating active listening and encouraging further user utterances. We propose a model that predicts both timing and kinematic parameters representing the motion features of listener nodding in real time. The proposed model consists of a timing prediction module and a kinematic parameter prediction module. Each implements a dyadic attention…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "In human dialogue, we achieve smooth communication by expressing nonverbal cues such as eye contact, nodding, and facial expressions with precise timing.",
+        "It is expected for conversational avatars to express these cues appropriately to realize natural and human-like interactions.",
+        "This study focuses on nodding, which is crucial for demonstrating active listening and encouraging further user utterances.",
+        "We propose a model that predicts both timing and kinematic parameters representing the motion features of listener nodding in real time.",
+        "The proposed model consists of a timing prediction module and a kinematic parameter prediction module."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "In human dialogue, we achieve smooth communication by expressing nonverbal cues such as eye contact, nodding, and facial expressions with precise timing. It is expected for conversational avatars to express these cues appropriately to realize natural and human-like interactions. This study focuses on nodding, which is crucial for demonstrating active listening and encouraging further user utterances. We propose a model that predicts both timing and kinematic parameters representing the motion features of listener nodding in real time. The proposed model consists of a timing prediction module and a kinematic parameter prediction module. Each implements a dyadic attention…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "074e1c50683398f9",
+      "kind": "paper",
+      "title": "How Reliable Are Multimodal Signals of Conversational State? Evidence from Remote Dyadic Collaborative Tasks",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1145/3776574.3831235",
+      "published_at": "2026-10-02T00:00:00Z",
+      "authors": [
+        "Tahiya Chowdhury"
+      ],
+      "venue": "INTERNATIONAL CONFERENCE ON MULTIMODAL INTERACTION",
+      "tags": [
+        "Speech and dialogue systems",
+        "cognitive load",
+        "multimodal features",
+        "dyadic collaboration"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "Measuring conversational states such as cognitive load and conversational power from multimodal behavior requires characteristic features that are not only predictive but also reliable across task contexts. We present a three-dimensional evaluation framework assessing predictive accuracy, cross-task generalizability, and test-retest reliability, applied to interactional, acoustic, and linguistic features extracted from dyadic conversations during collaborative tasks performed over a video-conferencing platform (AVCAffe dataset; 53 dyads, 9 tasks). Our results show that no single feature family dominates all three dimensions. Linguistic features show the highest predictive…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "Measuring conversational states such as cognitive load and conversational power from multimodal behavior requires characteristic features that are not only predictive but also reliable across task contexts.",
+        "We present a three-dimensional evaluation framework assessing predictive accuracy, cross-task generalizability, and test-retest reliability, applied to interactional, acoustic, and linguistic features extracted from dyadic conversations during collaborative tasks performed over a video-conferencing platform (AVCAffe dataset; 53 dyads, 9 tasks).",
+        "Our results show that no single feature family dominates all three dimensions.",
+        "Linguistic features show the highest predictive…"
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Measuring conversational states such as cognitive load and conversational power from multimodal behavior requires characteristic features that are not only predictive but also reliable across task contexts. We present a three-dimensional evaluation framework assessing predictive accuracy, cross-task generalizability, and test-retest reliability, applied to interactional, acoustic, and linguistic features extracted from dyadic conversations during collaborative tasks performed over a video-conferencing platform (AVCAffe dataset; 53 dyads, 9 tasks). Our results show that no single feature family dominates all three dimensions. Linguistic features show the highest predictive…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "8edd0c95019334ec",
+      "kind": "paper",
+      "title": "Low-Latency Turn-Taking via Context-Aware Preface Generation in a Real-World Dialogue Robot",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1145/3776591.3832513",
+      "published_at": "2026-10-02T00:00:00Z",
+      "authors": [
+        "Yuki Okafuji",
+        "Koji Inoue",
+        "Yoshiki Ohira"
+      ],
+      "venue": "Companion Publication of the International Conference on Multimodal Interaction (ICMI Companion)",
+      "tags": [
+        "Speech and dialogue systems",
+        "turn-taking",
+        "conversational robots",
+        "response latency"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "Large language model (LLM)-based dialogue systems suffer response delays because generation begins only after final speech recognition. While fixed fillers are a workaround, they become unnatural over time. We propose a two-stage incremental framework that decouples prefatory-response preparation from speech onset. Once user intent becomes predictable, an intent readiness detector triggers LLM-based generation of a short prefatory response. Concurrently, a voice activity projection (VAP) model determines when to deliver it. Through a field experiment with a route-guidance robot in a shopping mall, we evaluated three conditions: no-filler, fixed-filler, and…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "pdf-link-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3776591.3832513?download=true",
+      "key_points": [
+        "Large language model (LLM)-based dialogue systems suffer response delays because generation begins only after final speech recognition.",
+        "While fixed fillers are a workaround, they become unnatural over time.",
+        "We propose a two-stage incremental framework that decouples prefatory-response preparation from speech onset.",
+        "Once user intent becomes predictable, an intent readiness detector triggers LLM-based generation of a short prefatory response.",
+        "Concurrently, a voice activity projection (VAP) model determines when to deliver it."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Large language model (LLM)-based dialogue systems suffer response delays because generation begins only after final speech recognition. While fixed fillers are a workaround, they become unnatural over time. We propose a two-stage incremental framework that decouples prefatory-response preparation from speech onset. Once user intent becomes predictable, an intent readiness detector triggers LLM-based generation of a short prefatory response. Concurrently, a voice activity projection (VAP) model determines when to deliver it. Through a field experiment with a route-guidance robot in a shopping mall, we evaluated three conditions: no-filler, fixed-filler, and…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "f635c709b7d3ebe4",
+      "kind": "paper",
+      "title": "Do Visual Features Improve Other-Initiated Repair Detection? A Dyadic Multimodal Approach",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1145/3776574.3831200",
+      "published_at": "2026-10-02T00:00:00Z",
+      "authors": [
+        "Anh Dung Ngô",
+        "Nicolas Rollet",
+        "Catherine Pélachaud",
+        "Chloé Clavel"
+      ],
+      "venue": "INTERNATIONAL CONFERENCE ON MULTIMODAL INTERACTION",
+      "tags": [
+        "Speech and dialogue systems",
+        "other-initiated repair",
+        "visual features",
+        "multimodal analysis"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "Other-initiated Self-repair, or in short Other-initiated Repair (OIR), is an essential mechanism in conversational interaction, whereby a recipient signals a problem in speaking, hearing, or understanding, prompting the previous speaker to resolve it. In the case of conversational agents, it is essential to accurately identify these repair initiation strategies to address communication breakdowns efficiently. While conversational analysis studies have shown that OIR initiation is accompanied by both verbal and non-verbal signals such as gaze shifts, facial expressions, body postures, and hand gestures, existing computational approaches rely mainly on text and audio. This…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "Other-initiated Self-repair, or in short Other-initiated Repair (OIR), is an essential mechanism in conversational interaction, whereby a recipient signals a problem in speaking, hearing, or understanding, prompting the previous speaker to resolve it.",
+        "In the case of conversational agents, it is essential to accurately identify these repair initiation strategies to address communication breakdowns efficiently.",
+        "While conversational analysis studies have shown that OIR initiation is accompanied by both verbal and non-verbal signals such as gaze shifts, facial expressions, body postures, and hand gestures, existing computational approaches rely mainly on text and audio."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Other-initiated Self-repair, or in short Other-initiated Repair (OIR), is an essential mechanism in conversational interaction, whereby a recipient signals a problem in speaking, hearing, or understanding, prompting the previous speaker to resolve it. In the case of conversational agents, it is essential to accurately identify these repair initiation strategies to address communication breakdowns efficiently. While conversational analysis studies have shown that OIR initiation is accompanied by both verbal and non-verbal signals such as gaze shifts, facial expressions, body postures, and hand gestures, existing computational approaches rely mainly on text and audio. This…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "fee9f024f1f25a59",
+      "kind": "paper",
+      "title": "Active Listener Live: Real-time Head Response Generation in Virtual Agents during Live Spoken Interaction",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1145/3776591.3836661",
+      "published_at": "2026-10-02T00:00:00Z",
+      "authors": [
+        "Bishal Ghosh",
+        "Tongfei Bian",
+        "Emma Li",
+        "Tanaya Guha"
+      ],
+      "venue": "Companion Publication of the International Conference on Multimodal Interaction (ICMI Companion)",
+      "tags": [
+        "Speech and dialogue systems",
+        "virtual agents",
+        "real-time speech synthesis",
+        "chatbots"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "A key component of dyadic interactions is the contextually-relevant behavioural cues, such as head gestures, that a listener produces in response to an interlocutor’s speech. However, generating such listening behaviour for an embodied Virtual Agent (VA) in real time is challenging. Existing real time head response generators are still rule-based, and the data driven models are not fit for real time use. We propose real-time, listener’s head response generation framework, called the Active Listener, that responds to a human speaker with appropriate head responses during spoken interactions. The framework comprises: (i) an online deep graph-based head pose generator that…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "pdf-link-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3776591.3836661?download=true",
+      "key_points": [
+        "A key component of dyadic interactions is the contextually-relevant behavioural cues, such as head gestures, that a listener produces in response to an interlocutor’s speech.",
+        "However, generating such listening behaviour for an embodied Virtual Agent (VA) in real time is challenging.",
+        "Existing real time head response generators are still rule-based, and the data driven models are not fit for real time use.",
+        "We propose real-time, listener’s head response generation framework, called the Active Listener, that responds to a human speaker with appropriate head responses during spoken interactions.",
+        "The framework comprises: (i) an online deep graph-based head pose generator that…"
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "A key component of dyadic interactions is the contextually-relevant behavioural cues, such as head gestures, that a listener produces in response to an interlocutor’s speech. However, generating such listening behaviour for an embodied Virtual Agent (VA) in real time is challenging. Existing real time head response generators are still rule-based, and the data driven models are not fit for real time use. We propose real-time, listener’s head response generation framework, called the Active Listener, that responds to a human speaker with appropriate head responses during spoken interactions. The framework comprises: (i) an online deep graph-based head pose generator that…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "c9428a2bfac2d801",
+      "kind": "paper",
+      "title": "Multimodal Rapport Estimation in Real-World HRI",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1145/3776574.3831184",
+      "published_at": "2026-10-02T00:00:00Z",
+      "authors": [
+        "Akihiro Sakuramoto",
+        "Takato Hayashi",
+        "Ryo Miyoshi",
+        "Yuki Okafuji",
+        "Shogo Okada"
+      ],
+      "venue": "INTERNATIONAL CONFERENCE ON MULTIMODAL INTERACTION",
+      "tags": [
+        "Speech and dialogue systems",
+        "human-robot interaction",
+        "multimodal fusion",
+        "third-party ratings"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "Evaluating interaction quality in real-world HRI is an important challenge. If interaction quality can be estimated reliably, the results can be used to improve dialogue strategies and ultimately enable robots to adapt their behavior autonomously. However, existing automatic evaluation methods have been developed primarily in controlled laboratory settings, and it remains unclear whether they can be directly applied to real-world environments, where users are free to disengage and multi-party participation may arise naturally. In this study, we investigate the automatic estimation of third-party-rated rapport scores using 62 sessions of multimodal recordings collected in…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "Evaluating interaction quality in real-world HRI is an important challenge.",
+        "If interaction quality can be estimated reliably, the results can be used to improve dialogue strategies and ultimately enable robots to adapt their behavior autonomously.",
+        "However, existing automatic evaluation methods have been developed primarily in controlled laboratory settings, and it remains unclear whether they can be directly applied to real-world environments, where users are free to disengage and multi-party participation may arise naturally.",
+        "In this study, we investigate the automatic estimation of third-party-rated rapport scores using 62 sessions of multimodal recordings collected in…"
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Evaluating interaction quality in real-world HRI is an important challenge. If interaction quality can be estimated reliably, the results can be used to improve dialogue strategies and ultimately enable robots to adapt their behavior autonomously. However, existing automatic evaluation methods have been developed primarily in controlled laboratory settings, and it remains unclear whether they can be directly applied to real-world environments, where users are free to disengage and multi-party participation may arise naturally. In this study, we investigate the automatic estimation of third-party-rated rapport scores using 62 sessions of multimodal recordings collected in…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "37dcc931829065d0",
+      "kind": "paper",
+      "title": "From Plots to Words: Model-Aware Multimodal Explanations as a Foundation for Accessible, Non-Visual Interaction",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1145/3776591.3833865",
+      "published_at": "2026-10-02T00:00:00Z",
+      "authors": [
+        "Nur Keleşoğlu",
+        "Łukasz Sobczak",
+        "Joanna Domańska"
+      ],
+      "venue": "Companion Publication of the International Conference on Multimodal Interaction (ICMI Companion)",
+      "tags": [
+        "Explainable Artificial Intelligence (XAI)",
+        "multimodal large language models",
+        "non-visual interaction",
+        "multi-agent framework"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "Multimodal large language models are increasingly used in interactive systems, yet ensuring consistent, trustworthy reasoning across heterogeneous modalities remains challenging. We present a context-aware, multi-agent framework that integrates textual queries, numerical data, visual representations, and model-derived signals for explainable time-series forecasting. A distinctive feature is that it turns predominantly visual forecasting outputs (e.g., trend plots) into structured, model-aware textual explanations. We argue that this makes the approach a natural foundation for non-visual, accessible interaction of particular relevance to blind and visually impaired users…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "Multimodal large language models are increasingly used in interactive systems, yet ensuring consistent, trustworthy reasoning across heterogeneous modalities remains challenging.",
+        "We present a context-aware, multi-agent framework that integrates textual queries, numerical data, visual representations, and model-derived signals for explainable time-series forecasting.",
+        "A distinctive feature is that it turns predominantly visual forecasting outputs (e.g., trend plots) into structured, model-aware textual explanations.",
+        "We argue that this makes the approach a natural foundation for non-visual, accessible interaction of particular relevance to blind and visually impaired users…"
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Multimodal large language models are increasingly used in interactive systems, yet ensuring consistent, trustworthy reasoning across heterogeneous modalities remains challenging. We present a context-aware, multi-agent framework that integrates textual queries, numerical data, visual representations, and model-derived signals for explainable time-series forecasting. A distinctive feature is that it turns predominantly visual forecasting outputs (e.g., trend plots) into structured, model-aware textual explanations. We argue that this makes the approach a natural foundation for non-visual, accessible interaction of particular relevance to blind and visually impaired users…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "b0ee8c6fdfa6058d",
+      "kind": "paper",
+      "title": "TEIDAN: A Multilingual Multiparty Dialogue Corpus",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1145/3776591.3836650",
+      "published_at": "2026-10-02T00:00:00Z",
+      "authors": [
+        "Taiga Mori",
+        "Koji Inoue",
+        "Mikey Elmers",
+        "Divesh Lala",
+        "Tatsuya Kawahara"
+      ],
+      "venue": "Companion Publication of the International Conference on Multimodal Interaction (ICMI Companion)",
+      "tags": [
+        "Speech and dialogue systems",
+        "multi-party conversation",
+        "triadic conversation",
+        "human-agent interaction"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "Multi-party interaction is a central setting for human communication and a necessary target for human-agent interaction systems that must participate in group conversation. Yet available corpora often focus on meetings, task-oriented interaction, text-based interaction, or acted scenarios, and fewer resources support cross-linguistic comparison of spontaneous face-to-face triadic discussion. This paper presents TEIDAN, a multilingual multimodal corpus that currently consists of Japanese and English three-party conversations. TEIDAN records groups of three participants discussing open-ended topics with individual pin microphones, a microphone array, and participant-facing…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "Multi-party interaction is a central setting for human communication and a necessary target for human-agent interaction systems that must participate in group conversation.",
+        "Yet available corpora often focus on meetings, task-oriented interaction, text-based interaction, or acted scenarios, and fewer resources support cross-linguistic comparison of spontaneous face-to-face triadic discussion.",
+        "This paper presents TEIDAN, a multilingual multimodal corpus that currently consists of Japanese and English three-party conversations.",
+        "TEIDAN records groups of three participants discussing open-ended topics with individual pin microphones, a microphone array, and participant-facing…"
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Multi-party interaction is a central setting for human communication and a necessary target for human-agent interaction systems that must participate in group conversation. Yet available corpora often focus on meetings, task-oriented interaction, text-based interaction, or acted scenarios, and fewer resources support cross-linguistic comparison of spontaneous face-to-face triadic discussion. This paper presents TEIDAN, a multilingual multimodal corpus that currently consists of Japanese and English three-party conversations. TEIDAN records groups of three participants discussing open-ended topics with individual pin microphones, a microphone array, and participant-facing…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "c3a216fc7155711b",
+      "kind": "paper",
+      "title": "A Methodology to Compare Real and LLM-Simulated Multimodal Interactions: The Case of Gender Bias",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1145/3776574.3831157",
+      "published_at": "2026-10-02T00:00:00Z",
+      "authors": [
+        "Elodie Etienne",
+        "Magalie Ochs",
+        "Jean–Michel Loubes",
+        "Chloé Clavel"
+      ],
+      "venue": "INTERNATIONAL CONFERENCE ON MULTIMODAL INTERACTION",
+      "tags": [
+        "Speech and dialogue systems",
+        "large language models",
+        "multimodal interaction",
+        "gender bias"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "Large Language Models (LLMs) are increasingly used to generate multimodal data for building corpora or simulating synthetic behaviours. A key challenge remains the evaluation of generated data. Comparison with real multimodal human interactions may help address this issue, but unified representations and evaluation frameworks are still lacking. In this article, we introduce MAMBI (Multimodal Annotation and Measurements for Bias in Interactions), an open-source tool designed to facilitate systematic comparisons between real and LLM-simulated multimodal human interactions. For this purpose, a standardised enriched multimodal transcript format is proposed, providing a common…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "Large Language Models (LLMs) are increasingly used to generate multimodal data for building corpora or simulating synthetic behaviours.",
+        "A key challenge remains the evaluation of generated data.",
+        "Comparison with real multimodal human interactions may help address this issue, but unified representations and evaluation frameworks are still lacking.",
+        "In this article, we introduce MAMBI (Multimodal Annotation and Measurements for Bias in Interactions), an open-source tool designed to facilitate systematic comparisons between real and LLM-simulated multimodal human interactions.",
+        "For this purpose, a standardised enriched multimodal transcript format is proposed, providing a common…"
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Large Language Models (LLMs) are increasingly used to generate multimodal data for building corpora or simulating synthetic behaviours. A key challenge remains the evaluation of generated data. Comparison with real multimodal human interactions may help address this issue, but unified representations and evaluation frameworks are still lacking. In this article, we introduce MAMBI (Multimodal Annotation and Measurements for Bias in Interactions), an open-source tool designed to facilitate systematic comparisons between real and LLM-simulated multimodal human interactions. For this purpose, a standardised enriched multimodal transcript format is proposed, providing a common…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "d068ab180230a29a",
+      "kind": "paper",
+      "title": "Beyond Rhythm and Prosody: Inter-Utterance Silence Predicts Drone Movement Duration in Spontaneous Vocal Guidance",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1145/3776574.3831175",
+      "published_at": "2026-10-02T00:00:00Z",
+      "authors": [
+        "Allan HENRY",
+        "Solange Rossato",
+        "Christian Graff",
+        "Sylvain Huet",
+        "José-Ernesto Gomez-Balderas"
+      ],
+      "venue": "INTERNATIONAL CONFERENCE ON MULTIMODAL INTERACTION",
+      "tags": [
+        "Speech and dialogue systems",
+        "rhythm",
+        "prosody"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "Most existing voice-controlled robot systems in human-robot interaction (HRI) rely on fixed or predefined movement durations, or on explicit quantity markers in spoken commands, with no direct link between the spontaneous acoustic signal and the amount of movement produced. Prosodic features such as fundamental frequency, energy, and speech rate have been proposed as potential carriers of such information, but their validity in naturalistic, spontaneous speech remains largely untested. This paper investigates whether several acoustic and rhythmic parameters, including inter-utterance silence duration, are more strongly associated with drone movement duration than…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "Most existing voice-controlled robot systems in human-robot interaction (HRI) rely on fixed or predefined movement durations, or on explicit quantity markers in spoken commands, with no direct link between the spontaneous acoustic signal and the amount of movement produced.",
+        "Prosodic features such as fundamental frequency, energy, and speech rate have been proposed as potential carriers of such information, but their validity in naturalistic, spontaneous speech remains largely untested.",
+        "This paper investigates whether several acoustic and rhythmic parameters, including inter-utterance silence duration, are more strongly associated with drone movement duration than…"
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Most existing voice-controlled robot systems in human-robot interaction (HRI) rely on fixed or predefined movement durations, or on explicit quantity markers in spoken commands, with no direct link between the spontaneous acoustic signal and the amount of movement produced. Prosodic features such as fundamental frequency, energy, and speech rate have been proposed as potential carriers of such information, but their validity in naturalistic, spontaneous speech remains largely untested. This paper investigates whether several acoustic and rhythmic parameters, including inter-utterance silence duration, are more strongly associated with drone movement duration than…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "bf75c50c90d41060",
+      "kind": "paper",
+      "title": "Multimodal User Simulation with Cross-Modal Grounding for Virtual Museum Interaction",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1145/3776574.3831178",
+      "published_at": "2026-10-02T00:00:00Z",
+      "authors": [
+        "Shreya Sanghamitra",
+        "Shihan Wang",
+        "Shenghui Wang"
+      ],
+      "venue": "INTERNATIONAL CONFERENCE ON MULTIMODAL INTERACTION",
+      "tags": [
+        "Speech and dialogue systems",
+        "virtual museum",
+        "cross-modal grounding",
+        "areas of interest"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "Developing multimodal conversational agents for virtual museum experiences requires aligned gaze–dialogue data, but collecting such data in VR is costly and typically yields only small datasets. We present a multimodal user simulator for VR museum interaction that generates turn-level aligned gaze features and visitor utterances conditioned on an area of interest (AOI) and an interaction profile. The simulator combines a conditional variational autoencoder (CVAE) for AOI- and profile-conditioned gaze synthesis with a T5-based dialogue generator and an AOI-consistency verifier that filters utterances inconsistent with the active attention target through rejection sampling.…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "Developing multimodal conversational agents for virtual museum experiences requires aligned gaze–dialogue data, but collecting such data in VR is costly and typically yields only small datasets.",
+        "We present a multimodal user simulator for VR museum interaction that generates turn-level aligned gaze features and visitor utterances conditioned on an area of interest (AOI) and an interaction profile.",
+        "The simulator combines a conditional variational autoencoder (CVAE) for AOI- and profile-conditioned gaze synthesis with a T5-based dialogue generator and an AOI-consistency verifier that filters utterances inconsistent with the active attention target through rejection sampling.…"
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Developing multimodal conversational agents for virtual museum experiences requires aligned gaze–dialogue data, but collecting such data in VR is costly and typically yields only small datasets. We present a multimodal user simulator for VR museum interaction that generates turn-level aligned gaze features and visitor utterances conditioned on an area of interest (AOI) and an interaction profile. The simulator combines a conditional variational autoencoder (CVAE) for AOI- and profile-conditioned gaze synthesis with a T5-based dialogue generator and an AOI-consistency verifier that filters utterances inconsistent with the active attention target through rejection sampling.…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "055281f9b826c707",
+      "kind": "paper",
+      "title": "ConceptLens: Interactive Concept Bottlenecks for Black-Box Models",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1145/3776574.3832528",
+      "published_at": "2026-10-02T00:00:00Z",
+      "authors": [
+        "H. Alam",
+        "Abdulrahman Mohamed Selim",
+        "László Kopácsi",
+        "Daniel Sonntag"
+      ],
+      "venue": "INTERNATIONAL CONFERENCE ON MULTIMODAL INTERACTION",
+      "tags": [
+        "Explainable Artificial Intelligence (XAI)",
+        "black-box models",
+        "concept vectors",
+        "local approximation"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "Most interpretability tools explain model decisions post-hoc but offer limited support for user action. We present ConceptLens, a model-agnostic framework that transforms explanations into an interactive interface for probing pre-trained classifiers across domains and modalities. By extracting concept vectors and fitting local approximations, the system enables users to evaluate local fidelity, perform what-if analysis, conduct counterfactual searches, and generate evidence-grounded explanations. Unlike traditional feature-level tools, ConceptLens shifts interaction to semantic concepts rather than isolated pixels or tokens. We demonstrate the system across three tasks…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "Most interpretability tools explain model decisions post-hoc but offer limited support for user action.",
+        "We present ConceptLens, a model-agnostic framework that transforms explanations into an interactive interface for probing pre-trained classifiers across domains and modalities.",
+        "By extracting concept vectors and fitting local approximations, the system enables users to evaluate local fidelity, perform what-if analysis, conduct counterfactual searches, and generate evidence-grounded explanations.",
+        "Unlike traditional feature-level tools, ConceptLens shifts interaction to semantic concepts rather than isolated pixels or tokens.",
+        "We demonstrate the system across three tasks…"
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Most interpretability tools explain model decisions post-hoc but offer limited support for user action. We present ConceptLens, a model-agnostic framework that transforms explanations into an interactive interface for probing pre-trained classifiers across domains and modalities. By extracting concept vectors and fitting local approximations, the system enables users to evaluate local fidelity, perform what-if analysis, conduct counterfactual searches, and generate evidence-grounded explanations. Unlike traditional feature-level tools, ConceptLens shifts interaction to semantic concepts rather than isolated pixels or tokens. We demonstrate the system across three tasks…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "60bfef10e47506f0",
+      "kind": "paper",
+      "title": "Towards Memory-Aware Adaptive Agents",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1145/3776574.3828959",
+      "published_at": "2026-10-02T00:00:00Z",
+      "authors": [
+        "Deborah van Sinttruije"
+      ],
+      "venue": "INTERNATIONAL CONFERENCE ON MULTIMODAL INTERACTION",
+      "tags": [
+        "Intelligent Tutoring Systems and Adaptive Learning",
+        "adaptive agents",
+        "human-AI interaction",
+        "forgetting"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "Human memory is dynamic and uncertain, yet adaptive systems often overlook how it shapes interaction. This PhD investigates how agents can model and adapt to human memory by treating it as a latent, time-varying process. In this work we develop adaptive models that progress from estimating how much a user can remember, to inferring which information is retained, to identifying factors that influence forgetting, and finally to modeling individual differences shaped by prior knowledge and biases. Through simulation and user studies, this research examines whether agents can accurately infer memory states and provide targeted support. The goal is to enable more effective…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "Human memory is dynamic and uncertain, yet adaptive systems often overlook how it shapes interaction.",
+        "This PhD investigates how agents can model and adapt to human memory by treating it as a latent, time-varying process.",
+        "In this work we develop adaptive models that progress from estimating how much a user can remember, to inferring which information is retained, to identifying factors that influence forgetting, and finally to modeling individual differences shaped by prior knowledge and biases.",
+        "Through simulation and user studies, this research examines whether agents can accurately infer memory states and provide targeted support."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Human memory is dynamic and uncertain, yet adaptive systems often overlook how it shapes interaction. This PhD investigates how agents can model and adapt to human memory by treating it as a latent, time-varying process. In this work we develop adaptive models that progress from estimating how much a user can remember, to inferring which information is retained, to identifying factors that influence forgetting, and finally to modeling individual differences shaped by prior knowledge and biases. Through simulation and user studies, this research examines whether agents can accurately infer memory states and provide targeted support. The goal is to enable more effective…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "91103ca7ac1323ea",
+      "kind": "paper",
+      "title": "Self-Distillation as a Structure-Dependent Mechanism in Multimodal Dialogue via Multi-Context Modeling",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1145/3776574.3831234",
+      "published_at": "2026-10-02T00:00:00Z",
+      "authors": [
+        "Ryo Ishii",
+        "Chihiro Takayama",
+        "長尾 慈郎",
+        "Toshiki Onishi",
+        "Yukiko Nakano"
+      ],
+      "venue": "INTERNATIONAL CONFERENCE ON MULTIMODAL INTERACTION",
+      "tags": [
+        "Speech and dialogue systems",
+        "self-distillation",
+        "multi-party conversation",
+        "knowledge distillation"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "Multimodal dialogue understanding requires integrating heterogeneous signals such as language, audio, and visual cues while capturing complex contextual dynamics in multi-party interactions. Although recent models achieve strong performance, they typically rely on unified representations and treat self-distillation as a generic enhancement, leaving its role in structured dialogue modeling unclear. We investigate self-distillation as a structure-dependent mechanism whose effectiveness depends on how conversational context is represented. To this end, we propose a multi-context framework that explicitly separates dialogue context into global interaction dynamics and…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "Multimodal dialogue understanding requires integrating heterogeneous signals such as language, audio, and visual cues while capturing complex contextual dynamics in multi-party interactions.",
+        "Although recent models achieve strong performance, they typically rely on unified representations and treat self-distillation as a generic enhancement, leaving its role in structured dialogue modeling unclear.",
+        "We investigate self-distillation as a structure-dependent mechanism whose effectiveness depends on how conversational context is represented.",
+        "To this end, we propose a multi-context framework that explicitly separates dialogue context into global interaction dynamics and…"
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Multimodal dialogue understanding requires integrating heterogeneous signals such as language, audio, and visual cues while capturing complex contextual dynamics in multi-party interactions. Although recent models achieve strong performance, they typically rely on unified representations and treat self-distillation as a generic enhancement, leaving its role in structured dialogue modeling unclear. We investigate self-distillation as a structure-dependent mechanism whose effectiveness depends on how conversational context is represented. To this end, we propose a multi-context framework that explicitly separates dialogue context into global interaction dynamics and…"
         }
       ],
       "reading_minutes": 1
@@ -1254,169 +1953,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "b65ba6ac7da797e5",
-      "kind": "paper",
-      "title": "Empowering Digital Agriculture: A Privacy-Preserving Framework for Data Sharing and Collaborative Research",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.15439/2026f1512",
-      "published_at": "2026-09-25T00:00:00Z",
-      "authors": [
-        "Osama Zafar",
-        "Rosemarie Santa González",
-        "Mina Namazi",
-        "Alfonso Javier Rodriguez-Morales",
-        "Erman Ayday"
-      ],
-      "venue": "Annals of Computer Science and Information Systems",
-      "tags": [
-        "Privacy-Preserving Technologies in Data",
-        "privacy-preserving data sharing",
-        "agricultural data",
-        "differential privacy"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "Data-driven agriculture, which integrates technology and data into agricultural practices, has the potential to improve crop yield, disease resilience, and long-term soil health.However, privacy concerns, such as adverse pricing, discrimination, and resource manipulation, deter farmers from sharing data, as it can be used against them.To address this barrier, we propose a privacy-preserving framework that enables secure data sharing and collaboration for research and development while mitigating privacy risks.The framework combines dimensionality reduction techniques and differential privacy by introducing noise to protect sensitive information.The proposed framework…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/b65ba6ac7da797e5.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://annals-csis.org/Volume_47/drp/pdf/1512.pdf",
-      "key_points": [
-        "However, privacy concerns, such as adverse pricing, discrimination, and resource manipulation, deter farmers from sharing data, as it can be used against them.",
-        "To address this barrier, we propose a privacy-preserving framework that enables secure data sharing and collaboration for research and development while mitigating privacy risks.",
-        "The framework combines dimensionality reduction techniques and differential privacy by introducing noise to protect sensitive information.",
-        "The proposed framework allows researchers to identify potential collaborators for a target farmer and to train personalized machine learning models either on the data of identiﬁed collaborators via federated learning or directly on aggregated, privacy-protected data.",
-        "It also allows farmers to identify potential collaborators based on similarities."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Data-driven agriculture, which integrates technology and data into agricultural practices, has the potential to improve crop yield, disease resilience, and long-term soil health.However, privacy concerns, such as adverse pricing, discrimination, and resource manipulation, deter farmers from sharing data, as it can be used against them.To address this barrier, we propose a privacy-preserving framework that enables secure data sharing and collaboration for research and development while mitigating privacy risks.The framework combines dimensionality reduction techniques and differential privacy by introducing noise to protect sensitive information.The proposed framework…"
-        }
-      ],
-      "reading_minutes": 33
-    },
-    {
-      "id": "6fd61ac61733b86f",
-      "kind": "paper",
-      "title": "ClonEval: An Open Voice Cloning Benchmark",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.15439/2026f7825",
-      "published_at": "2026-09-25T00:00:00Z",
-      "authors": [
-        "Iwona Christop",
-        "Tomasz Kuczyński",
-        "Marek Kubis"
-      ],
-      "venue": "Annals of Computer Science and Information Systems",
-      "tags": [
-        "Speech Recognition and Synthesis",
-        "voice cloning",
-        "text-to-speech",
-        "benchmark"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "We present a new benchmark for voice cloning text-to-speech models.The benchmark consists of an evaluation protocol, an open-source library for assessing the performance of voice cloning models, and an accompanying leaderboard.The paper discusses design considerations and presents a detailed description of the evaluation procedure.The usage of the software library is explained, along with the organization of the leaderboard.The evaluation results of selected open-source models are reported.",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/6fd61ac61733b86f.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://annals-csis.org/Volume_47/drp/pdf/7825.pdf",
-      "key_points": [
-        "ClonEval: An Open V oice Cloning Benchmark Iwona Christop, Tomasz Kuczy ´nski, Marek Kubis Adam Mickiewicz University ul.",
-        "Uniwersytetu Pozna ´nskiego 4 61-614 Pozna ´n, Poland Email: iwona.christop@amu.edu.pl, tomkuc2@st.amu.edu.pl, marek.kubis@amu.edu.pl Abstract—We present a new benchmark for voice cloning text-to-speech models.",
-        "The benchmark consists of an evaluation protocol, an open-source library for assessing the performance of voice cloning models, and an accompanying leaderboard.",
-        "The paper discusses design considerations and presents a detailed description of the evaluation procedure.",
-        "The usage of the software library is explained, along with the organization of the leaderboard."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "We present a new benchmark for voice cloning text-to-speech models.The benchmark consists of an evaluation protocol, an open-source library for assessing the performance of voice cloning models, and an accompanying leaderboard.The paper discusses design considerations and presents a detailed description of the evaluation procedure.The usage of the software library is explained, along with the organization of the leaderboard.The evaluation results of selected open-source models are reported."
-        },
-        {
-          "title": "关键结果",
-          "body": "Librosa Wrapper"
-        }
-      ],
-      "reading_minutes": 15
-    },
-    {
-      "id": "da0433af48c79dd9",
-      "kind": "paper",
-      "title": "StructRL: Recovering Dynamic Programming Structure from Learning Dynamics in Distributional Reinforcement Learning",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.15439/2026f6447",
-      "published_at": "2026-09-25T00:00:00Z",
-      "authors": [
-        "Ivo Nowak"
-      ],
-      "venue": "Annals of Computer Science and Information Systems",
-      "tags": [
-        "Reinforcement Learning in Robotics",
-        "distributional reinforcement learning",
-        "dynamic programming",
-        "learning dynamics"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "Reinforcement learning is typically treated as a uniform optimization process that does not explicitly exploit global structure, leading to slow and inefficient information propagation.In contrast, dynamic programming achieves high efficiency by leveraging structured propagation of value information.In this paper, we argue that such structure is implicitly encoded in its learning dynamics.Focusing on distributional reinforcement learning, we show that the temporal evolution of return variance reveals a propagation process across the state space.We introduce a temporal learning indicator t * (s) that captures when a state is most strongly affected by propagated…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/da0433af48c79dd9.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://annals-csis.org/Volume_48/drp/pdf/6447.pdf",
-      "key_points": [
-        "StructRL: Recovering Dynamic Programming Structure from Learning Dynamics in Distributional Reinforcement Learning Ivo Nowak HAW-Hamburg Email: ivo.nowak@haw-hamburg.de Abstract—Reinforcement learning is typically treated as a uniform optimization process that does not explicitly exploit global structure, leading to slow and inefﬁcient information…",
-        "In contrast, dynamic programming achieves high efﬁciency by leveraging structured propagation of value information.",
-        "In this paper, we argue that such structure is implicitly encoded in its learning dynamics.",
-        "Focusing on distributional reinforcement learning, we show that the temporal evolution of return variance reveals a propagation process across the state space.",
-        "We introduce a temporal learning indicator t∗(s) that captures when a state is most strongly affected by propagated updates."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Reinforcement learning is typically treated as a uniform optimization process that does not explicitly exploit global structure, leading to slow and inefficient information propagation.In contrast, dynamic programming achieves high efficiency by leveraging structured propagation of value information.In this paper, we argue that such structure is implicitly encoded in its learning dynamics.Focusing on distributional reinforcement learning, we show that the temporal evolution of return variance reveals a propagation process across the state space.We introduce a temporal learning indicator t * (s) that captures when a state is most strongly affected by propagated…"
-        }
-      ],
-      "reading_minutes": 16
-    },
-    {
-      "id": "e00e8126a0235e5e",
-      "kind": "paper",
-      "title": "Two-Step Occupation Coding",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.15439/2026f3041",
-      "published_at": "2026-09-25T00:00:00Z",
-      "authors": [
-        "A. Esser",
-        "Jens Dörpinghaus"
-      ],
-      "venue": "Annals of Computer Science and Information Systems",
-      "tags": [
-        "Topic Modeling",
-        "job titles",
-        "named entity recognition",
-        "two-step approach"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "Occupation coding links job titles in free text to occupational taxonomies and is a core task in labor market research.Existing approaches typically address this problem in a single end-to-end step, jointly identifying job titles and assigning occupational codes.This paper presents a novel twostep approach that separates these tasks.In the first step, a domain-specific Named Entity Recognition (NER) model identifies occupational titles in continuous text, even under noise such as OCR errors.In the second step, the extracted job titles are mapped to a taxonomy, enabling the classifier to focus exclusively on this mapping.We demonstrate that this separation improves…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "pdf-link-only",
-      "pdf_url": "https://annals-csis.org/Volume_47/drp/pdf/3041.pdf",
-      "key_points": [
-        "Occupation coding links job titles in free text to occupational taxonomies and is a core task in labor market research.Existing approaches typically address this problem in a single end-to-end step, jointly identifying job titles and assigning occupational codes.This paper presents a novel twostep approach that separates these tasks.In the first step, a…"
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Occupation coding links job titles in free text to occupational taxonomies and is a core task in labor market research.Existing approaches typically address this problem in a single end-to-end step, jointly identifying job titles and assigning occupational codes.This paper presents a novel twostep approach that separates these tasks.In the first step, a domain-specific Named Entity Recognition (NER) model identifies occupational titles in continuous text, even under noise such as OCR errors.In the second step, the extracted job titles are mapped to a taxonomy, enabling the classifier to focus exclusively on this mapping.We demonstrate that this separation improves…"
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "73bd231b8fe98626",
       "kind": "article",
       "title": "英伟达重金力捧 “美版 DeepSeek ”将 发布 开源模型",
       "source": "微信公众号 · 腾讯自选股财经",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1791178485&ver=7007&signature=GXn5dHlFEbc1VR7F4*jQKl6HVGcsEn6EAVLsuEd-ClVEYyQb7vzK*41Fw4ytPwsfbmGy9ZBvDqSCldMpqe-GgRuJdF9nl4YtYM66kU47-h78Fshvvtf7kez8aHAvYHDu&new=1",
+      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HAE3w2qjtogeAiZnHsb-dWr_nue0AjDYobiWsCgV&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1791178485%26ver%3D7007%26signature%3DGXn5dHlFEbc1VR7F4%2AjQKl6HVGcsEn6EAVLsuEd-ClVEYyQb7vzK%2A41Fw4ytPwsfbmGy9ZBvDqSCldMpqe-GgRuJdF9nl4YtYM66kU47-h78Fshvvtf7kez8aHAvYHDu%26new%3D1",
       "published_at": "2026-10-05T02:15:15Z",
       "authors": [],
       "venue": "",
@@ -1452,11 +1993,51 @@
       "reading_minutes": 1
     },
     {
+      "id": "3aa53dd51f6e11da",
+      "kind": "article",
+      "title": "通义千问 · Qwen -Image-2.1-Pro 透明图层+换背景全包了,小白也能用的＂轻量 Photoshop＂",
+      "source": "微信公众号 · AI龙虾学习",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1791210707&ver=7008&signature=EvZ608itEQWJmDYrJX5njKYOBbpIv9dcLFITMt*CVV9OuoHBg7*hjjApLdi*M7xbudPWPseaIPaPd23feuDijdp0NxVZJ4fCoVc6jrJN2zNDPc*E9DTXCduf8MeGw4Bu&new=1",
+      "published_at": "2026-10-05T02:08:08Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "微信公众号",
+        "Qwen",
+        "通义千问"
+      ],
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "summary": "通义千问 · Qwen -Image-2.1-Pro 透明图层+换背景全包了,小白... 官网实际 发布 为准,下方为示例写法pipe = pipeline(task='image-...",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "indexed-summary",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HOG0w2qjvKbELVZRcJkVowTt4eo9EGttIuESnbpk&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1791210707%26ver%3D7008%26signature%3DEvZ608itEQWJmDYrJX5njKYOBbpIv9dcLFITMt%2ACVV9OuoHBg7%2AhjjApLdi%2AM7xbudPWPseaIPaPd23feuDijdp0NxVZJ4fCoVc6jrJN2zNDPc%2AE9DTXCduf8MeGw4Bu%26new%3D1",
+      "key_points": [
+        "通义千问 · Qwen -Image-2.1-Pro 透明图层+换背景全包了,小白... 官网实际 发布 为准,下方为示例写法pipe = pipeline(task='image-..."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "通义千问 · Qwen -Image-2.1-Pro 透明图层+换背景全包了,小白... 官网实际 发布 为准,下方为示例写法pipe = pipeline(task='image-..."
+        },
+        {
+          "title": "公开索引摘要",
+          "bullets": [
+            "通义千问 · Qwen -Image-2.1-Pro 透明图层+换背景全包了,小白... 官网实际 发布 为准,下方为示例写法pipe = pipeline(task='image-..."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "f1d3ce6e896efe40",
       "kind": "article",
       "title": "DeepSeek V4.1 Flash 发布 :中美AI差距缩至3%,OpenAI不再是唯一答案",
       "source": "微信公众号 · AI-天马行空",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1791178485&ver=7007&signature=-jLZJk3KZvx9t4hQipawUXK5*1amPhd2AnIPYMVTtdkr13SV0dKXQAAMzYt*auBWVbpKnv9Fm*gCEx*6kqzZp8LRFmd4CTJxPzGog2Ym8ctpIFDIv2v60AohuzLhngYa&new=1",
+      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HAE3w2qjYilUEN1SI7XS61GHQqlyDJgRsno5d2qS&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1791178485%26ver%3D7007%26signature%3D-jLZJk3KZvx9t4hQipawUXK5%2A1amPhd2AnIPYMVTtdkr13SV0dKXQAAMzYt%2AauBWVbpKnv9Fm%2AgCEx%2A6kqzZp8LRFmd4CTJxPzGog2Ym8ctpIFDIv2v60AohuzLhngYa%26new%3D1",
       "published_at": "2026-10-05T02:06:35Z",
       "authors": [],
       "venue": "",
@@ -2012,46 +2593,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "f84a3bd2edf30a36",
-      "kind": "article",
-      "title": "AI热点汇总| 腾讯元宝 鸿蒙版上线:首发搭载 混元 Hy4 preview,专家模式同步开放",
-      "source": "微信公众号 · AING大本营",
-      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HGtwumqjEXFsKia7UYc5LnU0JIK0pliZWCqEYbLO&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1790603358%26ver%3D6994%26signature%3D4azFkABsx-tJ7PvFNWVIdMky-BS6yOJgQsV9e9kM7z-pll8GBGOVIKzrJ7j%2AFaEZ7RZzOvZ9GslqdsZ3s3TZLYj00y5PQ1ogomKoxYquckF5WW%2ANmjAdDtJ9VqiWZtSM%26new%3D1",
-      "published_at": "2026-09-26T04:11:28Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "微信公众号",
-        "腾讯",
-        "元宝"
-      ],
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "summary": "海外,微软 发布 新一代 Copilot 应用,把 Chat、Cowork、Code 与... 腾讯元宝 鸿蒙版上线并首发 混元 Hy4 preview,阿里云 Wan 3.0 把...",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HGtwumqjEXFsKia7UYc5LnU0JIK0pliZWCqEYbLO&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1790603358%26ver%3D6994%26signature%3D4azFkABsx-tJ7PvFNWVIdMky-BS6yOJgQsV9e9kM7z-pll8GBGOVIKzrJ7j%2AFaEZ7RZzOvZ9GslqdsZ3s3TZLYj00y5PQ1ogomKoxYquckF5WW%2ANmjAdDtJ9VqiWZtSM%26new%3D1",
-      "key_points": [
-        "海外,微软 发布 新一代 Copilot 应用,把 Chat、Cowork、Code 与... 腾讯元宝 鸿蒙版上线并首发 混元 Hy4 preview,阿里云 Wan 3.0 把..."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "海外,微软 发布 新一代 Copilot 应用,把 Chat、Cowork、Code 与... 腾讯元宝 鸿蒙版上线并首发 混元 Hy4 preview,阿里云 Wan 3.0 把..."
-        },
-        {
-          "title": "公开索引摘要",
-          "bullets": [
-            "海外,微软 发布 新一代 Copilot 应用,把 Chat、Cowork、Code 与... 腾讯元宝 鸿蒙版上线并首发 混元 Hy4 preview,阿里云 Wan 3.0 把..."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "de7f179ce791bcbb",
       "kind": "article",
       "title": "Opinion | This Is a Rare Arena in Which People Think A.I. Is Helping. It’s Making Things Worse.",
@@ -2368,6 +2909,46 @@
       "reading_minutes": 1
     },
     {
+      "id": "37db2441d5a89592",
+      "kind": "article",
+      "title": "Medical AI has a proof problem",
+      "source": "Financial Times",
+      "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOZHh1OXRja21yY1BGU0pacGhEQTEtOV9yOWFJbGpkbHpzZlhrNlN3MTNBeVR3SG5EdEktVzVJVEw3WUx6WDF4SGJjZTJxV21XRzF1RUVjUE9ERUQ0QjRmOWhTdXZLMFRLSGFCeDVGTVFOQ3dYdkNFRW4zWGlyekRQSEdrd2M?oc=5",
+      "published_at": "2026-09-17T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Medical AI has a proof problem Financial Times",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOZHh1OXRja21yY1BGU0pacGhEQTEtOV9yOWFJbGpkbHpzZlhrNlN3MTNBeVR3SG5EdEktVzVJVEw3WUx6WDF4SGJjZTJxV21XRzF1RUVjUE9ERUQ0QjRmOWhTdXZLMFRLSGFCeDVGTVFOQ3dYdkNFRW4zWGlyekRQSEdrd2M?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Medical AI has a proof problem Financial Times"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "demis-frontier-ai-framework-20260714",
       "kind": "social",
       "title": "A Framework for Frontier AI and the Dawning of a New Age",
@@ -2521,7 +3102,7 @@
       "id": "4e0d61cbe76c68ec",
       "kind": "article",
       "title": "Watch AI is Accelerating Drug Discovery: McKernan",
-      "source": "Bloomberg.com",
+      "source": "bloomberg.com",
       "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQNlBKUEt4RzJvVG9JWkRHVWJtQmhXaWRTU1hLZmp5d2hvWUtHdE5WNWNyM2ZNQ0RYZDlLRGVOUkpqNkV5NzJvdkNnZ1d0Q2Y1VVlTemRzMG55VUMxSkpDTndOcTdwM0kxYUh0S29zXzZCa3A4a2x5dXJZNW8yZEtyT0ktNkZwXzVjR19ZYk9WTDhxZk5aQjVhcmEwVnM2dw?oc=5",
       "published_at": "2026-09-11T07:00:00Z",
       "authors": [],
@@ -2532,7 +3113,7 @@
         "Applied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Watch AI is Accelerating Drug Discovery: McKernan Bloomberg.com",
+      "summary": "Watch AI is Accelerating Drug Discovery: McKernan bloomberg.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQNlBKUEt4RzJvVG9JWkRHVWJtQmhXaWRTU1hLZmp5d2hvWUtHdE5WNWNyM2ZNQ0RYZDlLRGVOUkpqNkV5NzJvdkNnZ1d0Q2Y1VVlTemRzMG55VUMxSkpDTndOcTdwM0kxYUh0S29zXzZCa3A4a2x5dXJZNW8yZEtyT0ktNkZwXzVjR19ZYk9WTDhxZk5aQjVhcmEwVnM2dw?oc=5&hl=en-US&gl=US&ceid=US:en",
@@ -2542,7 +3123,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "Watch AI is Accelerating Drug Discovery: McKernan Bloomberg.com"
+          "body": "Watch AI is Accelerating Drug Discovery: McKernan bloomberg.com"
         },
         {
           "title": "公开页面要点",
@@ -2658,6 +3239,58 @@
       "reading_minutes": 1
     },
     {
+      "id": "sam-altman-gpt-live-20260708",
+      "kind": "social",
+      "title": "Sam Altman 预告 ChatGPT 新一代实时语音 GPT-live",
+      "source": "X · Sam Altman",
+      "source_url": "https://x.com/sama/status/2074909079450050629",
+      "published_at": "2026-07-08T08:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Sam Altman",
+        "OpenAI",
+        "Voice AI"
+      ],
+      "verification": "创始人官方账号原帖 · 产品文档待补充",
+      "summary": "Sam Altman 在 X 宣布 GPT-live 上线，强调更自然的实时语音体验。此类产品预告通常早于完整技术说明，页面将保留原帖，同时等待 OpenAI 产品文档补充模型限制、地区可用性和具体能力。",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/sama/status/2074909079450050629",
+      "key_points": [
+        "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
+        "5:30 PM · Jul 8, 2026 · 765.6K Views 919 513 10K 765 Jenny @suomi55 Jul 8 Are you kidding us?",
+        "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
+        "You are promoting something here that you yourself have taken away from the users!",
+        "#keep4o #BringBack4o #OpenSource4o 20 13 193 12K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Sam Altman 在 X 宣布 GPT-live 上线，强调更自然的实时语音体验。此类产品预告通常早于完整技术说明，页面将保留原帖，同时等待 OpenAI 产品文档补充模型限制、地区可用性和具体能力。"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
+            "5:30 PM · Jul 8, 2026 · 765.6K Views 919 513 10K 765 Jenny @suomi55 Jul 8 Are you kidding us?",
+            "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
+            "You are promoting something here that you yourself have taken away from the users!",
+            "#keep4o #BringBack4o #OpenSource4o 20 13 193 12K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 · 765.6K Views 919 513 10K 765",
+            "Jenny @suomi55 Jul 8 Are you kidding us? „it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o! You are promoting something here that you yourself have taken away from the users! That’s disgusting! #keep4o #BringBack4o #OpenSource4o 20 13 193 12K",
+            "David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "8f6c22447e31372e",
       "kind": "article",
       "title": "Making global data easier to explore",
@@ -2703,58 +3336,6 @@
             "UN System Data Commons is an open, AI-ready platform integrating critical global statistics into a single searchable resource.",
             "Every year, entities across the United Nations system compile data to track challenges that affect how we work, learn, stay healthy, and care for our loved ones.",
             "These agencies work with some of the highest-integrity data in the world. But the statistics needed to solve big global challenges have lived in separate silos, organized in conflicting formats across, and within, different UN system organizations. Connecting the dots often meant months of painstaking manual work for data analysts before any real analysis could begin."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "sam-altman-gpt-live-20260708",
-      "kind": "social",
-      "title": "Sam Altman 预告 ChatGPT 新一代实时语音 GPT-live",
-      "source": "X · Sam Altman",
-      "source_url": "https://x.com/sama/status/2074909079450050629",
-      "published_at": "2026-07-08T08:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Sam Altman",
-        "OpenAI",
-        "Voice AI"
-      ],
-      "verification": "创始人官方账号原帖 · 产品文档待补充",
-      "summary": "Sam Altman 在 X 宣布 GPT-live 上线，强调更自然的实时语音体验。此类产品预告通常早于完整技术说明，页面将保留原帖，同时等待 OpenAI 产品文档补充模型限制、地区可用性和具体能力。",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/sama/status/2074909079450050629",
-      "key_points": [
-        "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
-        "5:30 PM · Jul 8, 2026 · 765.6K Views 919 513 10K 766 Jenny @suomi55 Jul 8 Are you kidding us?",
-        "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
-        "You are promoting something here that you yourself have taken away from the users!",
-        "#keep4o #BringBack4o #OpenSource4o 20 13 193 12K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Sam Altman 在 X 宣布 GPT-live 上线，强调更自然的实时语音体验。此类产品预告通常早于完整技术说明，页面将保留原帖，同时等待 OpenAI 产品文档补充模型限制、地区可用性和具体能力。"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
-            "5:30 PM · Jul 8, 2026 · 765.6K Views 919 513 10K 766 Jenny @suomi55 Jul 8 Are you kidding us?",
-            "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
-            "You are promoting something here that you yourself have taken away from the users!",
-            "#keep4o #BringBack4o #OpenSource4o 20 13 193 12K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 · 765.6K Views 919 513 10K 766",
-            "Jenny @suomi55 Jul 8 Are you kidding us? „it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o! You are promoting something here that you yourself have taken away from the users! That’s disgusting! #keep4o #BringBack4o #OpenSource4o 20 13 193 12K",
-            "David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
           ]
         }
       ],
@@ -2903,6 +3484,46 @@
             "We see that in how scientists use Asta , our agentic platform for scientific work. Instead of simple keyword searches, users often bring substantial context and many constraints—for example, asking Asta to compare approaches across a body of literature while accounting for a particular method, population, or setting. Many also return to generated reports later, treating them as working research artifacts rather than one-off answers.",
             "We wanted to help scientists generate cited reports faster, with a model they could download and run themselves. To do that, we tested whether a small, open model trained specifically for scientific report generation could match the report quality of the proprietary models we were using, while reducing generation time and serving costs."
           ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "e100ac1e89d33b65",
+      "kind": "article",
+      "title": "A sceptical guide to AI agents in drug discovery",
+      "source": "drugtargetreview.com",
+      "source_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPS1h1WmdfenRoX2ljWmlBcC1NRjdrb3RYNzY4V0doc1FCd3BHRXdIX1FtQVEwV3ZQS0hlX19iekQxMGRsTnZHY2hBSGJxZWFWTVBkNzVTVnRTOE16dGY3aDQzbGFCLUlVcEZhY19ReFFvbDJrZHBDY0dEZUpua1dPTlFkandEckhjN3I1N0UzcW9WM1RmMHdqYXJnb2s2MTlNMmRJYw?oc=5",
+      "published_at": "2026-10-02T08:30:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "A sceptical guide to AI agents in drug discovery drugtargetreview.com",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPS1h1WmdfenRoX2ljWmlBcC1NRjdrb3RYNzY4V0doc1FCd3BHRXdIX1FtQVEwV3ZQS0hlX19iekQxMGRsTnZHY2hBSGJxZWFWTVBkNzVTVnRTOE16dGY3aDQzbGFCLUlVcEZhY19ReFFvbDJrZHBDY0dEZUpua1dPTlFkandEckhjN3I1N0UzcW9WM1RmMHdqYXJnb2s2MTlNMmRJYw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "A sceptical guide to AI agents in drug discovery drugtargetreview.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -3181,46 +3802,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "4c5e31e8877575e0",
-      "kind": "article",
-      "title": "Harvard Tested a Custom AI Physics Tutor – and Learning Gains Doubled in 49 Minutes",
-      "source": "Yahoo Tech",
-      "source_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNclRHV3h4d1dub1RXV3JoTU91SWxYTTI3eUw5eF92bGVodHhCWl9YLU5YdjNJNm9nX2xyOU5YMVFXQUZ0WUp3U0ZpcURhMGhCMlVMdEp5QTF6S3VYVS02S0RiNTl4dk5WbFc1Tm52MHJ2R1pkb0hJQkNxQWZaRDBBSks4ZVUzeFRFVGpIenZEMFA4REo2?oc=5",
-      "published_at": "2026-09-29T15:10:23Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Harvard Tested a Custom AI Physics Tutor – and Learning Gains Doubled in 49 Minutes Yahoo Tech",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNclRHV3h4d1dub1RXV3JoTU91SWxYTTI3eUw5eF92bGVodHhCWl9YLU5YdjNJNm9nX2xyOU5YMVFXQUZ0WUp3U0ZpcURhMGhCMlVMdEp5QTF6S3VYVS02S0RiNTl4dk5WbFc1Tm52MHJ2R1pkb0hJQkNxQWZaRDBBSks4ZVUzeFRFVGpIenZEMFA4REo2?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Harvard Tested a Custom AI Physics Tutor – and Learning Gains Doubled in 49 Minutes Yahoo Tech"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "c965666e80883d4a",
       "kind": "article",
       "title": "Getting the Source Right, Not Just the Fact: Source-Aware Verification for MCP Agents",
@@ -3297,6 +3878,46 @@
         {
           "title": "内容概览",
           "body": "AMD to buy Fei-Fei Li's World Labs in $8.2 billion bet on 'physical AI' Reuters"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "0df5597e0f6bc79a",
+      "kind": "article",
+      "title": "AMD to buy Fei-Fei Li’s AI start-up for $8bn",
+      "source": "Financial Times",
+      "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOaFcxM3NDUmVDUWZ0NTlJZjhrVjF6em5LaDdNdk15Ynk1b1ZKVkl4YnpORERyU3c0WkppWHI2YmRsYlFzcUFLZjV4MkxrZGZja0FKY21GdUZ2LTg5ejFub2hKdmpZbmVmcEZSU3hXbWtRelRZODQ4WGZtZi1DeTNOcHJhZmk?oc=5",
+      "published_at": "2026-09-28T20:45:12Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Researcher Watch",
+        "Vision",
+        "World Models"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "AMD to buy Fei-Fei Li’s AI start-up for $8bn Financial Times",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOaFcxM3NDUmVDUWZ0NTlJZjhrVjF6em5LaDdNdk15Ynk1b1ZKVkl4YnpORERyU3c0WkppWHI2YmRsYlFzcUFLZjV4MkxrZGZja0FKY21GdUZ2LTg5ejFub2hKdmpZbmVmcEZSU3hXbWtRelRZODQ4WGZtZi1DeTNOcHJhZmk?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AMD to buy Fei-Fei Li’s AI start-up for $8bn Financial Times"
         },
         {
           "title": "公开页面要点",
@@ -3445,7 +4066,7 @@
       "id": "e53e3f6c06a7c12a",
       "kind": "article",
       "title": "AMD to Buy Fei-Fei Li’s World Labs AI Startup for $8.2 Billion",
-      "source": "Bloomberg.com",
+      "source": "bloomberg.com",
       "source_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOZW1PMmt1Q2c4TzNIaDNIbEs2TWQ3V0xQc1F6QXpzdHdHalpEWlk5ZlhoYnVHVXlsUGdmRm1Fd05aek1UdGFWT2dTZmFBUk9HZDAtRE85NFEwWXhnaHFqdWdSNzkzbWFMUWRxaDQ1VU4tblBrSFhRYkR3VEltUnhtMlI3dmhkcDE5OEx5T2l3RjZ6amdzVFhyeXE1Z2ZTQ0liUVFlREVzZU52THFDM29XSXpB?oc=5",
       "published_at": "2026-09-28T20:05:00Z",
       "authors": [],
@@ -3455,7 +4076,7 @@
         "Embodied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "AMD to Buy Fei-Fei Li’s World Labs AI Startup for $8.2 Billion Bloomberg.com",
+      "summary": "AMD to Buy Fei-Fei Li’s World Labs AI Startup for $8.2 Billion bloomberg.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOZW1PMmt1Q2c4TzNIaDNIbEs2TWQ3V0xQc1F6QXpzdHdHalpEWlk5ZlhoYnVHVXlsUGdmRm1Fd05aek1UdGFWT2dTZmFBUk9HZDAtRE85NFEwWXhnaHFqdWdSNzkzbWFMUWRxaDQ1VU4tblBrSFhRYkR3VEltUnhtMlI3dmhkcDE5OEx5T2l3RjZ6amdzVFhyeXE1Z2ZTQ0liUVFlREVzZU52THFDM29XSXpB?oc=5&hl=en-US&gl=US&ceid=US:en",
@@ -3465,47 +4086,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "AMD to Buy Fei-Fei Li’s World Labs AI Startup for $8.2 Billion Bloomberg.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "d667faec3cc7e13c",
-      "kind": "article",
-      "title": "A human problem: What is the proper role of AI in math research?",
-      "source": "Emory News",
-      "source_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPMTZKY2xOc1AzOS1GOHRGMXBSbnBKc1JkbDR6S2VaVktDRWc2dWR0cElpLTZsTTVuUldUSHNqUjFUM0ZxSWNUVjkyWmFVZmd2WWJoUF8tazFpUGVoWTZaMHpQSGdwcDBoSnRTZnlpcGp1TXBrcmpQTDRnVmI5M0xjWk4tX2lQM1lhSF9KUDBMYw?oc=5",
-      "published_at": "2026-09-24T19:05:28Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "A human problem: What is the proper role of AI in math research? Emory News",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPMTZKY2xOc1AzOS1GOHRGMXBSbnBKc1JkbDR6S2VaVktDRWc2dWR0cElpLTZsTTVuUldUSHNqUjFUM0ZxSWNUVjkyWmFVZmd2WWJoUF8tazFpUGVoWTZaMHpQSGdwcDBoSnRTZnlpcGp1TXBrcmpQTDRnVmI5M0xjWk4tX2lQM1lhSF9KUDBMYw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "A human problem: What is the proper role of AI in math research? Emory News"
+          "body": "AMD to Buy Fei-Fei Li’s World Labs AI Startup for $8.2 Billion bloomberg.com"
         },
         {
           "title": "公开页面要点",
@@ -3571,7 +4152,7 @@
       "id": "0a95d6d806951f0b",
       "kind": "article",
       "title": "World Labs Founder Fei-Fei Li Urges Independent Oversight of AI",
-      "source": "Bloomberg.com",
+      "source": "bloomberg.com",
       "source_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPcFdqRzZsTmJGMEJIV0FHVnFDN013Zlp6WTBnaEVMQ1BzSlJqTmNSWUxUNXFWWS0zQWNVY2JIbGxCSU9BdTFSR3FJMXA2T2VRNjFnVk5hbFJrUkRXaTNxeGpqaWxaSEY3QlIzYVhCNDUzY180cm1qVldNaWtxOGhnaWI0a3RtUjlZeS15Qlh0Wl90U1hQbURwNXoxS3NmdFlMbENaSnpyakRLdkxWa3ZQblF6NUg?oc=5",
       "published_at": "2026-09-22T07:00:00Z",
       "authors": [],
@@ -3582,7 +4163,7 @@
         "World Models"
       ],
       "verification": "媒体或公开网页",
-      "summary": "World Labs Founder Fei-Fei Li Urges Independent Oversight of AI Bloomberg.com",
+      "summary": "World Labs Founder Fei-Fei Li Urges Independent Oversight of AI bloomberg.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPcFdqRzZsTmJGMEJIV0FHVnFDN013Zlp6WTBnaEVMQ1BzSlJqTmNSWUxUNXFWWS0zQWNVY2JIbGxCSU9BdTFSR3FJMXA2T2VRNjFnVk5hbFJrUkRXaTNxeGpqaWxaSEY3QlIzYVhCNDUzY180cm1qVldNaWtxOGhnaWI0a3RtUjlZeS15Qlh0Wl90U1hQbURwNXoxS3NmdFlMbENaSnpyakRLdkxWa3ZQblF6NUg?oc=5&hl=en-US&gl=US&ceid=US:en",
@@ -3592,7 +4173,47 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "World Labs Founder Fei-Fei Li Urges Independent Oversight of AI Bloomberg.com"
+          "body": "World Labs Founder Fei-Fei Li Urges Independent Oversight of AI bloomberg.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "7f1dc6e0fc63352e",
+      "kind": "article",
+      "title": "AI safety conversations have gotten unbelievable",
+      "source": "TechCrunch",
+      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNbDRFRk53cWh6ZWQzV2VieHhzczFxOEVYeVBzUEd2T0xxZmFndUNRWmNkN3k0bllXeDZVWDR5Z1l1aGNwdkZfNzdoLUFKLTFSVlozS2pjTUtqd2g3WHNNX3ZlQWJpTl8zOTBSZWN2YUk2SU5ZcW5ZTkRyMjY3MmtDbjEzTmRlU3dMLWgw?oc=5",
+      "published_at": "2026-09-19T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Researcher Watch",
+        "Agents",
+        "Reasoning"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "AI safety conversations have gotten unbelievable TechCrunch",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNbDRFRk53cWh6ZWQzV2VieHhzczFxOEVYeVBzUEd2T0xxZmFndUNRWmNkN3k0bllXeDZVWDR5Z1l1aGNwdkZfNzdoLUFKLTFSVlozS2pjTUtqd2g3WHNNX3ZlQWJpTl8zOTBSZWN2YUk2SU5ZcW5ZTkRyMjY3MmtDbjEzTmRlU3dMLWgw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AI safety conversations have gotten unbelievable TechCrunch"
         },
         {
           "title": "公开页面要点",
@@ -3648,11 +4269,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "0fb59a55b2837473",
+      "id": "e86be80ece54c6bb",
       "kind": "article",
       "title": "Trump goes scorched earth on AI warnings, raging about data center opposition and regulation",
       "source": "CNBC",
-      "source_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQM01tVUxzRUtNUHM5YmNCSmlMcVZ0VmJrQU5nWmsySTJXZFNnWEhZajZxTmFOLW8ybTd0Z0lxVEZQSlJLVjV1djJROUFleXBmeHRLeDlpTkowNkZTbDZrSGJPVXBRZ2k1MUJZYlR4VThnSUhTNkl6eWhlTTBZS012UnV0a3kyaVlU0gGOAUFVX3lxTE54dzQxUXo4aFdlV2NKVnY1aHczRlZOTDRnaWVxTHFRUEhqUXhCS25Nd2hYYlY4bFh2WFlaTGRJbVdLTzNGajl5Y2FNSWVUSnBrbzJobTllT1M2Z1VxUTFweFZjVmNaNU9pMnRVZ3lsMkNiWmgwUHpYby1mNEI5TlNEdDliRUc0VUgxQnM4aWc?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQM01tVUxzRUtNUHM5YmNCSmlMcVZ0VmJrQU5nWmsySTJXZFNnWEhZajZxTmFOLW8ybTd0Z0lxVEZQSlJLVjV1djJROUFleXBmeHRLeDlpTkowNkZTbDZrSGJPVXBRZ2k1MUJZYlR4VThnSUhTNkl6eWhlTTBZS012UnV0a3kyaVlU?oc=5",
       "published_at": "2026-09-14T07:00:00Z",
       "authors": [],
       "venue": "",
@@ -3665,7 +4286,7 @@
       "summary": "Trump goes scorched earth on AI warnings, raging about data center opposition and regulation CNBC",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQM01tVUxzRUtNUHM5YmNCSmlMcVZ0VmJrQU5nWmsySTJXZFNnWEhZajZxTmFOLW8ybTd0Z0lxVEZQSlJLVjV1djJROUFleXBmeHRLeDlpTkowNkZTbDZrSGJPVXBRZ2k1MUJZYlR4VThnSUhTNkl6eWhlTTBZS012UnV0a3kyaVlU0gGOAUFVX3lxTE54dzQxUXo4aFdlV2NKVnY1aHczRlZOTDRnaWVxTHFRUEhqUXhCS25Nd2hYYlY4bFh2WFlaTGRJbVdLTzNGajl5Y2FNSWVUSnBrbzJobTllT1M2Z1VxUTFweFZjVmNaNU9pMnRVZ3lsMkNiWmgwUHpYby1mNEI5TlNEdDliRUc0VUgxQnM4aWc?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQM01tVUxzRUtNUHM5YmNCSmlMcVZ0VmJrQU5nWmsySTJXZFNnWEhZajZxTmFOLW8ybTd0Z0lxVEZQSlJLVjV1djJROUFleXBmeHRLeDlpTkowNkZTbDZrSGJPVXBRZ2k1MUJZYlR4VThnSUhTNkl6eWhlTTBZS012UnV0a3kyaVlU?oc=5&hl=en-US&gl=US&ceid=US:en",
       "key_points": [
         "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
       ],
@@ -3688,230 +4309,41 @@
       "reading_minutes": 1
     },
     {
-      "id": "55144d7a23f5b9e9",
-      "kind": "paper",
-      "title": "Understanding Student Effectiveness with AI Chatbots in Introductory Programming Education: An Interaction Analysis Study",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.24908/pceea.2026.21646",
-      "published_at": "2026-08-07T00:00:00Z",
-      "authors": [
-        "Rubaina Khan",
-        "Joshua Siderius",
-        "Kyle Ross",
-        "Yuksel Sari",
-        "Brian Frank"
-      ],
-      "venue": "Proceedings of the Canadian Engineering Education Association (CEEA)",
+      "id": "685657733eee981b",
+      "kind": "social",
+      "title": "Grok Imagine",
+      "source": "x.com",
+      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1GQWNDUVI4Z0tidXVkbTQ5eURSZlk1cHhZLVZlQ25BdTlkTVdqcDVpdnFsbGJCbFBPS1l6TktXeU5RcEJUVjBoWl80elpQUVNHRDZWWV9yTGpDNTJscXc?oc=5",
+      "published_at": "2026-10-05T05:40:55Z",
+      "authors": [],
+      "venue": "",
       "tags": [
-        "AI in Service Interactions",
-        "generative AI chatbots",
-        "introductory programming education",
-        "CS1"
+        "X",
+        "Founder Watch",
+        "First-party Post"
       ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "Generative AI chatbots are increasingly used in introductory programming courses, but whether they support learning or encourage over-reliance remains unclear. To examine which interaction features are associated with productive persistence, we analyzed 198 CS1 student–chatbot conversation logs using a five-dimensional coding scheme: query type, response relevance, response type, dialogue outcome, and effectiveness marker. Persistence was measured as the number of student prompts per log. Negative binomial models showed that relevance failures predicted longer interactions, particularly false positives (IRR = 2.49) and false negatives (IRR = 1.65), both p < 0.001.…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "pdf-link-only",
-      "pdf_url": "https://ojs.library.queensu.ca/index.php/PCEEA/article/download/21646/13433",
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1GQWNDUVI4Z0tidXVkbTQ5eURSZlk1cHhZLVZlQ25BdTlkTVdqcDVpdnFsbGJCbFBPS1l6TktXeU5RcEJUVjBoWl80elpQUVNHRDZWWV9yTGpDNTJscXc?oc=5&hl=en-US&gl=US&ceid=US:en",
       "key_points": [
-        "Generative AI chatbots are increasingly used in introductory programming courses, but whether they support learning or encourage over-reliance remains unclear.",
-        "To examine which interaction features are associated with productive persistence, we analyzed 198 CS1 student–chatbot conversation logs using a five-dimensional coding scheme: query type, response relevance, response type, dialogue outcome, and effectiveness marker.",
-        "Persistence was measured as the number of student prompts per log.",
-        "Negative binomial models showed that relevance failures predicted longer interactions, particularly false positives (IRR = 2.49) and false negatives (IRR = 1.65), both p < 0.001.…"
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
       ],
       "sections": [
         {
-          "title": "摘要",
-          "body": "Generative AI chatbots are increasingly used in introductory programming courses, but whether they support learning or encourage over-reliance remains unclear. To examine which interaction features are associated with productive persistence, we analyzed 198 CS1 student–chatbot conversation logs using a five-dimensional coding scheme: query type, response relevance, response type, dialogue outcome, and effectiveness marker. Persistence was measured as the number of student prompts per log. Negative binomial models showed that relevance failures predicted longer interactions, particularly false positives (IRR = 2.49) and false negatives (IRR = 1.65), both p < 0.001.…"
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "963111524a0161f5",
-      "kind": "paper",
-      "title": "AI Virtual Lab Assistant: Enhancing Undergraduate Biomedical Engineering Laboratory Education via a Customized Generative AI Virtual Teaching Lab Chatbot",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.24908/pceea.2026.21663",
-      "published_at": "2026-08-07T00:00:00Z",
-      "authors": [
-        "Nicholas Sinclair",
-        "Andrey I. Shukalyuk",
-        "Lindsey Fiddes",
-        "Dawn Kilkenny"
-      ],
-      "venue": "Proceedings of the Canadian Engineering Education Association (CEEA)",
-      "tags": [
-        "AI in Service Interactions",
-        "generative AI chatbots",
-        "retrieval-augmented generation",
-        "undergraduate laboratory teaching"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "Hands-on laboratory curriculum is a cornerstone of biomedical engineering programs. However, increasing class sizes, limited TA availability, and reduced time in the lab schedule contribute to disrupted student learning and experiential success. This paper describes the design and creation of a customized Virtual Teaching Lab Chatbot system intended to provide real-time responses to students engaged in laboratory curriculum, supporting enhanced and more efficient hands-on experiences. Using Retrieval Augmented Generation, this digital tool was designed to automatically access course and laboratory-specific documentation in response to user queries, eliminating the need to…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "pdf-link-only",
-      "pdf_url": "https://ojs.library.queensu.ca/index.php/PCEEA/article/download/21663/13444",
-      "key_points": [
-        "Hands-on laboratory curriculum is a cornerstone of biomedical engineering programs.",
-        "However, increasing class sizes, limited TA availability, and reduced time in the lab schedule contribute to disrupted student learning and experiential success.",
-        "This paper describes the design and creation of a customized Virtual Teaching Lab Chatbot system intended to provide real-time responses to students engaged in laboratory curriculum, supporting enhanced and more efficient hands-on experiences.",
-        "Using Retrieval Augmented Generation, this digital tool was designed to automatically access course and laboratory-specific documentation in response to user queries, eliminating the need to…"
-      ],
-      "sections": [
+          "title": "内容概览",
+          "body": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+        },
         {
-          "title": "摘要",
-          "body": "Hands-on laboratory curriculum is a cornerstone of biomedical engineering programs. However, increasing class sizes, limited TA availability, and reduced time in the lab schedule contribute to disrupted student learning and experiential success. This paper describes the design and creation of a customized Virtual Teaching Lab Chatbot system intended to provide real-time responses to students engaged in laboratory curriculum, supporting enhanced and more efficient hands-on experiences. Using Retrieval Augmented Generation, this digital tool was designed to automatically access course and laboratory-specific documentation in response to user queries, eliminating the need to…"
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "d9020a43835ecd19",
-      "kind": "paper",
-      "title": "When AI Gets It Wrong: Conscious Competence Development through Student Design Reflections",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.24908/pceea.2026.21656",
-      "published_at": "2026-08-07T00:00:00Z",
-      "authors": [
-        "Brian Macdonald",
-        "Sister Libby Osgood",
-        "Christopher Power"
-      ],
-      "venue": "Proceedings of the Canadian Engineering Education Association (CEEA)",
-      "tags": [
-        "Intelligent Tutoring Systems and Adaptive Learning",
-        "design reflection",
-        "student reflection",
-        "latent Dirichlet allocation"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "Reflections in engineering are a fruitful tool for encouraging lifelong learning and provide instructors with insight into how to adapt the learning environment to meet students' needs. However, reflections are impractical for large classes. This research explores the use of a latent Dirichlet allocation model to automatically classify students' design reflections, thereby improving the efficacy of their reviews. The model showed promising quantitative performance, but from a human reviewer's perspective, it lacked interpretability. The contradicting results encouraged a reflective discussion of the potential misuses and risks of artificial intelligence (AI), both within…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "pdf-link-only",
-      "pdf_url": "https://ojs.library.queensu.ca/index.php/PCEEA/article/download/21656/13441",
-      "key_points": [
-        "Reflections in engineering are a fruitful tool for encouraging lifelong learning and provide instructors with insight into how to adapt the learning environment to meet students' needs.",
-        "However, reflections are impractical for large classes.",
-        "This research explores the use of a latent Dirichlet allocation model to automatically classify students' design reflections, thereby improving the efficacy of their reviews.",
-        "The model showed promising quantitative performance, but from a human reviewer's perspective, it lacked interpretability.",
-        "The contradicting results encouraged a reflective discussion of the potential misuses and risks of artificial intelligence (AI), both within…"
-      ],
-      "sections": [
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
         {
-          "title": "摘要",
-          "body": "Reflections in engineering are a fruitful tool for encouraging lifelong learning and provide instructors with insight into how to adapt the learning environment to meet students' needs. However, reflections are impractical for large classes. This research explores the use of a latent Dirichlet allocation model to automatically classify students' design reflections, thereby improving the efficacy of their reviews. The model showed promising quantitative performance, but from a human reviewer's perspective, it lacked interpretability. The contradicting results encouraged a reflective discussion of the potential misuses and risks of artificial intelligence (AI), both within…"
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "d6967edc134ab22d",
-      "kind": "paper",
-      "title": "Improving Student Perception and Confidence Using Programming in Manufacturing Engineering",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.24908/pceea.2026.21625",
-      "published_at": "2026-08-07T00:00:00Z",
-      "authors": [
-        "Meet Upadhyay",
-        "Casey Keulen"
-      ],
-      "venue": "Proceedings of the Canadian Engineering Education Association (CEEA)",
-      "tags": [
-        "Computational Physics and Python Applications",
-        "Python programming",
-        "manufacturing education",
-        "Jupyter notebooks"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "Programming is increasingly integral to engineering education, yet students often struggle with its cognitive demands and unfamiliar logical frameworks. Python, with its intuitive syntax and practical utility, has shown promise in bridging this gap, particularly when applied to real engineering contexts where programming tasks are grounded in familiar disciplinary problems. This paper presents the design and implementation of Python-based Jupyter Notebooks integrated into a second-year manufacturing processes laboratory course, where students have prior but limited exposure to Python from earlier coursework. The Notebooks enable students to perform engineering…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "pdf-link-only",
-      "pdf_url": "https://ojs.library.queensu.ca/index.php/PCEEA/article/download/21625/13416",
-      "key_points": [
-        "Programming is increasingly integral to engineering education, yet students often struggle with its cognitive demands and unfamiliar logical frameworks.",
-        "Python, with its intuitive syntax and practical utility, has shown promise in bridging this gap, particularly when applied to real engineering contexts where programming tasks are grounded in familiar disciplinary problems.",
-        "This paper presents the design and implementation of Python-based Jupyter Notebooks integrated into a second-year manufacturing processes laboratory course, where students have prior but limited exposure to Python from earlier coursework.",
-        "The Notebooks enable students to perform engineering…"
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Programming is increasingly integral to engineering education, yet students often struggle with its cognitive demands and unfamiliar logical frameworks. Python, with its intuitive syntax and practical utility, has shown promise in bridging this gap, particularly when applied to real engineering contexts where programming tasks are grounded in familiar disciplinary problems. This paper presents the design and implementation of Python-based Jupyter Notebooks integrated into a second-year manufacturing processes laboratory course, where students have prior but limited exposure to Python from earlier coursework. The Notebooks enable students to perform engineering…"
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "7db5e27b2c10fdf6",
-      "kind": "paper",
-      "title": "Bridging Coursework and Professional Practice through a Retrieval-Grounded, Privacy-Preserving AI Learning Companion",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.24908/pceea.2026.21512",
-      "published_at": "2026-08-07T00:00:00Z",
-      "authors": [
-        "Chen Ying"
-      ],
-      "venue": "Proceedings of the Canadian Engineering Education Association (CEEA)",
-      "tags": [
-        "Intelligent Tutoring Systems and Adaptive Learning",
-        "retrieval-augmented learning",
-        "privacy-preserving AI",
-        "graduate engineering education"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "Large graduate engineering courses must balance scalability, authentic exposure to professional systems, and individualized support. While engagement with real-world professional artifacts can deepen learning, their scale and complexity often overwhelm students, and large enrollments limit instructors’ ability to provide sustained guidance. Cloud-based generative AI tools further complicate this landscape by encouraging passive solution generation and raising institutional privacy concerns. To address these challenges, we present the design of a retrieval-grounded, privacy-preserving AI Learning Companion embedded within course websites to support guided exploration of…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "pdf-link-only",
-      "pdf_url": "https://ojs.library.queensu.ca/index.php/PCEEA/article/download/21512/13333",
-      "key_points": [
-        "Large graduate engineering courses must balance scalability, authentic exposure to professional systems, and individualized support.",
-        "While engagement with real-world professional artifacts can deepen learning, their scale and complexity often overwhelm students, and large enrollments limit instructors’ ability to provide sustained guidance.",
-        "Cloud-based generative AI tools further complicate this landscape by encouraging passive solution generation and raising institutional privacy concerns.",
-        "To address these challenges, we present the design of a retrieval-grounded, privacy-preserving AI Learning Companion embedded within course websites to support guided exploration of…"
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Large graduate engineering courses must balance scalability, authentic exposure to professional systems, and individualized support. While engagement with real-world professional artifacts can deepen learning, their scale and complexity often overwhelm students, and large enrollments limit instructors’ ability to provide sustained guidance. Cloud-based generative AI tools further complicate this landscape by encouraging passive solution generation and raising institutional privacy concerns. To address these challenges, we present the design of a retrieval-grounded, privacy-preserving AI Learning Companion embedded within course websites to support guided exploration of…"
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "6ab107e54666d4f7",
-      "kind": "paper",
-      "title": "Reducing LLM Grading Inconsistency through Quality Dimension Refinement: A Measurement Theory Approach",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.24908/pceea.2026.21536",
-      "published_at": "2026-08-07T00:00:00Z",
-      "authors": [
-        "Paniz Ojaghi",
-        "Michael Cooper-Stachowsky",
-        "Paul Ward"
-      ],
-      "venue": "Proceedings of the Canadian Engineering Education Association (CEEA)",
-      "tags": [
-        "Intelligent Tutoring Systems and Adaptive Learning",
-        "quality dimensions",
-        "measurement theory",
-        "automated assessment"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "Automated grading systems are increasingly used in engineering education to manage instructor workload while providing timely feedback. Large Language Models (LLMs) have made this feasible for short-answer responses, but they exhibit grading inconsistency due to sampling variability: identical responses graded repeatedly can yield conflicting pass-fail outcomes in 8 to 20% of evaluations depending on question difficulty. This measurement error undermines the reliability of automated assessment. We address it using Quality Dimensions (QDs), binary criteria derived from rubrics that can be iteratively refined when grading is unstable. Applied to all N = 625 student…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "pdf-link-only",
-      "pdf_url": "https://ojs.library.queensu.ca/index.php/PCEEA/article/download/21536/13346",
-      "key_points": [
-        "Automated grading systems are increasingly used in engineering education to manage instructor workload while providing timely feedback.",
-        "Large Language Models (LLMs) have made this feasible for short-answer responses, but they exhibit grading inconsistency due to sampling variability: identical responses graded repeatedly can yield conflicting pass-fail outcomes in 8 to 20% of evaluations depending on question difficulty.",
-        "This measurement error undermines the reliability of automated assessment.",
-        "We address it using Quality Dimensions (QDs), binary criteria derived from rubrics that can be iteratively refined when grading is unstable."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Automated grading systems are increasingly used in engineering education to manage instructor workload while providing timely feedback. Large Language Models (LLMs) have made this feasible for short-answer responses, but they exhibit grading inconsistency due to sampling variability: identical responses graded repeatedly can yield conflicting pass-fail outcomes in 8 to 20% of evaluations depending on question difficulty. This measurement error undermines the reliability of automated assessment. We address it using Quality Dimensions (QDs), binary criteria derived from rubrics that can be iteratively refined when grading is unstable. Applied to all N = 625 student…"
+          "title": "原文短摘录",
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -3942,126 +4374,6 @@
         {
           "title": "内容概览",
           "body": "Very proud of the impact of all our work using AI to accelerate science and medicine for the benefit of society. x.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "652be28119159ba9",
-      "kind": "social",
-      "title": "@omarsar0 My mental model for what is happening is that 99%+ of people who are now paying attention have been onboarded to anything related to AI in",
-      "source": "x.com",
-      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE05Ukl6U3UzUndNLVdqNzV6STFNd2JjbFQ5anJnY3czaUh3U2ZZTGhmbmdaUUVkRzdsbHh0LWlweWdKMlQxYkJlX0FkaFVBZUNZQ21mN05YZThZSTlrVlE?oc=5",
-      "published_at": "2026-10-04T18:00:03Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Researcher Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "@omarsar0 My mental model for what is happening is that 99%+ of people who are now paying attention have been onboarded to anything related to AI in x.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE05Ukl6U3UzUndNLVdqNzV6STFNd2JjbFQ5anJnY3czaUh3U2ZZTGhmbmdaUUVkRzdsbHh0LWlweWdKMlQxYkJlX0FkaFVBZUNZQ21mN05YZThZSTlrVlE?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "@omarsar0 My mental model for what is happening is that 99%+ of people who are now paying attention have been onboarded to anything related to AI in x.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "9d110104df43185b",
-      "kind": "social",
-      "title": "Helpful guide to hiring your first @Grok @Bot employee. It really is like hiring an amazing helper that learns your needs and gets smarter almost every day!",
-      "source": "x.com",
-      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1LN3JZLTFqVko2NGI0QVN2ZUVJRU96Y3gwQ3hEZ1JpVEZubGVGNERvTG1IUk1GZ3VDc1lqNXlNZjI4RklMRnByM2JNZFJvODFqYm1SVzBSQWlkWDdublE?oc=5",
-      "published_at": "2026-10-04T16:45:20Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Helpful guide to hiring your first @Grok @Bot employee. It really is like hiring an amazing helper that learns your needs and gets smarter almost every day! x.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1LN3JZLTFqVko2NGI0QVN2ZUVJRU96Y3gwQ3hEZ1JpVEZubGVGNERvTG1IUk1GZ3VDc1lqNXlNZjI4RklMRnByM2JNZFJvODFqYm1SVzBSQWlkWDdublE?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Helpful guide to hiring your first @Grok @Bot employee. It really is like hiring an amazing helper that learns your needs and gets smarter almost every day! x.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "737d9376a0c6b947",
-      "kind": "social",
-      "title": "Grok 4.7 is #1 on the AA Cyber Index",
-      "source": "x.com",
-      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBPX21qa3ZTbHBJeWRralNINU1Kc0VjSzNCYzBPNW1HOG8tSXV3VERzXzU1RWVDa2x5MXIyOUstb0Z1aV9DWEd4b3RfbGd6eXRCRG9HV0tJdmFIUUhHdkE?oc=5",
-      "published_at": "2026-10-04T16:42:17Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Grok 4.7 is #1 on the AA Cyber Index x.com",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBPX21qa3ZTbHBJeWRralNINU1Kc0VjSzNCYzBPNW1HOG8tSXV3VERzXzU1RWVDa2x5MXIyOUstb0Z1aV9DWEd4b3RfbGd6eXRCRG9HV0tJdmFIUUhHdkE?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Grok 4.7 is #1 on the AA Cyber Index x.com"
         },
         {
           "title": "公开页面要点",
@@ -4116,10 +4428,10 @@
       "reading_minutes": 1
     },
     {
-      "id": "83dfeeef759aefa6",
+      "id": "e855b33bbe720da8",
       "kind": "article",
-      "title": "Cambridge AI startup Zenithon raises $10m for physics models | ETIH EdTech News",
-      "source": "edtechinnovationhub.com",
+      "title": "Cambridge-backed AI startup Zenithon raises $10m to accelerate fusion, aerospace and chip design",
+      "source": "EdTech Innovation Hub",
       "source_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOUDhVaUtIcTAzZ1lod0w5WjZfTXNBYzJQbXZLVzN2bFk1T0ZGUUdBYjRiOEp0WTdjZ0FlQ01IUFI5T1p5OXJ3LU5FQVBOS29HaUtfYnlzUXJoMmdLc25CeWVUd1psaUZneklVN2E2UUk2eTlRU1o3VEVvbVVqZU5nWlB2cEFVbGJjOXU0TXNVclBYcHJjTTI2ZTVqTEF2VmNTWnlxRG5VN1o2amVyUEgxa1FSQnd0SnRPM3hhdnVQd01TZ29rai1FdXNyRlV1YlZi?oc=5",
       "published_at": "2026-10-04T23:30:50Z",
       "authors": [],
@@ -4129,7 +4441,7 @@
         "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Cambridge AI startup Zenithon raises $10m for physics models | ETIH EdTech News edtechinnovationhub.com",
+      "summary": "Cambridge-backed AI startup Zenithon raises $10m to accelerate fusion, aerospace and chip design EdTech Innovation Hub",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOUDhVaUtIcTAzZ1lod0w5WjZfTXNBYzJQbXZLVzN2bFk1T0ZGUUdBYjRiOEp0WTdjZ0FlQ01IUFI5T1p5OXJ3LU5FQVBOS29HaUtfYnlzUXJoMmdLc25CeWVUd1psaUZneklVN2E2UUk2eTlRU1o3VEVvbVVqZU5nWlB2cEFVbGJjOXU0TXNVclBYcHJjTTI2ZTVqTEF2VmNTWnlxRG5VN1o2amVyUEgxa1FSQnd0SnRPM3hhdnVQd01TZ29rai1FdXNyRlV1YlZi?oc=5&hl=en-US&gl=US&ceid=US:en",
@@ -4139,7 +4451,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "Cambridge AI startup Zenithon raises $10m for physics models | ETIH EdTech News edtechinnovationhub.com"
+          "body": "Cambridge-backed AI startup Zenithon raises $10m to accelerate fusion, aerospace and chip design EdTech Innovation Hub"
         },
         {
           "title": "公开页面要点",
@@ -4150,301 +4462,6 @@
         {
           "title": "原文短摘录",
           "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "aa82d6b6a78a78aa",
-      "kind": "paper",
-      "title": "Utilizing Evolution Strategies to Train Transformers in Reinforcement Learning",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.1145/3795101.3805309",
-      "published_at": "2026-07-13T00:00:00Z",
-      "authors": [
-        "Matyáš Lorenc",
-        "Roman Neruda"
-      ],
-      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference Companion",
-      "tags": [
-        "Evolutionary Algorithms and Applications",
-        "evolution strategies",
-        "transformer models",
-        "decision transformer"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "We explore the capability of evolution strategies to train an agent with a policy based on a transformer architecture in a reinforcement learning setting. We performed experiments using OpenAI's highly parallelizable evolution strategy to train Decision Transformer in the MuJoCo Humanoid locomotion environment and in the environment of Atari games, testing the ability of this black-box optimization technique to train even such relatively large and complicated models (compared to those previously tested in the literature). The examined evolution strategy proved to be, in general, capable of achieving strong results and managed to produce high-performing agents, showcasing…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "abstract-only",
-      "key_points": [
-        "We explore the capability of evolution strategies to train an agent with a policy based on a transformer architecture in a reinforcement learning setting.",
-        "We performed experiments using OpenAI's highly parallelizable evolution strategy to train Decision Transformer in the MuJoCo Humanoid locomotion environment and in the environment of Atari games, testing the ability of this black-box optimization technique to train even such relatively large and complicated models (compared to those previously tested in the…",
-        "The examined evolution strategy proved to be, in general, capable of achieving strong results and managed to produce high-performing agents, showcasing…"
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "We explore the capability of evolution strategies to train an agent with a policy based on a transformer architecture in a reinforcement learning setting. We performed experiments using OpenAI's highly parallelizable evolution strategy to train Decision Transformer in the MuJoCo Humanoid locomotion environment and in the environment of Atari games, testing the ability of this black-box optimization technique to train even such relatively large and complicated models (compared to those previously tested in the literature). The examined evolution strategy proved to be, in general, capable of achieving strong results and managed to produce high-performing agents, showcasing…"
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "5a1923840e4d7926",
-      "kind": "paper",
-      "title": "FedGA-Tree: Federated Decision Tree using Genetic Algorithm",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.1145/3795101.3805440",
-      "published_at": "2026-07-13T00:00:00Z",
-      "authors": [
-        "Anh Nguyen",
-        "Diego Klabjan"
-      ],
-      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference Companion",
-      "tags": [
-        "Privacy-Preserving Technologies in Data",
-        "federated learning",
-        "decision tree",
-        "genetic algorithm"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "In recent years, with rising concerns for data privacy, Federated Learning has gained prominence, as it enables collaborative training without the aggregation of raw data from participating clients. However, much of the current focus has been on parametric gradient-based models, while nonparametric counterparts such as decision tree are relatively understudied. Existing methods for adapting decision trees to Federated Learning generally combine a greedy tree-building algorithm with differential privacy to produce a global model for all clients. These methods are limited to classification trees and categorical data due to the constraints of differential privacy. In this…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "abstract-only",
-      "key_points": [
-        "In recent years, with rising concerns for data privacy, Federated Learning has gained prominence, as it enables collaborative training without the aggregation of raw data from participating clients.",
-        "However, much of the current focus has been on parametric gradient-based models, while nonparametric counterparts such as decision tree are relatively understudied.",
-        "Existing methods for adapting decision trees to Federated Learning generally combine a greedy tree-building algorithm with differential privacy to produce a global model for all clients.",
-        "These methods are limited to classification trees and categorical data due to the constraints of differential privacy."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "In recent years, with rising concerns for data privacy, Federated Learning has gained prominence, as it enables collaborative training without the aggregation of raw data from participating clients. However, much of the current focus has been on parametric gradient-based models, while nonparametric counterparts such as decision tree are relatively understudied. Existing methods for adapting decision trees to Federated Learning generally combine a greedy tree-building algorithm with differential privacy to produce a global model for all clients. These methods are limited to classification trees and categorical data due to the constraints of differential privacy. In this…"
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "ed587c7c22ea422d",
-      "kind": "paper",
-      "title": "Diversifying Toxicity Search in Large Language Models Through Speciation",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.1145/3795101.3805412",
-      "published_at": "2026-07-13T00:00:00Z",
-      "authors": [
-        "Onkar Eknath Shelar",
-        "Travis Desell"
-      ],
-      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference Companion",
-      "tags": [
-        "Topic Modeling",
-        "speciation",
-        "quality diversity",
-        "red teaming"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "Evolutionary prompt search is a practical black-box approach for red teaming large language models, however existing methods often collapse onto a small family of high-performing prompts, limiting coverage of distinct failure modes. We present a speciated quality-diversity extension of ToxSearch that maintains multiple high-toxicity prompt niches in parallel rather than optimizing a single best prompt. ToxSearch-S introduces unsupervised prompt speciation via a search methodology that maintains capacity-limited species with exemplar leaders, a reserve pool for emerging niches, and species-aware parent selection that trades off within-niche exploitation and cross-niche…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "abstract-only",
-      "key_points": [
-        "Evolutionary prompt search is a practical black-box approach for red teaming large language models, however existing methods often collapse onto a small family of high-performing prompts, limiting coverage of distinct failure modes.",
-        "We present a speciated quality-diversity extension of ToxSearch that maintains multiple high-toxicity prompt niches in parallel rather than optimizing a single best prompt.",
-        "ToxSearch-S introduces unsupervised prompt speciation via a search methodology that maintains capacity-limited species with exemplar leaders, a reserve pool for emerging niches, and species-aware parent selection that trades off within-niche exploitation and cross-niche…"
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Evolutionary prompt search is a practical black-box approach for red teaming large language models, however existing methods often collapse onto a small family of high-performing prompts, limiting coverage of distinct failure modes. We present a speciated quality-diversity extension of ToxSearch that maintains multiple high-toxicity prompt niches in parallel rather than optimizing a single best prompt. ToxSearch-S introduces unsupervised prompt speciation via a search methodology that maintains capacity-limited species with exemplar leaders, a reserve pool for emerging niches, and species-aware parent selection that trades off within-niche exploitation and cross-niche…"
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "5ca33aa46358b9ef",
-      "kind": "paper",
-      "title": "NegaBent, No Regrets: Evolving Spectrally Flat Boolean Functions",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.1145/3795101.3805441",
-      "published_at": "2026-07-13T00:00:00Z",
-      "authors": [
-        "Claude Carlet",
-        "Marko Ðurasević",
-        "Ermes Franch",
-        "Domagoj Jakobović",
-        "Luca Mariot"
-      ],
-      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference Companion",
-      "tags": [
-        "Evolutionary Algorithms and Applications",
-        "bent functions",
-        "spectral flatness",
-        "genetic programming"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "Negabent Boolean functions are defined by having a flat magnitude spectrum under the nega-Hadamard transform. They exist in both even and odd dimensions, and the subclass of functions that are simultaneously bent and negabent (bent-negabent) has attracted interest due to the combined optimal periodic and negaperiodic spectral properties. In this work, we investigate how evolutionary algorithms can be used to evolve (bent-)negabent Boolean functions. Our experimental results indicate that evolutionary algorithms, especially genetic programming, are a suitable approach for evolving negabent Boolean functions, and we successfully evolve such functions in all dimensions we…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "abstract-only",
-      "key_points": [
-        "Negabent Boolean functions are defined by having a flat magnitude spectrum under the nega-Hadamard transform.",
-        "They exist in both even and odd dimensions, and the subclass of functions that are simultaneously bent and negabent (bent-negabent) has attracted interest due to the combined optimal periodic and negaperiodic spectral properties.",
-        "In this work, we investigate how evolutionary algorithms can be used to evolve (bent-)negabent Boolean functions.",
-        "Our experimental results indicate that evolutionary algorithms, especially genetic programming, are a suitable approach for evolving negabent Boolean functions, and we successfully evolve such functions in all dimensions we…"
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Negabent Boolean functions are defined by having a flat magnitude spectrum under the nega-Hadamard transform. They exist in both even and odd dimensions, and the subclass of functions that are simultaneously bent and negabent (bent-negabent) has attracted interest due to the combined optimal periodic and negaperiodic spectral properties. In this work, we investigate how evolutionary algorithms can be used to evolve (bent-)negabent Boolean functions. Our experimental results indicate that evolutionary algorithms, especially genetic programming, are a suitable approach for evolving negabent Boolean functions, and we successfully evolve such functions in all dimensions we…"
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "8a24a9713856b65a",
-      "kind": "paper",
-      "title": "Investigating Quantum Circuit Designs Using Neuro-Evolution",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.1145/3795101.3805320",
-      "published_at": "2026-07-13T00:00:00Z",
-      "authors": [
-        "Devroop Kar",
-        "Daniel E. Krutz",
-        "Travis Desell"
-      ],
-      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference Companion",
-      "tags": [
-        "Quantum Computing Algorithms and Architecture",
-        "quantum circuit design",
-        "neuroevolution",
-        "genetic programming"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "Designing effective quantum circuits remains a central challenge in quantum computing, as circuit structure strongly influences expressivity, trainability, and hardware feasibility. Current approaches, whether using manually designed circuit templates, fixed heuristics, or automated rules, face limitations in scalability, flexibility, and adaptability, often producing circuits that are poorly matched to the specific problem or quantum hardware. In this work, we propose the Evolutionary eXploration of Augmenting Quantum Circuits (EXAQC), an evolutionary approach to the automated design and training of parameterized quantum circuits (PQCs) which leverages and extends on…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "abstract-only",
-      "key_points": [
-        "Designing effective quantum circuits remains a central challenge in quantum computing, as circuit structure strongly influences expressivity, trainability, and hardware feasibility.",
-        "Current approaches, whether using manually designed circuit templates, fixed heuristics, or automated rules, face limitations in scalability, flexibility, and adaptability, often producing circuits that are poorly matched to the specific problem or quantum hardware.",
-        "In this work, we propose the Evolutionary eXploration of Augmenting Quantum Circuits (EXAQC), an evolutionary approach to the automated design and training of parameterized quantum circuits (PQCs) which leverages and extends on…"
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Designing effective quantum circuits remains a central challenge in quantum computing, as circuit structure strongly influences expressivity, trainability, and hardware feasibility. Current approaches, whether using manually designed circuit templates, fixed heuristics, or automated rules, face limitations in scalability, flexibility, and adaptability, often producing circuits that are poorly matched to the specific problem or quantum hardware. In this work, we propose the Evolutionary eXploration of Augmenting Quantum Circuits (EXAQC), an evolutionary approach to the automated design and training of parameterized quantum circuits (PQCs) which leverages and extends on…"
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "196a0364ec69ee2c",
-      "kind": "paper",
-      "title": "Discrete Gene Crossover Accelerates Solution Discovery in Quality-Diversity Algorithms",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.1145/3795101.3805385",
-      "published_at": "2026-07-13T00:00:00Z",
-      "authors": [
-        "Joshua Hutchinson",
-        "J. Michael Herrmann",
-        "Simón C. Smith"
-      ],
-      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference Companion",
-      "tags": [
-        "Metaheuristic Optimization Algorithms Research",
-        "quality-diversity algorithms",
-        "mutation operator",
-        "solution diversity"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "Quality-Diversity (QD) algorithms aim to discover diverse, high-performing solutions across behavioral niches. However, QD search often stagnates as incremental variation operators struggle to propagate building blocks across large populations. Existing mutation operators rely on gradual variation to solutions, limiting their ability to efficiently explore regions of the search space distant from parent solutions or to spread beneficial genetic material through the population. We propose a mutation operator which augments variation-based operators with discrete, gene-level crossover, enabling rapid recombination of elite genetic material. This crossover mechanism mirrors…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "abstract-only",
-      "key_points": [
-        "Quality-Diversity (QD) algorithms aim to discover diverse, high-performing solutions across behavioral niches.",
-        "However, QD search often stagnates as incremental variation operators struggle to propagate building blocks across large populations.",
-        "Existing mutation operators rely on gradual variation to solutions, limiting their ability to efficiently explore regions of the search space distant from parent solutions or to spread beneficial genetic material through the population.",
-        "We propose a mutation operator which augments variation-based operators with discrete, gene-level crossover, enabling rapid recombination of elite genetic material."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Quality-Diversity (QD) algorithms aim to discover diverse, high-performing solutions across behavioral niches. However, QD search often stagnates as incremental variation operators struggle to propagate building blocks across large populations. Existing mutation operators rely on gradual variation to solutions, limiting their ability to efficiently explore regions of the search space distant from parent solutions or to spread beneficial genetic material through the population. We propose a mutation operator which augments variation-based operators with discrete, gene-level crossover, enabling rapid recombination of elite genetic material. This crossover mechanism mirrors…"
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "c0b8ed6113141ce8",
-      "kind": "paper",
-      "title": "GeM-EA: A Generative and Meta-learning Enhanced Evolutionary Algorithm for Streaming Data-Driven Optimization",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.1145/3795101.3805285",
-      "published_at": "2026-07-13T00:00:00Z",
-      "authors": [
-        "Yue Wu",
-        "Yuan-Ting Zhong",
-        "Ze-Yuan Ma",
-        "Yue‐Jiao Gong"
-      ],
-      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference Companion",
-      "tags": [
-        "Data Stream Mining Techniques",
-        "concept drift",
-        "meta-learning",
-        "generative replay"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "Streaming Data-Driven Optimization (SDDO) problems arise in many applications where data arrive continuously and the optimization environment evolves over time. Concept drift produces non-stationary landscapes, making optimization methods challenging due to outdated models. Existing approaches often rely on simple surrogate combinations or directly injecting solutions, which may cause negative transfer under sudden environmental changes. We propose GeM-EA, a Generative and Meta-learning Enhanced Evolutionary Algorithm for SDDO that unifies meta-learned surrogate adaptation with generative replay for effective evolutionary search. Upon detecting concept drift, a bi-level…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "abstract-only",
-      "key_points": [
-        "Streaming Data-Driven Optimization (SDDO) problems arise in many applications where data arrive continuously and the optimization environment evolves over time.",
-        "Concept drift produces non-stationary landscapes, making optimization methods challenging due to outdated models.",
-        "Existing approaches often rely on simple surrogate combinations or directly injecting solutions, which may cause negative transfer under sudden environmental changes.",
-        "We propose GeM-EA, a Generative and Meta-learning Enhanced Evolutionary Algorithm for SDDO that unifies meta-learned surrogate adaptation with generative replay for effective evolutionary search."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Streaming Data-Driven Optimization (SDDO) problems arise in many applications where data arrive continuously and the optimization environment evolves over time. Concept drift produces non-stationary landscapes, making optimization methods challenging due to outdated models. Existing approaches often rely on simple surrogate combinations or directly injecting solutions, which may cause negative transfer under sudden environmental changes. We propose GeM-EA, a Generative and Meta-learning Enhanced Evolutionary Algorithm for SDDO that unifies meta-learned surrogate adaptation with generative replay for effective evolutionary search. Upon detecting concept drift, a bi-level…"
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "268ef982d59ba8dd",
-      "kind": "paper",
-      "title": "A Hybrid Classical-Quantum Annealing Algorithm for the TSP",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.1145/3795101.3814699",
-      "published_at": "2026-07-13T00:00:00Z",
-      "authors": [
-        "Siwei Hu",
-        "Victor Lopata",
-        "Salvatore Sinno",
-        "Shruthi Thuravakkath",
-        "Paolo Zuliani"
-      ],
-      "venue": "Proceedings of the Genetic and Evolutionary Computation Conference Companion",
-      "tags": [
-        "Quantum Computing Algorithms and Architecture",
-        "traveling salesman problem",
-        "hybrid quantum-classical algorithms",
-        "quantum annealing"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "Hybrid quantum-classical algorithms can help mitigating the physical limitations of current quantum devices, particularly the low qubit count and the reduced topological connectivity. In this paper, we propose a hybrid technique to solve a well-known NP-hard optimization problem: the Traveling Salesperson Problem (TSP). Our approach is based on a graph contraction technique that removes most of the dimensionality of the original problem instance, producing a sub-TSP of a size suitable to be efficiently solved by a quantum device. The performance of our approach is first demonstrated on classical quantum simulation using Path Integral Monte Carlo, and then run on a D-Wave…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "abstract-only",
-      "key_points": [
-        "Hybrid quantum-classical algorithms can help mitigating the physical limitations of current quantum devices, particularly the low qubit count and the reduced topological connectivity.",
-        "In this paper, we propose a hybrid technique to solve a well-known NP-hard optimization problem: the Traveling Salesperson Problem (TSP).",
-        "Our approach is based on a graph contraction technique that removes most of the dimensionality of the original problem instance, producing a sub-TSP of a size suitable to be efficiently solved by a quantum device.",
-        "The performance of our approach is first demonstrated on classical quantum simulation using Path Integral Monte Carlo, and then run on a D-Wave…"
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Hybrid quantum-classical algorithms can help mitigating the physical limitations of current quantum devices, particularly the low qubit count and the reduced topological connectivity. In this paper, we propose a hybrid technique to solve a well-known NP-hard optimization problem: the Traveling Salesperson Problem (TSP). Our approach is based on a graph contraction technique that removes most of the dimensionality of the original problem instance, producing a sub-TSP of a size suitable to be efficiently solved by a quantum device. The performance of our approach is first demonstrated on classical quantum simulation using Path Integral Monte Carlo, and then run on a D-Wave…"
         }
       ],
       "reading_minutes": 1
@@ -4513,45 +4530,6 @@
         {
           "title": "内容概览",
           "body": "AMD acquires World Labs AI startup, upping the ante against Nvidia Ars Technica"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "c54543e0db9bca42",
-      "kind": "article",
-      "title": "AMD acquires startup cofounded by ‘godmother of AI’ Fei-Fei Li for $8.2 billion",
-      "source": "Fortune",
-      "source_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPbTJZazg1STZjVGNheUZjOW1SczBSSXJCOXpzbldyNWFaWVlYZmFETkExZWZzdnRrNk42eVN5VjVxZzFBY0s3Um5rV0RxSHhpam5NMzc4bXVMZ2ZYOXVjSy1zMWtnTzlJcWFXOUI1V2UwNDhXNXY2Y1VJYXhxYzFmUTZ2QktsaTdtVUc5ekZYUQ?oc=5",
-      "published_at": "2026-09-28T21:56:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Founder Watch",
-        "Embodied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "AMD acquires startup cofounded by ‘godmother of AI’ Fei-Fei Li for $8.2 billion Fortune",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPbTJZazg1STZjVGNheUZjOW1SczBSSXJCOXpzbldyNWFaWVlYZmFETkExZWZzdnRrNk42eVN5VjVxZzFBY0s3Um5rV0RxSHhpam5NMzc4bXVMZ2ZYOXVjSy1zMWtnTzlJcWFXOUI1V2UwNDhXNXY2Y1VJYXhxYzFmUTZ2QktsaTdtVUc5ekZYUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "AMD acquires startup cofounded by ‘godmother of AI’ Fei-Fei Li for $8.2 billion Fortune"
         },
         {
           "title": "公开页面要点",
@@ -4987,45 +4965,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "96701108bc8019f9",
-      "kind": "article",
-      "title": "Base Labs launches an open-weight AI safety partnership with Hugging Face and Goodfire",
-      "source": "TechCrunch",
-      "source_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQeHdrYld6WDItWEtXWE80TmFEWU9Gc1QybU1DZ3dWaUx0aGVKT09sNE9ZR1dSQXlRa1p4SXlSQ3JFckFtb1NzTl9VcDVUYmlVRzJaTHBnal9yUFpnRm9jNXdJZGR3WDducGhNOGNlcGttZmlOaDZhNFFybkhyRHlNSzJoS1FDdVI2S1cwa1M5LXhYQ0lHUVZvZVpkYjBFOXdCUHloU2dFdlp3Q2laUm5nUXdwdWJjalFFcEtIZExR?oc=5",
-      "published_at": "2026-09-17T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Open Source",
-        "Models & Tools"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Base Labs launches an open-weight AI safety partnership with Hugging Face and Goodfire TechCrunch",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQeHdrYld6WDItWEtXWE80TmFEWU9Gc1QybU1DZ3dWaUx0aGVKT09sNE9ZR1dSQXlRa1p4SXlSQ3JFckFtb1NzTl9VcDVUYmlVRzJaTHBnal9yUFpnRm9jNXdJZGR3WDducGhNOGNlcGttZmlOaDZhNFFybkhyRHlNSzJoS1FDdVI2S1cwa1M5LXhYQ0lHUVZvZVpkYjBFOXdCUHloU2dFdlp3Q2laUm5nUXdwdWJjalFFcEtIZExR?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Base Labs launches an open-weight AI safety partnership with Hugging Face and Goodfire TechCrunch"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "c846435ed5aaac37",
       "kind": "article",
       "title": "Wes Moore calls for AI regulation at Baltimore summit",
@@ -5338,6 +5277,84 @@
       "reading_minutes": 1
     },
     {
+      "id": "840c0d3db440e82b",
+      "kind": "article",
+      "title": "OpenAI hit with landmark lawsuit following Hugging Face hack",
+      "source": "Axios",
+      "source_url": "https://news.google.com/rss/articles/CBMickFVX3lxTE51dmdLSEl6NmNpYzhnSW1SeVBBMTZRcmFtVkpKUUltTV9TbllGS0N3cU1hSkRETmdJd0JqenIxeG5XaElGUmhlLV9aLWhjX2t5aW5vZng2OWRzUk5XMWRkcUVnanlwR2p0U2JtREYtZVppZw?oc=5",
+      "published_at": "2026-09-29T21:34:05Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "OpenAI hit with landmark lawsuit following Hugging Face hack Axios",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMickFVX3lxTE51dmdLSEl6NmNpYzhnSW1SeVBBMTZRcmFtVkpKUUltTV9TbllGS0N3cU1hSkRETmdJd0JqenIxeG5XaElGUmhlLV9aLWhjX2t5aW5vZng2OWRzUk5XMWRkcUVnanlwR2p0U2JtREYtZVppZw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "OpenAI hit with landmark lawsuit following Hugging Face hack Axios"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "373eb7f0c38d08dd",
+      "kind": "article",
+      "title": "AI Safety: Governor Hochul Announces Next Steps to Regulate Major AI Developers and Protect New Yorkers",
+      "source": "Governor Kathy Hochul (.gov)",
+      "source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPQnpZVEdCWnVtN1h0VmdrSldyZGlaZUNDSzhLZmZFbUIxcWpHcUg2NzRfMG9LVUlOcV91QmRVQjg3eVF3akpYZWgxeUxxeENRTGd0bTI4Z3p1Sm9VVUk1a3ItYVVrMWFyeENNUnpNamZOdWRMcWYyMnh1UUFxejl3d2lFLUdCWFNaUHk3czR1elowaGdOT09MNlQwRnExeEFIaFJqaHpjMnJVRTRTemwySl9IR2duYXI2WUZ3UmVrNm43UQ?oc=5",
+      "published_at": "2026-09-21T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "AI Safety: Governor Hochul Announces Next Steps to Regulate Major AI Developers and Protect New Yorkers Governor Kathy Hochul (.gov)",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPQnpZVEdCWnVtN1h0VmdrSldyZGlaZUNDSzhLZmZFbUIxcWpHcUg2NzRfMG9LVUlOcV91QmRVQjg3eVF3akpYZWgxeUxxeENRTGd0bTI4Z3p1Sm9VVUk1a3ItYVVrMWFyeENNUnpNamZOdWRMcWYyMnh1UUFxejl3d2lFLUdCWFNaUHk3czR1elowaGdOT09MNlQwRnExeEFIaFJqaHpjMnJVRTRTemwySl9IR2duYXI2WUZ3UmVrNm43UQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AI Safety: Governor Hochul Announces Next Steps to Regulate Major AI Developers and Protect New Yorkers Governor Kathy Hochul (.gov)"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "38a3890572654baf",
       "kind": "article",
       "title": "Republican and Democratic states defy Trump on AI regulation",
@@ -5440,45 +5457,6 @@
         {
           "title": "内容概览",
           "body": "Why AI safety requires more than industry self-regulation Brookings"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "f6aad57c25ea036e",
-      "kind": "article",
-      "title": "Countries must increase AI regulation to avoid ‘existential risks’: Türk",
-      "source": "news.un.org",
-      "source_url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE81Y1VTV1lsWHpFbFVwSWJlYlQzZV9jbGVPTW5VYk9Wekd2ajJDNHVQSkhFbU5xTjR1cEFXcmJfaHZEczZtM0RYSXRtcXVDSkZJb29GS0dJZw?oc=5",
-      "published_at": "2026-09-14T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Countries must increase AI regulation to avoid ‘existential risks’: Türk news.un.org",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE81Y1VTV1lsWHpFbFVwSWJlYlQzZV9jbGVPTW5VYk9Wekd2ajJDNHVQSkhFbU5xTjR1cEFXcmJfaHZEczZtM0RYSXRtcXVDSkZJb29GS0dJZw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Countries must increase AI regulation to avoid ‘existential risks’: Türk news.un.org"
         },
         {
           "title": "公开页面要点",
