@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-07T23:03:04Z",
+  "generated_at": "2026-10-08T05:59:12Z",
   "item_count": 129,
   "category_counts": {
     "research": 20,
@@ -68,6 +68,12 @@
       "note": ""
     },
     {
+      "name": "NVIDIA AI",
+      "status": "ok",
+      "count": 6,
+      "note": ""
+    },
+    {
       "name": "OpenAI",
       "status": "ok",
       "count": 9,
@@ -75,24 +81,18 @@
     },
     {
       "name": "Google DeepMind",
-      "status": "ok",
-      "count": 8,
-      "note": ""
+      "status": "error",
+      "count": 0,
+      "note": "not well-formed (invalid token): line 1, column 0"
     },
     {
-      "name": "NVIDIA AI",
-      "status": "ok",
-      "count": 6,
-      "note": ""
-    },
-    {
-      "name": "Hugging Face",
+      "name": "Google AI",
       "status": "ok",
       "count": 7,
       "note": ""
     },
     {
-      "name": "Google AI",
+      "name": "Hugging Face",
       "status": "ok",
       "count": 7,
       "note": ""
@@ -104,9 +104,9 @@
       "note": ""
     },
     {
-      "name": "Microsoft Research",
+      "name": "World Model Founders",
       "status": "ok",
-      "count": 6,
+      "count": 7,
       "note": ""
     },
     {
@@ -116,21 +116,15 @@
       "note": ""
     },
     {
-      "name": "World Model Founders",
-      "status": "ok",
-      "count": 7,
-      "note": ""
-    },
-    {
       "name": "AI for Biology, Medicine & Materials",
       "status": "ok",
       "count": 12,
       "note": ""
     },
     {
-      "name": "Anthropic",
+      "name": "Microsoft Research",
       "status": "ok",
-      "count": 8,
+      "count": 6,
       "note": ""
     },
     {
@@ -140,9 +134,9 @@
       "note": ""
     },
     {
-      "name": "China AI · Tencent & ByteDance",
+      "name": "Anthropic",
       "status": "ok",
-      "count": 10,
+      "count": 8,
       "note": ""
     },
     {
@@ -152,9 +146,21 @@
       "note": ""
     },
     {
+      "name": "Open Source AI Monitor",
+      "status": "ok",
+      "count": 8,
+      "note": ""
+    },
+    {
       "name": "Frontier Lab Monitor",
       "status": "ok",
       "count": 9,
+      "note": ""
+    },
+    {
+      "name": "China AI · Tencent & ByteDance",
+      "status": "ok",
+      "count": 10,
       "note": ""
     },
     {
@@ -170,19 +176,13 @@
       "note": ""
     },
     {
-      "name": "Core AI Researchers on X",
+      "name": "Frontier Leaders on X",
       "status": "ok",
       "count": 10,
       "note": ""
     },
     {
-      "name": "Open Source AI Monitor",
-      "status": "ok",
-      "count": 8,
-      "note": ""
-    },
-    {
-      "name": "Frontier Leaders on X",
+      "name": "Core AI Researchers on X",
       "status": "ok",
       "count": 10,
       "note": ""
@@ -282,24 +282,6 @@
       "reader_url": "./reader.html?id=unit-distance-openai-20260520",
       "reader_status": "open-pdf-cached",
       "cached_pdf": "./papers/unit-distance-openai-20260520.pdf"
-    },
-    {
-      "id": "51e2daa9cd8a3deb",
-      "category": "impact",
-      "title": "SynthID Bio: Watermarking methods for synthetic biology",
-      "summary": "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
-      "source": "Google DeepMind",
-      "url": "https://deepmind.google/blog/introducing-synthid-bio/",
-      "published_at": "2026-09-30T15:03:07Z",
-      "tags": [
-        "DeepMind",
-        "Official"
-      ],
-      "importance": 105,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=51e2daa9cd8a3deb",
-      "reader_status": "public-page-excerpt"
     },
     {
       "id": "e6243056d8ce3efa",
@@ -438,24 +420,6 @@
       "reader_status": "summary-only"
     },
     {
-      "id": "54713a52025800f2",
-      "category": "frontier",
-      "title": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
-      "summary": "Introducing EmbeddingGemma 2, an open multimodal embedding model optimized for privacy-first use cases",
-      "source": "Google DeepMind",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=",
-      "published_at": "2026-10-06T19:57:04Z",
-      "tags": [
-        "DeepMind",
-        "Official"
-      ],
-      "importance": 100,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=54713a52025800f2",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "ecf45a9e2812fa21",
       "category": "frontier",
       "title": "Expanding the Cyber Verification Program",
@@ -528,42 +492,6 @@
       "reader_status": "summary-only"
     },
     {
-      "id": "e8fdac9148eaf90c",
-      "category": "frontier",
-      "title": "Our approach to EU text provenance rules",
-      "summary": "How OpenAI is approaching text watermarking under EU rules. Learn where watermarks apply, how detection works, and why access starts with researchers.",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/eu-text-provenance",
-      "published_at": "2026-10-05T15:00:00Z",
-      "tags": [
-        "OpenAI",
-        "Official"
-      ],
-      "importance": 100,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=e8fdac9148eaf90c",
-      "reader_status": "summary-only"
-    },
-    {
-      "id": "69a6dff164ab81f4",
-      "category": "impact",
-      "title": "AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome",
-      "summary": "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome.",
-      "source": "Google DeepMind",
-      "url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
-      "published_at": "2026-09-08T14:00:15Z",
-      "tags": [
-        "DeepMind",
-        "Official"
-      ],
-      "importance": 100,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=69a6dff164ab81f4",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "rhb-icml-2026",
       "category": "research",
       "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
@@ -587,6 +515,24 @@
       "reader_url": "./reader.html?id=rhb-icml-2026",
       "reader_status": "open-pdf-cached",
       "cached_pdf": "./papers/rhb-icml-2026.pdf"
+    },
+    {
+      "id": "e8fdac9148eaf90c",
+      "category": "frontier",
+      "title": "Our approach to EU text provenance rules",
+      "summary": "How OpenAI is approaching text watermarking under EU rules. Learn where watermarks apply, how detection works, and why access starts with researchers.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/eu-text-provenance",
+      "published_at": "2026-10-05T15:00:00Z",
+      "tags": [
+        "OpenAI",
+        "Official"
+      ],
+      "importance": 99,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=e8fdac9148eaf90c",
+      "reader_status": "summary-only"
     },
     {
       "id": "85e0e863eca26a38",
@@ -661,24 +607,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "0908094c99521e7b",
-      "category": "frontier",
-      "title": "Gemini 4 Argon: our next era of frontier intelligence",
-      "summary": "Announcing Gemini 4 Argon, our frontier model for real-world coding, enterprise knowledge work, and cyber defense, rolling out soon.",
-      "source": "Google DeepMind",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=",
-      "published_at": "2026-09-30T20:01:45Z",
-      "tags": [
-        "DeepMind",
-        "Official"
-      ],
-      "importance": 99,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=0908094c99521e7b",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "37f19c3df3522f9e",
       "category": "frontier",
       "title": "Can we predict the jobs robots will do?",
@@ -690,7 +618,7 @@
         "Anthropic",
         "Research"
       ],
-      "importance": 99,
+      "importance": 98,
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=37f19c3df3522f9e",
@@ -732,6 +660,24 @@
       "verification": "官方实验报告 · 含可量化结果",
       "reader_url": "./reader.html?id=gpt5-protein-synthesis-20260205",
       "reader_status": "summary-only"
+    },
+    {
+      "id": "2d52ed2f0b86aafa",
+      "category": "frontier",
+      "title": "Claude discovers a novel enzyme system",
+      "summary": "In early results from our new life sciences research lab, Claude agents found an enzyme system whose function is still unknown.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+      "published_at": "2026-09-23T16:06:00Z",
+      "tags": [
+        "Anthropic",
+        "Official"
+      ],
+      "importance": 97,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=2d52ed2f0b86aafa",
+      "reader_status": "public-page-excerpt"
     },
     {
       "id": "fe629533b5192881",
@@ -1054,6 +1000,24 @@
       "reader_status": "abstract-only"
     },
     {
+      "id": "17793b3b779ac709",
+      "category": "frontier",
+      "title": "Introducing the Life Sciences Verification Program",
+      "summary": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/life-sciences-verification-program",
+      "published_at": "2026-09-17T15:56:00Z",
+      "tags": [
+        "Anthropic",
+        "Official"
+      ],
+      "importance": 96,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=17793b3b779ac709",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "0e457667321a0cd1",
       "category": "research",
       "title": "Know Your Qubits, Know Your Users: Personas for Quantum Software",
@@ -1219,6 +1183,25 @@
       "content_kind": "social",
       "verification": "创始人官方账号原帖 · 需结合仓库核对",
       "reader_url": "./reader.html?id=elon-grok-build-open-source-20260716",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "be2e725bcbb6f162",
+      "category": "impact",
+      "title": "Solving Math’s Greatest Problems Was an Art Form. Then Came AI",
+      "summary": "Solving Math’s Greatest Problems Was an Art Form. Then Came AI WIRED",
+      "source": "WIRED",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQMFFabTBzcEZabHVpV1hLR1FweVZodG5RWW5fck05QnlKRUxGNUxRaVp3bVBCWFVtVTVETktvdTJJWjJOMENZdUFVNDI0dzEyTEhTT3Zkb2otYTZ5cFowM0o1bVVNckJzVGdvbVN2WVdpQlFCVnRUdnRBVFF6aEYyaFVWZDl1a1pMQTlTNjdR?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-28T07:00:00Z",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "importance": 94,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=be2e725bcbb6f162",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -1596,25 +1579,6 @@
       "reader_status": "indexed-summary"
     },
     {
-      "id": "1a54cee0659df5fd",
-      "category": "impact",
-      "title": "A.I. Agents as ‘Co-Scientists’? This Lab Says They Could Speed Drug Research.",
-      "summary": "A.I. Agents as ‘Co-Scientists’? This Lab Says They Could Speed Drug Research. The New York Times",
-      "source": "The New York Times",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE04Y1duQm4tLXBXNUc2UHRJLVVYbVhXUGpjSWF5ZFNMa0txcTFMYXNrY29FblVrbWR3Q1pHYl8ydVB0cWhEb1VWRFlXUWt1Z2xzaGk2M25EY0JXN29HaDVsQTRremdUZEs4cExwMG1RRHJ0Rkp1bmIxUlAwUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-09-21T07:00:00Z",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "importance": 93,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=1a54cee0659df5fd",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "9597b6bcc54c2be5",
       "category": "bigtech",
       "title": "The latest AI news we announced in September 2026",
@@ -1630,24 +1594,6 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=9597b6bcc54c2be5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "1da087393d52a2d2",
-      "category": "bigtech",
-      "title": "Forecasting space weather risks on power grids",
-      "summary": "Extreme space-weather events can damage power systems on Earth and degrade GPS accuracy and satellite operations. A new machine learning system can predict where damage is likely to occur 30-60 minutes before a storm arrives. The post Forecasting space weather risks on power grids appeared first on Microsoft Research .",
-      "source": "Microsoft Research",
-      "url": "https://www.microsoft.com/en-us/research/blog/forecasting-space-weather-risks-on-power-grids/",
-      "published_at": "2026-09-30T16:00:00Z",
-      "tags": [
-        "Microsoft",
-        "Research"
-      ],
-      "importance": 92,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=1da087393d52a2d2",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -1705,6 +1651,24 @@
       "content_kind": "social",
       "verification": "实验室负责人官方账号长文",
       "reader_url": "./reader.html?id=demis-frontier-ai-framework-20260714",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "1da087393d52a2d2",
+      "category": "bigtech",
+      "title": "Forecasting space weather risks on power grids",
+      "summary": "Extreme space-weather events can damage power systems on Earth and degrade GPS accuracy and satellite operations. A new machine learning system can predict where damage is likely to occur 30-60 minutes before a storm arrives. The post Forecasting space weather risks on power grids appeared first on Microsoft Research .",
+      "source": "Microsoft Research",
+      "url": "https://www.microsoft.com/en-us/research/blog/forecasting-space-weather-risks-on-power-grids/",
+      "published_at": "2026-09-30T16:00:00Z",
+      "tags": [
+        "Microsoft",
+        "Research"
+      ],
+      "importance": 91,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=1da087393d52a2d2",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2039,6 +2003,25 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "e100ac1e89d33b65",
+      "category": "impact",
+      "title": "A sceptical guide to AI agents in drug discovery",
+      "summary": "A sceptical guide to AI agents in drug discovery Drug Target Review",
+      "source": "Drug Target Review",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPS1h1WmdfenRoX2ljWmlBcC1NRjdrb3RYNzY4V0doc1FCd3BHRXdIX1FtQVEwV3ZQS0hlX19iekQxMGRsTnZHY2hBSGJxZWFWTVBkNzVTVnRTOE16dGY3aDQzbGFCLUlVcEZhY19ReFFvbDJrZHBDY0dEZUpua1dPTlFkandEckhjN3I1N0UzcW9WM1RmMHdqYXJnb2s2MTlNMmRJYw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-02T08:30:00Z",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "importance": 87,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=e100ac1e89d33b65",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "f3f78422f0eb2a11",
       "category": "opensource",
       "title": "AutoSynthData: Generating Training Data for Enterprise Agents",
@@ -2054,6 +2037,25 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=f3f78422f0eb2a11",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "5bf61d883c477a6c",
+      "category": "impact",
+      "title": "AI makes its first meaningful breakthrough in theoretical physics",
+      "summary": "AI makes its first meaningful breakthrough in theoretical physics Big Think",
+      "source": "Big Think",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPc2lkREEwbGpIN1lZbkRsOHZGRWljTFl6V0liMjRPRjZHMTdXWE4tbUpLUUpndko5TG9pNzRDY0I5VjkydWNrLTJsMTIxaVpNdFA4dnhyZ3l1YnIzQ3Vaa0V0ZTJVNGlHZlBOcjZYb2xBaWRoLUZLaWFCRkJlSkFTR1dqcEVyZ3lKaGc?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-30T06:00:00Z",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "importance": 86,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=5bf61d883c477a6c",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2169,24 +2171,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "d8970e7c784b2f35",
-      "category": "startups",
-      "title": "Anthropic's path from AI startup to industry-defining IPO",
-      "summary": "Anthropic's path from AI startup to industry-defining IPO Reuters",
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNX052MC1jLUZIY3dvZFMzWmdrMnFTa1RFWjJkUlhtV0dlZkV2NS1ocnRFbkUyRHJtQVE4clRJdUZsVVk0MHF3Y2oyUVVRczhGcGl5dlVxdGlfSTFTOUNlSTZLR2U0VmdsckhFLVpwLUlyOXUweUF6c0xvci1rY1RpdjVJV0NPeDNxWjMxRmpsa1VHUElRaGdNOXBwaw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-09-29T17:15:57Z",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "importance": 85,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=d8970e7c784b2f35",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "e53e3f6c06a7c12a",
       "category": "startups",
       "title": "AMD to Buy Fei-Fei Li’s World Labs AI Startup for $8.2 Billion",
@@ -2262,22 +2246,22 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "d6395e66ef88e335",
+      "id": "d8bdedb028330d59",
       "category": "voices",
-      "title": "The most important thing we can apply AI to is improving medicine and human health - very excited about this partnership with the CZI and the Virtual Biology Initiative!",
-      "summary": "The most important thing we can apply AI to is improving medicine and human health - very excited about this partnership with the CZI and the Virtual Biology Initiative! X",
+      "title": "LLMs have crossed an important threshold: surpassing top human experts on some research problems. Capabilities have been steadily improving for years, but in scientific discovery there is a big difference between a model just below top human performance",
+      "summary": "LLMs have crossed an important threshold: surpassing top human experts on some research problems. Capabilities have been steadily improving for years, but in scientific discovery there is a big difference between a model just below top human performance X",
       "source": "X",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE56cmxWSWpYNTFfdC1UT2ZsOWl4QzlwcjN1WDNUb3lPb1FSRlhDUlM0cE9XamFRVWdnYkloeWxFRDZ2Um02TEpXOFBlVDBZNkotdS1lY0xKVnJqbG9Kc21YTlcyTWI?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-07T15:53:07Z",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8wNEZVbUx6Uy1tVVpfRF9LU3hHX0FaUWhTSHh6eXU0Yk1HT0c4TTkxQ3Y2aG9ac0NUYWVnc1NmOHdiSVFmdGptV050OVlkVmFXdkJaVlU1T2VfMWo1eFVSZzVB?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-07T21:32:28Z",
       "tags": [
         "X",
-        "Founder Watch",
+        "Researcher Watch",
         "First-party Post"
       ],
       "importance": 80,
       "content_kind": "social",
       "verification": "公开平台索引，需查看原帖",
-      "reader_url": "./reader.html?id=d6395e66ef88e335",
+      "reader_url": "./reader.html?id=d8bdedb028330d59",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2361,13 +2345,31 @@
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZ0hQeXM3LUdQR2xCTThQOUZETzNEWk04U25CS0VkNjlrTU15allNdTh4eGFvV1hfdVpvYXRlRk9MZnFnWUhLYTRzVjNzclZDMVgtVFBKSTRMZXZzcEVURXJwSVBTN2JjZHQ3cFNvbjdGckdiU1k5YUNmeE05RGdXR3BTUjZPcEVpOGNoUkpnMVFJNmNxZVRfc1hlU3VnZGtzREFybG5B?oc=5&hl=en-US&gl=US&ceid=US:en",
       "published_at": "2026-09-29T21:14:49Z",
       "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "importance": 77,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=d9704d4940c3cc02",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "5af5e10deef61fc6",
+      "category": "startups",
+      "title": "AMD to Acquire World Labs for $8.2 Billion",
+      "summary": "AMD to Acquire World Labs for $8.2 Billion WSJ",
+      "source": "WSJ",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQLVpVcHpJVVFBektEcldpS0ttVXk1a2dkR0kzZEtUNmp3d1hQNzVEb3NOZVhEc1piQmtIYlI3WF9QUExkT2R3TW9tOW1ZZ0RpSGdELWxBbVRldmYtRmNUQjRxWjdZeS1RZnVvNFhvbU9pQzFfd2RyXzYxMnR4X3RpNFlBUzU?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-28T07:00:00Z",
+      "tags": [
         "Academic Startup",
         "Funding"
       ],
       "importance": 77,
       "content_kind": "article",
       "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=d9704d4940c3cc02",
+      "reader_url": "./reader.html?id=5af5e10deef61fc6",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2544,7 +2546,7 @@
         "Policy",
         "Safety"
       ],
-      "importance": 72,
+      "importance": 71,
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=abeace7bd5c44e0e",
@@ -2562,7 +2564,7 @@
         "Policy",
         "Safety"
       ],
-      "importance": 72,
+      "importance": 71,
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=54eda87f4240739f",
@@ -2634,7 +2636,7 @@
         "Policy",
         "Safety"
       ],
-      "importance": 71,
+      "importance": 70,
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=8672cda64b08a62d",
@@ -2677,24 +2679,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "c7fffead8857f18f",
-      "category": "opensource",
-      "title": "A timeline of developments in AI safety since the attack on Hugging Face",
-      "summary": "A timeline of developments in AI safety since the attack on Hugging Face ABC News - Breaking News, Latest News and Videos",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPS2tOUGI4OFV0XzA4dW1yR0htSDU0RDdDUHI1eXdRSFZJTlBxei1zMnNDTC1HcEpvOEZQcXQ0dEdPNnpmbDd3R3RBVXI4NlM2MGZzaEhSa3ByaHdhQ2trTXZ5RXJCQkdIdEhnNWZXRjJydktldjAwVmhCZGtsTDREM0VwTEhTcVMwdXgyNUpGVk1zUGJpajB6MmN30gGfAUFVX3lxTE9PRnJXSGpCN3EyN0hKXzRxOEh1bTR1T2ttak9QRGt4TFA3Yk1NUGlPMktJcnNZTDdSSm1QMmhFZjVUM182cnZOT1EzYmJlNXhvaFRldDdocEJ0bnNGMVNqNmZBQTVPTDg0LWhSRHhFMzlEM3REWk5LRlBpYXhYakZQMkRPcHoySVNvc3JxQmtNdXM1VTRuMDFpbkc5R1d2bw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-09-30T15:29:46Z",
-      "tags": [
-        "Open Source",
-        "Models & Tools"
-      ],
-      "importance": 69,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=c7fffead8857f18f",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "373eb7f0c38d08dd",
       "category": "policy",
       "title": "AI Safety: Governor Hochul Announces Next Steps to Regulate Major AI Developers and Protect New Yorkers",
@@ -2728,6 +2712,24 @@
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=86c4ef2e9fbdf07c",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "c7fffead8857f18f",
+      "category": "opensource",
+      "title": "A timeline of developments in AI safety since the attack on Hugging Face",
+      "summary": "A timeline of developments in AI safety since the attack on Hugging Face ABC News - Breaking News, Latest News and Videos",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPS2tOUGI4OFV0XzA4dW1yR0htSDU0RDdDUHI1eXdRSFZJTlBxei1zMnNDTC1HcEpvOEZQcXQ0dEdPNnpmbDd3R3RBVXI4NlM2MGZzaEhSa3ByaHdhQ2trTXZ5RXJCQkdIdEhnNWZXRjJydktldjAwVmhCZGtsTDREM0VwTEhTcVMwdXgyNUpGVk1zUGJpajB6MmN30gGfAUFVX3lxTE9PRnJXSGpCN3EyN0hKXzRxOEh1bTR1T2ttak9QRGt4TFA3Yk1NUGlPMktJcnNZTDdSSm1QMmhFZjVUM182cnZOT1EzYmJlNXhvaFRldDdocEJ0bnNGMVNqNmZBQTVPTDg0LWhSRHhFMzlEM3REWk5LRlBpYXhYakZQMkRPcHoySVNvc3JxQmtNdXM1VTRuMDFpbkc5R1d2bw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-30T15:29:46Z",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "importance": 68,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=c7fffead8857f18f",
       "reader_status": "public-page-excerpt"
     },
     {
