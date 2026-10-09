@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-09T13:12:41Z",
+  "generated_at": "2026-10-09T22:35:45Z",
   "item_count": 129,
   "category_counts": {
     "research": 20,
@@ -45,7 +45,7 @@
       "字节豆包 / Seed": 1
     },
     "people_watch_coverage": {
-      "Elon Musk / xAI": 3,
+      "Elon Musk / xAI": 4,
       "Sam Altman / OpenAI": 1,
       "Dario Amodei / Anthropic": 0,
       "Demis Hassabis / DeepMind": 1,
@@ -54,7 +54,7 @@
       "姚顺雨 / Agents": 1,
       "Ilya Sutskever / SSI": 0,
       "Andrej Karpathy / Eureka Labs": 0,
-      "李飞飞 / Stanford·World Labs": 7,
+      "李飞飞 / Stanford·World Labs": 6,
       "Noam Brown / Reasoning": 0,
       "梁文锋 / DeepSeek": 0,
       "杨植麟 / 月之暗面": 0
@@ -74,7 +74,19 @@
       "note": ""
     },
     {
+      "name": "Google DeepMind",
+      "status": "ok",
+      "count": 8,
+      "note": ""
+    },
+    {
       "name": "Hugging Face",
+      "status": "ok",
+      "count": 7,
+      "note": ""
+    },
+    {
+      "name": "Google AI",
       "status": "ok",
       "count": 7,
       "note": ""
@@ -86,39 +98,21 @@
       "note": ""
     },
     {
-      "name": "Google DeepMind",
-      "status": "error",
-      "count": 0,
-      "note": "not well-formed (invalid token): line 1, column 0"
-    },
-    {
-      "name": "Google AI",
+      "name": "Academic Startup Radar",
       "status": "ok",
-      "count": 7,
+      "count": 10,
       "note": ""
     },
     {
-      "name": "OpenAlex Conference Index",
+      "name": "AI for Mathematics & Science",
       "status": "ok",
-      "count": 20,
+      "count": 12,
       "note": ""
     },
     {
       "name": "Anthropic",
       "status": "ok",
       "count": 8,
-      "note": ""
-    },
-    {
-      "name": "Microsoft Research",
-      "status": "ok",
-      "count": 6,
-      "note": ""
-    },
-    {
-      "name": "Academic Startup Radar",
-      "status": "ok",
-      "count": 10,
       "note": ""
     },
     {
@@ -134,25 +128,19 @@
       "note": ""
     },
     {
-      "name": "AI for Mathematics & Science",
+      "name": "OpenAlex Conference Index",
       "status": "ok",
-      "count": 12,
+      "count": 20,
       "note": ""
     },
     {
-      "name": "China AI · Tencent & ByteDance",
+      "name": "AI Policy Monitor",
       "status": "ok",
       "count": 10,
       "note": ""
     },
     {
-      "name": "Open Source AI Monitor",
-      "status": "ok",
-      "count": 8,
-      "note": ""
-    },
-    {
-      "name": "AI Policy Monitor",
+      "name": "China AI · Tencent & ByteDance",
       "status": "ok",
       "count": 10,
       "note": ""
@@ -164,7 +152,13 @@
       "note": ""
     },
     {
-      "name": "Frontier Leaders on X",
+      "name": "Open Source AI Monitor",
+      "status": "ok",
+      "count": 8,
+      "note": ""
+    },
+    {
+      "name": "China AI · DeepSeek & Zhipu",
       "status": "ok",
       "count": 10,
       "note": ""
@@ -182,21 +176,21 @@
       "note": ""
     },
     {
-      "name": "China AI · DeepSeek & Zhipu",
+      "name": "Frontier Leaders on X",
       "status": "ok",
       "count": 10,
-      "note": ""
-    },
-    {
-      "name": "Agent & Reasoning Researchers",
-      "status": "ok",
-      "count": 9,
       "note": ""
     },
     {
       "name": "China AI Social Monitor",
       "status": "ok",
       "count": 2,
+      "note": ""
+    },
+    {
+      "name": "Agent & Reasoning Researchers",
+      "status": "ok",
+      "count": 9,
       "note": ""
     },
     {
@@ -209,6 +203,12 @@
       "name": "Foundation Model Pioneers",
       "status": "ok",
       "count": 9,
+      "note": ""
+    },
+    {
+      "name": "Microsoft Research",
+      "status": "ok",
+      "count": 6,
       "note": ""
     },
     {
@@ -282,6 +282,24 @@
       "reader_url": "./reader.html?id=unit-distance-openai-20260520",
       "reader_status": "open-pdf-cached",
       "cached_pdf": "./papers/unit-distance-openai-20260520.pdf"
+    },
+    {
+      "id": "51e2daa9cd8a3deb",
+      "category": "impact",
+      "title": "Introducing SynthID Bio",
+      "summary": "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
+      "source": "Google DeepMind",
+      "url": "https://deepmind.google/blog/introducing-synthid-bio/",
+      "published_at": "2026-09-30T15:03:07Z",
+      "tags": [
+        "DeepMind",
+        "Official"
+      ],
+      "importance": 104,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=51e2daa9cd8a3deb",
+      "reader_status": "summary-only"
     },
     {
       "id": "e6243056d8ce3efa",
@@ -366,6 +384,24 @@
       "cached_pdf": "./papers/bace-gecco-2026.pdf"
     },
     {
+      "id": "f068371581270ef5",
+      "category": "frontier",
+      "title": "Investigating unintended model actions in our evaluations and internal use",
+      "summary": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+      "published_at": "2026-10-09T16:09:00Z",
+      "tags": [
+        "Anthropic",
+        "Research"
+      ],
+      "importance": 100,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=f068371581270ef5",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "a2b657e034b69cdc",
       "category": "frontier",
       "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
@@ -381,6 +417,24 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=a2b657e034b69cdc",
+      "reader_status": "summary-only"
+    },
+    {
+      "id": "4e88a37aba8c6b03",
+      "category": "frontier",
+      "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+      "summary": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more capable models.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/asana-browser-agent",
+      "published_at": "2026-10-09T07:00:00Z",
+      "tags": [
+        "OpenAI",
+        "Official"
+      ],
+      "importance": 100,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=4e88a37aba8c6b03",
       "reader_status": "summary-only"
     },
     {
@@ -546,21 +600,21 @@
       "reader_status": "summary-only"
     },
     {
-      "id": "2fbb325332f4b06c",
-      "category": "frontier",
-      "title": "Radisson Hotel Group brings hotel discovery into ChatGPT",
-      "summary": "Radisson partnered with Accenture to build a ChatGPT plugin using OpenAI technology, helping travelers find, compare, and book hotels while planning their trips.",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/radisson",
-      "published_at": "2026-10-07T07:00:00Z",
+      "id": "69a6dff164ab81f4",
+      "category": "impact",
+      "title": "AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome",
+      "summary": "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome.",
+      "source": "Google DeepMind",
+      "url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
+      "published_at": "2026-09-08T14:00:15Z",
       "tags": [
-        "OpenAI",
+        "DeepMind",
         "Official"
       ],
       "importance": 100,
       "content_kind": "article",
       "verification": "官方来源",
-      "reader_url": "./reader.html?id=2fbb325332f4b06c",
+      "reader_url": "./reader.html?id=69a6dff164ab81f4",
       "reader_status": "summary-only"
     },
     {
@@ -589,6 +643,24 @@
       "cached_pdf": "./papers/rhb-icml-2026.pdf"
     },
     {
+      "id": "2fbb325332f4b06c",
+      "category": "frontier",
+      "title": "Radisson Hotel Group brings hotel discovery into ChatGPT",
+      "summary": "Radisson partnered with Accenture to build a ChatGPT plugin using OpenAI technology, helping travelers find, compare, and book hotels while planning their trips.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/radisson",
+      "published_at": "2026-10-07T07:00:00Z",
+      "tags": [
+        "OpenAI",
+        "Official"
+      ],
+      "importance": 99,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=2fbb325332f4b06c",
+      "reader_status": "summary-only"
+    },
+    {
       "id": "37390670fe9b1d60",
       "category": "frontier",
       "title": "GPT-6 and Intelligent UI for everyone",
@@ -607,57 +679,39 @@
       "reader_status": "summary-only"
     },
     {
-      "id": "ecf45a9e2812fa21",
+      "id": "54713a52025800f2",
       "category": "frontier",
-      "title": "Expanding the Cyber Verification Program",
-      "summary": "We’re launching a new, expanded version of our Cyber Verification Program (CVP), which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/news/cyber-verification-program",
-      "published_at": "2026-10-06T19:00:00Z",
+      "title": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
+      "summary": "Introducing EmbeddingGemma 2, an open multimodal embedding model optimized for privacy-first use cases",
+      "source": "Google DeepMind",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=",
+      "published_at": "2026-10-06T19:57:04Z",
       "tags": [
-        "Anthropic",
+        "DeepMind",
         "Official"
       ],
       "importance": 99,
       "content_kind": "article",
       "verification": "官方来源",
-      "reader_url": "./reader.html?id=ecf45a9e2812fa21",
+      "reader_url": "./reader.html?id=54713a52025800f2",
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "5165d8b7b8857618",
+      "id": "0908094c99521e7b",
       "category": "frontier",
-      "title": "How Jump Trading is scaling quant research with ChatGPT",
-      "summary": "Jump Trading uses OpenAI to expand quantitative research. See how longer-running AI workflows combine multiple data sources with human review.",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/jump-trading",
-      "published_at": "2026-10-06T12:00:00Z",
+      "title": "Gemini 4 Argon: our next era of frontier intelligence",
+      "summary": "Announcing Gemini 4 Argon, our frontier model for real-world coding, enterprise knowledge work, and cyber defense, rolling out soon.",
+      "source": "Google DeepMind",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=",
+      "published_at": "2026-09-30T20:01:45Z",
       "tags": [
-        "OpenAI",
+        "DeepMind",
         "Official"
-      ],
-      "importance": 99,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=5165d8b7b8857618",
-      "reader_status": "summary-only"
-    },
-    {
-      "id": "29e0751f39b00999",
-      "category": "frontier",
-      "title": "What do you want from AI?",
-      "summary": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/research/your-thoughts-on-ai",
-      "published_at": "2026-09-29T16:39:00Z",
-      "tags": [
-        "Anthropic",
-        "Research"
       ],
       "importance": 98,
       "content_kind": "article",
       "verification": "官方来源",
-      "reader_url": "./reader.html?id=29e0751f39b00999",
+      "reader_url": "./reader.html?id=0908094c99521e7b",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -678,24 +732,6 @@
       "verification": "官方实验报告 · 含可量化结果",
       "reader_url": "./reader.html?id=gpt5-protein-synthesis-20260205",
       "reader_status": "summary-only"
-    },
-    {
-      "id": "2d52ed2f0b86aafa",
-      "category": "frontier",
-      "title": "Claude discovers a novel enzyme system",
-      "summary": "In early results from our new life sciences research lab, Claude agents found an enzyme system whose function is still unknown.",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
-      "published_at": "2026-09-23T16:06:00Z",
-      "tags": [
-        "Anthropic",
-        "Official"
-      ],
-      "importance": 97,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=2d52ed2f0b86aafa",
-      "reader_status": "public-page-excerpt"
     },
     {
       "id": "42834d39dc21a5d0",
@@ -723,7 +759,7 @@
       "summary": "‘Breathtaking,’ ‘Devastating’: Mathematics Reels After New OpenAI Release The New York Times",
       "source": "The New York Times",
       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPODBqdjFtSkFGUTZYd2w1WlRnaWFfX3NiWDJ4OXgzdGozcV94WFV1T2JWY0lrekg2ZGR6Sk1wMGtNMzNDeXFmdnc2Zl9zTk0zMDhCLXMyYUFVSjRVNk1CTkF2Y2h2VF9HRVZvV2xfRkpiUTJsQUlNV0ZnaFBTWGxJUW5mbkVEdjVuQ25HMHV3?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-09T02:27:43Z",
+      "published_at": "2026-10-08T21:56:33Z",
       "tags": [
         "AI for Science",
         "Mathematics",
@@ -1239,25 +1275,6 @@
       "reader_status": "abstract-only"
     },
     {
-      "id": "6e3f7e8709b0cdf5",
-      "category": "impact",
-      "title": "All the drama around AI’s takeover of mathematics",
-      "summary": "All the drama around AI’s takeover of mathematics The Verge",
-      "source": "The Verge",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOXzNEckh1SXVQTGtqbTI4OXRuaHRPc25iV1NtSUxGdUUwZG9oOFM1NzRoNmpzMjRMeFFvRDZHbzVtTW1JWU5UcjZkS0ZiUVphNVdUNW5wbHdxRlkyYjFhQTZnY1BWSE5rWHJ5anNzWnZLZzQyOEpPY3FoWUl3SUY1RFkxSEdZYmsyc3AxZGk1RDljLVJmUlNpdm8taHI?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-06T23:26:38Z",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "importance": 95,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=6e3f7e8709b0cdf5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "elon-grok-build-open-source-20260716",
       "category": "voices",
       "title": "Elon Musk 宣布 Grok Build 开源",
@@ -1274,25 +1291,6 @@
       "content_kind": "social",
       "verification": "创始人官方账号原帖 · 需结合仓库核对",
       "reader_url": "./reader.html?id=elon-grok-build-open-source-20260716",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "56bcd61aff13d689",
-      "category": "impact",
-      "title": "Did Anthropic’s A.I. Really Make a Scientific Discovery on Its Own?",
-      "summary": "Did Anthropic’s A.I. Really Make a Scientific Discovery on Its Own? The New York Times",
-      "source": "The New York Times",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQREYyMjZVV2F2QllnOVpLTnc4WWR3OGphX3A5WlJRTjhUTEROU0FIb2h0Wkgzb0h1VWRqNnhaUFlkdHRQb0dpXzFVeFlrZVVBcjQ5RzRPVW00MXNmdEV2LVNnRE00TkVZSTdaenhyNE9BOE9GdjlyTUZfeVlMa1JhYlZmNkxIUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-09-27T07:00:00Z",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "importance": 94,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=56bcd61aff13d689",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -1652,6 +1650,25 @@
       "reader_status": "indexed-summary"
     },
     {
+      "id": "56bcd61aff13d689",
+      "category": "impact",
+      "title": "Did Anthropic’s A.I. Really Make a Scientific Discovery on Its Own?",
+      "summary": "Did Anthropic’s A.I. Really Make a Scientific Discovery on Its Own? The New York Times",
+      "source": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQREYyMjZVV2F2QllnOVpLTnc4WWR3OGphX3A5WlJRTjhUTEROU0FIb2h0Wkgzb0h1VWRqNnhaUFlkdHRQb0dpXzFVeFlrZVVBcjQ5RzRPVW00MXNmdEV2LVNnRE00TkVZSTdaenhyNE9BOE9GdjlyTUZfeVlMa1JhYlZmNkxIUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-27T07:00:00Z",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "importance": 93,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=56bcd61aff13d689",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "4245445afae80a9b",
       "category": "bigtech",
       "title": "What AI gets wrong and what failure teaches us - Microsoft Research",
@@ -1704,25 +1721,6 @@
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=3cb8bc319ea7e4e6",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "37db2441d5a89592",
-      "category": "impact",
-      "title": "Medical AI has a proof problem",
-      "summary": "Medical AI has a proof problem Financial Times",
-      "source": "Financial Times",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOZHh1OXRja21yY1BGU0pacGhEQTEtOV9yOWFJbGpkbHpzZlhrNlN3MTNBeVR3SG5EdEktVzVJVEw3WUx6WDF4SGJjZTJxV21XRzF1RUVjUE9ERUQ0QjRmOWhTdXZLMFRLSGFCeDVGTVFOQ3dYdkNFRW4zWGlyekRQSEdrd2M?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-09-17T07:00:00Z",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "importance": 92,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=37db2441d5a89592",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -1796,6 +1794,25 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=25c3f7b3a6fe47e8",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "37db2441d5a89592",
+      "category": "impact",
+      "title": "Medical AI has a proof problem",
+      "summary": "Medical AI has a proof problem Financial Times",
+      "source": "Financial Times",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOZHh1OXRja21yY1BGU0pacGhEQTEtOV9yOWFJbGpkbHpzZlhrNlN3MTNBeVR3SG5EdEktVzVJVEw3WUx6WDF4SGJjZTJxV21XRzF1RUVjUE9ERUQ0QjRmOWhTdXZLMFRLSGFCeDVGTVFOQ3dYdkNFRW4zWGlyekRQSEdrd2M?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-17T07:00:00Z",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "importance": 91,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=37db2441d5a89592",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -1905,6 +1922,43 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=8f6c22447e31372e",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "0345c6287016015b",
+      "category": "opensource",
+      "title": "Impactful scheduling for GPU clusters",
+      "summary": "A Blog post by Ai2 on Hugging Face",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/blog/allenai/impactful-scheduling",
+      "published_at": "2026-10-09T15:20:29Z",
+      "tags": [
+        "Hugging Face",
+        "Open Source"
+      ],
+      "importance": 88,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=0345c6287016015b",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "66dc3461ad5f3036",
+      "category": "impact",
+      "title": "OpenAI Just Carpet-Bombed Mathematics",
+      "summary": "OpenAI Just Carpet-Bombed Mathematics The Atlantic",
+      "source": "The Atlantic",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPRUxiMkgzUTRaSkNJN2EwUHR3NVFZdVRua1pVWGhzTy1TMFhEc05BcmoxeThfLWhqMUN2OG11cUthZHpiNXUyYUNVWW03M3JKMVR0c29GbFZ2NG8yV0xlR3dHUWt6T2V1M3VfRklzeXFVbFVBbGxUN1RnbW1jUnJpOVJGZFRMSTA?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-08T19:49:43Z",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "importance": 88,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=66dc3461ad5f3036",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2018,44 +2072,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "e057a9105bce6edb",
-      "category": "impact",
-      "title": "Sharing AI progress in mathematics",
-      "summary": "Sharing AI progress in mathematics OpenAI",
-      "source": "OpenAI",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9HRmFiYm1mWTNPVTVGTk9faFRwRVZyTjhmejJwa0U3QjU3djh5SlpXT3ZhUlF2M0lXcV9jNkNka1kzY3RKNkRTTnpJVW16ZG1QdmdPU3owRXdCYzFLSkdTb3pIZWdJV0k1R3o3dw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-06T22:21:50Z",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "importance": 87,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=e057a9105bce6edb",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "d04d2635f48aadaf",
-      "category": "impact",
-      "title": "OpenAI unleashes hundreds more math results upon a field already in shock",
-      "summary": "OpenAI unleashes hundreds more math results upon a field already in shock Scientific American",
-      "source": "Scientific American",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQRjR5eVp0b2JSd096OGxpOUxaNUFJY2V1NGI5Z0JkU3cwanVZRmYyaTBERlM2YWFMMFd4THVyRko2QXFMMTFCOTNQN2NNS2w2WTFKY3MzUEYtbUY1VW5sb2ljQUp1TVUzdXE5YzJ5bE9qVFYyWERYXzJuREdDbUFlenBBNEJLdTNrUFBLZ1lzYW9qYzYyZ3VOU1M5RkZtNWZjVW1JUVI3S1JZQlRVTm1tX2VQTVJZSGI3?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-06T22:19:00Z",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "importance": 87,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=d04d2635f48aadaf",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "cc7dc71cefd65795",
       "category": "voices",
       "title": "Silicon Valley's AI wunderkind launches Underdog, the most private Instinct/Muse competitor yet",
@@ -2093,24 +2109,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "5caa5e9833bfdc4b",
-      "category": "opensource",
-      "title": "Open-sourcing AstaBrief, the fast report-generation model in Asta",
-      "summary": "A Blog post by Ai2 on Hugging Face",
-      "source": "Hugging Face",
-      "url": "https://huggingface.co/blog/allenai/astabrief",
-      "published_at": "2026-10-02T15:19:50Z",
-      "tags": [
-        "Hugging Face",
-        "Open Source"
-      ],
-      "importance": 87,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=5caa5e9833bfdc4b",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "f3f78422f0eb2a11",
       "category": "opensource",
       "title": "AutoSynthData: Generating Training Data for Enterprise Agents",
@@ -2122,7 +2120,7 @@
         "Hugging Face",
         "Open Source"
       ],
-      "importance": 87,
+      "importance": 86,
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=f3f78422f0eb2a11",
@@ -2186,32 +2184,13 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "3c1e9594a18dc640",
-      "category": "voices",
-      "title": "AMD will acquire Fei-Fei Li’s World Labs for $8.2B",
-      "summary": "AMD will acquire Fei-Fei Li’s World Labs for $8.2B TechCrunch",
-      "source": "TechCrunch",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNS0tBZXRaWkdrX3ptaHVnM1c3V29xbkVmdVRvRGNmUXl1RWNldGR3RS1IbGMtUzY1T3FRYXJwU3czbXBDS1FCSF9CQWN3X2p6akRGVzkyOFgzLWpGOWhGWHhMOXBqanM0a2FhOEUwU1QwbTZFNjV0REN1TDdaMWlYSmxLVGVXanpZV1RDa1lZMUtYbzRE?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-09-28T07:00:00Z",
-      "tags": [
-        "Researcher Watch",
-        "Vision",
-        "World Models"
-      ],
-      "importance": 86,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=3c1e9594a18dc640",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "e53e3f6c06a7c12a",
       "category": "startups",
       "title": "AMD to Buy Fei-Fei Li’s World Labs AI Startup for $8.2 Billion",
       "summary": "AMD to Buy Fei-Fei Li’s World Labs AI Startup for $8.2 Billion Bloomberg.com",
       "source": "Bloomberg.com",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOZW1PMmt1Q2c4TzNIaDNIbEs2TWQ3V0xQc1F6QXpzdHdHalpEWlk5ZlhoYnVHVXlsUGdmRm1Fd05aek1UdGFWT2dTZmFBUk9HZDAtRE85NFEwWXhnaHFqdWdSNzkzbWFMUWRxaDQ1VU4tblBrSFhRYkR3VEltUnhtMlI3dmhkcDE5OEx5T2l3RjZ6amdzVFhyeXE1Z2ZTQ0liUVFlREVzZU52THFDM29XSXpB?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-09-28T20:05:00Z",
+      "published_at": "2026-09-28T07:00:00Z",
       "tags": [
         "Founder Watch",
         "Embodied AI"
@@ -2235,7 +2214,7 @@
         "Vision",
         "World Models"
       ],
-      "importance": 85,
+      "importance": 84,
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=0a95d6d806951f0b",
@@ -2277,6 +2256,25 @@
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=0fb59a55b2837473",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "16531b0a16bd4e13",
+      "category": "voices",
+      "title": "Grok @Bot can now set up its own email",
+      "summary": "Grok @Bot can now set up its own email X",
+      "source": "X",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1sR3dOMEtDMWJXajZlbnV3WkRLM3U4djdFUnBEdXUyb2gxcUtSSjR2Tk9yeGlsazlCc2hCcEdwVm9oS1A2VXdGdTdSQlQ3Nng2LXhpMjlsMmVhOFdEV2c?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-09T17:37:55Z",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "importance": 80,
+      "content_kind": "social",
+      "verification": "公开平台索引，需查看原帖",
+      "reader_url": "./reader.html?id=16531b0a16bd4e13",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2407,13 +2405,13 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "d9704d4940c3cc02",
+      "id": "5af5e10deef61fc6",
       "category": "startups",
-      "title": "AMD acquires World Labs AI startup, upping the ante against Nvidia",
-      "summary": "AMD acquires World Labs AI startup, upping the ante against Nvidia Ars Technica",
-      "source": "Ars Technica",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZ0hQeXM3LUdQR2xCTThQOUZETzNEWk04U25CS0VkNjlrTU15allNdTh4eGFvV1hfdVpvYXRlRk9MZnFnWUhLYTRzVjNzclZDMVgtVFBKSTRMZXZzcEVURXJwSVBTN2JjZHQ3cFNvbjdGckdiU1k5YUNmeE05RGdXR3BTUjZPcEVpOGNoUkpnMVFJNmNxZVRfc1hlU3VnZGtzREFybG5B?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-09-29T21:14:49Z",
+      "title": "AMD to Acquire World Labs for $8.2 Billion",
+      "summary": "AMD to Acquire World Labs for $8.2 Billion WSJ",
+      "source": "WSJ",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQLVpVcHpJVVFBektEcldpS0ttVXk1a2dkR0kzZEtUNmp3d1hQNzVEb3NOZVhEc1piQmtIYlI3WF9QUExkT2R3TW9tOW1ZZ0RpSGdELWxBbVRldmYtRmNUQjRxWjdZeS1RZnVvNFhvbU9pQzFfd2RyXzYxMnR4X3RpNFlBUzU?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-28T07:00:00Z",
       "tags": [
         "Academic Startup",
         "Funding"
@@ -2421,17 +2419,17 @@
       "importance": 77,
       "content_kind": "article",
       "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=d9704d4940c3cc02",
+      "reader_url": "./reader.html?id=5af5e10deef61fc6",
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "0e3206d17b886dcf",
+      "id": "ce7d01d7980a415b",
       "category": "opensource",
-      "title": "OpenAI is sued over rogue AI Hugging Face cyberattack",
-      "summary": "OpenAI is sued over rogue AI Hugging Face cyberattack CNBC",
+      "title": "OpenAI-Hugging Face incident became a 'turning point' in AI safety discussion, says Walter Isaacson",
+      "summary": "OpenAI-Hugging Face incident became a 'turning point' in AI safety discussion, says Walter Isaacson CNBC",
       "source": "CNBC",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1vcm94WTgtQnVWX3AyX2pKaXZGRmt4bmdkSWFjSXItNE1YSmZmUGJkbm1NZEs0YS1zTGlBVVdHQ28zLVl2TXUtbjh0aTU5dG1UWTNGVHkzaHNuRld4ZjdvZTUxbjd6Rmd6Q25xNNIBckFVX3lxTE4wQ3psakxsek9pd0R5V09IZEMxNklxTDdfS0pHTzVfQVFwY3YwZnBSNWlYNnpUX0hHbFFmRHMxd3RhZDVvaC1kUEFyd3JqQXhuSDVpVGhUd2RJMlVWR0N0V0lOOUxkWmVraXlCX3dhbmdkUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-09-30T07:00:00Z",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOUzJKMHNHMDhURlBxTmtTc2ctWThXY0ZLR0E4UUk1LXhCbV91bGVWaWtnMjdGcWs5TUtYU3JGS2FpRzlPR1B1UXR1c0VNMU95RWhnQ09NNS14MUpOS0cyTmxHVHhTRTM3emVVSWs1MUdxTENCV1Z2Yy1QbHpYZm1kYVZUMkZ5WGxXY3c?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-01T07:00:00Z",
       "tags": [
         "Open Source",
         "Models & Tools"
@@ -2439,7 +2437,7 @@
       "importance": 76,
       "content_kind": "article",
       "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=0e3206d17b886dcf",
+      "reader_url": "./reader.html?id=ce7d01d7980a415b",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2569,6 +2567,24 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "2d2cd923c881fb04",
+      "category": "policy",
+      "title": "Keep Teens Off ChatGPT, Says Youth AI Safety Institute",
+      "summary": "Keep Teens Off ChatGPT, Says Youth AI Safety Institute KQED",
+      "source": "KQED",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNaFlwWWdNRTF6Z1lHbHE2bXA3RUFaQnhEeTlmRFZFanJPdUFoQm02WDA5YlN6eDdIQlZ5ZU12Nk9SUFBjQmo0akR6RjF5UjdTNGNiQTZRZTZtMm1XMXowa1lkbU5EZW1yV2MyN2J3cGloeGlhd3JtVnJERE5QQjJaQzJvSm4zSkZSSTRPX1VhLUtjZw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-07T16:30:33Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 72,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=2d2cd923c881fb04",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "abeace7bd5c44e0e",
       "category": "policy",
       "title": "Training Day: Third Circuit Affirms Westlaw Headnotes Decision in AI Copyright Fair Use Case",
@@ -2623,13 +2639,13 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "d31465034d4f19be",
+      "id": "9fde4a41eaf1a767",
       "category": "opensource",
-      "title": "A Timeline of Developments in AI Safety Since the Attack on Hugging Face",
-      "summary": "A Timeline of Developments in AI Safety Since the Attack on Hugging Face Insurance Journal",
-      "source": "Insurance Journal",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE81Sk5yVHVibGJ2UE8zUkRJWEFWSXJQU21SZ0ZxQndvSEt2emgxcl95UkdvMzhVS3dDeTJaU2VyQUYxRVE3SDdOc2YxZU5BQ0J6UmhkSUZwQ2dWR1hIcFcybk1tR3ZMYTZzQkUwQ2RwdDUwdUxJUjNZ?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-09T05:41:24Z",
+      "title": "Controversy swirls over ‘abrupt’ firing of OpenAI safety team members involved in the Hugging Face hack investigation",
+      "summary": "Controversy swirls over ‘abrupt’ firing of OpenAI safety team members involved in the Hugging Face hack investigation Fortune",
+      "source": "Fortune",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxONzZQeFJQRXFQcUVSOXRrUnpKZjZiUjVBZWNsU1BubjYzTlpLWW12bmRZYzNmcV9rbGFvMGxIeGJkM2hHdlFlMml0VGU3dGpSWVJlRklXV0F0Y2txZWE3M29xWkxGZXU2OTBXTjVtbmpwcmUtTzNlTDRtQTc5ajRBTXRDbmlQU3VzYzFJTTdBZGJpQW4xcVE?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-09T17:21:00Z",
       "tags": [
         "Open Source",
         "Models & Tools"
@@ -2637,25 +2653,7 @@
       "importance": 70,
       "content_kind": "article",
       "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=d31465034d4f19be",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "c846435ed5aaac37",
-      "category": "policy",
-      "title": "Wes Moore calls for AI regulation at Baltimore summit",
-      "summary": "Wes Moore calls for AI regulation at Baltimore summit WBAL-TV",
-      "source": "WBAL-TV",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQWHRNR2NYSXlxY1BNMEJEM0RvcVluQWQ1b0p1bG5vZXVGaXJ5al85RnlES1U1WVdBWjY2a1plMjd4UHdzcUN0bklDZno2SlRGdEVVbkxCeGFUWGNkYjFrc2RzUm5mY3NlV01KdHItajZseW1qNk9SanFYZW9lVVZwS1VETFN2cEU?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-01T21:20:00Z",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "importance": 70,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=c846435ed5aaac37",
+      "reader_url": "./reader.html?id=9fde4a41eaf1a767",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2677,13 +2675,13 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "8672cda64b08a62d",
+      "id": "c846435ed5aaac37",
       "category": "policy",
-      "title": "Trump Had the Chance to Address U.S.-China AI Safety. He Threw Xi a Party Instead.",
-      "summary": "Trump Had the Chance to Address U.S.-China AI Safety. He Threw Xi a Party Instead. Carnegie Endowment for International Peace",
-      "source": "Carnegie Endowment for International Peace",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9WTjZ0NTNTNmtlVFQtaVA4czZnLUtuVDVMTEF6eGNndjJXTzc4ZDROU0Q5UUpBLXUxX253bmNETWhZbVVkNG1PUk95d0RWNGxCUzFxWWxLdmZQSFZsWmZCUjFXaFRTemw4Z2hmZVhaWWJYX2R4NEZWSnlGdU9Hdw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-09-30T07:00:00Z",
+      "title": "Wes Moore calls for AI regulation at Baltimore summit",
+      "summary": "Wes Moore calls for AI regulation at Baltimore summit WBAL-TV",
+      "source": "WBAL-TV",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQWHRNR2NYSXlxY1BNMEJEM0RvcVluQWQ1b0p1bG5vZXVGaXJ5al85RnlES1U1WVdBWjY2a1plMjd4UHdzcUN0bklDZno2SlRGdEVVbkxCeGFUWGNkYjFrc2RzUm5mY3NlV01KdHItajZseW1qNk9SanFYZW9lVVZwS1VETFN2cEU?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-01T07:00:00Z",
       "tags": [
         "Policy",
         "Safety"
@@ -2691,7 +2689,7 @@
       "importance": 70,
       "content_kind": "article",
       "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=8672cda64b08a62d",
+      "reader_url": "./reader.html?id=c846435ed5aaac37",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2749,13 +2747,13 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "840c0d3db440e82b",
+      "id": "c7fffead8857f18f",
       "category": "opensource",
-      "title": "OpenAI hit with landmark lawsuit following Hugging Face hack",
-      "summary": "OpenAI hit with landmark lawsuit following Hugging Face hack Axios",
-      "source": "Axios",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE51dmdLSEl6NmNpYzhnSW1SeVBBMTZRcmFtVkpKUUltTV9TbllGS0N3cU1hSkRETmdJd0JqenIxeG5XaElGUmhlLV9aLWhjX2t5aW5vZng2OWRzUk5XMWRkcUVnanlwR2p0U2JtREYtZVppZw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-09-29T07:00:00Z",
+      "title": "A timeline of developments in AI safety since the attack on Hugging Face",
+      "summary": "A timeline of developments in AI safety since the attack on Hugging Face ABC News - Breaking News, Latest News and Videos",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPS2tOUGI4OFV0XzA4dW1yR0htSDU0RDdDUHI1eXdRSFZJTlBxei1zMnNDTC1HcEpvOEZQcXQ0dEdPNnpmbDd3R3RBVXI4NlM2MGZzaEhSa3ByaHdhQ2trTXZ5RXJCQkdIdEhnNWZXRjJydktldjAwVmhCZGtsTDREM0VwTEhTcVMwdXgyNUpGVk1zUGJpajB6MmN30gGfAUFVX3lxTE9PRnJXSGpCN3EyN0hKXzRxOEh1bTR1T2ttak9QRGt4TFA3Yk1NUGlPMktJcnNZTDdSSm1QMmhFZjVUM182cnZOT1EzYmJlNXhvaFRldDdocEJ0bnNGMVNqNmZBQTVPTDg0LWhSRHhFMzlEM3REWk5LRlBpYXhYakZQMkRPcHoySVNvc3JxQmtNdXM1VTRuMDFpbkc5R1d2bw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-30T07:00:00Z",
       "tags": [
         "Open Source",
         "Models & Tools"
@@ -2763,7 +2761,7 @@
       "importance": 68,
       "content_kind": "article",
       "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=840c0d3db440e82b",
+      "reader_url": "./reader.html?id=c7fffead8857f18f",
       "reader_status": "public-page-excerpt"
     },
     {
