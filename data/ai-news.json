@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-09T06:04:45Z",
+  "generated_at": "2026-10-09T13:12:41Z",
   "item_count": 129,
   "category_counts": {
     "research": 20,
@@ -45,7 +45,7 @@
       "字节豆包 / Seed": 1
     },
     "people_watch_coverage": {
-      "Elon Musk / xAI": 2,
+      "Elon Musk / xAI": 3,
       "Sam Altman / OpenAI": 1,
       "Dario Amodei / Anthropic": 0,
       "Demis Hassabis / DeepMind": 1,
@@ -68,19 +68,13 @@
       "note": ""
     },
     {
-      "name": "Google DeepMind",
-      "status": "error",
-      "count": 0,
-      "note": "not well-formed (invalid token): line 1, column 0"
-    },
-    {
       "name": "OpenAI",
       "status": "ok",
       "count": 9,
       "note": ""
     },
     {
-      "name": "Google AI",
+      "name": "Hugging Face",
       "status": "ok",
       "count": 7,
       "note": ""
@@ -92,7 +86,13 @@
       "note": ""
     },
     {
-      "name": "Hugging Face",
+      "name": "Google DeepMind",
+      "status": "error",
+      "count": 0,
+      "note": "not well-formed (invalid token): line 1, column 0"
+    },
+    {
+      "name": "Google AI",
       "status": "ok",
       "count": 7,
       "note": ""
@@ -104,21 +104,15 @@
       "note": ""
     },
     {
-      "name": "Microsoft Research",
-      "status": "ok",
-      "count": 6,
-      "note": ""
-    },
-    {
-      "name": "World Model Founders",
-      "status": "ok",
-      "count": 7,
-      "note": ""
-    },
-    {
       "name": "Anthropic",
       "status": "ok",
       "count": 8,
+      "note": ""
+    },
+    {
+      "name": "Microsoft Research",
+      "status": "ok",
+      "count": 6,
       "note": ""
     },
     {
@@ -134,31 +128,19 @@
       "note": ""
     },
     {
+      "name": "World Model Founders",
+      "status": "ok",
+      "count": 7,
+      "note": ""
+    },
+    {
       "name": "AI for Mathematics & Science",
       "status": "ok",
       "count": 12,
       "note": ""
     },
     {
-      "name": "Frontier Lab Monitor",
-      "status": "ok",
-      "count": 9,
-      "note": ""
-    },
-    {
       "name": "China AI · Tencent & ByteDance",
-      "status": "ok",
-      "count": 10,
-      "note": ""
-    },
-    {
-      "name": "China AI · DeepSeek & Zhipu",
-      "status": "ok",
-      "count": 10,
-      "note": ""
-    },
-    {
-      "name": "AI Policy Monitor",
       "status": "ok",
       "count": 10,
       "note": ""
@@ -170,9 +152,15 @@
       "note": ""
     },
     {
-      "name": "China AI · Kimi & Qwen",
+      "name": "AI Policy Monitor",
       "status": "ok",
       "count": 10,
+      "note": ""
+    },
+    {
+      "name": "Frontier Lab Monitor",
+      "status": "ok",
+      "count": 9,
       "note": ""
     },
     {
@@ -182,7 +170,19 @@
       "note": ""
     },
     {
+      "name": "China AI · Kimi & Qwen",
+      "status": "ok",
+      "count": 10,
+      "note": ""
+    },
+    {
       "name": "Core AI Researchers on X",
+      "status": "ok",
+      "count": 10,
+      "note": ""
+    },
+    {
+      "name": "China AI · DeepSeek & Zhipu",
       "status": "ok",
       "count": 10,
       "note": ""
@@ -284,24 +284,6 @@
       "cached_pdf": "./papers/unit-distance-openai-20260520.pdf"
     },
     {
-      "id": "cf8535d59878ef71",
-      "category": "impact",
-      "title": "Sharing AI progress in mathematics",
-      "summary": "OpenAI publishes new results on open problems in mathematics from an internal frontier model and shares Lean proof formalizations and research details on GitHub.",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/sharing-ai-progress-in-mathematics",
-      "published_at": "2026-10-06T12:00:00Z",
-      "tags": [
-        "OpenAI",
-        "Official"
-      ],
-      "importance": 105,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=cf8535d59878ef71",
-      "reader_status": "summary-only"
-    },
-    {
       "id": "e6243056d8ce3efa",
       "category": "impact",
       "title": "Introducing Quine: An AI research system designed for the complexity of biology",
@@ -382,6 +364,24 @@
       "reader_url": "./reader.html?id=bace-gecco-2026",
       "reader_status": "open-pdf-cached",
       "cached_pdf": "./papers/bace-gecco-2026.pdf"
+    },
+    {
+      "id": "a2b657e034b69cdc",
+      "category": "frontier",
+      "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+      "summary": "Discover how Sophos uses OpenAI’s Daybreak to cut cyber-threat investigation time by 96% and automate 52% of MDR cases while preserving human oversight.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/sophos",
+      "published_at": "2026-10-09T07:00:00Z",
+      "tags": [
+        "OpenAI",
+        "Official"
+      ],
+      "importance": 100,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=a2b657e034b69cdc",
+      "reader_status": "summary-only"
     },
     {
       "id": "5ac8682ed22507fd",
@@ -564,42 +564,6 @@
       "reader_status": "summary-only"
     },
     {
-      "id": "37390670fe9b1d60",
-      "category": "frontier",
-      "title": "GPT-6 and Intelligent UI for everyone",
-      "summary": "GPT‑6 is rolling out globally in ChatGPT with Intelligent UI, delivering faster responses with visuals and interactive experiences you can explore and use directly.",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/gpt-6-for-everyone",
-      "published_at": "2026-10-07T00:00:00Z",
-      "tags": [
-        "OpenAI",
-        "Official"
-      ],
-      "importance": 100,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=37390670fe9b1d60",
-      "reader_status": "summary-only"
-    },
-    {
-      "id": "ecf45a9e2812fa21",
-      "category": "frontier",
-      "title": "Expanding the Cyber Verification Program",
-      "summary": "We’re launching a new, expanded version of our Cyber Verification Program (CVP), which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/news/cyber-verification-program",
-      "published_at": "2026-10-06T19:00:00Z",
-      "tags": [
-        "Anthropic",
-        "Official"
-      ],
-      "importance": 100,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=ecf45a9e2812fa21",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "rhb-icml-2026",
       "category": "research",
       "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
@@ -623,6 +587,42 @@
       "reader_url": "./reader.html?id=rhb-icml-2026",
       "reader_status": "open-pdf-cached",
       "cached_pdf": "./papers/rhb-icml-2026.pdf"
+    },
+    {
+      "id": "37390670fe9b1d60",
+      "category": "frontier",
+      "title": "GPT-6 and Intelligent UI for everyone",
+      "summary": "GPT‑6 is rolling out globally in ChatGPT with Intelligent UI, delivering faster responses with visuals and interactive experiences you can explore and use directly.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/gpt-6-for-everyone",
+      "published_at": "2026-10-07T00:00:00Z",
+      "tags": [
+        "OpenAI",
+        "Official"
+      ],
+      "importance": 99,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=37390670fe9b1d60",
+      "reader_status": "summary-only"
+    },
+    {
+      "id": "ecf45a9e2812fa21",
+      "category": "frontier",
+      "title": "Expanding the Cyber Verification Program",
+      "summary": "We’re launching a new, expanded version of our Cyber Verification Program (CVP), which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/cyber-verification-program",
+      "published_at": "2026-10-06T19:00:00Z",
+      "tags": [
+        "Anthropic",
+        "Official"
+      ],
+      "importance": 99,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=ecf45a9e2812fa21",
+      "reader_status": "public-page-excerpt"
     },
     {
       "id": "5165d8b7b8857618",
@@ -698,6 +698,25 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "42834d39dc21a5d0",
+      "category": "impact",
+      "title": "TechBio 3.0 closes the drug discovery loop with multimodal AI and generative chemistry",
+      "summary": "TechBio 3.0 closes the drug discovery loop with multimodal AI and generative chemistry Nature",
+      "source": "Nature",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9HdzNZWlh2bU1BS3lrVHdvLV9ZZTdZT0ljZExidjd2RFBwbUpJVmJmZDVFVUVWTEtUbTdFUjlTV01UVnRLTlpVVV9QckdjcHNDeGpyQkkwc0xIZGdMTkFB?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-09T09:47:48Z",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "importance": 96,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=42834d39dc21a5d0",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "9ea5613b4342bfde",
       "category": "impact",
       "title": "‘Breathtaking,’ ‘Devastating’: Mathematics Reels After New OpenAI Release",
@@ -717,492 +736,526 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "fe629533b5192881",
-      "category": "research",
-      "title": "Evaluating Spectral Consistency of Fe-Related Wavelength Ranges between EO-1 Hyperion and Field Spectrometer Data in the Kulon Progo Iron Sand Deposit",
-      "summary": "Iron sand deposits contain Fe-bearing oxide minerals with characteristic reflectance features, but field spectrometer and hyperspectral image measurements of these features do not always agree, owing to differences in sensor characteristics, observation scale, and surface conditions. This study evaluates the spectral consistency between ASD FieldSpec and EO-1 Hyperion reflectance over the Kulon Progo iron sand deposit, and examines how spectral processing and spatial representation affect that consistency. Fifteen Hyperion bands were selected on physical grounds, eight within 480-560 nm and seven within 850-950 nm, and compared with resampled ASD spectra at 35 points with…",
-      "source": "OpenAlex",
-      "url": "https://doi.org/10.31098/cset.v5i1.1195",
-      "published_at": "2026-10-07T00:00:00Z",
+      "id": "1540fb9e3a1c4967",
+      "category": "impact",
+      "title": "AI for research mathematics has arrived",
+      "summary": "AI for research mathematics has arrived Science | AAAS",
+      "source": "Science | AAAS",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBtcjlJXzhGSUxVQ1ZhVjFZZmpNS2huQmNVcWFrSnZsMWpfQ09hbzZBSmVwczZCREhRa0ZKa2wxLUdkaGo0QklCNFc1N2FITkJTVTFrUXBRQVhOeXVVSHZ6dQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-08T18:19:43Z",
       "tags": [
-        "Geochemistry and Geologic Mapping",
-        "hyperspectral reflectance",
-        "EO-1 Hyperion",
-        "iron oxide minerals"
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "importance": 96,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=1540fb9e3a1c4967",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "106a1540cadaa5c0",
+      "category": "research",
+      "title": "Study on the construction of logical inverse elements applicable to optical quantum computing",
+      "summary": "This paper describes a method for constructing inverse logic elements applicable to optical quantum computing and the key operations involved in building the entire inverse logic circuit. For AND, OR, and XOR inverse elements, we present a configuration that utilizes controlled-rotation gates, thereby eliminating the need for post-selection. Handling the branching of bit lines is crucial in inverse logic circuits, and we also discuss the applicability of Grover's algorithm. Additionally, through classical simulation, 3072-bit composite numbers formed by the product of two prime numbers close to 2m1 and 2m2 (where m1 and m2 are integers) were successfully factorized using…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1117/12.3113425",
+      "published_at": "2026-10-08T00:00:00Z",
+      "tags": [
+        "Quantum Computing Algorithms and Architecture"
       ],
       "importance": 96,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=fe629533b5192881",
+      "reader_url": "./reader.html?id=106a1540cadaa5c0",
       "authors": [
-        "Adistina Lailia Fajar Dewi",
-        "Muhammad Syahrullah Muhammad Syahrullah Fathulhuda"
+        "Kimihiro Saito"
       ],
-      "venue": "RSF Conference Series Engineering and Technology",
-      "pdf_url": "https://proceeding.researchsynergypress.com/index.php/cset/article/download/1195/1563",
-      "license": "bronze",
-      "citations": 0,
-      "reader_status": "pdf-link-only"
-    },
-    {
-      "id": "0f471bba1bd7ce92",
-      "category": "research",
-      "title": "Deep learning-based signal modulation recognition algorithm in complex electromagnetic environments",
-      "summary": "Automatic modulation recognition (AMR) is a key technology in cognitive radio and intelligent communication systems. Although recurrent neural networks such as LSTM can effectively capture temporal dependencies of signals, they have limited capability in modeling long-range global features.[1]In contrast, Transformers can learn global contextual information through self-attention mechanisms but are less effective in extracting local temporal patterns. To address these limitations, this paper proposes a hybrid modulation recognition network, termed LSTM–Transformer Hybrid Network (LTH-Net).The proposed network adopts a dual-branch architecture. A stacked bidirectional LSTM…",
-      "source": "OpenAlex",
-      "url": "https://doi.org/10.1117/12.3130472",
-      "published_at": "2026-10-06T00:00:00Z",
-      "tags": [
-        "Wireless Signal Modulation Classification",
-        "automatic modulation classification",
-        "bidirectional LSTM",
-        "transformer self-attention"
-      ],
-      "importance": 95,
-      "content_kind": "paper",
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=0f471bba1bd7ce92",
-      "authors": [
-        "Huayang Xu"
-      ],
-      "venue": "International Conference on Advanced Algorithms and Signal Image Processing (AASIP)",
+      "venue": "Industrial Optical Devices and Systems (ODS)",
       "license": "closed",
       "citations": 0,
       "reader_status": "abstract-only"
     },
     {
-      "id": "39a2bdaffae653b6",
+      "id": "08e53794489d91a7",
       "category": "research",
-      "title": "A TSP solving model based on multiscale feature fusion and adaptive context awareness",
-      "summary": "Transformer-based deep reinforcement learning for the Traveling Salesman Problem (TSP) often struggles to capture spatial topology and avoid local optima. To address this, we propose a novel model featuring a Multi-Scale Grid Attention Encoder (MSGAE) to fuse local and global spatial features, alongside a bottleneck-enhanced adaptive decoder (BMA) to prevent local optima. Optimized via multi-start Monte Carlo sampling, the model balances solution quality, efficiency, and generalization. Experiments demonstrate a highly competitive 0.25% optimality gap on TSP100, and the model exhibits excellent generalization capability in real-world applications.",
+      "title": "Beyond frozen teachers: co-training and co-distillation for task-specific fine-tuning",
+      "summary": "Knowledge distillation (KD) transfers knowledge from a large teacher model to a smaller student model, facilitating deployment in resource-constrained environments while minimizing performance degradation. The dominant KD formulation assumes a frozen teacher, already trained on the task, that supervises the student through its terminal output distribution. Co-Training and Co-Distillation (CTCD), in contrast, jointly trains teacher and student under bidirectional soft-target losses. This study investigates whether the advantage reported for CTCD during pretraining persists under task-specific fine-tuning. To answer this question, we conduct a six-part ablation study across…",
       "source": "OpenAlex",
-      "url": "https://doi.org/10.1117/12.3130746",
-      "published_at": "2026-10-06T00:00:00Z",
+      "url": "https://doi.org/10.1117/12.3118495",
+      "published_at": "2026-10-08T00:00:00Z",
       "tags": [
-        "Metaheuristic Optimization Algorithms Research",
-        "traveling salesman problem",
-        "deep reinforcement learning",
-        "multi-scale feature fusion"
+        "Domain Adaptation and Few-Shot Learning"
       ],
-      "importance": 95,
+      "importance": 96,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=39a2bdaffae653b6",
+      "reader_url": "./reader.html?id=08e53794489d91a7",
       "authors": [
-        "Pingping Dai"
+        "Nikhil Trivedi",
+        "Karthik Ravi",
+        "Mohammad Ali Shehral",
+        "Karl Ni"
       ],
-      "venue": "International Conference on Advanced Algorithms and Signal Image Processing (AASIP)",
+      "venue": "SPIE Applications of Machine Learning",
       "license": "closed",
       "citations": 0,
       "reader_status": "abstract-only"
     },
     {
-      "id": "e92d557cac86edba",
+      "id": "56350be0505b4d4a",
       "category": "research",
-      "title": "Algorithm improvement based on scorpion hunting behavior",
-      "summary": "This paper proposes a metaheuristic optimizer named SHSL (Simple Scorpion Hunting Strategy with Levy Flights), which integrates scorpion hunting behavior and Levy flight strategy. Based on the original SHS framework, SHSL introduces a collaborative mechanism involving boundary constraint and position update, and innovatively embeds Levy flight. Experimental results on CEC2017 benchmark functions and constrained engineering optimization cases demonstrate that SHSL effectively mitigates the drawbacks of SHS, including insufficient global exploration, premature convergence to local optima and low solution stability, achieving evidently better overall performance.",
+      "title": "Deep learning–based fibrosis segmentation and NAS score identification in non-alcoholic steatohepatitis (NASH)",
+      "summary": "Non-Alcoholic Fatty Liver Disease (NAFLD) and its progressive form, Non-Alcoholic Steatohepatitis (NASH), represent a rapidly growing global health burden, leading to liver fibrosis, cirrhosis, and hepatocellular carcinoma. Histopathological evaluation remains the clinical gold standard for assessing disease severity. The Non-Alcoholic Steatohepatitis Activity Score (NAS) integrates steatosis, lobular inflammation, and hepatocellular ballooning, alongside fibrosis staging. However, manual assessment is labor-intensive, subjective, and prone to inter- and intra-observer variability. In this work, we demonstrate a comprehensive deep learning (DL)-based framework for…",
       "source": "OpenAlex",
-      "url": "https://doi.org/10.1117/12.3131051",
-      "published_at": "2026-10-06T00:00:00Z",
+      "url": "https://doi.org/10.1117/12.3113946",
+      "published_at": "2026-10-08T00:00:00Z",
       "tags": [
-        "Metaheuristic Optimization Algorithms Research",
-        "Lévy flight",
-        "metaheuristic optimization",
-        "premature convergence"
+        "AI in cancer detection"
       ],
-      "importance": 95,
+      "importance": 96,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=e92d557cac86edba",
+      "reader_url": "./reader.html?id=56350be0505b4d4a",
       "authors": [
-        "Yu Liu"
+        "Shamima Nasrin",
+        "Md Zahangir Alom",
+        "M. M. Shaifur Rahman",
+        "Tareq Ahmed",
+        "Tarek M. Taha"
       ],
-      "venue": "International Conference on Advanced Algorithms and Signal Image Processing (AASIP)",
+      "venue": "SPIE Applications of Machine Learning",
       "license": "closed",
       "citations": 0,
       "reader_status": "abstract-only"
     },
     {
-      "id": "22fcd702e658622f",
+      "id": "c5e1a85adb174c98",
       "category": "research",
-      "title": "Nuclei segmentation in histopathology images using Swin-UNet with explicit edge supervision",
-      "summary": "Accurate nuclei segmentation in histopathology images is crucial for downstream biological analysis. While Transformer based models excel at capturing global contexts, they struggle with blurred boundaries and structural adhesion in dense cellular regions. To address this, we propose Swin-UNet-EARM, introducing an Edge-Aware Refinement Module (EARM) for feature-level decoupling. EARM extracts local high-frequency features via depth-wise separable convolutions within a dual-branch structure: one branch uses dynamic morphological gradients for explicit topological supervision, while the other leverages this signal to adaptively weight deep semantic features using spatial…",
+      "title": "SeDEx: a feature-map-aware semantic density explainer for CNN models",
+      "summary": "Convolutional neural networks (CNNs) use the hidden semantic meaning of the feature maps to make their decisions. Without considering the semantic meaning of the feature maps, we generally use untransparent metrics like F1-scores, precision, recall, and ROC curves to measure the quality of CNNs’ decisions. Hence, these metrics cannot facilitate explainability. Many explainability models such as SHAP, LIME and GradCAM can be found in artificial intelligence (AI) literature. However, they mainly focus on the connection between the decisions of the CNN models and the input features that develop explainability without integrating semantic meaning of the feature maps.…",
       "source": "OpenAlex",
-      "url": "https://doi.org/10.1117/12.3130461",
-      "published_at": "2026-10-06T00:00:00Z",
+      "url": "https://doi.org/10.1117/12.3111914",
+      "published_at": "2026-10-08T00:00:00Z",
       "tags": [
-        "AI in cancer detection",
-        "nuclei segmentation",
-        "histopathological images",
-        "Swin-Unet"
+        "Explainable Artificial Intelligence (XAI)"
       ],
-      "importance": 95,
+      "importance": 96,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=22fcd702e658622f",
+      "reader_url": "./reader.html?id=c5e1a85adb174c98",
       "authors": [
-        "Wuhao Zhong"
+        "Saranya Pettela",
+        "Shan Suthaharan"
       ],
-      "venue": "International Conference on Advanced Algorithms and Signal Image Processing (AASIP)",
+      "venue": "SPIE Applications of Machine Learning",
       "license": "closed",
       "citations": 0,
       "reader_status": "abstract-only"
     },
     {
-      "id": "32aeb77256c4e67f",
+      "id": "a83ac01aac64d7c5",
       "category": "research",
-      "title": "An embedded interacting multiple-model kernel for Gaussian mixture PHD multitarget tracking",
-      "summary": "To address three-dimensional multi-target tracking problems in which the number of targets is unknown, targets may appear and disappear, and motion modes change frequently, this paper proposes a Gaussian mixture probability hypothesis density multi-target tracking algorithm with an embedded interacting multiple-model kernel (IMM-GM-PHD). In the proposed method, a four-model IMM kernel consisting of a constant-velocity model, a constant-acceleration model, a smooth coordinated-turn model, and a fast coordinated-turn model is directly embedded into each PHD Gaussian component. As a result, each component can update its model probabilities and adaptively switch its motion…",
+      "title": "All-optical volatile memory dynamics for high-speed neuromorphic systems",
+      "summary": "As artificial neural networks scale, conventional electronic transistors face severe speed and energy limitations. Optical platforms offer massive parallelism and bandwidth, yet existing short-term memory elements often rely on inefficient optical-to-electrical-to-optical conversions. To overcome this barrier, we introduce a comprehensive mathematical foundation for feedback-free, intensity-encoded photonic memory devices. By leveraging delayed optical nonlinearity within resonant cavities, we successfully demonstrate history-dependent signal processing entirely in the optical domain.",
       "source": "OpenAlex",
-      "url": "https://doi.org/10.1117/12.3130709",
-      "published_at": "2026-10-06T00:00:00Z",
+      "url": "https://doi.org/10.1117/12.3115236",
+      "published_at": "2026-10-08T00:00:00Z",
       "tags": [
-        "Target Tracking and Data Fusion in Sensor Networks",
-        "multi-target tracking",
-        "Gaussian mixture PHD filter",
-        "interacting multiple model"
+        "Neural Networks and Reservoir Computing"
       ],
-      "importance": 95,
+      "importance": 96,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=32aeb77256c4e67f",
+      "reader_url": "./reader.html?id=a83ac01aac64d7c5",
       "authors": [
-        "Yu Zhu",
-        "Yang Zhou"
+        "Qiming Zhang",
+        "Simone Lamon"
       ],
-      "venue": "International Conference on Advanced Algorithms and Signal Image Processing (AASIP)",
+      "venue": "Industrial Optical Devices and Systems (ODS)",
       "license": "closed",
       "citations": 0,
       "reader_status": "abstract-only"
     },
     {
-      "id": "6486bb1f061cb48d",
+      "id": "5e8e6515b9d9b2c3",
       "category": "research",
-      "title": "Branchformer-based end-to-end speech recognition for three major Tibetan dialects",
-      "summary": "The substantial pronunciation variation among the three major Tibetan dialects poses a significant challenge to multidialect speech recognition, requiring the model to capture both shared linguistic characteristics and dialect-specific acoustic patterns. To address this issue, this paper adapts and evaluates a Branchformer-CTC/Attention-based framework for multidialect Tibetan automatic speech recognition (ASR). The adapted framework leverages the parallel-branch architecture of Branchformer to model global contextual dependencies and local temporal patterns in parallel, enabling more effective representation of dialectal variations. Furthermore, a joint CTC/Attention…",
+      "title": "An approach to understanding LLM parent-AI agents for an LLM-based colony of AI",
+      "summary": "Large language models (LLMs) help build artificial intelligence (AI) systems to automate text classification. The randomness of learning dynamics (performance dynamics) of LLMs under complexity of text data can lead to poor classification performance. Therefore, it is important to understand the randomness of learning behavior of LLMs for building reliable and resilient LLM-based multi-agent AI systems. In this paper, an approach is proposed to understand LLM parent-AI agents with the fast learner concept of colony of AI for building an efficient LLM-based colony of AI. The learning-dynamics of parent-AI agents of each learner type is vital to generate diverse families of…",
       "source": "OpenAlex",
-      "url": "https://doi.org/10.1117/12.3130448",
-      "published_at": "2026-10-06T00:00:00Z",
+      "url": "https://doi.org/10.1117/12.3112361",
+      "published_at": "2026-10-08T00:00:00Z",
       "tags": [
-        "Speech Recognition and Synthesis",
-        "Tibetan dialects",
-        "character error rate"
+        "Topic Modeling"
       ],
-      "importance": 95,
+      "importance": 96,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=6486bb1f061cb48d",
+      "reader_url": "./reader.html?id=5e8e6515b9d9b2c3",
       "authors": [
-        "Chao Wang"
+        "Dilaksan Thirugnanaselvam",
+        "Shan Suthaharan"
       ],
-      "venue": "International Conference on Advanced Algorithms and Signal Image Processing (AASIP)",
+      "venue": "SPIE Applications of Machine Learning",
       "license": "closed",
       "citations": 0,
       "reader_status": "abstract-only"
     },
     {
-      "id": "72e1a847322cd35c",
+      "id": "e8ac6a9d98dc3304",
       "category": "research",
-      "title": "Privacy protection method for clustering of heterogeneous distributed node clusters based on optimal gravitational link",
-      "summary": "To address the problems of node information privacy leakage, strong dependence on the selection of initial clustering core nodes, and failure of isolated nodes to complete clustering assignment due to limited perception capabilities in the clustering process of heterogeneous distributed node clusters, a privacy protection method for clustering of heterogeneous distributed node clusters based on optimal gravitational link is proposed. First, a differential privacy Laplace noise perturbation mechanism is introduced to process the original node data for privacy protection, avoiding the leakage of privacy information while retaining the statistical characteristics of the…",
+      "title": "Phase-only optical neural networks: quantization and robustness analysis",
+      "summary": "Phase-only optical neural networks (ONNs) promise energy-efficient inference through passive photonic components. Two gaps separate continuous-valued simulation from hardware deployment: commercial phase light modulators (PLMs) realize only discrete phase levels, and mechanical mounting fixes the propagation distance that training treats as a learnable parameter. The physics-aware simulation platform presented in1 is extended with quantization-aware training (QAT) over three phase encodings and a propagation-distance sensitivity analysis that holds trained phase masks fixed. Across the configurations tested, 4-bit resolution is the point where accuracy stabilizes and…",
       "source": "OpenAlex",
-      "url": "https://doi.org/10.1117/12.3130543",
-      "published_at": "2026-10-06T00:00:00Z",
+      "url": "https://doi.org/10.1117/12.3113856",
+      "published_at": "2026-10-08T00:00:00Z",
       "tags": [
-        "Privacy-Preserving Technologies in Data",
-        "privacy preservation",
-        "clustering",
-        "differential privacy"
+        "Neural Networks and Reservoir Computing"
       ],
-      "importance": 95,
+      "importance": 96,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=72e1a847322cd35c",
+      "reader_url": "./reader.html?id=e8ac6a9d98dc3304",
       "authors": [
-        "Caixin Wang"
+        "Linqi Xiao",
+        "Muhammad Ridwanur Rahim",
+        "Rongqing Hui",
+        "Andrea Fumagalli"
       ],
-      "venue": "International Conference on Advanced Algorithms and Signal Image Processing (AASIP)",
+      "venue": "Industrial Optical Devices and Systems (ODS)",
       "license": "closed",
       "citations": 0,
       "reader_status": "abstract-only"
     },
     {
-      "id": "da879b4451bf633b",
+      "id": "eedcbb03ec605238",
       "category": "research",
-      "title": "An LLM-based intelligent customer service question-answering system for expressways",
-      "summary": "Expressway customer service centers handle diverse user queries including incident reporting, toll inquiries, service area information, policy questions, and route guidance. Traditional rule-based FAQ systems suffer from prominent weaknesses in handling vague user queries and limited knowledge coverage. To address these issues, this paper proposes a knowledgeenhanced retrieval-augmented generation (RAG) framework for expressway customer service question-answering and evaluates it through a simulation-based comparative study. The system employs a three-stage pipeline of intent classification, knowledge retrieval, and context-aware response generation, with a…",
+      "title": "From retrieval to reasoning: cross-context RAG for intelligent QA system in photonics packaging",
+      "summary": "The increasing adoption of co-packaged optics (CPO) and advanced photonics packaging introduces significant challenges in inspection, alignment precision, defect interpretation, and workforce training. Intelligent question-answering (QA) systems powered by large language models (LLMs) offer a promising solution, but conventional fine-tuning approaches often struggle to generalize across heterogeneous technical documentation and may produce hallucinated responses in specialized engineering domains. Answering practical engineering questions in this domain often requires connecting information that is distributed across heterogeneous sources such as, characterization…",
       "source": "OpenAlex",
-      "url": "https://doi.org/10.1117/12.3130887",
-      "published_at": "2026-10-06T00:00:00Z",
+      "url": "https://doi.org/10.1117/12.3113632",
+      "published_at": "2026-10-08T00:00:00Z",
       "tags": [
-        "Topic Modeling",
-        "question answering",
-        "retrieval-augmented generation",
-        "knowledge graphs"
+        "Topic Modeling"
       ],
-      "importance": 95,
+      "importance": 96,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=da879b4451bf633b",
+      "reader_url": "./reader.html?id=eedcbb03ec605238",
       "authors": [
-        "Yongjia Wang"
+        "Antika Roy",
+        "Shajib Ghosh",
+        "Himanandhan Reddy Kottur",
+        "Liton Kumar Biswas",
+        "Akash Balaji"
       ],
-      "venue": "International Conference on Advanced Algorithms and Signal Image Processing (AASIP)",
+      "venue": "SPIE Applications of Machine Learning",
       "license": "closed",
       "citations": 0,
       "reader_status": "abstract-only"
     },
     {
-      "id": "f86642bf64da07f5",
+      "id": "50893110851c48ba",
       "category": "research",
-      "title": "Research on vehicle trajectory privacy protection mechanism based on DP-transformer model",
-      "summary": "Under the 6G integrated communication, sensing and computing framework, intelligent Internet of Vehicles (IoV) generates massive volumes of ultra-long sequential trajectory data persistently. The majority of prevailing trajectory privacy preserving algorithms are constructed upon recurrent neural networks, which bear inherent drawbacks including insufficient modeling capacity for long-range spatio-temporal dependencies, disassociated pipelines of temporal feature learning and privacy perturbation, and drastic utility degradation of trajectory records introduced by globally invariant noise magnitudes. To address the aforementioned limitations, this paper proposes an…",
+      "title": "Making Theft Useless: Adulteration-Based Protection of Proprietary Knowledge Graphs in GraphRAG Systems",
+      "summary": "Graph Retrieval-Augmented Generation (GraphRAG) has emerged as a key technique for enhancing Large Language Models (LLMs) with proprietary Knowledge Graphs (KGs) in knowledge-intensive applications. As these KGs often represent an organization's highly valuable intellectual property (IP), they face a significant risk of theft for private use. In this scenario, attackers operate in isolated environments. This private-use threat renders passive defenses like watermarking ineffective, as they require output access for detection. Simultaneously, the low-latency demands of GraphRAG make strong encryption which incurs prohibitive overhead impractical. To address these…",
       "source": "OpenAlex",
-      "url": "https://doi.org/10.1117/12.3131003",
-      "published_at": "2026-10-06T00:00:00Z",
+      "url": "https://doi.org/10.1145/3832783.3837418",
+      "published_at": "2026-10-07T00:00:00Z",
       "tags": [
-        "Privacy-Preserving Technologies in Data",
-        "differential privacy",
-        "taxi trajectory data"
+        "Adversarial Robustness in Machine Learning",
+        "GraphRAG",
+        "intellectual property protection",
+        "large language models"
       ],
       "importance": 95,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=f86642bf64da07f5",
+      "reader_url": "./reader.html?id=50893110851c48ba",
       "authors": [
-        "Caiyun Chen"
+        "W.Y. Wang",
+        "Peizhuo Lv",
+        "Yan Wang",
+        "Weiqing Huang",
+        "Rujie Dai"
       ],
-      "venue": "International Conference on Advanced Algorithms and Signal Image Processing (AASIP)",
-      "license": "closed",
+      "venue": "IEEE/ACM International Conference on Automated Software Engineering (ASE)",
+      "license": "cc-by",
       "citations": 0,
       "reader_status": "abstract-only"
     },
     {
-      "id": "b5aa0c50414206e8",
+      "id": "5f1618d1836eb547",
       "category": "research",
-      "title": "A contrastive Siamese association learning approach for 4D radar multiobject tracking",
-      "summary": "Robust multi-object tracking is essential for autonomous driving systems, where accurate perception of dynamic objects directly supports trajectory prediction, obstacle avoidance, and path planning. Compared with cameras and LiDAR, 4D millimeter-wave radar provides all-weather sensing capability and direct Doppler velocity measurements, making it a promising sensor for reliable tracking in challenging environments. However, 4D radar point clouds are typically sparse, noisy, and temporally unstable, which makes identity-consistent association difficult, especially when nearby targets interact or radar reflections fluctuate across frames. To address these challenges, this…",
+      "title": "VeriSBOM: Secure and Verifiable SBOM Sharing via Zero-Knowledge Proofs",
+      "summary": "A Software Bill of Materials (SBOM) is a key component for the transparency of software supply chain; it is a structured inventory of the components, dependencies, and associated metadata of a software artifact. However, an SBOM often contain sensitive information that organizations are unwilling to disclose in full to anyone, for two main concerns: technological risks deriving from exposing proprietary dependencies or unpatched vulnerabilities, and business risks, deriving from exposing architectural strategies. Therefore, delivering a plaintext SBOM may result in the disruption of the intellectual property of a company. To address this, we present VeriSBOM, a trustless…",
       "source": "OpenAlex",
-      "url": "https://doi.org/10.1117/12.3130608",
-      "published_at": "2026-10-06T00:00:00Z",
+      "url": "https://doi.org/10.1145/3832783.3834432",
+      "published_at": "2026-10-07T00:00:00Z",
       "tags": [
-        "Target Tracking and Data Fusion in Sensor Networks",
-        "4D radar",
-        "millimeter-wave radar",
-        "multiobject tracking"
+        "Cryptography and Data Security",
+        "software bill of materials",
+        "zero-knowledge proofs",
+        "selective disclosure"
       ],
       "importance": 95,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=b5aa0c50414206e8",
+      "reader_url": "./reader.html?id=5f1618d1836eb547",
       "authors": [
-        "Pengquan Zhang"
+        "Gianpietro Castiglione",
+        "Shahriar Ebrahimi",
+        "Narges Khakpour"
       ],
-      "venue": "International Conference on Advanced Algorithms and Signal Image Processing (AASIP)",
-      "license": "closed",
+      "venue": "IEEE/ACM International Conference on Automated Software Engineering (ASE)",
+      "license": "cc-by-nc-nd",
       "citations": 0,
       "reader_status": "abstract-only"
     },
     {
-      "id": "e04215a5b37f4d80",
+      "id": "a4d37c9090fe0b19",
       "category": "research",
-      "title": "Construction of middle Miao dialect dataset and optimization of end-to-end speech recognition model in low-resource scenarios",
-      "summary": "There is an urgent need for the intelligent research of Miao language in cultural inheritance, social services, and other aspects. However, due to the complexity of dialects, lack of standards, and insufficient data, the progress of speech recognition research is slow. In response to the difficulty of speech recognition in the middle Miao language in low resource scenarios, this study focuses on the construction of a dataset and model optimization for the middle Miao language. By collecting annotated speech and text data, a standardized and usable Miao language specific dataset is formed to meet the needs of model training and testing; Build a CTC-Conformer end-to-end…",
+      "title": "MiniPoly: Automatic Extraction of Efficient JavaScript Polyfill from Language Specification",
+      "summary": "Artifact for the paper MiniPoly: Automatic Extraction of Efficient JavaScript Polyfill from Language Specification",
       "source": "OpenAlex",
-      "url": "https://doi.org/10.1117/12.3131950",
-      "published_at": "2026-10-06T00:00:00Z",
+      "url": "https://doi.org/10.1145/3832783.3837549",
+      "published_at": "2026-10-07T00:00:00Z",
       "tags": [
-        "Speech Recognition and Synthesis",
-        "speech recognition",
-        "low-resource languages",
-        "end-to-end speech recognition"
+        "Logic, programming, and type systems",
+        "automatic extraction",
+        "language specification"
       ],
       "importance": 95,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=e04215a5b37f4d80",
+      "reader_url": "./reader.html?id=a4d37c9090fe0b19",
       "authors": [
-        "Xiaoping Wu"
+        "Anonymous",
+        "Youngmin Cho",
+        "Jihyeok Park"
       ],
-      "venue": "International Conference on Advanced Algorithms and Signal Image Processing (AASIP)",
-      "license": "closed",
-      "citations": 0,
+      "venue": "IEEE/ACM International Conference on Automated Software Engineering (ASE)",
+      "license": "cc-by",
+      "citations": 1,
       "reader_status": "abstract-only"
     },
     {
-      "id": "847ea0d1c850ea37",
+      "id": "50d1577af07ff23b",
       "category": "research",
-      "title": "Breast ultrasound lesion classification using tissue reflectivity functions recovered from radio-frequency signals",
-      "summary": "Breast ultrasound lesion classification commonly relies on B-mode images or raw radio-frequency (RF) signals. However, B-mode formation may attenuate tissue-scattering information, whereas RF signals remain affected by the imaging system point spread function (PSF). This study evaluated tissue reflectivity function (TRF) representations recovered from RF signals for breast lesion classification. TRF representations were obtained using a PSF-initialized constrained deconvolution method and compared with RF and B-mode inputs under a unified framework of region-of-interest (ROI) construction, network architecture, training protocol, and lesion-level evaluation. A total of…",
+      "title": "MalSkills: Detecting Malicious Skills in the Agentic Supply Chain via Neuro-symbolic Reasoning",
+      "summary": "MalSkills is a neuro-symbolic system for detecting malicious agent skills from heterogeneous skill artifacts.",
       "source": "OpenAlex",
-      "url": "https://doi.org/10.1117/12.3130868",
-      "published_at": "2026-10-06T00:00:00Z",
+      "url": "https://doi.org/10.1145/3832783.3834375",
+      "published_at": "2026-10-07T00:00:00Z",
       "tags": [
-        "AI in cancer detection",
-        "breast ultrasound",
-        "breast lesion classification",
-        "radio frequency signals"
+        "Adversarial Robustness in Machine Learning",
+        "neuro-symbolic reasoning",
+        "LLM agents",
+        "supply chain security"
       ],
       "importance": 95,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=847ea0d1c850ea37",
+      "reader_url": "./reader.html?id=50d1577af07ff23b",
       "authors": [
-        "Da Zhang"
+        "Shenao Wang",
+        "Junjie He",
+        "Yanjie Zhao",
+        "Yayi Wang",
+        "Kan Yu"
       ],
-      "venue": "International Conference on Advanced Algorithms and Signal Image Processing (AASIP)",
-      "license": "closed",
+      "venue": "IEEE/ACM International Conference on Automated Software Engineering (ASE)",
+      "license": "cc-by-nc-nd",
       "citations": 0,
       "reader_status": "abstract-only"
     },
     {
-      "id": "0e457667321a0cd1",
+      "id": "7cddaecf1e21b0e1",
       "category": "research",
-      "title": "Know Your Qubits, Know Your Users: Personas for Quantum Software",
-      "summary": "The advancement of quantum hardware and the intricacies of quantum computing make well-designed quantum software increasingly necessary. Due to the interdisciplinarity of the field, it is crucial to understand the perspectives and specific needs of involved stakeholders, for example, to balance the desired level of abstraction with the exposition of (hardware)-specific details. In this work, we conduct a stakeholder-based analysis to identify personas of quantum software as a means of creating meaningful, user-tailored quantum software. We conducted an expert focus group at a Dagstuhl seminar in 2024 and qualitative interviews with practitioners at conference IEEE QCE in…",
+      "title": "Certified Program Synthesis with a Multi-modal Verifier",
+      "summary": "Certified program synthesis (aka vericoding) is the process of automatically generating a program, its formal specification, and a machine-checkable proof of their alignment from a natural-language description. Two challenges make vericoding difficult. First, specifications synthesised from natural language are often either too weak to be meaningful or too strong to be implementable, yet existing approaches lack systematic means to detect such defects. Second, the landscape of program verifiers is fragmented: each tool supports a particular reasoning mode -- auto-active (e.g., Dafny, Verus) or interactive (e.g., Coq, Lean) -- with its own trade-off between automation and…",
       "source": "OpenAlex",
-      "url": "https://doi.org/10.1145/3837062.3839073",
-      "published_at": "2026-10-04T00:00:00Z",
+      "url": "https://doi.org/10.1145/3832783.3837559",
+      "published_at": "2026-10-07T00:00:00Z",
+      "tags": [
+        "Logic, programming, and type systems",
+        "velvet",
+        "lean manufacturing",
+        "specification validation"
+      ],
+      "importance": 95,
+      "content_kind": "paper",
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "reader_url": "./reader.html?id=7cddaecf1e21b0e1",
+      "authors": [
+        "Yueyang Feng",
+        "Dipesh Kafle",
+        "Vladimir Gladshtein",
+        "Vitaly Kurin",
+        "George Pîrlea"
+      ],
+      "venue": "IEEE/ACM International Conference on Automated Software Engineering (ASE)",
+      "license": "cc-by",
+      "citations": 0,
+      "reader_status": "abstract-only"
+    },
+    {
+      "id": "4b84721159896a21",
+      "category": "research",
+      "title": "KVerus: Scalable and Resilient Formal Verification Proof Generation for Rust Code",
+      "summary": "Formal verification provides the highest assurance of software correctness and security, but its application to large-scale, evolving systems remains a major challenge. While large language models (LLMs) have shown promise in automating proof generation, they often fail in real-world settings due to their inability to handle complex cross-module dependencies or changes in the codebase or the verification toolchain. We identify the fundamental problem as the Semantic-Structural Gap: LLMs operate on semantic code patterns, whereas formal verification is governed by rigid structural dependencies, a disconnect that leads to brittle, unsustainable proofs. To bridge this gap…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3832783.3834503",
+      "published_at": "2026-10-07T00:00:00Z",
+      "tags": [
+        "Logic, programming, and type systems",
+        "formal verification",
+        "proof generation",
+        "Rust"
+      ],
+      "importance": 95,
+      "content_kind": "paper",
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "reader_url": "./reader.html?id=4b84721159896a21",
+      "authors": [
+        "Yuwei Liu",
+        "Xinyi Wan",
+        "Yanhao Wang",
+        "Minghua Wang",
+        "Lin Huang"
+      ],
+      "venue": "IEEE/ACM International Conference on Automated Software Engineering (ASE)",
+      "license": "cc-by",
+      "citations": 0,
+      "reader_status": "abstract-only"
+    },
+    {
+      "id": "74feb17db3239ae9",
+      "category": "research",
+      "title": "Cochise: A Reference Harness for Autonomous Penetration Testing",
+      "summary": "Recent work on LLM-driven autonomous penetration testing reports promising results, but existing systems often bundle architectural, prompting, and tool-integration choices together. This makes it difficult to determine what is gained over a simple agent and harness. We present Cochise, a 630 LOC Python reference implementation for autonomous penetration-testing experiments. Cochise connects to a Linux execution host over SSH and supports attacking controlled target environments reachable from that jump host. The prototype implements a Planner--Executor architecture in which long-term state is maintained by the planner, while a ReAct-style executor issues commands over…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3832783.3834651",
+      "published_at": "2026-10-07T00:00:00Z",
+      "tags": [
+        "Adversarial Robustness in Machine Learning",
+        "LLM agents",
+        "reference implementation",
+        "React"
+      ],
+      "importance": 95,
+      "content_kind": "paper",
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "reader_url": "./reader.html?id=74feb17db3239ae9",
+      "authors": [
+        "Andreas Happe",
+        "Jürgen Cito"
+      ],
+      "venue": "IEEE/ACM International Conference on Automated Software Engineering (ASE)",
+      "license": "cc-by",
+      "citations": 0,
+      "reader_status": "abstract-only"
+    },
+    {
+      "id": "6c98f8304fe113e4",
+      "category": "research",
+      "title": "QUTest: A Native Testing Framework for Quantum Programs",
+      "summary": "Quantum programs are often shared as OpenQASM 3 circuits, but tests are still written in host languages such as Python with Qiskit. We present QUTest, a native framework in which both programs and tests are standard .qasm files. Tests follow the Arrange / Act / Assert pattern, while configuration, runtime requirements, and assertions are encoded as pragma comments (//%), preserving compatibility with existing OpenQASM tools. QUTest provides 12 assertion types spanning deterministic, statistical, quantum-state, and structural checks, plus a linter and an environment-aware mode for running the same test across selected runtime versions in isolated environments. Its CLI…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3832783.3834609",
+      "published_at": "2026-10-07T00:00:00Z",
       "tags": [
         "Quantum Computing Algorithms and Architecture",
-        "quantum computing software",
-        "personas",
-        "stakeholder analysis"
+        "OpenQASM",
+        "quantum state verification",
+        "structural testing"
       ],
       "importance": 95,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=0e457667321a0cd1",
+      "reader_url": "./reader.html?id=6c98f8304fe113e4",
       "authors": [
-        "Lukas Schmidbauer",
-        "Joshua Ammermann",
-        "Laura Brandon Schulz",
-        "José Manuel García-Alonso",
-        "Robert Wille"
+        "Jose Campos"
       ],
-      "venue": "ACM/IEEE International Conference on Model Driven Engineering Languages and Systems (MODELS)",
+      "venue": "IEEE/ACM International Conference on Automated Software Engineering (ASE)",
       "license": "cc-by",
       "citations": 0,
       "reader_status": "abstract-only"
     },
     {
-      "id": "c65cc9cdc4e441a6",
+      "id": "8e3e528b194e9a0d",
       "category": "research",
-      "title": "Evaluating Embedding Models and Preprocessing for Retrieval of MDE Elements in RAG Systems",
-      "summary": "Model-driven engineering tools manage large, interconnected models that may contain millions of model elements, making it increasingly difficult for engineers to locate relevant information using classical search mechanisms. Retrieval-Augmented Generation is a promising approach for enabling natural language question answering for large knowledge bases, but the applicability of text-based embedding models to highly structured, graph-shaped model artifacts has not been systematically evaluated. This paper presents an empirical study comparing 13 embedding models, 7 serialization formats, and 7 data preprocessing strategies for the retrieval of model elements. In an…",
+      "title": "Safeguarding LLM Agents from Misalignment through Provenance Analysis",
+      "summary": "As LLM agents gain increasing access to powerful tools, ensuring that their actions align with the user's intent becomes critical. When an agent's proposed action deviates from that intent---a phenomenon called misalignment---it may cause harm that is difficult to undo. Existing runtime guardrails rely on an LLM-as-a-judge paradigm that lacks a systematic framework for reasoning about alignment, often producing inconsistent or difficult-to-audit judgments. Motivated by provenance analysis, we propose a conceptual framework that formalizes misalignment detection as determining whether a proposed tool call is supported by traceable evidence in the agent's context. Based on…",
       "source": "OpenAlex",
-      "url": "https://doi.org/10.1145/3837062.3839371",
-      "published_at": "2026-10-04T00:00:00Z",
+      "url": "https://doi.org/10.1145/3832783.3837535",
+      "published_at": "2026-10-07T00:00:00Z",
       "tags": [
-        "Topic Modeling",
-        "model-driven engineering",
-        "retrieval-augmented generation",
-        "text embedding models"
+        "Adversarial Robustness in Machine Learning",
+        "LLM agents",
+        "misalignment detection",
+        "provenance analysis"
       ],
       "importance": 95,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=c65cc9cdc4e441a6",
+      "reader_url": "./reader.html?id=8e3e528b194e9a0d",
       "authors": [
-        "Julian Roßkothen",
-        "David Inca Pilco",
-        "Tobias Hey",
-        "Clemens Reichmann",
-        "Ralf Reussner"
+        "Yining She",
+        "Y Liang",
+        "Eunsuk Kang"
       ],
-      "venue": "ACM/IEEE International Conference on Model Driven Engineering Languages and Systems (MODELS)",
+      "venue": "IEEE/ACM International Conference on Automated Software Engineering (ASE)",
       "license": "cc-by",
       "citations": 0,
       "reader_status": "abstract-only"
     },
     {
-      "id": "fc588dd0fe8106e6",
+      "id": "c84d9a66babe1bad",
       "category": "research",
-      "title": "Bridging Social and Technical Compliance in Autonomous Systems through a Standardized Pattern Catalog",
-      "summary": "As autonomous systems move into human-centered environments, their correctness can no longer be defined in purely technical terms. Beyond safety and liveness, these systems must comply with social norms: the implicit, context-dependent rules that govern acceptable conduct, such as yielding to pedestrians or avoiding noise near residential areas. Temporal logics such as TCTL and CTL are well established for technical properties, but engineers have no systematic way to verify social norms alongside them: encoding such norms in (T)CTL by hand is error-prone, hard to trace back to requirements, and not reusable. We address this gap with a standardized catalog of reusable…",
+      "title": "Self-Discovering Security Oracles: Meta-learning Vulnerability Detection Strategies through Adversarial Self-Play",
+      "summary": "Current LLM-based vulnerability detection systems rely on static prompting strategies and fixed analysis pipelines, which fail to adapt to an evolving threat landscape. These approaches struggle to discover unknown vulnerability patterns beyond their training distributions, limiting their effectiveness against emerging security threats. This paper investigates adversarial meta-learning as a way for foundation models to autonomously discover vulnerability detection strategies through reinforcement learning and competitive self-play. We present MetaMorphSES (Meta-learning through Morphological Security Evolution and Synthesis), a framework that enables foundation models to…",
       "source": "OpenAlex",
-      "url": "https://doi.org/10.1145/3837062.3838903",
-      "published_at": "2026-10-04T00:00:00Z",
+      "url": "https://doi.org/10.1145/3832783.3837512",
+      "published_at": "2026-10-07T00:00:00Z",
       "tags": [
-        "Advanced Software Engineering Methodologies",
-        "autonomous systems",
-        "compliance",
-        "social compliance"
+        "Adversarial Robustness in Machine Learning",
+        "vulnerability detection",
+        "self-play",
+        "foundation models"
       ],
       "importance": 95,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=fc588dd0fe8106e6",
+      "reader_url": "./reader.html?id=c84d9a66babe1bad",
       "authors": [
-        "Luca Brodo",
-        "Giuseppe Scalora",
-        "Lukas Walter",
-        "Stefan Henkler"
+        "Md Rashedul Hasan",
+        "Hamid Bagheri"
       ],
-      "venue": "ACM/IEEE International Conference on Model Driven Engineering Languages and Systems (MODELS)",
+      "venue": "IEEE/ACM International Conference on Automated Software Engineering (ASE)",
       "license": "cc-by",
-      "citations": 0,
+      "citations": 1,
       "reader_status": "abstract-only"
     },
     {
-      "id": "3ceafd13cbb1b01a",
-      "category": "research",
-      "title": "A Non-Intrusive Requirement Federation Approach for Early Verification and Validation",
-      "summary": "This paper addresses the early verification and validation of requirements for complex systems. Such systems are specified by multiple stakeholders, each with their own viewpoints, methods, tools, priorities, and resources. As a result, their requirements are distributed across heterogeneous engineering artefacts.",
-      "source": "OpenAlex",
-      "url": "https://doi.org/10.1145/3837062.3840560",
-      "published_at": "2026-10-04T00:00:00Z",
+      "id": "6e3f7e8709b0cdf5",
+      "category": "impact",
+      "title": "All the drama around AI’s takeover of mathematics",
+      "summary": "All the drama around AI’s takeover of mathematics The Verge",
+      "source": "The Verge",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOXzNEckh1SXVQTGtqbTI4OXRuaHRPc25iV1NtSUxGdUUwZG9oOFM1NzRoNmpzMjRMeFFvRDZHbzVtTW1JWU5UcjZkS0ZiUVphNVdUNW5wbHdxRlkyYjFhQTZnY1BWSE5rWHJ5anNzWnZLZzQyOEpPY3FoWUl3SUY1RFkxSEdZYmsyc3AxZGk1RDljLVJmUlNpdm8taHI?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-06T23:26:38Z",
       "tags": [
-        "Advanced Software Engineering Methodologies",
-        "requirements engineering",
-        "model-based requirements engineering"
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
       ],
       "importance": 95,
-      "content_kind": "paper",
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=3ceafd13cbb1b01a",
-      "authors": [
-        "Yann Le Goff",
-        "Pierre Laborde",
-        "Éric Le Pors",
-        "Mickaël Kerboeuf",
-        "Alain Plantec"
-      ],
-      "venue": "ACM/IEEE International Conference on Model Driven Engineering Languages and Systems (MODELS)",
-      "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3837062.3840560?download=true",
-      "license": "cc-by",
-      "citations": 0,
-      "reader_status": "pdf-link-only"
-    },
-    {
-      "id": "f24a88a625d84be5",
-      "category": "research",
-      "title": "KERKIS: a Modeling Language for Multi-Agent System Interactions in AI-Native Software Engineering",
-      "summary": "Agents are increasingly considered first-class participants in the software development lifecycle. However, architectural choices that govern the collaboration of agents are fixed inside the frameworks that implement multi-agent systems, leading to difficulty of measuring the individual contribution of these architectural choices. In this paper, we present a novel modeling language: Knowledge-Explicit Representation of Kinded Interacting Steps (KERKIS). KERKIS can surface architectural choices into independent, manipulable variables. KERKIS represents Actors as execution engines that consume and produce typed Artifacts that flow between Steps and Processes. Using an…",
-      "source": "OpenAlex",
-      "url": "https://doi.org/10.1145/3837062.3839380",
-      "published_at": "2026-10-04T00:00:00Z",
-      "tags": [
-        "Advanced Software Engineering Methodologies",
-        "multi-agent systems",
-        "modeling languages",
-        "agent architecture"
-      ],
-      "importance": 95,
-      "content_kind": "paper",
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=f24a88a625d84be5",
-      "authors": [
-        "Konsta Kalliokoski",
-        "François Christophe",
-        "Henri Kärkkäinen",
-        "Iikka Hämäläinen",
-        "Md. Toufique Hasan"
-      ],
-      "venue": "ACM/IEEE International Conference on Model Driven Engineering Languages and Systems (MODELS)",
-      "license": "cc-by",
-      "citations": 0,
-      "reader_status": "abstract-only"
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=6e3f7e8709b0cdf5",
+      "reader_status": "public-page-excerpt"
     },
     {
       "id": "elon-grok-build-open-source-20260716",
@@ -1874,25 +1927,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "c7347a49ddd3f71a",
-      "category": "impact",
-      "title": "What to know about Anthropic’s ‘Claude-led’ biological discovery — and why scientists aren’t convinced",
-      "summary": "What to know about Anthropic’s ‘Claude-led’ biological discovery — and why scientists aren’t convinced CNN",
-      "source": "CNN",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBzUzRFekFCZGVRTWVpRExUVWJkYTVGeFYxekkxMkpmYnRJSF9sNXdOd3BGd0NZVnhzakp0eWwxR3hTX2tqdUdOZXd3WjVZRlhZaDFkOHpoVElnanRZZXhwaEdweDRCTlVPVHEzRmxUWUpPVTU5Y0NTRHpJam5zZw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-08T13:58:07Z",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "importance": 88,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=c7347a49ddd3f71a",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "9dff27ddbb180fb8",
       "category": "opensource",
       "title": "The model that didn't exist, so you made it yourself",
@@ -1908,25 +1942,6 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=9dff27ddbb180fb8",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "9c76774615c160cf",
-      "category": "impact",
-      "title": "Nobel physics winner's pride at pioneering AI role",
-      "summary": "Nobel physics winner's pride at pioneering AI role Phys.org",
-      "source": "Phys.org",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9WaUFiTXZVY0hlYnVQTU9qbTNVY2RvRXpEa1p3Y1lfaWJwbTdjN2g4c0pTeHNCZ2RpSi1uMnF6RFFtVjhsUV9uZ1ZFazczTENYREoySG1PRHBEUFNFOFdaU29oUG5ZeHFoZ1dpSDVGTEE0Zw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-07T22:40:01Z",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "importance": 88,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=9c76774615c160cf",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2003,6 +2018,25 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "e057a9105bce6edb",
+      "category": "impact",
+      "title": "Sharing AI progress in mathematics",
+      "summary": "Sharing AI progress in mathematics OpenAI",
+      "source": "OpenAI",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9HRmFiYm1mWTNPVTVGTk9faFRwRVZyTjhmejJwa0U3QjU3djh5SlpXT3ZhUlF2M0lXcV9jNkNka1kzY3RKNkRTTnpJVW16ZG1QdmdPU3owRXdCYzFLSkdTb3pIZWdJV0k1R3o3dw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-06T22:21:50Z",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "importance": 87,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=e057a9105bce6edb",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "d04d2635f48aadaf",
       "category": "impact",
       "title": "OpenAI unleashes hundreds more math results upon a field already in shock",
@@ -2015,7 +2049,7 @@
         "Mathematics",
         "Discovery"
       ],
-      "importance": 88,
+      "importance": 87,
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=d04d2635f48aadaf",
@@ -2034,47 +2068,10 @@
         "Agents",
         "Reasoning"
       ],
-      "importance": 88,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=cc7dc71cefd65795",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "ec0d1f9562782ccf",
-      "category": "frontier",
-      "title": "OpenAI shelves new AI model release over safety concerns",
-      "summary": "OpenAI shelves new AI model release over safety concerns Reuters",
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNMXc5dDQ0V0FSdEZfMWN3YjNGcG1jZmdHaG1mTDRwMExSZ2pLcjFzRzN1aU0tZFNJa0ZBZXVDdzJJQWxqN01WTmxUbXcyOFEyU1hIUjVpLXlJMW5SVUpiTWRkOHFQd1lyYmVCRHM1UzRtc3lPQXdoRHVvQmQ2ZGp2dGFjLXA1YWNhRjhDc0Z0MmVfejhYdk1IOFEzdUVTYl9Rc0hOWWVKY0RzeENVaks0eFZR?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-09-29T07:00:00Z",
-      "tags": [
-        "Frontier Labs",
-        "Industry"
-      ],
-      "importance": 88,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=ec0d1f9562782ccf",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "b5155e91089bfe78",
-      "category": "impact",
-      "title": "What Anthropic’s AI biology experiment actually showed",
-      "summary": "What Anthropic’s AI biology experiment actually showed IBM",
-      "source": "IBM",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOZmpmeWsyejA2eFFOUWRnb2ZrRVBXX2tDVTJ1ajJ2UlF2Y0FfVTFGeWRoWmR4Vi1DdTU1RDNzQjZWY0VtbnZNdWJmNGNnYmdZQ1JVLXhSSE54Tm02T0U0QXp3RkNWanNtckxPMXB1NDNYbkJMZ3NObV96QWpoeGU2cw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-06T06:04:22Z",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
       "importance": 87,
       "content_kind": "article",
       "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=b5155e91089bfe78",
+      "reader_url": "./reader.html?id=cc7dc71cefd65795",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2283,13 +2280,13 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "b95de5948b456a09",
+      "id": "e2729604803aecea",
       "category": "voices",
-      "title": "Grok 4.7 ranks first in legal matters",
-      "summary": "Grok 4.7 ranks first in legal matters X",
+      "title": "We’re just going to have @Grok Bots manage Grokipedia",
+      "summary": "We’re just going to have @Grok Bots manage Grokipedia X",
       "source": "X",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBpdmhZWHhtSkM0TV9ERUZFN2JOM3ZUdFdrRjFoTmdPSGdJLW03dFJBWWZYNFhnY1F0Mk0wQmlSc2VJLU9KY3h4TnZ4ZHI2d2N2eWRtRzlVdzIzZzFwMmc?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-08T18:54:23Z",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBKYmZmaUFBX2lJVVRWOVE4QTJVZm5XVW9pMXFlVEgxOERVWjFmV3M1dk8wdzdlMnFoblZZYkNBVU9ad1BVRmhEXzYyQjdicjdJdUVZVHBtbEFURTNUU1E?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-09T03:19:24Z",
       "tags": [
         "X",
         "Founder Watch",
@@ -2298,7 +2295,7 @@
       "importance": 80,
       "content_kind": "social",
       "verification": "公开平台索引，需查看原帖",
-      "reader_url": "./reader.html?id=b95de5948b456a09",
+      "reader_url": "./reader.html?id=e2729604803aecea",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2349,7 +2346,7 @@
         "Academic Startup",
         "Funding"
       ],
-      "importance": 79,
+      "importance": 78,
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=d92e0e9dc18eea51",
@@ -2418,8 +2415,8 @@
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZ0hQeXM3LUdQR2xCTThQOUZETzNEWk04U25CS0VkNjlrTU15allNdTh4eGFvV1hfdVpvYXRlRk9MZnFnWUhLYTRzVjNzclZDMVgtVFBKSTRMZXZzcEVURXJwSVBTN2JjZHQ3cFNvbjdGckdiU1k5YUNmeE05RGdXR3BTUjZPcEVpOGNoUkpnMVFJNmNxZVRfc1hlU3VnZGtzREFybG5B?oc=5&hl=en-US&gl=US&ceid=US:en",
       "published_at": "2026-09-29T21:14:49Z",
       "tags": [
-        "Founder Watch",
-        "Embodied AI"
+        "Academic Startup",
+        "Funding"
       ],
       "importance": 77,
       "content_kind": "article",
@@ -2554,42 +2551,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "e3aaa0fd79df2d4b",
-      "category": "opensource",
-      "title": "Opinion | A.I. Is a Threat, but Not in the Way You Think",
-      "summary": "Opinion | A.I. Is a Threat, but Not in the Way You Think The New York Times",
-      "source": "The New York Times",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPRzJ0NUZMSVM3aTNJOTZObmJCWE9pLTFRVjRySFRsNVdueVlwTk9MX2VoRUVxY0FoWXZiRVU0MnhjT0pSNmRpeFl6eEhDcHJHVFVHT01zZ3dzNGZFZUtJbkhISUN1Vk9pcXVYdnppc0ZLQnAzZ1ppcVd1ZEZ5LXpha05RaXdWUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-09-19T07:00:00Z",
-      "tags": [
-        "Open Source",
-        "Models & Tools"
-      ],
-      "importance": 74,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=e3aaa0fd79df2d4b",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "09a9a05598416568",
-      "category": "opensource",
-      "title": "Hugging Face Hack Shows Humans Can Keep AI In Check",
-      "summary": "Hugging Face Hack Shows Humans Can Keep AI In Check Bloomberg.com",
-      "source": "Bloomberg.com",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOWEN1bnpQQWxMZjBUTkJVdmlHUDhaZnJRUEloYldMdkZEZzJKX3hoc1pGWENYQ3BvTktKUjM2ZmJFMFFLUmhMRVJGR21WRHkzZ2FaQ3k4ZzRDaGw4MWhhSkhnZGdDNXdGeFdSLVAzRmVId1VCYVJBMzM2SUUyZTRRRFA5YllEZFg4WUVFZ2JlYUVFbi0xU0R0dlJNQVNqSndxNlVYSWQtRkN1ZmJmSkRLeU9paXVWT3gyWGhDQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-09-18T07:00:00Z",
-      "tags": [
-        "Open Source",
-        "Models & Tools"
-      ],
-      "importance": 74,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=09a9a05598416568",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "48f819bcd16d27ea",
       "category": "policy",
       "title": "Sen. Maria Cantwell looks to federal testing role in AI safety framework",
@@ -2662,6 +2623,24 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "d31465034d4f19be",
+      "category": "opensource",
+      "title": "A Timeline of Developments in AI Safety Since the Attack on Hugging Face",
+      "summary": "A Timeline of Developments in AI Safety Since the Attack on Hugging Face Insurance Journal",
+      "source": "Insurance Journal",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE81Sk5yVHVibGJ2UE8zUkRJWEFWSXJQU21SZ0ZxQndvSEt2emgxcl95UkdvMzhVS3dDeTJaU2VyQUYxRVE3SDdOc2YxZU5BQ0J6UmhkSUZwQ2dWR1hIcFcybk1tR3ZMYTZzQkUwQ2RwdDUwdUxJUjNZ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-09T05:41:24Z",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "importance": 70,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=d31465034d4f19be",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "c846435ed5aaac37",
       "category": "policy",
       "title": "Wes Moore calls for AI regulation at Baltimore summit",
@@ -2673,7 +2652,7 @@
         "Policy",
         "Safety"
       ],
-      "importance": 71,
+      "importance": 70,
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=c846435ed5aaac37",
@@ -2691,28 +2670,28 @@
         "Policy",
         "Safety"
       ],
-      "importance": 71,
+      "importance": 70,
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=a8b76d3807a23c43",
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "487a8271393a48b2",
-      "category": "opensource",
-      "title": "Rob Bonta subpoenas OpenAI over Hugging Face hack",
-      "summary": "Rob Bonta subpoenas OpenAI over Hugging Face hack Denver Gazette",
-      "source": "Denver Gazette",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOcE94cmZZU3RPcGc5TUFKYVZpSjRZY0dsRDVrNm01WnhhUTRJQ2NybnpVLWxnZXFOZXJqMjh6Q21fajd3LUpKbkZoaHVBYkY1cDhqN0JLdlhyWWlzWWYxU2pxOTFpamZfQ3p4Yzl2RDdOVWd0WWZELWIxbjlXUFlKSUpQUm5YWGZzSGk4WmxvM3ZDXzVJX2c?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-01T20:30:03Z",
+      "id": "8672cda64b08a62d",
+      "category": "policy",
+      "title": "Trump Had the Chance to Address U.S.-China AI Safety. He Threw Xi a Party Instead.",
+      "summary": "Trump Had the Chance to Address U.S.-China AI Safety. He Threw Xi a Party Instead. Carnegie Endowment for International Peace",
+      "source": "Carnegie Endowment for International Peace",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9WTjZ0NTNTNmtlVFQtaVA4czZnLUtuVDVMTEF6eGNndjJXTzc4ZDROU0Q5UUpBLXUxX253bmNETWhZbVVkNG1PUk95d0RWNGxCUzFxWWxLdmZQSFZsWmZCUjFXaFRTemw4Z2hmZVhaWWJYX2R4NEZWSnlGdU9Hdw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-30T07:00:00Z",
       "tags": [
-        "Open Source",
-        "Models & Tools"
+        "Policy",
+        "Safety"
       ],
-      "importance": 69,
+      "importance": 70,
       "content_kind": "article",
       "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=487a8271393a48b2",
+      "reader_url": "./reader.html?id=8672cda64b08a62d",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2752,6 +2731,42 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "487a8271393a48b2",
+      "category": "opensource",
+      "title": "Rob Bonta subpoenas OpenAI over Hugging Face hack",
+      "summary": "Rob Bonta subpoenas OpenAI over Hugging Face hack Denver Gazette",
+      "source": "Denver Gazette",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOcE94cmZZU3RPcGc5TUFKYVZpSjRZY0dsRDVrNm01WnhhUTRJQ2NybnpVLWxnZXFOZXJqMjh6Q21fajd3LUpKbkZoaHVBYkY1cDhqN0JLdlhyWWlzWWYxU2pxOTFpamZfQ3p4Yzl2RDdOVWd0WWZELWIxbjlXUFlKSUpQUm5YWGZzSGk4WmxvM3ZDXzVJX2c?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-01T20:30:03Z",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "importance": 68,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=487a8271393a48b2",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "840c0d3db440e82b",
+      "category": "opensource",
+      "title": "OpenAI hit with landmark lawsuit following Hugging Face hack",
+      "summary": "OpenAI hit with landmark lawsuit following Hugging Face hack Axios",
+      "source": "Axios",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE51dmdLSEl6NmNpYzhnSW1SeVBBMTZRcmFtVkpKUUltTV9TbllGS0N3cU1hSkRETmdJd0JqenIxeG5XaElGUmhlLV9aLWhjX2t5aW5vZng2OWRzUk5XMWRkcUVnanlwR2p0U2JtREYtZVppZw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-29T07:00:00Z",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "importance": 68,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=840c0d3db440e82b",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "373eb7f0c38d08dd",
       "category": "policy",
       "title": "AI Safety: Governor Hochul Announces Next Steps to Regulate Major AI Developers and Protect New Yorkers",
@@ -2767,24 +2782,6 @@
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=373eb7f0c38d08dd",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "38a3890572654baf",
-      "category": "policy",
-      "title": "Republican and Democratic states defy Trump on AI regulation",
-      "summary": "Republican and Democratic states defy Trump on AI regulation Politico",
-      "source": "Politico",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQS21GNXByWjV1aVJlVHJZRDRHakdCQXdGekJialBnakxVcnVfOGk4N0RzbnQ5ZTFPU2o5RnNRTVN4Z1FIbVdzMmFCSWNnZDF4alpKdzByejJIeDVjalBSSXR0VjlrT3hmNTBjMzJQV0E0cWtMc1Rwdk0wT2JEQUNpX2IwLWZFRk91?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-09-18T07:00:00Z",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "importance": 68,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=38a3890572654baf",
       "reader_status": "public-page-excerpt"
     }
   ]
