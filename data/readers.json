@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-10T12:27:53Z",
-  "record_count": 129,
+  "generated_at": "2026-10-10T21:40:51Z",
+  "record_count": 130,
   "records": [
     {
       "id": "jacobian-fable-20260720",
@@ -786,6 +786,90 @@
       "reading_minutes": 1
     },
     {
+      "id": "69a6dff164ab81f4",
+      "kind": "article",
+      "title": "AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome",
+      "source": "Google DeepMind",
+      "source_url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
+      "published_at": "2026-09-08T14:00:15Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "DeepMind",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "resolved_url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
+      "key_points": [
+        "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "rhb-icml-2026",
+      "kind": "paper",
+      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
+      "source": "OpenReview · arXiv",
+      "source_url": "https://arxiv.org/abs/2605.02964",
+      "published_at": "2026-06-24T00:00:00Z",
+      "authors": [
+        "Kunvar Thaman"
+      ],
+      "venue": "ICML 2026",
+      "tags": [
+        "Reward Hacking",
+        "Agent Safety",
+        "Evaluation"
+      ],
+      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
+      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/rhb-icml-2026.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://arxiv.org/pdf/2605.02964",
+      "key_points": [
+        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
+        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
+        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
+        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
+        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
+        },
+        {
+          "title": "关键结果",
+          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
+        },
+        {
+          "title": "局限与结论",
+          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
+        }
+      ],
+      "reading_minutes": 46
+    },
+    {
       "id": "89d61c87b91f39fc",
       "kind": "article",
       "title": "Introducing the Anthropic Cyber Mission",
@@ -835,102 +919,6 @@
         }
       ],
       "reading_minutes": 1
-    },
-    {
-      "id": "69a6dff164ab81f4",
-      "kind": "article",
-      "title": "AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome",
-      "source": "Google DeepMind",
-      "source_url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
-      "published_at": "2026-09-08T14:00:15Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "DeepMind",
-        "Official"
-      ],
-      "verification": "官方来源",
-      "summary": "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
-      "key_points": [
-        "How predicting the molecular impact of every possible single-letter DNA variant in the human genome will help accelerate our understanding of biology.",
-        "Today, we are introducing AlphaGenome Atlas: a platform ( detailed in our paper ) containing predictions for the effects of 9 billion single-nucleotide variants — every single-letter change possible — in the human genome.",
-        "It is the most comprehensive catalogue of how genetic mutations affect molecular biology, and it is available for academic research through an intuitive and free-to-use website portal .",
-        "Mastering it is a grand challenge that could transform our ability to understand biology and treat disease.",
-        "But progress has been limited by a fundamental problem: interpreting how genetic variations impact biology at a molecular level."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "How predicting the molecular impact of every possible single-letter DNA variant in the human genome will help accelerate our understanding of biology.",
-            "Today, we are introducing AlphaGenome Atlas: a platform ( detailed in our paper ) containing predictions for the effects of 9 billion single-nucleotide variants — every single-letter change possible — in the human genome.",
-            "It is the most comprehensive catalogue of how genetic mutations affect molecular biology, and it is available for academic research through an intuitive and free-to-use website portal .",
-            "Mastering it is a grand challenge that could transform our ability to understand biology and treat disease.",
-            "But progress has been limited by a fundamental problem: interpreting how genetic variations impact biology at a molecular level."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "How predicting the molecular impact of every possible single-letter DNA variant in the human genome will help accelerate our understanding of biology.",
-            "Today, we are introducing AlphaGenome Atlas: a platform ( detailed in our paper ) containing predictions for the effects of 9 billion single-nucleotide variants — every single-letter change possible — in the human genome. It is the most comprehensive catalogue of how genetic mutations affect molecular biology, and it is available for academic research through an intuitive and free-to-use website portal .",
-            "DNA is the language of life. Mastering it is a grand challenge that could transform our ability to understand biology and treat disease. But progress has been limited by a fundamental problem: interpreting how genetic variations impact biology at a molecular level. With roughly 9 billion possible single-letter mutations in the human genome, testing each one in the lab is practically impossible."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "rhb-icml-2026",
-      "kind": "paper",
-      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
-      "source": "OpenReview · arXiv",
-      "source_url": "https://arxiv.org/abs/2605.02964",
-      "published_at": "2026-06-24T00:00:00Z",
-      "authors": [
-        "Kunvar Thaman"
-      ],
-      "venue": "ICML 2026",
-      "tags": [
-        "Reward Hacking",
-        "Agent Safety",
-        "Evaluation"
-      ],
-      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
-      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/rhb-icml-2026.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://arxiv.org/pdf/2605.02964",
-      "key_points": [
-        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
-        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
-        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
-        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
-        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
-        },
-        {
-          "title": "关键结果",
-          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
-        },
-        {
-          "title": "局限与结论",
-          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
-        }
-      ],
-      "reading_minutes": 46
     },
     {
       "id": "58d924a529fd263e",
@@ -1953,7 +1941,7 @@
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://x.com/elonmusk/status/2077495635687723408",
       "key_points": [
-        "Elon Musk @elonmusk Grok Build is now open source SpaceXAI @SpaceXAI Jul 15 We've open-sourced Grok Build and have reset usage limits for all users.",
+        "Elon Musk @elonmusk Grok Build is now open source SpaceX Super Intelligence @SpaceXSI Jul 15 We've open-sourced Grok Build and have reset usage limits for all users.",
         "Open sourcing Grok Build allows anyone to support making a reliable and robust harness.",
         "Check out our code, including the Git repo for the Grok Build CLI. x.ai/open-source 8:48 PM · Jul 15, 2026 · 4.8M Views 1.8K 2.3K 19K 1.3K Aurelia Marcella @Aurelia32824 Jul 15 I am a longtime Grok user and particularly appreciate the broad, versatile intelligence – perfect for marketing tasks like strategy development, market analysis, creative concepts…",
         "Grok delivers exactly what narrow specialist tools cannot.",
@@ -1967,7 +1955,7 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Elon Musk @elonmusk Grok Build is now open source SpaceXAI @SpaceXAI Jul 15 We've open-sourced Grok Build and have reset usage limits for all users.",
+            "Elon Musk @elonmusk Grok Build is now open source SpaceX Super Intelligence @SpaceXSI Jul 15 We've open-sourced Grok Build and have reset usage limits for all users.",
             "Open sourcing Grok Build allows anyone to support making a reliable and robust harness.",
             "Check out our code, including the Git repo for the Grok Build CLI. x.ai/open-source 8:48 PM · Jul 15, 2026 · 4.8M Views 1.8K 2.3K 19K 1.3K Aurelia Marcella @Aurelia32824 Jul 15 I am a longtime Grok user and particularly appreciate the broad, versatile intelligence – perfect for marketing tasks like strategy development, market analysis, creative concepts…",
             "Grok delivers exactly what narrow specialist tools cannot.",
@@ -1977,7 +1965,7 @@
         {
           "title": "原文短摘录",
           "paragraphs": [
-            "Elon Musk @elonmusk Grok Build is now open source SpaceXAI @SpaceXAI Jul 15 We've open-sourced Grok Build and have reset usage limits for all users. Open sourcing Grok Build allows anyone to support making a reliable and robust harness. Check out our code, including the Git repo for the Grok Build CLI. x.ai/open-source 8:48 PM · Jul 15, 2026 · 4.8M Views 1.8K 2.3K 19K 1.3K",
+            "Elon Musk @elonmusk Grok Build is now open source SpaceX Super Intelligence @SpaceXSI Jul 15 We've open-sourced Grok Build and have reset usage limits for all users. Open sourcing Grok Build allows anyone to support making a reliable and robust harness. Check out our code, including the Git repo for the Grok Build CLI. x.ai/open-source 8:48 PM · Jul 15, 2026 · 4.8M Views 1.8K 2.3K 19K 1.3K",
             "Aurelia Marcella @Aurelia32824 Jul 15 I am a longtime Grok user and particularly appreciate the broad, versatile intelligence – perfect for marketing tasks like strategy development, market analysis, creative concepts, and graphic prompting. Grok delivers exactly what narrow specialist tools cannot. In professional Show more 3 4 49 115K",
             "Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Jul 15 Grok keeps on delivering 😎🔥 1 7 41 3.5K"
           ]
@@ -2626,6 +2614,46 @@
       "reading_minutes": 1
     },
     {
+      "id": "56bcd61aff13d689",
+      "kind": "article",
+      "title": "Did Anthropic’s A.I. Really Make a Scientific Discovery on Its Own?",
+      "source": "The New York Times",
+      "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQREYyMjZVV2F2QllnOVpLTnc4WWR3OGphX3A5WlJRTjhUTEROU0FIb2h0Wkgzb0h1VWRqNnhaUFlkdHRQb0dpXzFVeFlrZVVBcjQ5RzRPVW00MXNmdEV2LVNnRE00TkVZSTdaenhyNE9BOE9GdjlyTUZfeVlMa1JhYlZmNkxIUQ?oc=5",
+      "published_at": "2026-09-27T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Did Anthropic’s A.I. Really Make a Scientific Discovery on Its Own? The New York Times",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQREYyMjZVV2F2QllnOVpLTnc4WWR3OGphX3A5WlJRTjhUTEROU0FIb2h0Wkgzb0h1VWRqNnhaUFlkdHRQb0dpXzFVeFlrZVVBcjQ5RzRPVW00MXNmdEV2LVNnRE00TkVZSTdaenhyNE9BOE9GdjlyTUZfeVlMa1JhYlZmNkxIUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Did Anthropic’s A.I. Really Make a Scientific Discovery on Its Own? The New York Times"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "34d0a48f70cdf6e9",
       "kind": "article",
       "title": "Agent Lightning v1.0: A 3,500-Line Lightweight Agentic RL Framework for Training Agents with Real Harnesses",
@@ -2768,46 +2796,6 @@
             "In this conversation with Principal Applied Scientist Chad Atalla , she explores the role evaluation plays in pushing the performance boundaries of today’s AI systems to meet user needs and the “surprising failures” that emerge when models are tested beyond traditional benchmarks. Neville also shares practical guidance for working with current AI systems and discusses why looking closely at data matters when results defy expectations, and what decades of AI progress have taught her about predicting what comes next.",
             "From an unexpected career trajectory to the frontier of AI interaction and learning, this episode asks a larger question: what can we learn when the path—whether human or artificial—doesn’t unfold the way we expect?"
           ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "3cb8bc319ea7e4e6",
-      "kind": "article",
-      "title": "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program",
-      "source": "Reuters",
-      "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPMnNocmF2MC1saXA1bW95QU5PcXUyNHZrZUdaZUFKNXVnYk1Yejg4UTlqa242RmJGMnBlZ1pkeC1KdERaazR1TGtSTHkwMFFLNTZQa3VBdHJzcWlWR0hldTYtVm5RQ3hQZDE2LXFfZ3gzeHVqQ3pNR1pEUmpHbnpUMlB1UkYtTHpfeURTVU9Kb082R3ZrbnA1VVZmcEJlcnZBUlEySmtkUQ?oc=5",
-      "published_at": "2026-09-18T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program Reuters",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPMnNocmF2MC1saXA1bW95QU5PcXUyNHZrZUdaZUFKNXVnYk1Yejg4UTlqa242RmJGMnBlZ1pkeC1KdERaazR1TGtSTHkwMFFLNTZQa3VBdHJzcWlWR0hldTYtVm5RQ3hQZDE2LXFfZ3gzeHVqQ3pNR1pEUmpHbnpUMlB1UkYtTHpfeURTVU9Kb082R3ZrbnA1VVZmcEJlcnZBUlEySmtkUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program Reuters"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -3056,6 +3044,46 @@
             "Inspired by a deeply personal story, the film centers on an 11-year-old boy who recreates his late mother’s voice and essence out of love and code. What emerges across the town’s networks quietly cares for his entire community — reflecting the filmmaker’s belief that technology’s greatest promise lies in empathy and human connection.",
             "Chosen from more than 2,500 entries worldwide, the solo-developed project receives $100,000 alongside $2.5 million in feature production funding. Through Google’s 100 ZEROS initiative, we are partnering with Range Media Partners to help bring this story to the big screen."
           ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "3cb8bc319ea7e4e6",
+      "kind": "article",
+      "title": "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program",
+      "source": "Reuters",
+      "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPMnNocmF2MC1saXA1bW95QU5PcXUyNHZrZUdaZUFKNXVnYk1Yejg4UTlqa242RmJGMnBlZ1pkeC1KdERaazR1TGtSTHkwMFFLNTZQa3VBdHJzcWlWR0hldTYtVm5RQ3hQZDE2LXFfZ3gzeHVqQ3pNR1pEUmpHbnpUMlB1UkYtTHpfeURTVU9Kb082R3ZrbnA1VVZmcEJlcnZBUlEySmtkUQ?oc=5",
+      "published_at": "2026-09-18T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program Reuters",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPMnNocmF2MC1saXA1bW95QU5PcXUyNHZrZUdaZUFKNXVnYk1Yejg4UTlqa242RmJGMnBlZ1pkeC1KdERaazR1TGtSTHkwMFFLNTZQa3VBdHJzcWlWR0hldTYtVm5RQ3hQZDE2LXFfZ3gzeHVqQ3pNR1pEUmpHbnpUMlB1UkYtTHpfeURTVU9Kb082R3ZrbnA1VVZmcEJlcnZBUlEySmtkUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program Reuters"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -3711,46 +3739,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "a312b9b80aaf5e87",
-      "kind": "article",
-      "title": "As AI Closed In on ‘Unique Games’ Proof, Researchers Raced to Beat the Machines",
-      "source": "Quanta Magazine",
-      "source_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOU244TzFhdnZtRFdFUmpGSDdaUHJBWmlJaWtRNlRxNEtZYU5ob3VBaWhsYkJOUGRPbU1RZlBWbDY4SWRXOC1zRm03YngydGlyX1FUMExDcHdka3dMS2JTYTNzVFZ1anAtU3I2dVR2Z2NDWHFNRmdNLU5LUTFQZm11UlJHRUw0MmVXSXR3b0MzUDZfVkJ0Ylh3eENHRG9LbE5JY3NCamJhTjJQMXBnR0lYNnZxODFHdmpL?oc=5",
-      "published_at": "2026-10-07T15:09:54Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "As AI Closed In on ‘Unique Games’ Proof, Researchers Raced to Beat the Machines Quanta Magazine",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOU244TzFhdnZtRFdFUmpGSDdaUHJBWmlJaWtRNlRxNEtZYU5ob3VBaWhsYkJOUGRPbU1RZlBWbDY4SWRXOC1zRm03YngydGlyX1FUMExDcHdka3dMS2JTYTNzVFZ1anAtU3I2dVR2Z2NDWHFNRmdNLU5LUTFQZm11UlJHRUw0MmVXSXR3b0MzUDZfVkJ0Ylh3eENHRG9LbE5JY3NCamJhTjJQMXBnR0lYNnZxODFHdmpL?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "As AI Closed In on ‘Unique Games’ Proof, Researchers Raced to Beat the Machines Quanta Magazine"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "1fce2f86ead01bd3",
       "kind": "article",
       "title": "Introducing Falcon ASR",
@@ -3989,46 +3977,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "91acac9c4120bfb0",
-      "kind": "article",
-      "title": "AMD to buy Fei-Fei Li's World Labs in $8.2 billion bet on 'physical AI'",
-      "source": "Reuters",
-      "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUEpLOGExLXd6b0dKeXJadmdubW9zdWZzTDB6eVhLb0RSN3RSQTYyenBJdTVRdmR6Vm5jRnp4VHVQQ1NEbGFQb1J0V08xcThIRUs1aG5NQ0piLXhEQTRhcXZQNEZkMUVuaHVyLTRNVjhjbDEtZmxuTGpuR2d1ZDU2b1pGdkxqS1o2TUNDcUMyaFUzRVdmUUpPQndkdEZMZw?oc=5",
-      "published_at": "2026-09-28T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Researcher Watch",
-        "Vision",
-        "World Models"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "AMD to buy Fei-Fei Li's World Labs in $8.2 billion bet on 'physical AI' Reuters",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUEpLOGExLXd6b0dKeXJadmdubW9zdWZzTDB6eVhLb0RSN3RSQTYyenBJdTVRdmR6Vm5jRnp4VHVQQ1NEbGFQb1J0V08xcThIRUs1aG5NQ0piLXhEQTRhcXZQNEZkMUVuaHVyLTRNVjhjbDEtZmxuTGpuR2d1ZDU2b1pGdkxqS1o2TUNDcUMyaFUzRVdmUUpPQndkdEZMZw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "AMD to buy Fei-Fei Li's World Labs in $8.2 billion bet on 'physical AI' Reuters"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "0df5597e0f6bc79a",
       "kind": "article",
       "title": "AMD to buy Fei-Fei Li’s AI start-up for $8bn",
@@ -4093,6 +4041,45 @@
         {
           "title": "内容概览",
           "body": "AMD to Buy Fei-Fei Li’s World Labs AI Startup for $8.2 Billion Bloomberg.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "91acac9c4120bfb0",
+      "kind": "article",
+      "title": "AMD to buy Fei-Fei Li's World Labs in $8.2 billion bet on 'physical AI'",
+      "source": "Reuters",
+      "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUEpLOGExLXd6b0dKeXJadmdubW9zdWZzTDB6eVhLb0RSN3RSQTYyenBJdTVRdmR6Vm5jRnp4VHVQQ1NEbGFQb1J0V08xcThIRUs1aG5NQ0piLXhEQTRhcXZQNEZkMUVuaHVyLTRNVjhjbDEtZmxuTGpuR2d1ZDU2b1pGdkxqS1o2TUNDcUMyaFUzRVdmUUpPQndkdEZMZw?oc=5",
+      "published_at": "2026-09-28T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "AMD to buy Fei-Fei Li's World Labs in $8.2 billion bet on 'physical AI' Reuters",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUEpLOGExLXd6b0dKeXJadmdubW9zdWZzTDB6eVhLb0RSN3RSQTYyenBJdTVRdmR6Vm5jRnp4VHVQQ1NEbGFQb1J0V08xcThIRUs1aG5NQ0piLXhEQTRhcXZQNEZkMUVuaHVyLTRNVjhjbDEtZmxuTGpuR2d1ZDU2b1pGdkxqS1o2TUNDcUMyaFUzRVdmUUpPQndkdEZMZw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AMD to buy Fei-Fei Li's World Labs in $8.2 billion bet on 'physical AI' Reuters"
         },
         {
           "title": "公开页面要点",
@@ -4348,6 +4335,46 @@
       "reading_minutes": 1
     },
     {
+      "id": "16531b0a16bd4e13",
+      "kind": "social",
+      "title": "Grok @Bot can now set up its own email",
+      "source": "X",
+      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1sR3dOMEtDMWJXajZlbnV3WkRLM3U4djdFUnBEdXUyb2gxcUtSSjR2Tk9yeGlsazlCc2hCcEdwVm9oS1A2VXdGdTdSQlQ3Nng2LXhpMjlsMmVhOFdEV2c?oc=5",
+      "published_at": "2026-10-09T17:37:55Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "Grok @Bot can now set up its own email X",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1sR3dOMEtDMWJXajZlbnV3WkRLM3U4djdFUnBEdXUyb2gxcUtSSjR2Tk9yeGlsazlCc2hCcEdwVm9oS1A2VXdGdTdSQlQ3Nng2LXhpMjlsMmVhOFdEV2c?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Grok @Bot can now set up its own email X"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "43124613add0d573",
       "kind": "article",
       "title": "Washington State University Taps AI Company for Sports Comms",
@@ -4372,45 +4399,6 @@
         {
           "title": "内容概览",
           "body": "Washington State University Taps AI Company for Sports Comms GovTech"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "8caab3874fc2d425",
-      "kind": "article",
-      "title": "Would you move to China to grow your AI startup?",
-      "source": "Medium",
-      "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNVWxJc1MyRzlwdEl0SFFJRlFJakk4M0pqa0VMOUVHT0pHZ2tHRUpiOFFSdHd1dEhmSk92Sm81RkxrQk9vV2l0TUlvb2F2YzNITXlQUjZOTmg3LWVKblc2Vm5sUmhCQ1RFbGlQSWVPS3FXSlhpc1pjSlVaa2plTHdsQ3VXekZhbmVRZy1Qdkp4a1JRVU8yUGpN?oc=5",
-      "published_at": "2026-10-08T16:49:06Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Would you move to China to grow your AI startup? Medium",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNVWxJc1MyRzlwdEl0SFFJRlFJakk4M0pqa0VMOUVHT0pHZ2tHRUpiOFFSdHd1dEhmSk92Sm81RkxrQk9vV2l0TUlvb2F2YzNITXlQUjZOTmg3LWVKblc2Vm5sUmhCQ1RFbGlQSWVPS3FXSlhpc1pjSlVaa2plTHdsQ3VXekZhbmVRZy1Qdkp4a1JRVU8yUGpN?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Would you move to China to grow your AI startup? Medium"
         },
         {
           "title": "公开页面要点",
@@ -4582,30 +4570,30 @@
       "reading_minutes": 1
     },
     {
-      "id": "5af5e10deef61fc6",
+      "id": "1e02d4377168eecd",
       "kind": "article",
-      "title": "AMD to Acquire World Labs for $8.2 Billion",
-      "source": "WSJ",
-      "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQLVpVcHpJVVFBektEcldpS0ttVXk1a2dkR0kzZEtUNmp3d1hQNzVEb3NOZVhEc1piQmtIYlI3WF9QUExkT2R3TW9tOW1ZZ0RpSGdELWxBbVRldmYtRmNUQjRxWjdZeS1RZnVvNFhvbU9pQzFfd2RyXzYxMnR4X3RpNFlBUzU?oc=5",
-      "published_at": "2026-09-28T07:00:00Z",
+      "title": "Opinion | The Wild West of A.I. Needs to End. Here’s How.",
+      "source": "The New York Times",
+      "source_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNWlF5akhVUTNRUkYyRDc4cmpRYzR1XzBlU3ZmcDU5c0VPM1pWTU9kQlBoVjh3X1ZSV0VwaVlXMUFTR19xeVNTNDRWRlp0bnNidVB5amN5LVpfY3VoWGU5REtfRUZXMDFUNmEyRXFwaXNFUWppRTdWNndDWW1LdlRkSUdhZWJFZFdJakZBVG1Zcw?oc=5",
+      "published_at": "2026-09-24T07:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
-        "Academic Startup",
-        "Funding"
+        "Policy",
+        "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "AMD to Acquire World Labs for $8.2 Billion WSJ",
+      "summary": "Opinion | The Wild West of A.I. Needs to End. Here’s How. The New York Times",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQLVpVcHpJVVFBektEcldpS0ttVXk1a2dkR0kzZEtUNmp3d1hQNzVEb3NOZVhEc1piQmtIYlI3WF9QUExkT2R3TW9tOW1ZZ0RpSGdELWxBbVRldmYtRmNUQjRxWjdZeS1RZnVvNFhvbU9pQzFfd2RyXzYxMnR4X3RpNFlBUzU?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "resolved_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNWlF5akhVUTNRUkYyRDc4cmpRYzR1XzBlU3ZmcDU5c0VPM1pWTU9kQlBoVjh3X1ZSV0VwaVlXMUFTR19xeVNTNDRWRlp0bnNidVB5amN5LVpfY3VoWGU5REtfRUZXMDFUNmEyRXFwaXNFUWppRTdWNndDWW1LdlRkSUdhZWJFZFdJakZBVG1Zcw?oc=5&hl=en-US&gl=US&ceid=US:en",
       "key_points": [
         "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "AMD to Acquire World Labs for $8.2 Billion WSJ"
+          "body": "Opinion | The Wild West of A.I. Needs to End. Here’s How. The New York Times"
         },
         {
           "title": "公开页面要点",
@@ -4660,30 +4648,30 @@
       "reading_minutes": 1
     },
     {
-      "id": "110de705626a7bed",
+      "id": "5af5e10deef61fc6",
       "kind": "article",
-      "title": "Nvidia releases AI safety software it says could have stopped Hugging Face hack",
-      "source": "Reuters",
-      "source_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNSVREakRaN2V6OWo0bzNFcVBHb1VZMzRVS29mcWF4XzZwSmdxLVRublBqSTE5ZlNBaHBKb0lTU1o2SWV0V0t1U3M3TVl1ZnlJWGVJRGxKclM5RkphYzhzU3FlNkZHNDk3TUZhdW54dGtydmR3MFR2ZFVZdWItaVpsNjZYX2hIbjVHcTM0ZTVqLVd6UHV2OGY4eFM4ZW1va1pCSF90VzlZd3BSUjVkY1RJRzV2ZGFEUnlnbDY1d0ZjOFZoYXBVRU5YZEM0Zmk?oc=5",
+      "title": "AMD to Acquire World Labs for $8.2 Billion",
+      "source": "WSJ",
+      "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQLVpVcHpJVVFBektEcldpS0ttVXk1a2dkR0kzZEtUNmp3d1hQNzVEb3NOZVhEc1piQmtIYlI3WF9QUExkT2R3TW9tOW1ZZ0RpSGdELWxBbVRldmYtRmNUQjRxWjdZeS1RZnVvNFhvbU9pQzFfd2RyXzYxMnR4X3RpNFlBUzU?oc=5",
       "published_at": "2026-09-28T07:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
-        "Open Source",
-        "Models & Tools"
+        "Academic Startup",
+        "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Nvidia releases AI safety software it says could have stopped Hugging Face hack Reuters",
+      "summary": "AMD to Acquire World Labs for $8.2 Billion WSJ",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNSVREakRaN2V6OWo0bzNFcVBHb1VZMzRVS29mcWF4XzZwSmdxLVRublBqSTE5ZlNBaHBKb0lTU1o2SWV0V0t1U3M3TVl1ZnlJWGVJRGxKclM5RkphYzhzU3FlNkZHNDk3TUZhdW54dGtydmR3MFR2ZFVZdWItaVpsNjZYX2hIbjVHcTM0ZTVqLVd6UHV2OGY4eFM4ZW1va1pCSF90VzlZd3BSUjVkY1RJRzV2ZGFEUnlnbDY1d0ZjOFZoYXBVRU5YZEM0Zmk?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "resolved_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQLVpVcHpJVVFBektEcldpS0ttVXk1a2dkR0kzZEtUNmp3d1hQNzVEb3NOZVhEc1piQmtIYlI3WF9QUExkT2R3TW9tOW1ZZ0RpSGdELWxBbVRldmYtRmNUQjRxWjdZeS1RZnVvNFhvbU9pQzFfd2RyXzYxMnR4X3RpNFlBUzU?oc=5&hl=en-US&gl=US&ceid=US:en",
       "key_points": [
         "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Nvidia releases AI safety software it says could have stopped Hugging Face hack Reuters"
+          "body": "AMD to Acquire World Labs for $8.2 Billion WSJ"
         },
         {
           "title": "公开页面要点",
@@ -4738,30 +4726,69 @@
       "reading_minutes": 1
     },
     {
-      "id": "90bde24d0a6c36ae",
+      "id": "93f2d23ed6a7a665",
       "kind": "article",
-      "title": "Anthropic Moves Ahead With I.P.O. Plans Amid A.I. Safety Debate",
-      "source": "The New York Times",
-      "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBzNk1Xck9GUE41UTZPc1p6elBuenQyZnA3bEg0WFEyeHNLNXBfNXZmZUNIOUtodnVSaWFXRGtueDFzenhuMS1xYVBvSjIwM0RQM25fSWtoVUszVmJCZEg5Q2RFb1llLVNlOEN4VjR1eDg0dWJyc09tN0QxNnZQeWc?oc=5",
-      "published_at": "2026-09-21T07:00:00Z",
+      "title": "The upside of AI: TMU student’s summer job at AI startup is shaping the future of fundraising",
+      "source": "Toronto Metropolitan University (TMU)",
+      "source_url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPTGl4OG9NbTVsYk1wU3M1OEtlbGQ3M2JDR1lZaGV4QkZUb3dJd3czbUw5Qjh1eWdlVEQ0aG5YUW1JUjV4elM1VE9TLWFVa2w2bGkwdXR0c25ZNnR4Z2hwcENtZ1VUeWcxY2FqX1gxa3ZxczhWelZoSHJoNm1DaGJpQzNkTU5mTzJTdGxkR0xNTUFkcFlDX3JuV3NtQkJxa3Z2YzhGQXdoa0RYMjNnT3dGT3AyTS1YTXp2bnJISktYWGxIQ2F0R2cxTll3eVdFLUpWVlQySTI5MktSaEk?oc=5",
+      "published_at": "2026-09-25T20:43:01Z",
       "authors": [],
       "venue": "",
       "tags": [
-        "Policy",
-        "Safety"
+        "Academic Startup",
+        "Funding"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Anthropic Moves Ahead With I.P.O. Plans Amid A.I. Safety Debate The New York Times",
+      "summary": "The upside of AI: TMU student’s summer job at AI startup is shaping the future of fundraising Toronto Metropolitan University (TMU)",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBzNk1Xck9GUE41UTZPc1p6elBuenQyZnA3bEg0WFEyeHNLNXBfNXZmZUNIOUtodnVSaWFXRGtueDFzenhuMS1xYVBvSjIwM0RQM25fSWtoVUszVmJCZEg5Q2RFb1llLVNlOEN4VjR1eDg0dWJyc09tN0QxNnZQeWc?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "resolved_url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPTGl4OG9NbTVsYk1wU3M1OEtlbGQ3M2JDR1lZaGV4QkZUb3dJd3czbUw5Qjh1eWdlVEQ0aG5YUW1JUjV4elM1VE9TLWFVa2w2bGkwdXR0c25ZNnR4Z2hwcENtZ1VUeWcxY2FqX1gxa3ZxczhWelZoSHJoNm1DaGJpQzNkTU5mTzJTdGxkR0xNTUFkcFlDX3JuV3NtQkJxa3Z2YzhGQXdoa0RYMjNnT3dGT3AyTS1YTXp2bnJISktYWGxIQ2F0R2cxTll3eVdFLUpWVlQySTI5MktSaEk?oc=5&hl=en-US&gl=US&ceid=US:en",
       "key_points": [
         "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Anthropic Moves Ahead With I.P.O. Plans Amid A.I. Safety Debate The New York Times"
+          "body": "The upside of AI: TMU student’s summer job at AI startup is shaping the future of fundraising Toronto Metropolitan University (TMU)"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "110de705626a7bed",
+      "kind": "article",
+      "title": "Nvidia releases AI safety software it says could have stopped Hugging Face hack",
+      "source": "Reuters",
+      "source_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNSVREakRaN2V6OWo0bzNFcVBHb1VZMzRVS29mcWF4XzZwSmdxLVRublBqSTE5ZlNBaHBKb0lTU1o2SWV0V0t1U3M3TVl1ZnlJWGVJRGxKclM5RkphYzhzU3FlNkZHNDk3TUZhdW54dGtydmR3MFR2ZFVZdWItaVpsNjZYX2hIbjVHcTM0ZTVqLVd6UHV2OGY4eFM4ZW1va1pCSF90VzlZd3BSUjVkY1RJRzV2ZGFEUnlnbDY1d0ZjOFZoYXBVRU5YZEM0Zmk?oc=5",
+      "published_at": "2026-09-28T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Nvidia releases AI safety software it says could have stopped Hugging Face hack Reuters",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNSVREakRaN2V6OWo0bzNFcVBHb1VZMzRVS29mcWF4XzZwSmdxLVRublBqSTE5ZlNBaHBKb0lTU1o2SWV0V0t1U3M3TVl1ZnlJWGVJRGxKclM5RkphYzhzU3FlNkZHNDk3TUZhdW54dGtydmR3MFR2ZFVZdWItaVpsNjZYX2hIbjVHcTM0ZTVqLVd6UHV2OGY4eFM4ZW1va1pCSF90VzlZd3BSUjVkY1RJRzV2ZGFEUnlnbDY1d0ZjOFZoYXBVRU5YZEM0Zmk?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Nvidia releases AI safety software it says could have stopped Hugging Face hack Reuters"
         },
         {
           "title": "公开页面要点",
@@ -5107,6 +5134,45 @@
       "reading_minutes": 1
     },
     {
+      "id": "4f7e9b344ddb4e49",
+      "kind": "article",
+      "title": "A timeline of developments in AI safety since the attack on Hugging Face",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "source_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNa2ZtZjBGNWdEaEFHNjFJVFk4TzJpQXhvNVk3a0NLNGd5R0dEZGc2dWUzUzZRZlc0cEJQMThKWG5GTmpnVGRrZkJEQzB0RUN1a0NzUUlKNWM1emVhVUJYTENCbmVWSnNQaUsyWWh1c18zZTJUWV9PWXJTbFkwN2RjMlZWMktpSE81OWdtcmxxZXdOTzhiMnhWNzJVVHQ3TjRSNTRub9IBqgFBVV95cUxOS09xaGVqVnc5SjdxbXBLdGhOZXc2N2ZtbkNLYUdqNzBoLXNlN2tIVHFxOGxzLS1jTEltbDlNYzF5Rzd0RURrU1hneW1sM2R1U3Vkelo4Q01PMUhGWXZORGhsajllV2RQYmxJTUpSVTZJMnlSUUtUWGMzbUhneGhLR3dKNER0SmdBYWplaXd6U09UVXNkanMzWHYyNTlQd3FVT3RCOWJjQUJLdw?oc=5",
+      "published_at": "2026-10-10T18:55:46Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "A timeline of developments in AI safety since the attack on Hugging Face ABC News - Breaking News, Latest News and Videos",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNa2ZtZjBGNWdEaEFHNjFJVFk4TzJpQXhvNVk3a0NLNGd5R0dEZGc2dWUzUzZRZlc0cEJQMThKWG5GTmpnVGRrZkJEQzB0RUN1a0NzUUlKNWM1emVhVUJYTENCbmVWSnNQaUsyWWh1c18zZTJUWV9PWXJTbFkwN2RjMlZWMktpSE81OWdtcmxxZXdOTzhiMnhWNzJVVHQ3TjRSNTRub9IBqgFBVV95cUxOS09xaGVqVnc5SjdxbXBLdGhOZXc2N2ZtbkNLYUdqNzBoLXNlN2tIVHFxOGxzLS1jTEltbDlNYzF5Rzd0RURrU1hneW1sM2R1U3Vkelo4Q01PMUhGWXZORGhsajllV2RQYmxJTUpSVTZJMnlSUUtUWGMzbUhneGhLR3dKNER0SmdBYWplaXd6U09UVXNkanMzWHYyNTlQd3FVT3RCOWJjQUJLdw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "A timeline of developments in AI safety since the attack on Hugging Face ABC News - Breaking News, Latest News and Videos"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "9fde4a41eaf1a767",
       "kind": "article",
       "title": "Controversy swirls over ‘abrupt’ firing of OpenAI safety team members involved in the Hugging Face hack investigation",
@@ -5263,45 +5329,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "86c4ef2e9fbdf07c",
-      "kind": "article",
-      "title": "Fei-Fei Li Says She Runs Her AI Startup Like a 'Tiger Mom'",
-      "source": "Business Insider",
-      "source_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPa0N3aHlwelFJNVBvZmZZRmlhaG1aYXVTLWx3dnhiU0ZMZUYtWEVaNjJ6S2JobnRpdDRvZGNWS2daS0VWOWk0UWV2MWV4a0FNZlZHMGtibGg3eE5SeXA5Nm9kSG5VSjdfU3Ewbk9hUnRvZDJtaGF6X2llTkYwM0VUSldEVXJHZkV6Mkk0UUpn?oc=5",
-      "published_at": "2026-08-19T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Founder Watch",
-        "Embodied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Fei-Fei Li Says She Runs Her AI Startup Like a 'Tiger Mom' Business Insider",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPa0N3aHlwelFJNVBvZmZZRmlhaG1aYXVTLWx3dnhiU0ZMZUYtWEVaNjJ6S2JobnRpdDRvZGNWS2daS0VWOWk0UWV2MWV4a0FNZlZHMGtibGg3eE5SeXA5Nm9kSG5VSjdfU3Ewbk9hUnRvZDJtaGF6X2llTkYwM0VUSldEVXJHZkV6Mkk0UUpn?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Fei-Fei Li Says She Runs Her AI Startup Like a 'Tiger Mom' Business Insider"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "487a8271393a48b2",
       "kind": "article",
       "title": "Rob Bonta subpoenas OpenAI over Hugging Face hack",
@@ -5341,45 +5368,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "c7fffead8857f18f",
-      "kind": "article",
-      "title": "A timeline of developments in AI safety since the attack on Hugging Face",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "source_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPS2tOUGI4OFV0XzA4dW1yR0htSDU0RDdDUHI1eXdRSFZJTlBxei1zMnNDTC1HcEpvOEZQcXQ0dEdPNnpmbDd3R3RBVXI4NlM2MGZzaEhSa3ByaHdhQ2trTXZ5RXJCQkdIdEhnNWZXRjJydktldjAwVmhCZGtsTDREM0VwTEhTcVMwdXgyNUpGVk1zUGJpajB6MmN30gGfAUFVX3lxTE9PRnJXSGpCN3EyN0hKXzRxOEh1bTR1T2ttak9QRGt4TFA3Yk1NUGlPMktJcnNZTDdSSm1QMmhFZjVUM182cnZOT1EzYmJlNXhvaFRldDdocEJ0bnNGMVNqNmZBQTVPTDg0LWhSRHhFMzlEM3REWk5LRlBpYXhYakZQMkRPcHoySVNvc3JxQmtNdXM1VTRuMDFpbkc5R1d2bw?oc=5",
-      "published_at": "2026-09-30T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Open Source",
-        "Models & Tools"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "A timeline of developments in AI safety since the attack on Hugging Face ABC News - Breaking News, Latest News and Videos",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPS2tOUGI4OFV0XzA4dW1yR0htSDU0RDdDUHI1eXdRSFZJTlBxei1zMnNDTC1HcEpvOEZQcXQ0dEdPNnpmbDd3R3RBVXI4NlM2MGZzaEhSa3ByaHdhQ2trTXZ5RXJCQkdIdEhnNWZXRjJydktldjAwVmhCZGtsTDREM0VwTEhTcVMwdXgyNUpGVk1zUGJpajB6MmN30gGfAUFVX3lxTE9PRnJXSGpCN3EyN0hKXzRxOEh1bTR1T2ttak9QRGt4TFA3Yk1NUGlPMktJcnNZTDdSSm1QMmhFZjVUM182cnZOT1EzYmJlNXhvaFRldDdocEJ0bnNGMVNqNmZBQTVPTDg0LWhSRHhFMzlEM3REWk5LRlBpYXhYakZQMkRPcHoySVNvc3JxQmtNdXM1VTRuMDFpbkc5R1d2bw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "A timeline of developments in AI safety since the attack on Hugging Face ABC News - Breaking News, Latest News and Videos"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "373eb7f0c38d08dd",
       "kind": "article",
       "title": "AI Safety: Governor Hochul Announces Next Steps to Regulate Major AI Developers and Protect New Yorkers",
@@ -5404,6 +5392,45 @@
         {
           "title": "内容概览",
           "body": "AI Safety: Governor Hochul Announces Next Steps to Regulate Major AI Developers and Protect New Yorkers Governor Kathy Hochul (.gov)"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "86c4ef2e9fbdf07c",
+      "kind": "article",
+      "title": "Fei-Fei Li Says She Runs Her AI Startup Like a 'Tiger Mom'",
+      "source": "Business Insider",
+      "source_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPa0N3aHlwelFJNVBvZmZZRmlhaG1aYXVTLWx3dnhiU0ZMZUYtWEVaNjJ6S2JobnRpdDRvZGNWS2daS0VWOWk0UWV2MWV4a0FNZlZHMGtibGg3eE5SeXA5Nm9kSG5VSjdfU3Ewbk9hUnRvZDJtaGF6X2llTkYwM0VUSldEVXJHZkV6Mkk0UUpn?oc=5",
+      "published_at": "2026-08-19T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Fei-Fei Li Says She Runs Her AI Startup Like a 'Tiger Mom' Business Insider",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPa0N3aHlwelFJNVBvZmZZRmlhaG1aYXVTLWx3dnhiU0ZMZUYtWEVaNjJ6S2JobnRpdDRvZGNWS2daS0VWOWk0UWV2MWV4a0FNZlZHMGtibGg3eE5SeXA5Nm9kSG5VSjdfU3Ewbk9hUnRvZDJtaGF6X2llTkYwM0VUSldEVXJHZkV6Mkk0UUpn?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Fei-Fei Li Says She Runs Her AI Startup Like a 'Tiger Mom' Business Insider"
         },
         {
           "title": "公开页面要点",
