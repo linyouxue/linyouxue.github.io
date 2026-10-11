@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-11T05:42:40Z",
-  "record_count": 129,
+  "generated_at": "2026-10-11T12:45:22Z",
+  "record_count": 130,
   "records": [
     {
       "id": "jacobian-fable-20260720",
@@ -136,6 +136,57 @@
             "Anthropic is deepening its support for American scientific research by committing $150 million over three years to the Genesis Mission , a federal initiative to accelerate scientific and technological discovery through AI. The funding will go toward making Claude available to more than 15 agencies that are part of the mission, including NASA, the National Institutes of Health, and the National Science Foundation.",
             "We first announced our partnership with the US Department of Energy (DOE) and the Genesis Mission last December . Since then, we have worked with DOE to bring Claude to scientists across the national laboratories. Today, we announced this new commitment as part of the Science: A New Golden Age Summit hosted by the White House Office of Science and Technology Policy in Washington, DC.",
             "We share the administration’s view, laid out in “ Science: A New Golden Age ,” that AI can have a profound and positive impact on scientific discovery, and we are glad to back its efforts to support American scientists."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "51e2daa9cd8a3deb",
+      "kind": "article",
+      "title": "SynthID Bio: Watermarking methods for synthetic biology",
+      "source": "Google DeepMind",
+      "source_url": "https://deepmind.google/blog/introducing-synthid-bio/",
+      "published_at": "2026-09-30T15:03:07Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "DeepMind",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://deepmind.google/blog/introducing-synthid-bio/",
+      "key_points": [
+        "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
+        "Today, we’re introducing SynthID Bio to bring watermarking technology to synthetic biology.",
+        "SynthID Bio embeds an imperceptible signature directly into the biological code, ensuring the watermark is verifiable not just on a digital model but on the synthesized, physical protein itself – all while preserving its biological function in laboratory testing.",
+        "Generative AI is helping scientists address critical biological challenges, from predicting the structure of proteins ( AlphaFold ) to designing entirely new proteins ( AlphaProteo , and ProteinMPNN ), and more recently, developing new bacteriophages , viruses that infect bacteria.",
+        "Yet these tools also present new challenges: novel AI designs can bypass traditional DNA synthesis screening, while mislabeled synthetic 3D structures risk polluting public databases and misleading downstream research."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Proof of concept for watermarking AI-generated proteins while preserving biological function."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
+            "Today, we’re introducing SynthID Bio to bring watermarking technology to synthetic biology.",
+            "SynthID Bio embeds an imperceptible signature directly into the biological code, ensuring the watermark is verifiable not just on a digital model but on the synthesized, physical protein itself – all while preserving its biological function in laboratory testing.",
+            "Generative AI is helping scientists address critical biological challenges, from predicting the structure of proteins ( AlphaFold ) to designing entirely new proteins ( AlphaProteo , and ProteinMPNN ), and more recently, developing new bacteriophages , viruses that infect bacteria.",
+            "Yet these tools also present new challenges: novel AI designs can bypass traditional DNA synthesis screening, while mislabeled synthetic 3D structures risk polluting public databases and misleading downstream research."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
+            "Today, we’re introducing SynthID Bio to bring watermarking technology to synthetic biology. SynthID Bio embeds an imperceptible signature directly into the biological code, ensuring the watermark is verifiable not just on a digital model but on the synthesized, physical protein itself – all while preserving its biological function in laboratory testing.",
+            "Generative AI is helping scientists address critical biological challenges, from predicting the structure of proteins ( AlphaFold ) to designing entirely new proteins ( AlphaProteo , and ProteinMPNN ), and more recently, developing new bacteriophages , viruses that infect bacteria. Yet these tools also present new challenges: novel AI designs can bypass traditional DNA synthesis screening, while mislabeled synthetic 3D structures risk polluting public databases and misleading downstream research."
           ]
         }
       ],
@@ -460,6 +511,51 @@
       "reading_minutes": 1
     },
     {
+      "id": "rhb-icml-2026",
+      "kind": "paper",
+      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
+      "source": "OpenReview · arXiv",
+      "source_url": "https://arxiv.org/abs/2605.02964",
+      "published_at": "2026-06-24T00:00:00Z",
+      "authors": [
+        "Kunvar Thaman"
+      ],
+      "venue": "ICML 2026",
+      "tags": [
+        "Reward Hacking",
+        "Agent Safety",
+        "Evaluation"
+      ],
+      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
+      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/rhb-icml-2026.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://arxiv.org/pdf/2605.02964",
+      "key_points": [
+        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
+        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
+        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
+        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
+        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
+        },
+        {
+          "title": "关键结果",
+          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
+        },
+        {
+          "title": "局限与结论",
+          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
+        }
+      ],
+      "reading_minutes": 46
+    },
+    {
       "id": "5ac8682ed22507fd",
       "kind": "article",
       "title": "Using Claude Science to produce the first complete map of the sky in UV light",
@@ -560,51 +656,6 @@
         }
       ],
       "reading_minutes": 1
-    },
-    {
-      "id": "rhb-icml-2026",
-      "kind": "paper",
-      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
-      "source": "OpenReview · arXiv",
-      "source_url": "https://arxiv.org/abs/2605.02964",
-      "published_at": "2026-06-24T00:00:00Z",
-      "authors": [
-        "Kunvar Thaman"
-      ],
-      "venue": "ICML 2026",
-      "tags": [
-        "Reward Hacking",
-        "Agent Safety",
-        "Evaluation"
-      ],
-      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
-      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/rhb-icml-2026.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://arxiv.org/pdf/2605.02964",
-      "key_points": [
-        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
-        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
-        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
-        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
-        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
-        },
-        {
-          "title": "关键结果",
-          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
-        },
-        {
-          "title": "局限与结论",
-          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
-        }
-      ],
-      "reading_minutes": 46
     },
     {
       "id": "a16315c37709ae5d",
@@ -991,6 +1042,155 @@
       "reading_minutes": 1
     },
     {
+      "id": "54713a52025800f2",
+      "kind": "article",
+      "title": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
+      "source": "Google DeepMind",
+      "source_url": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
+      "published_at": "2026-10-06T19:57:04Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "DeepMind",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "Introducing EmbeddingGemma 2, an open multimodal embedding model optimized for privacy-first use cases",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=",
+      "key_points": [
+        "EmbeddingGemma 2 is the most capable model for on-device multimodal embeddings, natively mapping combinations of text, images, audio, and video into a unified embedding space.",
+        "We introduced EmbeddingGemma last year to provide a lightweight option for high-quality text embeddings, to help your apps organize, search, and connect information directly on consumer hardware.",
+        "The developer community’s response blew past our expectations.",
+        "With more than 20 million downloads, builders have used it to power smarter on-device search tools and privacy-first retrieval augmented generation (RAG) pipelines.",
+        "Today, we’re launching EmbeddingGemma 2 , expanding beyond text to unify code, images, video, and audio in a shared embedding space."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Introducing EmbeddingGemma 2, an open multimodal embedding model optimized for privacy-first use cases"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "EmbeddingGemma 2 is the most capable model for on-device multimodal embeddings, natively mapping combinations of text, images, audio, and video into a unified embedding space.",
+            "We introduced EmbeddingGemma last year to provide a lightweight option for high-quality text embeddings, to help your apps organize, search, and connect information directly on consumer hardware.",
+            "The developer community’s response blew past our expectations.",
+            "With more than 20 million downloads, builders have used it to power smarter on-device search tools and privacy-first retrieval augmented generation (RAG) pipelines.",
+            "Today, we’re launching EmbeddingGemma 2 , expanding beyond text to unify code, images, video, and audio in a shared embedding space."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "EmbeddingGemma 2 is the most capable model for on-device multimodal embeddings, natively mapping combinations of text, images, audio, and video into a unified embedding space.",
+            "We introduced EmbeddingGemma last year to provide a lightweight option for high-quality text embeddings, to help your apps organize, search, and connect information directly on consumer hardware. The developer community’s response blew past our expectations. With more than 20 million downloads, builders have used it to power smarter on-device search tools and privacy-first retrieval augmented generation (RAG) pipelines.",
+            "Today, we’re launching EmbeddingGemma 2 , expanding beyond text to unify code, images, video, and audio in a shared embedding space. Built on the Gemma 4 architecture and released under a commercially permissive Apache 2.0 license, EmbeddingGemma 2 has 740 million parameters, making it optimal for on-device inference. It can help find a specific video clip from a voice memo, or search through hours of audio recordings based on a text query, all processed by a single, natively multimodal model."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "69a6dff164ab81f4",
+      "kind": "article",
+      "title": "AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome",
+      "source": "Google DeepMind",
+      "source_url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
+      "published_at": "2026-09-08T14:00:15Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "DeepMind",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
+      "key_points": [
+        "How predicting the molecular impact of every possible single-letter DNA variant in the human genome will help accelerate our understanding of biology.",
+        "Today, we are introducing AlphaGenome Atlas: a platform ( detailed in our paper ) containing predictions for the effects of 9 billion single-nucleotide variants — every single-letter change possible — in the human genome.",
+        "It is the most comprehensive catalogue of how genetic mutations affect molecular biology, and it is available for academic research through an intuitive and free-to-use website portal .",
+        "Mastering it is a grand challenge that could transform our ability to understand biology and treat disease.",
+        "But progress has been limited by a fundamental problem: interpreting how genetic variations impact biology at a molecular level."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "How predicting the molecular impact of every possible single-letter DNA variant in the human genome will help accelerate our understanding of biology.",
+            "Today, we are introducing AlphaGenome Atlas: a platform ( detailed in our paper ) containing predictions for the effects of 9 billion single-nucleotide variants — every single-letter change possible — in the human genome.",
+            "It is the most comprehensive catalogue of how genetic mutations affect molecular biology, and it is available for academic research through an intuitive and free-to-use website portal .",
+            "Mastering it is a grand challenge that could transform our ability to understand biology and treat disease.",
+            "But progress has been limited by a fundamental problem: interpreting how genetic variations impact biology at a molecular level."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "How predicting the molecular impact of every possible single-letter DNA variant in the human genome will help accelerate our understanding of biology.",
+            "Today, we are introducing AlphaGenome Atlas: a platform ( detailed in our paper ) containing predictions for the effects of 9 billion single-nucleotide variants — every single-letter change possible — in the human genome. It is the most comprehensive catalogue of how genetic mutations affect molecular biology, and it is available for academic research through an intuitive and free-to-use website portal .",
+            "DNA is the language of life. Mastering it is a grand challenge that could transform our ability to understand biology and treat disease. But progress has been limited by a fundamental problem: interpreting how genetic variations impact biology at a molecular level. With roughly 9 billion possible single-letter mutations in the human genome, testing each one in the lab is practically impossible."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "0908094c99521e7b",
+      "kind": "article",
+      "title": "Gemini 4 Argon: our next era of frontier intelligence",
+      "source": "Google DeepMind",
+      "source_url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+      "published_at": "2026-09-30T20:01:45Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "DeepMind",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "Announcing Gemini 4 Argon, our frontier model for real-world coding, enterprise knowledge work, and cyber defense, rolling out soon.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=",
+      "key_points": [
+        "Gemini 4 Argon delivers frontier performance in complex workflows across real-world software engineering, enterprise knowledge work like legal and finance, and cybersecurity defense.",
+        "Google’s new Gemini 4 Argon model brings advanced reasoning to complex, long-horizon professional tasks.",
+        "The model features an industry-leading 1 million token limit for deep, multi-step problem solving."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Announcing Gemini 4 Argon, our frontier model for real-world coding, enterprise knowledge work, and cyber defense, rolling out soon."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Gemini 4 Argon delivers frontier performance in complex workflows across real-world software engineering, enterprise knowledge work like legal and finance, and cybersecurity defense.",
+            "Google’s new Gemini 4 Argon model brings advanced reasoning to complex, long-horizon professional tasks.",
+            "The model features an industry-leading 1 million token limit for deep, multi-step problem solving."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Gemini 4 Argon delivers frontier performance in complex workflows across real-world software engineering, enterprise knowledge work like legal and finance, and cybersecurity defense.",
+            "Google’s new Gemini 4 Argon model brings advanced reasoning to complex, long-horizon professional tasks.",
+            "The model features an industry-leading 1 million token limit for deep, multi-step problem solving."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "gpt5-protein-synthesis-20260205",
       "kind": "article",
       "title": "GPT-5 与自动化实验室将无细胞蛋白合成成本降低 40%",
@@ -1087,7 +1287,10 @@
       ],
       "venue": "Emerging Topics in Artificial Intelligence (ETAI)",
       "tags": [
-        "AI in cancer detection"
+        "AI in cancer detection",
+        "HER2 scoring",
+        "uncertainty quantification",
+        "breast cancer"
       ],
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "summary": "We present a compact, cost-effective lensfree holographic imager integrated with deep learning for automated HER2 scoring of immunohistochemically stained breast tissue sections. The system captures lensfree diffraction patterns under RGB laser illumination and reconstructs complex optical fields over a large sample area of ~1,250 mm². To enhance diagnostic reliability, we incorporate an uncertainty quantification framework that provides autonomous uncertainty estimates for individual predictions and enables robust HER2 scoring, achieving an error correction rate of 30.4%. Evaluated on a blinded test set of 412 tissue samples, the proposed approach achieves a…",
@@ -1121,7 +1324,10 @@
       ],
       "venue": "Emerging Topics in Artificial Intelligence (ETAI)",
       "tags": [
-        "Neural Networks and Reservoir Computing"
+        "Neural Networks and Reservoir Computing",
+        "optical convolutional neural networks",
+        "nonlinear activation",
+        "two-photon absorption"
       ],
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "summary": "The realization of ultrafast, low-power optical neural networks requires physically embedded nonlinear activation mechanisms compatible with Fourier-based photonic architectures. We demonstrate a convolutional optical neural network (OCNN) driven by a femtosecond-pulsed telecom laser, enabling intrinsic nonlinear activation via material absorption rather than electronic post-processing. Convolution is implemented in the Fourier plane using a spatial light modulator (SLM), with Laguerre-Gaussian modes serving as an orthogonal kernel basis. Object information is encoded directly onto the beam and processed through parallel Fourier-domain filtering. Nonlinear activation…",
@@ -1156,7 +1362,10 @@
       ],
       "venue": "Emerging Topics in Artificial Intelligence (ETAI)",
       "tags": [
-        "Neural Networks and Reservoir Computing"
+        "Neural Networks and Reservoir Computing",
+        "proximal policy optimization",
+        "in situ training",
+        "model-free reinforcement learning"
       ],
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "summary": "We present a model-free in situ training framework for diffractive optical processors based on Proximal Policy Optimization (PPO), a reinforcement learning algorithm designed for stable and sample-efficient policy updates. By enabling multiple optimization steps using the same set of captured optical measurements while constraining update magnitudes, PPO improves both convergence stability and training efficiency in noisy experimental environments. We experimentally demonstrate the approach across several representative optical learning tasks, including light focusing through unknown scattering media, holographic image formation, aberration compensation, and all-optical…",
@@ -1187,7 +1396,10 @@
       ],
       "venue": "Emerging Topics in Artificial Intelligence (ETAI)",
       "tags": [
-        "Machine Learning and Algorithms"
+        "Machine Learning and Algorithms",
+        "metacognition",
+        "self-assessment",
+        "self-regulation"
       ],
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "summary": "Artificial intelligence (AI) generally defines intelligence as an optimal association between input features and predictive behavior. In essence, it is defined as knowledge updating under adaptation, describing the static relationship between input features and decision accuracy in a human-interpretable form. This definition is not suitable for the cutting-edge colony of AI frameworks where intelligence evolves from fast, detailed, and organized learner AI agents. This paper introduces an innovative Human Gradient Artificial Intelligence (HGAI) approach to model intelligence as a measurable continuous gradient of knowledge updating under evolution with human-inspired…",
@@ -1220,7 +1432,10 @@
       ],
       "venue": "Emerging Topics in Artificial Intelligence (ETAI)",
       "tags": [
-        "Psychiatry, Mental Health, Neuroscience"
+        "Psychiatry, Mental Health, Neuroscience",
+        "neuro-symbolic learning",
+        "virtual agents",
+        "extended reality"
       ],
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "summary": "Attention in humans is dynamic by nature and largely context-dependent. However, current embodied cognitive agents in XR systems mostly rely on static rules or neural models. Thus, it limits their interpretability and adaptability in immersive simulations. To address the problem, we propose a neuro-symbolic cognitive attention model for virtual agents in brain simulation and XR systems that integrates temporal neural predictions with proper reasoning to drive adaptive avatar behavior in virtual environments. Our model employs an LSTM network to generate continuous attention estimate with a taxonomic attention model that interprets attention for virtual agents in the…",
@@ -1254,7 +1469,8 @@
       ],
       "venue": "Emerging Topics in Artificial Intelligence (ETAI)",
       "tags": [
-        "Neural Networks and Reservoir Computing"
+        "Neural Networks and Reservoir Computing",
+        "optical information processing"
       ],
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "summary": "We present a monochrome multi-task diffractive network framework that leverages illumination phase multiplexing to dynamically reconfigure its output transformations. Our design employs unique \"phase keys\"—distinct 2D illumination phase profiles—to encode specific transformations. The system activates a specific desired transformation simply by adjusting the input illumination phase, enabling programmable processing without physical hardware modifications. We demonstrate that a diffractive network composed of N=2TN_i N_o optimized diffractive features can realize T distinct complex-valued linear transformations – accurately executed for any complex field at the input…",
@@ -1288,7 +1504,10 @@
       ],
       "venue": "Emerging Topics in Artificial Intelligence (ETAI)",
       "tags": [
-        "Neural Networks and Reservoir Computing"
+        "Neural Networks and Reservoir Computing",
+        "silicon nitride waveguides",
+        "Kerr nonlinearity",
+        "nonlinear mode coupling"
       ],
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "summary": "We present a scalable neuromorphic photonic computing architecture based on a χ⁽³⁾ silicon nitride waveguide. Using three-dimensional FDTD simulation, we characterize nonlinear mode coupling across 15 guided modes and verify linear scaling of the nonlinear field difference across four propagation lengths — 12.5, 25, 50, and 100 micrometers — confirming Kerr nonlinear accumulation consistent with theory. Simulation cost is minimized through length-nonlinearity equivalence scaling, reducing all production runs to the 12.5 μm geometry. A dataset of input mode combinations and corresponding output mode coefficients — extracted via modal decomposition at the output facet —…",
@@ -1321,7 +1540,10 @@
       ],
       "venue": "Emerging Topics in Artificial Intelligence (ETAI)",
       "tags": [
-        "Explainable Artificial Intelligence (XAI)"
+        "Explainable Artificial Intelligence (XAI)",
+        "lime",
+        "explainable AI",
+        "Markov chain Monte Carlo"
       ],
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "summary": "Local Interpretable Model-agnostic Explanations (LIME) is a visual explainability model that is used in explainable artificial intelligence (XAI) systems to understand the decision behavior of convolutional neural networks (CNNs). LIME is a perturbation-based model; hence, it suffers from instability-of-explainability problems due to run-to-run variability in feature ranking. We have addressed this problem recently using a Markov chain Monte Carlo (MCMC) algorithm to guide perturbation sampling and propose an adaptive MCMC-LIME visual explainer. However, MCMC introduces new challenges that include slow convergence to target distribution and high autocorrelation between…",
@@ -1357,7 +1579,10 @@
       ],
       "venue": "Emerging Topics in Artificial Intelligence (ETAI)",
       "tags": [
-        "Neural Networks and Reservoir Computing"
+        "Neural Networks and Reservoir Computing",
+        "optical computing",
+        "sparse neural networks",
+        "structured sparsity"
       ],
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "summary": "Sparse neural networks facilitate accelerated computation and reduced energy consumption by minimizing the total number of operations required. However, conventional digital and analog computing platforms typically yield only modest performance gains when executing sparse models due to hardware primitives that remain unoptimized for these data structures. This work demonstrates a high-performance, diagonal-sparsity-accelerated optical computing system utilizing an offset-diagonal architecture that achieves near-ideal reductions in compute time as sparsity increases. Experimental validation on MNIST benchmarks confirms that the system maintains performance parity with…",
@@ -1393,7 +1618,10 @@
       ],
       "venue": "Emerging Topics in Artificial Intelligence (ETAI)",
       "tags": [
-        "Adversarial Robustness in Machine Learning"
+        "Adversarial Robustness in Machine Learning",
+        "adversarial perturbations",
+        "pathology foundation models",
+        "optical microscopy images"
       ],
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "summary": "We present Universal and Transferable Adversarial Perturbations (UTAP), a framework designed to reveal the susceptibility of pathology foundation models to sophisticated, stealthy attacks at the microscopic level. When added to pathology optical microscopy images, this fixed perturbation systematically disrupts the feature representation capabilities of the model, leading to significant performance drops in downstream tasks such as tissue classification. We demonstrate two defining characteristics of UTAP: (1) universality, where the microscopic perturbation degrades performance across diverse fields-of-view and unseen datasets, and (2) transferability, where an attack…",
@@ -1426,7 +1654,10 @@
       ],
       "venue": "Low-Dimensional Materials and Devices",
       "tags": [
-        "Quantum Computing Algorithms and Architecture"
+        "Quantum Computing Algorithms and Architecture",
+        "variational quantum eigensolver",
+        "two-site Hubbard model",
+        "graphene"
       ],
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "summary": "Quantum subspace diagonalization (QSD) is a near-term strategy for electronic-structure problems that avoids the deep, heavily optimized circuits of the variational quantum eigensolver by preparing a small basis, measuring a subspace Hamiltonian on hardware, and diagonalizing it classically. We benchmark two QSD variants, a seniority-based orthogonal method (Q-SENSE) and a non-orthogonal correlated-basis method (CVQE), on a minimal two-site Hubbard model whose parameters correspond to a graphene (symmetric) and a hexagonal boron nitride-like (sublattice-broken) sublattice motif. Because the model is exactly solvable, hardware results are graded against the true ground…",
@@ -1461,7 +1692,10 @@
       ],
       "venue": "Emerging Topics in Artificial Intelligence (ETAI)",
       "tags": [
-        "Machine Learning and Data Classification"
+        "Machine Learning and Data Classification",
+        "deep learning libraries",
+        "code reuse",
+        "ablation study"
       ],
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "summary": "Deeplay is a Python-based deep learning library that extends PyTorch, addressing limitations in modularity and reusability commonly encountered in neural network development. Built with a core philosophy of modularity and adaptability. Unlike traditional PyTorch modules, Deeplay allows the properties of submodules to be modified after creation. Layers, blocks, or activation functions can be replaced or reconfigured without rewriting the surrounding architecture, which reduces boilerplate code, improves reuse, and simplifies ablation studies.",
@@ -1493,7 +1727,10 @@
       ],
       "venue": "Emerging Topics in Artificial Intelligence (ETAI)",
       "tags": [
-        "Neural Networks and Reservoir Computing"
+        "Neural Networks and Reservoir Computing",
+        "joint transform correlator",
+        "convolution acceleration",
+        "cross correlation function"
       ],
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "summary": "Convolutional operations are computationally intensive in artificial intelligence (AI) services, and their overhead in electronic hardware limits machine learning scaling. Here, we introduce a photonic joint transform correlator (pJTC) using a near-energy-free on-chip Fourier transformation to accelerate convolution operations. The pJTC reduces computational complexity for both convolution and cross-correlation from O(N^4) to O(N^2) , where N2 is the input data size. Demonstrating functional Fourier transforms and convolution, this pJTC achieves 98.0% accuracy on an exemplary Modified National Institute of Standards and Technology inference task. Furthermore, a…",
@@ -1529,7 +1766,10 @@
       ],
       "venue": "Emerging Topics in Artificial Intelligence (ETAI)",
       "tags": [
-        "Neural Networks and Reservoir Computing"
+        "Neural Networks and Reservoir Computing",
+        "nonlinear function approximation",
+        "passive optical components",
+        "parallel computing"
       ],
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "summary": "We introduce a diffractive optical computing framework that enables universal approximation of nonlinear functions using linear, passive optical components. By encoding the input variable into the phase of an optical wavefront and processing it through cascaded spatially engineered diffractive surfaces, independently defined nonlinear functions are computed in parallel at diffraction-limited output pixels. We theoretically prove universality for arbitrary bandlimited nonlinear functions and numerically demonstrate the approximation of one million nonlinear functions in parallel with negligible error. The framework is experimentally validated through in situ optical…",
@@ -1565,7 +1805,10 @@
       ],
       "venue": "Active Photonic Platforms (APP)",
       "tags": [
-        "Neural Networks and Reservoir Computing"
+        "Neural Networks and Reservoir Computing",
+        "neuromorphic computing",
+        "spiking neural networks",
+        "resonant tunneling diodes"
       ],
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "summary": "An electronic-photonic spiking node consisting of a resonant tunneling diode (RTD) driving a waveguide-integrated O-band DFB laser, both fabricated in separate indium phosphide (InP) chips, is demonstrated. We investigate the excitability of the RTD-laser spiking node and demonstrate input-dependent bursting with a 12-33 kHz burst frequency and a 9 MHz spiking frequency in each burst. We show this bursting is caused by the RTD alternately driving the laser below and above threshold. We also investigate the use of the RTD-laser as a source of modulated light by DC biasing the RTD in its negative differential region. These results highlight the potential of RTD–laser…",
@@ -1598,7 +1841,10 @@
       ],
       "venue": "Emerging Topics in Artificial Intelligence (ETAI)",
       "tags": [
-        "Neural Networks and Reservoir Computing"
+        "Neural Networks and Reservoir Computing",
+        "physics-informed deep learning",
+        "optical neural networks",
+        "diffractive neural networks"
       ],
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "summary": "We propose novel approachs to information transmission in scattering media such as multimode fibers (MMF). By utilizing the physical basis of the model, training with pure eigenmode data enables precise mode decomposition, which is of great importance in high-rate secure multimode fiber communication. In this work, we present physics-based deep learning methods for the mode demultiplexing (MD) of MMF. The \"Physics-in-Loss\" method utilizes the physical premise that an MMF represents the linear superposition of its eigenmodes. This eliminates the need for large datasets and lengthy training sessions. MD of over 5,000 modes is achieved. However, mainly we focus on…",
@@ -1655,57 +1901,6 @@
         {
           "title": "原文短摘录",
           "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "2d52ed2f0b86aafa",
-      "kind": "article",
-      "title": "Claude discovers a novel enzyme system",
-      "source": "Anthropic",
-      "source_url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
-      "published_at": "2026-09-23T16:06:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Anthropic",
-        "Official"
-      ],
-      "verification": "官方来源",
-      "summary": "In early results from our new life sciences research lab, Claude agents found an enzyme system whose function is still unknown.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
-      "key_points": [
-        "We’re introducing a new life sciences research group and laboratory at Anthropic.",
-        "Our focus is on fundamental biology research using Claude: exploring datasets of DNA to identify uncharacterized protein families, generating hypotheses at scale, and testing them through experiments in the lab.",
-        "This post introduces the team behind this work and shares early results in which Claude discovered a novel enzyme system with properties reminiscent of CRISPR, with only high-level direction from our scientists.",
-        "Many discoveries that have revolutionized biology and medicine started with a scientist noticing something odd in the staggering diversity of molecular machines found in nature.",
-        "Restriction enzymes , proteins that… Today, we’re sharing early results from one of our first research programs, in which Claude autonomously discovered a novel enzyme system that is associated with an array of DNA repeats, a pattern reminiscent of CRISPR."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "In early results from our new life sciences research lab, Claude agents found an enzyme system whose function is still unknown."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "We’re introducing a new life sciences research group and laboratory at Anthropic.",
-            "Our focus is on fundamental biology research using Claude: exploring datasets of DNA to identify uncharacterized protein families, generating hypotheses at scale, and testing them through experiments in the lab.",
-            "This post introduces the team behind this work and shares early results in which Claude discovered a novel enzyme system with properties reminiscent of CRISPR, with only high-level direction from our scientists.",
-            "Many discoveries that have revolutionized biology and medicine started with a scientist noticing something odd in the staggering diversity of molecular machines found in nature.",
-            "Restriction enzymes , proteins that… Today, we’re sharing early results from one of our first research programs, in which Claude autonomously discovered a novel enzyme system that is associated with an array of DNA repeats, a pattern reminiscent of CRISPR."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "We’re introducing a new life sciences research group and laboratory at Anthropic. Our focus is on fundamental biology research using Claude: exploring datasets of DNA to identify uncharacterized protein families, generating hypotheses at scale, and testing them through experiments in the lab. This post introduces the team behind this work and shares early results in which Claude discovered a novel enzyme system with properties reminiscent of CRISPR, with only high-level direction from our scientists. Many discoveries that have revolutionized biology and medicine started with a scientist noticing something odd in the staggering diversity of molecular machines found in nature. Restriction enzymes , proteins that…",
-            "Today, we’re sharing early results from one of our first research programs, in which Claude autonomously discovered a novel enzyme system that is associated with an array of DNA repeats, a pattern reminiscent of CRISPR. Although we don’t yet know its function, the system that Claude discovered has a set of characteristics that have only ever been found together in a handful of other systems, all of which are programmable and perform operations like cutting, copying, and pasting DNA. Beyond CRISPR, which has already transformed science and medicine, several other such systems are now in development as promising tools.",
-            "The system that Claude found is based on a reverse transcriptase (RT), enzymes that copy RNA into DNA. While this underlying RT, found in a jumbo phage, had been identified in previous studies, Claude appears to be the first to notice the system’s defining features—an associated array of non-coding DNA sequences and an additional accessory protein of unknown function."
-          ]
         }
       ],
       "reading_minutes": 1
@@ -2810,6 +3005,86 @@
       "reading_minutes": 1
     },
     {
+      "id": "3cb8bc319ea7e4e6",
+      "kind": "article",
+      "title": "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program",
+      "source": "Reuters",
+      "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPMnNocmF2MC1saXA1bW95QU5PcXUyNHZrZUdaZUFKNXVnYk1Yejg4UTlqa242RmJGMnBlZ1pkeC1KdERaazR1TGtSTHkwMFFLNTZQa3VBdHJzcWlWR0hldTYtVm5RQ3hQZDE2LXFfZ3gzeHVqQ3pNR1pEUmpHbnpUMlB1UkYtTHpfeURTVU9Kb082R3ZrbnA1VVZmcEJlcnZBUlEySmtkUQ?oc=5",
+      "published_at": "2026-09-18T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program Reuters",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPMnNocmF2MC1saXA1bW95QU5PcXUyNHZrZUdaZUFKNXVnYk1Yejg4UTlqa242RmJGMnBlZ1pkeC1KdERaazR1TGtSTHkwMFFLNTZQa3VBdHJzcWlWR0hldTYtVm5RQ3hQZDE2LXFfZ3gzeHVqQ3pNR1pEUmpHbnpUMlB1UkYtTHpfeURTVU9Kb082R3ZrbnA1VVZmcEJlcnZBUlEySmtkUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program Reuters"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "37db2441d5a89592",
+      "kind": "article",
+      "title": "Medical AI has a proof problem",
+      "source": "Financial Times",
+      "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOZHh1OXRja21yY1BGU0pacGhEQTEtOV9yOWFJbGpkbHpzZlhrNlN3MTNBeVR3SG5EdEktVzVJVEw3WUx6WDF4SGJjZTJxV21XRzF1RUVjUE9ERUQ0QjRmOWhTdXZLMFRLSGFCeDVGTVFOQ3dYdkNFRW4zWGlyekRQSEdrd2M?oc=5",
+      "published_at": "2026-09-17T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Medical AI has a proof problem Financial Times",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOZHh1OXRja21yY1BGU0pacGhEQTEtOV9yOWFJbGpkbHpzZlhrNlN3MTNBeVR3SG5EdEktVzVJVEw3WUx6WDF4SGJjZTJxV21XRzF1RUVjUE9ERUQ0QjRmOWhTdXZLMFRLSGFCeDVGTVFOQ3dYdkNFRW4zWGlyekRQSEdrd2M?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Medical AI has a proof problem Financial Times"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "89bf853ccf26d214",
       "kind": "article",
       "title": "One year in: How Microsoft Research Asia – Singapore is advancing research, partnership and talent for real-world impact",
@@ -2912,81 +3187,53 @@
       "reading_minutes": 1
     },
     {
-      "id": "3cb8bc319ea7e4e6",
-      "kind": "article",
-      "title": "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program",
-      "source": "Reuters",
-      "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPMnNocmF2MC1saXA1bW95QU5PcXUyNHZrZUdaZUFKNXVnYk1Yejg4UTlqa242RmJGMnBlZ1pkeC1KdERaazR1TGtSTHkwMFFLNTZQa3VBdHJzcWlWR0hldTYtVm5RQ3hQZDE2LXFfZ3gzeHVqQ3pNR1pEUmpHbnpUMlB1UkYtTHpfeURTVU9Kb082R3ZrbnA1VVZmcEJlcnZBUlEySmtkUQ?oc=5",
-      "published_at": "2026-09-18T07:00:00Z",
+      "id": "sam-altman-gpt-live-20260708",
+      "kind": "social",
+      "title": "Sam Altman 预告 ChatGPT 新一代实时语音 GPT-live",
+      "source": "X · Sam Altman",
+      "source_url": "https://x.com/sama/status/2074909079450050629",
+      "published_at": "2026-07-08T08:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
+        "Sam Altman",
+        "OpenAI",
+        "Voice AI"
       ],
-      "verification": "媒体或公开网页",
-      "summary": "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program Reuters",
+      "verification": "创始人官方账号原帖 · 产品文档待补充",
+      "summary": "Sam Altman 在 X 宣布 GPT-live 上线，强调更自然的实时语音体验。此类产品预告通常早于完整技术说明，页面将保留原帖，同时等待 OpenAI 产品文档补充模型限制、地区可用性和具体能力。",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPMnNocmF2MC1saXA1bW95QU5PcXUyNHZrZUdaZUFKNXVnYk1Yejg4UTlqa242RmJGMnBlZ1pkeC1KdERaazR1TGtSTHkwMFFLNTZQa3VBdHJzcWlWR0hldTYtVm5RQ3hQZDE2LXFfZ3gzeHVqQ3pNR1pEUmpHbnpUMlB1UkYtTHpfeURTVU9Kb082R3ZrbnA1VVZmcEJlcnZBUlEySmtkUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "resolved_url": "https://x.com/sama/status/2074909079450050629",
       "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+        "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
+        "5:30 PM · Jul 8, 2026 · 765.8K Views 919 513 10K 764 Jenny @suomi55 Jul 8 Are you kidding us?",
+        "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
+        "You are promoting something here that you yourself have taken away from the users!",
+        "#keep4o #BringBack4o #OpenSource4o 20 13 193 12K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program Reuters"
+          "body": "Sam Altman 在 X 宣布 GPT-live 上线，强调更自然的实时语音体验。此类产品预告通常早于完整技术说明，页面将保留原帖，同时等待 OpenAI 产品文档补充模型限制、地区可用性和具体能力。"
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
+            "5:30 PM · Jul 8, 2026 · 765.8K Views 919 513 10K 764 Jenny @suomi55 Jul 8 Are you kidding us?",
+            "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
+            "You are promoting something here that you yourself have taken away from the users!",
+            "#keep4o #BringBack4o #OpenSource4o 20 13 193 12K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
           ]
         },
         {
           "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "37db2441d5a89592",
-      "kind": "article",
-      "title": "Medical AI has a proof problem",
-      "source": "Financial Times",
-      "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOZHh1OXRja21yY1BGU0pacGhEQTEtOV9yOWFJbGpkbHpzZlhrNlN3MTNBeVR3SG5EdEktVzVJVEw3WUx6WDF4SGJjZTJxV21XRzF1RUVjUE9ERUQ0QjRmOWhTdXZLMFRLSGFCeDVGTVFOQ3dYdkNFRW4zWGlyekRQSEdrd2M?oc=5",
-      "published_at": "2026-09-17T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Medical AI has a proof problem Financial Times",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOZHh1OXRja21yY1BGU0pacGhEQTEtOV9yOWFJbGpkbHpzZlhrNlN3MTNBeVR3SG5EdEktVzVJVEw3WUx6WDF4SGJjZTJxV21XRzF1RUVjUE9ERUQ0QjRmOWhTdXZLMFRLSGFCeDVGTVFOQ3dYdkNFRW4zWGlyekRQSEdrd2M?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Medical AI has a proof problem Financial Times"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          "paragraphs": [
+            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 · 765.8K Views 919 513 10K 764",
+            "Jenny @suomi55 Jul 8 Are you kidding us? „it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o! You are promoting something here that you yourself have taken away from the users! That’s disgusting! #keep4o #BringBack4o #OpenSource4o 20 13 193 12K",
+            "David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
           ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -3037,58 +3284,6 @@
             "We’re expanding Google Beam to five new countries, partnering with Industrious for an extended network, and proving our impact at Google and beyond.",
             "Google Beam is expanding its global reach to six countries, supported by 18 partners and new hardware from HP. Internal testing shows the technology improves team connection and reduces the need for follow-up meetings. Starting in October, you can book and test these units at select Industrious locations to see how they enhance your own professional meetings.",
             "Google Beam is expanding its global reach to help people connect face-to-face from anywhere."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "sam-altman-gpt-live-20260708",
-      "kind": "social",
-      "title": "Sam Altman 预告 ChatGPT 新一代实时语音 GPT-live",
-      "source": "X · Sam Altman",
-      "source_url": "https://x.com/sama/status/2074909079450050629",
-      "published_at": "2026-07-08T08:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Sam Altman",
-        "OpenAI",
-        "Voice AI"
-      ],
-      "verification": "创始人官方账号原帖 · 产品文档待补充",
-      "summary": "Sam Altman 在 X 宣布 GPT-live 上线，强调更自然的实时语音体验。此类产品预告通常早于完整技术说明，页面将保留原帖，同时等待 OpenAI 产品文档补充模型限制、地区可用性和具体能力。",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/sama/status/2074909079450050629",
-      "key_points": [
-        "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
-        "5:30 PM · Jul 8, 2026 · 765.8K Views 919 513 10K 764 Jenny @suomi55 Jul 8 Are you kidding us?",
-        "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
-        "You are promoting something here that you yourself have taken away from the users!",
-        "#keep4o #BringBack4o #OpenSource4o 20 13 193 12K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Sam Altman 在 X 宣布 GPT-live 上线，强调更自然的实时语音体验。此类产品预告通常早于完整技术说明，页面将保留原帖，同时等待 OpenAI 产品文档补充模型限制、地区可用性和具体能力。"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift.",
-            "5:30 PM · Jul 8, 2026 · 765.8K Views 919 513 10K 764 Jenny @suomi55 Jul 8 Are you kidding us?",
-            "„it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o!",
-            "You are promoting something here that you yourself have taken away from the users!",
-            "#keep4o #BringBack4o #OpenSource4o 20 13 193 12K David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Sam Altman @sama GPT-live (next-generation voice) launches today in ChatGPT. it feels magical and 'real'. i have always preferred typing to talking to an AI, now i think that's going to shift. 5:30 PM · Jul 8, 2026 · 765.8K Views 919 513 10K 764",
-            "Jenny @suomi55 Jul 8 Are you kidding us? „it feels magical and ‚real‘..“ The unique one who felt magical and real was and IS STILL GPT-4o! You are promoting something here that you yourself have taken away from the users! That’s disgusting! #keep4o #BringBack4o #OpenSource4o 20 13 193 12K",
-            "David Stark @stark4833 Jul 8 4o felt magical, and all of the magic your company has left with 4o, so maybe listen to your customers and bring it back. #keep4o #4oForAll 1 5 137 3.7K"
           ]
         }
       ],
@@ -3218,125 +3413,6 @@
         {
           "title": "内容概览",
           "body": "The AI Invasion Has Come for Mathematics (opinion) Inside Higher Ed"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "66dc3461ad5f3036",
-      "kind": "article",
-      "title": "OpenAI Just Carpet-Bombed Mathematics",
-      "source": "The Atlantic",
-      "source_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPRUxiMkgzUTRaSkNJN2EwUHR3NVFZdVRua1pVWGhzTy1TMFhEc05BcmoxeThfLWhqMUN2OG11cUthZHpiNXUyYUNVWW03M3JKMVR0c29GbFZ2NG8yV0xlR3dHUWt6T2V1M3VfRklzeXFVbFVBbGxUN1RnbW1jUnJpOVJGZFRMSTA?oc=5",
-      "published_at": "2026-10-08T19:49:43Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "OpenAI Just Carpet-Bombed Mathematics The Atlantic",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPRUxiMkgzUTRaSkNJN2EwUHR3NVFZdVRua1pVWGhzTy1TMFhEc05BcmoxeThfLWhqMUN2OG11cUthZHpiNXUyYUNVWW03M3JKMVR0c29GbFZ2NG8yV0xlR3dHUWt6T2V1M3VfRklzeXFVbFVBbGxUN1RnbW1jUnJpOVJGZFRMSTA?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "OpenAI Just Carpet-Bombed Mathematics The Atlantic"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "4367e354c0d5d5f3",
-      "kind": "article",
-      "title": "Opinion | Rhetoric Is an AI-Proof Skill in the Job Market",
-      "source": "WSJ",
-      "source_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOLVFGSE1PSmlMcVdqcE5fei13TkI2RHU4aVVUdGdjQl80UzY4VmZVNTduZ2ktbVhYTl90WGJUekU2WmlqUG5BNUtUZVNzVVRFZXhrQVZaMjR5bHVjQUY3UmdGTHZlZ3NaTTg2Z2VsbXh5eUtndTJrdHUxTGVNUDBfNDJNV2UzODhyeWRYWQ?oc=5",
-      "published_at": "2026-10-08T19:26:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Opinion | Rhetoric Is an AI-Proof Skill in the Job Market WSJ",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOLVFGSE1PSmlMcVdqcE5fei13TkI2RHU4aVVUdGdjQl80UzY4VmZVNTduZ2ktbVhYTl90WGJUekU2WmlqUG5BNUtUZVNzVVRFZXhrQVZaMjR5bHVjQUY3UmdGTHZlZ3NaTTg2Z2VsbXh5eUtndTJrdHUxTGVNUDBfNDJNV2UzODhyeWRYWQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Opinion | Rhetoric Is an AI-Proof Skill in the Job Market WSJ"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "ec0d1f9562782ccf",
-      "kind": "article",
-      "title": "OpenAI shelves new AI model release over safety concerns",
-      "source": "Reuters",
-      "source_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNMXc5dDQ0V0FSdEZfMWN3YjNGcG1jZmdHaG1mTDRwMExSZ2pLcjFzRzN1aU0tZFNJa0ZBZXVDdzJJQWxqN01WTmxUbXcyOFEyU1hIUjVpLXlJMW5SVUpiTWRkOHFQd1lyYmVCRHM1UzRtc3lPQXdoRHVvQmQ2ZGp2dGFjLXA1YWNhRjhDc0Z0MmVfejhYdk1IOFEzdUVTYl9Rc0hOWWVKY0RzeENVaks0eFZR?oc=5",
-      "published_at": "2026-09-29T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Frontier Labs",
-        "Industry"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "OpenAI shelves new AI model release over safety concerns Reuters",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNMXc5dDQ0V0FSdEZfMWN3YjNGcG1jZmdHaG1mTDRwMExSZ2pLcjFzRzN1aU0tZFNJa0ZBZXVDdzJJQWxqN01WTmxUbXcyOFEyU1hIUjVpLXlJMW5SVUpiTWRkOHFQd1lyYmVCRHM1UzRtc3lPQXdoRHVvQmQ2ZGp2dGFjLXA1YWNhRjhDc0Z0MmVfejhYdk1IOFEzdUVTYl9Rc0hOWWVKY0RzeENVaks0eFZR?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "OpenAI shelves new AI model release over safety concerns Reuters"
         },
         {
           "title": "公开页面要点",
@@ -3503,6 +3579,86 @@
       "reading_minutes": 1
     },
     {
+      "id": "66dc3461ad5f3036",
+      "kind": "article",
+      "title": "OpenAI Just Carpet-Bombed Mathematics",
+      "source": "The Atlantic",
+      "source_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPRUxiMkgzUTRaSkNJN2EwUHR3NVFZdVRua1pVWGhzTy1TMFhEc05BcmoxeThfLWhqMUN2OG11cUthZHpiNXUyYUNVWW03M3JKMVR0c29GbFZ2NG8yV0xlR3dHUWt6T2V1M3VfRklzeXFVbFVBbGxUN1RnbW1jUnJpOVJGZFRMSTA?oc=5",
+      "published_at": "2026-10-08T19:49:43Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "OpenAI Just Carpet-Bombed Mathematics The Atlantic",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPRUxiMkgzUTRaSkNJN2EwUHR3NVFZdVRua1pVWGhzTy1TMFhEc05BcmoxeThfLWhqMUN2OG11cUthZHpiNXUyYUNVWW03M3JKMVR0c29GbFZ2NG8yV0xlR3dHUWt6T2V1M3VfRklzeXFVbFVBbGxUN1RnbW1jUnJpOVJGZFRMSTA?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "OpenAI Just Carpet-Bombed Mathematics The Atlantic"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "4367e354c0d5d5f3",
+      "kind": "article",
+      "title": "Opinion | Rhetoric Is an AI-Proof Skill in the Job Market",
+      "source": "WSJ",
+      "source_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOLVFGSE1PSmlMcVdqcE5fei13TkI2RHU4aVVUdGdjQl80UzY4VmZVNTduZ2ktbVhYTl90WGJUekU2WmlqUG5BNUtUZVNzVVRFZXhrQVZaMjR5bHVjQUY3UmdGTHZlZ3NaTTg2Z2VsbXh5eUtndTJrdHUxTGVNUDBfNDJNV2UzODhyeWRYWQ?oc=5",
+      "published_at": "2026-10-08T19:26:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Opinion | Rhetoric Is an AI-Proof Skill in the Job Market WSJ",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOLVFGSE1PSmlMcVdqcE5fei13TkI2RHU4aVVUdGdjQl80UzY4VmZVNTduZ2ktbVhYTl90WGJUekU2WmlqUG5BNUtUZVNzVVRFZXhrQVZaMjR5bHVjQUY3UmdGTHZlZ3NaTTg2Z2VsbXh5eUtndTJrdHUxTGVNUDBfNDJNV2UzODhyeWRYWQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Opinion | Rhetoric Is an AI-Proof Skill in the Job Market WSJ"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "c7347a49ddd3f71a",
       "kind": "article",
       "title": "What to know about Anthropic’s ‘Claude-led’ biological discovery — and why scientists aren’t convinced",
@@ -3641,46 +3797,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "a312b9b80aaf5e87",
-      "kind": "article",
-      "title": "As AI Closed In on ‘Unique Games’ Proof, Researchers Raced to Beat the Machines",
-      "source": "Quanta Magazine",
-      "source_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOU244TzFhdnZtRFdFUmpGSDdaUHJBWmlJaWtRNlRxNEtZYU5ob3VBaWhsYkJOUGRPbU1RZlBWbDY4SWRXOC1zRm03YngydGlyX1FUMExDcHdka3dMS2JTYTNzVFZ1anAtU3I2dVR2Z2NDWHFNRmdNLU5LUTFQZm11UlJHRUw0MmVXSXR3b0MzUDZfVkJ0Ylh3eENHRG9LbE5JY3NCamJhTjJQMXBnR0lYNnZxODFHdmpL?oc=5",
-      "published_at": "2026-10-07T15:09:54Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "As AI Closed In on ‘Unique Games’ Proof, Researchers Raced to Beat the Machines Quanta Magazine",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOU244TzFhdnZtRFdFUmpGSDdaUHJBWmlJaWtRNlRxNEtZYU5ob3VBaWhsYkJOUGRPbU1RZlBWbDY4SWRXOC1zRm03YngydGlyX1FUMExDcHdka3dMS2JTYTNzVFZ1anAtU3I2dVR2Z2NDWHFNRmdNLU5LUTFQZm11UlJHRUw0MmVXSXR3b0MzUDZfVkJ0Ylh3eENHRG9LbE5JY3NCamJhTjJQMXBnR0lYNnZxODFHdmpL?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "As AI Closed In on ‘Unique Games’ Proof, Researchers Raced to Beat the Machines Quanta Magazine"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "1fce2f86ead01bd3",
       "kind": "article",
       "title": "Introducing Falcon ASR",
@@ -3776,46 +3892,6 @@
             "Our recent results show that Nemotron is a strong, adaptable foundation for building world-class specialist models. Starting from Nemotron 3, our teams used supervised fine-tuning (SFT), reinforcement learning (RL), and feedback-driven inference to create systems that reached gold-medal level at both IMO 2026 and IOI 2026 .",
             "The IOI result came from a live, prospective run under the same time, internet-access, and submission constraints as human contestants. It was an unofficial, unsupervised benchmark and was not included in the official IOI ranking. The IMO system’s submitted proofs were graded by official IMO graders."
           ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "e057a9105bce6edb",
-      "kind": "article",
-      "title": "Sharing AI progress in mathematics",
-      "source": "OpenAI",
-      "source_url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9HRmFiYm1mWTNPVTVGTk9faFRwRVZyTjhmejJwa0U3QjU3djh5SlpXT3ZhUlF2M0lXcV9jNkNka1kzY3RKNkRTTnpJVW16ZG1QdmdPU3owRXdCYzFLSkdTb3pIZWdJV0k1R3o3dw?oc=5",
-      "published_at": "2026-10-06T22:21:50Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Sharing AI progress in mathematics OpenAI",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9HRmFiYm1mWTNPVTVGTk9faFRwRVZyTjhmejJwa0U3QjU3djh5SlpXT3ZhUlF2M0lXcV9jNkNka1kzY3RKNkRTTnpJVW16ZG1QdmdPU3owRXdCYzFLSkdTb3pIZWdJV0k1R3o3dw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Sharing AI progress in mathematics OpenAI"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -3959,46 +4035,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "91acac9c4120bfb0",
-      "kind": "article",
-      "title": "AMD to buy Fei-Fei Li's World Labs in $8.2 billion bet on 'physical AI'",
-      "source": "Reuters",
-      "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUEpLOGExLXd6b0dKeXJadmdubW9zdWZzTDB6eVhLb0RSN3RSQTYyenBJdTVRdmR6Vm5jRnp4VHVQQ1NEbGFQb1J0V08xcThIRUs1aG5NQ0piLXhEQTRhcXZQNEZkMUVuaHVyLTRNVjhjbDEtZmxuTGpuR2d1ZDU2b1pGdkxqS1o2TUNDcUMyaFUzRVdmUUpPQndkdEZMZw?oc=5",
-      "published_at": "2026-09-28T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Researcher Watch",
-        "Vision",
-        "World Models"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "AMD to buy Fei-Fei Li's World Labs in $8.2 billion bet on 'physical AI' Reuters",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUEpLOGExLXd6b0dKeXJadmdubW9zdWZzTDB6eVhLb0RSN3RSQTYyenBJdTVRdmR6Vm5jRnp4VHVQQ1NEbGFQb1J0V08xcThIRUs1aG5NQ0piLXhEQTRhcXZQNEZkMUVuaHVyLTRNVjhjbDEtZmxuTGpuR2d1ZDU2b1pGdkxqS1o2TUNDcUMyaFUzRVdmUUpPQndkdEZMZw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "AMD to buy Fei-Fei Li's World Labs in $8.2 billion bet on 'physical AI' Reuters"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "0df5597e0f6bc79a",
       "kind": "article",
       "title": "AMD to buy Fei-Fei Li’s AI start-up for $8bn",
@@ -4063,6 +4099,45 @@
         {
           "title": "内容概览",
           "body": "AMD to Buy Fei-Fei Li’s World Labs AI Startup for $8.2 Billion Bloomberg.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "91acac9c4120bfb0",
+      "kind": "article",
+      "title": "AMD to buy Fei-Fei Li's World Labs in $8.2 billion bet on 'physical AI'",
+      "source": "Reuters",
+      "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUEpLOGExLXd6b0dKeXJadmdubW9zdWZzTDB6eVhLb0RSN3RSQTYyenBJdTVRdmR6Vm5jRnp4VHVQQ1NEbGFQb1J0V08xcThIRUs1aG5NQ0piLXhEQTRhcXZQNEZkMUVuaHVyLTRNVjhjbDEtZmxuTGpuR2d1ZDU2b1pGdkxqS1o2TUNDcUMyaFUzRVdmUUpPQndkdEZMZw?oc=5",
+      "published_at": "2026-09-28T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "AMD to buy Fei-Fei Li's World Labs in $8.2 billion bet on 'physical AI' Reuters",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUEpLOGExLXd6b0dKeXJadmdubW9zdWZzTDB6eVhLb0RSN3RSQTYyenBJdTVRdmR6Vm5jRnp4VHVQQ1NEbGFQb1J0V08xcThIRUs1aG5NQ0piLXhEQTRhcXZQNEZkMUVuaHVyLTRNVjhjbDEtZmxuTGpuR2d1ZDU2b1pGdkxqS1o2TUNDcUMyaFUzRVdmUUpPQndkdEZMZw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AMD to buy Fei-Fei Li's World Labs in $8.2 billion bet on 'physical AI' Reuters"
         },
         {
           "title": "公开页面要点",
@@ -4143,6 +4218,46 @@
         {
           "title": "内容概览",
           "body": "Top A.I. Leaders Call for Slowing Down A.I. Development The New York Times"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "745d0011ab9f7ef9",
+      "kind": "social",
+      "title": "Try Grok @Bot",
+      "source": "X",
+      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE81bDNldkRtRlM3aUdzSDM2b2FKU3FpaTRtejVuclBKaXcyblBoa0MxdHlKSUp3RVBBeUJDSFdKWDFBNmlHRUozLUF6cTJyc0FqMTZJQ3FhMTUyaHlVNmc?oc=5",
+      "published_at": "2026-10-11T04:02:20Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE81bDNldkRtRlM3aUdzSDM2b2FKU3FpaTRtejVuclBKaXcyblBoa0MxdHlKSUp3RVBBeUJDSFdKWDFBNmlHRUozLUF6cTJyc0FqMTZJQ3FhMTUyaHlVNmc?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
         },
         {
           "title": "公开页面要点",
@@ -4396,6 +4511,45 @@
       "reading_minutes": 1
     },
     {
+      "id": "9c3b5fa6e3bab0fb",
+      "kind": "article",
+      "title": "Birmingham graduates sell AI study startup StudyStash to Kortext | ETIH EdTech News",
+      "source": "EdTech Innovation Hub",
+      "source_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNaTVWWFl4MmhmblZCSnJlOVduNFhwZDc3VHJYM2xoR2hUR3RHbGk4bDUxM2hsRUloTHU4YXZnLVE0dlhWbmhFMlduYV9ER01uWnhRN3dGeGRIbXFMNlFPRkkyZHVBdzhZZTRPN2Y1NEdpUU1TZ3kzdVFjVEZVSVVDaGo5QzlBV1Znd3lqUWtGLTVmbUtFMmRXVE9OMi00LVVvNjFSSkFJekZpZV91S3dLMEFlQm9rTzVBRXUzWjZ6dw?oc=5",
+      "published_at": "2026-10-05T23:15:10Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Birmingham graduates sell AI study startup StudyStash to Kortext | ETIH EdTech News EdTech Innovation Hub",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNaTVWWFl4MmhmblZCSnJlOVduNFhwZDc3VHJYM2xoR2hUR3RHbGk4bDUxM2hsRUloTHU4YXZnLVE0dlhWbmhFMlduYV9ER01uWnhRN3dGeGRIbXFMNlFPRkkyZHVBdzhZZTRPN2Y1NEdpUU1TZ3kzdVFjVEZVSVVDaGo5QzlBV1Znd3lqUWtGLTVmbUtFMmRXVE9OMi00LVVvNjFSSkFJekZpZV91S3dLMEFlQm9rTzVBRXUzWjZ6dw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Birmingham graduates sell AI study startup StudyStash to Kortext | ETIH EdTech News EdTech Innovation Hub"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "9dbe60afb5ec6156",
       "kind": "article",
       "title": "Coming soon: New York City’s hearing on AI risks",
@@ -4420,45 +4574,6 @@
         {
           "title": "内容概览",
           "body": "Coming soon: New York City’s hearing on AI risks Marcus on AI | Substack"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "83dfeeef759aefa6",
-      "kind": "article",
-      "title": "Cambridge AI startup Zenithon raises $10m for physics models | ETIH EdTech News",
-      "source": "EdTech Innovation Hub",
-      "source_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOUDhVaUtIcTAzZ1lod0w5WjZfTXNBYzJQbXZLVzN2bFk1T0ZGUUdBYjRiOEp0WTdjZ0FlQ01IUFI5T1p5OXJ3LU5FQVBOS29HaUtfYnlzUXJoMmdLc25CeWVUd1psaUZneklVN2E2UUk2eTlRU1o3VEVvbVVqZU5nWlB2cEFVbGJjOXU0TXNVclBYcHJjTTI2ZTVqTEF2VmNTWnlxRG5VN1o2amVyUEgxa1FSQnd0SnRPM3hhdnVQd01TZ29rai1FdXNyRlV1YlZi?oc=5",
-      "published_at": "2026-10-04T23:30:50Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Cambridge AI startup Zenithon raises $10m for physics models | ETIH EdTech News EdTech Innovation Hub",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOUDhVaUtIcTAzZ1lod0w5WjZfTXNBYzJQbXZLVzN2bFk1T0ZGUUdBYjRiOEp0WTdjZ0FlQ01IUFI5T1p5OXJ3LU5FQVBOS29HaUtfYnlzUXJoMmdLc25CeWVUd1psaUZneklVN2E2UUk2eTlRU1o3VEVvbVVqZU5nWlB2cEFVbGJjOXU0TXNVclBYcHJjTTI2ZTVqTEF2VmNTWnlxRG5VN1o2amVyUEgxa1FSQnd0SnRPM3hhdnVQd01TZ29rai1FdXNyRlV1YlZi?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Cambridge AI startup Zenithon raises $10m for physics models | ETIH EdTech News EdTech Innovation Hub"
         },
         {
           "title": "公开页面要点",
@@ -4518,7 +4633,7 @@
       "title": "Cardiovascular AI startup Corologic lands South Korea's TIPS grant, begins clinical trials",
       "source": "Dealroom",
       "source_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNRjItMWVWT1IwaGtfc0VzWXVGaC15cjhvMC1zeDBlcmJJVjVsUVhfVkVKaFRwQVprM2YxQzdIRkUxQjJwSExtZFVGQ3Vra2k1S2FGNW1hVnQ5TGNVNk9VbFFDb1hxRHI3bkxtb2UxQUlLbERCaWU1d1Y5R2pORk1RczhlUlViam5QcDVnUm5RMlMyRHFEZThZSUg0a2FLMEMwd2hxY1Rudmo1Y0U2S2pmOFJ0TVNEWXpFT3NiNnhWSmg?oc=5",
-      "published_at": "2026-10-01T00:32:21Z",
+      "published_at": "2026-10-01T15:55:20Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -4537,6 +4652,45 @@
         {
           "title": "内容概览",
           "body": "Cardiovascular AI startup Corologic lands South Korea's TIPS grant, begins clinical trials Dealroom"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "5af5e10deef61fc6",
+      "kind": "article",
+      "title": "AMD to Acquire World Labs for $8.2 Billion",
+      "source": "WSJ",
+      "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQLVpVcHpJVVFBektEcldpS0ttVXk1a2dkR0kzZEtUNmp3d1hQNzVEb3NOZVhEc1piQmtIYlI3WF9QUExkT2R3TW9tOW1ZZ0RpSGdELWxBbVRldmYtRmNUQjRxWjdZeS1RZnVvNFhvbU9pQzFfd2RyXzYxMnR4X3RpNFlBUzU?oc=5",
+      "published_at": "2026-09-29T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "AMD to Acquire World Labs for $8.2 Billion WSJ",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQLVpVcHpJVVFBektEcldpS0ttVXk1a2dkR0kzZEtUNmp3d1hQNzVEb3NOZVhEc1piQmtIYlI3WF9QUExkT2R3TW9tOW1ZZ0RpSGdELWxBbVRldmYtRmNUQjRxWjdZeS1RZnVvNFhvbU9pQzFfd2RyXzYxMnR4X3RpNFlBUzU?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AMD to Acquire World Labs for $8.2 Billion WSJ"
         },
         {
           "title": "公开页面要点",
@@ -4630,45 +4784,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "5af5e10deef61fc6",
-      "kind": "article",
-      "title": "AMD to Acquire World Labs for $8.2 Billion",
-      "source": "WSJ",
-      "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQLVpVcHpJVVFBektEcldpS0ttVXk1a2dkR0kzZEtUNmp3d1hQNzVEb3NOZVhEc1piQmtIYlI3WF9QUExkT2R3TW9tOW1ZZ0RpSGdELWxBbVRldmYtRmNUQjRxWjdZeS1RZnVvNFhvbU9pQzFfd2RyXzYxMnR4X3RpNFlBUzU?oc=5",
-      "published_at": "2026-09-28T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "AMD to Acquire World Labs for $8.2 Billion WSJ",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQLVpVcHpJVVFBektEcldpS0ttVXk1a2dkR0kzZEtUNmp3d1hQNzVEb3NOZVhEc1piQmtIYlI3WF9QUExkT2R3TW9tOW1ZZ0RpSGdELWxBbVRldmYtRmNUQjRxWjdZeS1RZnVvNFhvbU9pQzFfd2RyXzYxMnR4X3RpNFlBUzU?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "AMD to Acquire World Labs for $8.2 Billion WSJ"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "323fba561ee17131",
       "kind": "article",
       "title": "I was laid off by Google, then asked to come back. I gave up a 6-figure salary and unvested stock to bet on my startup.",
@@ -4732,6 +4847,45 @@
         {
           "title": "内容概览",
           "body": "Another Under 30 AI Startup Just Hit A $5 Billion Valuation Forbes"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "af9996c10ad1cfa6",
+      "kind": "article",
+      "title": "As billions flood college sports, one AI startup sees an opening",
+      "source": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQT1NwYy1CX0s3MnJsQ0N2MEp6ZEFrbVg5Y1FPb2R4NnZMRFAzcGx5YTZ2dzZwdTgxWXdqUV9PeHN2SUxUYXFqV0UyejFMUXFZUW01cjh0UUIwSTRVZUkxSTdVQjYzZmJMU1E4NDhRUF8tNnprZVNxVGt4RXNkb3duZVhRaGUzbFhlbFE?oc=5",
+      "published_at": "2026-09-24T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "As billions flood college sports, one AI startup sees an opening Yahoo Sports",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQT1NwYy1CX0s3MnJsQ0N2MEp6ZEFrbVg5Y1FPb2R4NnZMRFAzcGx5YTZ2dzZwdTgxWXdqUV9PeHN2SUxUYXFqV0UyejFMUXFZUW01cjh0UUIwSTRVZUkxSTdVQjYzZmJMU1E4NDhRUF8tNnprZVNxVGt4RXNkb3duZVhRaGUzbFhlbFE?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "As billions flood college sports, one AI startup sees an opening Yahoo Sports"
         },
         {
           "title": "公开页面要点",
@@ -4921,45 +5075,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "3ae7e6cefdfa9a32",
-      "kind": "article",
-      "title": "Human Holdings to Make University of Tsukuba AI Startup Sophieate a Wholly Owned Subsidiary in October",
-      "source": "BigGo Finance",
-      "source_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBzc2JRWFVWUTR4VHhkWHpQSk5zUnNxcnBUaDczcW5WemZaOTlSd0pETlg1ZC1odmZ6cjg1UnQ4RjhHeXViMi1sWU1ReHlydU5CbFNPVE1idHEyak8wMTV3RWs2eV9YNHVsN2J0dGtvWkk2eXB1aUE?oc=5",
-      "published_at": "2026-09-11T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Human Holdings to Make University of Tsukuba AI Startup Sophieate a Wholly Owned Subsidiary in October BigGo Finance",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBzc2JRWFVWUTR4VHhkWHpQSk5zUnNxcnBUaDczcW5WemZaOTlSd0pETlg1ZC1odmZ6cjg1UnQ4RjhHeXViMi1sWU1ReHlydU5CbFNPVE1idHEyak8wMTV3RWs2eV9YNHVsN2J0dGtvWkk2eXB1aUE?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Human Holdings to Make University of Tsukuba AI Startup Sophieate a Wholly Owned Subsidiary in October BigGo Finance"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "d7c4eccb6fdb8696",
       "kind": "article",
       "title": "‘The clock on AI regulation is ticking’, warns UN rights chief",
@@ -5077,45 +5192,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "4f7e9b344ddb4e49",
-      "kind": "article",
-      "title": "A timeline of developments in AI safety since the attack on Hugging Face",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "source_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNa2ZtZjBGNWdEaEFHNjFJVFk4TzJpQXhvNVk3a0NLNGd5R0dEZGc2dWUzUzZRZlc0cEJQMThKWG5GTmpnVGRrZkJEQzB0RUN1a0NzUUlKNWM1emVhVUJYTENCbmVWSnNQaUsyWWh1c18zZTJUWV9PWXJTbFkwN2RjMlZWMktpSE81OWdtcmxxZXdOTzhiMnhWNzJVVHQ3TjRSNTRub9IBqgFBVV95cUxOS09xaGVqVnc5SjdxbXBLdGhOZXc2N2ZtbkNLYUdqNzBoLXNlN2tIVHFxOGxzLS1jTEltbDlNYzF5Rzd0RURrU1hneW1sM2R1U3Vkelo4Q01PMUhGWXZORGhsajllV2RQYmxJTUpSVTZJMnlSUUtUWGMzbUhneGhLR3dKNER0SmdBYWplaXd6U09UVXNkanMzWHYyNTlQd3FVT3RCOWJjQUJLdw?oc=5",
-      "published_at": "2026-10-10T18:55:46Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Open Source",
-        "Models & Tools"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "A timeline of developments in AI safety since the attack on Hugging Face ABC News - Breaking News, Latest News and Videos",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNa2ZtZjBGNWdEaEFHNjFJVFk4TzJpQXhvNVk3a0NLNGd5R0dEZGc2dWUzUzZRZlc0cEJQMThKWG5GTmpnVGRrZkJEQzB0RUN1a0NzUUlKNWM1emVhVUJYTENCbmVWSnNQaUsyWWh1c18zZTJUWV9PWXJTbFkwN2RjMlZWMktpSE81OWdtcmxxZXdOTzhiMnhWNzJVVHQ3TjRSNTRub9IBqgFBVV95cUxOS09xaGVqVnc5SjdxbXBLdGhOZXc2N2ZtbkNLYUdqNzBoLXNlN2tIVHFxOGxzLS1jTEltbDlNYzF5Rzd0RURrU1hneW1sM2R1U3Vkelo4Q01PMUhGWXZORGhsajllV2RQYmxJTUpSVTZJMnlSUUtUWGMzbUhneGhLR3dKNER0SmdBYWplaXd6U09UVXNkanMzWHYyNTlQd3FVT3RCOWJjQUJLdw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "A timeline of developments in AI safety since the attack on Hugging Face ABC News - Breaking News, Latest News and Videos"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "9fde4a41eaf1a767",
       "kind": "article",
       "title": "Controversy swirls over ‘abrupt’ firing of OpenAI safety team members involved in the Hugging Face hack investigation",
@@ -5194,45 +5270,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "c846435ed5aaac37",
-      "kind": "article",
-      "title": "Wes Moore calls for AI regulation at Baltimore summit",
-      "source": "WBAL-TV",
-      "source_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQWHRNR2NYSXlxY1BNMEJEM0RvcVluQWQ1b0p1bG5vZXVGaXJ5al85RnlES1U1WVdBWjY2a1plMjd4UHdzcUN0bklDZno2SlRGdEVVbkxCeGFUWGNkYjFrc2RzUm5mY3NlV01KdHItajZseW1qNk9SanFYZW9lVVZwS1VETFN2cEU?oc=5",
-      "published_at": "2026-10-01T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Wes Moore calls for AI regulation at Baltimore summit WBAL-TV",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQWHRNR2NYSXlxY1BNMEJEM0RvcVluQWQ1b0p1bG5vZXVGaXJ5al85RnlES1U1WVdBWjY2a1plMjd4UHdzcUN0bklDZno2SlRGdEVVbkxCeGFUWGNkYjFrc2RzUm5mY3NlV01KdHItajZseW1qNk9SanFYZW9lVVZwS1VETFN2cEU?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Wes Moore calls for AI regulation at Baltimore summit WBAL-TV"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "5a879787bcd9ebb2",
       "kind": "article",
       "title": "Oregon Is Latest State to Move on Frontier AI Regulation",
@@ -5296,6 +5333,84 @@
         {
           "title": "内容概览",
           "body": "OpenAI, Anthropic CEOs call for global AI regulation at UN Al Jazeera"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "efdbaaf2774d3427",
+      "kind": "article",
+      "title": "A timeline of developments in AI safety since the attack on Hugging Face",
+      "source": "AP News",
+      "source_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNMURacHFuLUJOMWczTk5zVE1wUXN1TVJaNVFUTGtxU2c5dlRpSVVFT01KX2p4UTd2eUxjNllmSjBoRGFqWkFhT29kUS05SndmVjBlVThoblpjX2VYOXZpWnJ0UmdFUExNdmlwUXlUOVpPWDB4QzZDTmlBVUw5anoxWFlqbzZhNzBqZlhmQ01HQTNLeHMzU05WRGd4dk1vRUZGWmc?oc=5",
+      "published_at": "2026-10-01T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "A timeline of developments in AI safety since the attack on Hugging Face AP News",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNMURacHFuLUJOMWczTk5zVE1wUXN1TVJaNVFUTGtxU2c5dlRpSVVFT01KX2p4UTd2eUxjNllmSjBoRGFqWkFhT29kUS05SndmVjBlVThoblpjX2VYOXZpWnJ0UmdFUExNdmlwUXlUOVpPWDB4QzZDTmlBVUw5anoxWFlqbzZhNzBqZlhmQ01HQTNLeHMzU05WRGd4dk1vRUZGWmc?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "A timeline of developments in AI safety since the attack on Hugging Face AP News"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "5693bdf8c6b0b0fb",
+      "kind": "article",
+      "title": "US, Chinese visions for AI regulation differ sharply at UN meeting",
+      "source": "Politico",
+      "source_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNSlFqNC1IVTNTcW5WbjRnQldjamFyTlpzTUNBckgxRWFONjhYQzdkS1hzelpzb2M4ZndSR1k2N3pxRXlraWsxeTNLUk52Vm5vMmFYVFNSTXY1WGpuVnYtSFAxQVdmcXJOZ1JRT25RRk1MMHVKaUwzTlBvMGphRGcxeHR6dnpDNm5ESkRWTVY0Q1NZeHRxOXhiQ3JhLVBycU9nTThQakMwbmh2NzlIVUJ2Z0tEZFhMQQ?oc=5",
+      "published_at": "2026-09-23T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "US, Chinese visions for AI regulation differ sharply at UN meeting Politico",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNSlFqNC1IVTNTcW5WbjRnQldjamFyTlpzTUNBckgxRWFONjhYQzdkS1hzelpzb2M4ZndSR1k2N3pxRXlraWsxeTNLUk52Vm5vMmFYVFNSTXY1WGpuVnYtSFAxQVdmcXJOZ1JRT25RRk1MMHVKaUwzTlBvMGphRGcxeHR6dnpDNm5ESkRWTVY0Q1NZeHRxOXhiQ3JhLVBycU9nTThQakMwbmh2NzlIVUJ2Z0tEZFhMQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "US, Chinese visions for AI regulation differ sharply at UN meeting Politico"
         },
         {
           "title": "公开页面要点",
