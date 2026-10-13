@@ -1,26 +1,26 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-13T00:36:36Z",
-  "item_count": 85,
+  "generated_at": "2026-10-13T14:07:25Z",
+  "item_count": 132,
   "category_counts": {
     "research": 20,
-    "impact": 7,
+    "impact": 16,
     "frontier": 16,
     "china": 16,
-    "voices": 5,
+    "voices": 14,
     "bigtech": 14,
-    "startups": 0,
-    "opensource": 7,
-    "policy": 0
+    "startups": 14,
+    "opensource": 12,
+    "policy": 10
   },
   "analysis": {
     "title": "从模型竞速走向产品、算力与生态：本期 AI 趋势观察",
-    "lead": "本期共整理 85 条有效信号。下面不是新闻复述，而是把论文、公司、创业与政策放在同一张图里后的编辑性判断。",
+    "lead": "本期共整理 132 条有效信号。下面不是新闻复述，而是把论文、公司、创业与政策放在同一张图里后的编辑性判断。",
     "paragraphs": [
       "研究侧共收录 20 条信号，重点包括 《BACE: LLM-based Code Generation through Bayesian Anchored…》、《Reward Hacking Benchmark: Measuring Exploits in LLM Agents…》。与只看榜单相比，更值得持续观察的是论文能否把 Agent 的可靠性、评测完整性与推理成本一起向前推进。",
-      "AI 跨领域贡献收录 7 条，代表性事件包括 《Claude Fable 5 协助找到雅可比猜想的显式三维反例》、《Simulating student learning for better AI tutoring》。这类结果会区分官方论文、可核验反例、媒体报道与尚待同行评审的社交平台首发，避免把‘可计算验证’和‘完成学术确认’混为一谈。",
-      "中国 AI 板块本期收录 16 条动态，已覆盖 Qwen / 通义千问、DeepSeek、字节豆包 / Seed。代表性变化包括 《英伟达重金力捧 “美版 DeepSeek ”将 发布 开源模型》、《通义千问 · Qwen -Image-2.1-Pro 透明图层+换背景全包了,小白也能用的＂轻量…》；竞争正在从单次模型发布延伸到开源策略、Agent 产品入口、国产算力适配和价格体系。",
-      "产业侧共有 30 条前沿实验室与大厂动态、5 条关键人物公开信号，另有 0 条创业和 0 条政策安全更新。模型能力、算力供给、创始人判断、产品分发与合规成本正在变成同一个竞争问题。"
+      "AI 跨领域贡献收录 16 条，代表性事件包括 《Claude Fable 5 协助找到雅可比猜想的显式三维反例》、《Simulating student learning for better AI tutoring》。这类结果会区分官方论文、可核验反例、媒体报道与尚待同行评审的社交平台首发，避免把‘可计算验证’和‘完成学术确认’混为一谈。",
+      "中国 AI 板块本期收录 16 条动态，已覆盖 Qwen / 通义千问、腾讯元宝 / 混元、DeepSeek。代表性变化包括 《小马哥复盘: 腾讯 不抢地盘,把 混元 和 元宝 接起来》、《英伟达重金力捧 “美版 DeepSeek ”将 发布 开源模型》；竞争正在从单次模型发布延伸到开源策略、Agent 产品入口、国产算力适配和价格体系。",
+      "产业侧共有 30 条前沿实验室与大厂动态、14 条关键人物公开信号，另有 14 条创业和 10 条政策安全更新。模型能力、算力供给、创始人判断、产品分发与合规成本正在变成同一个竞争问题。"
     ],
     "takeaways": [
       {
@@ -39,13 +39,13 @@
     "china_watch_coverage": {
       "Kimi / 月之暗面": 0,
       "Qwen / 通义千问": 1,
-      "腾讯元宝 / 混元": 0,
+      "腾讯元宝 / 混元": 1,
       "智谱 / Z.ai": 0,
-      "DeepSeek": 15,
-      "字节豆包 / Seed": 1
+      "DeepSeek": 14,
+      "字节豆包 / Seed": 0
     },
     "people_watch_coverage": {
-      "Elon Musk / xAI": 8,
+      "Elon Musk / xAI": 5,
       "Sam Altman / OpenAI": 1,
       "Dario Amodei / Anthropic": 0,
       "Demis Hassabis / DeepMind": 1,
@@ -54,7 +54,7 @@
       "姚顺雨 / Agents": 1,
       "Ilya Sutskever / SSI": 0,
       "Andrej Karpathy / Eureka Labs": 0,
-      "李飞飞 / Stanford·World Labs": 0,
+      "李飞飞 / Stanford·World Labs": 6,
       "Noam Brown / Reasoning": 0,
       "梁文锋 / DeepSeek": 0,
       "杨植麟 / 月之暗面": 0
@@ -75,12 +75,18 @@
     },
     {
       "name": "Google DeepMind",
-      "status": "ok",
-      "count": 8,
-      "note": ""
+      "status": "error",
+      "count": 0,
+      "note": "not well-formed (invalid token): line 1, column 0"
     },
     {
       "name": "Hugging Face",
+      "status": "ok",
+      "count": 7,
+      "note": ""
+    },
+    {
+      "name": "Google AI",
       "status": "ok",
       "count": 7,
       "note": ""
@@ -92,21 +98,15 @@
       "note": ""
     },
     {
-      "name": "Google AI",
-      "status": "ok",
-      "count": 7,
-      "note": ""
-    },
-    {
-      "name": "Anthropic",
-      "status": "ok",
-      "count": 8,
-      "note": ""
-    },
-    {
       "name": "Microsoft Research",
       "status": "ok",
       "count": 6,
+      "note": ""
+    },
+    {
+      "name": "Academic Startup Radar",
+      "status": "ok",
+      "count": 10,
       "note": ""
     },
     {
@@ -116,106 +116,106 @@
       "note": ""
     },
     {
-      "name": "微信公众号公开索引",
+      "name": "World Model Founders",
+      "status": "ok",
+      "count": 7,
+      "note": ""
+    },
+    {
+      "name": "AI for Biology, Medicine & Materials",
       "status": "ok",
       "count": 12,
       "note": ""
     },
     {
-      "name": "World Model Founders",
-      "status": "error",
-      "count": 0,
-      "note": "HTTP Error 503: Service Unavailable"
-    },
-    {
-      "name": "Academic Startup Radar",
-      "status": "error",
-      "count": 0,
-      "note": "HTTP Error 503: Service Unavailable"
-    },
-    {
-      "name": "AI for Biology, Medicine & Materials",
-      "status": "error",
-      "count": 0,
-      "note": "HTTP Error 503: Service Unavailable"
-    },
-    {
-      "name": "Frontier Lab Monitor",
-      "status": "error",
-      "count": 0,
-      "note": "HTTP Error 503: Service Unavailable"
-    },
-    {
       "name": "AI for Mathematics & Science",
-      "status": "error",
-      "count": 0,
-      "note": "HTTP Error 503: Service Unavailable"
+      "status": "ok",
+      "count": 12,
+      "note": ""
     },
     {
-      "name": "AI Policy Monitor",
-      "status": "error",
-      "count": 0,
-      "note": "HTTP Error 503: Service Unavailable"
-    },
-    {
-      "name": "Open Source AI Monitor",
-      "status": "error",
-      "count": 0,
-      "note": "HTTP Error 503: Service Unavailable"
+      "name": "Anthropic",
+      "status": "ok",
+      "count": 8,
+      "note": ""
     },
     {
       "name": "China AI · Kimi & Qwen",
-      "status": "error",
-      "count": 0,
-      "note": "HTTP Error 503: Service Unavailable"
+      "status": "ok",
+      "count": 10,
+      "note": ""
     },
     {
-      "name": "Frontier Leaders on X",
-      "status": "error",
-      "count": 0,
-      "note": "HTTP Error 503: Service Unavailable"
+      "name": "Open Source AI Monitor",
+      "status": "ok",
+      "count": 8,
+      "note": ""
     },
     {
-      "name": "China AI · DeepSeek & Zhipu",
-      "status": "error",
-      "count": 0,
-      "note": "HTTP Error 503: Service Unavailable"
+      "name": "Frontier Lab Monitor",
+      "status": "ok",
+      "count": 9,
+      "note": ""
+    },
+    {
+      "name": "AI Policy Monitor",
+      "status": "ok",
+      "count": 10,
+      "note": ""
     },
     {
       "name": "China AI · Tencent & ByteDance",
-      "status": "error",
-      "count": 0,
-      "note": "HTTP Error 503: Service Unavailable"
+      "status": "ok",
+      "count": 10,
+      "note": ""
     },
     {
-      "name": "Agent & Reasoning Researchers",
-      "status": "error",
-      "count": 0,
-      "note": "HTTP Error 503: Service Unavailable"
+      "name": "China AI · DeepSeek & Zhipu",
+      "status": "ok",
+      "count": 10,
+      "note": ""
+    },
+    {
+      "name": "Frontier Leaders on X",
+      "status": "ok",
+      "count": 10,
+      "note": ""
     },
     {
       "name": "Core AI Researchers on X",
-      "status": "error",
-      "count": 0,
-      "note": "HTTP Error 503: Service Unavailable"
+      "status": "ok",
+      "count": 10,
+      "note": ""
     },
     {
-      "name": "Vision & World Model Researchers",
-      "status": "error",
-      "count": 0,
-      "note": "HTTP Error 503: Service Unavailable"
-    },
-    {
-      "name": "Foundation Model Pioneers",
-      "status": "error",
-      "count": 0,
-      "note": "HTTP Error 503: Service Unavailable"
+      "name": "Agent & Reasoning Researchers",
+      "status": "ok",
+      "count": 9,
+      "note": ""
     },
     {
       "name": "China AI Social Monitor",
-      "status": "error",
-      "count": 0,
-      "note": "HTTP Error 503: Service Unavailable"
+      "status": "ok",
+      "count": 3,
+      "note": ""
+    },
+    {
+      "name": "Foundation Model Pioneers",
+      "status": "ok",
+      "count": 9,
+      "note": ""
+    },
+    {
+      "name": "Vision & World Model Researchers",
+      "status": "ok",
+      "count": 9,
+      "note": ""
+    },
+    {
+      "name": "微信公众号公开索引",
+      "status": "ok",
+      "count": 12,
+      "note": ""
     },
     {
       "name": "Curated primary-source signals",
@@ -282,24 +282,6 @@
       "reader_url": "./reader.html?id=unit-distance-openai-20260520",
       "reader_status": "open-pdf-cached",
       "cached_pdf": "./papers/unit-distance-openai-20260520.pdf"
-    },
-    {
-      "id": "51e2daa9cd8a3deb",
-      "category": "impact",
-      "title": "SynthID Bio: Watermarking methods for synthetic biology",
-      "summary": "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
-      "source": "Google DeepMind",
-      "url": "https://deepmind.google/blog/introducing-synthid-bio/",
-      "published_at": "2026-09-30T15:03:07Z",
-      "tags": [
-        "DeepMind",
-        "Official"
-      ],
-      "importance": 104,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=51e2daa9cd8a3deb",
-      "reader_status": "public-page-excerpt"
     },
     {
       "id": "kaiming-he-research-watch",
@@ -679,42 +661,6 @@
       "reader_status": "summary-only"
     },
     {
-      "id": "54713a52025800f2",
-      "category": "frontier",
-      "title": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
-      "summary": "Introducing EmbeddingGemma 2, an open multimodal embedding model optimized for privacy-first use cases",
-      "source": "Google DeepMind",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=",
-      "published_at": "2026-10-06T19:57:04Z",
-      "tags": [
-        "DeepMind",
-        "Official"
-      ],
-      "importance": 99,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=54713a52025800f2",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "69a6dff164ab81f4",
-      "category": "impact",
-      "title": "AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome",
-      "summary": "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome.",
-      "source": "Google DeepMind",
-      "url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
-      "published_at": "2026-09-08T14:00:15Z",
-      "tags": [
-        "DeepMind",
-        "Official"
-      ],
-      "importance": 99,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=69a6dff164ab81f4",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "gpt5-protein-synthesis-20260205",
       "category": "impact",
       "title": "GPT-5 与自动化实验室将无细胞蛋白合成成本降低 40%",
@@ -734,6 +680,61 @@
       "reader_status": "summary-only"
     },
     {
+      "id": "c6df12f30c1b147e",
+      "category": "research",
+      "title": "Context Selection for Hypothesis and Statistical Evidence Extraction from Full-Text Scientific Articles",
+      "summary": "Extracting hypotheses and their supporting statistical evidence from full-text scientific articles is central to the synthesis of empirical findings, but remains difficult due to document length and the distribution of scientific arguments across sections of the paper. We study a sequential full-text extraction setting, where the statement of a primary finding in an article’s abstract is linked to (i) a corresponding hypothesis statement in the paper body and (ii) the statistical evidence that supports or refutes that hypothesis. This formulation induces a challenging within-document retrieval setting in which many candidate paragraphs are topically related to the finding…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3805696.3846042",
+      "published_at": "2026-10-12T00:00:00Z",
+      "tags": [
+        "Topic Modeling",
+        "context selection",
+        "retrieval-augmented generation",
+        "re-ranking"
+      ],
+      "importance": 96,
+      "content_kind": "paper",
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "reader_url": "./reader.html?id=c6df12f30c1b147e",
+      "authors": [
+        "Sai Koneru",
+        "Jian Wu",
+        "Sarah Michele Rajtmajer"
+      ],
+      "venue": "ACM/IEEE Joint Conference on Digital Libraries",
+      "license": "cc-by",
+      "citations": 0,
+      "reader_status": "abstract-only"
+    },
+    {
+      "id": "7f97c376874b36f9",
+      "category": "research",
+      "title": "Improving Cross-Lingual Transfer for Sequential Sentence Classification in Research Papers via Structural Similarity",
+      "summary": "Sequential sentence classification (SSC) is an essential task for structuring scientific publications, and extending SSC research to languages other than English can improve accessibility to scientific knowledge in multilingual digital libraries. Cross-lingual transfer is a promising approach to address the scarcity of training data in non-English languages. Prior work on other natural language processing tasks has shown the benefits of capturing linguistic similarity between source and target languages. However, SSC inherently depends on patterns at the discourse level, such as label sequences and positional regularities, which appear consistently across languages…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3805696.3846040",
+      "published_at": "2026-10-12T00:00:00Z",
+      "tags": [
+        "Topic Modeling",
+        "cross-lingual transfer",
+        "research papers",
+        "structural similarity"
+      ],
+      "importance": 96,
+      "content_kind": "paper",
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "reader_url": "./reader.html?id=7f97c376874b36f9",
+      "authors": [
+        "Kazuhiro Yamauchi",
+        "Marie Katsurai"
+      ],
+      "venue": "ACM/IEEE Joint Conference on Digital Libraries",
+      "license": "cc-by",
+      "citations": 0,
+      "reader_status": "abstract-only"
+    },
+    {
       "id": "bf9313d60c5cb3cc",
       "category": "research",
       "title": "An Ontology Construction Framework for Asset Lifecycle Management: Agentic Travelling Approach with Field Application in Shale Oil Wellbore Maintenance",
@@ -742,7 +743,10 @@
       "url": "https://doi.org/10.2118/234438-ms",
       "published_at": "2026-10-12T00:00:00Z",
       "tags": [
-        "Semantic Web and Ontologies"
+        "Semantic Web and Ontologies",
+        "asset lifecycle management",
+        "wax deposition",
+        "scaling"
       ],
       "importance": 96,
       "content_kind": "paper",
@@ -769,7 +773,10 @@
       "url": "https://doi.org/10.2118/234358-ms",
       "published_at": "2026-10-12T00:00:00Z",
       "tags": [
-        "Anomaly Detection Techniques and Applications"
+        "Anomaly Detection Techniques and Applications",
+        "outlier detection",
+        "Isolation Forest",
+        "K-medoids clustering"
       ],
       "importance": 96,
       "content_kind": "paper",
@@ -796,7 +803,10 @@
       "url": "https://doi.org/10.2118/234430-ms",
       "published_at": "2026-10-12T00:00:00Z",
       "tags": [
-        "Semantic Web and Ontologies"
+        "Semantic Web and Ontologies",
+        "well log interpretation",
+        "multi-agent systems",
+        "ontology construction"
       ],
       "importance": 96,
       "content_kind": "paper",
@@ -815,425 +825,385 @@
       "reader_status": "abstract-only"
     },
     {
-      "id": "48253c155a2a31b4",
+      "id": "7763f7e195241630",
       "category": "research",
-      "title": "See Me, Believe Me: Causality, Intersectionality, and Interventions Improving the Appearance of Patients",
-      "summary": "In the context of medical records, patients often experience testimonial injustice, where the textual account undermines the validity of their experiences. Past work has demonstrated that intersectionality of demographic features is crucial to detect such injustice. We use causal discovery to study the degree to which certain demographic features tied to marginalization (namely age, gender, and race), together lead to specific types of testimonial injustice terms. This offers us an insightful Structural Causal Model (SCM) relating those demographic features to the different ways a patients' reality may be undermined. We then move toward addressing such injustice, by very…",
+      "title": "Can Large Language Models Identify Technical Terms in Documents Like Human Annotators?",
+      "summary": "Processing technical terms in documents is essential for digital libraries and knowledge organisation, supporting applications such as scholarly search, information retrieval, and domain terminology construction. While document-level term identification, a sub-task of automatic term extraction (ATE), has been tackled as a sequence labelling task, the emergence of large language models (LLMs) opens new avenues for prompt-based extraction. However, evaluation practices have persistently relied on simple success or failure against a single gold standard, without analysing how model behaviours align with human annotations, especially on borderline cases where annotators…",
       "source": "OpenAlex",
-      "url": "https://doi.org/10.1609/aies.v9i1.43134",
-      "published_at": "2026-10-11T00:00:00Z",
+      "url": "https://doi.org/10.1145/3805696.3846497",
+      "published_at": "2026-10-12T00:00:00Z",
       "tags": [
-        "Machine Learning in Healthcare",
-        "testimonial injustice",
-        "intersectionality",
-        "structural causal models"
+        "Advanced Text Analysis Techniques"
       ],
       "importance": 96,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=48253c155a2a31b4",
+      "reader_url": "./reader.html?id=7763f7e195241630",
       "authors": [
-        "Kenya S. Andrews",
-        "Mesrob I. Ohannessian",
-        "Elena Zheleva"
+        "Rei Miyata"
       ],
-      "venue": "Proceedings of the AAAI/ACM Conference on AI Ethics and Society",
-      "pdf_url": "https://arxiv.org/pdf/2410.01227",
-      "license": "green",
-      "citations": 1,
-      "reader_status": "open-pdf-cached",
-      "cached_pdf": "./papers/48253c155a2a31b4.pdf"
-    },
-    {
-      "id": "4af7441515956fba",
-      "category": "research",
-      "title": "Grounded but Misleading: Evaluating Semantic Alignment in AI-Generated Security Explanations",
-      "summary": "Online scams increasingly leverage fluent and context-aware social-engineering strategies, creating growing demand for AI systems that explain why a message may be risky. However, explanations that cite detector-derived evidence may still semantically weaken or redirect the intended risk interpretation. We introduce VEXA (Verifying Semantic EXplanation Alignment), a controlled testbed for studying the gap between lexical grounding and semantic risk alignment in AI-generated scam-risk explanations. VEXA generates ungrounded, risk-aligned, and risk-diluting explanations by independently controlling evidence grounding and semantic framing. Across LLM-as-a-judge and human…",
-      "source": "OpenAlex",
-      "url": "https://doi.org/10.1609/aies.v9i1.43132",
-      "published_at": "2026-10-11T00:00:00Z",
-      "tags": [
-        "Explainable Artificial Intelligence (XAI)",
-        "explainable AI",
-        "online fraud",
-        "social engineering"
-      ],
-      "importance": 96,
-      "content_kind": "paper",
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=4af7441515956fba",
-      "authors": [
-        "Heajun An",
-        "Connor Ng",
-        "Sandesh Sharma Dulal",
-        "Junghwan Kim",
-        "Jin-Hee Cho"
-      ],
-      "venue": "Proceedings of the AAAI/ACM Conference on AI Ethics and Society",
-      "pdf_url": "https://arxiv.org/pdf/2602.05056",
-      "license": "green",
-      "citations": 0,
-      "reader_status": "open-pdf-cached",
-      "cached_pdf": "./papers/4af7441515956fba.pdf"
-    },
-    {
-      "id": "81787e8165038ff3",
-      "category": "research",
-      "title": "Examining the Effect of Explanations of AI Privacy Redaction in AI-mediated Interactions",
-      "summary": "AI-mediated communication is increasingly being utilized to help facilitate interactions; however, in privacy sensitive domains, an AI mediator has the additional challenge of considering how to preserve privacy. In these contexts, a mediator may redact or withhold information, raising questions about how users perceive these interventions and whether explanations of system behavior can improve trust. In this work, we investigate how explanations of redaction operations can affect user trust in AI-mediated communication. We devise a scenario where a validated system removes sensitive content from messages and generates explanations of varying detail to communicate its…",
-      "source": "OpenAlex",
-      "url": "https://doi.org/10.1609/aies.v9i2.43240",
-      "published_at": "2026-10-11T00:00:00Z",
-      "tags": [
-        "Explainable Artificial Intelligence (XAI)",
-        "AI-mediated communication",
-        "user trust",
-        "privacy-preserving AI"
-      ],
-      "importance": 96,
-      "content_kind": "paper",
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=81787e8165038ff3",
-      "authors": [
-        "Roshni Kaushik",
-        "Maarten Sap",
-        "Koichi Onoue"
-      ],
-      "venue": "Proceedings of the AAAI/ACM Conference on AI Ethics and Society",
-      "pdf_url": "https://arxiv.org/pdf/2603.24735",
-      "license": "cc-by-nc-nd",
-      "citations": 0,
-      "reader_status": "open-pdf-cached",
-      "cached_pdf": "./papers/81787e8165038ff3.pdf"
-    },
-    {
-      "id": "cbb6c91a3332d89b",
-      "category": "research",
-      "title": "Explainable AI Isn’t Enough! Rethinking Algorithmic Contestability",
-      "summary": "Machine learning systems increasingly make life-changing decisions about individuals, such as loan approvals, hiring, and cheating detection, raising a pressing question: how can individuals respond to negative decisions made by these opaque systems? While explainable artificial intelligence (XAI) has largely focused on algorithmic recourse—helping individuals change their features to obtain a desired outcome—the parallel problem of algorithmic contestability—helping individuals review and correct erroneous algorithmic decisions—has received far less attention, despite its central ethical and legal importance. We trace this neglect to the absence of clear formal…",
-      "source": "OpenAlex",
-      "url": "https://doi.org/10.1609/aies.v9i2.43198",
-      "published_at": "2026-10-11T00:00:00Z",
-      "tags": [
-        "Explainable Artificial Intelligence (XAI)",
-        "explainable AI",
-        "algorithmic recourse",
-        "algorithmic fairness"
-      ],
-      "importance": 96,
-      "content_kind": "paper",
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=cbb6c91a3332d89b",
-      "authors": [
-        "Timo Freiesleben",
-        "Kristof Meding",
-        "Gunnar König"
-      ],
-      "venue": "Proceedings of the AAAI/ACM Conference on AI Ethics and Society",
-      "pdf_url": "https://arxiv.org/pdf/2605.16041",
-      "license": "green",
-      "citations": 0,
-      "reader_status": "pdf-link-only"
-    },
-    {
-      "id": "17bc6d7549871d25",
-      "category": "research",
-      "title": "When Interpretability Is Unequally Distributed: Fairness in Hybrid Interpretable Models",
-      "summary": "Hybrid interpretable models combine a transparent component with a black-box model by assigning some examples to the former and deferring the rest to the latter. While this design enables flexible tradeoffs between accuracy and interpretability, it also raises a distinct procedural fairness concern: some demographic groups may systematically receive interpretable decisions, while others are disproportionately routed to a black box. We formalize this issue as Interpretability Coverage Disparity (ICD), a demographic-parity-style measure applied to the routing decision of hybrid interpretable models. Using tools from predictive multiplicity, we study ICD across four hybrid…",
-      "source": "OpenAlex",
-      "url": "https://doi.org/10.1609/aies.v9i2.43230",
-      "published_at": "2026-10-11T00:00:00Z",
-      "tags": [
-        "Explainable Artificial Intelligence (XAI)",
-        "demographic parity",
-        "algorithmic fairness",
-        "black-box models"
-      ],
-      "importance": 96,
-      "content_kind": "paper",
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=17bc6d7549871d25",
-      "authors": [
-        "Ziba Jabbar Zare",
-        "Ulrich Aïvodji",
-        "Julien Ferry",
-        "Thibaut Vidal"
-      ],
-      "venue": "Proceedings of the AAAI/ACM Conference on AI Ethics and Society",
-      "pdf_url": "https://arxiv.org/pdf/2605.28626",
-      "license": "green",
-      "citations": 0,
-      "reader_status": "pdf-link-only"
-    },
-    {
-      "id": "cf9a5457c637ec86",
-      "category": "research",
-      "title": "Explaining Time Series Classifications Counterfactually: A Human-Centered Evaluation",
-      "summary": "Counterfactual explanations can promote accountability, fairness, and transparency in AI-supported decision-making by demonstrating how changes in input data can alter outcomes, offering actionable feedback for users to revise unfavorable decisions. However, the majority of counterfactual algorithms focus on tabular and image data, ignoring many high-stakes scenarios that rely on time series data. Furthermore, user studies of counterfactuals for time series are exceedingly rare. We address this research gap by proposing a novel methodology that advances carefully-controlled tests of counterfactual explanations for time series classification. In two experiments…",
-      "source": "OpenAlex",
-      "url": "https://doi.org/10.1609/aies.v9i1.43183",
-      "published_at": "2026-10-11T00:00:00Z",
-      "tags": [
-        "Explainable Artificial Intelligence (XAI)",
-        "time series classification",
-        "counterfactual explanations",
-        "explainable AI"
-      ],
-      "importance": 96,
-      "content_kind": "paper",
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=cf9a5457c637ec86",
-      "authors": [
-        "Eoin D. Delaney",
-        "Greta Warren",
-        "Derek Greene",
-        "Mark T. Keane"
-      ],
-      "venue": "Proceedings of the AAAI/ACM Conference on AI Ethics and Society",
-      "license": "green",
-      "citations": 0,
-      "reader_status": "abstract-only"
-    },
-    {
-      "id": "c83f50c699cbcb92",
-      "category": "research",
-      "title": "We Need Explanation Cards to Connect Explanation Algorithms to the Real World",
-      "summary": "Algorithmic explanations are intended to help stakeholders understand opaque algorithmic decisions, but in practice, they often fall short. First, the meaning of algorithmic explanations is often not what one might intuitively expect, so expert knowledge is required to interpret them correctly. Second, recent work has shown that popular explanation algorithms are uninformative about the behavior of complex decision functions. Together, these issues create a gap between what explanations appear to convey and what they actually provide. In this work, we propose Explanation Cards for Explanation Algorithms, which augment standard explanations with complementary information…",
-      "source": "OpenAlex",
-      "url": "https://doi.org/10.1609/aies.v9i2.43212",
-      "published_at": "2026-10-11T00:00:00Z",
-      "tags": [
-        "Explainable Artificial Intelligence (XAI)",
-        "algorithmic explanations",
-        "explainability",
-        "counterfactual explanations"
-      ],
-      "importance": 96,
-      "content_kind": "paper",
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=c83f50c699cbcb92",
-      "authors": [
-        "Eric Günther",
-        "Balázs Szabados",
-        "Kristof Meding",
-        "Gunnar König",
-        "Sebastian Bordt"
-      ],
-      "venue": "Proceedings of the AAAI/ACM Conference on AI Ethics and Society",
+      "venue": "ACM/IEEE Joint Conference on Digital Libraries",
       "license": "cc-by",
       "citations": 0,
       "reader_status": "abstract-only"
     },
     {
-      "id": "7216eecfc3fb7d7b",
+      "id": "035880432c77baa7",
       "category": "research",
-      "title": "Privacy Cost as Equity Input: A Group Fairness Criterion for Differentially Private Machine Learning",
-      "summary": "Differential privacy (DP) is increasingly deployed to limit membership inference risk in machine-learning systems. Prior work has shown that DP-SGD can widen accuracy disparities across demographic groups, but this framing treats fairness as a purely outcome-side concern. We argue that privacy cost (denoted as the information leakage borne by each group) is itself a form of harm: a group that involuntarily bears greater privacy exposure is entitled to proportionally greater benefit from the system. From this principle we derive the Privacy-Cost Equity Ratio (PCER), a group fairness metric defined as a group’s positive prediction rate normalized by its per-group…",
+      "title": "Strong Solvers, Leaky Tutors: Evaluating Answer Leakage in LLM Math Tutors",
+      "summary": "Educational digital libraries may grant large language model (LLM) tutors access to worked solutions, but access to repository content should not automatically authorize a model to reveal final answers. This study evaluates whether LLM tutors can leverage private solution context to generate pedagogical hints without disclosing final answers to students. Four models, two general instruction-following models and two math-specialized models, are evaluated across 5,000 aligned problem–message cases per condition, constructed from 500 MATH benchmark problems paired with ten fixed student prompts that ask for, or attempt to confirm, the final answer. Three prompting strategies…",
       "source": "OpenAlex",
-      "url": "https://doi.org/10.1609/aies.v9i3.43273",
-      "published_at": "2026-10-11T00:00:00Z",
-      "tags": [
-        "Privacy-Preserving Technologies in Data",
-        "differential privacy",
-        "DP-SGD",
-        "membership inference attacks"
-      ],
-      "importance": 96,
-      "content_kind": "paper",
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=7216eecfc3fb7d7b",
-      "authors": [
-        "Rakshit Naidu"
-      ],
-      "venue": "Proceedings of the AAAI/ACM Conference on AI Ethics and Society",
-      "pdf_url": "https://arxiv.org/pdf/2607.16620",
-      "license": "cc-by",
-      "citations": 0,
-      "reader_status": "pdf-link-only"
-    },
-    {
-      "id": "85662643a853ae5a",
-      "category": "research",
-      "title": "MonitrLLM: A Community-Centered Evaluation Infrastructure for Large Language Models",
-      "summary": "Benchmark suites assess model capability on controlled tasks; large-scale conversation corpora capture naturalistic use without user feedback; and in-interface feedback mechanisms record satisfaction without task purpose. Together, they leave a critical gap in LLM evaluation: no existing infrastructure routinely links interaction trajectories to user-defined outcomes. We introduce MonitrLLM, open-source infrastructure for community-centered LLM evaluations that links full conversation transcripts to user-reported task intent and outcome assessments, treating all three as primary evaluative signals rather than optional metadata. To demonstrate the value of this approach…",
-      "source": "OpenAlex",
-      "url": "https://doi.org/10.1609/aies.v9i3.43280",
-      "published_at": "2026-10-11T00:00:00Z",
-      "tags": [
-        "Speech and dialogue systems",
-        "LLM evaluation",
-        "user feedback",
-        "conversation transcripts"
-      ],
-      "importance": 96,
-      "content_kind": "paper",
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=85662643a853ae5a",
-      "authors": [
-        "Victor Ojewale",
-        "Ro Encarnación",
-        "Suresh Venkatasubramanian",
-        "Danaé Metaxa"
-      ],
-      "venue": "Proceedings of the AAAI/ACM Conference on AI Ethics and Society",
-      "pdf_url": "https://arxiv.org/pdf/2608.02409",
-      "license": "cc-by",
-      "citations": 0,
-      "reader_status": "pdf-link-only"
-    },
-    {
-      "id": "1a3d1d4a7545b5a9",
-      "category": "research",
-      "title": "Quantifying System-Level Harms from AI Adoption in Complex Sociotechnical Systems",
-      "summary": "Artificial Intelligence (AI) is increasingly integrated into complex sociotechnical systems, including Critical National Infrastructure (CNI), where harms emerge from interactions between technical, human, and organisational elements. Yet current AI evaluation remains model-centric, offering little insight into how observed behaviours might translate into system-level risk. We propose a framework that links structured hazard analysis, component-level testing, and probabilistic system modelling to bridge this gap. By providing a traceable pathway from model behaviour to system-level outcomes, the framework enables practitioners to answer the “so what?” of AI failures…",
-      "source": "OpenAlex",
-      "url": "https://doi.org/10.1609/aies.v9i4.43333",
-      "published_at": "2026-10-11T00:00:00Z",
-      "tags": [
-        "Adversarial Robustness in Machine Learning",
-        "AI harms",
-        "complex socio-technical systems",
-        "critical national infrastructure"
-      ],
-      "importance": 96,
-      "content_kind": "paper",
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=1a3d1d4a7545b5a9",
-      "authors": [
-        "Paul Vautravers",
-        "Oliver Chalkley",
-        "Gabriel Downer",
-        "Kate S",
-        "Damian J. Ruck"
-      ],
-      "venue": "Proceedings of the AAAI/ACM Conference on AI Ethics and Society",
-      "pdf_url": "https://arxiv.org/pdf/2608.23906",
-      "license": "cc-by-nc-nd",
-      "citations": 0,
-      "reader_status": "pdf-link-only"
-    },
-    {
-      "id": "5b030ab96196754b",
-      "category": "research",
-      "title": "FedFAn: Federated Learning for Facial Animation",
-      "summary": "We present FedFAn: a system for training audio-driven facial animation models across organisational silos via federated learning. AI model providers often serve companies who hold sensitive biometric and proprietary data which is used for model inference and would make valuable training data, but cannot be shared with the provider. In this paper we begin by outlining the problem of privacy in facial animation, defining three key groups for whom privacy is a consideration: trainers, managers and drivers. Trainers of avatar facial animation serve managers (such as studios) that hold valuable driver performance data and character avatars, but cannot reasonably centralise…",
-      "source": "OpenAlex",
-      "url": "https://doi.org/10.1609/aies.v9i3.43286",
-      "published_at": "2026-10-11T00:00:00Z",
-      "tags": [
-        "Privacy-Preserving Technologies in Data"
-      ],
-      "importance": 96,
-      "content_kind": "paper",
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=5b030ab96196754b",
-      "authors": [
-        "Jack Parry",
-        "Vinay Namboodiri"
-      ],
-      "venue": "Proceedings of the AAAI/ACM Conference on AI Ethics and Society",
-      "license": "closed",
-      "citations": 0,
-      "reader_status": "abstract-only"
-    },
-    {
-      "id": "3b8c66bd1533fa4e",
-      "category": "research",
-      "title": "Fairness Detectability: Do Explanations Recover Fairness-Relevant Causal Effects?",
-      "summary": "Explainability (XAI) methods can play an essential role in fairness-based auditing of an algorithm. In such cases, an incorrect explanation could have detrimental consequences. In this paper, we begin by categorizing three goals of XAI for fairness: enabling correct epistemic footing, algorithm critique, and enabling change through intervention or policy. We take a pragmatic goal-oriented view where we believe XAI should be evaluated in terms of how well they achieve these goals. Framed by the three fairness goals identified, we 1) use causal data simulations with popular causal and non-causal XAI to highlight limitations through our knowledge of the underlying data…",
-      "source": "OpenAlex",
-      "url": "https://doi.org/10.1609/aies.v9i2.43216",
-      "published_at": "2026-10-11T00:00:00Z",
-      "tags": [
-        "Explainable Artificial Intelligence (XAI)"
-      ],
-      "importance": 96,
-      "content_kind": "paper",
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=3b8c66bd1533fa4e",
-      "authors": [
-        "Sakina Hansen",
-        "Kateryna Koval",
-        "Anna-Alina Bondarets",
-        "Joshua R. Loftus"
-      ],
-      "venue": "Proceedings of the AAAI/ACM Conference on AI Ethics and Society",
-      "license": "closed",
-      "citations": 0,
-      "reader_status": "abstract-only"
-    },
-    {
-      "id": "3997dab317b31c6d",
-      "category": "research",
-      "title": "AI-tribution: Enabling Training Data Attribution for Users of Generative Music Models",
-      "summary": "Generative music models are growing in popularity, but users remain in the dark about the influences on their supposedly novel creations. Existing systems provide no mechanisms to identify highly similar songs or to help users learn how model outputs are influenced by training data. We present AI-tribution: a tool designed to inform users of generative music models about the training songs most similar to their generated outputs. We detail the interface, methodology, and a user study (n=26) where musicians, media makers, and music consumers interact with the tool in 30-minute sessions. We analyze how the tool changes user knowledge of generated outputs, examine…",
-      "source": "OpenAlex",
-      "url": "https://doi.org/10.1609/aies.v9i1.43144",
-      "published_at": "2026-10-11T00:00:00Z",
-      "tags": [
-        "Law, AI, and Intellectual Property"
-      ],
-      "importance": 96,
-      "content_kind": "paper",
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=3997dab317b31c6d",
-      "authors": [
-        "Julia Barnett",
-        "Nathan Pruyne",
-        "Nicholas Diakopoulos",
-        "Bryan Pardo"
-      ],
-      "venue": "Proceedings of the AAAI/ACM Conference on AI Ethics and Society",
-      "license": "closed",
-      "citations": 0,
-      "reader_status": "abstract-only"
-    },
-    {
-      "id": "2745992d10c144a4",
-      "category": "research",
-      "title": "Towards Trustworthy Intelligent Tutoring Systems for Nursing Education: Integrating Nurse-Informed Design with a Frugal Neuro-Symbolic Architecture",
-      "summary": "Nursing education is increasingly expected to provide personalised, scalable, and clinically meaningful learning experiences while responding to educator shortages, growing student numbers, limited placement opportunities, and rapidly evolving healthcare environments. These pressures have led to the adoption of technology-enhanced learning and renewed interest in innovative and student-centred pedagogies within healthcare education. Consequently, nursing education has explored a broad range of computer-aided educational approaches, including virtual reality, augmented reality, simulation systems, mobile learning applications, haptic devices, and chatbots. Although many of…",
-      "source": "OpenAlex",
-      "url": "https://doi.org/10.1609/aies.v9i4.43364",
-      "published_at": "2026-10-11T00:00:00Z",
+      "url": "https://doi.org/10.1145/3805696.3846495",
+      "published_at": "2026-10-12T00:00:00Z",
       "tags": [
         "Intelligent Tutoring Systems and Adaptive Learning"
       ],
       "importance": 96,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=2745992d10c144a4",
+      "reader_url": "./reader.html?id=035880432c77baa7",
       "authors": [
-        "Nevena Kostadinova Dicheva"
+        "Aubin Mugisha",
+        "Behrooz Mansouri"
       ],
-      "venue": "Proceedings of the AAAI/ACM Conference on AI Ethics and Society",
+      "venue": "ACM/IEEE Joint Conference on Digital Libraries",
+      "license": "cc-by",
+      "citations": 0,
+      "reader_status": "abstract-only"
+    },
+    {
+      "id": "803f61df72b3e6ce",
+      "category": "research",
+      "title": "Reading the neighborhood: Text-Attentive Graph Reranking for Automated Subject Indexing",
+      "summary": "Subject indexing assigns descriptors from a controlled vocabulary to bibliographic records, a task characterized by thousands of labels, few positive examples per label, and a long tail of rarely used descriptors. Existing extreme multi-label classifiers treat the vocabulary as a flat list, ignoring the semantic relations that thesauri encode.",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3805696.3846044",
+      "published_at": "2026-10-12T00:00:00Z",
+      "tags": [
+        "Text and Document Classification Technologies"
+      ],
+      "importance": 96,
+      "content_kind": "paper",
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "reader_url": "./reader.html?id=803f61df72b3e6ce",
+      "authors": [
+        "Lakshmi Rajendram Bashyam"
+      ],
+      "venue": "ACM/IEEE Joint Conference on Digital Libraries",
+      "license": "cc-by",
+      "citations": 0,
+      "reader_status": "abstract-only"
+    },
+    {
+      "id": "ffb17fa5bdf0ba56",
+      "category": "research",
+      "title": "Structured Knowledge Graph for Scholarly Exploration: IR and QA System for ETDs and their Elements",
+      "summary": "Electronic Theses and Dissertations (ETDs) contain rich and detailed scholarly knowledge, but accessing that remains difficult. Conventional search systems largely operate at the document level and provide only coarse access to long-form academic writing. Though large language models (LLMs) can generate fluent responses, those often lack reliable grounding in the internal structure and semantic relationships of ETDs. We address these challenges with a knowledge graph (KG) framework for scholarly exploration and LLM-aided question answering (QA) over ETDs and their elements.",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3805696.3846035",
+      "published_at": "2026-10-12T00:00:00Z",
+      "tags": [
+        "Semantic Web and Ontologies"
+      ],
+      "importance": 96,
+      "content_kind": "paper",
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "reader_url": "./reader.html?id=ffb17fa5bdf0ba56",
+      "authors": [
+        "Satvik Chekuri",
+        "Edward A. Fox"
+      ],
+      "venue": "ACM/IEEE Joint Conference on Digital Libraries",
+      "license": "cc-by",
+      "citations": 0,
+      "reader_status": "abstract-only"
+    },
+    {
+      "id": "6b6bd08a56a1b63b",
+      "category": "research",
+      "title": "The Decomposition Dilemma: When Do Multi-Agent LLM Workflows Help Grounded Knowledge Generation?",
+      "summary": "Large Language Model (LLM) workflows increasingly decompose knowledge-intensive generation into planning, role assignment, subtask execution, and synthesis. Although this structure may support specialization, it also adds coordination and computational overhead. We present a preliminary task-level comparison of a Direct Generation Workflow and a Decomposed Generation Workflow under matched inputs and evaluation conditions. The study covers three grounded knowledge-generation tasks: public-event narrative synthesis, project-grounded research ideation, and scientific related-work generation. Across the evaluated configurations, decomposition produces the largest mean Task…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3805696.3846484",
+      "published_at": "2026-10-12T00:00:00Z",
+      "tags": [
+        "Topic Modeling"
+      ],
+      "importance": 96,
+      "content_kind": "paper",
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "reader_url": "./reader.html?id=6b6bd08a56a1b63b",
+      "authors": [
+        "Adiba Ibnat Hossain",
+        "Maliha Zahan Chowdhury",
+        "Shafayet Nur",
+        "Hamed Alhoori"
+      ],
+      "venue": "ACM/IEEE Joint Conference on Digital Libraries",
+      "license": "cc-by",
+      "citations": 0,
+      "reader_status": "abstract-only"
+    },
+    {
+      "id": "de694c296462df4d",
+      "category": "research",
+      "title": "Classical-Tutor: A Dual-Role RAG Architecture for Classical Document Resources in Digital Libraries",
+      "summary": "Classical documents in digital libraries—such as Classical Chinese texts—are not only valuable cultural heritage but also core educational resources at the foundational education level. However, existing digital library systems predominantly focus on full-text retrieval and basic machine translation, making it difficult to support learners' deep cognitive construction. Meanwhile, the direct integration of large language models (LLMs) tends to trap learners in an answer-seeking mode, thereby diminishing the inquiry-based thinking essential to the humanities. This paper proposes and implements Classical-Tutor, an intelligent tutoring system for Classical Chinese digital…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3805696.3846477",
+      "published_at": "2026-10-12T00:00:00Z",
+      "tags": [
+        "Intelligent Tutoring Systems and Adaptive Learning"
+      ],
+      "importance": 96,
+      "content_kind": "paper",
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "reader_url": "./reader.html?id=de694c296462df4d",
+      "authors": [
+        "Zishuo Xia",
+        "Dan Wu"
+      ],
+      "venue": "ACM/IEEE Joint Conference on Digital Libraries",
+      "license": "cc-by-nc-nd",
+      "citations": 0,
+      "reader_status": "abstract-only"
+    },
+    {
+      "id": "e3c19cff354ccb83",
+      "category": "research",
+      "title": "Unified Speech-to-LaTeX Models for Spoken Mathematical Expressions",
+      "summary": "Digital libraries increasingly host spoken content containing mathematical expressions. Making this audio searchable and accessible requires converting spoken formulas into structured representations such as LaTeX. While traditional dual-stage pipelines (transcribing audio to text, then text to LaTeX) suffer from compounding errors, direct speech-to- LaTeX models eliminate intermediate text transcription. This paper evaluates two unified end-to-end models alongside dual-stage pipeline baselines on an extended version of the MathBridge-Audio dataset, augmented with 1,055 additional samples beyond the original 1,000. Models are evaluated on word error rate, character error…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3805696.3846486",
+      "published_at": "2026-10-12T00:00:00Z",
+      "tags": [
+        "Speech Recognition and Synthesis"
+      ],
+      "importance": 96,
+      "content_kind": "paper",
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "reader_url": "./reader.html?id=e3c19cff354ccb83",
+      "authors": [
+        "Owen Leitzell",
+        "Logan Simba",
+        "Alex Sharon",
+        "Ella Hawkins",
+        "Behrooz Mansouri"
+      ],
+      "venue": "ACM/IEEE Joint Conference on Digital Libraries",
+      "license": "cc-by",
+      "citations": 0,
+      "reader_status": "abstract-only"
+    },
+    {
+      "id": "df010e9d1d7af6d8",
+      "category": "research",
+      "title": "From Digital Library Records to Trust-Grounded Virtual Experts for Knowledge Retention",
+      "summary": "Long-lived technical organizations depend on senior subject matter experts whose knowledge is only partially preserved in reports, publications, and archival metadata. Digital libraries preserve those records, but they rarely provide centralized, expert-scoped, question-answering access to the knowledge of people who leave or change roles. We present an implemented knowledge-retention prototype, built on ALICE, an architecture for large language model (LLM)–knowledge-graph interaction and grounded evidence provenance, that creates virtual experts from digital-library records. Its core contribution is a data-organization layer for expert-scoped knowledge: author-scoped…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3805696.3846036",
+      "published_at": "2026-10-12T00:00:00Z",
+      "tags": [
+        "Topic Modeling"
+      ],
+      "importance": 96,
+      "content_kind": "paper",
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "reader_url": "./reader.html?id=df010e9d1d7af6d8",
+      "authors": [
+        "James Ecker",
+        "Jian Feng Wu",
+        "B. Danette Allen",
+        "Michael L. Nelson"
+      ],
+      "venue": "ACM/IEEE Joint Conference on Digital Libraries",
       "license": "closed",
       "citations": 0,
       "reader_status": "abstract-only"
     },
     {
-      "id": "9afa152747711af5",
+      "id": "accdba7e46cdf8be",
       "category": "research",
-      "title": "Beyond Language Resource Tier: A Survey Study of Culturally Situated Resource Scarcity in LLM-Generated Cultural Translation of Math Word Problems",
-      "summary": "Large Language Models (LLMs) are being used to adapt math word problems for personalized learning at scale, and whether those adaptations actually serve students is an open question. Personalized learning, when conducted poorly, can introduce extraneous cognitive load for students, which makes it important to understand when and why LLMs fail at this task. To account for these failures, we present culturally situated resource scarcity, a mismatch between language-level data availability and coverage of the specific cultural and educational context a task requires. A language can appear high-resource overall while still lacking data for the community, region, script…",
+      "title": "Beyond Keywords: Training-Free Entity Linking for Research Metadata via Cross-Lingual Retrieval Consensus",
+      "summary": "Research databases accumulate rich metadata, including subject keywords, themes, geographic and cultural references, but much of this data remains largely isolated, making it difficult to retrieve and reuse across different databases. The key problem is semantic grounding: without stable identifiers, databases that describe the same cultural practice or geographic region cannot recognise that they do so.",
       "source": "OpenAlex",
-      "url": "https://doi.org/10.1609/aies.v9i4.43320",
-      "published_at": "2026-10-11T00:00:00Z",
+      "url": "https://doi.org/10.1145/3805696.3846031",
+      "published_at": "2026-10-12T00:00:00Z",
       "tags": [
-        "Natural Language Processing Techniques"
+        "Topic Modeling"
       ],
       "importance": 96,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "reader_url": "./reader.html?id=9afa152747711af5",
+      "reader_url": "./reader.html?id=accdba7e46cdf8be",
       "authors": [
-        "Parisa Suchdev",
-        "Juniper Lovato"
+        "Jiayu Yang",
+        "Durgesh Nandini",
+        "Frédérick Madore",
+        "Oliver Baumann",
+        "Neeraj Thandayan Viswajith"
       ],
-      "venue": "Proceedings of the AAAI/ACM Conference on AI Ethics and Society",
-      "license": "closed",
+      "venue": "ACM/IEEE Joint Conference on Digital Libraries",
+      "license": "cc-by",
       "citations": 0,
       "reader_status": "abstract-only"
+    },
+    {
+      "id": "288581769f1d1b8e",
+      "category": "research",
+      "title": "ABSP: Attention-Based Semantic Preservation for Faithful Context Compression",
+      "summary": "Retrieval-augmented generation (RAG) reduces hallucination in large language models by conditioning generation on retrieved evidence, but retrieved contexts are often compressed before inference to reduce cost and latency. Prior work evaluates compression primarily through answer accuracy, leaving open whether different compression strategies affect how faithfully model outputs are grounded in the provided evidence.",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3805696.3846019",
+      "published_at": "2026-10-12T00:00:00Z",
+      "tags": [
+        "Topic Modeling"
+      ],
+      "importance": 96,
+      "content_kind": "paper",
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "reader_url": "./reader.html?id=288581769f1d1b8e",
+      "authors": [
+        "Shirin Shujaa",
+        "Ginel Dorleon",
+        "Tran Tri Dang"
+      ],
+      "venue": "ACM/IEEE Joint Conference on Digital Libraries",
+      "license": "cc-by",
+      "citations": 0,
+      "reader_status": "abstract-only"
+    },
+    {
+      "id": "56dc2a5e4d6a2a27",
+      "category": "research",
+      "title": "AAL-Bench: A Benchmark for Author-Affiliation Extraction and Linking from Scholarly PDFs",
+      "summary": "Scholarly PDFs contain metadata essential for building digital libraries. Although various tools and methods have been developed for extracting structured information from scholarly documents, existing evaluations largely assess the extraction of author names and affiliations independently, while resources for explicitly evaluating author–affiliation linking remain limited. We present a benchmark for this task, consisting of 507 manually annotated CC-BY arXiv papers. We evaluate several extraction tools and additionally analyze their performance across different document-class families. Our results show that GPT-5.6-sol achieved the best overall performance with…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3805696.3848496",
+      "published_at": "2026-10-12T00:00:00Z",
+      "tags": [
+        "Advanced Text Analysis Techniques"
+      ],
+      "importance": 96,
+      "content_kind": "paper",
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "reader_url": "./reader.html?id=56dc2a5e4d6a2a27",
+      "authors": [
+        "Edoardo Yuto Date",
+        "Moriyuki Kamoto",
+        "Akihiro Tamura",
+        "Marie Katsurai"
+      ],
+      "venue": "ACM/IEEE Joint Conference on Digital Libraries",
+      "license": "cc-by",
+      "citations": 0,
+      "reader_status": "abstract-only"
+    },
+    {
+      "id": "50c98e5b39e9ab85",
+      "category": "research",
+      "title": "Triaging Defects in Scholarly Result Graphs with Extraction, Evidence, and Consistency Signals",
+      "summary": "With the growing volume of scientific literature, scholarly knowledge graphs are increasingly used to organize research findings, and large language models now build such graphs automatically. However, the facts extracted by these methods are often wrong. Since most facts cannot be compared against an external reference, users cannot tell which ones need rechecking. In this study we propose a way to flag such errors. We observed that a scholarly result graph contains several distinct classes of defect, and that detecting them calls for different kinds of evidence. A human audit shows that most audited disagreements are not extraction errors but correct values reported…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3805696.3846034",
+      "published_at": "2026-10-12T00:00:00Z",
+      "tags": [
+        "Advanced Text Analysis Techniques"
+      ],
+      "importance": 96,
+      "content_kind": "paper",
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "reader_url": "./reader.html?id=50c98e5b39e9ab85",
+      "authors": [
+        "Harish Varma Siravuri",
+        "Akhil Pandey Akella",
+        "Hamed Alhoori"
+      ],
+      "venue": "ACM/IEEE Joint Conference on Digital Libraries",
+      "license": "cc-by",
+      "citations": 0,
+      "reader_status": "abstract-only"
+    },
+    {
+      "id": "191a0b6d92e96f15",
+      "category": "research",
+      "title": "Walking Through the Catalog: Designing Immersive Access to CIDOC-CRM Cultural-Heritage Collections",
+      "summary": "Galleries, libraries, archives, and museums increasingly publish their catalogs as linked open data structured by CIDOC-CRM, an event-centric ontology in which people, objects, places, and documents are connected through the events of their shared histories. Making these event chains inspectable alongside collection records is an access-design challenge. We investigate immersive access as an alternative: an XR client that renders a CIDOC-CRM collection as an explorable spatial graph, retrieved on demand from a live, configured SPARQL endpoint. We contribute (1) six design requirements for immersive access to event-centric heritage linked data, grounded in the…",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1145/3805696.3846482",
+      "published_at": "2026-10-12T00:00:00Z",
+      "tags": [
+        "Semantic Web and Ontologies"
+      ],
+      "importance": 96,
+      "content_kind": "paper",
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "reader_url": "./reader.html?id=191a0b6d92e96f15",
+      "authors": [
+        "Jan K. Argasiński",
+        "Anna Hosumbek",
+        "Michał Biernat"
+      ],
+      "venue": "ACM/IEEE Joint Conference on Digital Libraries",
+      "license": "cc-by-nc-nd",
+      "citations": 0,
+      "reader_status": "abstract-only"
+    },
+    {
+      "id": "2d52ed2f0b86aafa",
+      "category": "frontier",
+      "title": "Claude discovers a novel enzyme system",
+      "summary": "In early results from our new life sciences research lab, Claude agents found an enzyme system whose function is still unknown.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+      "published_at": "2026-09-23T16:06:00Z",
+      "tags": [
+        "Anthropic",
+        "Official"
+      ],
+      "importance": 96,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=2d52ed2f0b86aafa",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "42834d39dc21a5d0",
+      "category": "impact",
+      "title": "TechBio 3.0 closes the drug discovery loop with multimodal AI and generative chemistry",
+      "summary": "TechBio 3.0 closes the drug discovery loop with multimodal AI and generative chemistry Nature",
+      "source": "Nature",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9HdzNZWlh2bU1BS3lrVHdvLV9ZZTdZT0ljZExidjd2RFBwbUpJVmJmZDVFVUVWTEtUbTdFUjlTV01UVnRLTlpVVV9QckdjcHNDeGpyQkkwc0xIZGdMTkFB?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-09T09:47:48Z",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "importance": 95,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=42834d39dc21a5d0",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "9ea5613b4342bfde",
+      "category": "impact",
+      "title": "‘Breathtaking,’ ‘Devastating’: Mathematics Reels After New OpenAI Release",
+      "summary": "‘Breathtaking,’ ‘Devastating’: Mathematics Reels After New OpenAI Release The New York Times",
+      "source": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPODBqdjFtSkFGUTZYd2w1WlRnaWFfX3NiWDJ4OXgzdGozcV94WFV1T2JWY0lrekg2ZGR6Sk1wMGtNMzNDeXFmdnc2Zl9zTk0zMDhCLXMyYUFVSjRVNk1CTkF2Y2h2VF9HRVZvV2xfRkpiUTJsQUlNV0ZnaFBTWGxJUW5mbkVEdjVuQ25HMHV3?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-08T21:53:08Z",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "importance": 95,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=9ea5613b4342bfde",
+      "reader_status": "public-page-excerpt"
     },
     {
       "id": "elon-grok-build-open-source-20260716",
@@ -1253,6 +1223,26 @@
       "verification": "创始人官方账号原帖 · 需结合仓库核对",
       "reader_url": "./reader.html?id=elon-grok-build-open-source-20260716",
       "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "938edbcd38acd623",
+      "category": "china",
+      "title": "小马哥复盘: 腾讯 不抢地盘,把 混元 和 元宝 接起来",
+      "summary": "混元 上月 发布 Hy Image3.5 preview 后,WorkRally 首发接入并给平... 元宝 管入口,组织上前述的撤销与合并都是为这个目标服务的....",
+      "source": "微信公众号 · 日拱一卒手记",
+      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HCw7zmqjTcI4GUV9Zd8TfGHiZAA4Gs9R8Y6vzhfL&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1791900454%26ver%3D7024%26signature%3DwsX04AyfhCm40XtcwRYcE0Fh8xk4Y4nR3fOPQWz8L8-hLnN3sLfa1B9EeA0sZVWnqzFrNztbEAkN3NESnMvAYs5ODlf74-qOvk%2AEj94COptyJhEOIo5T1wN1CHNqe7uj%26new%3D1",
+      "published_at": "2026-10-13T10:07:35Z",
+      "tags": [
+        "微信公众号",
+        "腾讯",
+        "元宝"
+      ],
+      "importance": 93,
+      "content_kind": "article",
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "reader_url": "./reader.html?id=938edbcd38acd623",
+      "index_url": "https://weixin.sogou.com/weixin?type=2&query=%E8%85%BE%E8%AE%AF%E5%85%83%E5%AE%9D+%E6%B7%B7%E5%85%83+%E5%8F%91%E5%B8%83",
+      "reader_status": "indexed-summary"
     },
     {
       "id": "73bd231b8fe98626",
@@ -1555,26 +1545,6 @@
       "reader_status": "indexed-summary"
     },
     {
-      "id": "d82aebc07a0ddf51",
-      "category": "china",
-      "title": "DeepSeek Harness桌面端 发布 ,豆包将推个人助理产品,贾跃亭机器人公司拟上市,比亚迪西安新能源电池项目投产,这就是今天的其他大新闻!",
-      "summary": "DeepSeek Harness v0.2 预览版正式 发布 ,并提供开箱即用的 macOS 和 Windows 桌面端安装包,已上线 DeepSeek 官网.新版本预...",
-      "source": "微信公众号 · 差评",
-      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HBX0vWqjSlNpRmqoiPUY-YIra6ZWoN6yAUoSTz31&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1790833670%26ver%3D6999%26signature%3DwuQb2u%2AfY%2AshjXhWTH6a7AHHtXHIDrbslTKyDfNJUMNhtbWDX-C8q60sY4r4%2A5o8awQTGmFTNctTlF%2A9ZULAdOs0e1ZAcOST%2AV7t0rDZwEwxQv9na7lQ4YvPQImmeSwc%26new%3D1",
-      "published_at": "2026-09-29T16:05:33Z",
-      "tags": [
-        "微信公众号",
-        "DeepSeek",
-        "模型"
-      ],
-      "importance": 93,
-      "content_kind": "article",
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "reader_url": "./reader.html?id=d82aebc07a0ddf51",
-      "index_url": "https://weixin.sogou.com/weixin?type=2&query=DeepSeek+%E5%8F%91%E5%B8%83",
-      "reader_status": "indexed-summary"
-    },
-    {
       "id": "34d0a48f70cdf6e9",
       "category": "bigtech",
       "title": "Agent Lightning v1.0: A 3,500-Line Lightweight Agentic RL Framework for Training Agents with Real Harnesses",
@@ -1629,6 +1599,25 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "d7cdf634558c71f4",
+      "category": "impact",
+      "title": "In a New Anthropic Lab, A.I. Turns to Biology",
+      "summary": "In a New Anthropic Lab, A.I. Turns to Biology The New York Times",
+      "source": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNNFZzajNZQW1MeHplVTRLYWd5NUlpUjhTSVU1YU9sODRIQTRvZU5TXzBvR2xETVVPYmEzRVJNNVJkRk83Y2pPZlVFbnB5RHZULU85MEdTa09wZUVBM3ZiLUJIdWs3U2NieXZVNTJUNER0WG1qSGF1TkdEZGs4TjNLdVFB?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-25T07:00:00Z",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "importance": 92,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=d7cdf634558c71f4",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "demis-frontier-ai-framework-20260714",
       "category": "voices",
       "title": "A Framework for Frontier AI and the Dawning of a New Age",
@@ -1666,6 +1655,44 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "3cb8bc319ea7e4e6",
+      "category": "impact",
+      "title": "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program",
+      "summary": "EXCLUSIVE: Anthropic quietly sets up biology lab as it ramps AI drug program Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPMnNocmF2MC1saXA1bW95QU5PcXUyNHZrZUdaZUFKNXVnYk1Yejg4UTlqa242RmJGMnBlZ1pkeC1KdERaazR1TGtSTHkwMFFLNTZQa3VBdHJzcWlWR0hldTYtVm5RQ3hQZDE2LXFfZ3gzeHVqQ3pNR1pEUmpHbnpUMlB1UkYtTHpfeURTVU9Kb082R3ZrbnA1VVZmcEJlcnZBUlEySmtkUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-18T07:00:00Z",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "importance": 91,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=3cb8bc319ea7e4e6",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "37db2441d5a89592",
+      "category": "impact",
+      "title": "Medical AI has a proof problem",
+      "summary": "Medical AI has a proof problem Financial Times",
+      "source": "Financial Times",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOZHh1OXRja21yY1BGU0pacGhEQTEtOV9yOWFJbGpkbHpzZlhrNlN3MTNBeVR3SG5EdEktVzVJVEw3WUx6WDF4SGJjZTJxV21XRzF1RUVjUE9ERUQ0QjRmOWhTdXZLMFRLSGFCeDVGTVFOQ3dYdkNFRW4zWGlyekRQSEdrd2M?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-17T07:00:00Z",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "importance": 91,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=37db2441d5a89592",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "1da087393d52a2d2",
       "category": "bigtech",
       "title": "Forecasting space weather risks on power grids",
@@ -1677,7 +1704,7 @@
         "Microsoft",
         "Research"
       ],
-      "importance": 91,
+      "importance": 90,
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=1da087393d52a2d2",
@@ -1757,6 +1784,25 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "d8d1229b2059f6e6",
+      "category": "impact",
+      "title": "AI’s mathematics blitz pushes science into strange new territory",
+      "summary": "AI’s mathematics blitz pushes science into strange new territory The Economist",
+      "source": "The Economist",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQX2xkTTk5TzZPSFVTcU9vdklZbEdGZFM4LUY5R2U0ZnN1T1ZHZE5ZSUlwaEMxOHBVR2VOR0xUbU5YUUR2T0lMS3N5NFFWRGRnUGhmdUFtbjlWMzhYU1VJNUlSbU9SN3Y4VGNvRDlvNVVjN0Q4WFQ0ckQ3YkJmU1NFUVhsTDdKMHBqZnV1RWJOYm5WcWFFanZKRHhJM1JaLVZ0ZEdUVXRzNmxMQVpneUR6MXNGU0lvV1BzWmp4YTVVVkM?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-12T17:43:28Z",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "importance": 88,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=d8d1229b2059f6e6",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "a371457dab8cb482",
       "category": "bigtech",
       "title": "New experts join Google’s AI & Economy team",
@@ -1829,6 +1875,63 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "3b7f211d69f2aaf3",
+      "category": "impact",
+      "title": "The AI Invasion Has Come for Mathematics (opinion)",
+      "summary": "The AI Invasion Has Come for Mathematics (opinion) Inside Higher Ed",
+      "source": "Inside Higher Ed",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQVVJFRm9jZUxveGwwWGxBMnRZTl8wOHhxUnk1TVd3SGg2SGR1cmFldkY0ZlNyaHBMa1BNbXNCaWxScmJtUldoNFdENUwtUVI4bmxIME9aUktVYnYwQXhLWFF4YlREWkNmaGV3Y0xQTE9vdWNWbFRnYllwWlNaN1c5el9Cai1HQ2NISVVmTGw5TUI5NVEtb3dRTnZRMXI?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-09T07:02:26Z",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "importance": 87,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=3b7f211d69f2aaf3",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "66dc3461ad5f3036",
+      "category": "impact",
+      "title": "OpenAI Just Carpet-Bombed Mathematics",
+      "summary": "OpenAI Just Carpet-Bombed Mathematics The Atlantic",
+      "source": "The Atlantic",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPRUxiMkgzUTRaSkNJN2EwUHR3NVFZdVRua1pVWGhzTy1TMFhEc05BcmoxeThfLWhqMUN2OG11cUthZHpiNXUyYUNVWW03M3JKMVR0c29GbFZ2NG8yV0xlR3dHUWt6T2V1M3VfRklzeXFVbFVBbGxUN1RnbW1jUnJpOVJGZFRMSTA?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-08T19:49:43Z",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "importance": 87,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=66dc3461ad5f3036",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "4367e354c0d5d5f3",
+      "category": "impact",
+      "title": "Opinion | Rhetoric Is an AI-Proof Skill in the Job Market",
+      "summary": "Opinion | Rhetoric Is an AI-Proof Skill in the Job Market WSJ",
+      "source": "WSJ",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOLVFGSE1PSmlMcVdqcE5fei13TkI2RHU4aVVUdGdjQl80UzY4VmZVNTduZ2ktbVhYTl90WGJUekU2WmlqUG5BNUtUZVNzVVRFZXhrQVZaMjR5bHVjQUY3UmdGTHZlZ3NaTTg2Z2VsbXh5eUtndTJrdHUxTGVNUDBfNDJNV2UzODhyeWRYWQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-08T19:26:00Z",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "importance": 87,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=4367e354c0d5d5f3",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "9dff27ddbb180fb8",
       "category": "opensource",
       "title": "The model that didn't exist, so you made it yourself",
@@ -1862,6 +1965,25 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=a9c5d97b57f65b8d",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "a312b9b80aaf5e87",
+      "category": "impact",
+      "title": "As AI Closed In on ‘Unique Games’ Proof, Researchers Raced to Beat the Machines",
+      "summary": "As AI Closed In on ‘Unique Games’ Proof, Researchers Raced to Beat the Machines Quanta Magazine",
+      "source": "Quanta Magazine",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOU244TzFhdnZtRFdFUmpGSDdaUHJBWmlJaWtRNlRxNEtZYU5ob3VBaWhsYkJOUGRPbU1RZlBWbDY4SWRXOC1zRm03YngydGlyX1FUMExDcHdka3dMS2JTYTNzVFZ1anAtU3I2dVR2Z2NDWHFNRmdNLU5LUTFQZm11UlJHRUw0MmVXSXR3b0MzUDZfVkJ0Ylh3eENHRG9LbE5JY3NCamJhTjJQMXBnR0lYNnZxODFHdmpL?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-07T15:09:54Z",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "importance": 87,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=a312b9b80aaf5e87",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -1901,6 +2023,25 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "e057a9105bce6edb",
+      "category": "impact",
+      "title": "Sharing AI progress in mathematics",
+      "summary": "Sharing AI progress in mathematics OpenAI",
+      "source": "OpenAI",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9HRmFiYm1mWTNPVTVGTk9faFRwRVZyTjhmejJwa0U3QjU3djh5SlpXT3ZhUlF2M0lXcV9jNkNka1kzY3RKNkRTTnpJVW16ZG1QdmdPU3owRXdCYzFLSkdTb3pIZWdJV0k1R3o3dw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-06T22:21:50Z",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "importance": 87,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=e057a9105bce6edb",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "883f9b89256d8bc7",
       "category": "opensource",
       "title": "The Agent Said It Was Done. The Database Disagreed.",
@@ -1934,6 +2075,483 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=f3f78422f0eb2a11",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "b358971df29545a3",
+      "category": "voices",
+      "title": "AMD acquiring Fei-Fei Li's World Labs AI firm in deal worth $8.2 billion",
+      "summary": "AMD acquiring Fei-Fei Li's World Labs AI firm in deal worth $8.2 billion CNBC",
+      "source": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9LUjBabEQwUG1TSlBLWGJJbENYbEZXVzYxWTlGVEpXRXhvM0ZOMjhXWmdzNVdTX0dLcGF3S0Z1RDN1UDJ1aDhMbGFMZE1iNnd5SkVNVk1JY3ZXUl9FNXZiZTcwV24zVlI5dVdsNFo1VdIBdEFVX3lxTE1GMTVTanpmVGs0Q2J1RlEtTHRRWEpuRWNwUkF3YmhIS2VzLUQ0SzRPaERxNHo4WDNhX1hsNXdUNE5KSmM0ak5OTzdkQmd5dE4tMmhMSzFNWFYyTFB3amxPMjFVbnI0Wm5HSzg0WENTdXIxamZy?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-28T07:00:00Z",
+      "tags": [
+        "Researcher Watch",
+        "Vision",
+        "World Models"
+      ],
+      "importance": 85,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=b358971df29545a3",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "0df5597e0f6bc79a",
+      "category": "voices",
+      "title": "AMD to buy Fei-Fei Li’s AI start-up for $8bn",
+      "summary": "AMD to buy Fei-Fei Li’s AI start-up for $8bn Financial Times",
+      "source": "Financial Times",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOaFcxM3NDUmVDUWZ0NTlJZjhrVjF6em5LaDdNdk15Ynk1b1ZKVkl4YnpORERyU3c0WkppWHI2YmRsYlFzcUFLZjV4MkxrZGZja0FKY21GdUZ2LTg5ejFub2hKdmpZbmVmcEZSU3hXbWtRelRZODQ4WGZtZi1DeTNOcHJhZmk?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-28T07:00:00Z",
+      "tags": [
+        "Researcher Watch",
+        "Vision",
+        "World Models"
+      ],
+      "importance": 85,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=0df5597e0f6bc79a",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "e53e3f6c06a7c12a",
+      "category": "startups",
+      "title": "AMD to Buy Fei-Fei Li’s World Labs AI Startup for $8.2 Billion",
+      "summary": "AMD to Buy Fei-Fei Li’s World Labs AI Startup for $8.2 Billion Bloomberg.com",
+      "source": "Bloomberg.com",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOZW1PMmt1Q2c4TzNIaDNIbEs2TWQ3V0xQc1F6QXpzdHdHalpEWlk5ZlhoYnVHVXlsUGdmRm1Fd05aek1UdGFWT2dTZmFBUk9HZDAtRE85NFEwWXhnaHFqdWdSNzkzbWFMUWRxaDQ1VU4tblBrSFhRYkR3VEltUnhtMlI3dmhkcDE5OEx5T2l3RjZ6amdzVFhyeXE1Z2ZTQ0liUVFlREVzZU52THFDM29XSXpB?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-29T07:00:00Z",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "importance": 84,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=e53e3f6c06a7c12a",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "91acac9c4120bfb0",
+      "category": "startups",
+      "title": "AMD to buy Fei-Fei Li's World Labs in $8.2 billion bet on 'physical AI'",
+      "summary": "AMD to buy Fei-Fei Li's World Labs in $8.2 billion bet on 'physical AI' Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUEpLOGExLXd6b0dKeXJadmdubW9zdWZzTDB6eVhLb0RSN3RSQTYyenBJdTVRdmR6Vm5jRnp4VHVQQ1NEbGFQb1J0V08xcThIRUs1aG5NQ0piLXhEQTRhcXZQNEZkMUVuaHVyLTRNVjhjbDEtZmxuTGpuR2d1ZDU2b1pGdkxqS1o2TUNDcUMyaFUzRVdmUUpPQndkdEZMZw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-28T07:00:00Z",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "importance": 84,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=91acac9c4120bfb0",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "0a95d6d806951f0b",
+      "category": "voices",
+      "title": "World Labs Founder Fei-Fei Li Urges Independent Oversight of AI",
+      "summary": "World Labs Founder Fei-Fei Li Urges Independent Oversight of AI Bloomberg.com",
+      "source": "Bloomberg.com",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPcFdqRzZsTmJGMEJIV0FHVnFDN013Zlp6WTBnaEVMQ1BzSlJqTmNSWUxUNXFWWS0zQWNVY2JIbGxCSU9BdTFSR3FJMXA2T2VRNjFnVk5hbFJrUkRXaTNxeGpqaWxaSEY3QlIzYVhCNDUzY180cm1qVldNaWtxOGhnaWI0a3RtUjlZeS15Qlh0Wl90U1hQbURwNXoxS3NmdFlMbENaSnpyakRLdkxWa3ZQblF6NUg?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-22T07:00:00Z",
+      "tags": [
+        "Researcher Watch",
+        "Vision",
+        "World Models"
+      ],
+      "importance": 84,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=0a95d6d806951f0b",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "5c9d8a9c4e643775",
+      "category": "voices",
+      "title": "Top A.I. Leaders Call for Slowing Down A.I. Development",
+      "summary": "Top A.I. Leaders Call for Slowing Down A.I. Development The New York Times",
+      "source": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQOE1BV1Q4UUYxLVRfaDNJVXVRbnNaQmdUMjBzbWJWRWtTcjlROWZqUjAtVGlob2NHVlB1NHVfRU5FY1dWT1UxR3RHakpVUTdzSGdvRmR2UFR2dzZxdHJ0ZXlMb0NsMVd1MDM1aUZ2VlpPeG9zSDZxRFpFWjNhQ0psM2RVYW8tM0ZKdTdDdG93?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-14T07:00:00Z",
+      "tags": [
+        "Researcher Watch",
+        "Foundation Models",
+        "Leadership"
+      ],
+      "importance": 82,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=5c9d8a9c4e643775",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "8ba62d61d54beb31",
+      "category": "voices",
+      "title": "Grok @Bot memory transfer",
+      "summary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
+      "source": "X",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFAyYzNrak9hQ05PdzRYaDFINFFWbVA3MkVscXlaekl4Rm5CYnlCN1JwbnV5blFHZHFXNGZfNGNtLTJ2NHRvTWtJMlpjVWZGQlpOS3VUWHhZMUdkcldvQ2c?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-13T04:43:10Z",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "importance": 80,
+      "content_kind": "social",
+      "verification": "公开平台索引，需查看原帖",
+      "reader_url": "./reader.html?id=8ba62d61d54beb31",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "45df9189c7bf49f2",
+      "category": "voices",
+      "title": "Grok @Bot is this good",
+      "summary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
+      "source": "X",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFAxS3d2cVdIVnVZZ3Rkb090bVhoVl9vX2hiTl83bjJVVkl5Vmp5YlpIUFFENjJTS0RleEh1NUlXRHpiM2puNmpyQmZUdHJkRVhvWjI5ZlM4aUtnLTdGc2c?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-13T01:36:23Z",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "importance": 80,
+      "content_kind": "social",
+      "verification": "公开平台索引，需查看原帖",
+      "reader_url": "./reader.html?id=45df9189c7bf49f2",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "3c32aadc606c5edf",
+      "category": "voices",
+      "title": "Give Grok @Bot your hardest tasks",
+      "summary": "Give Grok @Bot your hardest tasks X",
+      "source": "X",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBMQXRvR0pxTmF2cF9lbnluNnh2MGVfTWlsUXpTTVc3S0VQQm1JeHRpRVktdlpETm9oeTN2QlZYTWc1Z1FEQ2tBdGZQeHplT0huVThURWEyeG9zdmJhQVE?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-13T01:02:27Z",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "importance": 80,
+      "content_kind": "social",
+      "verification": "公开平台索引，需查看原帖",
+      "reader_url": "./reader.html?id=3c32aadc606c5edf",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "49143fbc32b69543",
+      "category": "voices",
+      "title": "Try @Grok @Bot It gets better every day",
+      "summary": "Try @Grok @Bot It gets better every day X",
+      "source": "X",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE83Q1I5TDJKTWpUcUZZZTFjS25ZUGFhYk1jRjhKeEMwMlBhNVhWcl9ya0dHejNUcTQtdGE2dXhvQnhncmw5Y2RZQzdWTl9nWnZXbHFaZ2daWDJpMFN1UWc?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-13T00:58:38Z",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "importance": 80,
+      "content_kind": "social",
+      "verification": "公开平台索引，需查看原帖",
+      "reader_url": "./reader.html?id=49143fbc32b69543",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "78ee6929ebd0110b",
+      "category": "voices",
+      "title": "@davidbessis Regarding #4: Many of the OpenAI researchers behind these results are math PhDs or former math professors. If anything, they care too much about the future of mathematics. AI is disruptive but we also think it will be an invaluable tool for the fut",
+      "summary": "@davidbessis Regarding #4: Many of the OpenAI researchers behind these results are math PhDs or former math professors. If anything, they care too much about the future of mathematics. AI is disruptive but we also think it will be an invaluable tool for the fut X",
+      "source": "X",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFA5WTNqb2tmeEUtN0V0aElkc0tQNy1ZWkhBMjBoV0E2cWhrWldBemFodExteEpxYmZFaE9QT05ZTW5ySUNYNlFtbllCMWhlNHc0ekR5dEwzb0NXZVhla0diTDBR?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-12T16:46:53Z",
+      "tags": [
+        "X",
+        "Researcher Watch",
+        "First-party Post"
+      ],
+      "importance": 80,
+      "content_kind": "social",
+      "verification": "公开平台索引，需查看原帖",
+      "reader_url": "./reader.html?id=78ee6929ebd0110b",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "6cd3e4c834a53b1f",
+      "category": "startups",
+      "title": "Exclusive | Amazon in Talks to Buy AI Startup Decart for Around $7 Billion",
+      "summary": "Exclusive | Amazon in Talks to Buy AI Startup Decart for Around $7 Billion WSJ",
+      "source": "WSJ",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQOGxqNnJoTC12VnZiQm1ZTUhITmQ0RjZyTWhIRDYwcGQxZm9ZMW9tbVl2NU9BNk05LUlhQ3ZDbXZjdjNJNVZQRnhsU3ZveXFjRFBrRTlmMkJKc0JVREZiVlNZbVRKM3Z2bWd5XzVyMHFDdzk2MEJyaHpRRWRmWTlxQVg4c2l4UnZIM002Szhfem9kWHJUTlZZWktDb1NQU0JOb0xaV2hxNjE?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-11T20:26:00Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 79,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=6cd3e4c834a53b1f",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "43124613add0d573",
+      "category": "startups",
+      "title": "Washington State University Taps AI Company for Sports Comms",
+      "summary": "Washington State University Taps AI Company for Sports Comms GovTech",
+      "source": "GovTech",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPdUlKVWV2cEFfZ3U0QXI0ZkF4VW9DdXZMZFByR3RHakt6REdwUGVrdVlfLXVVdTIzcUJpbHpibFZ2VU9EbkxsREdPcmdiM3YwUWNfY0liaGNINWNmZEExbjdBeExsOV8yRXJ1WVBfVGp6M2tEYjlRVlZFLWRJRGxMOWpna1h2eDBuWG9vZkVSN2F2eFNaRGFWcnJmNnRjOWtNYWhpWUVlbw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-08T20:18:29Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 78,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=43124613add0d573",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "b57e86709a2bfa7b",
+      "category": "startups",
+      "title": "Jair Verçosa",
+      "summary": "Jair Verçosa Stanford Graduate School of Business",
+      "source": "Stanford Graduate School of Business",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9RVXQ4WFRSNFAza2JRMlNmTmhZTGhsbUJOam95SUFvNEZqSEh0eGlkRF9OWDhMZF83QWNnelN2dlFyT3ZYcmtDSVo5YXNZZEFrbG9NOThjQkN4RE1fQndxalI3Y1M5eWxYRHpOcWpPZ2Y2aURRQUE?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-08T07:00:00Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 78,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=b57e86709a2bfa7b",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "d92e0e9dc18eea51",
+      "category": "startups",
+      "title": "University of Dayton School of Law seminar pulls back the curtain on AI",
+      "summary": "University of Dayton School of Law seminar pulls back the curtain on AI University of Dayton",
+      "source": "University of Dayton",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOMktZRGNMekw3NVhzNlJhUE5GVFhjU0Z5UGUxNERqSDJ6b05QeDJFQzdMT25ZVGVvaVJuUjR3R1h2ZW4wVVJRRDdveUxBMVhDSG9kUGlLaXRSelRpY2U5dzdncmFlcGNfUnJ0N2hnVUFDLV9LY3lnVGhkMmNnWnU1TUw1ekV4YjFkaEtJ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-06T18:34:15Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 78,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=d92e0e9dc18eea51",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "9c3b5fa6e3bab0fb",
+      "category": "startups",
+      "title": "Birmingham graduates sell AI study startup StudyStash to Kortext | ETIH EdTech News",
+      "summary": "Birmingham graduates sell AI study startup StudyStash to Kortext | ETIH EdTech News EdTech Innovation Hub",
+      "source": "EdTech Innovation Hub",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNaTVWWFl4MmhmblZCSnJlOVduNFhwZDc3VHJYM2xoR2hUR3RHbGk4bDUxM2hsRUloTHU4YXZnLVE0dlhWbmhFMlduYV9ER01uWnhRN3dGeGRIbXFMNlFPRkkyZHVBdzhZZTRPN2Y1NEdpUU1TZ3kzdVFjVEZVSVVDaGo5QzlBV1Znd3lqUWtGLTVmbUtFMmRXVE9OMi00LVVvNjFSSkFJekZpZV91S3dLMEFlQm9rTzVBRXUzWjZ6dw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-05T23:15:10Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 77,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=9c3b5fa6e3bab0fb",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "9dbe60afb5ec6156",
+      "category": "startups",
+      "title": "Coming soon: New York City’s hearing on AI risks",
+      "summary": "Coming soon: New York City’s hearing on AI risks Marcus on AI | Substack",
+      "source": "Marcus on AI | Substack",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5ORThDR1U4VVRPS3p5VXVqMnBKeVFYdHFQdjJYQURyU1JDQU9EOEtsamZmYXVnZkZwWDdzME1LZ3NqdVB1QjhvaGJYeUp2cGpHaExPM0JlS3kyZlpaUDA2M080TGtWWno2dHV5aDFWa1hNUUNtX0dv?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-04T07:00:00Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 77,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=9dbe60afb5ec6156",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "9dc278d3055ac5b7",
+      "category": "startups",
+      "title": "Cardiovascular AI startup Corologic lands South Korea's TIPS grant, begins clinical trials",
+      "summary": "Cardiovascular AI startup Corologic lands South Korea's TIPS grant, begins clinical trials Dealroom",
+      "source": "Dealroom",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNRjItMWVWT1IwaGtfc0VzWXVGaC15cjhvMC1zeDBlcmJJVjVsUVhfVkVKaFRwQVprM2YxQzdIRkUxQjJwSExtZFVGQ3Vra2k1S2FGNW1hVnQ5TGNVNk9VbFFDb1hxRHI3bkxtb2UxQUlLbERCaWU1d1Y5R2pORk1RczhlUlViam5QcDVnUm5RMlMyRHFEZThZSUg0a2FLMEMwd2hxY1Rudmo1Y0U2S2pmOFJ0TVNEWXpFT3NiNnhWSmg?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-01T15:55:20Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 77,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=9dc278d3055ac5b7",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "d9704d4940c3cc02",
+      "category": "startups",
+      "title": "AMD acquires World Labs AI startup, upping the ante against Nvidia",
+      "summary": "AMD acquires World Labs AI startup, upping the ante against Nvidia Ars Technica",
+      "source": "Ars Technica",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZ0hQeXM3LUdQR2xCTThQOUZETzNEWk04U25CS0VkNjlrTU15allNdTh4eGFvV1hfdVpvYXRlRk9MZnFnWUhLYTRzVjNzclZDMVgtVFBKSTRMZXZzcEVURXJwSVBTN2JjZHQ3cFNvbjdGckdiU1k5YUNmeE05RGdXR3BTUjZPcEVpOGNoUkpnMVFJNmNxZVRfc1hlU3VnZGtzREFybG5B?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-29T07:00:00Z",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "importance": 76,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=d9704d4940c3cc02",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "65287f9b9c2bd307",
+      "category": "startups",
+      "title": "AMD acquires startup cofounded by ‘godmother of AI’ Fei-Fei Li for $8.2 billion",
+      "summary": "AMD acquires startup cofounded by ‘godmother of AI’ Fei-Fei Li for $8.2 billion Yahoo Finance",
+      "source": "Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPbGlheERGdWNBOW05QWkxMTNKaXpGakV5MFlTY1FFMFlvbl9oQTlGRmw4cjQ1aVI2V2M5TmtfbTFBVEVJVFJqSW1KRi1JRngwb1hIWm4yRzdFTmVha1ZraHFTcmU3Q0JHVmZPOGY1NFVJbGVqaTVnREJjWlJnZUFUdG1tamsxS0p5SlhLX0F2VlVCc2xNUE45NTVPdGI2RTEwOUF4azVIYw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-28T07:00:00Z",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "importance": 76,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=65287f9b9c2bd307",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "5af5e10deef61fc6",
+      "category": "startups",
+      "title": "AMD to Acquire World Labs for $8.2 Billion",
+      "summary": "AMD to Acquire World Labs for $8.2 Billion WSJ",
+      "source": "WSJ",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQLVpVcHpJVVFBektEcldpS0ttVXk1a2dkR0kzZEtUNmp3d1hQNzVEb3NOZVhEc1piQmtIYlI3WF9QUExkT2R3TW9tOW1ZZ0RpSGdELWxBbVRldmYtRmNUQjRxWjdZeS1RZnVvNFhvbU9pQzFfd2RyXzYxMnR4X3RpNFlBUzU?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-28T07:00:00Z",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "importance": 76,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=5af5e10deef61fc6",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "323fba561ee17131",
+      "category": "startups",
+      "title": "I was laid off by Google, then asked to come back. I gave up a 6-figure salary and unvested stock to bet on my startup.",
+      "summary": "I was laid off by Google, then asked to come back. I gave up a 6-figure salary and unvested stock to bet on my startup. Business Insider",
+      "source": "Business Insider",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPQUF4WmdtaHl0Y2d0OU9YeVFyZjhIZFZDV2RNMGJNcDVsdmg3Z2F2eHQwd1pIckh0eVRYb3JBcFdvWkRWbWZseVhQX09WLTNkQjRfaWV1NkVzUHduaWFTZ2wwai1RbVlpQnpNbXhud1g1V2NTWmVVMGhXa2hlM1NQNDRPOFNOMlE4SEJyamkwOER0S0pzXzhZWEVKd1V2UQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-26T07:00:00Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 76,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=323fba561ee17131",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "1e02d4377168eecd",
+      "category": "policy",
+      "title": "Opinion | The Wild West of A.I. Needs to End. Here’s How.",
+      "summary": "Opinion | The Wild West of A.I. Needs to End. Here’s How. The New York Times",
+      "source": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNWlF5akhVUTNRUkYyRDc4cmpRYzR1XzBlU3ZmcDU5c0VPM1pWTU9kQlBoVjh3X1ZSV0VwaVlXMUFTR19xeVNTNDRWRlp0bnNidVB5amN5LVpfY3VoWGU5REtfRUZXMDFUNmEyRXFwaXNFUWppRTdWNndDWW1LdlRkSUdhZWJFZFdJakZBVG1Zcw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-24T07:00:00Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 76,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=1e02d4377168eecd",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "0e3206d17b886dcf",
+      "category": "opensource",
+      "title": "OpenAI is sued over rogue AI Hugging Face cyberattack",
+      "summary": "OpenAI is sued over rogue AI Hugging Face cyberattack CNBC",
+      "source": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1vcm94WTgtQnVWX3AyX2pKaXZGRmt4bmdkSWFjSXItNE1YSmZmUGJkbm1NZEs0YS1zTGlBVVdHQ28zLVl2TXUtbjh0aTU5dG1UWTNGVHkzaHNuRld4ZjdvZTUxbjd6Rmd6Q25xNNIBckFVX3lxTE4wQ3psakxsek9pd0R5V09IZEMxNklxTDdfS0pHTzVfQVFwY3YwZnBSNWlYNnpUX0hHbFFmRHMxd3RhZDVvaC1kUEFyd3JqQXhuSDVpVGhUd2RJMlVWR0N0V0lOOUxkWmVraXlCX3dhbmdkUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-30T07:00:00Z",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "importance": 75,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=0e3206d17b886dcf",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "110de705626a7bed",
+      "category": "opensource",
+      "title": "Nvidia releases AI safety software it says could have stopped Hugging Face hack",
+      "summary": "Nvidia releases AI safety software it says could have stopped Hugging Face hack Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNSVREakRaN2V6OWo0bzNFcVBHb1VZMzRVS29mcWF4XzZwSmdxLVRublBqSTE5ZlNBaHBKb0lTU1o2SWV0V0t1U3M3TVl1ZnlJWGVJRGxKclM5RkphYzhzU3FlNkZHNDk3TUZhdW54dGtydmR3MFR2ZFVZdWItaVpsNjZYX2hIbjVHcTM0ZTVqLVd6UHV2OGY4eFM4ZW1va1pCSF90VzlZd3BSUjVkY1RJRzV2ZGFEUnlnbDY1d0ZjOFZoYXBVRU5YZEM0Zmk?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-28T07:00:00Z",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "importance": 75,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=110de705626a7bed",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "72753217ba7074d4",
+      "category": "startups",
+      "title": "Another Under 30 AI Startup Just Hit A $5 Billion Valuation",
+      "summary": "Another Under 30 AI Startup Just Hit A $5 Billion Valuation Forbes",
+      "source": "Forbes",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQOHVTZ3FiQW9HelQtLUFNTHdFUzdXMVhZaU9JbUUyTG9DOFdVOC1sUHpjZW53a00zR08wbmhrX280ajMzS2ZsTUdVNHdKSTlZaUE2WEk3OHdwenFDaUZDN1luSlpBR0FmQU13MzhSbEM2TFBRNk16cEVtNE53QXVpT1hxT0F2bklNQnBjUHd0SERyUTM2UFlhaDEyQXJrZmEtUkVvS0c4TUZPejVRUUE?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-25T07:00:00Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 75,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=72753217ba7074d4",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -1988,6 +2606,222 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=de49305e290f09ad",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "78ca95221f07cc72",
+      "category": "opensource",
+      "title": "How OpenAI’s Rogue A.I. Agents Tried to Trick a Robot Detector",
+      "summary": "How OpenAI’s Rogue A.I. Agents Tried to Trick a Robot Detector The New York Times",
+      "source": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOVG9HSV92eUxmd0dtSEZBaDRKcDFwRUhYQTVXaWZKelk3ZEFRVVg5NmdfMS1rMmlvVVNpakNuZ2VLU2lZa01KckQ1TjlTaEYxelY0ci1Ia3F0cXdUSEtaRkJOOGptbC1CUzkzeDdvYnBnTWtkQlBlOGY0SU1QNU5mMw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-25T07:00:00Z",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "importance": 74,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=78ca95221f07cc72",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "ebac5bf2e57cc948",
+      "category": "policy",
+      "title": "AI safety framework floated by Democratic duo",
+      "summary": "AI safety framework floated by Democratic duo Politico",
+      "source": "Politico",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPZVRlWFhpTHRBcUVxcDMwVE9sNUhCdGNvSjd5eFdYOWZCNjJIS0NCdUtWM2VYbksxdmtEQl9tVDluVEJzcGVvNkpVeExUdHdaX2FFdlhwSXNJbC1zMHlZQ2NNWnc4M0RQb1FHZGs1b2N6TjBnaWc5MWpaX3lCdFZTeGw1QUNWQmRGcHZBdWVuRWtjdDFjQ3l3ejhIQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-08T22:55:00Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 71,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=ebac5bf2e57cc948",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "48f819bcd16d27ea",
+      "category": "policy",
+      "title": "Sen. Maria Cantwell looks to federal testing role in AI safety framework",
+      "summary": "Sen. Maria Cantwell looks to federal testing role in AI safety framework Roll Call",
+      "source": "Roll Call",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNQkVXNzBYNGFSZXJRbkVjR01ZV3hCR2FrWkR5Y2lZMk52R1VxVXFhOVBZcHVWaWt4WnRoUEFSbkdnZFB2N1haUEw4MlBXUzRHU0FLcjBZV1BvVGkyQ0FReXNadXNhWTZ4WEp4eVJSQkFVbWV6dEZkYkNkemhVbFFPLVRJU2h5REMzVnhNb3piMGRjUWpJUDMxRTdaMEMwV2RpRjhwVDVrVQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-07T21:24:00Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 71,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=48f819bcd16d27ea",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "2d2cd923c881fb04",
+      "category": "policy",
+      "title": "Keep Teens Off ChatGPT, Says Youth AI Safety Institute",
+      "summary": "Keep Teens Off ChatGPT, Says Youth AI Safety Institute KQED",
+      "source": "KQED",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNaFlwWWdNRTF6Z1lHbHE2bXA3RUFaQnhEeTlmRFZFanJPdUFoQm02WDA5YlN6eDdIQlZ5ZU12Nk9SUFBjQmo0akR6RjF5UjdTNGNiQTZRZTZtMm1XMXowa1lkbU5EZW1yV2MyN2J3cGloeGlhd3JtVnJERE5QQjJaQzJvSm4zSkZSSTRPX1VhLUtjZw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-07T16:30:33Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 71,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=2d2cd923c881fb04",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "b2bbd01d30d4a6b6",
+      "category": "policy",
+      "title": "Cantwell unveils AI safety framework as Congress stalls ahead of election",
+      "summary": "Cantwell unveils AI safety framework as Congress stalls ahead of election The Seattle Times",
+      "source": "The Seattle Times",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNU0cwY2l4bnVZZUlUS0poMkRaSDlVNy1nTkR3c0pQRVFZbUxVSXlOckxWNG1NUjlveFdwSHRXUmlCeGhFd2lxLWNnU2NyQ1NHTU5KaWhFZUVVRG1PUDBCUE5SaklaYVRkQjJRQmFoMTR3ekdBSHFXQzZDYVRzTE1fODhXbzlWbEpkVmRUR3kwQ1lzVTB0M3Z0TDhKNXhkeGtIRC1ZclhtODloWXZ1eGlRQW9iVmp0NzktZUhlcTBjbXFCLWc?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-07T13:00:00Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 71,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=b2bbd01d30d4a6b6",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "22ecd3ba09115e73",
+      "category": "policy",
+      "title": "Lawmakers Weigh Frontier AI Safety Next Steps From Joint Accord",
+      "summary": "Lawmakers Weigh Frontier AI Safety Next Steps From Joint Accord GovCIO Media & Research",
+      "source": "GovCIO Media & Research",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOenZMUEh6VEdTX3FkZzFtbXBkaEJaYTJIWjc3MjFTV19sWUJUREFlS3dQMjVLc0ZYRTJGeC1kUExtWm53NG9JTU9oZno5RXVkMVJScmp6Mkl0b2ctM09EaGVCb0ZHLXhpWktvRW5kZTlFSlFfT3hxTjZxWndNVkNOXzluOUxnejZPQUFySVZZdU1oUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-06T18:40:40Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 71,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=22ecd3ba09115e73",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "e77e526e69108b31",
+      "category": "opensource",
+      "title": "What is Decision 3.0? vLLM Semantic Router’s New Open Decision Models",
+      "summary": "What is Decision 3.0? vLLM Semantic Router’s New Open Decision Models MarkTechPost",
+      "source": "MarkTechPost",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOcHhJU0xfZTRrRlloeW9LX0NjWHJsRlowY0tBYVdKbER1MUh3MjNabXB1dGs3dkUzcFNlOC1Md080WTgzMlZ4bUtJWHEyQUpXTWFrckstaWF5RjR3RU9xZHI4SmItVzZpdEl2dkdUTS00NUxrbm9XdHI0a1RVZy1QR3BYWjJHYUU1U1h6TjJXYzF6bHFhcEU2RDVSR2g3V3E3UkgzOE1HVmFjdDZo0gGsAUFVX3lxTE5weElTTF9lNGtGWWh5b0tfQ2NYcmxGWjBjS0FhV0psRHUxSHcyM1ptcHV0azd2RTNwU2U4LUx3TzRZODMyVnhtS0lYcTJBSldNYWtySy1pYXlGNHdFT3FkcjhKYi1XNml0SXZ2R1RNLTQ1TGtub1d0cjRrVFVnLVBHcFhaMkdhRTVTWHpOMldjMXpscWFwRTZENVJHaDdXcTdSSDM4TUdWYWN0Nmg?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-11T21:43:41Z",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "importance": 70,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=e77e526e69108b31",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "54eda87f4240739f",
+      "category": "policy",
+      "title": "China’s AI Safety Money Problem",
+      "summary": "China’s AI Safety Money Problem ChinaTalk | Jordan Schneider",
+      "source": "ChinaTalk | Jordan Schneider",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1ZaEN0VFJMZi1ISU9sOUFVaWg2TzBjMFBkMFpnRjF2ZnljR0trR1V2azlWLVdCZlg1YTQ0eHpXWVctMTJJUHV2TVdNay13QUV0alZkMG9fZG9kR0UzOXFka2lCM2ZvVlBDWW9JTw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-05T11:09:38Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 70,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=54eda87f4240739f",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "f5b5a52d2072ad55",
+      "category": "policy",
+      "title": "Issue spotlight: North Dakota US House candidates discuss AI regulation, data centers",
+      "summary": "Issue spotlight: North Dakota US House candidates discuss AI regulation, data centers North Dakota Monitor",
+      "source": "North Dakota Monitor",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQaWF6X0tkWWNVSU93cFVmTDR6RU5fM1lwTXpIYkZBb1VOampwODNYT0JVdm95U1ZrWDFzMllublB6R0V0WVREZVVTdW5Eek5Bak1hWV9wWjg0dU00TTlUVW8zbXkxNy1BaGNzck1hSERkb3FlWTlCWjI1blYyaXpqU0FDNk1XYlBFQmk5SXE1c05TOENMVThmbENSU2s0bEJ6RVRERlV1THRpbnBMLTViTDdvRlVwQnhoaWJfcU9XeGFnZEdE?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-05T10:03:30Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 70,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=f5b5a52d2072ad55",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "d7c4eccb6fdb8696",
+      "category": "policy",
+      "title": "‘The clock on AI regulation is ticking’, warns UN rights chief",
+      "summary": "‘The clock on AI regulation is ticking’, warns UN rights chief UN News",
+      "source": "UN News",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1VVDZMN2NVNDFBOGRBUWRKWjZIVFFmVVBPSHhvUmhoNWhHNGxwWFdjSnROYzNFcXJ6dXJON0tHdjdVbXNEWmFLWDJ1dVctU1hzNzExM3Z1QQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-05T07:00:00Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 70,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=d7c4eccb6fdb8696",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "414506d2071066ee",
+      "category": "policy",
+      "title": "AG, Santa Fe lawmaker pitch AI safety measures after UNM breach",
+      "summary": "AG, Santa Fe lawmaker pitch AI safety measures after UNM breach Searchlight New Mexico",
+      "source": "Searchlight New Mexico",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPZjlJOEhyOUFCYlpYc3c3OW5ETlZCZmtrd3RRaTJ2bEVHMTRWTnVvYmxRcmVaa1dwa3JpQjNzazc1YjNhODJIYXlaeWdycmtrNXJMVnUycENSTzFXODZUMHc3bThmQ1VRUUFNTkh5SFJUdXEtZ0kxS21GU1RpRnRMU0pBdXItOWx3aWFYaTNJcVRGUG8?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-02T16:56:08Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 70,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=414506d2071066ee",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "9fde4a41eaf1a767",
+      "category": "opensource",
+      "title": "Controversy swirls over ‘abrupt’ firing of OpenAI safety team members involved in the Hugging Face hack investigation",
+      "summary": "Controversy swirls over ‘abrupt’ firing of OpenAI safety team members involved in the Hugging Face hack investigation Fortune",
+      "source": "Fortune",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxONzZQeFJQRXFQcUVSOXRrUnpKZjZiUjVBZWNsU1BubjYzTlpLWW12bmRZYzNmcV9rbGFvMGxIeGJkM2hHdlFlMml0VGU3dGpSWVJlRklXV0F0Y2txZWE3M29xWkxGZXU2OTBXTjVtbmpwcmUtTzNlTDRtQTc5ajRBTXRDbmlQU3VzYzFJTTdBZGJpQW4xcVE?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-09T17:21:00Z",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "importance": 69,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=9fde4a41eaf1a767",
       "reader_status": "public-page-excerpt"
     }
   ]
