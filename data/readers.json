@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-15T16:57:41Z",
+  "generated_at": "2026-10-15T21:20:11Z",
   "record_count": 130,
   "records": [
     {
@@ -372,6 +372,57 @@
         }
       ],
       "reading_minutes": 31
+    },
+    {
+      "id": "f0c67f699c236db9",
+      "kind": "article",
+      "title": "Anthropic update on independent evaluators",
+      "source": "Anthropic",
+      "source_url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+      "published_at": "2026-10-15T17:20:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Anthropic",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "Anthropic announces updates to embedding independent evaluators",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+      "key_points": [
+        "Last month, we committed to stronger independent, third-party assessment of our models and safety practices.",
+        "We also signed the White House Accord on Super Intelligence, in which companies pledged to partner with independent external auditors or evaluators.",
+        "Today, we’re announcing that we’ve started to give employee-like access to a team from METR , a nonprofit that evaluates frontier AI models.",
+        "METR will publish the results of its risk assessments.",
+        "Over the past year, we’ve worked with METR on several reviews of our Risk Reports ."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Anthropic announces updates to embedding independent evaluators"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Last month, we committed to stronger independent, third-party assessment of our models and safety practices.",
+            "We also signed the White House Accord on Super Intelligence, in which companies pledged to partner with independent external auditors or evaluators.",
+            "Today, we’re announcing that we’ve started to give employee-like access to a team from METR , a nonprofit that evaluates frontier AI models.",
+            "METR will publish the results of its risk assessments.",
+            "Over the past year, we’ve worked with METR on several reviews of our Risk Reports ."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Last month, we committed to stronger independent, third-party assessment of our models and safety practices. We also signed the White House Accord on Super Intelligence, in which companies pledged to partner with independent external auditors or evaluators. Today, we’re announcing that we’ve started to give employee-like access to a team from METR , a nonprofit that evaluates frontier AI models.",
+            "METR will publish the results of its risk assessments. Over the past year, we’ve worked with METR on several reviews of our Risk Reports . We’re also working with SecureBio and Accenture as evaluators, and are in early discussions with several other organizations, including Hugging Face .",
+            "As models have become more powerful, they’ve required stronger safeguards and more challenging risk assessments. We want to be publicly accountable for the decisions we’re making. But we can’t publicly share all the information relevant to our safety work. Some of it could be useful to malicious actors, or is commercially sensitive, like compute or training information. Instead, we’re giving third-party evaluators deep access to our information, and are having them share evidence and reasoned conclusions about the risks involved in building our models. We aim to close the gap between what evaluators understand about a frontier AI company’s systems and what the company itself understands."
+          ]
+        }
+      ],
+      "reading_minutes": 1
     },
     {
       "id": "00051b9d22302c85",
@@ -823,9 +874,9 @@
       "key_points": [
         "As our merges per day grew more than tenfold, source control became our biggest development bottleneck.",
         "Here, we share how we migrated to an in-house version control system in five months.",
+        "Updated October 15 to include more detail on the projects that pioneered many of the techniques we use in Scion.",
         "At Anthropic, coding is no longer the bottleneck to building systems or doing research.",
-        "Claude is able to autonomously iterate on research loops, micro-optimize complex programs, and build new services from the ground up at a speed and scale we haven’t seen before.",
-        "The bottleneck, now, is all of the developer infrastructure built for human scale: source control, builds, and CI."
+        "Claude is able to autonomously iterate on research loops, micro-optimize complex programs, and build new services from the ground up at a speed and scale we haven’t seen before."
       ],
       "sections": [
         {
@@ -837,17 +888,17 @@
           "bullets": [
             "As our merges per day grew more than tenfold, source control became our biggest development bottleneck.",
             "Here, we share how we migrated to an in-house version control system in five months.",
+            "Updated October 15 to include more detail on the projects that pioneered many of the techniques we use in Scion.",
             "At Anthropic, coding is no longer the bottleneck to building systems or doing research.",
-            "Claude is able to autonomously iterate on research loops, micro-optimize complex programs, and build new services from the ground up at a speed and scale we haven’t seen before.",
-            "The bottleneck, now, is all of the developer infrastructure built for human scale: source control, builds, and CI."
+            "Claude is able to autonomously iterate on research loops, micro-optimize complex programs, and build new services from the ground up at a speed and scale we haven’t seen before."
           ]
         },
         {
           "title": "原文短摘录",
           "paragraphs": [
             "As our merges per day grew more than tenfold, source control became our biggest development bottleneck. Here, we share how we migrated to an in-house version control system in five months.",
-            "At Anthropic, coding is no longer the bottleneck to building systems or doing research. Claude is able to autonomously iterate on research loops, micro-optimize complex programs, and build new services from the ground up at a speed and scale we haven’t seen before. The bottleneck, now, is all of the developer infrastructure built for human scale: source control, builds, and CI.",
-            "In May 2026, Anthropic averaged around 2,500 code changes merged per day; as of September, we merged over 30,000 per day. We don’t expect this rate of growth to slow down anytime soon; the latent demand for merging code is practically infinite, and every bottleneck we remove immediately leads to a further increase in the amount of code we produce."
+            "Updated October 15 to include more detail on the projects that pioneered many of the techniques we use in Scion.",
+            "At Anthropic, coding is no longer the bottleneck to building systems or doing research. Claude is able to autonomously iterate on research loops, micro-optimize complex programs, and build new services from the ground up at a speed and scale we haven’t seen before. The bottleneck, now, is all of the developer infrastructure built for human scale: source control, builds, and CI."
           ]
         }
       ],
@@ -1201,57 +1252,6 @@
         {
           "title": "摘要",
           "body": "Abstract While operators and service companies are aggressively deploying AI agents for various oil and gas use cases, methods to evaluate their outputs and behaviors remain rarely discussed. Existing publications focus mostly on the accuracy of the final outputs, neglecting important metrics like consistency and efficiency. The objective of this project is to build an evaluation harness and use it to measure the performance of agents against drilling data analysis tasks. DrillingGPT (DGPT), a drilling data AI agent, is one of 100+ agents deployed in Occidental's internal agent platform. We developed an evaluation suite consisting of 19 tasks of varying difficulties…"
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "2d52ed2f0b86aafa",
-      "kind": "article",
-      "title": "Claude discovers a novel enzyme system",
-      "source": "Anthropic",
-      "source_url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
-      "published_at": "2026-09-23T16:06:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Anthropic",
-        "Official"
-      ],
-      "verification": "官方来源",
-      "summary": "In early results from our new life sciences research lab, Claude agents found an enzyme system whose function is still unknown.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
-      "key_points": [
-        "We’re introducing a new life sciences research group and laboratory at Anthropic.",
-        "Our focus is on fundamental biology research using Claude: exploring datasets of DNA to identify uncharacterized protein families, generating hypotheses at scale, and testing them through experiments in the lab.",
-        "This post introduces the team behind this work and shares early results in which Claude discovered a novel enzyme system with properties reminiscent of CRISPR, with only high-level direction from our scientists.",
-        "Many discoveries that have revolutionized biology and medicine started with a scientist noticing something odd in the staggering diversity of molecular machines found in nature.",
-        "Restriction enzymes , proteins that… Today, we’re sharing early results from one of our first research programs, in which Claude autonomously discovered a novel enzyme system that is associated with an array of DNA repeats, a pattern reminiscent of CRISPR."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "In early results from our new life sciences research lab, Claude agents found an enzyme system whose function is still unknown."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "We’re introducing a new life sciences research group and laboratory at Anthropic.",
-            "Our focus is on fundamental biology research using Claude: exploring datasets of DNA to identify uncharacterized protein families, generating hypotheses at scale, and testing them through experiments in the lab.",
-            "This post introduces the team behind this work and shares early results in which Claude discovered a novel enzyme system with properties reminiscent of CRISPR, with only high-level direction from our scientists.",
-            "Many discoveries that have revolutionized biology and medicine started with a scientist noticing something odd in the staggering diversity of molecular machines found in nature.",
-            "Restriction enzymes , proteins that… Today, we’re sharing early results from one of our first research programs, in which Claude autonomously discovered a novel enzyme system that is associated with an array of DNA repeats, a pattern reminiscent of CRISPR."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "We’re introducing a new life sciences research group and laboratory at Anthropic. Our focus is on fundamental biology research using Claude: exploring datasets of DNA to identify uncharacterized protein families, generating hypotheses at scale, and testing them through experiments in the lab. This post introduces the team behind this work and shares early results in which Claude discovered a novel enzyme system with properties reminiscent of CRISPR, with only high-level direction from our scientists. Many discoveries that have revolutionized biology and medicine started with a scientist noticing something odd in the staggering diversity of molecular machines found in nature. Restriction enzymes , proteins that…",
-            "Today, we’re sharing early results from one of our first research programs, in which Claude autonomously discovered a novel enzyme system that is associated with an array of DNA repeats, a pattern reminiscent of CRISPR. Although we don’t yet know its function, the system that Claude discovered has a set of characteristics that have only ever been found together in a handful of other systems, all of which are programmable and perform operations like cutting, copying, and pasting DNA. Beyond CRISPR, which has already transformed science and medicine, several other such systems are now in development as promising tools.",
-            "The system that Claude found is based on a reverse transcriptase (RT), enzymes that copy RNA into DNA. While this underlying RT, found in a jumbo phage, had been identified in previous studies, Claude appears to be the first to notice the system’s defining features—an associated array of non-coding DNA sequences and an additional accessory protein of unknown function."
-          ]
         }
       ],
       "reading_minutes": 1
@@ -1984,11 +1984,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "4df6a2e1f55e98b3",
+      "id": "f4c47df8855a870a",
       "kind": "article",
       "title": "DeepSeek 故障近5小时,补偿方案 公布",
       "source": "微信公众号 · 新华社",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792083447&ver=7028&signature=DbjA*usXLB2-NCFbZEEKBrgaAnUpNg1A48*AL6Q8UHK-bHyisb9ZnzWNUanCGp-xEfZCCT*i6thNvhPC7H7hiPRy6Uuu4g2ZiRRIbn2SOmvBb9J7pZ6YVUzaVvxTTbNu&new=1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792099197&ver=7029&signature=QTG03OncJHmA-LLzuH0AFB1B-6XF4QqPptnpi-Fm5edX5hcilMAS9Y1mu-n07WQvyOsAvTRKnO3OPS0rpn3hEwzxcbGEI9IWUqZcmPCaV8Si53oSGyHX6*I5JI0WrhAq&new=1",
       "published_at": "2026-10-15T13:37:55Z",
       "authors": [],
       "venue": "",
@@ -2001,7 +2001,7 @@
       "summary": "10月15日傍晚,深度求索( DeepSeek )官方开放平台 发布 服务恢复及补偿通知称,15日8:11至13:04期间, DeepSeek 的服务系统出...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HAAG0WqjYlerx7KKE83bvywXzhvZh5xRllYCSQ9d&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792083447%26ver%3D7028%26signature%3DDbjA%2AusXLB2-NCFbZEEKBrgaAnUpNg1A48%2AAL6Q8UHK-bHyisb9ZnzWNUanCGp-xEfZCCT%2Ai6thNvhPC7H7hiPRy6Uuu4g2ZiRRIbn2SOmvBb9J7pZ6YVUzaVvxTTbNu%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HIVD0WqjLRsNuTK-W_aWWE92pt5K4Mey7hDMwPEB&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792099197%26ver%3D7029%26signature%3DQTG03OncJHmA-LLzuH0AFB1B-6XF4QqPptnpi-Fm5edX5hcilMAS9Y1mu-n07WQvyOsAvTRKnO3OPS0rpn3hEwzxcbGEI9IWUqZcmPCaV8Si53oSGyHX6%2AI5JI0WrhAq%26new%3D1",
       "key_points": [
         "10月15日傍晚,深度求索( DeepSeek )官方开放平台 发布 服务恢复及补偿通知称,15日8:11至13:04期间, DeepSeek 的服务系统出..."
       ],
@@ -2024,11 +2024,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "69c78a541e3001cb",
+      "id": "330ff8f6af6a59f2",
       "kind": "article",
       "title": "DeepSeek 发布 补偿通知",
       "source": "微信公众号 · 环球时报",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792083447&ver=7028&signature=WR1DCzTrbz7HSbQOrcXET1PFtF*oxpBdOGEoLKEH*4OPFr3i3xkH8zP74QzN8Skx1YWNhosjpP1R1p6sTaAk5DUrZTtj9MCT2xOLJassJ1DwG3sFt*p0CVQv2*33gRtY&new=1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792099197&ver=7029&signature=zd7SpJpSGQ5iP-vFbpbF-lrknlt2lNOOTJDNgXQGVZ5uTh7uiW-fKWjBncTMyqjqSf4EzSEINwk6Dp6ROkIsb3y45G9SBnTTSXt13vN8I90ZYhsMUNj3dMl*mzk*SXau&new=1",
       "published_at": "2026-10-15T12:58:16Z",
       "authors": [],
       "venue": "",
@@ -2041,7 +2041,7 @@
       "summary": "10月15日傍晚, DeepSeek 官方开放平台 发布 服务恢复及补偿通知.通知表示,北京时间2026年10月15日8:11至13:04期间,...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HAAG0Wqju58gLUPHlLxIwlYx7biJHa2kNRAxJqn8&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792083447%26ver%3D7028%26signature%3DWR1DCzTrbz7HSbQOrcXET1PFtF%2AoxpBdOGEoLKEH%2A4OPFr3i3xkH8zP74QzN8Skx1YWNhosjpP1R1p6sTaAk5DUrZTtj9MCT2xOLJassJ1DwG3sFt%2Ap0CVQv2%2A33gRtY%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HIVD0Wqj5xYtF5PcTpbUPDFxTrMfCarugFjfDm7I&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792099197%26ver%3D7029%26signature%3Dzd7SpJpSGQ5iP-vFbpbF-lrknlt2lNOOTJDNgXQGVZ5uTh7uiW-fKWjBncTMyqjqSf4EzSEINwk6Dp6ROkIsb3y45G9SBnTTSXt13vN8I90ZYhsMUNj3dMl%2Amzk%2ASXau%26new%3D1",
       "key_points": [
         "10月15日傍晚, DeepSeek 官方开放平台 发布 服务恢复及补偿通知.通知表示,北京时间2026年10月15日8:11至13:04期间,..."
       ],
@@ -2144,11 +2144,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "f5813248513c1f04",
+      "id": "3caedde83d59d20b",
       "kind": "article",
       "title": "Qwen 、 通义千问 、千问App,别再混着叫",
       "source": "微信公众号 · 京智AI2049",
-      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HOe30GqjTq73siU41BgII87Q20WgpmPnZx_4QRFQ&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792063453%26ver%3D7028%26signature%3DSWq1lFz3KVyfZx5sufSxkHDxs0KSa8zsnKwHFlo9pEQS6moL1u8-D8AAn2%2Aer9Ueo3K-juOStbABBq%2ARobcHIXagrt6r-WaebiB9t1zMBO6ggNAN4G%2A7uXn-w95f9eqY%26new%3D1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792099197&ver=7029&signature=0Q5WFQZNtguEARx9EiRmeaCOl5499sOuBFXpjvLFjESEElNgubPrya1tah8FHujuLmcxjywohoJbav7XBBJZAA6h6l6xF19tgcR3DwgQMsRek-Kmoxj0vU6LxUDOdoH6&new=1",
       "published_at": "2026-10-14T10:49:30Z",
       "authors": [],
       "venue": "",
@@ -2161,7 +2161,7 @@
       "summary": "通义千问 则是认识这条模型品牌线索时经常遇到的中文称谓.名称... · 概念插画一条更新消息,可以这样理解假设消息写“ Qwen 发布 ...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HOe30GqjTq73siU41BgII87Q20WgpmPnZx_4QRFQ&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792063453%26ver%3D7028%26signature%3DSWq1lFz3KVyfZx5sufSxkHDxs0KSa8zsnKwHFlo9pEQS6moL1u8-D8AAn2%2Aer9Ueo3K-juOStbABBq%2ARobcHIXagrt6r-WaebiB9t1zMBO6ggNAN4G%2A7uXn-w95f9eqY%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HIZD0WqjFN27bPRR-rxDypKTrZMHiVbzO2ygngpD&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792099197%26ver%3D7029%26signature%3D0Q5WFQZNtguEARx9EiRmeaCOl5499sOuBFXpjvLFjESEElNgubPrya1tah8FHujuLmcxjywohoJbav7XBBJZAA6h6l6xF19tgcR3DwgQMsRek-Kmoxj0vU6LxUDOdoH6%26new%3D1",
       "key_points": [
         "通义千问 则是认识这条模型品牌线索时经常遇到的中文称谓.名称... · 概念插画一条更新消息,可以这样理解假设消息写“ Qwen 发布 ..."
       ],
@@ -2233,11 +2233,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "f84b3197cbcc5b53",
+      "id": "1536e82896442b45",
       "kind": "article",
       "title": "小马哥复盘: 腾讯 不抢地盘,把 混元 和 元宝 接起来",
       "source": "微信公众号 · 日拱一卒手记",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792083451&ver=7028&signature=Cd3rSRZPG*O8aacVqB8dOfkW5KX9ZARuSxBS4WIsKKP6FCi9njw6RdkIkypo0581t2UpWpyfhPrKVxWI4ciHoh9y*tkkIJ0las7Jl0*HUR09sk40qEUKObI0Wz5tnoj4&new=1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792099201&ver=7029&signature=GSp8Ut7s9b7H-VZq0A8hINLOK4blqXU8X1hsYBRkY2a1mfPszX6rjvDBDG0HA-MRX-MvhaS2I9ErefUMJOfxWwi*6irij5bMG79C8jmxg99I6e3En7uE8-0LBRQQAykT&new=1",
       "published_at": "2026-10-13T10:07:35Z",
       "authors": [],
       "venue": "",
@@ -2250,7 +2250,7 @@
       "summary": "混元 上月 发布 Hy Image3.5 preview 后,WorkRally 首发接入并给平... 元宝 管入口,组织上前述的撤销与合并都是为这个目标服务的....",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HAAG0WqjIWWtx69Ui7y1gGHfMnmsU1uwJx89Iyt4&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792083451%26ver%3D7028%26signature%3DCd3rSRZPG%2AO8aacVqB8dOfkW5KX9ZARuSxBS4WIsKKP6FCi9njw6RdkIkypo0581t2UpWpyfhPrKVxWI4ciHoh9y%2AtkkIJ0las7Jl0%2AHUR09sk40qEUKObI0Wz5tnoj4%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HIZD0Wqj5f1N4uu-jl-8FCmwDKUaUF_MDkKbdOH0&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792099201%26ver%3D7029%26signature%3DGSp8Ut7s9b7H-VZq0A8hINLOK4blqXU8X1hsYBRkY2a1mfPszX6rjvDBDG0HA-MRX-MvhaS2I9ErefUMJOfxWwi%2A6irij5bMG79C8jmxg99I6e3En7uE8-0LBRQQAykT%26new%3D1",
       "key_points": [
         "混元 上月 发布 Hy Image3.5 preview 后,WorkRally 首发接入并给平... 元宝 管入口,组织上前述的撤销与合并都是为这个目标服务的...."
       ],
@@ -2912,46 +2912,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "9de37b3516cac029",
-      "kind": "article",
-      "title": "AI cracked the Navier–Stokes challenge. What does that mean for physics?",
-      "source": "Nature",
-      "source_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9SQkRIbk1ZUnRra3R0MVhYTWVsZjVXUVEzM3FoMzhxSktBWm5URU9UbVVLbnZCdVRmWUhjOEEzVTR0b1NQVkFhbHBXZzFtdXg5SzY1QWtubUF3clNrR1Zr?oc=5",
-      "published_at": "2026-09-18T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "AI cracked the Navier–Stokes challenge. What does that mean for physics? Nature",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9SQkRIbk1ZUnRra3R0MVhYTWVsZjVXUVEzM3FoMzhxSktBWm5URU9UbVVLbnZCdVRmWUhjOEEzVTR0b1NQVkFhbHBXZzFtdXg5SzY1QWtubUF3clNrR1Zr?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "AI cracked the Navier–Stokes challenge. What does that mean for physics? Nature"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "9597b6bcc54c2be5",
       "kind": "article",
       "title": "The latest AI news we announced in September 2026",
@@ -3092,6 +3052,46 @@
             "Inspired by a deeply personal story, the film centers on an 11-year-old boy who recreates his late mother’s voice and essence out of love and code. What emerges across the town’s networks quietly cares for his entire community — reflecting the filmmaker’s belief that technology’s greatest promise lies in empathy and human connection.",
             "Chosen from more than 2,500 entries worldwide, the solo-developed project receives $100,000 alongside $2.5 million in feature production funding. Through Google’s 100 ZEROS initiative, we are partnering with Range Media Partners to help bring this story to the big screen."
           ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "9de37b3516cac029",
+      "kind": "article",
+      "title": "AI cracked the Navier–Stokes challenge. What does that mean for physics?",
+      "source": "Nature",
+      "source_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9SQkRIbk1ZUnRra3R0MVhYTWVsZjVXUVEzM3FoMzhxSktBWm5URU9UbVVLbnZCdVRmWUhjOEEzVTR0b1NQVkFhbHBXZzFtdXg5SzY1QWtubUF3clNrR1Zr?oc=5",
+      "published_at": "2026-09-18T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "AI cracked the Navier–Stokes challenge. What does that mean for physics? Nature",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9SQkRIbk1ZUnRra3R0MVhYTWVsZjVXUVEzM3FoMzhxSktBWm5URU9UbVVLbnZCdVRmWUhjOEEzVTR0b1NQVkFhbHBXZzFtdXg5SzY1QWtubUF3clNrR1Zr?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AI cracked the Navier–Stokes challenge. What does that mean for physics? Nature"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -3240,6 +3240,53 @@
       "reading_minutes": 1
     },
     {
+      "id": "3449f9032f48b162",
+      "kind": "article",
+      "title": "Granite Switch 4.1: Chat, Decisions, and Speech from One Endpoint",
+      "source": "Hugging Face",
+      "source_url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
+      "published_at": "2026-10-15T20:34:01Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Hugging Face",
+        "Open Source"
+      ],
+      "verification": "官方来源",
+      "summary": "A Blog post by IBM Granite on Hugging Face",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
+      "key_points": [
+        "Introduced last spring, the Granite Switch project enables a modular approach to model development.",
+        "Now Granite Switch 4.1 models, armed with a Decision adapter and the fastest ASR model on the OpenASR leaderboard, can move efficiently between natural-language responses, general and specialized decisions, and speech-to-text tasks—all from one hosted endpoint.",
+        "Specifically, Granite-Switch-4.1-8B and -30B models are configured to include: A new Decision aLoRA for general-purpose decision-making (e.g. v1/systemone),"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "A Blog post by IBM Granite on Hugging Face"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Introduced last spring, the Granite Switch project enables a modular approach to model development.",
+            "Now Granite Switch 4.1 models, armed with a Decision adapter and the fastest ASR model on the OpenASR leaderboard, can move efficiently between natural-language responses, general and specialized decisions, and speech-to-text tasks—all from one hosted endpoint.",
+            "Specifically, Granite-Switch-4.1-8B and -30B models are configured to include: A new Decision aLoRA for general-purpose decision-making (e.g. v1/systemone),"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Introduced last spring, the Granite Switch project enables a modular approach to model development. Now Granite Switch 4.1 models, armed with a Decision adapter and the fastest ASR model on the OpenASR leaderboard, can move efficiently between natural-language responses, general and specialized decisions, and speech-to-text tasks—all from one hosted endpoint.",
+            "Specifically, Granite-Switch-4.1-8B and -30B models are configured to include:",
+            "A new Decision aLoRA for general-purpose decision-making (e.g. v1/systemone),"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "981fb38639007d1d",
       "kind": "article",
       "title": "AstraZeneca Strikes Up to $1.5 Billion AI Drug Discovery Deal With Insitro",
@@ -3366,6 +3413,57 @@
         {
           "title": "原文短摘录",
           "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "cec06029030594ee",
+      "kind": "article",
+      "title": "Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta",
+      "source": "Hugging Face",
+      "source_url": "https://huggingface.co/blog/meta-muse-spark-open",
+      "published_at": "2026-10-15T00:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Hugging Face",
+        "Open Source"
+      ],
+      "verification": "官方来源",
+      "summary": "We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://huggingface.co/blog/meta-muse-spark-open",
+      "key_points": [
+        "Muse Spark Open is an open-weight model from Meta.",
+        "The mixture of experts model brings text, images, audio, and video into a model with approximately 816 billion parameters, around 42 billion active per token, and a context window of up to one million tokens.",
+        "It generates text, giving developers a common interface for asking questions about different kinds of input.",
+        "Following Muse Glimmer, Muse Spark Open introduces a mixture-of-experts architecture at a much larger scale, and the most capable US open-weights model to date.",
+        "Meta trained Muse Spark Open for agentic coding: reading a codebase, writing and debugging code, and calling tools."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "We’re on a journey to advance and democratize artificial intelligence through open source and open science."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Muse Spark Open is an open-weight model from Meta.",
+            "The mixture of experts model brings text, images, audio, and video into a model with approximately 816 billion parameters, around 42 billion active per token, and a context window of up to one million tokens.",
+            "It generates text, giving developers a common interface for asking questions about different kinds of input.",
+            "Following Muse Glimmer, Muse Spark Open introduces a mixture-of-experts architecture at a much larger scale, and the most capable US open-weights model to date.",
+            "Meta trained Muse Spark Open for agentic coding: reading a codebase, writing and debugging code, and calling tools."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Muse Spark Open is an open-weight model from Meta. The mixture of experts model brings text, images, audio, and video into a model with approximately 816 billion parameters, around 42 billion active per token, and a context window of up to one million tokens. It generates text, giving developers a common interface for asking questions about different kinds of input.",
+            "Following Muse Glimmer, Muse Spark Open introduces a mixture-of-experts architecture at a much larger scale, and the most capable US open-weights model to date.",
+            "Meta trained Muse Spark Open for agentic coding: reading a codebase, writing and debugging code, and calling tools. It also takes images, audio, and video as input, so the same model can read a screenshot, listen to a voice note, or watch a screen recording while it works on your code. This post shows you how to run it, how to fine-tune it, and what we built with it. Find all the models here ."
+          ]
         }
       ],
       "reading_minutes": 1
@@ -3834,106 +3932,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "1fce2f86ead01bd3",
-      "kind": "article",
-      "title": "Introducing Falcon ASR",
-      "source": "Hugging Face",
-      "source_url": "https://huggingface.co/blog/tiiuae/falcon-asr",
-      "published_at": "2026-10-07T13:21:03Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Hugging Face",
-        "Open Source"
-      ],
-      "verification": "官方来源",
-      "summary": "A Blog post by Technology Innovation Institute on Hugging Face",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://huggingface.co/blog/tiiuae/falcon-asr",
-      "key_points": [
-        "Arabic WER: 20.92% · Parameters: 1.6B · Emirati WER (TII evaluation): 22.73% We’re introducing Falcon-ASR, our 1.6 billion parameter speech recognition model for Arabic, with a particular focus on the Emirati dialect.",
-        "Developed at the Technology Innovation Institute (TII) in Abu Dhabi, it also supports English, French, Spanish and Portuguese.",
-        "In our evaluation, Falcon-ASR achieved an average word error rate of 20.92% across six Arabic test sets, compared with the best published result of 23.17% in the leaderboard snapshot we used.",
-        "On our internal Emirati evaluation, it recorded the lowest word and character error rates among the systems we compared."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "A Blog post by Technology Innovation Institute on Hugging Face"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Arabic WER: 20.92% · Parameters: 1.6B · Emirati WER (TII evaluation): 22.73% We’re introducing Falcon-ASR, our 1.6 billion parameter speech recognition model for Arabic, with a particular focus on the Emirati dialect.",
-            "Developed at the Technology Innovation Institute (TII) in Abu Dhabi, it also supports English, French, Spanish and Portuguese.",
-            "In our evaluation, Falcon-ASR achieved an average word error rate of 20.92% across six Arabic test sets, compared with the best published result of 23.17% in the leaderboard snapshot we used.",
-            "On our internal Emirati evaluation, it recorded the lowest word and character error rates among the systems we compared."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Arabic WER: 20.92% · Parameters: 1.6B · Emirati WER (TII evaluation): 22.73%",
-            "We’re introducing Falcon-ASR, our 1.6 billion parameter speech recognition model for Arabic, with a particular focus on the Emirati dialect. Developed at the Technology Innovation Institute (TII) in Abu Dhabi, it also supports English, French, Spanish and Portuguese.",
-            "In our evaluation, Falcon-ASR achieved an average word error rate of 20.92% across six Arabic test sets, compared with the best published result of 23.17% in the leaderboard snapshot we used. On our internal Emirati evaluation, it recorded the lowest word and character error rates among the systems we compared."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "c864a815b70fdb39",
-      "kind": "article",
-      "title": "One Model Family, Two Gold-Level Results: Fine-Tuning Nemotron for IOI and IMO",
-      "source": "Hugging Face",
-      "source_url": "https://huggingface.co/blog/nvidia/nemotron-ioi-and-imo-2026",
-      "published_at": "2026-10-07T12:45:31Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Hugging Face",
-        "Open Source"
-      ],
-      "verification": "官方来源",
-      "summary": "A Blog post by NVIDIA on Hugging Face",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://huggingface.co/blog/nvidia/nemotron-ioi-and-imo-2026",
-      "key_points": [
-        "The International Olympiad in Informatics (IOI) and the International Mathematical Olympiad (IMO) test different skills.",
-        "IOI requires algorithms and code that pass hidden tests under strict time and submission limits.",
-        "IMO demands rigorous natural-language proofs.",
-        "Our recent results show that Nemotron is a strong, adaptable foundation for building world-class specialist models.",
-        "Starting from Nemotron 3, our teams used supervised fine-tuning (SFT), reinforcement learning (RL), and feedback-driven inference to create systems that reached gold-medal level at both IMO 2026 and IOI 2026 ."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "A Blog post by NVIDIA on Hugging Face"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "The International Olympiad in Informatics (IOI) and the International Mathematical Olympiad (IMO) test different skills.",
-            "IOI requires algorithms and code that pass hidden tests under strict time and submission limits.",
-            "IMO demands rigorous natural-language proofs.",
-            "Our recent results show that Nemotron is a strong, adaptable foundation for building world-class specialist models.",
-            "Starting from Nemotron 3, our teams used supervised fine-tuning (SFT), reinforcement learning (RL), and feedback-driven inference to create systems that reached gold-medal level at both IMO 2026 and IOI 2026 ."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "The International Olympiad in Informatics (IOI) and the International Mathematical Olympiad (IMO) test different skills. IOI requires algorithms and code that pass hidden tests under strict time and submission limits. IMO demands rigorous natural-language proofs. Success at either competition is difficult. Success at both points to something broader.",
-            "Our recent results show that Nemotron is a strong, adaptable foundation for building world-class specialist models. Starting from Nemotron 3, our teams used supervised fine-tuning (SFT), reinforcement learning (RL), and feedback-driven inference to create systems that reached gold-medal level at both IMO 2026 and IOI 2026 .",
-            "The IOI result came from a live, prospective run under the same time, internet-access, and submission constraints as human contestants. It was an unofficial, unsupervised benchmark and was not included in the official IOI ranking. The IMO system’s submitted proofs were graded by official IMO graders."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "b358971df29545a3",
       "kind": "article",
       "title": "AMD acquiring Fei-Fei Li's World Labs AI firm in deal worth $8.2 billion",
@@ -4252,6 +4250,86 @@
       "reading_minutes": 1
     },
     {
+      "id": "1e0a8f2e64c419e3",
+      "kind": "social",
+      "title": "Just ask Grok @Bot to buy what you want someplace else and get a better deal. There are far more purchasing websites than just Amazon!",
+      "source": "X",
+      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9FVEs3NGptbVNpRWdtMm9tMHRfb2FET1h2cnlVcGpLRFJ3eEVwdXQteWFJNzc5emxJajN1VmlOdWJpSnlEb2FlZ3NfRHItWFN2aVBYQ3lwU21SNU1NVXc?oc=5",
+      "published_at": "2026-10-15T05:24:04Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "Just ask Grok @Bot to buy what you want someplace else and get a better deal. There are far more purchasing websites than just Amazon! X",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9FVEs3NGptbVNpRWdtMm9tMHRfb2FET1h2cnlVcGpLRFJ3eEVwdXQteWFJNzc5emxJajN1VmlOdWJpSnlEb2FlZ3NfRHItWFN2aVBYQ3lwU21SNU1NVXc?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Just ask Grok @Bot to buy what you want someplace else and get a better deal. There are far more purchasing websites than just Amazon! X"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "023170acbbce3c67",
+      "kind": "social",
+      "title": "Grok @Bot",
+      "source": "X",
+      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9BdjhQOGJURHlfdnJBTUhNMng5SWxvN0dhcUNoUWdnQUJuSF9XMmNxNHlQb0VmZDM3dmdQc29nUW5CLUtBSnNJZkRlTHhobldhTzNmdEZqNnlpUkVrZHc?oc=5",
+      "published_at": "2026-10-15T02:08:30Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9BdjhQOGJURHlfdnJBTUhNMng5SWxvN0dhcUNoUWdnQUJuSF9XMmNxNHlQb0VmZDM3dmdQc29nUW5CLUtBSnNJZkRlTHhobldhTzNmdEZqNnlpUkVrZHc?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "714604c5a7786e32",
       "kind": "social",
       "title": "Grok @Bot rocks",
@@ -4277,86 +4355,6 @@
         {
           "title": "内容概览",
           "body": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "1e68556ea794ad9e",
-      "kind": "social",
-      "title": "Grok is the best conversational voice model in the world",
-      "source": "X",
-      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5VOTFtenJLaEVpRmNqeWhEbUpYN0lGYk42enczbWNJcUM3ZlMxV2lDXzh6NWNSajZzaUpib0FXZ3ZPbXh3VHBjWGM5cUowdTE4eUVyQTcxTFV4MmlHTWc?oc=5",
-      "published_at": "2026-10-14T23:58:19Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Grok is the best conversational voice model in the world X",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5VOTFtenJLaEVpRmNqeWhEbUpYN0lGYk42enczbWNJcUM3ZlMxV2lDXzh6NWNSajZzaUpib0FXZ3ZPbXh3VHBjWGM5cUowdTE4eUVyQTcxTFV4MmlHTWc?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Grok is the best conversational voice model in the world X"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "01701369ced447f9",
-      "kind": "social",
-      "title": "Grok Voice 3.0 is now the world’s leading conversational voice model",
-      "source": "X",
-      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1CQ3ZWZC1LNzFvV3Jlb01oWFRiWlR6WFVfMENjdllCTTZ0UzlVS09sdGhoR3RiNGh0Sjd3aHFtWXo1QkEwTDUwSzhrTlBSbXJjSGp0NDg4VVZfZW5NTFE?oc=5",
-      "published_at": "2026-10-14T21:32:41Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Grok Voice 3.0 is now the world’s leading conversational voice model X",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1CQ3ZWZC1LNzFvV3Jlb01oWFRiWlR6WFVfMENjdllCTTZ0UzlVS09sdGhoR3RiNGh0Sjd3aHFtWXo1QkEwTDUwSzhrTlBSbXJjSGp0NDg4VVZfZW5NTFE?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Grok Voice 3.0 is now the world’s leading conversational voice model X"
         },
         {
           "title": "公开页面要点",
@@ -4684,6 +4682,45 @@
       "reading_minutes": 1
     },
     {
+      "id": "3e6349322e36cb9c",
+      "kind": "article",
+      "title": "Trump’s AI Safety ‘Accord’ Is a Fancy Pinky-Swear",
+      "source": "WIRED",
+      "source_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQVkx5d1RMWVJHSW1kaVhqOG81c3dvTHplelc1Tm1GVi16dmVkZjE3bDNEdTB2WUJrS1hzalM5WGkzcnd3UXFUOEo2XzA0LXQwUlJ6dzBOOExlLWVHU3l2QVlQOWlvSWJQeUtTMHVxbTNLc3NNTzMtbjRta0tJUmwybw?oc=5",
+      "published_at": "2026-09-30T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Trump’s AI Safety ‘Accord’ Is a Fancy Pinky-Swear WIRED",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQVkx5d1RMWVJHSW1kaVhqOG81c3dvTHplelc1Tm1GVi16dmVkZjE3bDNEdTB2WUJrS1hzalM5WGkzcnd3UXFUOEo2XzA0LXQwUlJ6dzBOOExlLWVHU3l2QVlQOWlvSWJQeUtTMHVxbTNLc3NNTzMtbjRta0tJUmwybw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Trump’s AI Safety ‘Accord’ Is a Fancy Pinky-Swear WIRED"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "9dc278d3055ac5b7",
       "kind": "article",
       "title": "Cardiovascular AI startup Corologic lands South Korea's TIPS grant, begins clinical trials",
@@ -4723,45 +4760,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "5af5e10deef61fc6",
-      "kind": "article",
-      "title": "AMD to Acquire World Labs for $8.2 Billion",
-      "source": "WSJ",
-      "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQLVpVcHpJVVFBektEcldpS0ttVXk1a2dkR0kzZEtUNmp3d1hQNzVEb3NOZVhEc1piQmtIYlI3WF9QUExkT2R3TW9tOW1ZZ0RpSGdELWxBbVRldmYtRmNUQjRxWjdZeS1RZnVvNFhvbU9pQzFfd2RyXzYxMnR4X3RpNFlBUzU?oc=5",
-      "published_at": "2026-09-28T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Founder Watch",
-        "Embodied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "AMD to Acquire World Labs for $8.2 Billion WSJ",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQLVpVcHpJVVFBektEcldpS0ttVXk1a2dkR0kzZEtUNmp3d1hQNzVEb3NOZVhEc1piQmtIYlI3WF9QUExkT2R3TW9tOW1ZZ0RpSGdELWxBbVRldmYtRmNUQjRxWjdZeS1RZnVvNFhvbU9pQzFfd2RyXzYxMnR4X3RpNFlBUzU?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "AMD to Acquire World Labs for $8.2 Billion WSJ"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "0e3206d17b886dcf",
       "kind": "article",
       "title": "OpenAI is sued over rogue AI Hugging Face cyberattack",
@@ -4786,45 +4784,6 @@
         {
           "title": "内容概览",
           "body": "OpenAI is sued over rogue AI Hugging Face cyberattack CNBC"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "110de705626a7bed",
-      "kind": "article",
-      "title": "Nvidia releases AI safety software it says could have stopped Hugging Face hack",
-      "source": "Reuters",
-      "source_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNSVREakRaN2V6OWo0bzNFcVBHb1VZMzRVS29mcWF4XzZwSmdxLVRublBqSTE5ZlNBaHBKb0lTU1o2SWV0V0t1U3M3TVl1ZnlJWGVJRGxKclM5RkphYzhzU3FlNkZHNDk3TUZhdW54dGtydmR3MFR2ZFVZdWItaVpsNjZYX2hIbjVHcTM0ZTVqLVd6UHV2OGY4eFM4ZW1va1pCSF90VzlZd3BSUjVkY1RJRzV2ZGFEUnlnbDY1d0ZjOFZoYXBVRU5YZEM0Zmk?oc=5",
-      "published_at": "2026-09-28T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Open Source",
-        "Models & Tools"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Nvidia releases AI safety software it says could have stopped Hugging Face hack Reuters",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNSVREakRaN2V6OWo0bzNFcVBHb1VZMzRVS29mcWF4XzZwSmdxLVRublBqSTE5ZlNBaHBKb0lTU1o2SWV0V0t1U3M3TVl1ZnlJWGVJRGxKclM5RkphYzhzU3FlNkZHNDk3TUZhdW54dGtydmR3MFR2ZFVZdWItaVpsNjZYX2hIbjVHcTM0ZTVqLVd6UHV2OGY4eFM4ZW1va1pCSF90VzlZd3BSUjVkY1RJRzV2ZGFEUnlnbDY1d0ZjOFZoYXBVRU5YZEM0Zmk?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Nvidia releases AI safety software it says could have stopped Hugging Face hack Reuters"
         },
         {
           "title": "公开页面要点",
@@ -5077,6 +5036,45 @@
       "reading_minutes": 1
     },
     {
+      "id": "110de705626a7bed",
+      "kind": "article",
+      "title": "Nvidia releases AI safety software it says could have stopped Hugging Face hack",
+      "source": "Reuters",
+      "source_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNSVREakRaN2V6OWo0bzNFcVBHb1VZMzRVS29mcWF4XzZwSmdxLVRublBqSTE5ZlNBaHBKb0lTU1o2SWV0V0t1U3M3TVl1ZnlJWGVJRGxKclM5RkphYzhzU3FlNkZHNDk3TUZhdW54dGtydmR3MFR2ZFVZdWItaVpsNjZYX2hIbjVHcTM0ZTVqLVd6UHV2OGY4eFM4ZW1va1pCSF90VzlZd3BSUjVkY1RJRzV2ZGFEUnlnbDY1d0ZjOFZoYXBVRU5YZEM0Zmk?oc=5",
+      "published_at": "2026-09-28T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Nvidia releases AI safety software it says could have stopped Hugging Face hack Reuters",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNSVREakRaN2V6OWo0bzNFcVBHb1VZMzRVS29mcWF4XzZwSmdxLVRublBqSTE5ZlNBaHBKb0lTU1o2SWV0V0t1U3M3TVl1ZnlJWGVJRGxKclM5RkphYzhzU3FlNkZHNDk3TUZhdW54dGtydmR3MFR2ZFVZdWItaVpsNjZYX2hIbjVHcTM0ZTVqLVd6UHV2OGY4eFM4ZW1va1pCSF90VzlZd3BSUjVkY1RJRzV2ZGFEUnlnbDY1d0ZjOFZoYXBVRU5YZEM0Zmk?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Nvidia releases AI safety software it says could have stopped Hugging Face hack Reuters"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "78ca95221f07cc72",
       "kind": "article",
       "title": "How OpenAI’s Rogue A.I. Agents Tried to Trick a Robot Detector",
@@ -5101,6 +5099,45 @@
         {
           "title": "内容概览",
           "body": "How OpenAI’s Rogue A.I. Agents Tried to Trick a Robot Detector The New York Times"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "f0c279600ad4148e",
+      "kind": "article",
+      "title": "Physical Intelligence leases entire Pear Village building",
+      "source": "The Business Journals",
+      "source_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQbEd4YXhMZkZpbThOb0RTU1JuLWRzUUlOZ25GVWRPcWdBQWV4RnlDZnlNT0tOQktIb2t6UGh1ellRTy1SaDEtb1ROLWptT2ZzSUZETjJEaHVmOWJld3lOeVItZGFpUlVQTUhCWXhyOGJWSnRSQU95UV9qYU5IWGF2ejJHQU9uSXRNOHVncVkzNjBSaTdoMGRuRnFMSnQ2V2tVR01Z?oc=5",
+      "published_at": "2026-09-23T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Physical Intelligence leases entire Pear Village building The Business Journals",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQbEd4YXhMZkZpbThOb0RTU1JuLWRzUUlOZ25GVWRPcWdBQWV4RnlDZnlNT0tOQktIb2t6UGh1ellRTy1SaDEtb1ROLWptT2ZzSUZETjJEaHVmOWJld3lOeVItZGFpUlVQTUhCWXhyOGJWSnRSQU95UV9qYU5IWGF2ejJHQU9uSXRNOHVncVkzNjBSaTdoMGRuRnFMSnQ2V2tVR01Z?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Physical Intelligence leases entire Pear Village building The Business Journals"
         },
         {
           "title": "公开页面要点",
@@ -5194,45 +5231,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "b0cd2304b6efec8e",
-      "kind": "article",
-      "title": "AI Safety Collaboration and Antitrust: Lessons from Recent Enforcer Statements and Cybersecurity Information Sharing",
-      "source": "Wiley Rein",
-      "source_url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPVWNJY29hT0g4OURQZW1kM3hwN2JKWXVPcUZ2d3g3QzhvekVlVDZLZnpmdXdQQVIxdGxLdXRuWmdTTWRLdWZ6djduRFZNRF9EYVN4RVNKYU5yRDVmZ0ZxYVhNbzF6dV9lN0IwdXg2M0JlNXpFTjhWX3ZTVjNiYnItME90TVZvcVQ1OFJsZnNHR1d6dmtTUVVPSWdtMF9QWGVNZlppck9LNWVLTTg3ak9BUWktSDNQVzBQX2RQUDVKbl8zQVpITVk0LVBPTEpmZzMyRnR4N0FqQWk4a2s?oc=5",
-      "published_at": "2026-10-13T20:11:34Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "AI Safety Collaboration and Antitrust: Lessons from Recent Enforcer Statements and Cybersecurity Information Sharing Wiley Rein",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPVWNJY29hT0g4OURQZW1kM3hwN2JKWXVPcUZ2d3g3QzhvekVlVDZLZnpmdXdQQVIxdGxLdXRuWmdTTWRLdWZ6djduRFZNRF9EYVN4RVNKYU5yRDVmZ0ZxYVhNbzF6dV9lN0IwdXg2M0JlNXpFTjhWX3ZTVjNiYnItME90TVZvcVQ1OFJsZnNHR1d6dmtTUVVPSWdtMF9QWGVNZlppck9LNWVLTTg3ak9BUWktSDNQVzBQX2RQUDVKbl8zQVpITVk0LVBPTEpmZzMyRnR4N0FqQWk4a2s?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "AI Safety Collaboration and Antitrust: Lessons from Recent Enforcer Statements and Cybersecurity Information Sharing Wiley Rein"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "f9df6e151fe6fb39",
       "kind": "article",
       "title": "Opinion: New York still needs more AI regulation",
@@ -5311,30 +5309,30 @@
       "reading_minutes": 1
     },
     {
-      "id": "48f819bcd16d27ea",
+      "id": "ca656b1fbfced09a",
       "kind": "article",
-      "title": "Sen. Maria Cantwell looks to federal testing role in AI safety framework",
-      "source": "Roll Call",
-      "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNQkVXNzBYNGFSZXJRbkVjR01ZV3hCR2FrWkR5Y2lZMk52R1VxVXFhOVBZcHVWaWt4WnRoUEFSbkdnZFB2N1haUEw4MlBXUzRHU0FLcjBZV1BvVGkyQ0FReXNadXNhWTZ4WEp4eVJSQkFVbWV6dEZkYkNkemhVbFFPLVRJU2h5REMzVnhNb3piMGRjUWpJUDMxRTdaMEMwV2RpRjhwVDVrVQ?oc=5",
-      "published_at": "2026-10-07T21:24:00Z",
+      "title": "Introducing Muse Spark Open, The Most Capable US Open‑Weight Model to Date",
+      "source": "Meta AI",
+      "source_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBxQTR0N0dqcHl2SFlORVRDWlZ2MFg3c1l3czJ5ZF9pQVJMd1FFcTBzTjdfQ00ydURKSVpESEloR2hhVzNJTkIyNU9XalpybnFmdWlJYjhHV0k?oc=5",
+      "published_at": "2026-10-15T16:56:06Z",
       "authors": [],
       "venue": "",
       "tags": [
-        "Policy",
-        "Safety"
+        "Open Source",
+        "Models & Tools"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Sen. Maria Cantwell looks to federal testing role in AI safety framework Roll Call",
+      "summary": "Introducing Muse Spark Open, The Most Capable US Open‑Weight Model to Date Meta AI",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNQkVXNzBYNGFSZXJRbkVjR01ZV3hCR2FrWkR5Y2lZMk52R1VxVXFhOVBZcHVWaWt4WnRoUEFSbkdnZFB2N1haUEw4MlBXUzRHU0FLcjBZV1BvVGkyQ0FReXNadXNhWTZ4WEp4eVJSQkFVbWV6dEZkYkNkemhVbFFPLVRJU2h5REMzVnhNb3piMGRjUWpJUDMxRTdaMEMwV2RpRjhwVDVrVQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBxQTR0N0dqcHl2SFlORVRDWlZ2MFg3c1l3czJ5ZF9pQVJMd1FFcTBzTjdfQ00ydURKSVpESEloR2hhVzNJTkIyNU9XalpybnFmdWlJYjhHV0k?oc=5&hl=en-US&gl=US&ceid=US:en",
       "key_points": [
         "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Sen. Maria Cantwell looks to federal testing role in AI safety framework Roll Call"
+          "body": "Introducing Muse Spark Open, The Most Capable US Open‑Weight Model to Date Meta AI"
         },
         {
           "title": "公开页面要点",
@@ -5350,12 +5348,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "2d2cd923c881fb04",
+      "id": "b2bbd01d30d4a6b6",
       "kind": "article",
-      "title": "Keep Teens Off ChatGPT, Says Youth AI Safety Institute",
-      "source": "KQED",
-      "source_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNaFlwWWdNRTF6Z1lHbHE2bXA3RUFaQnhEeTlmRFZFanJPdUFoQm02WDA5YlN6eDdIQlZ5ZU12Nk9SUFBjQmo0akR6RjF5UjdTNGNiQTZRZTZtMm1XMXowa1lkbU5EZW1yV2MyN2J3cGloeGlhd3JtVnJERE5QQjJaQzJvSm4zSkZSSTRPX1VhLUtjZw?oc=5",
-      "published_at": "2026-10-07T16:30:33Z",
+      "title": "Cantwell unveils AI safety framework as Congress stalls ahead of election",
+      "source": "The Seattle Times",
+      "source_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNU0cwY2l4bnVZZUlUS0poMkRaSDlVNy1nTkR3c0pQRVFZbUxVSXlOckxWNG1NUjlveFdwSHRXUmlCeGhFd2lxLWNnU2NyQ1NHTU5KaWhFZUVVRG1PUDBCUE5SaklaYVRkQjJRQmFoMTR3ekdBSHFXQzZDYVRzTE1fODhXbzlWbEpkVmRUR3kwQ1lzVTB0M3Z0TDhKNXhkeGtIRC1ZclhtODloWXZ1eGlRQW9iVmp0NzktZUhlcTBjbXFCLWc?oc=5",
+      "published_at": "2026-10-07T07:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -5363,17 +5361,17 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Keep Teens Off ChatGPT, Says Youth AI Safety Institute KQED",
+      "summary": "Cantwell unveils AI safety framework as Congress stalls ahead of election The Seattle Times",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNaFlwWWdNRTF6Z1lHbHE2bXA3RUFaQnhEeTlmRFZFanJPdUFoQm02WDA5YlN6eDdIQlZ5ZU12Nk9SUFBjQmo0akR6RjF5UjdTNGNiQTZRZTZtMm1XMXowa1lkbU5EZW1yV2MyN2J3cGloeGlhd3JtVnJERE5QQjJaQzJvSm4zSkZSSTRPX1VhLUtjZw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNU0cwY2l4bnVZZUlUS0poMkRaSDlVNy1nTkR3c0pQRVFZbUxVSXlOckxWNG1NUjlveFdwSHRXUmlCeGhFd2lxLWNnU2NyQ1NHTU5KaWhFZUVVRG1PUDBCUE5SaklaYVRkQjJRQmFoMTR3ekdBSHFXQzZDYVRzTE1fODhXbzlWbEpkVmRUR3kwQ1lzVTB0M3Z0TDhKNXhkeGtIRC1ZclhtODloWXZ1eGlRQW9iVmp0NzktZUhlcTBjbXFCLWc?oc=5&hl=en-US&gl=US&ceid=US:en",
       "key_points": [
         "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Keep Teens Off ChatGPT, Says Youth AI Safety Institute KQED"
+          "body": "Cantwell unveils AI safety framework as Congress stalls ahead of election The Seattle Times"
         },
         {
           "title": "公开页面要点",
@@ -5428,45 +5426,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "e77e526e69108b31",
-      "kind": "article",
-      "title": "What is Decision 3.0? vLLM Semantic Router’s New Open Decision Models",
-      "source": "MarkTechPost",
-      "source_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOcHhJU0xfZTRrRlloeW9LX0NjWHJsRlowY0tBYVdKbER1MUh3MjNabXB1dGs3dkUzcFNlOC1Md080WTgzMlZ4bUtJWHEyQUpXTWFrckstaWF5RjR3RU9xZHI4SmItVzZpdEl2dkdUTS00NUxrbm9XdHI0a1RVZy1QR3BYWjJHYUU1U1h6TjJXYzF6bHFhcEU2RDVSR2g3V3E3UkgzOE1HVmFjdDZo0gGsAUFVX3lxTE5weElTTF9lNGtGWWh5b0tfQ2NYcmxGWjBjS0FhV0psRHUxSHcyM1ptcHV0azd2RTNwU2U4LUx3TzRZODMyVnhtS0lYcTJBSldNYWtySy1pYXlGNHdFT3FkcjhKYi1XNml0SXZ2R1RNLTQ1TGtub1d0cjRrVFVnLVBHcFhaMkdhRTVTWHpOMldjMXpscWFwRTZENVJHaDdXcTdSSDM4TUdWYWN0Nmg?oc=5",
-      "published_at": "2026-10-11T21:43:41Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Open Source",
-        "Models & Tools"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "What is Decision 3.0? vLLM Semantic Router’s New Open Decision Models MarkTechPost",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOcHhJU0xfZTRrRlloeW9LX0NjWHJsRlowY0tBYVdKbER1MUh3MjNabXB1dGs3dkUzcFNlOC1Md080WTgzMlZ4bUtJWHEyQUpXTWFrckstaWF5RjR3RU9xZHI4SmItVzZpdEl2dkdUTS00NUxrbm9XdHI0a1RVZy1QR3BYWjJHYUU1U1h6TjJXYzF6bHFhcEU2RDVSR2g3V3E3UkgzOE1HVmFjdDZo0gGsAUFVX3lxTE5weElTTF9lNGtGWWh5b0tfQ2NYcmxGWjBjS0FhV0psRHUxSHcyM1ptcHV0azd2RTNwU2U4LUx3TzRZODMyVnhtS0lYcTJBSldNYWtySy1pYXlGNHdFT3FkcjhKYi1XNml0SXZ2R1RNLTQ1TGtub1d0cjRrVFVnLVBHcFhaMkdhRTVTWHpOMldjMXpscWFwRTZENVJHaDdXcTdSSDM4TUdWYWN0Nmg?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "What is Decision 3.0? vLLM Semantic Router’s New Open Decision Models MarkTechPost"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "a8b76d3807a23c43",
       "kind": "article",
       "title": "Trump’s AI Safety Pact Is Toothless. But There Is a Path Forward.",
@@ -5491,6 +5450,45 @@
         {
           "title": "内容概览",
           "body": "Trump’s AI Safety Pact Is Toothless. But There Is a Path Forward. Council on Foreign Relations"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "12e114afdc0a2b1d",
+      "kind": "article",
+      "title": "‘Things Will Never Be Chill Again’: The Doomers Who Shaped the AI Safety Freakout",
+      "source": "WSJ",
+      "source_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNX0x1SGNlamNDTERpWmxwS05vNTRkY0lONktYQmlGQ1lyNDdUeTBsempjT3N0UEJpT2FpWF9hdTFzUXNmU1NlbGFjWG56ZzRZUm1VcXprakhRVE5LV0xwal9CQlpSOTVlZ3VPR0hhVEQ5SUQ4WUswbHY4VEJYRVFTRA?oc=5",
+      "published_at": "2026-09-26T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "‘Things Will Never Be Chill Again’: The Doomers Who Shaped the AI Safety Freakout WSJ",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNX0x1SGNlamNDTERpWmxwS05vNTRkY0lONktYQmlGQ1lyNDdUeTBsempjT3N0UEJpT2FpWF9hdTFzUXNmU1NlbGFjWG56ZzRZUm1VcXprakhRVE5LV0xwal9CQlpSOTVlZ3VPR0hhVEQ5SUQ4WUswbHY4VEJYRVFTRA?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "‘Things Will Never Be Chill Again’: The Doomers Who Shaped the AI Safety Freakout WSJ"
         },
         {
           "title": "公开页面要点",
