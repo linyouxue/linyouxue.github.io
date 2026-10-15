@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-14T21:38:45Z",
+  "generated_at": "2026-10-15T04:34:15Z",
   "record_count": 130,
   "records": [
     {
@@ -56,6 +56,41 @@
       "reading_minutes": 1
     },
     {
+      "id": "unit-distance-openai-20260520",
+      "kind": "paper",
+      "title": "OpenAI 模型推翻平面单位距离问题中的长期猜想",
+      "source": "OpenAI · Research",
+      "source_url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+      "published_at": "2026-05-20T08:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Unit Distance",
+        "Discrete Geometry",
+        "Verified Proof"
+      ],
+      "verification": "官方论文 · 外部数学家已检查",
+      "summary": "OpenAI 的通用推理模型找到一族新的点集构造，证明单位距离对数可以达到 n 的 1+δ 次方，从而推翻长期流行的 n 的 1+o(1) 上界猜想。证明已由外部数学家检查，并有公开证明 PDF 与多位数学家的伴随评论。",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/unit-distance-openai-20260520.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf",
+      "key_points": [
+        "Planar Point Sets with Many Unit Distances OpenAI Abstract For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets.",
+        "We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n.",
+        "This disproves the well-known unit distance conjecture from [ Erd46].",
+        "The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely.",
+        "After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets. We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n. This disproves the well-known unit distance conjecture from [ Erd46]. The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely. After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1. Golod–Shafarevich theory ensures existence of an inﬁnite such tower, even after a quotient step making the prescribed Frobenius classes trivial. A crucial property of the construction is that all resulting discriminants and class numbers are at most exponential in the extension degree. 1 Main Result For a ﬁnite set P ⊂ R2, let ν(P ) = # {{x,y } ⊂ P : |x −y| = 1} andν(n) = max |P |=nν(P ). The planar unit-distance problem goes back to Erdős [ Erd46], who conjectured that there should be an absolute constant C such that, for all suﬃciently large n, ν(n) ≤n1+C/ log logn. (1) The same 1946 paper also introduced the distinct-distances problem, later resolved up to logarithmic factors by Guth–Katz [ GK15]. An elementary upper bound is ν(n) = O(n3/2): the Euclidean unit-distance graph is K2,3-free, since two unit circles meet in at most two points, and the Kővári–Sós–Turán theorem applies [ KST54]. The best known upper bound ν(n) = O(n4/3) is due to Spencer–Szemerédi–Trotter [ SST84]; Székely later gave a short crossing-number proof of this incidence bound [ Sze97]. It is useful to compare this with the same question for other norms on R2, a direction studied systematically by Brass [ Bra96]. If the unit ball has a ﬂat segment, one can arrange quadratically many unit distances, so the interesting normed-plane analogues usually impose strict convexity or genericity. Székely’s crossing-number argument extends to strictly convex norms, again giving O(n4/3), and Valtr constructed a strictly convex norm for which this exponent is attained…"
+        }
+      ],
+      "reading_minutes": 32
+    },
+    {
       "id": "0c87891a24b6b10a",
       "kind": "article",
       "title": "Simulating student learning for better AI tutoring",
@@ -97,41 +132,6 @@
         }
       ],
       "reading_minutes": 1
-    },
-    {
-      "id": "unit-distance-openai-20260520",
-      "kind": "paper",
-      "title": "OpenAI 模型推翻平面单位距离问题中的长期猜想",
-      "source": "OpenAI · Research",
-      "source_url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
-      "published_at": "2026-05-20T08:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Unit Distance",
-        "Discrete Geometry",
-        "Verified Proof"
-      ],
-      "verification": "官方论文 · 外部数学家已检查",
-      "summary": "OpenAI 的通用推理模型找到一族新的点集构造，证明单位距离对数可以达到 n 的 1+δ 次方，从而推翻长期流行的 n 的 1+o(1) 上界猜想。证明已由外部数学家检查，并有公开证明 PDF 与多位数学家的伴随评论。",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/unit-distance-openai-20260520.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf",
-      "key_points": [
-        "Planar Point Sets with Many Unit Distances OpenAI Abstract For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets.",
-        "We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n.",
-        "This disproves the well-known unit distance conjecture from [ Erd46].",
-        "The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely.",
-        "After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets. We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n. This disproves the well-known unit distance conjecture from [ Erd46]. The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely. After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1. Golod–Shafarevich theory ensures existence of an inﬁnite such tower, even after a quotient step making the prescribed Frobenius classes trivial. A crucial property of the construction is that all resulting discriminants and class numbers are at most exponential in the extension degree. 1 Main Result For a ﬁnite set P ⊂ R2, let ν(P ) = # {{x,y } ⊂ P : |x −y| = 1} andν(n) = max |P |=nν(P ). The planar unit-distance problem goes back to Erdős [ Erd46], who conjectured that there should be an absolute constant C such that, for all suﬃciently large n, ν(n) ≤n1+C/ log logn. (1) The same 1946 paper also introduced the distinct-distances problem, later resolved up to logarithmic factors by Guth–Katz [ GK15]. An elementary upper bound is ν(n) = O(n3/2): the Euclidean unit-distance graph is K2,3-free, since two unit circles meet in at most two points, and the Kővári–Sós–Turán theorem applies [ KST54]. The best known upper bound ν(n) = O(n4/3) is due to Spencer–Szemerédi–Trotter [ SST84]; Székely later gave a short crossing-number proof of this incidence bound [ Sze97]. It is useful to compare this with the same question for other norms on R2, a direction studied systematically by Brass [ Bra96]. If the unit ball has a ﬂat segment, one can arrange quadratically many unit distances, so the interesting normed-plane analogues usually impose strict convexity or genericity. Székely’s crossing-number argument extends to strictly convex norms, again giving O(n4/3), and Valtr constructed a strictly convex norm for which this exponent is attained…"
-        }
-      ],
-      "reading_minutes": 32
     },
     {
       "id": "kaiming-he-research-watch",
@@ -584,6 +584,48 @@
       "reading_minutes": 1
     },
     {
+      "id": "3aeaa3e71302e9e0",
+      "kind": "article",
+      "title": "How Block is building AI-powered security with OpenAI technology",
+      "source": "OpenAI",
+      "source_url": "https://openai.com/index/block-ai-powered-security",
+      "published_at": "2026-10-14T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "OpenAI",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "Block is building AI-powered security with OpenAI. Its security team investigates threats faster and proposes patches in minutes.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://openai.com/index/block-ai-powered-security",
+      "key_points": [
+        "Block is building AI-powered security with OpenAI.",
+        "Its security team investigates threats faster and proposes patches in minutes."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Block is building AI-powered security with OpenAI. Its security team investigates threats faster and proposes patches in minutes."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Block is building AI-powered security with OpenAI.",
+            "Its security team investigates threats faster and proposes patches in minutes."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "6d8fd330d7b28b32",
       "kind": "article",
       "title": "Google DeepMind and Singapore Government collaborate to build fine-tuned AI model for scam detection",
@@ -599,10 +641,14 @@
       "verification": "官方来源",
       "summary": "Learn how Google DeepMind and GovTech Singapore uses lightweight on-device Gemma models to intercept conversational scams in private chats with zero cloud data egress.",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
+      "fetch_status": "public-page-excerpt",
       "resolved_url": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
       "key_points": [
-        "Learn how Google DeepMind and GovTech Singapore uses lightweight on-device Gemma models to intercept conversational scams in private chats with zero cloud data egress."
+        "Collaborating with the Government Technology Agency of Singapore (GovTech Singapore) to protect users without compromising privacy.",
+        "Scams, such as investment fraud, fake job offers, and impersonation of public officials make up over half of Singapore’s reported crimes, and account for more than S$4 billion in losses since 2019 .",
+        "At the same time, scam tactics have shifted from simple phishing to complex social engineering, whereby attackers manipulate victims with convincing conversations before requesting money.",
+        "Such scams now account for up to 80% of all losses.",
+        "To address this, Google DeepMind and the Government Technology Agency of Singapore (GovTech Singapore) have been working together as part of our National AI Partnership with the Singapore Government."
       ],
       "sections": [
         {
@@ -612,12 +658,20 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Learn how Google DeepMind and GovTech Singapore uses lightweight on-device Gemma models to intercept conversational scams in private chats with zero cloud data egress."
+            "Collaborating with the Government Technology Agency of Singapore (GovTech Singapore) to protect users without compromising privacy.",
+            "Scams, such as investment fraud, fake job offers, and impersonation of public officials make up over half of Singapore’s reported crimes, and account for more than S$4 billion in losses since 2019 .",
+            "At the same time, scam tactics have shifted from simple phishing to complex social engineering, whereby attackers manipulate victims with convincing conversations before requesting money.",
+            "Such scams now account for up to 80% of all losses.",
+            "To address this, Google DeepMind and the Government Technology Agency of Singapore (GovTech Singapore) have been working together as part of our National AI Partnership with the Singapore Government."
           ]
         },
         {
           "title": "原文短摘录",
-          "paragraphs": []
+          "paragraphs": [
+            "Collaborating with the Government Technology Agency of Singapore (GovTech Singapore) to protect users without compromising privacy.",
+            "Scams, such as investment fraud, fake job offers, and impersonation of public officials make up over half of Singapore’s reported crimes, and account for more than S$4 billion in losses since 2019 . At the same time, scam tactics have shifted from simple phishing to complex social engineering, whereby attackers manipulate victims with convincing conversations before requesting money. Such scams now account for up to 80% of all losses.",
+            "To address this, Google DeepMind and the Government Technology Agency of Singapore (GovTech Singapore) have been working together as part of our National AI Partnership with the Singapore Government. Together, we've fine-tuned a privacy-preserving, on-device scam detection model."
+          ]
         }
       ],
       "reading_minutes": 1
@@ -1096,46 +1150,6 @@
             "Claude exploiting a basic flaw in software to run commands on a server;",
             "Claude submitting a sensitive form on a real website when it should not have;"
           ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "4e88a37aba8c6b03",
-      "kind": "article",
-      "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
-      "source": "OpenAI",
-      "source_url": "https://openai.com/index/asana-browser-agent",
-      "published_at": "2026-10-09T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "OpenAI",
-        "Official"
-      ],
-      "verification": "官方来源",
-      "summary": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more capable models.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 403: Forbidden",
-      "resolved_url": "https://openai.com/index/asana-browser-agent",
-      "key_points": [
-        "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more capable models."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more capable models."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more capable models."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -1976,11 +1990,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "f4efdba0db5220a2",
+      "id": "229bc0ad85522ae0",
       "kind": "article",
       "title": "Qwen 、 通义千问 、千问App,别再混着叫",
       "source": "微信公众号 · 京智AI2049",
-      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HMm2z2qjeirofw6vtNl3J8KmPzik9sJBhRn9pl2J&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1791997629%26ver%3D7026%26signature%3DBNYBDi4w5gmYFQxseFx73AXCCABm%2A7xRxm4HxJUpFyp9CVBQbwvqKtjzDVAB7TzQbutbm98o9Gd2BnlcSYM399JBGWJC0Mylfag0zy0lLp961DWYmHe1KkdPRoMZH-ti%26new%3D1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792038840&ver=7027&signature=YNEEGy-B6NW61AlpbbhCbOsyovnWwhX4M5xx6*PGoLLgQlGte4-UX0tHfecFoPwLdgZUBapQqQYe6xAn88fh3CUocC0w1-IZvUx6FCPQwYZA1bGyCxeG7Z5TGpFy*PgE&new=1",
       "published_at": "2026-10-14T10:49:30Z",
       "authors": [],
       "venue": "",
@@ -1993,7 +2007,7 @@
       "summary": "通义千问 则是认识这条模型品牌线索时经常遇到的中文称谓.名称... · 概念插画一条更新消息,可以这样理解假设消息写“ Qwen 发布 ...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HMm2z2qjeirofw6vtNl3J8KmPzik9sJBhRn9pl2J&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1791997629%26ver%3D7026%26signature%3DBNYBDi4w5gmYFQxseFx73AXCCABm%2A7xRxm4HxJUpFyp9CVBQbwvqKtjzDVAB7TzQbutbm98o9Gd2BnlcSYM399JBGWJC0Mylfag0zy0lLp961DWYmHe1KkdPRoMZH-ti%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HMJX0GqjY-0O9OHdR7eYzfVPT3Q2_q3Z8AyfrzEH&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792038840%26ver%3D7027%26signature%3DYNEEGy-B6NW61AlpbbhCbOsyovnWwhX4M5xx6%2APGoLLgQlGte4-UX0tHfecFoPwLdgZUBapQqQYe6xAn88fh3CUocC0w1-IZvUx6FCPQwYZA1bGyCxeG7Z5TGpFy%2APgE%26new%3D1",
       "key_points": [
         "通义千问 则是认识这条模型品牌线索时经常遇到的中文称谓.名称... · 概念插画一条更新消息,可以这样理解假设消息写“ Qwen 发布 ..."
       ],
@@ -2016,11 +2030,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "8485282f9cb15930",
+      "id": "0ec8acbaa7326ad6",
       "kind": "article",
       "title": "小马哥复盘: 腾讯 不抢地盘,把 混元 和 元宝 接起来",
       "source": "微信公众号 · 日拱一卒手记",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792013910&ver=7027&signature=gveS*4Qks8sur4wJOgrzie3OvBzhSRwsGSjNl5I1jV7WFVipO7eYKB0NlqdPun45bTpOTN*KWfciwCOrb5e9HlgdNXQ6SCyxEr-ChBbljbxDsujQ7sB0VNSLr1bxhZHN&new=1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792038844&ver=7027&signature=gveS*4Qks8sur4wJOgrzie3OvBzhSRwsGSjNl5I1jV7FnegZVA*fyi96AkH9pZftPCQqHqHjGj7CzWGIn*6c4mj-BiRPXLgtsT7ve84Njzg*Tv2pd3Zk5MczUWTLaxgk&new=1",
       "published_at": "2026-10-13T10:07:35Z",
       "authors": [],
       "venue": "",
@@ -2033,7 +2047,7 @@
       "summary": "混元 上月 发布 Hy Image3.5 preview 后,WorkRally 首发接入并给平... 元宝 管入口,组织上前述的撤销与合并都是为这个目标服务的....",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HF32z2qjn6-PE3w0oTMEOD1WLDauO2N4YeKnVOx5&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792013910%26ver%3D7027%26signature%3DgveS%2A4Qks8sur4wJOgrzie3OvBzhSRwsGSjNl5I1jV7WFVipO7eYKB0NlqdPun45bTpOTN%2AKWfciwCOrb5e9HlgdNXQ6SCyxEr-ChBbljbxDsujQ7sB0VNSLr1bxhZHN%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HMJX0GqjEXAMTuULqQtzxZsyHnNAHi0Uo64eiaID&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792038844%26ver%3D7027%26signature%3DgveS%2A4Qks8sur4wJOgrzie3OvBzhSRwsGSjNl5I1jV7FnegZVA%2Afyi96AkH9pZftPCQqHqHjGj7CzWGIn%2A6c4mj-BiRPXLgtsT7ve84Njzg%2ATv2pd3Zk5MczUWTLaxgk%26new%3D1",
       "key_points": [
         "混元 上月 发布 Hy Image3.5 preview 后,WorkRally 首发接入并给平... 元宝 管入口,组织上前述的撤销与合并都是为这个目标服务的...."
       ],
@@ -2616,6 +2630,98 @@
       "reading_minutes": 1
     },
     {
+      "id": "d7cdf634558c71f4",
+      "kind": "article",
+      "title": "In a New Anthropic Lab, A.I. Turns to Biology",
+      "source": "The New York Times",
+      "source_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNNFZzajNZQW1MeHplVTRLYWd5NUlpUjhTSVU1YU9sODRIQTRvZU5TXzBvR2xETVVPYmEzRVJNNVJkRk83Y2pPZlVFbnB5RHZULU85MEdTa09wZUVBM3ZiLUJIdWs3U2NieXZVNTJUNER0WG1qSGF1TkdEZGs4TjNLdVFB?oc=5",
+      "published_at": "2026-09-25T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "In a New Anthropic Lab, A.I. Turns to Biology The New York Times",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNNFZzajNZQW1MeHplVTRLYWd5NUlpUjhTSVU1YU9sODRIQTRvZU5TXzBvR2xETVVPYmEzRVJNNVJkRk83Y2pPZlVFbnB5RHZULU85MEdTa09wZUVBM3ZiLUJIdWs3U2NieXZVNTJUNER0WG1qSGF1TkdEZGs4TjNLdVFB?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "In a New Anthropic Lab, A.I. Turns to Biology The New York Times"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "demis-frontier-ai-framework-20260714",
+      "kind": "social",
+      "title": "A Framework for Frontier AI and the Dawning of a New Age",
+      "source": "X · Demis Hassabis",
+      "source_url": "https://x.com/demishassabis/article/2076957440109625718",
+      "published_at": "2026-07-14T08:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Demis Hassabis",
+        "Frontier AI",
+        "Governance"
+      ],
+      "verification": "实验室负责人官方账号长文",
+      "summary": "This is a pivotal moment in human history. Artificial General Intelligence (AGI), a system that exhibits all the cognitive capabilities the brain has, is probably only a few short years away. When we",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/demishassabis/article/2076957440109625718",
+      "key_points": [
+        "Artificial General Intelligence (AGI), a system that exhibits all the cognitive capabilities the brain has, is probably only a few short years away.",
+        "When we look back on this time in the decades to come, I think we will realise we were standing in the foothills of the singularity - nothing less than the dawning of a new age for humanity.",
+        "I’ve spent my whole life working on AGI because I’ve always had a deep conviction that, if built and deployed responsibly, it would prove to be one of the most beneficial and transformative technologies ever invented.",
+        "AGI cannot be compared to standard technological breakthroughs, not even ones as consequential as the internet or mobile - it is much more akin to the discovery of electricity or fire.",
+        "If you stop to think about it, we’ve essentially found a way to make sand think."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "This is a pivotal moment in human history. Artificial General Intelligence (AGI), a system that exhibits all the cognitive capabilities the brain has, is probably only a few short years away. When we"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Artificial General Intelligence (AGI), a system that exhibits all the cognitive capabilities the brain has, is probably only a few short years away.",
+            "When we look back on this time in the decades to come, I think we will realise we were standing in the foothills of the singularity - nothing less than the dawning of a new age for humanity.",
+            "I’ve spent my whole life working on AGI because I’ve always had a deep conviction that, if built and deployed responsibly, it would prove to be one of the most beneficial and transformative technologies ever invented.",
+            "AGI cannot be compared to standard technological breakthroughs, not even ones as consequential as the internet or mobile - it is much more akin to the discovery of electricity or fire.",
+            "If you stop to think about it, we’ve essentially found a way to make sand think."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "This is a pivotal moment in human history. Artificial General Intelligence (AGI), a system that exhibits all the cognitive capabilities the brain has, is probably only a few short years away. When we look back on this time in the decades to come, I think we will realise we were standing in the foothills of the singularity - nothing less than the dawning of a new age for humanity.",
+            "I’ve spent my whole life working on AGI because I’ve always had a deep conviction that, if built and deployed responsibly, it would prove to be one of the most beneficial and transformative technologies ever invented. AGI cannot be compared to standard technological breakthroughs, not even ones as consequential as the internet or mobile - it is much more akin to the discovery of electricity or fire. If you stop to think about it, we’ve essentially found a way to make sand think. It’s miraculous.",
+            "The magnitude of this technology’s impact will be unprecedented, perhaps 10x of the Industrial Revolution at 10x the speed. It will help us solve some of the biggest problems society faces from accelerating drug discovery to developing new clean energy sources to creating novel advanced materials. We could even reach a point where resources are no longer the limiting factor for human progress, leading to an amazing new era of abundance."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "34d0a48f70cdf6e9",
       "kind": "article",
       "title": "Agent Lightning v1.0: A 3,500-Line Lightweight Agentic RL Framework for Training Agents with Real Harnesses",
@@ -2708,98 +2814,6 @@
             "If you can think it, you can play it. Create, play, and share custom games — no coding required.",
             "You can now build, play, and share custom games without any coding experience using the new Playground platform. Simply describe your ideas through text prompts to create games, then challenge your friends or publish them to the community gallery. Visit playground.google to start creating today, and keep an eye out for upcoming professional-grade tools from Unity Spark.",
             "Check out \"Introducing Playground,\" a new platform that lets you create and play custom games."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "d7cdf634558c71f4",
-      "kind": "article",
-      "title": "In a New Anthropic Lab, A.I. Turns to Biology",
-      "source": "The New York Times",
-      "source_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNNFZzajNZQW1MeHplVTRLYWd5NUlpUjhTSVU1YU9sODRIQTRvZU5TXzBvR2xETVVPYmEzRVJNNVJkRk83Y2pPZlVFbnB5RHZULU85MEdTa09wZUVBM3ZiLUJIdWs3U2NieXZVNTJUNER0WG1qSGF1TkdEZGs4TjNLdVFB?oc=5",
-      "published_at": "2026-09-25T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "In a New Anthropic Lab, A.I. Turns to Biology The New York Times",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNNFZzajNZQW1MeHplVTRLYWd5NUlpUjhTSVU1YU9sODRIQTRvZU5TXzBvR2xETVVPYmEzRVJNNVJkRk83Y2pPZlVFbnB5RHZULU85MEdTa09wZUVBM3ZiLUJIdWs3U2NieXZVNTJUNER0WG1qSGF1TkdEZGs4TjNLdVFB?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "In a New Anthropic Lab, A.I. Turns to Biology The New York Times"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "demis-frontier-ai-framework-20260714",
-      "kind": "social",
-      "title": "A Framework for Frontier AI and the Dawning of a New Age",
-      "source": "X · Demis Hassabis",
-      "source_url": "https://x.com/demishassabis/article/2076957440109625718",
-      "published_at": "2026-07-14T08:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Demis Hassabis",
-        "Frontier AI",
-        "Governance"
-      ],
-      "verification": "实验室负责人官方账号长文",
-      "summary": "This is a pivotal moment in human history. Artificial General Intelligence (AGI), a system that exhibits all the cognitive capabilities the brain has, is probably only a few short years away. When we",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/demishassabis/article/2076957440109625718",
-      "key_points": [
-        "Artificial General Intelligence (AGI), a system that exhibits all the cognitive capabilities the brain has, is probably only a few short years away.",
-        "When we look back on this time in the decades to come, I think we will realise we were standing in the foothills of the singularity - nothing less than the dawning of a new age for humanity.",
-        "I’ve spent my whole life working on AGI because I’ve always had a deep conviction that, if built and deployed responsibly, it would prove to be one of the most beneficial and transformative technologies ever invented.",
-        "AGI cannot be compared to standard technological breakthroughs, not even ones as consequential as the internet or mobile - it is much more akin to the discovery of electricity or fire.",
-        "If you stop to think about it, we’ve essentially found a way to make sand think."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "This is a pivotal moment in human history. Artificial General Intelligence (AGI), a system that exhibits all the cognitive capabilities the brain has, is probably only a few short years away. When we"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Artificial General Intelligence (AGI), a system that exhibits all the cognitive capabilities the brain has, is probably only a few short years away.",
-            "When we look back on this time in the decades to come, I think we will realise we were standing in the foothills of the singularity - nothing less than the dawning of a new age for humanity.",
-            "I’ve spent my whole life working on AGI because I’ve always had a deep conviction that, if built and deployed responsibly, it would prove to be one of the most beneficial and transformative technologies ever invented.",
-            "AGI cannot be compared to standard technological breakthroughs, not even ones as consequential as the internet or mobile - it is much more akin to the discovery of electricity or fire.",
-            "If you stop to think about it, we’ve essentially found a way to make sand think."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "This is a pivotal moment in human history. Artificial General Intelligence (AGI), a system that exhibits all the cognitive capabilities the brain has, is probably only a few short years away. When we look back on this time in the decades to come, I think we will realise we were standing in the foothills of the singularity - nothing less than the dawning of a new age for humanity.",
-            "I’ve spent my whole life working on AGI because I’ve always had a deep conviction that, if built and deployed responsibly, it would prove to be one of the most beneficial and transformative technologies ever invented. AGI cannot be compared to standard technological breakthroughs, not even ones as consequential as the internet or mobile - it is much more akin to the discovery of electricity or fire. If you stop to think about it, we’ve essentially found a way to make sand think. It’s miraculous.",
-            "The magnitude of this technology’s impact will be unprecedented, perhaps 10x of the Industrial Revolution at 10x the speed. It will help us solve some of the biggest problems society faces from accelerating drug discovery to developing new clean energy sources to creating novel advanced materials. We could even reach a point where resources are no longer the limiting factor for human progress, leading to an amazing new era of abundance."
           ]
         }
       ],
@@ -3194,6 +3208,46 @@
       "reading_minutes": 1
     },
     {
+      "id": "cd2eb95d123dda91",
+      "kind": "article",
+      "title": "Iambic, an AI drug discovery specialist, banks $150M in an IPO",
+      "source": "BioPharma Dive",
+      "source_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOSllsTTQtWHk0Rm5hRzZPeHozTjRUSGxMZ0pnOFgwajQ3WWpFNzlJbUdrX2NZZnZWTXhzUFJMeWdkbUJaRXBqT09UUTgwTmJCZVVacklaaDR6RWtPNGFUSGRZaTI2eV9ZanpERUNDMTgwMWdtRVowSmFWc1NDVTh0ZjVXdw?oc=5",
+      "published_at": "2026-10-15T00:13:45Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Iambic, an AI drug discovery specialist, banks $150M in an IPO BioPharma Dive",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOSllsTTQtWHk0Rm5hRzZPeHozTjRUSGxMZ0pnOFgwajQ3WWpFNzlJbUdrX2NZZnZWTXhzUFJMeWdkbUJaRXBqT09UUTgwTmJCZVVacklaaDR6RWtPNGFUSGRZaTI2eV9ZanpERUNDMTgwMWdtRVowSmFWc1NDVTh0ZjVXdw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Iambic, an AI drug discovery specialist, banks $150M in an IPO BioPharma Dive"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "9ef38edc5ff4dc1f",
       "kind": "article",
       "title": "HiRO-ACEv2: Simulating extreme weather at 3 km resolution for a fraction of the cost",
@@ -3270,46 +3324,6 @@
         {
           "title": "内容概览",
           "body": "How to Invest in AI Drug Discovery ETF Trends"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "e11eb247b4604b91",
-      "kind": "article",
-      "title": "AI-powered biotech could shave years off of drug discovery",
-      "source": "The Stanford Daily",
-      "source_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPN1ZtLU81NDlkVXNBeDVlM3BBbkE4ZmZVNVlEUDB1aXp2UTRKVm5KOXdXY1plV3g1LV96ZEVhdjIzc1pKYXpwT1pqS0tCZ1lQR3dqRDBCd202bTYtVFBCeVMtcGgyMHVscEVia2g0b1NsU1JBVF83Rk11WlItMy1SZF83Y2RrOHJEVmEwd0dDZ0w5QlhCaWdEYzVMdkQ?oc=5",
-      "published_at": "2026-10-14T09:04:28Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "AI-powered biotech could shave years off of drug discovery The Stanford Daily",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPN1ZtLU81NDlkVXNBeDVlM3BBbkE4ZmZVNVlEUDB1aXp2UTRKVm5KOXdXY1plV3g1LV96ZEVhdjIzc1pKYXpwT1pqS0tCZ1lQR3dqRDBCd202bTYtVFBCeVMtcGgyMHVscEVia2g0b1NsU1JBVF83Rk11WlItMy1SZF83Y2RrOHJEVmEwd0dDZ0w5QlhCaWdEYzVMdkQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "AI-powered biotech could shave years off of drug discovery The Stanford Daily"
         },
         {
           "title": "公开页面要点",
@@ -3556,85 +3570,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "ba9d1d8fc0217a3b",
-      "kind": "article",
-      "title": "This AI startup says it can generate permit-ready blueprints in minutes",
-      "source": "TechCrunch",
-      "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNeDR4WkpvX1MxeUJ6SEo0Zmxmcndnd04tLUF1RFRNMlQzekYyZ0hDRWVhbU1rVkh4UmNxRmh0TG9YckNlZE1BcU01YmNPWFBuY3Bndk1wYXJWeDlyN0ZzdkhNTkhfZjVzMV9HZGhoVWdZVElEYzMtQmxVNnZmelVaNXBhcmFzSkNWVEJ1cmdabnpzWWxHS1hWa1BNMnZ3UVozTVMxbGFKQnh5dw?oc=5",
-      "published_at": "2026-10-12T15:27:59Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "This AI startup says it can generate permit-ready blueprints in minutes TechCrunch",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNeDR4WkpvX1MxeUJ6SEo0Zmxmcndnd04tLUF1RFRNMlQzekYyZ0hDRWVhbU1rVkh4UmNxRmh0TG9YckNlZE1BcU01YmNPWFBuY3Bndk1wYXJWeDlyN0ZzdkhNTkhfZjVzMV9HZGhoVWdZVElEYzMtQmxVNnZmelVaNXBhcmFzSkNWVEJ1cmdabnpzWWxHS1hWa1BNMnZ3UVozTVMxbGFKQnh5dw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "This AI startup says it can generate permit-ready blueprints in minutes TechCrunch"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "edb132cce6622932",
-      "kind": "article",
-      "title": "GSK drinks in Chai Discovery’s AI models after wet-lab validation",
-      "source": "Fierce Biotech",
-      "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxON0lPUHJXQlVVN2RVOWV5Z01LWVdxdTRyRkR3VEREMXBETFRnbXVXbEQzOV9uRXJNeTFhMHRaU2dkbzNuZnVYSVVPQ1p3d2lKWlFZRUdqT0xaTVV4ZU91djVuM1pDb1RaakhncUxuV3lBX2xHd1IyZkhpMU1XN29BLWVCbU9rRmswSTV0TTFXLWd1ZXQ3V3BubGIxaG9SUEhX?oc=5",
-      "published_at": "2026-10-09T14:36:44Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "GSK drinks in Chai Discovery’s AI models after wet-lab validation Fierce Biotech",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxON0lPUHJXQlVVN2RVOWV5Z01LWVdxdTRyRkR3VEREMXBETFRnbXVXbEQzOV9uRXJNeTFhMHRaU2dkbzNuZnVYSVVPQ1p3d2lKWlFZRUdqT0xaTVV4ZU91djVuM1pDb1RaakhncUxuV3lBX2xHd1IyZkhpMU1XN29BLWVCbU9rRmswSTV0TTFXLWd1ZXQ3V3BubGIxaG9SUEhX?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "GSK drinks in Chai Discovery’s AI models after wet-lab validation Fierce Biotech"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "3b7f211d69f2aaf3",
       "kind": "article",
       "title": "The AI Invasion Has Come for Mathematics (opinion)",
@@ -3660,6 +3595,46 @@
         {
           "title": "内容概览",
           "body": "The AI Invasion Has Come for Mathematics (opinion) Inside Higher Ed"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "66dc3461ad5f3036",
+      "kind": "article",
+      "title": "OpenAI Just Carpet-Bombed Mathematics",
+      "source": "The Atlantic",
+      "source_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPRUxiMkgzUTRaSkNJN2EwUHR3NVFZdVRua1pVWGhzTy1TMFhEc05BcmoxeThfLWhqMUN2OG11cUthZHpiNXUyYUNVWW03M3JKMVR0c29GbFZ2NG8yV0xlR3dHUWt6T2V1M3VfRklzeXFVbFVBbGxUN1RnbW1jUnJpOVJGZFRMSTA?oc=5",
+      "published_at": "2026-10-08T19:49:43Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "OpenAI Just Carpet-Bombed Mathematics The Atlantic",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPRUxiMkgzUTRaSkNJN2EwUHR3NVFZdVRua1pVWGhzTy1TMFhEc05BcmoxeThfLWhqMUN2OG11cUthZHpiNXUyYUNVWW03M3JKMVR0c29GbFZ2NG8yV0xlR3dHUWt6T2V1M3VfRklzeXFVbFVBbGxUN1RnbW1jUnJpOVJGZFRMSTA?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "OpenAI Just Carpet-Bombed Mathematics The Atlantic"
         },
         {
           "title": "公开页面要点",
@@ -3721,6 +3696,45 @@
             "Over the course of the next few days, I made five more models the same way. Each one started as a message in HuggingChat with ML-intern switched on, and each one ended as a public model on the Hub with its evaluation in the model card. ML-intern plans the work, asks me for a budget before it spends anything, runs a small test before the real job, then trains, evaluates and publishes on Hugging Face hardware.",
             "The first message is where I spend my effort. My first prompt, for the citrus model shared below, was about 450 words. By my 6th project it was closer to 2,000, because each project taught me something I wanted in the next one. All seven prompts are on GitHub at yvrjsharma/ml-intern-prompts , exactly as I wrote them."
           ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "ba9d1d8fc0217a3b",
+      "kind": "article",
+      "title": "This AI startup says it can generate permit-ready blueprints in minutes",
+      "source": "TechCrunch",
+      "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNeDR4WkpvX1MxeUJ6SEo0Zmxmcndnd04tLUF1RFRNMlQzekYyZ0hDRWVhbU1rVkh4UmNxRmh0TG9YckNlZE1BcU01YmNPWFBuY3Bndk1wYXJWeDlyN0ZzdkhNTkhfZjVzMV9HZGhoVWdZVElEYzMtQmxVNnZmelVaNXBhcmFzSkNWVEJ1cmdabnpzWWxHS1hWa1BNMnZ3UVozTVMxbGFKQnh5dw?oc=5",
+      "published_at": "2026-10-12T15:27:59Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "This AI startup says it can generate permit-ready blueprints in minutes TechCrunch",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNeDR4WkpvX1MxeUJ6SEo0Zmxmcndnd04tLUF1RFRNMlQzekYyZ0hDRWVhbU1rVkh4UmNxRmh0TG9YckNlZE1BcU01YmNPWFBuY3Bndk1wYXJWeDlyN0ZzdkhNTkhfZjVzMV9HZGhoVWdZVElEYzMtQmxVNnZmelVaNXBhcmFzSkNWVEJ1cmdabnpzWWxHS1hWa1BNMnZ3UVozTVMxbGFKQnh5dw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "This AI startup says it can generate permit-ready blueprints in minutes TechCrunch"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -4162,6 +4176,86 @@
       "reading_minutes": 1
     },
     {
+      "id": "d979c94d0fa50591",
+      "kind": "social",
+      "title": "Grok @Bot can detect scam emails",
+      "source": "X",
+      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE54S2E0VkExbkZnb1JVZC04bVBxTVpFdXhFLVJ5TUNIanFWYVhyUXVZd2pQWTFVLXI5emhpNUs5RVN4ZHlnaG9aaWtxdTFjc0lUNlhCclB2OV9tMWRLQ2c?oc=5",
+      "published_at": "2026-10-14T23:26:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "Grok @Bot can detect scam emails X",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE54S2E0VkExbkZnb1JVZC04bVBxTVpFdXhFLVJ5TUNIanFWYVhyUXVZd2pQWTFVLXI5emhpNUs5RVN4ZHlnaG9aaWtxdTFjc0lUNlhCclB2OV9tMWRLQ2c?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Grok @Bot can detect scam emails X"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "01701369ced447f9",
+      "kind": "social",
+      "title": "Grok Voice 3.0 is now the world’s leading conversational voice model",
+      "source": "X",
+      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1CQ3ZWZC1LNzFvV3Jlb01oWFRiWlR6WFVfMENjdllCTTZ0UzlVS09sdGhoR3RiNGh0Sjd3aHFtWXo1QkEwTDUwSzhrTlBSbXJjSGp0NDg4VVZfZW5NTFE?oc=5",
+      "published_at": "2026-10-14T21:32:41Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "Grok Voice 3.0 is now the world’s leading conversational voice model X",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1CQ3ZWZC1LNzFvV3Jlb01oWFRiWlR6WFVfMENjdllCTTZ0UzlVS09sdGhoR3RiNGh0Sjd3aHFtWXo1QkEwTDUwSzhrTlBSbXJjSGp0NDg4VVZfZW5NTFE?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Grok Voice 3.0 is now the world’s leading conversational voice model X"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "f2ad53823dda6950",
       "kind": "social",
       "title": "Try Grok Voice",
@@ -4187,6 +4281,45 @@
         {
           "title": "内容概览",
           "body": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "f7a90222748c7f80",
+      "kind": "article",
+      "title": "Nvidia pledges $250 million to UK AI safety research",
+      "source": "Reuters",
+      "source_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNb1pFUmU1TjNGdW44THRFdlVLU285bHh3azlnTGNFWEJqcnF3T0lzc0pRWi1aTnZOeXlJY1VrbXBXSUxFNTdlS3NCYkptd0ZFb283c1NRc2dLRk9zcEJXenlrV3Q0UVhYTFQ4b1lnVTdLUzFrejJLMFpBcUhLVTRlZC13ZUNXZXk1RU5yWkVEd3M2RWVFUkJlOTlvQVBwRlJRR3dN?oc=5",
+      "published_at": "2026-10-14T06:19:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Nvidia pledges $250 million to UK AI safety research Reuters",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNb1pFUmU1TjNGdW44THRFdlVLU285bHh3azlnTGNFWEJqcnF3T0lzc0pRWi1aTnZOeXlJY1VrbXBXSUxFNTdlS3NCYkptd0ZFb283c1NRc2dLRk9zcEJXenlrV3Q0UVhYTFQ4b1lnVTdLUzFrejJLMFpBcUhLVTRlZC13ZUNXZXk1RU5yWkVEd3M2RWVFUkJlOTlvQVBwRlJRR3dN?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Nvidia pledges $250 million to UK AI safety research Reuters"
         },
         {
           "title": "公开页面要点",
@@ -4267,86 +4400,6 @@
         {
           "title": "内容概览",
           "body": "Make music videos easily with Grok @Bot X"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "7f0cfd70a4bed123",
-      "kind": "social",
-      "title": "Made with @Grok @Imagine",
-      "source": "X",
-      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE8wS0NJc2lLdDdOdTVRTDdBRFRiaWkxSnQwZWltSHdDUWJCX2FDYzdPMWktRUhHLUJLejM5U2NzZTJmTlJlUTk1b3NMOTdPcVN2ZkN1eTZ5bUk3N0trRmc?oc=5",
-      "published_at": "2026-10-14T05:37:34Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE8wS0NJc2lLdDdOdTVRTDdBRFRiaWkxSnQwZWltSHdDUWJCX2FDYzdPMWktRUhHLUJLejM5U2NzZTJmTlJlUTk1b3NMOTdPcVN2ZkN1eTZ5bUk3N0trRmc?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "9f2bd34b8c02d6c0",
-      "kind": "social",
-      "title": "Grok @Bot can help with complex taxes",
-      "source": "X",
-      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5sWVJicjNzLTIzR2Njc1pzNXA5Skg1bWx4blBRT3FpVkJ3QVFQS3Z1Q3NmcDZ5T05IT2NJQ3FESnFiRHJ5Wmp1WG1sWUlmbl95WWdDZnRCZTVDLTM1bWc?oc=5",
-      "published_at": "2026-10-14T04:16:10Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Grok @Bot can help with complex taxes X",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5sWVJicjNzLTIzR2Njc1pzNXA5Skg1bWx4blBRT3FpVkJ3QVFQS3Z1Q3NmcDZ5T05IT2NJQ3FESnFiRHJ5Wmp1WG1sWUlmbl95WWdDZnRCZTVDLTM1bWc?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Grok @Bot can help with complex taxes X"
         },
         {
           "title": "公开页面要点",
@@ -4674,12 +4727,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "d9704d4940c3cc02",
+      "id": "5af5e10deef61fc6",
       "kind": "article",
-      "title": "AMD acquires World Labs AI startup, upping the ante against Nvidia",
-      "source": "Ars Technica",
-      "source_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZ0hQeXM3LUdQR2xCTThQOUZETzNEWk04U25CS0VkNjlrTU15allNdTh4eGFvV1hfdVpvYXRlRk9MZnFnWUhLYTRzVjNzclZDMVgtVFBKSTRMZXZzcEVURXJwSVBTN2JjZHQ3cFNvbjdGckdiU1k5YUNmeE05RGdXR3BTUjZPcEVpOGNoUkpnMVFJNmNxZVRfc1hlU3VnZGtzREFybG5B?oc=5",
-      "published_at": "2026-09-29T07:00:00Z",
+      "title": "AMD to Acquire World Labs for $8.2 Billion",
+      "source": "WSJ",
+      "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQLVpVcHpJVVFBektEcldpS0ttVXk1a2dkR0kzZEtUNmp3d1hQNzVEb3NOZVhEc1piQmtIYlI3WF9QUExkT2R3TW9tOW1ZZ0RpSGdELWxBbVRldmYtRmNUQjRxWjdZeS1RZnVvNFhvbU9pQzFfd2RyXzYxMnR4X3RpNFlBUzU?oc=5",
+      "published_at": "2026-09-28T07:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -4687,17 +4740,17 @@
         "Embodied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "AMD acquires World Labs AI startup, upping the ante against Nvidia Ars Technica",
+      "summary": "AMD to Acquire World Labs for $8.2 Billion WSJ",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZ0hQeXM3LUdQR2xCTThQOUZETzNEWk04U25CS0VkNjlrTU15allNdTh4eGFvV1hfdVpvYXRlRk9MZnFnWUhLYTRzVjNzclZDMVgtVFBKSTRMZXZzcEVURXJwSVBTN2JjZHQ3cFNvbjdGckdiU1k5YUNmeE05RGdXR3BTUjZPcEVpOGNoUkpnMVFJNmNxZVRfc1hlU3VnZGtzREFybG5B?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "resolved_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQLVpVcHpJVVFBektEcldpS0ttVXk1a2dkR0kzZEtUNmp3d1hQNzVEb3NOZVhEc1piQmtIYlI3WF9QUExkT2R3TW9tOW1ZZ0RpSGdELWxBbVRldmYtRmNUQjRxWjdZeS1RZnVvNFhvbU9pQzFfd2RyXzYxMnR4X3RpNFlBUzU?oc=5&hl=en-US&gl=US&ceid=US:en",
       "key_points": [
         "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "AMD acquires World Labs AI startup, upping the ante against Nvidia Ars Technica"
+          "body": "AMD to Acquire World Labs for $8.2 Billion WSJ"
         },
         {
           "title": "公开页面要点",
@@ -5184,6 +5237,45 @@
       "reading_minutes": 1
     },
     {
+      "id": "ebac5bf2e57cc948",
+      "kind": "article",
+      "title": "AI safety framework floated by Democratic duo",
+      "source": "Politico",
+      "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPZVRlWFhpTHRBcUVxcDMwVE9sNUhCdGNvSjd5eFdYOWZCNjJIS0NCdUtWM2VYbksxdmtEQl9tVDluVEJzcGVvNkpVeExUdHdaX2FFdlhwSXNJbC1zMHlZQ2NNWnc4M0RQb1FHZGs1b2N6TjBnaWc5MWpaX3lCdFZTeGw1QUNWQmRGcHZBdWVuRWtjdDFjQ3l3ejhIQQ?oc=5",
+      "published_at": "2026-10-08T22:55:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "AI safety framework floated by Democratic duo Politico",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPZVRlWFhpTHRBcUVxcDMwVE9sNUhCdGNvSjd5eFdYOWZCNjJIS0NCdUtWM2VYbksxdmtEQl9tVDluVEJzcGVvNkpVeExUdHdaX2FFdlhwSXNJbC1zMHlZQ2NNWnc4M0RQb1FHZGs1b2N6TjBnaWc5MWpaX3lCdFZTeGw1QUNWQmRGcHZBdWVuRWtjdDFjQ3l3ejhIQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AI safety framework floated by Democratic duo Politico"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "2d2cd923c881fb04",
       "kind": "article",
       "title": "Keep Teens Off ChatGPT, Says Youth AI Safety Institute",
@@ -5208,84 +5300,6 @@
         {
           "title": "内容概览",
           "body": "Keep Teens Off ChatGPT, Says Youth AI Safety Institute KQED"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "54eda87f4240739f",
-      "kind": "article",
-      "title": "China’s AI Safety Money Problem",
-      "source": "ChinaTalk | Jordan Schneider",
-      "source_url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1ZaEN0VFJMZi1ISU9sOUFVaWg2TzBjMFBkMFpnRjF2ZnljR0trR1V2azlWLVdCZlg1YTQ0eHpXWVctMTJJUHV2TVdNay13QUV0alZkMG9fZG9kR0UzOXFka2lCM2ZvVlBDWW9JTw?oc=5",
-      "published_at": "2026-10-05T11:09:38Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "China’s AI Safety Money Problem ChinaTalk | Jordan Schneider",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1ZaEN0VFJMZi1ISU9sOUFVaWg2TzBjMFBkMFpnRjF2ZnljR0trR1V2azlWLVdCZlg1YTQ0eHpXWVctMTJJUHV2TVdNay13QUV0alZkMG9fZG9kR0UzOXFka2lCM2ZvVlBDWW9JTw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "China’s AI Safety Money Problem ChinaTalk | Jordan Schneider"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "abeace7bd5c44e0e",
-      "kind": "article",
-      "title": "Training Day: Third Circuit Affirms Westlaw Headnotes Decision in AI Copyright Fair Use Case",
-      "source": "Jackson Walker LLP",
-      "source_url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE01YktDaE9iRnZ6WkNOa1hjZnY4YkJYYzlra3l2S1hpaFo5eTNTaXhBUVZHWkZ4UHF4WWRkelA3YjlVZEdUdldMR1Jsd0I1V21EM1BZNUZrNGdzazJSTDBueE9LenQ2Qm9hUjMxNQ?oc=5",
-      "published_at": "2026-10-05T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Training Day: Third Circuit Affirms Westlaw Headnotes Decision in AI Copyright Fair Use Case Jackson Walker LLP",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE01YktDaE9iRnZ6WkNOa1hjZnY4YkJYYzlra3l2S1hpaFo5eTNTaXhBUVZHWkZ4UHF4WWRkelA3YjlVZEdUdldMR1Jsd0I1V21EM1BZNUZrNGdzazJSTDBueE9LenQ2Qm9hUjMxNQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Training Day: Third Circuit Affirms Westlaw Headnotes Decision in AI Copyright Fair Use Case Jackson Walker LLP"
         },
         {
           "title": "公开页面要点",
