@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-16T11:18:21Z",
+  "generated_at": "2026-10-16T16:35:26Z",
   "item_count": 130,
   "category_counts": {
     "research": 20,
@@ -19,7 +19,7 @@
     "paragraphs": [
       "研究侧共收录 20 条信号，重点包括 《BACE: LLM-based Code Generation through Bayesian Anchored…》、《Reward Hacking Benchmark: Measuring Exploits in LLM Agents…》。与只看榜单相比，更值得持续观察的是论文能否把 Agent 的可靠性、评测完整性与推理成本一起向前推进。",
       "AI 跨领域贡献收录 16 条，代表性事件包括 《Claude Fable 5 协助找到雅可比猜想的显式三维反例》、《Proof-based general-purpose computing with Magnetar》。这类结果会区分官方论文、可核验反例、媒体报道与尚待同行评审的社交平台首发，避免把‘可计算验证’和‘完成学术确认’混为一谈。",
-      "中国 AI 板块本期收录 16 条动态，已覆盖 Qwen / 通义千问、腾讯元宝 / 混元、DeepSeek。代表性变化包括 《DeepSeek 故障近5小时,补偿方案 公布》、《DeepSeek 发布 补偿通知》；竞争正在从单次模型发布延伸到开源策略、Agent 产品入口、国产算力适配和价格体系。",
+      "中国 AI 板块本期收录 16 条动态，已覆盖 Qwen / 通义千问、腾讯元宝 / 混元、DeepSeek。代表性变化包括 《DeepSeek 致歉, 公布 补偿方案》、《DeepSeek 发布 补偿通知》；竞争正在从单次模型发布延伸到开源策略、Agent 产品入口、国产算力适配和价格体系。",
       "产业侧共有 30 条前沿实验室与大厂动态、14 条关键人物公开信号，另有 12 条创业和 10 条政策安全更新。模型能力、算力供给、创始人判断、产品分发与合规成本正在变成同一个竞争问题。"
     ],
     "takeaways": [
@@ -75,12 +75,18 @@
     },
     {
       "name": "Google DeepMind",
-      "status": "error",
-      "count": 0,
-      "note": "not well-formed (invalid token): line 1, column 0"
+      "status": "ok",
+      "count": 8,
+      "note": ""
     },
     {
       "name": "Hugging Face",
+      "status": "ok",
+      "count": 7,
+      "note": ""
+    },
+    {
+      "name": "Google AI",
       "status": "ok",
       "count": 7,
       "note": ""
@@ -92,9 +98,27 @@
       "note": ""
     },
     {
-      "name": "Google AI",
+      "name": "Anthropic",
       "status": "ok",
-      "count": 7,
+      "count": 8,
+      "note": ""
+    },
+    {
+      "name": "OpenAlex Conference Index",
+      "status": "ok",
+      "count": 20,
+      "note": ""
+    },
+    {
+      "name": "AI for Biology, Medicine & Materials",
+      "status": "ok",
+      "count": 12,
+      "note": ""
+    },
+    {
+      "name": "AI for Mathematics & Science",
+      "status": "ok",
+      "count": 12,
       "note": ""
     },
     {
@@ -110,49 +134,7 @@
       "note": ""
     },
     {
-      "name": "Microsoft Research",
-      "status": "ok",
-      "count": 6,
-      "note": ""
-    },
-    {
-      "name": "AI for Biology, Medicine & Materials",
-      "status": "ok",
-      "count": 12,
-      "note": ""
-    },
-    {
-      "name": "OpenAlex Conference Index",
-      "status": "ok",
-      "count": 20,
-      "note": ""
-    },
-    {
-      "name": "AI for Mathematics & Science",
-      "status": "ok",
-      "count": 12,
-      "note": ""
-    },
-    {
-      "name": "Anthropic",
-      "status": "ok",
-      "count": 8,
-      "note": ""
-    },
-    {
       "name": "AI Policy Monitor",
-      "status": "ok",
-      "count": 10,
-      "note": ""
-    },
-    {
-      "name": "Open Source AI Monitor",
-      "status": "ok",
-      "count": 8,
-      "note": ""
-    },
-    {
-      "name": "China AI · Tencent & ByteDance",
       "status": "ok",
       "count": 10,
       "note": ""
@@ -161,6 +143,12 @@
       "name": "Frontier Lab Monitor",
       "status": "ok",
       "count": 9,
+      "note": ""
+    },
+    {
+      "name": "Open Source AI Monitor",
+      "status": "ok",
+      "count": 8,
       "note": ""
     },
     {
@@ -176,13 +164,25 @@
       "note": ""
     },
     {
-      "name": "Frontier Leaders on X",
+      "name": "China AI · Tencent & ByteDance",
       "status": "ok",
       "count": 10,
       "note": ""
     },
     {
       "name": "Core AI Researchers on X",
+      "status": "ok",
+      "count": 10,
+      "note": ""
+    },
+    {
+      "name": "Microsoft Research",
+      "status": "ok",
+      "count": 6,
+      "note": ""
+    },
+    {
+      "name": "Frontier Leaders on X",
       "status": "ok",
       "count": 10,
       "note": ""
@@ -196,7 +196,7 @@
     {
       "name": "China AI Social Monitor",
       "status": "ok",
-      "count": 3,
+      "count": 2,
       "note": ""
     },
     {
@@ -321,6 +321,24 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "51e2daa9cd8a3deb",
+      "category": "impact",
+      "title": "SynthID Bio: Watermarking methods for synthetic biology",
+      "summary": "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
+      "source": "Google DeepMind",
+      "url": "https://deepmind.google/blog/introducing-synthid-bio/",
+      "published_at": "2026-09-30T15:03:07Z",
+      "tags": [
+        "DeepMind",
+        "Official"
+      ],
+      "importance": 103,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=51e2daa9cd8a3deb",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "e6243056d8ce3efa",
       "category": "impact",
       "title": "Introducing Quine: An AI research system designed for the complexity of biology",
@@ -417,6 +435,24 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=f0c67f699c236db9",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "974c9e9820541901",
+      "category": "frontier",
+      "title": "Accelerating the search for antimicrobial peptides with Google Antigravity",
+      "summary": "Accelerating the search for novel antimicrobial peptides using Google Antigravity for Science.",
+      "source": "Google DeepMind",
+      "url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
+      "published_at": "2026-10-15T16:08:03Z",
+      "tags": [
+        "DeepMind",
+        "Official"
+      ],
+      "importance": 100,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=974c9e9820541901",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -564,24 +600,6 @@
       "reader_status": "summary-only"
     },
     {
-      "id": "aaae44d5ae5a6d70",
-      "category": "frontier",
-      "title": "The EU’s next chapter in AI is agentic",
-      "summary": "New analysis shows how agentic AI adoption is growing across EU enterprises and small businesses—and where deeper use could unlock more value.",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic",
-      "published_at": "2026-10-14T00:00:00Z",
-      "tags": [
-        "OpenAI",
-        "Official"
-      ],
-      "importance": 100,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=aaae44d5ae5a6d70",
-      "reader_status": "summary-only"
-    },
-    {
       "id": "rhb-icml-2026",
       "category": "research",
       "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
@@ -607,13 +625,31 @@
       "cached_pdf": "./papers/rhb-icml-2026.pdf"
     },
     {
-      "id": "d78bbc7a1f2c4e9f",
+      "id": "6d8fd330d7b28b32",
       "category": "frontier",
-      "title": "Higgsfield takes AI video from 1 minute to over 10",
-      "summary": "Higgsfield brings creators longer videos with GPT-6 Astra, precise visuals with GPT-Image-2.5, and a path to voice filmmaking with GPT-Live.",
+      "title": "Google DeepMind and Singapore Government collaborate to build fine-tuned AI model for scam detection",
+      "summary": "Learn how Google DeepMind and GovTech Singapore uses lightweight on-device Gemma models to intercept conversational scams in private chats with zero cloud data egress.",
+      "source": "Google DeepMind",
+      "url": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
+      "published_at": "2026-10-14T02:00:14Z",
+      "tags": [
+        "DeepMind",
+        "Official"
+      ],
+      "importance": 99,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=6d8fd330d7b28b32",
+      "reader_status": "summary-only"
+    },
+    {
+      "id": "aaae44d5ae5a6d70",
+      "category": "frontier",
+      "title": "The EU’s next chapter in AI is agentic",
+      "summary": "New analysis shows how agentic AI adoption is growing across EU enterprises and small businesses—and where deeper use could unlock more value.",
       "source": "OpenAI",
-      "url": "https://openai.com/index/higgsfield-longer-videos-voice",
-      "published_at": "2026-10-13T12:00:00Z",
+      "url": "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic",
+      "published_at": "2026-10-14T00:00:00Z",
       "tags": [
         "OpenAI",
         "Official"
@@ -621,61 +657,61 @@
       "importance": 99,
       "content_kind": "article",
       "verification": "官方来源",
-      "reader_url": "./reader.html?id=d78bbc7a1f2c4e9f",
+      "reader_url": "./reader.html?id=aaae44d5ae5a6d70",
       "reader_status": "summary-only"
     },
     {
-      "id": "54d366bd1a1ba2fb",
+      "id": "ec9a28444d3c34f8",
       "category": "frontier",
-      "title": "Redesigning source control at Anthropic",
-      "summary": "As our merges per day grew more than tenfold, source control became our biggest development bottleneck. Here, we share how we migrated to an in-house version control system in five months.",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/engineering/redesigning-source-control",
-      "published_at": "2026-10-13T00:00:00Z",
+      "title": "Developing Gemini 4 Argon responsibly and safely",
+      "summary": "Learn more about our approach to safety and security for Gemini 4 Argon.",
+      "source": "Google DeepMind",
+      "url": "https://blog.google/innovation-and-ai/technology/safety-security/gemini-4-model-safety-security/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=",
+      "published_at": "2026-10-13T19:43:07Z",
       "tags": [
-        "Anthropic",
-        "Engineering"
+        "DeepMind",
+        "Official"
       ],
       "importance": 99,
       "content_kind": "article",
       "verification": "官方来源",
-      "reader_url": "./reader.html?id=54d366bd1a1ba2fb",
+      "reader_url": "./reader.html?id=ec9a28444d3c34f8",
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "21a205e1a7a9c873",
+      "id": "9607cb5a023e52e6",
       "category": "frontier",
-      "title": "AI models may be capable of self-replicating without access to a datacenter",
-      "summary": "Small AI models may be only months away from being able to self-replicate across cheap IoT devices like Android TV boxes, with no datacenter needed.",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/research/self-replicating-ai",
-      "published_at": "2026-10-12T19:30:00Z",
+      "title": "Gemini 4 Argon for Robotics",
+      "summary": "Discover Gemini 4 Argon for robotics: leading the ERQA benchmark with physical reasoning, zero-shot control, Real2Sim, and agentic workflows.",
+      "source": "Google DeepMind",
+      "url": "https://developers.googleblog.com/gemini-4-argon-for-robotics/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=",
+      "published_at": "2026-10-13T16:01:58Z",
       "tags": [
-        "Anthropic",
-        "Research"
+        "DeepMind",
+        "Official"
       ],
       "importance": 99,
       "content_kind": "article",
       "verification": "官方来源",
-      "reader_url": "./reader.html?id=21a205e1a7a9c873",
+      "reader_url": "./reader.html?id=9607cb5a023e52e6",
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "ee137219dbf1a1e6",
+      "id": "7e853506e492274c",
       "category": "frontier",
-      "title": "Strengthening our defenses against distillation attacks",
-      "summary": "Illicit distillation allows model developers to copy frontier AI capabilities without creating proportionally robust safeguards. Here, we describe how we’ve reduced the rate of distillation by more than 90%.",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/research/distillation-defenses",
-      "published_at": "2026-10-12T09:30:00Z",
+      "title": "Gemini 4 Argon: Built to solve your hardest problems",
+      "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+      "source": "Google DeepMind",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+      "published_at": "2026-10-13T16:01:52Z",
       "tags": [
-        "Anthropic",
-        "Research"
+        "DeepMind",
+        "Official"
       ],
       "importance": 99,
       "content_kind": "article",
       "verification": "官方来源",
-      "reader_url": "./reader.html?id=ee137219dbf1a1e6",
+      "reader_url": "./reader.html?id=7e853506e492274c",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -730,7 +766,7 @@
         "oil and gas industry",
         "drilling data analysis"
       ],
-      "importance": 96,
+      "importance": 95,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "reader_url": "./reader.html?id=dc106e5f3997cb60",
@@ -1230,24 +1266,6 @@
       "reader_status": "abstract-only"
     },
     {
-      "id": "2d52ed2f0b86aafa",
-      "category": "frontier",
-      "title": "Claude discovers a novel enzyme system",
-      "summary": "In early results from our new life sciences research lab, Claude agents found an enzyme system whose function is still unknown.",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
-      "published_at": "2026-09-23T16:06:00Z",
-      "tags": [
-        "Anthropic",
-        "Official"
-      ],
-      "importance": 95,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=2d52ed2f0b86aafa",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "elon-grok-build-open-source-20260716",
       "category": "voices",
       "title": "Elon Musk 宣布 Grok Build 开源",
@@ -1273,7 +1291,7 @@
       "summary": "‘Breathtaking,’ ‘Devastating’: Mathematics Reels After New OpenAI Release The New York Times",
       "source": "The New York Times",
       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPODBqdjFtSkFGUTZYd2w1WlRnaWFfX3NiWDJ4OXgzdGozcV94WFV1T2JWY0lrekg2ZGR6Sk1wMGtNMzNDeXFmdnc2Zl9zTk0zMDhCLXMyYUFVSjRVNk1CTkF2Y2h2VF9HRVZvV2xfRkpiUTJsQUlNV0ZnaFBTWGxJUW5mbkVEdjVuQ25HMHV3?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-08T21:53:08Z",
+      "published_at": "2026-10-08T07:00:00Z",
       "tags": [
         "AI for Science",
         "Mathematics",
@@ -1284,6 +1302,46 @@
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=9ea5613b4342bfde",
       "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "969b6d5a88b096df",
+      "category": "china",
+      "title": "DeepSeek 致歉, 公布 补偿方案",
+      "summary": "10月15日傍晚, DeepSeek 官方开放平台 发布 服务恢复及补偿通知称,北京时间2026年10月15日8:11至13:04期间, DeepSeek 的服务...",
+      "source": "微信公众号 · 珠海发布",
+      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HF1S0mqjIR_m_Ru11H2KC0Cc9astGS1syh4UM6BK&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792168529%26ver%3D7030%26signature%3Dizxlp5IzaldkjULW6z3-IS89zrx10zJ1BUlfAfsMFWdwqNAZn3XZT%2A9sphruMpdNIjONvQr6cMahBpoNW0SrlBESE2b0qzCATEkgCKI3j%2AzLZiHxXgJzvLgAYQJUJFGz%26new%3D1",
+      "published_at": "2026-10-16T08:11:14Z",
+      "tags": [
+        "微信公众号",
+        "DeepSeek",
+        "模型"
+      ],
+      "importance": 93,
+      "content_kind": "article",
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "reader_url": "./reader.html?id=969b6d5a88b096df",
+      "index_url": "https://weixin.sogou.com/weixin?type=2&query=DeepSeek+%E5%8F%91%E5%B8%83",
+      "reader_status": "indexed-summary"
+    },
+    {
+      "id": "7031d460596f0fac",
+      "category": "china",
+      "title": "DeepSeek 发布 补偿通知",
+      "summary": "推荐阅读:【丝路漫评】敦煌名片,何以闪亮“贴心”二字10月15日傍晚, DeepSeek 官方开放平台 发布 服务恢复及补偿通知.通知表...",
+      "source": "微信公众号 · 每日甘肃",
+      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HF1S0mqjO08rK2KYfZeUcu3HgNUUyMKYeAEXqnac&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792168529%26ver%3D7030%26signature%3DoqQ-MxsZrqQd-2-DD-sbIYTpTQatwWJhEXTzpXxKxKyuUdB8Wwuz0E2bjPEPslZE2niXF3Yu4SP027LlrPAjn%2ATOWuSYBgP-fcMeCiFzOzj1r21WrGiAj04NBlI9GQfz%26new%3D1",
+      "published_at": "2026-10-15T23:32:38Z",
+      "tags": [
+        "微信公众号",
+        "DeepSeek",
+        "模型"
+      ],
+      "importance": 93,
+      "content_kind": "article",
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "reader_url": "./reader.html?id=7031d460596f0fac",
+      "index_url": "https://weixin.sogou.com/weixin?type=2&query=DeepSeek+%E5%8F%91%E5%B8%83",
+      "reader_status": "indexed-summary"
     },
     {
       "id": "66fcd61826f01afe",
@@ -1302,26 +1360,6 @@
       "content_kind": "article",
       "verification": "搜狗微信公开索引摘要 · 点击原文核对",
       "reader_url": "./reader.html?id=66fcd61826f01afe",
-      "index_url": "https://weixin.sogou.com/weixin?type=2&query=DeepSeek+%E5%8F%91%E5%B8%83",
-      "reader_status": "indexed-summary"
-    },
-    {
-      "id": "6d0d7a4ac3a60844",
-      "category": "china",
-      "title": "DeepSeek 发布 补偿通知",
-      "summary": "10月15日傍晚, DeepSeek 官方开放平台 发布 服务恢复及补偿通知.通知表示,北京时间2026年10月15日8:11至13:04期间,...",
-      "source": "微信公众号 · 环球时报",
-      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HAwI0mqjpvlbjRm_rlUmD7osBRVCiyTWCLtn-t89&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792149502%26ver%3D7030%26signature%3DMNWSdzcPxeD6oWFW8u2Nj40aRLiGV2IRDrgqZU2Rvo9yrYPL7IC0cmwxHDZs9fEpcoSt%2Aq75c1GV%2AHjIVfWpZJt9gHlo17zUTsEYNpeRW2345RYBHNnEPXx0DgMIBP1P%26new%3D1",
-      "published_at": "2026-10-15T12:58:16Z",
-      "tags": [
-        "微信公众号",
-        "DeepSeek",
-        "模型"
-      ],
-      "importance": 93,
-      "content_kind": "article",
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "reader_url": "./reader.html?id=6d0d7a4ac3a60844",
       "index_url": "https://weixin.sogou.com/weixin?type=2&query=DeepSeek+%E5%8F%91%E5%B8%83",
       "reader_status": "indexed-summary"
     },
@@ -1366,12 +1404,12 @@
       "reader_status": "indexed-summary"
     },
     {
-      "id": "c9dbd771fb8ef691",
+      "id": "fc2a92b8c0f4a196",
       "category": "china",
       "title": "Qwen 、 通义千问 、千问App,别再混着叫",
       "summary": "通义千问 则是认识这条模型品牌线索时经常遇到的中文称谓.名称... · 概念插画一条更新消息,可以这样理解假设消息写“ Qwen 发布 ...",
       "source": "微信公众号 · 京智AI2049",
-      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HLen0WqjBfCnhViINtpqHpEVtKPu_L39-BuqDCgb&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792124843%26ver%3D7029%26signature%3D0Q5WFQZNtguEARx9EiRmeaCOl5499sOuBFXpjvLFjESyGZc77Ko8XF57vZsuybVGheNDN6psDNXKJvrrEh1zPm52NOnpHGewo5W7Y4FFdLADllX01CaIz9qDHSjZeGn6%26new%3D1",
+      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HF1S0mqj4D9u-RX3JX7ku7Lf_lkIERlmtMmI8EQY&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792168529%26ver%3D7030%26signature%3Dw3T3PHW2eP4pzyIFAI6RvfxRArGU6dWV5RXHxSwho%2AgvHGYlUKD6ci4ec8BGVdCGojc2KzI8C0lHbA02YrWcrh2Cw1R4C0uoxu8WpjHGE40e-o1KmN-C1VImdmw0Aakd%26new%3D1",
       "published_at": "2026-10-14T10:49:30Z",
       "tags": [
         "微信公众号",
@@ -1381,7 +1419,7 @@
       "importance": 93,
       "content_kind": "article",
       "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "reader_url": "./reader.html?id=c9dbd771fb8ef691",
+      "reader_url": "./reader.html?id=fc2a92b8c0f4a196",
       "index_url": "https://weixin.sogou.com/weixin?type=2&query=Qwen+%E9%80%9A%E4%B9%89%E5%8D%83%E9%97%AE+%E5%8F%91%E5%B8%83",
       "reader_status": "indexed-summary"
     },
@@ -1586,44 +1624,6 @@
       "reader_status": "indexed-summary"
     },
     {
-      "id": "95369d214e1479f1",
-      "category": "china",
-      "title": "再见了CUDA! DeepSeek 华为重磅 发布 ,NVIDIA护城河没了",
-      "summary": "今年4月 发布 预览版的 DeepSeek V4系列模型,就已完成昇腾芯片适配.华为曾表示,昇腾 950 超级节点已完整支持V4系列模型,其中...",
-      "source": "微信公众号 · 文Q聊硬件",
-      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HBZCv2qjUy0CM30zOKfc1uT9WjZXzUc3CoP_3W29&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1790919176%26ver%3D7001%26signature%3DGn-yrW--k2mfX74KCfr%2AMaFlaVUU%2ANtu27PKnhzMbz7jR-kznfHzTTU5vuvGbAvXQSIusaGw6Qai4ZWfx-kW%2AHOyb9VEI6KQ7vEDzLHvkhZtgSnPdxQd43d%2AE3qc-8is%26new%3D1",
-      "published_at": "2026-10-02T00:51:20Z",
-      "tags": [
-        "微信公众号",
-        "DeepSeek",
-        "模型"
-      ],
-      "importance": 93,
-      "content_kind": "article",
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "reader_url": "./reader.html?id=95369d214e1479f1",
-      "index_url": "https://weixin.sogou.com/weixin?type=2&query=DeepSeek+%E5%8F%91%E5%B8%83",
-      "reader_status": "indexed-summary"
-    },
-    {
-      "id": "e879be1befb70532",
-      "category": "bigtech",
-      "title": "Gemini 4 Argon: Built to solve your hardest problems",
-      "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
-      "source": "Google AI",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
-      "published_at": "2026-10-13T16:00:00Z",
-      "tags": [
-        "Google",
-        "Official"
-      ],
-      "importance": 92,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=e879be1befb70532",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "d7cdf634558c71f4",
       "category": "impact",
       "title": "In a New Anthropic Lab, A.I. Turns to Biology",
@@ -1823,6 +1823,24 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=cec3f5f15ba31f3a",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "57332f8584bc3311",
+      "category": "opensource",
+      "title": "Welcome Beam: a 501B open model you can own, customize, and scale",
+      "summary": "We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/blog/reflection-beam",
+      "published_at": "2026-10-16T00:00:00Z",
+      "tags": [
+        "Hugging Face",
+        "Open Source"
+      ],
+      "importance": 88,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=57332f8584bc3311",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2029,25 +2047,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "e753343c5a23f7dc",
-      "category": "impact",
-      "title": "AI’s transformation of mathematics is a turning point for science",
-      "summary": "AI’s transformation of mathematics is a turning point for science The Economist",
-      "source": "The Economist",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPXzJFLWFNLXhRMHhrRlQwNEd5RV9tbUx0VkRlWVJIb3dfakxiaVJWWU41S21HNl9tVnY0Snh3ZThGZFRjWWtqNjdsWGYyam8zLVBqNjM5aXpyQ0xQZWMweGc1bXh4WWQ1NWU3YnBIRjd5Nl9zTzFHVngtRzdPQXoxUm05cVh6U0x1LUVvQnFhX2M1TlBNNHBSQWtiNXJHX0wwblNQeS00WFBYR3A4Z1VsTm5qOXVfUGxwaktfeTZEU2RSdw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-12T17:43:28Z",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "importance": 87,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=e753343c5a23f7dc",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "a371457dab8cb482",
       "category": "bigtech",
       "title": "New experts join Google’s AI & Economy team",
@@ -2102,24 +2101,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "9dff27ddbb180fb8",
-      "category": "opensource",
-      "title": "The model that didn't exist, so you made it yourself",
-      "summary": "We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
-      "source": "Hugging Face",
-      "url": "https://huggingface.co/blog/building-with-ml-intern",
-      "published_at": "2026-10-08T00:00:00Z",
-      "tags": [
-        "Hugging Face",
-        "Open Source"
-      ],
-      "importance": 86,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=9dff27ddbb180fb8",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "b358971df29545a3",
       "category": "voices",
       "title": "AMD acquiring Fei-Fei Li's World Labs AI firm in deal worth $8.2 billion",
@@ -2161,8 +2142,8 @@
       "id": "e53e3f6c06a7c12a",
       "category": "startups",
       "title": "AMD to Buy Fei-Fei Li’s World Labs AI Startup for $8.2 Billion",
-      "summary": "AMD to Buy Fei-Fei Li’s World Labs AI Startup for $8.2 Billion Bloomberg",
-      "source": "Bloomberg",
+      "summary": "AMD to Buy Fei-Fei Li’s World Labs AI Startup for $8.2 Billion Bloomberg.com",
+      "source": "Bloomberg.com",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOZW1PMmt1Q2c4TzNIaDNIbEs2TWQ3V0xQc1F6QXpzdHdHalpEWlk5ZlhoYnVHVXlsUGdmRm1Fd05aek1UdGFWT2dTZmFBUk9HZDAtRE85NFEwWXhnaHFqdWdSNzkzbWFMUWRxaDQ1VU4tblBrSFhRYkR3VEltUnhtMlI3dmhkcDE5OEx5T2l3RjZ6amdzVFhyeXE1Z2ZTQ0liUVFlREVzZU52THFDM29XSXpB?oc=5&hl=en-US&gl=US&ceid=US:en",
       "published_at": "2026-09-28T07:00:00Z",
       "tags": [
@@ -2345,39 +2326,21 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "c135a1b9fb100708",
+      "id": "1ddb0ea4b04244ce",
       "category": "opensource",
-      "title": "Anthropic Executive Says Open-Source AI Models Are Higher Risk",
-      "summary": "Anthropic Executive Says Open-Source AI Models Are Higher Risk Bloomberg.com",
+      "title": "Watch Odd Lots: How OpenAI’s Rogue Model Hacked Hugging Face",
+      "summary": "Watch Odd Lots: How OpenAI’s Rogue Model Hacked Hugging Face Bloomberg.com",
       "source": "Bloomberg.com",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQVl8zSEtRa0QyR0Z5OHJVOFhjX2xJTGtmVVVXSll3cXNCUkVBOFdKWGZUMVhTZDVzX1lpM0RYSUFkdkRjbTVQZ2dnTjhjeDIzYWtncUsyMHZnbGZqZmhqaDdyS1RMNkp6MjBQRlFRcWJ5SFJSYU90SGhPanBUQjBsSncxeXVYOTlSb05ONVNMOHRYWVFFenp0VFpnM1pRbGliU3ktb2t5ZnV4MnREQUxsVVBiSQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-14T08:48:30Z",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNRkI2dE9HaGFUckxEYzdWeV9McXlKcXlobzhyd1BLWjBzdFVXcThaMFVWSGllY0xJUm1YVFpXR0lBZXVKc3BWN3Q0U3E0aE9XWFozVVVxbmNtdmYxSm00YXd2UHdORFduMEVPVkxaX0ctV2pVWUs3NWx1Sk9PMFYxeC1pdU5GcGxabk9RSXZRbENhbjNNcUFjRlZ6QmxwVlc2THU0SFJzUzFxSGJf?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-12T14:56:32Z",
       "tags": [
         "Open Source",
         "Models & Tools"
       ],
-      "importance": 78,
+      "importance": 77,
       "content_kind": "article",
       "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=c135a1b9fb100708",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "f6ba205a8a565a65",
-      "category": "startups",
-      "title": "I left my $200K job before my business had paying customers. Here's why I stopped waiting for validation.",
-      "summary": "I left my $200K job before my business had paying customers. Here's why I stopped waiting for validation. Business Insider",
-      "source": "Business Insider",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOazZnV0JEaDFDLVNITDNJOXRXMUlLS3NjbXN3WWlTY2ZfMEpHbC1ITldyREZ0MWFVbzVHMXM4TmZRZkN3ejRDRDdfdDNNQldPNm9FaENKTFlXYVd3Y3Bzai1na090U25ZanRqZjZEREhCR3Zzemx6UE5xX1J3THZEendLclVQcW5QUzl0RXlVMWVVVFE1UzRRSk5JVlU3ME0?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-11T11:00:00Z",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "importance": 78,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=f6ba205a8a565a65",
+      "reader_url": "./reader.html?id=1ddb0ea4b04244ce",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2615,39 +2578,39 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "110de705626a7bed",
-      "category": "opensource",
-      "title": "Nvidia releases AI safety software it says could have stopped Hugging Face hack",
-      "summary": "Nvidia releases AI safety software it says could have stopped Hugging Face hack Reuters",
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNSVREakRaN2V6OWo0bzNFcVBHb1VZMzRVS29mcWF4XzZwSmdxLVRublBqSTE5ZlNBaHBKb0lTU1o2SWV0V0t1U3M3TVl1ZnlJWGVJRGxKclM5RkphYzhzU3FlNkZHNDk3TUZhdW54dGtydmR3MFR2ZFVZdWItaVpsNjZYX2hIbjVHcTM0ZTVqLVd6UHV2OGY4eFM4ZW1va1pCSF90VzlZd3BSUjVkY1RJRzV2ZGFEUnlnbDY1d0ZjOFZoYXBVRU5YZEM0Zmk?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-09-28T07:00:00Z",
+      "id": "ca23371ec4c7e3e6",
+      "category": "bigtech",
+      "title": "It’s the Humidity: How International Researchers in Poland, Deep Learning and NVIDIA GPUs Could Change the Forecast",
+      "summary": "For more than a century, meteorologists have chased storms with chalkboards, equations, and now, supercomputers. But for all the progress, they still stumble over one deceptively simple ingredient: water vapor. Humidity is the invisible fuel for thunderstorms, flash floods, and hurricanes. It’s the difference between a passing sprinkle and a summer downpour that sends you […]",
+      "source": "NVIDIA AI",
+      "url": "https://blogs.nvidia.com/blog/humidity/",
+      "published_at": "2025-09-02T13:00:15Z",
       "tags": [
-        "Open Source",
-        "Models & Tools"
+        "NVIDIA",
+        "Infrastructure"
+      ],
+      "importance": 75,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=ca23371ec4c7e3e6",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "20ae55639a9d5a3f",
+      "category": "startups",
+      "title": "From a family farm to an AI startup: A CWRU alumni entrepreneur’s path",
+      "summary": "From a family farm to an AI startup: A CWRU alumni entrepreneur’s path Case Western Reserve University",
+      "source": "Case Western Reserve University",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOS1pPNTlZM1dVNGhWa2JtUUtENmhJTFdndzktdnRWQnNWYTdlZ0hkLVROamxZTHRXNUVhYUN6S1d4Yy1senphMktVUGY0bTVCMGNZWEthNThQcE5SSHEtOVQxempFWjF0aEczLXQ3WFVMSk05eDlPdjdENU1vb1dYNA?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-22T07:00:00Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
       ],
       "importance": 74,
       "content_kind": "article",
       "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=110de705626a7bed",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "d38f847e99b14dde",
-      "category": "policy",
-      "title": "Ten Takeaways From the UK Government’s Strategy For AI Regulation in Healthcare",
-      "summary": "Ten Takeaways From the UK Government’s Strategy For AI Regulation in Healthcare Ropes & Gray LLP",
-      "source": "Ropes & Gray LLP",
-      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOT3plRzlhVks4YmsxWjRpQzdUZnd1QUxQam95MlRFUmdZeEtpUllSdUFUZFE2SXloQmRmendHRnB1Rjk5ODVGQV8tWjY2UWJHMkZrcklZb3owUmhCRGw5bW53UXU4ZXdhZlFYeU9GOUluWkhSWWx3M2ZuRlF6U1FvZUMxWHFQRmRDZnNsWHdjcEk0V01iNjM4eHlXdWZ6LThBRk5GNjNiSFlLZlI4R3ZiTnhXMF8wYV9rVkFqWnRfczdkazZLbW9SbkY1NExfSkM0cFo5NWtRVXpnajg?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-14T17:16:42Z",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "importance": 72,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=d38f847e99b14dde",
+      "reader_url": "./reader.html?id=20ae55639a9d5a3f",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2747,7 +2710,7 @@
       "summary": "AI safety framework floated by Democratic duo Politico",
       "source": "Politico",
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPZVRlWFhpTHRBcUVxcDMwVE9sNUhCdGNvSjd5eFdYOWZCNjJIS0NCdUtWM2VYbksxdmtEQl9tVDluVEJzcGVvNkpVeExUdHdaX2FFdlhwSXNJbC1zMHlZQ2NNWnc4M0RQb1FHZGs1b2N6TjBnaWc5MWpaX3lCdFZTeGw1QUNWQmRGcHZBdWVuRWtjdDFjQ3l3ejhIQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-08T22:55:00Z",
+      "published_at": "2026-10-08T07:00:00Z",
       "tags": [
         "Policy",
         "Safety"
@@ -2774,6 +2737,24 @@
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=2d2cd923c881fb04",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "b2bbd01d30d4a6b6",
+      "category": "policy",
+      "title": "Cantwell unveils AI safety framework as Congress stalls ahead of election",
+      "summary": "Cantwell unveils AI safety framework as Congress stalls ahead of election The Seattle Times",
+      "source": "The Seattle Times",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNU0cwY2l4bnVZZUlUS0poMkRaSDlVNy1nTkR3c0pQRVFZbUxVSXlOckxWNG1NUjlveFdwSHRXUmlCeGhFd2lxLWNnU2NyQ1NHTU5KaWhFZUVVRG1PUDBCUE5SaklaYVRkQjJRQmFoMTR3ekdBSHFXQzZDYVRzTE1fODhXbzlWbEpkVmRUR3kwQ1lzVTB0M3Z0TDhKNXhkeGtIRC1ZclhtODloWXZ1eGlRQW9iVmp0NzktZUhlcTBjbXFCLWc?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-07T07:00:00Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 70,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=b2bbd01d30d4a6b6",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2828,6 +2809,24 @@
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=a8b76d3807a23c43",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "efdbaaf2774d3427",
+      "category": "opensource",
+      "title": "A timeline of developments in AI safety since the attack on Hugging Face",
+      "summary": "A timeline of developments in AI safety since the attack on Hugging Face AP News",
+      "source": "AP News",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNMURacHFuLUJOMWczTk5zVE1wUXN1TVJaNVFUTGtxU2c5dlRpSVVFT01KX2p4UTd2eUxjNllmSjBoRGFqWkFhT29kUS05SndmVjBlVThoblpjX2VYOXZpWnJ0UmdFUExNdmlwUXlUOVpPWDB4QzZDTmlBVUw5anoxWFlqbzZhNzBqZlhmQ01HQTNLeHMzU05WRGd4dk1vRUZGWmc?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-01T07:00:00Z",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "importance": 67,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=efdbaaf2774d3427",
       "reader_status": "public-page-excerpt"
     }
   ]
