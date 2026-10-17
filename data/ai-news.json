@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-17T10:39:09Z",
+  "generated_at": "2026-10-17T15:30:28Z",
   "item_count": 131,
   "category_counts": {
     "research": 20,
@@ -19,7 +19,7 @@
     "paragraphs": [
       "研究侧共收录 20 条信号，重点包括 《BACE: LLM-based Code Generation through Bayesian Anchored…》、《Reward Hacking Benchmark: Measuring Exploits in LLM Agents…》。与只看榜单相比，更值得持续观察的是论文能否把 Agent 的可靠性、评测完整性与推理成本一起向前推进。",
       "AI 跨领域贡献收录 16 条，代表性事件包括 《Claude Fable 5 协助找到雅可比猜想的显式三维反例》、《Proof-based general-purpose computing with Magnetar》。这类结果会区分官方论文、可核验反例、媒体报道与尚待同行评审的社交平台首发，避免把‘可计算验证’和‘完成学术确认’混为一谈。",
-      "中国 AI 板块本期收录 16 条动态，已覆盖 Qwen / 通义千问、腾讯元宝 / 混元、DeepSeek。代表性变化包括 《刚刚, DeepSeek 发布 “旗舰级”小更新,还顺手放了个“大招”》、《刚刚, DeepSeek 发布 新模型!用「许愿式编程」刷新斩杀线》；竞争正在从单次模型发布延伸到开源策略、Agent 产品入口、国产算力适配和价格体系。",
+      "中国 AI 板块本期收录 16 条动态，已覆盖 Qwen / 通义千问、腾讯元宝 / 混元、DeepSeek。代表性变化包括 《DeepSeek 新模型 发布 ,性能涨了费用降了,许愿式编程成真》、《刚刚, DeepSeek 发布 “旗舰级”小更新,还顺手放了个“大招”》；竞争正在从单次模型发布延伸到开源策略、Agent 产品入口、国产算力适配和价格体系。",
       "产业侧共有 30 条前沿实验室与大厂动态、14 条关键人物公开信号，另有 13 条创业和 10 条政策安全更新。模型能力、算力供给、创始人判断、产品分发与合规成本正在变成同一个竞争问题。"
     ],
     "takeaways": [
@@ -68,15 +68,21 @@
       "note": ""
     },
     {
+      "name": "OpenAI",
+      "status": "ok",
+      "count": 9,
+      "note": ""
+    },
+    {
       "name": "NVIDIA AI",
       "status": "ok",
       "count": 6,
       "note": ""
     },
     {
-      "name": "OpenAI",
+      "name": "Hugging Face",
       "status": "ok",
-      "count": 9,
+      "count": 7,
       "note": ""
     },
     {
@@ -87,12 +93,6 @@
     },
     {
       "name": "Google AI",
-      "status": "ok",
-      "count": 7,
-      "note": ""
-    },
-    {
-      "name": "Hugging Face",
       "status": "ok",
       "count": 7,
       "note": ""
@@ -110,9 +110,9 @@
       "note": ""
     },
     {
-      "name": "AI for Biology, Medicine & Materials",
+      "name": "Anthropic",
       "status": "ok",
-      "count": 12,
+      "count": 8,
       "note": ""
     },
     {
@@ -128,21 +128,15 @@
       "note": ""
     },
     {
-      "name": "AI for Mathematics & Science",
+      "name": "AI for Biology, Medicine & Materials",
       "status": "ok",
       "count": 12,
       "note": ""
     },
     {
-      "name": "Anthropic",
+      "name": "AI for Mathematics & Science",
       "status": "ok",
-      "count": 8,
-      "note": ""
-    },
-    {
-      "name": "AI Policy Monitor",
-      "status": "ok",
-      "count": 10,
+      "count": 12,
       "note": ""
     },
     {
@@ -152,19 +146,7 @@
       "note": ""
     },
     {
-      "name": "Core AI Researchers on X",
-      "status": "ok",
-      "count": 10,
-      "note": ""
-    },
-    {
-      "name": "Open Source AI Monitor",
-      "status": "ok",
-      "count": 8,
-      "note": ""
-    },
-    {
-      "name": "China AI · Kimi & Qwen",
+      "name": "AI Policy Monitor",
       "status": "ok",
       "count": 10,
       "note": ""
@@ -176,13 +158,31 @@
       "note": ""
     },
     {
-      "name": "Frontier Leaders on X",
+      "name": "Open Source AI Monitor",
+      "status": "ok",
+      "count": 8,
+      "note": ""
+    },
+    {
+      "name": "China AI · DeepSeek & Zhipu",
       "status": "ok",
       "count": 10,
       "note": ""
     },
     {
-      "name": "China AI · DeepSeek & Zhipu",
+      "name": "China AI · Kimi & Qwen",
+      "status": "ok",
+      "count": 10,
+      "note": ""
+    },
+    {
+      "name": "Core AI Researchers on X",
+      "status": "ok",
+      "count": 10,
+      "note": ""
+    },
+    {
+      "name": "Frontier Leaders on X",
       "status": "ok",
       "count": 10,
       "note": ""
@@ -323,7 +323,7 @@
     {
       "id": "51e2daa9cd8a3deb",
       "category": "impact",
-      "title": "SynthID Bio: Watermarking methods for synthetic biology",
+      "title": "Introducing SynthID Bio",
       "summary": "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
       "source": "Google DeepMind",
       "url": "https://deepmind.google/blog/introducing-synthid-bio/",
@@ -336,7 +336,7 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=51e2daa9cd8a3deb",
-      "reader_status": "public-page-excerpt"
+      "reader_status": "summary-only"
     },
     {
       "id": "shunyu-yao-agent-watch",
@@ -510,24 +510,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "81c659edf9c354e4",
-      "category": "frontier",
-      "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
-      "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
-      "published_at": "2026-10-16T00:00:00Z",
-      "tags": [
-        "OpenAI",
-        "Official"
-      ],
-      "importance": 100,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=81c659edf9c354e4",
-      "reader_status": "summary-only"
-    },
-    {
       "id": "b61603aa86883741",
       "category": "frontier",
       "title": "Benefit Street Partners answers questions faster with Codex",
@@ -543,6 +525,24 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=b61603aa86883741",
+      "reader_status": "summary-only"
+    },
+    {
+      "id": "81c659edf9c354e4",
+      "category": "frontier",
+      "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+      "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+      "published_at": "2026-10-16T00:00:00Z",
+      "tags": [
+        "OpenAI",
+        "Official"
+      ],
+      "importance": 100,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=81c659edf9c354e4",
       "reader_status": "summary-only"
     },
     {
@@ -618,24 +618,6 @@
       "reader_status": "summary-only"
     },
     {
-      "id": "b5361f00b4cceaee",
-      "category": "frontier",
-      "title": "Sullivan & Cromwell brings legal expertise into agreement review",
-      "summary": "In collaboration with OpenAI, Sullivan & Cromwell developed Agreement Analyzer, an AI tool for identifying issues in a draft agreement.",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/sullivan-cromwell",
-      "published_at": "2026-10-15T00:00:00Z",
-      "tags": [
-        "OpenAI",
-        "Official"
-      ],
-      "importance": 100,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=b5361f00b4cceaee",
-      "reader_status": "summary-only"
-    },
-    {
       "id": "rhb-icml-2026",
       "category": "research",
       "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
@@ -659,6 +641,24 @@
       "reader_url": "./reader.html?id=rhb-icml-2026",
       "reader_status": "open-pdf-cached",
       "cached_pdf": "./papers/rhb-icml-2026.pdf"
+    },
+    {
+      "id": "b5361f00b4cceaee",
+      "category": "frontier",
+      "title": "Sullivan & Cromwell brings legal expertise into agreement review",
+      "summary": "In collaboration with OpenAI, Sullivan & Cromwell developed Agreement Analyzer, an AI tool for identifying issues in a draft agreement.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/sullivan-cromwell",
+      "published_at": "2026-10-15T00:00:00Z",
+      "tags": [
+        "OpenAI",
+        "Official"
+      ],
+      "importance": 99,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=b5361f00b4cceaee",
+      "reader_status": "summary-only"
     },
     {
       "id": "d257200d7f9b9001",
@@ -799,6 +799,25 @@
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=793b95e76526fd48",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "e92dd26e711ec035",
+      "category": "impact",
+      "title": "CERN and Mistral partner to build Flare, a new AI model for physics",
+      "summary": "CERN and Mistral partner to build Flare, a new AI model for physics Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOejlwRzRlN1BnaFhFZ1VYb0ZKSVFmN1NRcFppbWFLdXV3ZzEtdUFpc0RRcFNtTmRVeGhjX0pLVmV1bElvQmpFeVlsYkcwX0h2WDFQaksyZ2JYSng5c3MwbVJ2V20zN0hQYU1vNXc3bWZlWjlSX1ZwTHE2NnRmNzRjX3VodU5ZemRfU2NqaXdPWGVyNzJXWTYyU0I5dFFLSmZq?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-15T13:02:13Z",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "importance": 96,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=e92dd26e711ec035",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -1293,6 +1312,26 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "5c5576056a446a8a",
+      "category": "china",
+      "title": "DeepSeek 新模型 发布 ,性能涨了费用降了,许愿式编程成真",
+      "summary": "DeepSeek 也顺手放了一波福利:符合条件的用户首次登录... 其中Search API还支持限定网站、语言和 发布 时间,查最新消息时...",
+      "source": "微信公众号 · 钱江晚报",
+      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HKSU02qjJfwVosOJIEmrn74WAtwQJYL9TU1sL9mF&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792251029%26ver%3D7032%26signature%3DIxH1NFLXpI62at2ZLDV8ULMjbsIK-Hj9jQTNaEdcgO4Qn0ayIHxNMad2fiuKpXr3kNRDxIcz9Vza6XETCAUnGdHAHBiZsaGM80nUZX927MDdFor9uPBuK-WUDrvXO8mt%26new%3D1",
+      "published_at": "2026-10-17T11:57:31Z",
+      "tags": [
+        "微信公众号",
+        "DeepSeek",
+        "模型"
+      ],
+      "importance": 93,
+      "content_kind": "article",
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "reader_url": "./reader.html?id=5c5576056a446a8a",
+      "index_url": "https://weixin.sogou.com/weixin?type=2&query=DeepSeek+%E5%8F%91%E5%B8%83",
+      "reader_status": "indexed-summary"
+    },
+    {
       "id": "377a90f98ac1c80a",
       "category": "china",
       "title": "刚刚, DeepSeek 发布 “旗舰级”小更新,还顺手放了个“大招”",
@@ -1313,12 +1352,12 @@
       "reader_status": "indexed-summary"
     },
     {
-      "id": "d3abf1ad047a1de5",
+      "id": "818232dc2ea4d5df",
       "category": "china",
       "title": "刚刚, DeepSeek 发布 新模型!用「许愿式编程」刷新斩杀线",
       "summary": "DeepSeek Harness 中完成.官方称,这些项目只用了较少的提示词和参考素材,交互轮次也很少.官方 发布 先看故宫 3D 建模.镜头...",
       "source": "微信公众号 · APPSO",
-      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HFtQ02qjyh5-7LMHBAvNRVdE62WBEai6BGg6I5Qv&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792233553%26ver%3D7032%26signature%3DSxJR8eNaaj01gBGppZKwS3FYdmvkTaWj888TXShuXj-6MWW3I0B5OdvDWPtOp2fwkRhHmg0KmoP3USerSjVGTMw21SbYjpy65IaVxokAntHZrUjXMqbFmx8oRuAxinHj%26new%3D1",
+      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HKSU02qjkDiQc6A-HbB7wNhODUp55BLvBJhDfskv&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792251029%26ver%3D7032%26signature%3DSxJR8eNaaj01gBGppZKwS3FYdmvkTaWj888TXShuXj-x6GdhpqnpcBD4WMjqYqXmOG44fBRNqF4NtGpwIhkD6BosouvzRfV2P7%2A6NPvcvRaP47B%2AdI7njg824Gvhvxtp%26new%3D1",
       "published_at": "2026-10-17T09:46:56Z",
       "tags": [
         "微信公众号",
@@ -1328,7 +1367,7 @@
       "importance": 93,
       "content_kind": "article",
       "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "reader_url": "./reader.html?id=d3abf1ad047a1de5",
+      "reader_url": "./reader.html?id=818232dc2ea4d5df",
       "index_url": "https://weixin.sogou.com/weixin?type=2&query=DeepSeek+%E5%8F%91%E5%B8%83",
       "reader_status": "indexed-summary"
     },
@@ -1593,26 +1632,6 @@
       "reader_status": "indexed-summary"
     },
     {
-      "id": "de109642c7ce293b",
-      "category": "china",
-      "title": "Gemini 4 发布 , DeepSeek 转向昇腾",
-      "summary": "的新模型被用户挤到排队, DeepSeek 把自家的看家工具搬上了华... 谷歌 发布 Gemini 4 Argon.停更七个半月,输出上限拉到 100 万 ...",
-      "source": "微信公众号 · 招财小牛哥",
-      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HFHDwmqjoMB_LuI34lapUszhK9w5IGnskAEuHGMB&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1791148869%26ver%3D7007%26signature%3Dd15tEu8LdhNJ1ChyY6lte6DnhLB6BAJeFUmrTr19T23uVD43cwgTdKtzfvkeNbjZKG542YtMJ1ce1wjxt93omHCc6j5iR%2A38DRHhVh15kWSmX2X0NQeGt-luyk3yiiWL%26new%3D1",
-      "published_at": "2026-10-03T00:03:38Z",
-      "tags": [
-        "微信公众号",
-        "DeepSeek",
-        "模型"
-      ],
-      "importance": 93,
-      "content_kind": "article",
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "reader_url": "./reader.html?id=de109642c7ce293b",
-      "index_url": "https://weixin.sogou.com/weixin?type=2&query=DeepSeek+%E5%8F%91%E5%B8%83",
-      "reader_status": "indexed-summary"
-    },
-    {
       "id": "d7cdf634558c71f4",
       "category": "impact",
       "title": "In a New Anthropic Lab, A.I. Turns to Biology",
@@ -1741,25 +1760,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "9de37b3516cac029",
-      "category": "impact",
-      "title": "AI cracked the Navier–Stokes challenge. What does that mean for physics?",
-      "summary": "AI cracked the Navier–Stokes challenge. What does that mean for physics? Nature",
-      "source": "Nature",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9SQkRIbk1ZUnRra3R0MVhYTWVsZjVXUVEzM3FoMzhxSktBWm5URU9UbVVLbnZCdVRmWUhjOEEzVTR0b1NQVkFhbHBXZzFtdXg5SzY1QWtubUF3clNrR1Zr?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-09-18T07:00:00Z",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "importance": 90,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=9de37b3516cac029",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "sam-altman-gpt-live-20260708",
       "category": "voices",
       "title": "Sam Altman 预告 ChatGPT 新一代实时语音 GPT-live",
@@ -1794,6 +1794,25 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=25c3f7b3a6fe47e8",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "46b74daa8aad9839",
+      "category": "impact",
+      "title": "Will physics be the next field to be turned upside down by AI?",
+      "summary": "Will physics be the next field to be turned upside down by AI? New Scientist",
+      "source": "New Scientist",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOQ2l4R0tGTlhPYk1Xektfb0QzQTRGMWpjYjFmZXRIUmdzUWV3YkJPaTI4djJqcUV2emdvbEZvYld2ZlFmUDN0ekxOcldNMF9mMjdBMmhQT0ZEZ0wzQVdzZ29xOGNTblBmTlEzWlhZdTdaYVhkRkZfMUw4N0NIeG9wQlh3V3BWT0dmRkU4WURaSHJaU1VEQ1lEZGJYSmhZM3pNVFNnbE8tQmd4cU4w?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-16T17:02:01Z",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "importance": 88,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=46b74daa8aad9839",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -1908,6 +1927,24 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "850e451d6d4d7efd",
+      "category": "bigtech",
+      "title": "Google Beam expands with new regions, partners, and customers",
+      "summary": "Google Beam promotional animation",
+      "source": "Google AI",
+      "url": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/",
+      "published_at": "2026-09-23T18:00:00Z",
+      "tags": [
+        "Google",
+        "Official"
+      ],
+      "importance": 88,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=850e451d6d4d7efd",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "cec06029030594ee",
       "category": "opensource",
       "title": "Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta",
@@ -1919,7 +1956,7 @@
         "Hugging Face",
         "Open Source"
       ],
-      "importance": 88,
+      "importance": 87,
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=cec06029030594ee",
@@ -1937,28 +1974,10 @@
         "Hugging Face",
         "Open Source"
       ],
-      "importance": 88,
+      "importance": 87,
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=38ef1a595edfb8b0",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "850e451d6d4d7efd",
-      "category": "bigtech",
-      "title": "Google Beam expands with new regions, partners, and customers",
-      "summary": "Google Beam promotional animation",
-      "source": "Google AI",
-      "url": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/",
-      "published_at": "2026-09-23T18:00:00Z",
-      "tags": [
-        "Google",
-        "Official"
-      ],
-      "importance": 88,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=850e451d6d4d7efd",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -1996,25 +2015,6 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=9ef38edc5ff4dc1f",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "775de41536aa6b1e",
-      "category": "impact",
-      "title": "National Science Foundation awards $20M for an AI-driven network for soft-materials discovery",
-      "summary": "National Science Foundation awards $20M for an AI-driven network for soft-materials discovery Argonne National Laboratory (.gov)",
-      "source": "Argonne National Laboratory (.gov)",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOMFZLVlV0R0VCdG9wbXN3REs4UmFZTlFERWxuSjhPTE1WMmtsX1RDN18xdWZjOE5EYzdnSnZ3V3hWaUtRang3OGNobVY3ZGV1N082a2I1SXFiYW9xcE9MVVFhSTJkMjBmZmNFMlp6YTcycDZQbklqRnpVZkw3S1dtdHdCeHVndk1TSkVhZ1FfQVFfV3pZbDhuVUdzQkl3X09DT3hsMllGaUgyLVRFWUtXVnE5eFFnT3FuQ0E?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-14T12:00:00Z",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "importance": 87,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=775de41536aa6b1e",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2069,6 +2069,24 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=1253b5f79879d36c",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "ba9d1d8fc0217a3b",
+      "category": "startups",
+      "title": "This AI startup says it can generate permit-ready blueprints in minutes",
+      "summary": "This AI startup says it can generate permit-ready blueprints in minutes TechCrunch",
+      "source": "TechCrunch",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNeDR4WkpvX1MxeUJ6SEo0Zmxmcndnd04tLUF1RFRNMlQzekYyZ0hDRWVhbU1rVkh4UmNxRmh0TG9YckNlZE1BcU01YmNPWFBuY3Bndk1wYXJWeDlyN0ZzdkhNTkhfZjVzMV9HZGhoVWdZVElEYzMtQmxVNnZmelVaNXBhcmFzSkNWVEJ1cmdabnpzWWxHS1hWa1BNMnZ3UVozTVMxbGFKQnh5dw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-12T15:27:59Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 86,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=ba9d1d8fc0217a3b",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2402,24 +2420,6 @@
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=9c3b5fa6e3bab0fb",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "9dbe60afb5ec6156",
-      "category": "startups",
-      "title": "Coming soon: New York City’s hearing on AI risks",
-      "summary": "Coming soon: New York City’s hearing on AI risks Marcus on AI | Substack",
-      "source": "Marcus on AI | Substack",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5ORThDR1U4VVRPS3p5VXVqMnBKeVFYdHFQdjJYQURyU1JDQU9EOEtsamZmYXVnZkZwWDdzME1LZ3NqdVB1QjhvaGJYeUp2cGpHaExPM0JlS3kyZlpaUDA2M080TGtWWno2dHV5aDFWa1hNUUNtX0dv?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-05T07:00:00Z",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "importance": 77,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=9dbe60afb5ec6156",
       "reader_status": "public-page-excerpt"
     },
     {
