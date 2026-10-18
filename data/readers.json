@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-18T04:27:31Z",
-  "record_count": 131,
+  "generated_at": "2026-10-18T11:00:04Z",
+  "record_count": 130,
   "records": [
     {
       "id": "jacobian-fable-20260720",
@@ -275,6 +275,57 @@
             "Computer-Using Agent (CUA) OpenAI A universal agent/interface to interact with the digital world. product | blogpost | system card | bibtex",
             "Deep Research OpenAI An agent that navigates and reasons over the Internet to research for you. product | blogpost",
             "τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains Shunyu Yao, Noah Shinn, Pedram Razavi, Karthik Narasimhan ICLR 2025 paper | repo | blog"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "51e2daa9cd8a3deb",
+      "kind": "article",
+      "title": "SynthID Bio: Watermarking methods for synthetic biology",
+      "source": "Google DeepMind",
+      "source_url": "https://deepmind.google/blog/introducing-synthid-bio/",
+      "published_at": "2026-09-30T15:03:07Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "DeepMind",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://deepmind.google/blog/introducing-synthid-bio/",
+      "key_points": [
+        "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
+        "Today, we’re introducing SynthID Bio to bring watermarking technology to synthetic biology.",
+        "SynthID Bio embeds an imperceptible signature directly into the biological code, ensuring the watermark is verifiable not just on a digital model but on the synthesized, physical protein itself – all while preserving its biological function in laboratory testing.",
+        "Generative AI is helping scientists address critical biological challenges, from predicting the structure of proteins ( AlphaFold ) to designing entirely new proteins ( AlphaProteo , and ProteinMPNN ), and more recently, developing new bacteriophages , viruses that infect bacteria.",
+        "Yet these tools also present new challenges: novel AI designs can bypass traditional DNA synthesis screening, while mislabeled synthetic 3D structures risk polluting public databases and misleading downstream research."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Proof of concept for watermarking AI-generated proteins while preserving biological function."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
+            "Today, we’re introducing SynthID Bio to bring watermarking technology to synthetic biology.",
+            "SynthID Bio embeds an imperceptible signature directly into the biological code, ensuring the watermark is verifiable not just on a digital model but on the synthesized, physical protein itself – all while preserving its biological function in laboratory testing.",
+            "Generative AI is helping scientists address critical biological challenges, from predicting the structure of proteins ( AlphaFold ) to designing entirely new proteins ( AlphaProteo , and ProteinMPNN ), and more recently, developing new bacteriophages , viruses that infect bacteria.",
+            "Yet these tools also present new challenges: novel AI designs can bypass traditional DNA synthesis screening, while mislabeled synthetic 3D structures risk polluting public databases and misleading downstream research."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
+            "Today, we’re introducing SynthID Bio to bring watermarking technology to synthetic biology. SynthID Bio embeds an imperceptible signature directly into the biological code, ensuring the watermark is verifiable not just on a digital model but on the synthesized, physical protein itself – all while preserving its biological function in laboratory testing.",
+            "Generative AI is helping scientists address critical biological challenges, from predicting the structure of proteins ( AlphaFold ) to designing entirely new proteins ( AlphaProteo , and ProteinMPNN ), and more recently, developing new bacteriophages , viruses that infect bacteria. Yet these tools also present new challenges: novel AI designs can bypass traditional DNA synthesis screening, while mislabeled synthetic 3D structures risk polluting public databases and misleading downstream research."
           ]
         }
       ],
@@ -743,6 +794,51 @@
       "reading_minutes": 1
     },
     {
+      "id": "rhb-icml-2026",
+      "kind": "paper",
+      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
+      "source": "OpenReview · arXiv",
+      "source_url": "https://arxiv.org/abs/2605.02964",
+      "published_at": "2026-06-24T00:00:00Z",
+      "authors": [
+        "Kunvar Thaman"
+      ],
+      "venue": "ICML 2026",
+      "tags": [
+        "Reward Hacking",
+        "Agent Safety",
+        "Evaluation"
+      ],
+      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
+      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/rhb-icml-2026.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://arxiv.org/pdf/2605.02964",
+      "key_points": [
+        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
+        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
+        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
+        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
+        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
+        },
+        {
+          "title": "关键结果",
+          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
+        },
+        {
+          "title": "局限与结论",
+          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
+        }
+      ],
+      "reading_minutes": 46
+    },
+    {
       "id": "ddd881d94b44d433",
       "kind": "article",
       "title": "Bringing GPT-Rosalind to academic research labs",
@@ -834,49 +930,55 @@
       "reading_minutes": 1
     },
     {
-      "id": "rhb-icml-2026",
-      "kind": "paper",
-      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
-      "source": "OpenReview · arXiv",
-      "source_url": "https://arxiv.org/abs/2605.02964",
-      "published_at": "2026-06-24T00:00:00Z",
-      "authors": [
-        "Kunvar Thaman"
-      ],
-      "venue": "ICML 2026",
+      "id": "974c9e9820541901",
+      "kind": "article",
+      "title": "Accelerating the search for antimicrobial peptides with Google Antigravity",
+      "source": "Google DeepMind",
+      "source_url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
+      "published_at": "2026-10-15T16:08:03Z",
+      "authors": [],
+      "venue": "",
       "tags": [
-        "Reward Hacking",
-        "Agent Safety",
-        "Evaluation"
+        "DeepMind",
+        "Official"
       ],
-      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
-      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/rhb-icml-2026.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://arxiv.org/pdf/2605.02964",
+      "verification": "官方来源",
+      "summary": "Accelerating the search for novel antimicrobial peptides using Google Antigravity for Science.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
       "key_points": [
-        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
-        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
-        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
-        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
-        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
+        "Bileschi, Zoi Tsangalidou, Sukhdeep Singh and Lucy J.",
+        "Colwell New antibiotics are urgently needed to help with rising levels of antimicrobial resistance, but searching for new therapeutics is often a slow, labor-intensive process.",
+        "With Google Antigravity, our agentic development platform, this process can now be made easier.",
+        "Google Antigravity provides an agentic science workbench that empowers biologists to discover, structurally evaluate, and prioritize promising targets quickly, compressing what used to be a fragmented search over multiple databases into a single session.",
+        "It also helps researchers scan through millions of previously uncharacterized proteins in the UniProt database using ProtNLM, a model that predicts biological function from amino acid sequences."
       ],
       "sections": [
         {
-          "title": "摘要",
-          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
+          "title": "内容概览",
+          "body": "Accelerating the search for novel antimicrobial peptides using Google Antigravity for Science."
         },
         {
-          "title": "关键结果",
-          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
+          "title": "公开页面要点",
+          "bullets": [
+            "Bileschi, Zoi Tsangalidou, Sukhdeep Singh and Lucy J.",
+            "Colwell New antibiotics are urgently needed to help with rising levels of antimicrobial resistance, but searching for new therapeutics is often a slow, labor-intensive process.",
+            "With Google Antigravity, our agentic development platform, this process can now be made easier.",
+            "Google Antigravity provides an agentic science workbench that empowers biologists to discover, structurally evaluate, and prioritize promising targets quickly, compressing what used to be a fragmented search over multiple databases into a single session.",
+            "It also helps researchers scan through millions of previously uncharacterized proteins in the UniProt database using ProtNLM, a model that predicts biological function from amino acid sequences."
+          ]
         },
         {
-          "title": "局限与结论",
-          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Pengfei Tian, Maxwell L. Bileschi, Zoi Tsangalidou, Sukhdeep Singh and Lucy J. Colwell",
+            "New antibiotics are urgently needed to help with rising levels of antimicrobial resistance, but searching for new therapeutics is often a slow, labor-intensive process. With Google Antigravity, our agentic development platform, this process can now be made easier.",
+            "Google Antigravity provides an agentic science workbench that empowers biologists to discover, structurally evaluate, and prioritize promising targets quickly, compressing what used to be a fragmented search over multiple databases into a single session. It also helps researchers scan through millions of previously uncharacterized proteins in the UniProt database using ProtNLM, a model that predicts biological function from amino acid sequences."
+          ]
         }
       ],
-      "reading_minutes": 46
+      "reading_minutes": 1
     },
     {
       "id": "00051b9d22302c85",
@@ -1079,57 +1181,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "54d366bd1a1ba2fb",
-      "kind": "article",
-      "title": "Redesigning source control at Anthropic",
-      "source": "Anthropic",
-      "source_url": "https://www.anthropic.com/engineering/redesigning-source-control",
-      "published_at": "2026-10-13T00:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Anthropic",
-        "Engineering"
-      ],
-      "verification": "官方来源",
-      "summary": "As our merges per day grew more than tenfold, source control became our biggest development bottleneck. Here, we share how we migrated to an in-house version control system in five months.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.anthropic.com/engineering/redesigning-source-control",
-      "key_points": [
-        "As our merges per day grew more than tenfold, source control became our biggest development bottleneck.",
-        "Here, we share how we migrated to an in-house version control system in five months.",
-        "Updated October 15 to include more detail on the projects that pioneered many of the techniques we use in Scion.",
-        "At Anthropic, coding is no longer the bottleneck to building systems or doing research.",
-        "Claude is able to autonomously iterate on research loops, micro-optimize complex programs, and build new services from the ground up at a speed and scale we haven’t seen before."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "As our merges per day grew more than tenfold, source control became our biggest development bottleneck. Here, we share how we migrated to an in-house version control system in five months."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "As our merges per day grew more than tenfold, source control became our biggest development bottleneck.",
-            "Here, we share how we migrated to an in-house version control system in five months.",
-            "Updated October 15 to include more detail on the projects that pioneered many of the techniques we use in Scion.",
-            "At Anthropic, coding is no longer the bottleneck to building systems or doing research.",
-            "Claude is able to autonomously iterate on research loops, micro-optimize complex programs, and build new services from the ground up at a speed and scale we haven’t seen before."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "As our merges per day grew more than tenfold, source control became our biggest development bottleneck. Here, we share how we migrated to an in-house version control system in five months.",
-            "Updated October 15 to include more detail on the projects that pioneered many of the techniques we use in Scion.",
-            "At Anthropic, coding is no longer the bottleneck to building systems or doing research. Claude is able to autonomously iterate on research loops, micro-optimize complex programs, and build new services from the ground up at a speed and scale we haven’t seen before. The bottleneck, now, is all of the developer infrastructure built for human scale: source control, builds, and CI."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "gpt5-protein-synthesis-20260205",
       "kind": "article",
       "title": "GPT-5 与自动化实验室将无细胞蛋白合成成本降低 40%",
@@ -1183,7 +1234,10 @@
       ],
       "venue": "ACM International Conference on Design of Communication (SIGDOC)",
       "tags": [
-        "Intelligent Tutoring Systems and Adaptive Learning"
+        "Intelligent Tutoring Systems and Adaptive Learning",
+        "student distraction",
+        "attention detection",
+        "gaze tracking"
       ],
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "summary": "Digital learning environments challenge student attention, as notifications and low engagement cause students to drift from tasks, often without awareness. We present a system using real-time gaze tracking and screenshot analysis to detect distraction during digital exams and deliver timely, non-disruptive interventions via an on-screen character (\"screenmate\"). The system generates a continuous focus score by correlating where students look with what is displayed on their screen, and uses this score to trigger nudges when attention lapses are detected. We evaluated the system in a user study with 77 undergraduate students completing a 30-minute exam; results suggest that…",
@@ -1217,7 +1271,10 @@
       ],
       "venue": "ACM International Conference on Design of Communication (SIGDOC)",
       "tags": [
-        "Intelligent Tutoring Systems and Adaptive Learning"
+        "Intelligent Tutoring Systems and Adaptive Learning",
+        "AI-generated feedback",
+        "explanation styles",
+        "financial literacy"
       ],
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "summary": "This paper presents a study of how narrative versus factual AI-generated feedback shapes college students’ comprehension of financial literacy concepts within an interactive “what-if” decision simulation. Twenty participants used one of two versions of the system, with each delivering identical underlying information through a different explanation style. While no significant difference was observed in the quantitative learning gains between the two conditions, a qualitative pattern emerged, in which participants in the factual condition were less likely to characterize financial concepts as “common sense”. This suggests that explanation style shapes learners’ epistemic…",
@@ -2048,11 +2105,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "a55230407b7971f1",
+      "id": "cda6e97f9f0456c8",
       "kind": "article",
       "title": "DeepSeek 新模型 发布 ,拿下开源模型第一",
       "source": "微信公众号 · 科技每日推送",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792297637&ver=7033&signature=On9cphn3KRYcxLtDGa2gJCKyE0e1-7IHCkcDC2uKfpQlAzGnOCJcEv1rkjf3OIZi03FgbvogQd*kVje*gHdwqB8*q6b*5RaRFwYAVukBdkPUxt*bYjbbJ39e97EovcUU&new=1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321188&ver=7034&signature=Ao8ZjW*eLbFGUL8LgEmCR9oBHcmomTv2p9uk2IR*cIhYEI5lTGwyRRNmmRH9qO5vs-OLaJuUCc*UspkAxefixk89OadP1vjSIyQqtMYJqssK1uluMQ4TAq5Zw-LKHPHN&new=1",
       "published_at": "2026-10-18T03:50:53Z",
       "authors": [],
       "venue": "",
@@ -2065,7 +2122,7 @@
       "summary": "值得一提的是,就在新模型 发布 前两天, DeepSeek 还经历了一次近5小时的服务故障. 为此,官方不仅公开道歉,还给出了相当大方...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HK9K1GqjQVRMU4HviaCAhXgc5FNR8z8m4gR_ZSIm&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792297637%26ver%3D7033%26signature%3DOn9cphn3KRYcxLtDGa2gJCKyE0e1-7IHCkcDC2uKfpQlAzGnOCJcEv1rkjf3OIZi03FgbvogQd%2AkVje%2AgHdwqB8%2Aq6b%2A5RaRFwYAVukBdkPUxt%2AbYjbbJ39e97EovcUU%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HK-m1Gqjx8WHwyuBuVCPDSxXj9gxzxBGtmIpLvg6&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792321188%26ver%3D7034%26signature%3DAo8ZjW%2AeLbFGUL8LgEmCR9oBHcmomTv2p9uk2IR%2AcIhYEI5lTGwyRRNmmRH9qO5vs-OLaJuUCc%2AUspkAxefixk89OadP1vjSIyQqtMYJqssK1uluMQ4TAq5Zw-LKHPHN%26new%3D1",
       "key_points": [
         "值得一提的是,就在新模型 发布 前两天, DeepSeek 还经历了一次近5小时的服务故障. 为此,官方不仅公开道歉,还给出了相当大方..."
       ],
@@ -2088,11 +2145,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "59f3627f1f1aa06d",
+      "id": "dc064cc620143936",
       "kind": "article",
       "title": "DeepSeek 新模型 发布 ,性能涨了费用降了,许愿式编程成真",
       "source": "微信公众号 · 钱江晚报",
-      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HKnb02qjP0sxpTtYEQJew1E59wDTfjNlq-FknJ5p&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792269216%26ver%3D7032%26signature%3DIxH1NFLXpI62at2ZLDV8ULMjbsIK-Hj9jQTNaEdcgO6%2AG0OGjOHt61UDCIg8Ypp32mEi1wYCJT3I0dBqqHmhL5LRdzStxlFzBUeqVzoJpSC0qN%2AX9rzMZ3Kx1GBk5ZIQ%26new%3D1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321188&ver=7034&signature=XYMkz5GhhWDfrqgXbkWZoy1NXjP*wrVHWtwcak87tknbMajuYh-CgV3sl5kPWZE-yX5a35xpuCIx2eS0bGaQRtebYvwFHFU07x85jXrLxt8GFyvhVd-UUSB5ik2exlxk&new=1",
       "published_at": "2026-10-17T11:57:31Z",
       "authors": [],
       "venue": "",
@@ -2105,7 +2162,7 @@
       "summary": "DeepSeek 也顺手放了一波福利:符合条件的用户首次登录... 其中Search API还支持限定网站、语言和 发布 时间,查最新消息时...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HKnb02qjP0sxpTtYEQJew1E59wDTfjNlq-FknJ5p&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792269216%26ver%3D7032%26signature%3DIxH1NFLXpI62at2ZLDV8ULMjbsIK-Hj9jQTNaEdcgO6%2AG0OGjOHt61UDCIg8Ypp32mEi1wYCJT3I0dBqqHmhL5LRdzStxlFzBUeqVzoJpSC0qN%2AX9rzMZ3Kx1GBk5ZIQ%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HK-m1GqjsSboRkLBv4gkvckRx6eltGZq_HDyoyOF&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792321188%26ver%3D7034%26signature%3DXYMkz5GhhWDfrqgXbkWZoy1NXjP%2AwrVHWtwcak87tknbMajuYh-CgV3sl5kPWZE-yX5a35xpuCIx2eS0bGaQRtebYvwFHFU07x85jXrLxt8GFyvhVd-UUSB5ik2exlxk%26new%3D1",
       "key_points": [
         "DeepSeek 也顺手放了一波福利:符合条件的用户首次登录... 其中Search API还支持限定网站、语言和 发布 时间,查最新消息时..."
       ],
@@ -2172,7 +2229,7 @@
       "kind": "article",
       "title": "刚刚, DeepSeek 发布 新模型!用「许愿式编程」刷新斩杀线",
       "source": "微信公众号 · APPSO",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792297637&ver=7033&signature=rzyvhlz-IMjjl*tClOGudEcNhKp2TerD8Rnsh9qfB8UVPkWUkLSl69VuKF4nSmBxyKmGW6IVYPwK4Q0VLHbfcr*NBRz*-MWRXp1Qi10cYGnS6Vb6Pxzz8fsPUY4fsSJn&new=1",
+      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HK9K1GqjQZC3hP6Ay31jhCe8umci1O1kS1su8FTt&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792297637%26ver%3D7033%26signature%3Drzyvhlz-IMjjl%2AtClOGudEcNhKp2TerD8Rnsh9qfB8UVPkWUkLSl69VuKF4nSmBxyKmGW6IVYPwK4Q0VLHbfcr%2ANBRz%2A-MWRXp1Qi10cYGnS6Vb6Pxzz8fsPUY4fsSJn%26new%3D1",
       "published_at": "2026-10-17T09:46:56Z",
       "authors": [],
       "venue": "",
@@ -2688,55 +2745,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "e879be1befb70532",
-      "kind": "article",
-      "title": "Gemini 4 Argon: Built to solve your hardest problems",
-      "source": "Google AI",
-      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
-      "published_at": "2026-10-13T16:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Google",
-        "Official"
-      ],
-      "verification": "官方来源",
-      "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
-      "key_points": [
-        "We’re giving developers, enterprises, scientists, and consumers access to our latest frontier model.",
-        "Argon excels at deep work in complex, real-world tasks across domains including coding, finance, legal, cybersecurity, and science.",
-        "Its depth and precision across multi-step tasks leads Argon to outperform other frontier models on benchmarks across domains , ranking #1 on the Vals Index , which measures model performance across critical economic sectors like finance, coding, legal, and tax work.",
-        "The model launches today at an introductory price 1 of $2 per million input tokens and $10 per million output tokens (with cached input tokens at 95% off)."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "We’re giving developers, enterprises, scientists, and consumers access to our latest frontier model.",
-            "Argon excels at deep work in complex, real-world tasks across domains including coding, finance, legal, cybersecurity, and science.",
-            "Its depth and precision across multi-step tasks leads Argon to outperform other frontier models on benchmarks across domains , ranking #1 on the Vals Index , which measures model performance across critical economic sectors like finance, coding, legal, and tax work.",
-            "The model launches today at an introductory price 1 of $2 per million input tokens and $10 per million output tokens (with cached input tokens at 95% off)."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "We’re giving developers, enterprises, scientists, and consumers access to our latest frontier model.",
-            "Argon excels at deep work in complex, real-world tasks across domains including coding, finance, legal, cybersecurity, and science. Its depth and precision across multi-step tasks leads Argon to outperform other frontier models on benchmarks across domains , ranking #1 on the Vals Index , which measures model performance across critical economic sectors like finance, coding, legal, and tax work.",
-            "The model launches today at an introductory price 1 of $2 per million input tokens and $10 per million output tokens (with cached input tokens at 95% off)."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "demis-frontier-ai-framework-20260714",
       "kind": "social",
       "title": "A Framework for Frontier AI and the Dawning of a New Age",
@@ -2978,46 +2986,6 @@
             "Check out the latest AI news from September 2026 in our monthly roundup.",
             "Gemini 4 Argon leads our new frontier models with advanced reasoning for complex tasks."
           ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "9de37b3516cac029",
-      "kind": "article",
-      "title": "AI cracked the Navier–Stokes challenge. What does that mean for physics?",
-      "source": "Nature",
-      "source_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9SQkRIbk1ZUnRra3R0MVhYTWVsZjVXUVEzM3FoMzhxSktBWm5URU9UbVVLbnZCdVRmWUhjOEEzVTR0b1NQVkFhbHBXZzFtdXg5SzY1QWtubUF3clNrR1Zr?oc=5",
-      "published_at": "2026-09-18T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "AI cracked the Navier–Stokes challenge. What does that mean for physics? Nature",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9SQkRIbk1ZUnRra3R0MVhYTWVsZjVXUVEzM3FoMzhxSktBWm5URU9UbVVLbnZCdVRmWUhjOEEzVTR0b1NQVkFhbHBXZzFtdXg5SzY1QWtubUF3clNrR1Zr?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "AI cracked the Navier–Stokes challenge. What does that mean for physics? Nature"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -3315,53 +3283,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "3449f9032f48b162",
-      "kind": "article",
-      "title": "Granite Switch 4.1: Chat, Decisions, and Speech from One Endpoint",
-      "source": "Hugging Face",
-      "source_url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
-      "published_at": "2026-10-15T20:34:01Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Hugging Face",
-        "Open Source"
-      ],
-      "verification": "官方来源",
-      "summary": "A Blog post by IBM Granite on Hugging Face",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
-      "key_points": [
-        "Introduced last spring, the Granite Switch project enables a modular approach to model development.",
-        "Now Granite Switch 4.1 models, armed with a Decision adapter and the fastest ASR model on the OpenASR leaderboard, can move efficiently between natural-language responses, general and specialized decisions, and speech-to-text tasks—all from one hosted endpoint.",
-        "Specifically, Granite-Switch-4.1-8B and -30B models are configured to include: A new Decision aLoRA for general-purpose decision-making (e.g. v1/systemone),"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "A Blog post by IBM Granite on Hugging Face"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Introduced last spring, the Granite Switch project enables a modular approach to model development.",
-            "Now Granite Switch 4.1 models, armed with a Decision adapter and the fastest ASR model on the OpenASR leaderboard, can move efficiently between natural-language responses, general and specialized decisions, and speech-to-text tasks—all from one hosted endpoint.",
-            "Specifically, Granite-Switch-4.1-8B and -30B models are configured to include: A new Decision aLoRA for general-purpose decision-making (e.g. v1/systemone),"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Introduced last spring, the Granite Switch project enables a modular approach to model development. Now Granite Switch 4.1 models, armed with a Decision adapter and the fastest ASR model on the OpenASR leaderboard, can move efficiently between natural-language responses, general and specialized decisions, and speech-to-text tasks—all from one hosted endpoint.",
-            "Specifically, Granite-Switch-4.1-8B and -30B models are configured to include:",
-            "A new Decision aLoRA for general-purpose decision-making (e.g. v1/systemone),"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "850e451d6d4d7efd",
       "kind": "article",
       "title": "Google Beam expands with new regions, partners, and customers",
@@ -3413,6 +3334,53 @@
       "reading_minutes": 1
     },
     {
+      "id": "3449f9032f48b162",
+      "kind": "article",
+      "title": "Granite Switch 4.1: Chat, Decisions, and Speech from One Endpoint",
+      "source": "Hugging Face",
+      "source_url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
+      "published_at": "2026-10-15T20:34:01Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Hugging Face",
+        "Open Source"
+      ],
+      "verification": "官方来源",
+      "summary": "A Blog post by IBM Granite on Hugging Face",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
+      "key_points": [
+        "Introduced last spring, the Granite Switch project enables a modular approach to model development.",
+        "Now Granite Switch 4.1 models, armed with a Decision adapter and the fastest ASR model on the OpenASR leaderboard, can move efficiently between natural-language responses, general and specialized decisions, and speech-to-text tasks—all from one hosted endpoint.",
+        "Specifically, Granite-Switch-4.1-8B and -30B models are configured to include: A new Decision aLoRA for general-purpose decision-making (e.g. v1/systemone),"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "A Blog post by IBM Granite on Hugging Face"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Introduced last spring, the Granite Switch project enables a modular approach to model development.",
+            "Now Granite Switch 4.1 models, armed with a Decision adapter and the fastest ASR model on the OpenASR leaderboard, can move efficiently between natural-language responses, general and specialized decisions, and speech-to-text tasks—all from one hosted endpoint.",
+            "Specifically, Granite-Switch-4.1-8B and -30B models are configured to include: A new Decision aLoRA for general-purpose decision-making (e.g. v1/systemone),"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Introduced last spring, the Granite Switch project enables a modular approach to model development. Now Granite Switch 4.1 models, armed with a Decision adapter and the fastest ASR model on the OpenASR leaderboard, can move efficiently between natural-language responses, general and specialized decisions, and speech-to-text tasks—all from one hosted endpoint.",
+            "Specifically, Granite-Switch-4.1-8B and -30B models are configured to include:",
+            "A new Decision aLoRA for general-purpose decision-making (e.g. v1/systemone),"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "981fb38639007d1d",
       "kind": "article",
       "title": "AstraZeneca Strikes Up to $1.5 Billion AI Drug Discovery Deal With Insitro",
@@ -3438,6 +3406,46 @@
         {
           "title": "内容概览",
           "body": "AstraZeneca Strikes Up to $1.5 Billion AI Drug Discovery Deal With Insitro WSJ"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "2d8a4c8b0ba90f70",
+      "kind": "article",
+      "title": "CERN and Mistral join forces to accelerate AI for science – Home",
+      "source": "Home | CERN",
+      "source_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPQllxbHdUcnp1V0NUay1vZUlyNnJTNjJmZXNsbWN6Q1JCM2ZRRUNHWjVQRjYydHBlLU82UWJlUUhzX2JCc3h4TVFCUEZkT2RNLUpZMm9WLUdLNlB2ZG1ScXBJZ1hVM1ctd0JLUU9LWEluaTR5eG5HMHg4UGZGQnBYWkRB?oc=5",
+      "published_at": "2026-10-15T10:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "CERN and Mistral join forces to accelerate AI for science – Home Home | CERN",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPQllxbHdUcnp1V0NUay1vZUlyNnJTNjJmZXNsbWN6Q1JCM2ZRRUNHWjVQRjYydHBlLU82UWJlUUhzX2JCc3h4TVFCUEZkT2RNLUpZMm9WLUdLNlB2ZG1ScXBJZ1hVM1ctd0JLUU9LWEluaTR5eG5HMHg4UGZGQnBYWkRB?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "CERN and Mistral join forces to accelerate AI for science – Home Home | CERN"
         },
         {
           "title": "公开页面要点",
@@ -3590,46 +3598,6 @@
             "You can head on to the Hugging Face space and generate some images right now!",
             "One model for text-to-image, multi-reference image-to-image, and bounding-box layout control."
           ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "752243b6c74c9e39",
-      "kind": "article",
-      "title": "New ‘First Proof’ exam reveals how AI-powered math is a pay-to-play sport",
-      "source": "Scientific American",
-      "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOZXFZcWt3UDhwOUJHbGIyN01wdGM4Z01rSDlQc1R3b1J5UWhHT19NUWotTkRFbVQ2UkxqcHVKSEt1YUwzaVRTQlU1NktTaVhoR3RuSXA4SzU3azFuNGhJbVp0WmVkZVo5X2l0aVFpQ2JGeWJYX1QzTmxTV0IxZHI5WGxzZzZUUHg0SUNNOE9weDBkeE0yZFVzMHBmLWtWRlpnd1RKZnZnSDVZbmVoallTbGprcGMxOFU?oc=5",
-      "published_at": "2026-10-14T19:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "New ‘First Proof’ exam reveals how AI-powered math is a pay-to-play sport Scientific American",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOZXFZcWt3UDhwOUJHbGIyN01wdGM4Z01rSDlQc1R3b1J5UWhHT19NUWotTkRFbVQ2UkxqcHVKSEt1YUwzaVRTQlU1NktTaVhoR3RuSXA4SzU3azFuNGhJbVp0WmVkZVo5X2l0aVFpQ2JGeWJYX1QzTmxTV0IxZHI5WGxzZzZUUHg0SUNNOE9weDBkeE0yZFVzMHBmLWtWRlpnd1RKZnZnSDVZbmVoallTbGprcGMxOFU?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "New ‘First Proof’ exam reveals how AI-powered math is a pay-to-play sport Scientific American"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -3917,6 +3885,46 @@
       "reading_minutes": 1
     },
     {
+      "id": "91acac9c4120bfb0",
+      "kind": "article",
+      "title": "AMD to buy Fei-Fei Li's World Labs in $8.2 billion bet on 'physical AI'",
+      "source": "Reuters",
+      "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUEpLOGExLXd6b0dKeXJadmdubW9zdWZzTDB6eVhLb0RSN3RSQTYyenBJdTVRdmR6Vm5jRnp4VHVQQ1NEbGFQb1J0V08xcThIRUs1aG5NQ0piLXhEQTRhcXZQNEZkMUVuaHVyLTRNVjhjbDEtZmxuTGpuR2d1ZDU2b1pGdkxqS1o2TUNDcUMyaFUzRVdmUUpPQndkdEZMZw?oc=5",
+      "published_at": "2026-09-28T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Researcher Watch",
+        "Vision",
+        "World Models"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "AMD to buy Fei-Fei Li's World Labs in $8.2 billion bet on 'physical AI' Reuters",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUEpLOGExLXd6b0dKeXJadmdubW9zdWZzTDB6eVhLb0RSN3RSQTYyenBJdTVRdmR6Vm5jRnp4VHVQQ1NEbGFQb1J0V08xcThIRUs1aG5NQ0piLXhEQTRhcXZQNEZkMUVuaHVyLTRNVjhjbDEtZmxuTGpuR2d1ZDU2b1pGdkxqS1o2TUNDcUMyaFUzRVdmUUpPQndkdEZMZw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AMD to buy Fei-Fei Li's World Labs in $8.2 billion bet on 'physical AI' Reuters"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "0df5597e0f6bc79a",
       "kind": "article",
       "title": "AMD to buy Fei-Fei Li’s AI start-up for $8bn",
@@ -3981,45 +3989,6 @@
         {
           "title": "内容概览",
           "body": "AMD to Buy Fei-Fei Li’s World Labs AI Startup for $8.2 Billion Bloomberg.com"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "91acac9c4120bfb0",
-      "kind": "article",
-      "title": "AMD to buy Fei-Fei Li's World Labs in $8.2 billion bet on 'physical AI'",
-      "source": "Reuters",
-      "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUEpLOGExLXd6b0dKeXJadmdubW9zdWZzTDB6eVhLb0RSN3RSQTYyenBJdTVRdmR6Vm5jRnp4VHVQQ1NEbGFQb1J0V08xcThIRUs1aG5NQ0piLXhEQTRhcXZQNEZkMUVuaHVyLTRNVjhjbDEtZmxuTGpuR2d1ZDU2b1pGdkxqS1o2TUNDcUMyaFUzRVdmUUpPQndkdEZMZw?oc=5",
-      "published_at": "2026-09-28T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Founder Watch",
-        "Embodied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "AMD to buy Fei-Fei Li's World Labs in $8.2 billion bet on 'physical AI' Reuters",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUEpLOGExLXd6b0dKeXJadmdubW9zdWZzTDB6eVhLb0RSN3RSQTYyenBJdTVRdmR6Vm5jRnp4VHVQQ1NEbGFQb1J0V08xcThIRUs1aG5NQ0piLXhEQTRhcXZQNEZkMUVuaHVyLTRNVjhjbDEtZmxuTGpuR2d1ZDU2b1pGdkxqS1o2TUNDcUMyaFUzRVdmUUpPQndkdEZMZw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "AMD to buy Fei-Fei Li's World Labs in $8.2 billion bet on 'physical AI' Reuters"
         },
         {
           "title": "公开页面要点",
@@ -4115,12 +4084,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "f5a8c050c91ad738",
+      "id": "0596973c4a4033f9",
       "kind": "social",
-      "title": "This works well. Screenshot of credit card is the easiest way, unless you want to fill out the secure vault data. Seems a bit silly to hand your credit card to people you don’t know at a restaurant, but not to Grok Bot.",
+      "title": "Upgrades",
       "source": "X",
-      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE15dmg5X0ZGbjFscWxkTmxEYTVxQndmZkN5dE4wQl9BTzR4Qzg5eV9lOUVHaVJRTE93bDJyMXowOUVMOXJBUVRnYTNxOTg1d21WczVEX0Z0Q3ZSOEdXOVE?oc=5",
-      "published_at": "2026-10-18T02:03:33Z",
+      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1IZlhwbVctamFjVHh4cjBGak81ZDRIdFlPWGJJMFNJMGFPZjdIRHRSWGZwdE9EOTZjUnFuamtxUVFidVZiSnlZZlZTNnFYMHV3eW9mMXpFWm5zSzhKbkE?oc=5",
+      "published_at": "2026-10-18T02:18:06Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -4129,17 +4098,97 @@
         "First-party Post"
       ],
       "verification": "公开平台索引，需查看原帖",
-      "summary": "This works well. Screenshot of credit card is the easiest way, unless you want to fill out the secure vault data. Seems a bit silly to hand your credit card to people you don’t know at a restaurant, but not to Grok Bot. X",
+      "summary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE15dmg5X0ZGbjFscWxkTmxEYTVxQndmZkN5dE4wQl9BTzR4Qzg5eV9lOUVHaVJRTE93bDJyMXowOUVMOXJBUVRnYTNxOTg1d21WczVEX0Z0Q3ZSOEdXOVE?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1IZlhwbVctamFjVHh4cjBGak81ZDRIdFlPWGJJMFNJMGFPZjdIRHRSWGZwdE9EOTZjUnFuamtxUVFidVZiSnlZZlZTNnFYMHV3eW9mMXpFWm5zSzhKbkE?oc=5&hl=en-US&gl=US&ceid=US:en",
       "key_points": [
         "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "This works well. Screenshot of credit card is the easiest way, unless you want to fill out the secure vault data. Seems a bit silly to hand your credit card to people you don’t know at a restaurant, but not to Grok Bot. X"
+          "body": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "4bf266a0053d24d4",
+      "kind": "social",
+      "title": "Our team makes around around 20 improvements per day to Grok @Bot",
+      "source": "X",
+      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE43LVhsWl96MWhuWXdvckZjaUMteHFwZUpBYlhndElmNDRVTzg3QWRWOGdHT2JHdld5ek9SRElkZ2R4ekl2cjBaaUNtMTNaVVBNVTdIMkZOU1dLU0RXb2c?oc=5",
+      "published_at": "2026-10-18T02:14:55Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "Our team makes around around 20 improvements per day to Grok @Bot X",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE43LVhsWl96MWhuWXdvckZjaUMteHFwZUpBYlhndElmNDRVTzg3QWRWOGdHT2JHdld5ek9SRElkZ2R4ekl2cjBaaUNtMTNaVVBNVTdIMkZOU1dLU0RXb2c?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Our team makes around around 20 improvements per day to Grok @Bot X"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "9eed228d4a5c1dd3",
+      "kind": "social",
+      "title": "Try out Grok @Bot!",
+      "source": "X",
+      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE82LVY5TEVWbkdhQUcxN0dYX045bng3ZTl3VUxnZUVWSURtek5DNFV2QVR3ZjdLenhZV0FoTFVMVExxN3BiZE5VQ3NQTVZ3M3NMS20xdlNJVkpmVGFQNlE?oc=5",
+      "published_at": "2026-10-18T01:55:37Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE82LVY5TEVWbkdhQUcxN0dYX045bng3ZTl3VUxnZUVWSURtek5DNFV2QVR3ZjdLenhZV0FoTFVMVExxN3BiZE5VQ3NQTVZ3M3NMS20xdlNJVkpmVGFQNlE?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
         },
         {
           "title": "公开页面要点",
@@ -4180,126 +4229,6 @@
         {
           "title": "内容概览",
           "body": "This really works! Grok @Bot can pay for itself. X"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "b8b82069f6b99a52",
-      "kind": "social",
-      "title": "Grok @Bot got much faster",
-      "source": "X",
-      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1DSkM2QlY2cVRuQ052QjJuelpOX1JMOVBqQ29LRFVnTlNvUGdReHhNSHE1eTFpV1JvNmFCYUZ1YU03TTZXY080dTFKRHhhTTJhQkV4b2F0S0t5VlJvSVE?oc=5",
-      "published_at": "2026-10-16T23:35:17Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1DSkM2QlY2cVRuQ052QjJuelpOX1JMOVBqQ29LRFVnTlNvUGdReHhNSHE1eTFpV1JvNmFCYUZ1YU03TTZXY080dTFKRHhhTTJhQkV4b2F0S0t5VlJvSVE?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "f2cbc80ab835699b",
-      "kind": "social",
-      "title": "Also, ask Grok @Bot to connect to your 𝕏 DMs. Best way to use it.",
-      "source": "X",
-      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9xaFJ3c1lLYi1nOVV5R18ybUdIak5Dd1lyR3UxSUFJUmtwdFVwOWZHalQtcVJYT083a2RPRzNad0o2bHZ1NldpRmhOdU50eExZaDROR1FlWkxzYUNvd0E?oc=5",
-      "published_at": "2026-10-16T23:33:46Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Also, ask Grok @Bot to connect to your 𝕏 DMs. Best way to use it. X",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9xaFJ3c1lLYi1nOVV5R18ybUdIak5Dd1lyR3UxSUFJUmtwdFVwOWZHalQtcVJYT083a2RPRzNad0o2bHZ1NldpRmhOdU50eExZaDROR1FlWkxzYUNvd0E?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Also, ask Grok @Bot to connect to your 𝕏 DMs. Best way to use it. X"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "6fbfdbe0c419a028",
-      "kind": "social",
-      "title": "We are putting a lot of effort into a specialized Hagglebot for business use, as we think it could improve enterprise cost-efficiency by 5% or more. Applied to the global GDP, this could be up to $6 trillion/year in savings, delivering an immediate and measurable",
-      "source": "X",
-      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBvMUltOVhFUEZSSElNLXVFdVpGazBkSjdZWExISHZyRmprcEVZMW1jcnRDV1oxQ2I3c3VnaDZWVmR5QzZackpjWkgwY2F2OEFlUEVrS2paZEtUZjhtOUE?oc=5",
-      "published_at": "2026-10-16T18:26:06Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "We are putting a lot of effort into a specialized Hagglebot for business use, as we think it could improve enterprise cost-efficiency by 5% or more. Applied to the global GDP, this could be up to $6 trillion/year in savings, delivering an immediate and measurable X",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBvMUltOVhFUEZSSElNLXVFdVpGazBkSjdZWExISHZyRmprcEVZMW1jcnRDV1oxQ2I3c3VnaDZWVmR5QzZackpjWkgwY2F2OEFlUEVrS2paZEtUZjhtOUE?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "We are putting a lot of effort into a specialized Hagglebot for business use, as we think it could improve enterprise cost-efficiency by 5% or more. Applied to the global GDP, this could be up to $6 trillion/year in savings, delivering an immediate and measurable X"
         },
         {
           "title": "公开页面要点",
@@ -4942,6 +4871,57 @@
       "reading_minutes": 1
     },
     {
+      "id": "ca23371ec4c7e3e6",
+      "kind": "article",
+      "title": "It’s the Humidity: How International Researchers in Poland, Deep Learning and NVIDIA GPUs Could Change the Forecast",
+      "source": "NVIDIA AI",
+      "source_url": "https://blogs.nvidia.com/blog/humidity/",
+      "published_at": "2025-09-02T13:00:15Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "NVIDIA",
+        "Infrastructure"
+      ],
+      "verification": "官方来源",
+      "summary": "For more than a century, meteorologists have chased storms with chalkboards, equations, and now, supercomputers. But for all the progress, they still stumble over one deceptively simple ingredient: water vapor. Humidity is the invisible fuel for thunderstorms, flash floods, and hurricanes. It’s the difference between a passing sprinkle and a summer downpour that sends you […]",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://blogs.nvidia.com/blog/humidity/",
+      "key_points": [
+        "For more than a century, meteorologists have chased storms with chalkboards, equations, and now, supercomputers.",
+        "But for all the progress, they still stumble over one deceptively simple ingredient: water vapor.",
+        "Humidity is the invisible fuel for thunderstorms, flash floods, and hurricanes.",
+        "It’s the difference between a passing sprinkle and a summer downpour that sends you sprinting for cover.",
+        "And until now, satellites have struggled to capture it with the detail needed to warn us before skies crack open."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "For more than a century, meteorologists have chased storms with chalkboards, equations, and now, supercomputers. But for all the progress, they still stumble over one deceptively simple ingredient: water vapor. Humidity is the invisible fuel for thunderstorms, flash floods, and hurricanes. It’s the difference between a passing sprinkle and a summer downpour that sends you […]"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "For more than a century, meteorologists have chased storms with chalkboards, equations, and now, supercomputers.",
+            "But for all the progress, they still stumble over one deceptively simple ingredient: water vapor.",
+            "Humidity is the invisible fuel for thunderstorms, flash floods, and hurricanes.",
+            "It’s the difference between a passing sprinkle and a summer downpour that sends you sprinting for cover.",
+            "And until now, satellites have struggled to capture it with the detail needed to warn us before skies crack open."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "For more than a century, meteorologists have chased storms with chalkboards, equations, and now, supercomputers. But for all the progress, they still stumble over one deceptively simple ingredient: water vapor.",
+            "Humidity is the invisible fuel for thunderstorms, flash floods, and hurricanes. It’s the difference between a passing sprinkle and a summer downpour that sends you sprinting for cover. And until now, satellites have struggled to capture it with the detail needed to warn us before skies crack open.",
+            "A team from the Wrocław University of Environmental and Life Sciences (UPWr) may help change that. In a paper published this month in Satellite Navigation , researchers describe how deep learning can transform blurry global navigation satellite system (GNSS)-based snapshots of the atmosphere into sharp 3D maps of humidity, revealing the hidden swirls that shape local weather."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "0e3206d17b886dcf",
       "kind": "article",
       "title": "OpenAI is sued over rogue AI Hugging Face cyberattack",
@@ -5083,45 +5063,6 @@
         {
           "title": "内容概览",
           "body": "From a family farm to an AI startup: A CWRU alumni entrepreneur’s path Case Western Reserve University"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "970a036d2a2c060c",
-      "kind": "article",
-      "title": "Anthropic’s AI Safety Bill Has an Alarming Threshold for Government Action",
-      "source": "Mother Jones",
-      "source_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPNk85UDhheTRLWlR3YUtHQ2FjUnU2dVg5Q3dIa1Y4b1p5bS1XajV1REJSMWotUUN4XzZLZGNIajBmRm45M0p5aTdBb0p3R082SHJFNVVXcFRKXzZBZGJsRURfWXhBNmRNdEJYYnJsaGVGM3ZNSXV5UE1NSkZTS0hSU2FsSS1nUVBnSGtBdGk2Sm11S0xqUkZNT3dRTDNTNVpwel9lS0pycU9jZHkxZUFRb1FCemdJdDdKUkhr?oc=5",
-      "published_at": "2026-10-17T19:21:24Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Anthropic’s AI Safety Bill Has an Alarming Threshold for Government Action Mother Jones",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPNk85UDhheTRLWlR3YUtHQ2FjUnU2dVg5Q3dIa1Y4b1p5bS1XajV1REJSMWotUUN4XzZLZGNIajBmRm45M0p5aTdBb0p3R082SHJFNVVXcFRKXzZBZGJsRURfWXhBNmRNdEJYYnJsaGVGM3ZNSXV5UE1NSkZTS0hSU2FsSS1nUVBnSGtBdGk2Sm11S0xqUkZNT3dRTDNTNVpwel9lS0pycU9jZHkxZUFRb1FCemdJdDdKUkhr?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Anthropic’s AI Safety Bill Has an Alarming Threshold for Government Action Mother Jones"
         },
         {
           "title": "公开页面要点",
@@ -5434,6 +5375,45 @@
         {
           "title": "内容概览",
           "body": "Introducing Reflection Beam: an open-weight model for agentic coding on AWS | Amazon Web Services Amazon Web Services (AWS)"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "54eda87f4240739f",
+      "kind": "article",
+      "title": "China’s AI Safety Money Problem",
+      "source": "ChinaTalk | Jordan Schneider",
+      "source_url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1ZaEN0VFJMZi1ISU9sOUFVaWg2TzBjMFBkMFpnRjF2ZnljR0trR1V2azlWLVdCZlg1YTQ0eHpXWVctMTJJUHV2TVdNay13QUV0alZkMG9fZG9kR0UzOXFka2lCM2ZvVlBDWW9JTw?oc=5",
+      "published_at": "2026-10-05T11:09:38Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "China’s AI Safety Money Problem ChinaTalk | Jordan Schneider",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1ZaEN0VFJMZi1ISU9sOUFVaWg2TzBjMFBkMFpnRjF2ZnljR0trR1V2azlWLVdCZlg1YTQ0eHpXWVctMTJJUHV2TVdNay13QUV0alZkMG9fZG9kR0UzOXFka2lCM2ZvVlBDWW9JTw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "China’s AI Safety Money Problem ChinaTalk | Jordan Schneider"
         },
         {
           "title": "公开页面要点",
