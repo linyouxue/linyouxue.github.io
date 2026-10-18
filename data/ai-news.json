@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-17T20:33:34Z",
+  "generated_at": "2026-10-18T04:27:16Z",
   "item_count": 131,
   "category_counts": {
     "research": 20,
@@ -18,8 +18,8 @@
     "lead": "本期共整理 131 条有效信号。下面不是新闻复述，而是把论文、公司、创业与政策放在同一张图里后的编辑性判断。",
     "paragraphs": [
       "研究侧共收录 20 条信号，重点包括 《BACE: LLM-based Code Generation through Bayesian Anchored…》、《Reward Hacking Benchmark: Measuring Exploits in LLM Agents…》。与只看榜单相比，更值得持续观察的是论文能否把 Agent 的可靠性、评测完整性与推理成本一起向前推进。",
-      "AI 跨领域贡献收录 16 条，代表性事件包括 《Claude Fable 5 协助找到雅可比猜想的显式三维反例》、《Proof-based general-purpose computing with Magnetar》。这类结果会区分官方论文、可核验反例、媒体报道与尚待同行评审的社交平台首发，避免把‘可计算验证’和‘完成学术确认’混为一谈。",
-      "中国 AI 板块本期收录 16 条动态，已覆盖 Qwen / 通义千问、腾讯元宝 / 混元、DeepSeek。代表性变化包括 《DeepSeek 新模型 发布 ,性能涨了费用降了,许愿式编程成真》、《刚刚, DeepSeek 发布 “旗舰级”小更新,还顺手放了个“大招”》；竞争正在从单次模型发布延伸到开源策略、Agent 产品入口、国产算力适配和价格体系。",
+      "AI 跨领域贡献收录 16 条，代表性事件包括 《Claude Fable 5 协助找到雅可比猜想的显式三维反例》、《OpenAI 模型推翻平面单位距离问题中的长期猜想》。这类结果会区分官方论文、可核验反例、媒体报道与尚待同行评审的社交平台首发，避免把‘可计算验证’和‘完成学术确认’混为一谈。",
+      "中国 AI 板块本期收录 16 条动态，已覆盖 Qwen / 通义千问、腾讯元宝 / 混元、DeepSeek。代表性变化包括 《DeepSeek 新模型 发布 ,拿下开源模型第一》、《DeepSeek 新模型 发布 ,性能涨了费用降了,许愿式编程成真》；竞争正在从单次模型发布延伸到开源策略、Agent 产品入口、国产算力适配和价格体系。",
       "产业侧共有 30 条前沿实验室与大厂动态、14 条关键人物公开信号，另有 13 条创业和 10 条政策安全更新。模型能力、算力供给、创始人判断、产品分发与合规成本正在变成同一个竞争问题。"
     ],
     "takeaways": [
@@ -45,7 +45,7 @@
       "字节豆包 / Seed": 0
     },
     "people_watch_coverage": {
-      "Elon Musk / xAI": 6,
+      "Elon Musk / xAI": 5,
       "Sam Altman / OpenAI": 1,
       "Dario Amodei / Anthropic": 0,
       "Demis Hassabis / DeepMind": 1,
@@ -54,7 +54,7 @@
       "姚顺雨 / Agents": 1,
       "Ilya Sutskever / SSI": 0,
       "Andrej Karpathy / Eureka Labs": 0,
-      "李飞飞 / Stanford·World Labs": 4,
+      "李飞飞 / Stanford·World Labs": 5,
       "Noam Brown / Reasoning": 0,
       "梁文锋 / DeepSeek": 0,
       "杨植麟 / 月之暗面": 0
@@ -74,12 +74,6 @@
       "note": ""
     },
     {
-      "name": "Google DeepMind",
-      "status": "ok",
-      "count": 8,
-      "note": ""
-    },
-    {
       "name": "NVIDIA AI",
       "status": "ok",
       "count": 6,
@@ -92,21 +86,27 @@
       "note": ""
     },
     {
+      "name": "Google DeepMind",
+      "status": "error",
+      "count": 0,
+      "note": "not well-formed (invalid token): line 1, column 0"
+    },
+    {
       "name": "Google AI",
       "status": "ok",
       "count": 7,
       "note": ""
     },
     {
-      "name": "OpenAlex Conference Index",
+      "name": "Microsoft Research",
       "status": "ok",
-      "count": 20,
+      "count": 6,
       "note": ""
     },
     {
-      "name": "AI for Mathematics & Science",
+      "name": "OpenAlex Conference Index",
       "status": "ok",
-      "count": 12,
+      "count": 20,
       "note": ""
     },
     {
@@ -128,6 +128,12 @@
       "note": ""
     },
     {
+      "name": "AI for Mathematics & Science",
+      "status": "ok",
+      "count": 12,
+      "note": ""
+    },
+    {
       "name": "Anthropic",
       "status": "ok",
       "count": 8,
@@ -137,12 +143,6 @@
       "name": "Frontier Lab Monitor",
       "status": "ok",
       "count": 9,
-      "note": ""
-    },
-    {
-      "name": "Microsoft Research",
-      "status": "ok",
-      "count": 6,
       "note": ""
     },
     {
@@ -245,24 +245,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "858943e639d89663",
-      "category": "impact",
-      "title": "Magnetar brings faster, simpler, quantum-ready zero-knowledge proofs",
-      "summary": "Zero-knowledge proofs can verify computing results without rerunning workloads or exposing sensitive data. Magnetar helps bring them into the mainstream with support for standard programming languages, major speed gains, and quantum-resistant security. The post Proof-based general-purpose computing with Magnetar appeared first on Microsoft Research .",
-      "source": "Microsoft Research",
-      "url": "https://www.microsoft.com/en-us/research/blog/proof-based-general-purpose-computing-with-magnetar/",
-      "published_at": "2026-10-15T16:00:00Z",
-      "tags": [
-        "Microsoft",
-        "Research"
-      ],
-      "importance": 106,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=858943e639d89663",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "unit-distance-openai-20260520",
       "category": "impact",
       "title": "OpenAI 模型推翻平面单位距离问题中的长期猜想",
@@ -282,6 +264,24 @@
       "reader_url": "./reader.html?id=unit-distance-openai-20260520",
       "reader_status": "open-pdf-cached",
       "cached_pdf": "./papers/unit-distance-openai-20260520.pdf"
+    },
+    {
+      "id": "858943e639d89663",
+      "category": "impact",
+      "title": "Magnetar brings faster, simpler, quantum-ready zero-knowledge proofs",
+      "summary": "Zero-knowledge proofs can verify computing results without rerunning workloads or exposing sensitive data. Magnetar helps bring them into the mainstream with support for standard programming languages, major speed gains, and quantum-resistant security. The post Proof-based general-purpose computing with Magnetar appeared first on Microsoft Research .",
+      "source": "Microsoft Research",
+      "url": "https://www.microsoft.com/en-us/research/blog/proof-based-general-purpose-computing-with-magnetar/",
+      "published_at": "2026-10-15T16:00:00Z",
+      "tags": [
+        "Microsoft",
+        "Research"
+      ],
+      "importance": 105,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=858943e639d89663",
+      "reader_status": "public-page-excerpt"
     },
     {
       "id": "0c87891a24b6b10a",
@@ -319,24 +319,6 @@
       "verification": "MIT 官方个人主页基线 · 持续更新",
       "reader_url": "./reader.html?id=kaiming-he-research-watch",
       "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "51e2daa9cd8a3deb",
-      "category": "impact",
-      "title": "Introducing SynthID Bio",
-      "summary": "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
-      "source": "Google DeepMind",
-      "url": "https://deepmind.google/blog/introducing-synthid-bio/",
-      "published_at": "2026-09-30T15:03:07Z",
-      "tags": [
-        "DeepMind",
-        "Official"
-      ],
-      "importance": 103,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=51e2daa9cd8a3deb",
-      "reader_status": "summary-only"
     },
     {
       "id": "shunyu-yao-agent-watch",
@@ -582,42 +564,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "974c9e9820541901",
-      "category": "frontier",
-      "title": "Accelerating the search for antimicrobial peptides with Google Antigravity",
-      "summary": "Accelerating the search for novel antimicrobial peptides using Google Antigravity for Science.",
-      "source": "Google DeepMind",
-      "url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
-      "published_at": "2026-10-15T16:08:03Z",
-      "tags": [
-        "DeepMind",
-        "Official"
-      ],
-      "importance": 100,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=974c9e9820541901",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "00051b9d22302c85",
-      "category": "frontier",
-      "title": "Teaching students to think and learn through questions",
-      "summary": "Celebrate Teachers’ Day with AI for Educators in Brazilian Portuguese and see how Study Mode can help teachers support active, step-by-step learning.",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/teaching-students-to-think-and-learn-through-questions",
-      "published_at": "2026-10-15T13:00:00Z",
-      "tags": [
-        "OpenAI",
-        "Official"
-      ],
-      "importance": 100,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=00051b9d22302c85",
-      "reader_status": "summary-only"
-    },
-    {
       "id": "rhb-icml-2026",
       "category": "research",
       "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
@@ -641,6 +587,24 @@
       "reader_url": "./reader.html?id=rhb-icml-2026",
       "reader_status": "open-pdf-cached",
       "cached_pdf": "./papers/rhb-icml-2026.pdf"
+    },
+    {
+      "id": "00051b9d22302c85",
+      "category": "frontier",
+      "title": "Teaching students to think and learn through questions",
+      "summary": "Celebrate Teachers’ Day with AI for Educators in Brazilian Portuguese and see how Study Mode can help teachers support active, step-by-step learning.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/teaching-students-to-think-and-learn-through-questions",
+      "published_at": "2026-10-15T13:00:00Z",
+      "tags": [
+        "OpenAI",
+        "Official"
+      ],
+      "importance": 99,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=00051b9d22302c85",
+      "reader_status": "summary-only"
     },
     {
       "id": "b5361f00b4cceaee",
@@ -713,6 +677,24 @@
       "verification": "官方来源",
       "reader_url": "./reader.html?id=60978a38393edd95",
       "reader_status": "summary-only"
+    },
+    {
+      "id": "54d366bd1a1ba2fb",
+      "category": "frontier",
+      "title": "Redesigning source control at Anthropic",
+      "summary": "As our merges per day grew more than tenfold, source control became our biggest development bottleneck. Here, we share how we migrated to an in-house version control system in five months.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+      "published_at": "2026-10-13T00:00:00Z",
+      "tags": [
+        "Anthropic",
+        "Engineering"
+      ],
+      "importance": 99,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=54d366bd1a1ba2fb",
+      "reader_status": "public-page-excerpt"
     },
     {
       "id": "gpt5-protein-synthesis-20260205",
@@ -799,6 +781,25 @@
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=793b95e76526fd48",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "e92dd26e711ec035",
+      "category": "impact",
+      "title": "CERN and Mistral partner to build Flare, a new AI model for physics",
+      "summary": "CERN and Mistral partner to build Flare, a new AI model for physics Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOejlwRzRlN1BnaFhFZ1VYb0ZKSVFmN1NRcFppbWFLdXV3ZzEtdUFpc0RRcFNtTmRVeGhjX0pLVmV1bElvQmpFeVlsYkcwX0h2WDFQaksyZ2JYSng5c3MwbVJ2V20zN0hQYU1vNXc3bWZlWjlSX1ZwTHE2NnRmNzRjX3VodU5ZemRfU2NqaXdPWGVyNzJXWTYyU0I5dFFLSmZq?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-15T13:02:13Z",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "importance": 95,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=e92dd26e711ec035",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -1200,25 +1201,6 @@
       "reader_status": "abstract-only"
     },
     {
-      "id": "cc6abc9649d13508",
-      "category": "impact",
-      "title": "The rise of agentic AI in drug discovery from static tools to autonomous virtual scientists",
-      "summary": "The rise of agentic AI in drug discovery from static tools to autonomous virtual scientists Nature",
-      "source": "Nature",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE0zSnZwRjUwY0RlYnYyam9sYnVTYTgzUmNlOUJNdmFmU2FyQTlQRE1raGliWksxcVZ5QVpYbE9wM0JQQ0RTUUN6YmN2T201c2ZaTk9GMzFVRHBKWElSWlpB?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-12T13:25:12Z",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "importance": 95,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=cc6abc9649d13508",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "c6df12f30c1b147e",
       "category": "research",
       "title": "Context Selection for Hypothesis and Statistical Evidence Extraction from Full-Text Scientific Articles",
@@ -1293,6 +1275,25 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "1882747ca7ca2d9e",
+      "category": "impact",
+      "title": "TechBio 3.0 closes the drug discovery loop with multimodal AI and generative chemistry | npj Drug Discovery",
+      "summary": "TechBio 3.0 closes the drug discovery loop with multimodal AI and generative chemistry | npj Drug Discovery Nature",
+      "source": "Nature",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9HdzNZWlh2bU1BS3lrVHdvLV9ZZTdZT0ljZExidjd2RFBwbUpJVmJmZDVFVUVWTEtUbTdFUjlTV01UVnRLTlpVVV9QckdjcHNDeGpyQkkwc0xIZGdMTkFB?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-09T07:00:00Z",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "importance": 94,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=1882747ca7ca2d9e",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "9ea5613b4342bfde",
       "category": "impact",
       "title": "‘Breathtaking,’ ‘Devastating’: Mathematics Reels After New OpenAI Release",
@@ -1310,6 +1311,26 @@
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=9ea5613b4342bfde",
       "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "a55230407b7971f1",
+      "category": "china",
+      "title": "DeepSeek 新模型 发布 ,拿下开源模型第一",
+      "summary": "值得一提的是,就在新模型 发布 前两天, DeepSeek 还经历了一次近5小时的服务故障. 为此,官方不仅公开道歉,还给出了相当大方...",
+      "source": "微信公众号 · 科技每日推送",
+      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HK9K1GqjQVRMU4HviaCAhXgc5FNR8z8m4gR_ZSIm&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792297637%26ver%3D7033%26signature%3DOn9cphn3KRYcxLtDGa2gJCKyE0e1-7IHCkcDC2uKfpQlAzGnOCJcEv1rkjf3OIZi03FgbvogQd%2AkVje%2AgHdwqB8%2Aq6b%2A5RaRFwYAVukBdkPUxt%2AbYjbbJ39e97EovcUU%26new%3D1",
+      "published_at": "2026-10-18T03:50:53Z",
+      "tags": [
+        "微信公众号",
+        "DeepSeek",
+        "模型"
+      ],
+      "importance": 93,
+      "content_kind": "article",
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "reader_url": "./reader.html?id=a55230407b7971f1",
+      "index_url": "https://weixin.sogou.com/weixin?type=2&query=DeepSeek+%E5%8F%91%E5%B8%83",
+      "reader_status": "indexed-summary"
     },
     {
       "id": "59f3627f1f1aa06d",
@@ -1352,12 +1373,12 @@
       "reader_status": "indexed-summary"
     },
     {
-      "id": "d1881e41e535de96",
+      "id": "837c1768d8beb616",
       "category": "china",
       "title": "刚刚, DeepSeek 发布 新模型!用「许愿式编程」刷新斩杀线",
       "summary": "DeepSeek Harness 中完成.官方称,这些项目只用了较少的提示词和参考素材,交互轮次也很少.官方 发布 先看故宫 3D 建模.镜头...",
       "source": "微信公众号 · APPSO",
-      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HKnb02qjOTV2XgT2KaVDR5IrwnsEuWw0Mp_JvpKL&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792269216%26ver%3D7032%26signature%3DSxJR8eNaaj01gBGppZKwS3FYdmvkTaWj888TXShuXj-4XjuFolznuzbEUFrjWkgaUN1tKEOFsWe%2AvMCxAdqApgwGdoSf-%2AUvp2UyqUEZFhlKo6uEFMpYHMDfB6s9tu%2AJ%26new%3D1",
+      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HK9K1GqjQZC3hP6Ay31jhCe8umci1O1kS1su8FTt&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792297637%26ver%3D7033%26signature%3Drzyvhlz-IMjjl%2AtClOGudEcNhKp2TerD8Rnsh9qfB8UVPkWUkLSl69VuKF4nSmBxyKmGW6IVYPwK4Q0VLHbfcr%2ANBRz%2A-MWRXp1Qi10cYGnS6Vb6Pxzz8fsPUY4fsSJn%26new%3D1",
       "published_at": "2026-10-17T09:46:56Z",
       "tags": [
         "微信公众号",
@@ -1367,7 +1388,7 @@
       "importance": 93,
       "content_kind": "article",
       "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "reader_url": "./reader.html?id=d1881e41e535de96",
+      "reader_url": "./reader.html?id=837c1768d8beb616",
       "index_url": "https://weixin.sogou.com/weixin?type=2&query=DeepSeek+%E5%8F%91%E5%B8%83",
       "reader_status": "indexed-summary"
     },
@@ -1612,24 +1633,22 @@
       "reader_status": "indexed-summary"
     },
     {
-      "id": "604ce2083e7ddc7e",
-      "category": "china",
-      "title": "DeepSeek Harness桌面版 发布 ,还养了只萌宠",
-      "summary": "DeepSeek Harness桌面版 v0.2预览版终于正式 发布 了,Mac和Windows都能直接下载,我们以前用 DeepSeek Harness的时候,得自...",
-      "source": "微信公众号 · 阿伦AI工具",
-      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HAzpwGqjaDUumSNKBTZMpXgT9nBL7qnNZQBN95Kr&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1791027451%26ver%3D7004%26signature%3Dy-7sfmPpEhmzbfHRSsn%2AMFI%2AJNcBw-1hwwT0Ycqqf6szTXK2NKkUQpOublULm2jW7t%2A6HQbGP-RxS0%2Aca4ip8Nh7MP1hqwwfP%2A6K4n6xK6ece2qL7bfQpOwYstxggoMx%26new%3D1",
-      "published_at": "2026-10-03T05:00:21Z",
+      "id": "e879be1befb70532",
+      "category": "bigtech",
+      "title": "Gemini 4 Argon: Built to solve your hardest problems",
+      "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+      "source": "Google AI",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+      "published_at": "2026-10-13T16:00:00Z",
       "tags": [
-        "微信公众号",
-        "DeepSeek",
-        "模型"
+        "Google",
+        "Official"
       ],
-      "importance": 93,
+      "importance": 92,
       "content_kind": "article",
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "reader_url": "./reader.html?id=604ce2083e7ddc7e",
-      "index_url": "https://weixin.sogou.com/weixin?type=2&query=DeepSeek+%E5%8F%91%E5%B8%83",
-      "reader_status": "indexed-summary"
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=e879be1befb70532",
+      "reader_status": "public-page-excerpt"
     },
     {
       "id": "demis-frontier-ai-framework-20260714",
@@ -1723,24 +1742,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "1da087393d52a2d2",
-      "category": "bigtech",
-      "title": "Forecasting space weather risks on power grids",
-      "summary": "Extreme space-weather events can damage power systems on Earth and degrade GPS accuracy and satellite operations. A new machine learning system can predict where damage is likely to occur 30-60 minutes before a storm arrives. The post Forecasting space weather risks on power grids appeared first on Microsoft Research .",
-      "source": "Microsoft Research",
-      "url": "https://www.microsoft.com/en-us/research/blog/forecasting-space-weather-risks-on-power-grids/",
-      "published_at": "2026-09-30T16:00:00Z",
-      "tags": [
-        "Microsoft",
-        "Research"
-      ],
-      "importance": 90,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=1da087393d52a2d2",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "9de37b3516cac029",
       "category": "impact",
       "title": "AI cracked the Navier–Stokes challenge. What does that mean for physics?",
@@ -1779,6 +1780,24 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "1da087393d52a2d2",
+      "category": "bigtech",
+      "title": "Forecasting space weather risks on power grids",
+      "summary": "Extreme space-weather events can damage power systems on Earth and degrade GPS accuracy and satellite operations. A new machine learning system can predict where damage is likely to occur 30-60 minutes before a storm arrives. The post Forecasting space weather risks on power grids appeared first on Microsoft Research .",
+      "source": "Microsoft Research",
+      "url": "https://www.microsoft.com/en-us/research/blog/forecasting-space-weather-risks-on-power-grids/",
+      "published_at": "2026-09-30T16:00:00Z",
+      "tags": [
+        "Microsoft",
+        "Research"
+      ],
+      "importance": 89,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=1da087393d52a2d2",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "25c3f7b3a6fe47e8",
       "category": "bigtech",
       "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
@@ -1794,6 +1813,25 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=25c3f7b3a6fe47e8",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "46b74daa8aad9839",
+      "category": "impact",
+      "title": "Will physics be the next field to be turned upside down by AI?",
+      "summary": "Will physics be the next field to be turned upside down by AI? New Scientist",
+      "source": "New Scientist",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOQ2l4R0tGTlhPYk1Xektfb0QzQTRGMWpjYjFmZXRIUmdzUWV3YkJPaTI4djJqcUV2emdvbEZvYld2ZlFmUDN0ekxOcldNMF9mMjdBMmhQT0ZEZ0wzQVdzZ29xOGNTblBmTlEzWlhZdTdaYVhkRkZfMUw4N0NIeG9wQlh3V3BWT0dmRkU4WURaSHJaU1VEQ1lEZGJYSmhZM3pNVFNnbE8tQmd4cU4w?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-16T17:02:01Z",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "importance": 88,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=46b74daa8aad9839",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -1851,44 +1889,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "981fb38639007d1d",
-      "category": "impact",
-      "title": "AstraZeneca Strikes Up to $1.5 Billion AI Drug Discovery Deal With Insitro",
-      "summary": "AstraZeneca Strikes Up to $1.5 Billion AI Drug Discovery Deal With Insitro WSJ",
-      "source": "WSJ",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPYzJ4ZVJOeGdjS0xITnEyMmNUQnhJc2dwZ0V1ZG13VXJzclZrVUF0SXJOREVuVzhqU2ducUVhZ0JidE1HOXNrQURWWElEMGFZeklvOFI1N0pRY3cwWnZpcWRwakM0R1hIb29veGtvN2s1WHFkd3d4YlBOdlN6YTRoaUtTR3BkbkdrUmRKalVjZWN1WjkzcktOai11RTJOd1RpNE5jVjBtTEVKcG4xSzA0a05NX3dQQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-15T12:37:00Z",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "importance": 88,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=981fb38639007d1d",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "2d8a4c8b0ba90f70",
-      "category": "impact",
-      "title": "CERN and Mistral join forces to accelerate AI for science – Home",
-      "summary": "CERN and Mistral join forces to accelerate AI for science – Home Home | CERN",
-      "source": "Home | CERN",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPQllxbHdUcnp1V0NUay1vZUlyNnJTNjJmZXNsbWN6Q1JCM2ZRRUNHWjVQRjYydHBlLU82UWJlUUhzX2JCc3h4TVFCUEZkT2RNLUpZMm9WLUdLNlB2ZG1ScXBJZ1hVM1ctd0JLUU9LWEluaTR5eG5HMHg4UGZGQnBYWkRB?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-15T10:00:00Z",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "importance": 88,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=2d8a4c8b0ba90f70",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "850e451d6d4d7efd",
       "category": "bigtech",
       "title": "Google Beam expands with new regions, partners, and customers",
@@ -1904,6 +1904,25 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=850e451d6d4d7efd",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "981fb38639007d1d",
+      "category": "impact",
+      "title": "AstraZeneca Strikes Up to $1.5 Billion AI Drug Discovery Deal With Insitro",
+      "summary": "AstraZeneca Strikes Up to $1.5 Billion AI Drug Discovery Deal With Insitro WSJ",
+      "source": "WSJ",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPYzJ4ZVJOeGdjS0xITnEyMmNUQnhJc2dwZ0V1ZG13VXJzclZrVUF0SXJOREVuVzhqU2ducUVhZ0JidE1HOXNrQURWWElEMGFZeklvOFI1N0pRY3cwWnZpcWRwakM0R1hIb29veGtvN2s1WHFkd3d4YlBOdlN6YTRoaUtTR3BkbkdrUmRKalVjZWN1WjkzcktOai11RTJOd1RpNE5jVjBtTEVKcG4xSzA0a05NX3dQQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-15T12:37:00Z",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "importance": 87,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=981fb38639007d1d",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -1999,25 +2018,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "775de41536aa6b1e",
-      "category": "impact",
-      "title": "National Science Foundation awards $20M for an AI-driven network for soft-materials discovery",
-      "summary": "National Science Foundation awards $20M for an AI-driven network for soft-materials discovery Argonne National Laboratory (.gov)",
-      "source": "Argonne National Laboratory (.gov)",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOMFZLVlV0R0VCdG9wbXN3REs4UmFZTlFERWxuSjhPTE1WMmtsX1RDN18xdWZjOE5EYzdnSnZ3V3hWaUtRang3OGNobVY3ZGV1N082a2I1SXFiYW9xcE9MVVFhSTJkMjBmZmNFMlp6YTcycDZQbklqRnpVZkw3S1dtdHdCeHVndk1TSkVhZ1FfQVFfV3pZbDhuVUdzQkl3X09DT3hsMllGaUgyLVRFWUtXVnE5eFFnT3FuQ0E?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-14T12:00:00Z",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "importance": 87,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=775de41536aa6b1e",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "bfb46dcd0030bfd7",
       "category": "opensource",
       "title": "Run fast, private agents on-device with LFM2.5-24B-A2B",
@@ -2033,6 +2033,25 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=bfb46dcd0030bfd7",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "ac5a35639eba4c71",
+      "category": "impact",
+      "title": "Pharma.AI Fall 2026 Release Recap: Transforming Drug Discovery and Development Through Specialized Models and AI Agents",
+      "summary": "Pharma.AI Fall 2026 Release Recap: Transforming Drug Discovery and Development Through Specialized Models and AI Agents Insilico Medicine",
+      "source": "Insilico Medicine",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNT1RsVXVocGVvWTdtaUtJMWh1dFE0b25PQWxxRFZHNmVYQXNxWXR3d2ZRZUpVRUw3SjRTSVo5UlN6WTBaN3BQaEVkQjhjS3lMaW1nc09vNUhZTjVjTU1sTUp2QlptS094MzF0WmhlYXkzZldJNnRCbHZjQWtMUzV6cG9QaUVucGVpdHFHOU5ZWExJbEl3YnpROU1iRzVMRXJBU1dNUGtjS1A5TGxLa0tGQ1Q4R2RZTEJnVU5mN0c0dkNSUmlvS1UwOW5WRHFPcy1FdzM4WHhuVDY0WDg0NUFicENCcw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-13T16:00:00Z",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "importance": 87,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=ac5a35639eba4c71",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2088,6 +2107,25 @@
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=b358971df29545a3",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "0df5597e0f6bc79a",
+      "category": "voices",
+      "title": "AMD to buy Fei-Fei Li’s AI start-up for $8bn",
+      "summary": "AMD to buy Fei-Fei Li’s AI start-up for $8bn Financial Times",
+      "source": "Financial Times",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOaFcxM3NDUmVDUWZ0NTlJZjhrVjF6em5LaDdNdk15Ynk1b1ZKVkl4YnpORERyU3c0WkppWHI2YmRsYlFzcUFLZjV4MkxrZGZja0FKY21GdUZ2LTg5ejFub2hKdmpZbmVmcEZSU3hXbWtRelRZODQ4WGZtZi1DeTNOcHJhZmk?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-28T07:00:00Z",
+      "tags": [
+        "Researcher Watch",
+        "Vision",
+        "World Models"
+      ],
+      "importance": 84,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=0df5597e0f6bc79a",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2165,6 +2203,44 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "f5a8c050c91ad738",
+      "category": "voices",
+      "title": "This works well. Screenshot of credit card is the easiest way, unless you want to fill out the secure vault data. Seems a bit silly to hand your credit card to people you don’t know at a restaurant, but not to Grok Bot.",
+      "summary": "This works well. Screenshot of credit card is the easiest way, unless you want to fill out the secure vault data. Seems a bit silly to hand your credit card to people you don’t know at a restaurant, but not to Grok Bot. X",
+      "source": "X",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE15dmg5X0ZGbjFscWxkTmxEYTVxQndmZkN5dE4wQl9BTzR4Qzg5eV9lOUVHaVJRTE93bDJyMXowOUVMOXJBUVRnYTNxOTg1d21WczVEX0Z0Q3ZSOEdXOVE?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-18T02:03:33Z",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "importance": 80,
+      "content_kind": "social",
+      "verification": "公开平台索引，需查看原帖",
+      "reader_url": "./reader.html?id=f5a8c050c91ad738",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "5ca1f23f2a91c808",
+      "category": "voices",
+      "title": "This really works! Grok @Bot can pay for itself.",
+      "summary": "This really works! Grok @Bot can pay for itself. X",
+      "source": "X",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1ZclhsT1JycS1HNl95N01fWkJqU0tjWkxHOHJDdXQtYjZzTVp5dGstVENBQmhieTIteFpoMzk1ajl2RTd0R0VOdk1ISHczdGVRdlkyUGdfMTlTbm83VGc?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-18T00:16:22Z",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "importance": 80,
+      "content_kind": "social",
+      "verification": "公开平台索引，需查看原帖",
+      "reader_url": "./reader.html?id=5ca1f23f2a91c808",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "b8b82069f6b99a52",
       "category": "voices",
       "title": "Grok @Bot got much faster",
@@ -2222,63 +2298,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "e4d3aef24542025c",
-      "category": "voices",
-      "title": "Never seen anything grow as fast as @Grok @Bot! And there is no free tier, which means people are deriving real value in excess of what they pay. As the saying goes, you get what you pay for.",
-      "summary": "Never seen anything grow as fast as @Grok @Bot! And there is no free tier, which means people are deriving real value in excess of what they pay. As the saying goes, you get what you pay for. X",
-      "source": "X",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1xNDhQVmgwckZWbUdXb0FURjhtU2FCQU1oQjNKLVo0bFMzVmwzbzdHTnQ5S2Y1YS01U19jZnctdXlXbnNiU1QxUFRIaE9Tc0xaX2tZQUhDWThKWmN0a3c?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-15T22:52:49Z",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "importance": 80,
-      "content_kind": "social",
-      "verification": "公开平台索引，需查看原帖",
-      "reader_url": "./reader.html?id=e4d3aef24542025c",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "6b3b650a0a3081da",
-      "category": "voices",
-      "title": "Grok @Bot improves significantly every day",
-      "summary": "Grok @Bot improves significantly every day X",
-      "source": "X",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFByaGpacnFYMHMyd0RLYVBwbE9xSkJVcFlaZldZRldIaDVFaVN4RUtSb1hMS2ItX3lzZmttUGx2NDYzYzNWdS13M2JBWWNFdmYxY2E5eXFaV1N1dXBsc2c?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-15T22:50:25Z",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "importance": 80,
-      "content_kind": "social",
-      "verification": "公开平台索引，需查看原帖",
-      "reader_url": "./reader.html?id=6b3b650a0a3081da",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "b2c3ec5ab7b83e73",
-      "category": "voices",
-      "title": "Ask your @Grok @Bot to remove your phone number from spam call & text lists!",
-      "summary": "Ask your @Grok @Bot to remove your phone number from spam call & text lists! X",
-      "source": "X",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5xMUxUcHh2aVE5WlRGcEdUMWhfMDF5eDM1Y0tuWmJtNVVrb2hJWERzYjVmaHNmTDF1Skd3V2FSNUhnVFNmTUhxdWhlUjduWm1TQldkVnVqdDNmUzlZX3c?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-15T21:57:59Z",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "importance": 80,
-      "content_kind": "social",
-      "verification": "公开平台索引，需查看原帖",
-      "reader_url": "./reader.html?id=b2c3ec5ab7b83e73",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "d7fdf0d4026da630",
       "category": "startups",
       "title": "What this bankruptcy says about AI startups",
@@ -2294,24 +2313,6 @@
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=d7fdf0d4026da630",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "5e612010579492a5",
-      "category": "policy",
-      "title": "Video: Opinion | Wealth Is Clouding the A.I. Safety Debate",
-      "summary": "Video: Opinion | Wealth Is Clouding the A.I. Safety Debate The New York Times",
-      "source": "The New York Times",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPNy1DT1JHaFRuYV9VTEZqYlB4eXhlVWhMWUgtTWU1WjVXVWNzSUgxYWYxZ2NVT01BNUlEMGZaQjlvQTZsY2RfNnRBTjdYVUJES3AtaE56Q2dOV2tsdXZ1Um5POG1DVENMT3FlQThhWU9MSkFqQ3N4TEZ5Rmw3RGt4b2NhYnhsTGhMVTBPQVdwTnR2MUVhYTJaekpfUDB1Ymc?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-07T07:00:00Z",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "importance": 78,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=5e612010579492a5",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2375,7 +2376,7 @@
       "summary": "University of Dayton School of Law seminar pulls back the curtain on AI University of Dayton",
       "source": "University of Dayton",
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOMktZRGNMekw3NVhzNlJhUE5GVFhjU0Z5UGUxNERqSDJ6b05QeDJFQzdMT25ZVGVvaVJuUjR3R1h2ZW4wVVJRRDdveUxBMVhDSG9kUGlLaXRSelRpY2U5dzdncmFlcGNfUnJ0N2hnVUFDLV9LY3lnVGhkMmNnWnU1TUw1ekV4YjFkaEtJ?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-06T18:34:15Z",
+      "published_at": "2026-10-06T07:00:00Z",
       "tags": [
         "Academic Startup",
         "Funding"
@@ -2567,24 +2568,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "ca23371ec4c7e3e6",
-      "category": "bigtech",
-      "title": "It’s the Humidity: How International Researchers in Poland, Deep Learning and NVIDIA GPUs Could Change the Forecast",
-      "summary": "For more than a century, meteorologists have chased storms with chalkboards, equations, and now, supercomputers. But for all the progress, they still stumble over one deceptively simple ingredient: water vapor. Humidity is the invisible fuel for thunderstorms, flash floods, and hurricanes. It’s the difference between a passing sprinkle and a summer downpour that sends you […]",
-      "source": "NVIDIA AI",
-      "url": "https://blogs.nvidia.com/blog/humidity/",
-      "published_at": "2025-09-02T13:00:15Z",
-      "tags": [
-        "NVIDIA",
-        "Infrastructure"
-      ],
-      "importance": 75,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=ca23371ec4c7e3e6",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "0e3206d17b886dcf",
       "category": "opensource",
       "title": "OpenAI is sued over rogue AI Hugging Face cyberattack",
@@ -2657,13 +2640,31 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "970a036d2a2c060c",
+      "category": "policy",
+      "title": "Anthropic’s AI Safety Bill Has an Alarming Threshold for Government Action",
+      "summary": "Anthropic’s AI Safety Bill Has an Alarming Threshold for Government Action Mother Jones",
+      "source": "Mother Jones",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPNk85UDhheTRLWlR3YUtHQ2FjUnU2dVg5Q3dIa1Y4b1p5bS1XajV1REJSMWotUUN4XzZLZGNIajBmRm45M0p5aTdBb0p3R082SHJFNVVXcFRKXzZBZGJsRURfWXhBNmRNdEJYYnJsaGVGM3ZNSXV5UE1NSkZTS0hSU2FsSS1nUVBnSGtBdGk2Sm11S0xqUkZNT3dRTDNTNVpwel9lS0pycU9jZHkxZUFRb1FCemdJdDdKUkhr?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-17T19:21:24Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 72,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=970a036d2a2c060c",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "63ed4615066c6d1d",
       "category": "policy",
       "title": "FAA AI use sparks new reviews into AI safety, workforce shortages",
       "summary": "FAA AI use sparks new reviews into AI safety, workforce shortages Federal News Network",
       "source": "Federal News Network",
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPMXV2VnJ0WmZNREpza2VVRFJvLU1YelVxX1pMV2tQbGljcmd3bU15bmtqeUJfejA1eGhpSzBzWnVhdDNkZlpRdDB1VDBVY1BIeVhGSE4wbjdwazR6OTBkdW05Q2o0dHkxNlgzV3BWaDRtc19LVXItN0V5OUFGeTlVVmR5N3o5WTkyODBlb0oyZy00blFSaWtpVHZSdjgxVEZXbFoyZkF6NXVmdldWYzRhTzRiYw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-16T23:17:22Z",
+      "published_at": "2026-10-16T22:35:53Z",
       "tags": [
         "Policy",
         "Safety"
@@ -2690,6 +2691,24 @@
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=9784c9da89ea16c8",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "d38f847e99b14dde",
+      "category": "policy",
+      "title": "Ten Takeaways From the UK Government’s Strategy For AI Regulation in Healthcare",
+      "summary": "Ten Takeaways From the UK Government’s Strategy For AI Regulation in Healthcare Ropes & Gray LLP",
+      "source": "Ropes & Gray LLP",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOT3plRzlhVks4YmsxWjRpQzdUZnd1QUxQam95MlRFUmdZeEtpUllSdUFUZFE2SXloQmRmendHRnB1Rjk5ODVGQV8tWjY2UWJHMkZrcklZb3owUmhCRGw5bW53UXU4ZXdhZlFYeU9GOUluWkhSWWx3M2ZuRlF6U1FvZUMxWHFQRmRDZnNsWHdjcEk0V01iNjM4eHlXdWZ6LThBRk5GNjNiSFlLZlI4R3ZiTnhXMF8wYV9rVkFqWnRfczdkazZLbW9SbkY1NExfSkM0cFo5NWtRVXpnajg?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-14T17:16:42Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 71,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=d38f847e99b14dde",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2780,24 +2799,6 @@
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=b1ec3efa2a25e483",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "54eda87f4240739f",
-      "category": "policy",
-      "title": "China’s AI Safety Money Problem",
-      "summary": "China’s AI Safety Money Problem ChinaTalk | Jordan Schneider",
-      "source": "ChinaTalk | Jordan Schneider",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1ZaEN0VFJMZi1ISU9sOUFVaWg2TzBjMFBkMFpnRjF2ZnljR0trR1V2azlWLVdCZlg1YTQ0eHpXWVctMTJJUHV2TVdNay13QUV0alZkMG9fZG9kR0UzOXFka2lCM2ZvVlBDWW9JTw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-05T11:09:38Z",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "importance": 70,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=54eda87f4240739f",
       "reader_status": "public-page-excerpt"
     },
     {
