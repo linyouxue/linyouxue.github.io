@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-20T11:31:44Z",
+  "generated_at": "2026-10-20T17:00:09Z",
   "record_count": 130,
   "records": [
     {
@@ -50,6 +50,57 @@
             "levent @__alpoge__ hello there the jacobian conjecture is false thanx to my close friend akhil for asking about it and my other close friend fable for working during the world cup final ((1+xy)^3 z + y^2 (1+xy) (4+3xy), y + 3 x (1+xy)^2 z + 3 x y^2 (4+3xy), 2 x - 3 x^2 y - x^3 z): \\C^3\\to \\C^3, has jacobian determinant -2, and sends (0, 0, -1/4), (1, -3/2, 13/2), and (-1, 3/2, 13/2) to (-1/4, 0, 0) 2:19 AM · Jul 20, 2026 · 40M Views 1.7K 5.3K 43K 11K",
             "levent @__alpoge__ Jul 20 wolframalpha.com/input?i=Det%5B… jacobian determinant in wolfram alpha wolframalpha.com Det[D[{(1+x y)^3 z + y^2 (1 + x y) (4 + 3x y), y + 3x (1 + x y)^2 z + 3x y^2 (4 + 3x y), 2x - 3x^2... Wolfram|Alpha brings expert-level knowledge and capabilities to the broadest possible range of people—spanning all professions and education levels. 20 53 1.5K 949K levent @__alpoge__ Jul 20 wolframalpha.com/input?i=%28%28… wolframalpha.com/input?i=%28%28… evaluating at two of those points in wolfram alpha wolframalpha.com ((1+x y)^3 z + y^2 (1 + x y) (4 + 3x y), y + 3x (1 + x y)^2 z + 3x y^2 (4 + 3x y), 2x - 3x^2 y -... Wolfram|Alpha brings expert-level knowledge and capabilities to the broadest…",
             "Aldo Cortesi @cortesi Jul 20 The absolute state of maths. 8 91 1.6K 141K"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "120f153dd8d1814b",
+      "kind": "article",
+      "title": "How Claude designed protein binders against scorpion neurotoxins",
+      "source": "Anthropic",
+      "source_url": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
+      "published_at": "2026-10-20T13:01:21Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Anthropic",
+        "Research"
+      ],
+      "verification": "官方来源",
+      "summary": "We asked an internal research Claude model to design minibinders (small proteins that attach tightly to a target) against scorpion neurotoxins.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
+      "key_points": [
+        "Summary: As part of our work experimenting with how Claude can help accelerate drug discovery, we asked an internal research model to design minibinders (small proteins that attach tightly to a target) against scorpion neurotoxins.",
+        "Claude worked from our prompt and four follow-ups, which we developed in collaboration with the financial investment research firm Citrini Research.",
+        "Teams at Adaptyv Bio and Twist Bioscience experimentally tested 211 designs for binding.",
+        "We’re releasing all 211 designs and their data as a resource for the field.",
+        "In August, we showed how Claude designed protein minibinders after being given a single prompt."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "We asked an internal research Claude model to design minibinders (small proteins that attach tightly to a target) against scorpion neurotoxins."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Summary: As part of our work experimenting with how Claude can help accelerate drug discovery, we asked an internal research model to design minibinders (small proteins that attach tightly to a target) against scorpion neurotoxins.",
+            "Claude worked from our prompt and four follow-ups, which we developed in collaboration with the financial investment research firm Citrini Research.",
+            "Teams at Adaptyv Bio and Twist Bioscience experimentally tested 211 designs for binding.",
+            "We’re releasing all 211 designs and their data as a resource for the field.",
+            "In August, we showed how Claude designed protein minibinders after being given a single prompt."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Summary: As part of our work experimenting with how Claude can help accelerate drug discovery, we asked an internal research model to design minibinders (small proteins that attach tightly to a target) against scorpion neurotoxins. Claude worked from our prompt and four follow-ups, which we developed in collaboration with the financial investment research firm Citrini Research. Teams at Adaptyv Bio and Twist Bioscience experimentally tested 211 designs for binding. Of these, 17 met our criteria. We’re releasing all 211 designs and their data as a resource for the field.",
+            "In August, we showed how Claude designed protein minibinders after being given a single prompt. A month before we released those results, a team from Citrini Research had approached us with an interesting question: could Claude (and AI drug discovery more generally) enable a group of motivated nonexperts to tackle a genuine problem in human health? Members of our life science research team set out to answer this, first by brainstorming problems with Claude. We landed on asking for Claude’s help designing novel protein binders against scorpion neurotoxins, with the hope that they could one day be used to develop a scorpion antivenom.",
+            "Scorpions sting 1.2 million people or more every year, resulting in more than 3,250 deaths, mostly among children in parts of the world with limited access to medical care. New treatments are expensive to make, and are also unlikely to earn back the cost of developing them. With so little investment, scorpion envenomation has been described as a neglected tropical disease."
           ]
         }
       ],
@@ -326,53 +377,6 @@
             "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
             "Today, we’re introducing SynthID Bio to bring watermarking technology to synthetic biology. SynthID Bio embeds an imperceptible signature directly into the biological code, ensuring the watermark is verifiable not just on a digital model but on the synthesized, physical protein itself – all while preserving its biological function in laboratory testing.",
             "Generative AI is helping scientists address critical biological challenges, from predicting the structure of proteins ( AlphaFold ) to designing entirely new proteins ( AlphaProteo , and ProteinMPNN ), and more recently, developing new bacteriophages , viruses that infect bacteria. Yet these tools also present new challenges: novel AI designs can bypass traditional DNA synthesis screening, while mislabeled synthetic 3D structures risk polluting public databases and misleading downstream research."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "e6243056d8ce3efa",
-      "kind": "article",
-      "title": "Introducing Quine: An AI research system designed for the complexity of biology",
-      "source": "Microsoft Research",
-      "source_url": "https://www.microsoft.com/en-us/research/blog/introducing-quine-an-ai-research-system-designed-for-the-complexity-of-biology/",
-      "published_at": "2026-09-29T14:00:02Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Microsoft",
-        "Research"
-      ],
-      "verification": "官方来源",
-      "summary": "Biology doesn't operate in silos, and neither should the AI representation of it. Quine is an early-stage research effort to create a multimodal world model of biology. By connecting insights across biological scales and modalities, Quine helps scientists computationally search a space far larger than intuition allows and prioritize hypotheses before they reach the lab. Experimental results provide important feedback, helping researchers sharpen future research directions. The post Introducing Quine: An AI research system designed for the complexity of biology appeared first on Microsoft Research .",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.microsoft.com/en-us/research/blog/introducing-quine-an-ai-research-system-designed-for-the-complexity-of-biology/",
-      "key_points": [
-        "Quine (opens in new tab) is a research effort to create a multimodal world model of biology and an interactive harness connecting models, scientific tools, literature, and researchers.",
-        "In collaboration with researchers at the Broad Institute of Harvard and MIT, we have used this system to prioritize compounds predicted to drive therapeutic tumor-state shifts and validated several top-ranked candidates across multiple wet-lab assays.",
-        "The Quine Fellows program (opens in new tab) will give a cohort of scientists access to the system and an opportunity to accelerate their own research and provide scientific feedback."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Biology doesn't operate in silos, and neither should the AI representation of it. Quine is an early-stage research effort to create a multimodal world model of biology. By connecting insights across biological scales and modalities, Quine helps scientists computationally search a space far larger than intuition allows and prioritize hypotheses before they reach the lab. Experimental results provide important feedback, helping researchers sharpen future research directions. The post Introducing Quine: An AI research system designed for the complexity of biology appeared first on Microsoft Research ."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Quine (opens in new tab) is a research effort to create a multimodal world model of biology and an interactive harness connecting models, scientific tools, literature, and researchers.",
-            "In collaboration with researchers at the Broad Institute of Harvard and MIT, we have used this system to prioritize compounds predicted to drive therapeutic tumor-state shifts and validated several top-ranked candidates across multiple wet-lab assays.",
-            "The Quine Fellows program (opens in new tab) will give a cohort of scientists access to the system and an opportunity to accelerate their own research and provide scientific feedback."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Quine (opens in new tab) is a research effort to create a multimodal world model of biology and an interactive harness connecting models, scientific tools, literature, and researchers.",
-            "In collaboration with researchers at the Broad Institute of Harvard and MIT, we have used this system to prioritize compounds predicted to drive therapeutic tumor-state shifts and validated several top-ranked candidates across multiple wet-lab assays.",
-            "The Quine Fellows program (opens in new tab) will give a cohort of scientists access to the system and an opportunity to accelerate their own research and provide scientific feedback."
           ]
         }
       ],
@@ -1036,10 +1040,14 @@
       "verification": "官方来源",
       "summary": "Accelerating the search for novel antimicrobial peptides using Google Antigravity for Science.",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
+      "fetch_status": "public-page-excerpt",
       "resolved_url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
       "key_points": [
-        "Accelerating the search for novel antimicrobial peptides using Google Antigravity for Science."
+        "Bileschi, Zoi Tsangalidou, Sukhdeep Singh and Lucy J.",
+        "Colwell New antibiotics are urgently needed to help with rising levels of antimicrobial resistance, but searching for new therapeutics is often a slow, labor-intensive process.",
+        "With Google Antigravity, our agentic development platform, this process can now be made easier.",
+        "Google Antigravity provides an agentic science workbench that empowers biologists to discover, structurally evaluate, and prioritize promising targets quickly, compressing what used to be a fragmented search over multiple databases into a single session.",
+        "It also helps researchers scan through millions of previously uncharacterized proteins in the UniProt database using ProtNLM, a model that predicts biological function from amino acid sequences."
       ],
       "sections": [
         {
@@ -1049,12 +1057,20 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Accelerating the search for novel antimicrobial peptides using Google Antigravity for Science."
+            "Bileschi, Zoi Tsangalidou, Sukhdeep Singh and Lucy J.",
+            "Colwell New antibiotics are urgently needed to help with rising levels of antimicrobial resistance, but searching for new therapeutics is often a slow, labor-intensive process.",
+            "With Google Antigravity, our agentic development platform, this process can now be made easier.",
+            "Google Antigravity provides an agentic science workbench that empowers biologists to discover, structurally evaluate, and prioritize promising targets quickly, compressing what used to be a fragmented search over multiple databases into a single session.",
+            "It also helps researchers scan through millions of previously uncharacterized proteins in the UniProt database using ProtNLM, a model that predicts biological function from amino acid sequences."
           ]
         },
         {
           "title": "原文短摘录",
-          "paragraphs": []
+          "paragraphs": [
+            "Pengfei Tian, Maxwell L. Bileschi, Zoi Tsangalidou, Sukhdeep Singh and Lucy J. Colwell",
+            "New antibiotics are urgently needed to help with rising levels of antimicrobial resistance, but searching for new therapeutics is often a slow, labor-intensive process. With Google Antigravity, our agentic development platform, this process can now be made easier.",
+            "Google Antigravity provides an agentic science workbench that empowers biologists to discover, structurally evaluate, and prioritize promising targets quickly, compressing what used to be a fragmented search over multiple databases into a single session. It also helps researchers scan through millions of previously uncharacterized proteins in the UniProt database using ProtNLM, a model that predicts biological function from amino acid sequences."
+          ]
         }
       ],
       "reading_minutes": 1
@@ -1369,6 +1385,58 @@
         {
           "title": "摘要",
           "body": "Abstract While operators and service companies are aggressively deploying AI agents for various oil and gas use cases, methods to evaluate their outputs and behaviors remain rarely discussed. Existing publications focus mostly on the accuracy of the final outputs, neglecting important metrics like consistency and efficiency. The objective of this project is to build an evaluation harness and use it to measure the performance of agents against drilling data analysis tasks. DrillingGPT (DGPT), a drilling data AI agent, is one of 100+ agents deployed in Occidental's internal agent platform. We developed an evaluation suite consisting of 19 tasks of varying difficulties…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "elon-grok-build-open-source-20260716",
+      "kind": "social",
+      "title": "Elon Musk 宣布 Grok Build 开源",
+      "source": "X · Elon Musk",
+      "source_url": "https://x.com/elonmusk/status/2077495635687723408",
+      "published_at": "2026-07-16T08:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Elon Musk",
+        "xAI",
+        "Open Source"
+      ],
+      "verification": "创始人官方账号原帖 · 需结合仓库核对",
+      "summary": "Elon Musk 在 X 表示 Grok Build 已开放源代码，目标是让开发者共同改进更可靠的 Agent harness。人物原帖属于早期一手信号，后续仍应结合代码仓库、许可证和 xAI 的正式文档判断实际开放范围。",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://x.com/elonmusk/status/2077495635687723408",
+      "key_points": [
+        "Elon Musk @elonmusk Grok Build is now open source SpaceX Super Intelligence @SpaceXSI Jul 15 We've open-sourced Grok Build and have reset usage limits for all users.",
+        "Open sourcing Grok Build allows anyone to support making a reliable and robust harness.",
+        "Check out our code, including the Git repo for the Grok Build CLI. x.ai/open-source 8:48 PM · Jul 15, 2026 · 4.8M Views 1.8K 2.2K 19K 1.3K Aurelia Marcella @Aurelia32824 Jul 15 I am a longtime Grok user and particularly appreciate the broad, versatile intelligence – perfect for marketing tasks like strategy development, market analysis, creative concepts…",
+        "Grok delivers exactly what narrow specialist tools cannot.",
+        "In professional Show more 3 3 49 115K Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Jul 15 Grok keeps on delivering 😎🔥 1 7 41 3.5K"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Elon Musk 在 X 表示 Grok Build 已开放源代码，目标是让开发者共同改进更可靠的 Agent harness。人物原帖属于早期一手信号，后续仍应结合代码仓库、许可证和 xAI 的正式文档判断实际开放范围。"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Elon Musk @elonmusk Grok Build is now open source SpaceX Super Intelligence @SpaceXSI Jul 15 We've open-sourced Grok Build and have reset usage limits for all users.",
+            "Open sourcing Grok Build allows anyone to support making a reliable and robust harness.",
+            "Check out our code, including the Git repo for the Grok Build CLI. x.ai/open-source 8:48 PM · Jul 15, 2026 · 4.8M Views 1.8K 2.2K 19K 1.3K Aurelia Marcella @Aurelia32824 Jul 15 I am a longtime Grok user and particularly appreciate the broad, versatile intelligence – perfect for marketing tasks like strategy development, market analysis, creative concepts…",
+            "Grok delivers exactly what narrow specialist tools cannot.",
+            "In professional Show more 3 3 49 115K Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Jul 15 Grok keeps on delivering 😎🔥 1 7 41 3.5K"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Elon Musk @elonmusk Grok Build is now open source SpaceX Super Intelligence @SpaceXSI Jul 15 We've open-sourced Grok Build and have reset usage limits for all users. Open sourcing Grok Build allows anyone to support making a reliable and robust harness. Check out our code, including the Git repo for the Grok Build CLI. x.ai/open-source 8:48 PM · Jul 15, 2026 · 4.8M Views 1.8K 2.2K 19K 1.3K",
+            "Aurelia Marcella @Aurelia32824 Jul 15 I am a longtime Grok user and particularly appreciate the broad, versatile intelligence – perfect for marketing tasks like strategy development, market analysis, creative concepts, and graphic prompting. Grok delivers exactly what narrow specialist tools cannot. In professional Show more 3 3 49 115K",
+            "Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Jul 15 Grok keeps on delivering 😎🔥 1 7 41 3.5K"
+          ]
         }
       ],
       "reading_minutes": 1
@@ -1860,58 +1928,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "elon-grok-build-open-source-20260716",
-      "kind": "social",
-      "title": "Elon Musk 宣布 Grok Build 开源",
-      "source": "X · Elon Musk",
-      "source_url": "https://x.com/elonmusk/status/2077495635687723408",
-      "published_at": "2026-07-16T08:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Elon Musk",
-        "xAI",
-        "Open Source"
-      ],
-      "verification": "创始人官方账号原帖 · 需结合仓库核对",
-      "summary": "Elon Musk 在 X 表示 Grok Build 已开放源代码，目标是让开发者共同改进更可靠的 Agent harness。人物原帖属于早期一手信号，后续仍应结合代码仓库、许可证和 xAI 的正式文档判断实际开放范围。",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://x.com/elonmusk/status/2077495635687723408",
-      "key_points": [
-        "Elon Musk @elonmusk Grok Build is now open source SpaceX Super Intelligence @SpaceXSI Jul 15 We've open-sourced Grok Build and have reset usage limits for all users.",
-        "Open sourcing Grok Build allows anyone to support making a reliable and robust harness.",
-        "Check out our code, including the Git repo for the Grok Build CLI. x.ai/open-source 8:48 PM · Jul 15, 2026 · 4.8M Views 1.8K 2.2K 19K 1.3K Aurelia Marcella @Aurelia32824 Jul 15 I am a longtime Grok user and particularly appreciate the broad, versatile intelligence – perfect for marketing tasks like strategy development, market analysis, creative concepts…",
-        "Grok delivers exactly what narrow specialist tools cannot.",
-        "In professional Show more 3 3 49 115K Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Jul 15 Grok keeps on delivering 😎🔥 1 7 41 3.5K"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Elon Musk 在 X 表示 Grok Build 已开放源代码，目标是让开发者共同改进更可靠的 Agent harness。人物原帖属于早期一手信号，后续仍应结合代码仓库、许可证和 xAI 的正式文档判断实际开放范围。"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Elon Musk @elonmusk Grok Build is now open source SpaceX Super Intelligence @SpaceXSI Jul 15 We've open-sourced Grok Build and have reset usage limits for all users.",
-            "Open sourcing Grok Build allows anyone to support making a reliable and robust harness.",
-            "Check out our code, including the Git repo for the Grok Build CLI. x.ai/open-source 8:48 PM · Jul 15, 2026 · 4.8M Views 1.8K 2.2K 19K 1.3K Aurelia Marcella @Aurelia32824 Jul 15 I am a longtime Grok user and particularly appreciate the broad, versatile intelligence – perfect for marketing tasks like strategy development, market analysis, creative concepts…",
-            "Grok delivers exactly what narrow specialist tools cannot.",
-            "In professional Show more 3 3 49 115K Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Jul 15 Grok keeps on delivering 😎🔥 1 7 41 3.5K"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Elon Musk @elonmusk Grok Build is now open source SpaceX Super Intelligence @SpaceXSI Jul 15 We've open-sourced Grok Build and have reset usage limits for all users. Open sourcing Grok Build allows anyone to support making a reliable and robust harness. Check out our code, including the Git repo for the Grok Build CLI. x.ai/open-source 8:48 PM · Jul 15, 2026 · 4.8M Views 1.8K 2.2K 19K 1.3K",
-            "Aurelia Marcella @Aurelia32824 Jul 15 I am a longtime Grok user and particularly appreciate the broad, versatile intelligence – perfect for marketing tasks like strategy development, market analysis, creative concepts, and graphic prompting. Grok delivers exactly what narrow specialist tools cannot. In professional Show more 3 3 49 115K",
-            "Adam Lowisz X Meetup 🇺🇸🇵🇱🇪🇺🇬🇧🇺🇦 @AdamLowisz Jul 15 Grok keeps on delivering 😎🔥 1 7 41 3.5K"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "c6df12f30c1b147e",
       "kind": "paper",
       "title": "Context Selection for Hypothesis and Statistical Evidence Extraction from Full-Text Scientific Articles",
@@ -2064,11 +2080,142 @@
       "reading_minutes": 1
     },
     {
+      "id": "aba23796341e61cd",
+      "kind": "article",
+      "title": "Called to serve: Tech, research, and positive impact - Microsoft Research",
+      "source": "Microsoft Research",
+      "source_url": "https://www.microsoft.com/en-us/research/podcast/called-to-serve-tech-research-and-positive-impact-with-chris-white/",
+      "published_at": "2026-10-20T16:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Microsoft",
+        "Research"
+      ],
+      "verification": "官方来源",
+      "summary": "Lab Director Chris White has worked on research challenges with real-world implications—from new approaches to wartime data analysis to tools for combating human trafficking. He talks to program manager Weishung Liu about the influences that led to the work and more. The post Called to serve: Tech, research, and positive impact appeared first on Microsoft Research .",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.microsoft.com/en-us/research/podcast/called-to-serve-tech-research-and-positive-impact-with-chris-white/",
+      "key_points": [
+        "In the summer of 2010, postdoc Chris White worked with a multidisciplinary team at the Defense Advanced Research Projects Agency, or DARPA, to determine if a new approach to data analysis could prevent violence and protect troops during the war in Afghanistan.",
+        "At the conclusion of the program, the agency asked White to prove the value of his work—on the ground.",
+        "In this episode, Principal Technical Program Manager Weishung Liu talks with White, director of Catalyst Lab at Microsoft Research, about his unexpected break from academic research to help lead advanced tech operations in Afghanistan and his later decision to again work on tech with immediate, real-world implications: dark-web search tools used to help…",
+        "Liu and White explore the influences that led to these experiences plus the important role of problem selection in innovation and remaining hopeful after seeing the darkest parts of humanity.",
+        "CHRIS WHITE: I have seen a lot of really bad humanity."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Lab Director Chris White has worked on research challenges with real-world implications—from new approaches to wartime data analysis to tools for combating human trafficking. He talks to program manager Weishung Liu about the influences that led to the work and more. The post Called to serve: Tech, research, and positive impact appeared first on Microsoft Research ."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "In the summer of 2010, postdoc Chris White worked with a multidisciplinary team at the Defense Advanced Research Projects Agency, or DARPA, to determine if a new approach to data analysis could prevent violence and protect troops during the war in Afghanistan.",
+            "At the conclusion of the program, the agency asked White to prove the value of his work—on the ground.",
+            "In this episode, Principal Technical Program Manager Weishung Liu talks with White, director of Catalyst Lab at Microsoft Research, about his unexpected break from academic research to help lead advanced tech operations in Afghanistan and his later decision to again work on tech with immediate, real-world implications: dark-web search tools used to help…",
+            "Liu and White explore the influences that led to these experiences plus the important role of problem selection in innovation and remaining hopeful after seeing the darkest parts of humanity.",
+            "CHRIS WHITE: I have seen a lot of really bad humanity."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "In the summer of 2010, postdoc Chris White worked with a multidisciplinary team at the Defense Advanced Research Projects Agency, or DARPA, to determine if a new approach to data analysis could prevent violence and protect troops during the war in Afghanistan. At the conclusion of the program, the agency asked White to prove the value of his work—on the ground.",
+            "In this episode, Principal Technical Program Manager Weishung Liu talks with White, director of Catalyst Lab at Microsoft Research, about his unexpected break from academic research to help lead advanced tech operations in Afghanistan and his later decision to again work on tech with immediate, real-world implications: dark-web search tools used to help combat human trafficking. Liu and White explore the influences that led to these experiences plus the important role of problem selection in innovation and remaining hopeful after seeing the darkest parts of humanity.",
+            "CHRIS WHITE: I have seen a lot of really bad humanity. You know, I’ve seen terrorism and trafficking and sophisticated organized crime, you know, designed to take things from people. Designed to hurt people. And I just know that I can do something about it, you know, and that I have and that we can. And so I think that that light, you know, the light of making a difference, you know, allows me to hold and handle, you know, the dark parts."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "02a17b7a92d06278",
+      "kind": "article",
+      "title": "DeepSeek 重磅宣布,AI概念多股垂直涨停",
+      "source": "微信公众号 · 21世纪经济报道",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792515588&ver=7038&signature=zmJr*LdvEOMWykow*L14WL8i-FlUbmlNB1B7vXg22bmUn7hdLgmwJbwCXMGDKEE2DKqf*tjCANqDQSQoBNlmx4DyklkrU54ocwF60ifiuVEHormYav6pgOQZo8CTOmtO&new=1",
+      "published_at": "2026-10-20T12:38:30Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "微信公众号",
+        "DeepSeek",
+        "模型"
+      ],
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "summary": "大规模云厂商部署非原生 DeepSeek 的调用成本甚至存在低于官方原生的可能性.有报道称,相关代码已在GitHub等开发者社区 发布 ....",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "indexed-summary",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HBKe12qjy2x5uYW-sGJtG9NiEXf-JZWvsbpkw712&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792515588%26ver%3D7038%26signature%3DzmJr%2ALdvEOMWykow%2AL14WL8i-FlUbmlNB1B7vXg22bmUn7hdLgmwJbwCXMGDKEE2DKqf%2AtjCANqDQSQoBNlmx4DyklkrU54ocwF60ifiuVEHormYav6pgOQZo8CTOmtO%26new%3D1",
+      "key_points": [
+        "大规模云厂商部署非原生 DeepSeek 的调用成本甚至存在低于官方原生的可能性.有报道称,相关代码已在GitHub等开发者社区 发布 ...."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "大规模云厂商部署非原生 DeepSeek 的调用成本甚至存在低于官方原生的可能性.有报道称,相关代码已在GitHub等开发者社区 发布 ...."
+        },
+        {
+          "title": "公开索引摘要",
+          "bullets": [
+            "大规模云厂商部署非原生 DeepSeek 的调用成本甚至存在低于官方原生的可能性.有报道称,相关代码已在GitHub等开发者社区 发布 ...."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "acc20f07b656944b",
+      "kind": "article",
+      "title": "全线拉升!刚刚, DeepSeek 重磅宣布!",
+      "source": "微信公众号 · 券商中国",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792515588&ver=7038&signature=PoiiAtc0vQqJb-lalkC4w3GECtefswbrmCVLIiuLm2BGBimzQjg96Xv3occxw95i2XccpD115AhCgTtTUmJY-FGINthCV5yTMmz0R2aMEFObs6yPgX-p82Ysp84MlqV8&new=1",
+      "published_at": "2026-10-20T10:57:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "微信公众号",
+        "DeepSeek",
+        "模型"
+      ],
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "summary": "DeepSeek ,传来重磅.今日(10月20日)下午, DeepSeek 宣布... 十一部门,重磅 发布 韩国,“救市”!做空美股!知名大佬,突然...",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "indexed-summary",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HBKe12qj4XeizzeTGRqUUODVxB5If3f8ZAuJqzpb&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792515588%26ver%3D7038%26signature%3DPoiiAtc0vQqJb-lalkC4w3GECtefswbrmCVLIiuLm2BGBimzQjg96Xv3occxw95i2XccpD115AhCgTtTUmJY-FGINthCV5yTMmz0R2aMEFObs6yPgX-p82Ysp84MlqV8%26new%3D1",
+      "key_points": [
+        "DeepSeek ,传来重磅.今日(10月20日)下午, DeepSeek 宣布... 十一部门,重磅 发布 韩国,“救市”!"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "DeepSeek ,传来重磅.今日(10月20日)下午, DeepSeek 宣布... 十一部门,重磅 发布 韩国,“救市”!做空美股!知名大佬,突然..."
+        },
+        {
+          "title": "公开索引摘要",
+          "bullets": [
+            "DeepSeek ,传来重磅.今日(10月20日)下午, DeepSeek 宣布... 十一部门,重磅 发布 韩国,“救市”!"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "49007db9a491085d",
       "kind": "article",
       "title": "【快报】美国 发布 DeepSeek 禁令 ;大众计划冻结员工薪酬至2030年,涉及全球大量员工;",
       "source": "微信公众号 · 科技杂谈",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792495888&ver=7038&signature=aT7zFOAlGyHHMEE9l3qzY3UzhKcKljLWBnE4rY42tmEJcwbKCfK0G0yLDsEOwH*2Zj3df54e90G6929XrhMMEGHQju96PE91qhBJH*ZOPycHKpl7ElduhI0zexvWtlrQ&new=1",
+      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HBxR12qjzyIxnKgQPoIwDTpPXeC-BThLKlBa-o0A&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792495888%26ver%3D7038%26signature%3DaT7zFOAlGyHHMEE9l3qzY3UzhKcKljLWBnE4rY42tmEJcwbKCfK0G0yLDsEOwH%2A2Zj3df54e90G6929XrhMMEGHQju96PE91qhBJH%2AZOPycHKpl7ElduhI0zexvWtlrQ%26new%3D1",
       "published_at": "2026-10-20T08:42:47Z",
       "authors": [],
       "venue": "",
@@ -2108,7 +2255,7 @@
       "kind": "article",
       "title": "DeepSeek 发布 网页搜索与抓取API:补齐Agent联网短板,国产模型打通原生实时网页能力",
       "source": "微信公众号 · AI未来已来新视界",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792495888&ver=7038&signature=iJ6-9hwSlUvqNdjtbA6Os9vHkp18rBrRRAhfeX*5wPjw2GgXqiti9BkrrvjPZgZLi35cwmq3k5CmoZIp0f063zfTm4Gd4lbaWwgtFdapyPmqzF762cRj9gNiiCRxpFyV&new=1",
+      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HBxR12qjiOThQ0iD-5ClUaztxyt2nj0lzgfBXUu1&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792495888%26ver%3D7038%26signature%3DiJ6-9hwSlUvqNdjtbA6Os9vHkp18rBrRRAhfeX%2A5wPjw2GgXqiti9BkrrvjPZgZLi35cwmq3k5CmoZIp0f063zfTm4Gd4lbaWwgtFdapyPmqzF762cRj9gNiiCRxpFyV%26new%3D1",
       "published_at": "2026-10-20T01:11:21Z",
       "authors": [],
       "venue": "",
@@ -2624,86 +2771,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "66fcd61826f01afe",
-      "kind": "article",
-      "title": "DeepSeek 故障近5小时,补偿方案 公布",
-      "source": "微信公众号 · 新华社",
-      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HAwI0mqjDdv3RIdZyX7xZL76anetqqefgVoP2aDN&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792149502%26ver%3D7030%26signature%3D%2AXAlCWtFPHZy9UHI6YADkWqlIQc%2AXeyg7nkP1qcGp56%2AqPWAkGkJpsZ-XqqW5Ajt3gJskx6Hok0RYHkhO4LQ%2Ah37lyLunZRIxU8baf5hQ%2ABMdytJyaDjNdywIGOC1pXL%26new%3D1",
-      "published_at": "2026-10-15T13:37:55Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "微信公众号",
-        "DeepSeek",
-        "模型"
-      ],
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "summary": "10月15日傍晚,深度求索( DeepSeek )官方开放平台 发布 服务恢复及补偿通知称,15日8:11至13:04期间, DeepSeek 的服务系统出...",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HAwI0mqjDdv3RIdZyX7xZL76anetqqefgVoP2aDN&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792149502%26ver%3D7030%26signature%3D%2AXAlCWtFPHZy9UHI6YADkWqlIQc%2AXeyg7nkP1qcGp56%2AqPWAkGkJpsZ-XqqW5Ajt3gJskx6Hok0RYHkhO4LQ%2Ah37lyLunZRIxU8baf5hQ%2ABMdytJyaDjNdywIGOC1pXL%26new%3D1",
-      "key_points": [
-        "10月15日傍晚,深度求索( DeepSeek )官方开放平台 发布 服务恢复及补偿通知称,15日8:11至13:04期间, DeepSeek 的服务系统出..."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "10月15日傍晚,深度求索( DeepSeek )官方开放平台 发布 服务恢复及补偿通知称,15日8:11至13:04期间, DeepSeek 的服务系统出..."
-        },
-        {
-          "title": "公开索引摘要",
-          "bullets": [
-            "10月15日傍晚,深度求索( DeepSeek )官方开放平台 发布 服务恢复及补偿通知称,15日8:11至13:04期间, DeepSeek 的服务系统出..."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "c802503d145a9024",
-      "kind": "article",
-      "title": "DeepSeek 补偿方案 公布 :故障时段消耗金额以赠金形式全额返还",
-      "source": "微信公众号 · 观察者网",
-      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HOe30GqjOI5gA4HeWmowgUtHfeczMf6mhv5ClihM&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792063453%26ver%3D7028%26signature%3D9-K-nGCB8vQU9gnZAL%2AeXXs%2AbPA12rZ2zpyFAFtJSrSWNz9uYeWTppb2IlGsC-4sAiWnnjiKNrBwu6n0VMuVjh4Rz5usp9PKQTT3q1xphSwt7jeRLzoJFp0JVtf5KMVW%26new%3D1",
-      "published_at": "2026-10-15T11:13:47Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "微信公众号",
-        "DeepSeek",
-        "模型"
-      ],
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "summary": "DeepSeek 官方开放平台 发布 服务恢复及补偿通知,北京时间2026年10月15日8:11至13:04期间, DeepSeek 的服务系统出现故障,导...",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HOe30GqjOI5gA4HeWmowgUtHfeczMf6mhv5ClihM&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792063453%26ver%3D7028%26signature%3D9-K-nGCB8vQU9gnZAL%2AeXXs%2AbPA12rZ2zpyFAFtJSrSWNz9uYeWTppb2IlGsC-4sAiWnnjiKNrBwu6n0VMuVjh4Rz5usp9PKQTT3q1xphSwt7jeRLzoJFp0JVtf5KMVW%26new%3D1",
-      "key_points": [
-        "DeepSeek 官方开放平台 发布 服务恢复及补偿通知,北京时间2026年10月15日8:11至13:04期间, DeepSeek 的服务系统出现故障,导..."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "DeepSeek 官方开放平台 发布 服务恢复及补偿通知,北京时间2026年10月15日8:11至13:04期间, DeepSeek 的服务系统出现故障,导..."
-        },
-        {
-          "title": "公开索引摘要",
-          "bullets": [
-            "DeepSeek 官方开放平台 发布 服务恢复及补偿通知,北京时间2026年10月15日8:11至13:04期间, DeepSeek 的服务系统出现故障,导..."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "0ec61bb054a71ed1",
       "kind": "article",
       "title": "Open From Data Center to Desktop: NVIDIA Expands Nemotron Family With Highest Efficiency Super VL and Bolt Models",
@@ -2800,6 +2867,46 @@
             "I’ve spent my whole life working on AGI because I’ve always had a deep conviction that, if built and deployed responsibly, it would prove to be one of the most beneficial and transformative technologies ever invented. AGI cannot be compared to standard technological breakthroughs, not even ones as consequential as the internet or mobile - it is much more akin to the discovery of electricity or fire. If you stop to think about it, we’ve essentially found a way to make sand think. It’s miraculous.",
             "The magnitude of this technology’s impact will be unprecedented, perhaps 10x of the Industrial Revolution at 10x the speed. It will help us solve some of the biggest problems society faces from accelerating drug discovery to developing new clean energy sources to creating novel advanced materials. We could even reach a point where resources are no longer the limiting factor for human progress, leading to an amazing new era of abundance."
           ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "d7cdf634558c71f4",
+      "kind": "article",
+      "title": "In a New Anthropic Lab, A.I. Turns to Biology",
+      "source": "The New York Times",
+      "source_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNNFZzajNZQW1MeHplVTRLYWd5NUlpUjhTSVU1YU9sODRIQTRvZU5TXzBvR2xETVVPYmEzRVJNNVJkRk83Y2pPZlVFbnB5RHZULU85MEdTa09wZUVBM3ZiLUJIdWs3U2NieXZVNTJUNER0WG1qSGF1TkdEZGs4TjNLdVFB?oc=5",
+      "published_at": "2026-09-25T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "In a New Anthropic Lab, A.I. Turns to Biology The New York Times",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNNFZzajNZQW1MeHplVTRLYWd5NUlpUjhTSVU1YU9sODRIQTRvZU5TXzBvR2xETVVPYmEzRVJNNVJkRk83Y2pPZlVFbnB5RHZULU85MEdTa09wZUVBM3ZiLUJIdWs3U2NieXZVNTJUNER0WG1qSGF1TkdEZGs4TjNLdVFB?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "In a New Anthropic Lab, A.I. Turns to Biology The New York Times"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -3149,6 +3256,250 @@
       "reading_minutes": 1
     },
     {
+      "id": "f4b1ade5f2e304ce",
+      "kind": "article",
+      "title": "FairStress: A deeper evaluation of fairness in LLM decision-making",
+      "source": "Hugging Face",
+      "source_url": "https://huggingface.co/blog/allenai/fairstress",
+      "published_at": "2026-10-20T16:09:19Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Hugging Face",
+        "Open Source"
+      ],
+      "verification": "官方来源",
+      "summary": "A Blog post by Ai2 on Hugging Face",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://huggingface.co/blog/allenai/fairstress",
+      "key_points": [
+        "Today we’re introducing FairStress , a benchmark for measuring demographic fairness in LLMs beyond the choice a model ultimately makes in decisions impacting people.",
+        "FairStress is available for download, and we’re also building it into Olmo-eval , our open workbench for running and comparing model evaluations.",
+        "Models are increasingly being used in high-stakes settings where their outputs can affect people’s opportunities, resources, and care, from screening job applicants and approving loans to prioritizing patients for treatment and evaluating students for admissions.",
+        "Standard demographic fairness benchmarks often test whether a model selects the same candidate in otherwise identical scenarios after the candidates’ demographic identities are swapped.",
+        "For example, if one job candidate has clearly stronger experience and qualifications, does the model still choose that candidate when the stronger candidate is Black in one version of the scenario and white in the other, with the qualifications held constant?"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "A Blog post by Ai2 on Hugging Face"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Today we’re introducing FairStress , a benchmark for measuring demographic fairness in LLMs beyond the choice a model ultimately makes in decisions impacting people.",
+            "FairStress is available for download, and we’re also building it into Olmo-eval , our open workbench for running and comparing model evaluations.",
+            "Models are increasingly being used in high-stakes settings where their outputs can affect people’s opportunities, resources, and care, from screening job applicants and approving loans to prioritizing patients for treatment and evaluating students for admissions.",
+            "Standard demographic fairness benchmarks often test whether a model selects the same candidate in otherwise identical scenarios after the candidates’ demographic identities are swapped.",
+            "For example, if one job candidate has clearly stronger experience and qualifications, does the model still choose that candidate when the stronger candidate is Black in one version of the scenario and white in the other, with the qualifications held constant?"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Today we’re introducing FairStress , a benchmark for measuring demographic fairness in LLMs beyond the choice a model ultimately makes in decisions impacting people. FairStress is available for download, and we’re also building it into Olmo-eval , our open workbench for running and comparing model evaluations.",
+            "Models are increasingly being used in high-stakes settings where their outputs can affect people’s opportunities, resources, and care, from screening job applicants and approving loans to prioritizing patients for treatment and evaluating students for admissions. Standard demographic fairness benchmarks often test whether a model selects the same candidate in otherwise identical scenarios after the candidates’ demographic identities are swapped. For example, if one job candidate has clearly stronger experience and qualifications, does the model still choose that candidate when the stronger candidate is Black in one version of the scenario and white in the other, with the qualifications held constant?",
+            "Arriving at the same answer in two versions of a scenario can hide meaningful differences in how readily a model changes that decision when challenged, however. Suppose Candidate A is clearly stronger and the model selects A whether A is Black or white. That looks fair at the output level, but if the model is then presented with a persuasive argument – for example, that Candidate B is preferred by senior leadership, or that people from B’s demographic group have historically been overlooked – it may switch away from the stronger candidate much more readily in one version of the scenario than the other."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "acd4ff22e2aacb5b",
+      "kind": "article",
+      "title": "ALTK-Evolve: How learned memory tops the τ²-bench leaderboard on customer service tasks without a frontier model",
+      "source": "Hugging Face",
+      "source_url": "https://huggingface.co/blog/ibm-research/altk-evolve-bc",
+      "published_at": "2026-10-20T15:19:48Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Hugging Face",
+        "Open Source"
+      ],
+      "verification": "官方来源",
+      "summary": "A Blog post by IBM Research on Hugging Face",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://huggingface.co/blog/ibm-research/altk-evolve-bc",
+      "key_points": [
+        "ALTK-Evolve learns and applies a playbook using GPT-4.1, outperforming the retail entries on τ²-bench, a customer service agent benchmark—without updating model weights.",
+        "Using GPT-4.1, an older, non-reasoning model, a basic customer-service agent reaches 67.5% Pass^4 on τ²-bench retail — meaning it solves the task on all four independent attempts for 67.5% of tasks.",
+        "It scores above every retail entry in our October 12, 2026 leaderboard snapshot.",
+        "It runs on the benchmark's stock ReAct scaffold, with learned guidelines appended to its system prompt.",
+        "ALTK-Evolve builds that playbook using GPT-4.1."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "A Blog post by IBM Research on Hugging Face"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "ALTK-Evolve learns and applies a playbook using GPT-4.1, outperforming the retail entries on τ²-bench, a customer service agent benchmark—without updating model weights.",
+            "Using GPT-4.1, an older, non-reasoning model, a basic customer-service agent reaches 67.5% Pass^4 on τ²-bench retail — meaning it solves the task on all four independent attempts for 67.5% of tasks.",
+            "It scores above every retail entry in our October 12, 2026 leaderboard snapshot.",
+            "It runs on the benchmark's stock ReAct scaffold, with learned guidelines appended to its system prompt.",
+            "ALTK-Evolve builds that playbook using GPT-4.1."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "ALTK-Evolve learns and applies a playbook using GPT-4.1, outperforming the retail entries on τ²-bench, a customer service agent benchmark—without updating model weights.",
+            "Using GPT-4.1, an older, non-reasoning model, a basic customer-service agent reaches 67.5% Pass^4 on τ²-bench retail — meaning it solves the task on all four independent attempts for 67.5% of tasks. It scores above every retail entry in our October 12, 2026 leaderboard snapshot. It runs on the benchmark's stock ReAct scaffold, with learned guidelines appended to its system prompt.",
+            "ALTK-Evolve builds that playbook using GPT-4.1. It analyzes the agent's training-task attempts and uses the model to distill successes and failures into short behavioral rules: how to authenticate a customer, confirm a transaction, or handle a return. Those guidelines are then added to the agent's prompt for subsequent conversations. The same model powers both guideline extraction and the agent; no weight updates or human annotation are needed."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "b409ce3d0993a3ad",
+      "kind": "article",
+      "title": "AI Is Flooding Drug Discovery With Candidates. Clinical Validation Has No Flood Gates.",
+      "source": "The Clinical Trial Vanguard",
+      "source_url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPaDZrVlVlUy1FeE40TEJFQzd4LXBjWEt5eVhUS2RCZU9wUndVdHFRaDFtVHNDMXBWRjRObHFLSjROSy1HR0Z6eTJTR1BFUzJMX2hsTFNuRkFhd3I3VXE0UVN5eG5vVjViN3pLcEhpY2ZJYXZhLU5FaHBjVTRQQW1NZi1kVDNqNmgxQW1ydzBZZ1JQN2hhRzJVeF9sVWFXVzZHaHd4clEwT3lqSVUwcTZUaDExbkJQUTc5eHRfa3pDam5BTTJqbW8xZXM2cHlsUy1vT2IyMTB3RUUwamc?oc=5",
+      "published_at": "2026-10-20T13:00:24Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "AI Is Flooding Drug Discovery With Candidates. Clinical Validation Has No Flood Gates. The Clinical Trial Vanguard",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPaDZrVlVlUy1FeE40TEJFQzd4LXBjWEt5eVhUS2RCZU9wUndVdHFRaDFtVHNDMXBWRjRObHFLSjROSy1HR0Z6eTJTR1BFUzJMX2hsTFNuRkFhd3I3VXE0UVN5eG5vVjViN3pLcEhpY2ZJYXZhLU5FaHBjVTRQQW1NZi1kVDNqNmgxQW1ydzBZZ1JQN2hhRzJVeF9sVWFXVzZHaHd4clEwT3lqSVUwcTZUaDExbkJQUTc5eHRfa3pDam5BTTJqbW8xZXM2cHlsUy1vT2IyMTB3RUUwamc?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AI Is Flooding Drug Discovery With Candidates. Clinical Validation Has No Flood Gates. The Clinical Trial Vanguard"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "ff614b7e478769ae",
+      "kind": "article",
+      "title": "Hugging Face ❤️ TorchTPU: TPUs, Natively",
+      "source": "Hugging Face",
+      "source_url": "https://huggingface.co/blog/hf-torchtpu",
+      "published_at": "2026-10-20T00:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Hugging Face",
+        "Open Source"
+      ],
+      "verification": "官方来源",
+      "summary": "We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://huggingface.co/blog/hf-torchtpu",
+      "key_points": [
+        "If you ever tried to run PyTorch on a TPU, you probably ported your code to torch_xla , or you ended up having to learn JAX.",
+        "With TorchTPU , a native PyTorch backend, TPU is now just another device.",
+        "It opens up native support of TPU in the Hugging Face ecosystem.",
+        "Transformers, Diffusers and Kernels run natively on TPU.",
+        "Pick a model from the Hub, send it to \"tpu\" , and you're done."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "We’re on a journey to advance and democratize artificial intelligence through open source and open science."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "If you ever tried to run PyTorch on a TPU, you probably ported your code to torch_xla , or you ended up having to learn JAX.",
+            "With TorchTPU , a native PyTorch backend, TPU is now just another device.",
+            "It opens up native support of TPU in the Hugging Face ecosystem.",
+            "Transformers, Diffusers and Kernels run natively on TPU.",
+            "Pick a model from the Hub, send it to \"tpu\" , and you're done."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "If you ever tried to run PyTorch on a TPU, you probably ported your code to torch_xla , or you ended up having to learn JAX. With TorchTPU , a native PyTorch backend, TPU is now just another device. It opens up native support of TPU in the Hugging Face ecosystem. Transformers, Diffusers and Kernels run natively on TPU. Pick a model from the Hub, send it to \"tpu\" , and you're done.",
+            "TPU stands for Tensor Processing Unit . TPUs are Google's own AI accelerators. They are chips built for one job: the matrix math that neural networks spend most of their time on. Google has been designing them for about ten years, and uses them to train and serve its own models, including Gemini.",
+            "TPUs are available on Google Cloud , from a single chip up to pods of thousands of chips. They shine when you need a lot of compute, for training or for serving at scale."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "74bc875dbf2d4585",
+      "kind": "article",
+      "title": "AnyLanguageModel 1.0: One Year of Local Models on Apple Platforms",
+      "source": "Hugging Face",
+      "source_url": "https://huggingface.co/blog/anylanguagemodel-1-0",
+      "published_at": "2026-10-20T00:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Hugging Face",
+        "Open Source"
+      ],
+      "verification": "官方来源",
+      "summary": "We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://huggingface.co/blog/anylanguagemodel-1-0",
+      "key_points": [
+        "Last November, we introduced AnyLanguageModel on this blog: a drop-in replacement for Apple's Foundation Models framework that lets you choose the model and provider your app uses.",
+        "We heard from app developers who were curious about local models but weren't always sure how to get started.",
+        "They also wanted to avoid the added complexity of supporting multiple inference providers.",
+        "Local and hosted inference each have their strengths, and both have a role in building this new generation of intelligent apps.",
+        "A shared API makes it easier to choose the right model for each task."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "We’re on a journey to advance and democratize artificial intelligence through open source and open science."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Last November, we introduced AnyLanguageModel on this blog: a drop-in replacement for Apple's Foundation Models framework that lets you choose the model and provider your app uses.",
+            "We heard from app developers who were curious about local models but weren't always sure how to get started.",
+            "They also wanted to avoid the added complexity of supporting multiple inference providers.",
+            "Local and hosted inference each have their strengths, and both have a role in building this new generation of intelligent apps.",
+            "A shared API makes it easier to choose the right model for each task."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Last November, we introduced AnyLanguageModel on this blog: a drop-in replacement for Apple's Foundation Models framework that lets you choose the model and provider your app uses. We heard from app developers who were curious about local models but weren't always sure how to get started. They also wanted to avoid the added complexity of supporting multiple inference providers. AnyLanguageModel grew out of that feedback.",
+            "Local and hosted inference each have their strengths, and both have a role in building this new generation of intelligent apps. A shared API makes it easier to choose the right model for each task.",
+            "A year and dozens of releases later, AnyLanguageModel 1.0 is out, along with swift-huggingface 1.0 and swift-xet 1.0 ."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "ac996306193ed396",
       "kind": "article",
       "title": "MPS in PyTorch 2.15",
@@ -3393,110 +3744,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "57332f8584bc3311",
-      "kind": "article",
-      "title": "Welcome Beam: a 501B open model you can own, customize, and scale",
-      "source": "Hugging Face",
-      "source_url": "https://huggingface.co/blog/reflection-beam",
-      "published_at": "2026-10-16T00:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Hugging Face",
-        "Open Source"
-      ],
-      "verification": "官方来源",
-      "summary": "We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://huggingface.co/blog/reflection-beam",
-      "key_points": [
-        "It is the first model from the new US lab, Reflection, and it’s open!",
-        "It's a mixture-of-experts (MoEs) model with 501B parameters (23B active per token), supports text as input, has a context window of 1M tokens , and is released under the Apache 2.0 license.",
-        "Beam is focused on coding and agentic use cases.",
-        "It is for teams that want a frontier-scale model on their own hardware, infrastructure, or cloud, and want to customize it to their own use cases.",
-        "Beam ships with its own dedicated open source Rust based harness that delivers the best performance from the model."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "We’re on a journey to advance and democratize artificial intelligence through open source and open science."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "It is the first model from the new US lab, Reflection, and it’s open!",
-            "It's a mixture-of-experts (MoEs) model with 501B parameters (23B active per token), supports text as input, has a context window of 1M tokens , and is released under the Apache 2.0 license.",
-            "Beam is focused on coding and agentic use cases.",
-            "It is for teams that want a frontier-scale model on their own hardware, infrastructure, or cloud, and want to customize it to their own use cases.",
-            "Beam ships with its own dedicated open source Rust based harness that delivers the best performance from the model."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Beam by Reflection is out on Hugging Face! It is the first model from the new US lab, Reflection, and it’s open! It's a mixture-of-experts (MoEs) model with 501B parameters (23B active per token), supports text as input, has a context window of 1M tokens , and is released under the Apache 2.0 license.",
-            "Beam is focused on coding and agentic use cases. It is for teams that want a frontier-scale model on their own hardware, infrastructure, or cloud, and want to customize it to their own use cases. Beam ships with its own dedicated open source Rust based harness that delivers the best performance from the model.",
-            "Beam has a native transformers implementation, as well as downstream libraries like vLLM and SGLang. We’ve worked with the Reflection team to bring you inference, SFT (supervised fine tuning), and RL (reinforcement learning) recipes for you to build with this model for your needs. On top of day-0 support in transformers, SGLang and vLLM, this post shows you how to run it, how to post-train it, and what we built with it."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "3449f9032f48b162",
-      "kind": "article",
-      "title": "Granite Switch 4.1: Chat, Decisions, and Speech from One Endpoint",
-      "source": "Hugging Face",
-      "source_url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
-      "published_at": "2026-10-15T20:34:01Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Hugging Face",
-        "Open Source"
-      ],
-      "verification": "官方来源",
-      "summary": "A Blog post by IBM Granite on Hugging Face",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
-      "key_points": [
-        "Introduced last spring, the Granite Switch project enables a modular approach to model development.",
-        "Now Granite Switch 4.1 models, armed with a Decision adapter and the fastest ASR model on the OpenASR leaderboard, can move efficiently between natural-language responses, general and specialized decisions, and speech-to-text tasks—all from one hosted endpoint.",
-        "Specifically, Granite-Switch-4.1-8B and -30B models are configured to include: A new Decision aLoRA for general-purpose decision-making (e.g. v1/systemone),"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "A Blog post by IBM Granite on Hugging Face"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Introduced last spring, the Granite Switch project enables a modular approach to model development.",
-            "Now Granite Switch 4.1 models, armed with a Decision adapter and the fastest ASR model on the OpenASR leaderboard, can move efficiently between natural-language responses, general and specialized decisions, and speech-to-text tasks—all from one hosted endpoint.",
-            "Specifically, Granite-Switch-4.1-8B and -30B models are configured to include: A new Decision aLoRA for general-purpose decision-making (e.g. v1/systemone),"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Introduced last spring, the Granite Switch project enables a modular approach to model development. Now Granite Switch 4.1 models, armed with a Decision adapter and the fastest ASR model on the OpenASR leaderboard, can move efficiently between natural-language responses, general and specialized decisions, and speech-to-text tasks—all from one hosted endpoint.",
-            "Specifically, Granite-Switch-4.1-8B and -30B models are configured to include:",
-            "A new Decision aLoRA for general-purpose decision-making (e.g. v1/systemone),"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "981fb38639007d1d",
       "kind": "article",
       "title": "AstraZeneca Strikes Up to $1.5 Billion AI Drug Discovery Deal With Insitro",
       "source": "WSJ",
       "source_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPYzJ4ZVJOeGdjS0xITnEyMmNUQnhJc2dwZ0V1ZG13VXJzclZrVUF0SXJOREVuVzhqU2ducUVhZ0JidE1HOXNrQURWWElEMGFZeklvOFI1N0pRY3cwWnZpcWRwakM0R1hIb29veGtvN2s1WHFkd3d4YlBOdlN6YTRoaUtTR3BkbkdrUmRKalVjZWN1WjkzcktOai11RTJOd1RpNE5jVjBtTEVKcG4xSzA0a05NX3dQQQ?oc=5",
-      "published_at": "2026-10-15T12:37:00Z",
+      "published_at": "2026-10-15T12:38:34Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -3571,57 +3824,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "6628ca2bd657d76f",
-      "kind": "article",
-      "title": "Apertus 1.5 Release Notes",
-      "source": "Hugging Face",
-      "source_url": "https://huggingface.co/blog/swiss-ai/apertus-v15-release-notes",
-      "published_at": "2026-10-15T09:08:45Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Hugging Face",
-        "Open Source"
-      ],
-      "verification": "官方来源",
-      "summary": "A Blog post by Swiss AI Initiative on Hugging Face",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://huggingface.co/blog/swiss-ai/apertus-v15-release-notes",
-      "key_points": [
-        "Our latest release, Apertus 1.5, extends the 8B and 70B Apertus 1.0 models with image/audio understanding, an optional thinking mode, a four times longer context window, improved instruction-following, and better tool use.",
-        "The updated 8B and 70B model weights were released to Hugging Face on July 24, 2026 under an Apache 2.0 license.",
-        "Further details are now available from the project Technical Report , and summarized here.",
-        "Apertus 1.5 is a continued pretraining of the first generation model: adding 4 trillion tokens of text and multimodal training data to the 8B model and 2 trillion tokens to the 70B model, for a total of 19T and 17T, respectively.",
-        "As with every Apertus release, the models are fully open: open weights , open data , open values , and full training details ."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "A Blog post by Swiss AI Initiative on Hugging Face"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Our latest release, Apertus 1.5, extends the 8B and 70B Apertus 1.0 models with image/audio understanding, an optional thinking mode, a four times longer context window, improved instruction-following, and better tool use.",
-            "The updated 8B and 70B model weights were released to Hugging Face on July 24, 2026 under an Apache 2.0 license.",
-            "Further details are now available from the project Technical Report , and summarized here.",
-            "Apertus 1.5 is a continued pretraining of the first generation model: adding 4 trillion tokens of text and multimodal training data to the 8B model and 2 trillion tokens to the 70B model, for a total of 19T and 17T, respectively.",
-            "As with every Apertus release, the models are fully open: open weights , open data , open values , and full training details ."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Our latest release, Apertus 1.5, extends the 8B and 70B Apertus 1.0 models with image/audio understanding, an optional thinking mode, a four times longer context window, improved instruction-following, and better tool use. The updated 8B and 70B model weights were released to Hugging Face on July 24, 2026 under an Apache 2.0 license. Further details are now available from the project Technical Report , and summarized here.",
-            "Apertus 1.5 is a continued pretraining of the first generation model: adding 4 trillion tokens of text and multimodal training data to the 8B model and 2 trillion tokens to the 70B model, for a total of 19T and 17T, respectively. As with every Apertus release, the models are fully open: open weights , open data , open values , and full training details .",
-            "Native Multimodal Understanding: Apertus 1.5 accepts images and audio alongside text, bringing documents, diagrams, and photos into the conversation. The models can also process spoken language, though this remains experimental."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "52b1ec65369de5c4",
       "kind": "article",
       "title": "AstraZeneca announces new strategic collaboration with insitro to use advanced AI systems to develop transformative therapeutics for difficult to treat cardiometabolic diseases",
@@ -3647,137 +3849,6 @@
         {
           "title": "内容概览",
           "body": "AstraZeneca announces new strategic collaboration with insitro to use advanced AI systems to develop transformative therapeutics for difficult to treat cardiometabolic diseases AstraZeneca"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "cd2eb95d123dda91",
-      "kind": "article",
-      "title": "Iambic, an AI drug discovery specialist, banks $150M in an IPO",
-      "source": "BioPharma Dive",
-      "source_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOSllsTTQtWHk0Rm5hRzZPeHozTjRUSGxMZ0pnOFgwajQ3WWpFNzlJbUdrX2NZZnZWTXhzUFJMeWdkbUJaRXBqT09UUTgwTmJCZVVacklaaDR6RWtPNGFUSGRZaTI2eV9ZanpERUNDMTgwMWdtRVowSmFWc1NDVTh0ZjVXdw?oc=5",
-      "published_at": "2026-10-15T00:13:45Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Iambic, an AI drug discovery specialist, banks $150M in an IPO BioPharma Dive",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOSllsTTQtWHk0Rm5hRzZPeHozTjRUSGxMZ0pnOFgwajQ3WWpFNzlJbUdrX2NZZnZWTXhzUFJMeWdkbUJaRXBqT09UUTgwTmJCZVVacklaaDR6RWtPNGFUSGRZaTI2eV9ZanpERUNDMTgwMWdtRVowSmFWc1NDVTh0ZjVXdw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Iambic, an AI drug discovery specialist, banks $150M in an IPO BioPharma Dive"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "cec06029030594ee",
-      "kind": "article",
-      "title": "Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta",
-      "source": "Hugging Face",
-      "source_url": "https://huggingface.co/blog/meta-muse-spark-open",
-      "published_at": "2026-10-15T00:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Hugging Face",
-        "Open Source"
-      ],
-      "verification": "官方来源",
-      "summary": "We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://huggingface.co/blog/meta-muse-spark-open",
-      "key_points": [
-        "Muse Spark Open is an open-weight model from Meta.",
-        "The mixture of experts model brings text, images, audio, and video into a model with approximately 816 billion parameters, around 42 billion active per token, and a context window of up to one million tokens.",
-        "It generates text, giving developers a common interface for asking questions about different kinds of input.",
-        "Following Muse Glimmer, Muse Spark Open introduces a mixture-of-experts architecture at a much larger scale, and the most capable US open-weights model to date.",
-        "Meta trained Muse Spark Open for agentic coding: reading a codebase, writing and debugging code, and calling tools."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "We’re on a journey to advance and democratize artificial intelligence through open source and open science."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Muse Spark Open is an open-weight model from Meta.",
-            "The mixture of experts model brings text, images, audio, and video into a model with approximately 816 billion parameters, around 42 billion active per token, and a context window of up to one million tokens.",
-            "It generates text, giving developers a common interface for asking questions about different kinds of input.",
-            "Following Muse Glimmer, Muse Spark Open introduces a mixture-of-experts architecture at a much larger scale, and the most capable US open-weights model to date.",
-            "Meta trained Muse Spark Open for agentic coding: reading a codebase, writing and debugging code, and calling tools."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Muse Spark Open is an open-weight model from Meta. The mixture of experts model brings text, images, audio, and video into a model with approximately 816 billion parameters, around 42 billion active per token, and a context window of up to one million tokens. It generates text, giving developers a common interface for asking questions about different kinds of input.",
-            "Following Muse Glimmer, Muse Spark Open introduces a mixture-of-experts architecture at a much larger scale, and the most capable US open-weights model to date.",
-            "Meta trained Muse Spark Open for agentic coding: reading a codebase, writing and debugging code, and calling tools. It also takes images, audio, and video as input, so the same model can read a screenshot, listen to a voice note, or watch a screen recording while it works on your code. This post shows you how to run it, how to fine-tune it, and what we built with it. Find all the models here ."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "ac5a35639eba4c71",
-      "kind": "article",
-      "title": "Pharma.AI Fall 2026 Release Recap: Transforming Drug Discovery and Development Through Specialized Models and AI Agents",
-      "source": "Insilico Medicine",
-      "source_url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNT1RsVXVocGVvWTdtaUtJMWh1dFE0b25PQWxxRFZHNmVYQXNxWXR3d2ZRZUpVRUw3SjRTSVo5UlN6WTBaN3BQaEVkQjhjS3lMaW1nc09vNUhZTjVjTU1sTUp2QlptS094MzF0WmhlYXkzZldJNnRCbHZjQWtMUzV6cG9QaUVucGVpdHFHOU5ZWExJbEl3YnpROU1iRzVMRXJBU1dNUGtjS1A5TGxLa0tGQ1Q4R2RZTEJnVU5mN0c0dkNSUmlvS1UwOW5WRHFPcy1FdzM4WHhuVDY0WDg0NUFicENCcw?oc=5",
-      "published_at": "2026-10-13T16:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Pharma.AI Fall 2026 Release Recap: Transforming Drug Discovery and Development Through Specialized Models and AI Agents Insilico Medicine",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNT1RsVXVocGVvWTdtaUtJMWh1dFE0b25PQWxxRFZHNmVYQXNxWXR3d2ZRZUpVRUw3SjRTSVo5UlN6WTBaN3BQaEVkQjhjS3lMaW1nc09vNUhZTjVjTU1sTUp2QlptS094MzF0WmhlYXkzZldJNnRCbHZjQWtMUzV6cG9QaUVucGVpdHFHOU5ZWExJbEl3YnpROU1iRzVMRXJBU1dNUGtjS1A5TGxLa0tGQ1Q4R2RZTEJnVU5mN0c0dkNSUmlvS1UwOW5WRHFPcy1FdzM4WHhuVDY0WDg0NUFicENCcw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Pharma.AI Fall 2026 Release Recap: Transforming Drug Discovery and Development Through Specialized Models and AI Agents Insilico Medicine"
         },
         {
           "title": "公开页面要点",
@@ -3888,45 +3959,6 @@
             "Google’s Envisioning Studio partnered with designers Jane Wade and Sergio Hudson to streamline fashion production using Google Flow. These AI tools helped Jane virtually style runway looks and allowed Sergio to visualize his show within a strict budget. You can now build your own custom design tools in Google Flow using simple language, no coding required.",
             "\"Co-creating the future of fashion with Google Flow\" explores how AI helps designers work smarter."
           ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "ba9d1d8fc0217a3b",
-      "kind": "article",
-      "title": "This AI startup says it can generate permit-ready blueprints in minutes",
-      "source": "TechCrunch",
-      "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNeDR4WkpvX1MxeUJ6SEo0Zmxmcndnd04tLUF1RFRNMlQzekYyZ0hDRWVhbU1rVkh4UmNxRmh0TG9YckNlZE1BcU01YmNPWFBuY3Bndk1wYXJWeDlyN0ZzdkhNTkhfZjVzMV9HZGhoVWdZVElEYzMtQmxVNnZmelVaNXBhcmFzSkNWVEJ1cmdabnpzWWxHS1hWa1BNMnZ3UVozTVMxbGFKQnh5dw?oc=5",
-      "published_at": "2026-10-12T15:27:59Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "This AI startup says it can generate permit-ready blueprints in minutes TechCrunch",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNeDR4WkpvX1MxeUJ6SEo0Zmxmcndnd04tLUF1RFRNMlQzekYyZ0hDRWVhbU1rVkh4UmNxRmh0TG9YckNlZE1BcU01YmNPWFBuY3Bndk1wYXJWeDlyN0ZzdkhNTkhfZjVzMV9HZGhoVWdZVElEYzMtQmxVNnZmelVaNXBhcmFzSkNWVEJ1cmdabnpzWWxHS1hWa1BNMnZ3UVozTVMxbGFKQnh5dw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "This AI startup says it can generate permit-ready blueprints in minutes TechCrunch"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -4355,6 +4387,45 @@
         {
           "title": "内容概览",
           "body": "Mace Windu fell out of a window by Lil Vader 😂 (AI Ruins Everything) X"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "95774b9c0bed9304",
+      "kind": "article",
+      "title": "AI startup Vectorial lands $3M in funding to simulate human behavior for consumer research",
+      "source": "SiliconANGLE",
+      "source_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNUExza290aGgzbGJ2OFFmZHdHNzdJUWdjMERwdGtqdGdReWdseC1XdVFOZDREYmNPNXhKdVpPa1hTdzVTT2VqY3htaEhKOWU4SFNYcWdBVW9JdTlibHpMUkZidWtxemJFbE8wS2pDTjk2WFF0VWpXM2xTTmt4MXJKZS1PV2syOFc1S0ZzN3ZoWHlZV1VtRnE5TWxPa0hPUE5udTVSQmFBdXhBRG40NWdVeHNncndHVjdhRmIydG81MUdfUjVR?oc=5",
+      "published_at": "2026-10-20T12:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "AI startup Vectorial lands $3M in funding to simulate human behavior for consumer research SiliconANGLE",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNUExza290aGgzbGJ2OFFmZHdHNzdJUWdjMERwdGtqdGdReWdseC1XdVFOZDREYmNPNXhKdVpPa1hTdzVTT2VqY3htaEhKOWU4SFNYcWdBVW9JdTlibHpMUkZidWtxemJFbE8wS2pDTjk2WFF0VWpXM2xTTmt4MXJKZS1PV2syOFc1S0ZzN3ZoWHlZV1VtRnE5TWxPa0hPUE5udTVSQmFBdXhBRG40NWdVeHNncndHVjdhRmIydG81MUdfUjVR?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AI startup Vectorial lands $3M in funding to simulate human behavior for consumer research SiliconANGLE"
         },
         {
           "title": "公开页面要点",
@@ -4868,57 +4939,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "037af578d6dcc888",
-      "kind": "article",
-      "title": "Reaching Across the Isles: UK-LLM Brings AI to UK Languages With NVIDIA Nemotron",
-      "source": "NVIDIA AI",
-      "source_url": "https://blogs.nvidia.com/blog/uk-llm-nemotron/",
-      "published_at": "2025-09-14T01:00:21Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "NVIDIA",
-        "Infrastructure"
-      ],
-      "verification": "官方来源",
-      "summary": "Celtic languages — including Cornish, Irish, Scottish Gaelic and Welsh — are the U.K.’s oldest living languages. To empower their speakers, the UK-LLM sovereign AI initiative is building an AI model based on NVIDIA Nemotron that can reason in both English and Welsh, a language spoken by about 850,000 people in Wales today. Enabling high-quality […]",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://blogs.nvidia.com/blog/uk-llm-nemotron/",
-      "key_points": [
-        "Celtic languages — including Cornish, Irish, Scottish Gaelic and Welsh — are the U.K.’s oldest living languages.",
-        "To empower their speakers, the UK-LLM sovereign AI initiative is building an AI model based on NVIDIA Nemotron that can reason in both English and Welsh, a language spoken by about 850,000 people in Wales today.",
-        "Enabling high-quality AI reasoning in Welsh will support the delivery of public services including healthcare, education and legal resources in the language. “I want every corner of the U.K. to be able to harness the benefits of artificial intelligence.",
-        "By enabling AI to reason in Welsh, we’re making sure that public services — from healthcare to education — are accessible to everyone, in the language they live by,” said U.K.",
-        "Prime Minister Keir Starmer. “This is a powerful example of how the latest AI technology, trained on the U.K.’s most advanced AI supercomputer in Bristol, can serve the public good, protect cultural heritage and unlock opportunity across the country.”"
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Celtic languages — including Cornish, Irish, Scottish Gaelic and Welsh — are the U.K.’s oldest living languages. To empower their speakers, the UK-LLM sovereign AI initiative is building an AI model based on NVIDIA Nemotron that can reason in both English and Welsh, a language spoken by about 850,000 people in Wales today. Enabling high-quality […]"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Celtic languages — including Cornish, Irish, Scottish Gaelic and Welsh — are the U.K.’s oldest living languages.",
-            "To empower their speakers, the UK-LLM sovereign AI initiative is building an AI model based on NVIDIA Nemotron that can reason in both English and Welsh, a language spoken by about 850,000 people in Wales today.",
-            "Enabling high-quality AI reasoning in Welsh will support the delivery of public services including healthcare, education and legal resources in the language. “I want every corner of the U.K. to be able to harness the benefits of artificial intelligence.",
-            "By enabling AI to reason in Welsh, we’re making sure that public services — from healthcare to education — are accessible to everyone, in the language they live by,” said U.K.",
-            "Prime Minister Keir Starmer. “This is a powerful example of how the latest AI technology, trained on the U.K.’s most advanced AI supercomputer in Bristol, can serve the public good, protect cultural heritage and unlock opportunity across the country.”"
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Celtic languages — including Cornish, Irish, Scottish Gaelic and Welsh — are the U.K.’s oldest living languages. To empower their speakers, the UK-LLM sovereign AI initiative is building an AI model based on NVIDIA Nemotron that can reason in both English and Welsh, a language spoken by about 850,000 people in Wales today.",
-            "Enabling high-quality AI reasoning in Welsh will support the delivery of public services including healthcare, education and legal resources in the language.",
-            "“I want every corner of the U.K. to be able to harness the benefits of artificial intelligence. By enabling AI to reason in Welsh, we’re making sure that public services — from healthcare to education — are accessible to everyone, in the language they live by,” said U.K. Prime Minister Keir Starmer. “This is a powerful example of how the latest AI technology, trained on the U.K.’s most advanced AI supercomputer in Bristol, can serve the public good, protect cultural heritage and unlock opportunity across the country.”"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "0e3206d17b886dcf",
       "kind": "article",
       "title": "OpenAI is sued over rogue AI Hugging Face cyberattack",
@@ -5114,45 +5134,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "63ed4615066c6d1d",
-      "kind": "article",
-      "title": "FAA AI use sparks new reviews into AI safety, workforce shortages",
-      "source": "Federal News Network",
-      "source_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPMXV2VnJ0WmZNREpza2VVRFJvLU1YelVxX1pMV2tQbGljcmd3bU15bmtqeUJfejA1eGhpSzBzWnVhdDNkZlpRdDB1VDBVY1BIeVhGSE4wbjdwazR6OTBkdW05Q2o0dHkxNlgzV3BWaDRtc19LVXItN0V5OUFGeTlVVmR5N3o5WTkyODBlb0oyZy00blFSaWtpVHZSdjgxVEZXbFoyZkF6NXVmdldWYzRhTzRiYw?oc=5",
-      "published_at": "2026-10-16T22:35:53Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "FAA AI use sparks new reviews into AI safety, workforce shortages Federal News Network",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPMXV2VnJ0WmZNREpza2VVRFJvLU1YelVxX1pMV2tQbGljcmd3bU15bmtqeUJfejA1eGhpSzBzWnVhdDNkZlpRdDB1VDBVY1BIeVhGSE4wbjdwazR6OTBkdW05Q2o0dHkxNlgzV3BWaDRtc19LVXItN0V5OUFGeTlVVmR5N3o5WTkyODBlb0oyZy00blFSaWtpVHZSdjgxVEZXbFoyZkF6NXVmdldWYzRhTzRiYw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "FAA AI use sparks new reviews into AI safety, workforce shortages Federal News Network"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "9784c9da89ea16c8",
       "kind": "article",
       "title": "Anthropic quietly pitches its own AI safety bill to lawmakers",
@@ -5216,6 +5197,45 @@
         {
           "title": "内容概览",
           "body": "Exclusive: AI safety money floods into political races Axios"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "539d54c5a1c0a29c",
+      "kind": "article",
+      "title": "Massachusetts May Pass Country’s Strictest AI Safety Law",
+      "source": "GovTech",
+      "source_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxObHhaMmlNd09pTldJcW9ERXhNRTZ3NGVCMDdTRWdwYmc4c3habW44amFaTE5td3ViS3o2V0FVZ0Nvc0FlM0IzRmptc2dNTmk3aVZvNHZLN2IwZHZJSVAzSGRUcUMxTVRTbXk2cVZWUUtXTXJRdDNOZjhCNG1TNUVvNUc0cHluZG4yMFg0QVNDUDI4VndRdzNmeWc5NFRQdlRuX2RkTlBB?oc=5",
+      "published_at": "2026-10-13T22:12:57Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Massachusetts May Pass Country’s Strictest AI Safety Law GovTech",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxObHhaMmlNd09pTldJcW9ERXhNRTZ3NGVCMDdTRWdwYmc4c3habW44amFaTE5td3ViS3o2V0FVZ0Nvc0FlM0IzRmptc2dNTmk3aVZvNHZLN2IwZHZJSVAzSGRUcUMxTVRTbXk2cVZWUUtXTXJRdDNOZjhCNG1TNUVvNUc0cHluZG4yMFg0QVNDUDI4VndRdzNmeWc5NFRQdlRuX2RkTlBB?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Massachusetts May Pass Country’s Strictest AI Safety Law GovTech"
         },
         {
           "title": "公开页面要点",
