@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-20T16:59:47Z",
+  "generated_at": "2026-10-20T21:34:44Z",
   "item_count": 130,
   "category_counts": {
     "research": 20,
@@ -54,7 +54,7 @@
       "姚顺雨 / Agents": 1,
       "Ilya Sutskever / SSI": 0,
       "Andrej Karpathy / Eureka Labs": 0,
-      "李飞飞 / Stanford·World Labs": 5,
+      "李飞飞 / Stanford·World Labs": 6,
       "Noam Brown / Reasoning": 0,
       "梁文锋 / DeepSeek": 0,
       "杨植麟 / 月之暗面": 0
@@ -74,27 +74,33 @@
       "note": ""
     },
     {
-      "name": "Google AI",
-      "status": "ok",
-      "count": 7,
-      "note": ""
-    },
-    {
       "name": "NVIDIA AI",
       "status": "ok",
       "count": 6,
       "note": ""
     },
     {
-      "name": "Google DeepMind",
-      "status": "ok",
-      "count": 8,
-      "note": ""
-    },
-    {
       "name": "Hugging Face",
       "status": "ok",
       "count": 7,
+      "note": ""
+    },
+    {
+      "name": "Google DeepMind",
+      "status": "error",
+      "count": 0,
+      "note": "not well-formed (invalid token): line 1, column 0"
+    },
+    {
+      "name": "Google AI",
+      "status": "ok",
+      "count": 7,
+      "note": ""
+    },
+    {
+      "name": "AI for Mathematics & Science",
+      "status": "ok",
+      "count": 12,
       "note": ""
     },
     {
@@ -116,15 +122,21 @@
       "note": ""
     },
     {
-      "name": "AI for Mathematics & Science",
+      "name": "AI for Biology, Medicine & Materials",
       "status": "ok",
       "count": 12,
       "note": ""
     },
     {
-      "name": "AI for Biology, Medicine & Materials",
+      "name": "OpenAlex Conference Index",
       "status": "ok",
-      "count": 12,
+      "count": 20,
+      "note": ""
+    },
+    {
+      "name": "Anthropic",
+      "status": "ok",
+      "count": 8,
       "note": ""
     },
     {
@@ -134,9 +146,9 @@
       "note": ""
     },
     {
-      "name": "Anthropic",
+      "name": "AI Policy Monitor",
       "status": "ok",
-      "count": 8,
+      "count": 10,
       "note": ""
     },
     {
@@ -147,12 +159,6 @@
     },
     {
       "name": "China AI · Kimi & Qwen",
-      "status": "ok",
-      "count": 10,
-      "note": ""
-    },
-    {
-      "name": "AI Policy Monitor",
       "status": "ok",
       "count": 10,
       "note": ""
@@ -176,15 +182,15 @@
       "note": ""
     },
     {
-      "name": "Agent & Reasoning Researchers",
-      "status": "ok",
-      "count": 9,
-      "note": ""
-    },
-    {
       "name": "Frontier Leaders on X",
       "status": "ok",
       "count": 10,
+      "note": ""
+    },
+    {
+      "name": "Agent & Reasoning Researchers",
+      "status": "ok",
+      "count": 9,
       "note": ""
     },
     {
@@ -196,19 +202,13 @@
     {
       "name": "China AI Social Monitor",
       "status": "ok",
-      "count": 2,
+      "count": 3,
       "note": ""
     },
     {
       "name": "Foundation Model Pioneers",
       "status": "ok",
       "count": 9,
-      "note": ""
-    },
-    {
-      "name": "OpenAlex Conference Index",
-      "status": "ok",
-      "count": 20,
       "note": ""
     },
     {
@@ -251,7 +251,7 @@
       "summary": "We asked an internal research Claude model to design minibinders (small proteins that attach tightly to a target) against scorpion neurotoxins.",
       "source": "Anthropic",
       "url": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
-      "published_at": "2026-10-20T13:01:21Z",
+      "published_at": "2026-10-20T00:00:00Z",
       "tags": [
         "Anthropic",
         "Research"
@@ -358,24 +358,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "51e2daa9cd8a3deb",
-      "category": "impact",
-      "title": "SynthID Bio: Watermarking methods for synthetic biology",
-      "summary": "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
-      "source": "Google DeepMind",
-      "url": "https://deepmind.google/blog/introducing-synthid-bio/",
-      "published_at": "2026-09-30T15:03:07Z",
-      "tags": [
-        "DeepMind",
-        "Official"
-      ],
-      "importance": 102,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=51e2daa9cd8a3deb",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "bace-gecco-2026",
       "category": "research",
       "title": "BACE: LLM-based Code Generation through Bayesian Anchored Co-Evolution",
@@ -402,6 +384,42 @@
       "cached_pdf": "./papers/bace-gecco-2026.pdf"
     },
     {
+      "id": "bcfac231a7dac682",
+      "category": "frontier",
+      "title": "Franchisee reconciles cash in 94% less time with ChatGPT Work",
+      "summary": "An independent Schlotzsky’s and Cinnabon franchisee cut menu repricing time by 95% and built a workflow that could free up $100K in cash flow.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/ted-taylor-restaurant",
+      "published_at": "2026-10-20T10:00:00Z",
+      "tags": [
+        "OpenAI",
+        "Official"
+      ],
+      "importance": 100,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=bcfac231a7dac682",
+      "reader_status": "summary-only"
+    },
+    {
+      "id": "c32234807adb6eee",
+      "category": "frontier",
+      "title": "OpenAI acquires Orchestra Bio",
+      "summary": "OpenAI is acquiring Orchestra Bio to bring AI-powered operations to life sciences R&D, helping biopharma teams accelerate drug development and advance new treatments.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/openai-to-acquire-orchestra-bio",
+      "published_at": "2026-10-20T00:00:00Z",
+      "tags": [
+        "OpenAI",
+        "Official"
+      ],
+      "importance": 100,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=c32234807adb6eee",
+      "reader_status": "summary-only"
+    },
+    {
       "id": "6873fff27d905df5",
       "category": "frontier",
       "title": "Advancing coding in low‑resource programming languages",
@@ -418,24 +436,6 @@
       "verification": "官方来源",
       "reader_url": "./reader.html?id=6873fff27d905df5",
       "reader_status": "summary-only"
-    },
-    {
-      "id": "27d11482d01536a7",
-      "category": "frontier",
-      "title": "Investing in the public benefit",
-      "summary": "We’re committing a portion of Anthropic’s shares to the Anthropic Public Benefit Fund, a new entity with a structure that increases the stake as the company grows.",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/news/public-benefit-fund",
-      "published_at": "2026-10-18T16:49:35Z",
-      "tags": [
-        "Anthropic",
-        "Official"
-      ],
-      "importance": 100,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=27d11482d01536a7",
-      "reader_status": "public-page-excerpt"
     },
     {
       "id": "rhb-icml-2026",
@@ -479,96 +479,6 @@
       "verification": "官方来源",
       "reader_url": "./reader.html?id=1779c240f89f7d1d",
       "reader_status": "summary-only"
-    },
-    {
-      "id": "6c04889b46807984",
-      "category": "frontier",
-      "title": "Designing more efficient quantum circuits with Claude",
-      "summary": "Working largely on its own, Claude designed quantum circuits that improve on the best published versions, in some cases by an order of magnitude or more.",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/research/designing-efficient-quantum-circuits",
-      "published_at": "2026-10-16T17:29:00Z",
-      "tags": [
-        "Anthropic",
-        "Research"
-      ],
-      "importance": 99,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=6c04889b46807984",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "4ad10f95f5ce1cbb",
-      "category": "frontier",
-      "title": "Claude reveals ECDSA curve origins",
-      "summary": "The decades-old mystery of the origins of one of the most popular cryptographic standards has been explained.",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
-      "published_at": "2026-10-16T17:02:00Z",
-      "tags": [
-        "Anthropic",
-        "Research"
-      ],
-      "importance": 99,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=4ad10f95f5ce1cbb",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "c228ba2bf84c4276",
-      "category": "frontier",
-      "title": "The AI expectations gap",
-      "summary": "How will AI reshape the economy in the years ahead? What is the core source of disagreement about AI's future impact on the economy? This note presents new survey evidence on these questions.",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/research/ai-expectations-gap",
-      "published_at": "2026-10-16T16:45:00Z",
-      "tags": [
-        "Anthropic",
-        "Research"
-      ],
-      "importance": 99,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=c228ba2bf84c4276",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "bc88cb567cf140f9",
-      "category": "frontier",
-      "title": "How employment is changing at Anthropic",
-      "summary": "How has AI restructured work and employment at Anthropic? As a company at the frontier of AI adoption, Anthropic could be a leading indicator of how AI will shift work organization, hiring, and labor demand across the economy.",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/research/employment-at-anthropic",
-      "published_at": "2026-10-16T16:26:00Z",
-      "tags": [
-        "Anthropic",
-        "Research"
-      ],
-      "importance": 99,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=bc88cb567cf140f9",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "543be2116362c0c6",
-      "category": "frontier",
-      "title": "Working at the frontier shapes expectations for the future",
-      "summary": "We’re sharing two reports: the first covers how AI is changing employment inside Anthropic, and the second looks at the gap between how the public and Anthropic employees expect AI to affect work and the economy.",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/research/expectations-for-the-future",
-      "published_at": "2026-10-16T16:21:00Z",
-      "tags": [
-        "Anthropic",
-        "Research"
-      ],
-      "importance": 99,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=543be2116362c0c6",
-      "reader_status": "public-page-excerpt"
     },
     {
       "id": "b61603aa86883741",
@@ -625,42 +535,6 @@
       "reader_status": "summary-only"
     },
     {
-      "id": "f0c67f699c236db9",
-      "category": "frontier",
-      "title": "Anthropic update on independent evaluators",
-      "summary": "Anthropic announces updates to embedding independent evaluators",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
-      "published_at": "2026-10-15T17:20:00Z",
-      "tags": [
-        "Anthropic",
-        "Official"
-      ],
-      "importance": 99,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=f0c67f699c236db9",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "974c9e9820541901",
-      "category": "frontier",
-      "title": "Accelerating the search for antimicrobial peptides with Google Antigravity",
-      "summary": "Accelerating the search for novel antimicrobial peptides using Google Antigravity for Science.",
-      "source": "Google DeepMind",
-      "url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
-      "published_at": "2026-10-15T16:08:03Z",
-      "tags": [
-        "DeepMind",
-        "Official"
-      ],
-      "importance": 99,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=974c9e9820541901",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "00051b9d22302c85",
       "category": "frontier",
       "title": "Teaching students to think and learn through questions",
@@ -697,24 +571,6 @@
       "reader_status": "summary-only"
     },
     {
-      "id": "d257200d7f9b9001",
-      "category": "frontier",
-      "title": "Amp puts AI agents to work beyond code with OpenAI models",
-      "summary": "See how Amp pushes the frontier of what agents can do with GPT-6 Astra, Ultrafast, GPT-Live-1, and Sign in with ChatGPT.",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/amp-beyond-coding",
-      "published_at": "2026-10-14T12:00:00Z",
-      "tags": [
-        "OpenAI",
-        "Official"
-      ],
-      "importance": 99,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=d257200d7f9b9001",
-      "reader_status": "summary-only"
-    },
-    {
       "id": "gpt5-protein-synthesis-20260205",
       "category": "impact",
       "title": "GPT-5 与自动化实验室将无细胞蛋白合成成本降低 40%",
@@ -732,6 +588,25 @@
       "verification": "官方实验报告 · 含可量化结果",
       "reader_url": "./reader.html?id=gpt5-protein-synthesis-20260205",
       "reader_status": "summary-only"
+    },
+    {
+      "id": "705066d08de3f116",
+      "category": "impact",
+      "title": "To AI-proof your career, learn to 'build and sell,' says $100 billion cybersecurity firm founder",
+      "summary": "To AI-proof your career, learn to 'build and sell,' says $100 billion cybersecurity firm founder CNBC",
+      "source": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5Xb1pDWU5qbWp1YUV6LWR0U0RydElOdkZBWWVEaG5hX0UzeUc4TmtzM3k3dzdINnU3ZWtwTGxleUFfZ2JkR2NGbmpKMnd0a2ZZMEVSRmpPT2dOMnN6VVVnWFhUM0N1aWppcllGS1A0TnktUWfSAXhBVV95cUxPQ0x6bUduQ2tUdlFBU2ZwcWJxR3BMSXFIRnF2M3Y4LURuLUNrcXFlRVlXWWg3RnotbW1tTEdQUTFaNWdYSkdZc21ja1VGNWt3cFlhQUwydk4tNmdvQlk1ZU00NnQ4ZE43WlNzTTBRTXEyYm9UVk5ZWGQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-20T16:44:41Z",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "importance": 96,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=705066d08de3f116",
+      "reader_status": "public-page-excerpt"
     },
     {
       "id": "a1263dd70d8d4b50",
@@ -1299,25 +1174,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "9ea5613b4342bfde",
-      "category": "impact",
-      "title": "‘Breathtaking,’ ‘Devastating’: Mathematics Reels After New OpenAI Release",
-      "summary": "‘Breathtaking,’ ‘Devastating’: Mathematics Reels After New OpenAI Release The New York Times",
-      "source": "The New York Times",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPODBqdjFtSkFGUTZYd2w1WlRnaWFfX3NiWDJ4OXgzdGozcV94WFV1T2JWY0lrekg2ZGR6Sk1wMGtNMzNDeXFmdnc2Zl9zTk0zMDhCLXMyYUFVSjRVNk1CTkF2Y2h2VF9HRVZvV2xfRkpiUTJsQUlNV0ZnaFBTWGxJUW5mbkVEdjVuQ25HMHV3?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-08T07:00:00Z",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "importance": 94,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=9ea5613b4342bfde",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "aba23796341e61cd",
       "category": "bigtech",
       "title": "Called to serve: Tech, research, and positive impact - Microsoft Research",
@@ -1336,12 +1192,12 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "02a17b7a92d06278",
+      "id": "ab01d445f47a2120",
       "category": "china",
       "title": "DeepSeek 重磅宣布,AI概念多股垂直涨停",
       "summary": "大规模云厂商部署非原生 DeepSeek 的调用成本甚至存在低于官方原生的可能性.有报道称,相关代码已在GitHub等开发者社区 发布 ....",
       "source": "微信公众号 · 21世纪经济报道",
-      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HBKe12qjy2x5uYW-sGJtG9NiEXf-JZWvsbpkw712&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792515588%26ver%3D7038%26signature%3DzmJr%2ALdvEOMWykow%2AL14WL8i-FlUbmlNB1B7vXg22bmUn7hdLgmwJbwCXMGDKEE2DKqf%2AtjCANqDQSQoBNlmx4DyklkrU54ocwF60ifiuVEHormYav6pgOQZo8CTOmtO%26new%3D1",
+      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HH7e12qjpydVWy3b-nASIAuK6GtAuLl6EXLwAiLn&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792532086%26ver%3D7039%26signature%3D1R27NtzaC8sRwA7YUD2ZesUUR4KemA8NZGkiCg1ZMxh7%2ApiraI35Kko5AX7AZx8VCNLmlc8nCBXBdFGm3UEwnAaBlh7XQ-LMpKBE4N5bAzPoZ7St1qSEO6z%2Aa5DAhh3x%26new%3D1",
       "published_at": "2026-10-20T12:38:30Z",
       "tags": [
         "微信公众号",
@@ -1351,17 +1207,17 @@
       "importance": 93,
       "content_kind": "article",
       "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "reader_url": "./reader.html?id=02a17b7a92d06278",
+      "reader_url": "./reader.html?id=ab01d445f47a2120",
       "index_url": "https://weixin.sogou.com/weixin?type=2&query=DeepSeek+%E5%8F%91%E5%B8%83",
       "reader_status": "indexed-summary"
     },
     {
-      "id": "acc20f07b656944b",
+      "id": "86f3a6bc18fdab84",
       "category": "china",
       "title": "全线拉升!刚刚, DeepSeek 重磅宣布!",
       "summary": "DeepSeek ,传来重磅.今日(10月20日)下午, DeepSeek 宣布... 十一部门,重磅 发布 韩国,“救市”!做空美股!知名大佬,突然...",
       "source": "微信公众号 · 券商中国",
-      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HBKe12qj4XeizzeTGRqUUODVxB5If3f8ZAuJqzpb&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792515588%26ver%3D7038%26signature%3DPoiiAtc0vQqJb-lalkC4w3GECtefswbrmCVLIiuLm2BGBimzQjg96Xv3occxw95i2XccpD115AhCgTtTUmJY-FGINthCV5yTMmz0R2aMEFObs6yPgX-p82Ysp84MlqV8%26new%3D1",
+      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HH7e12qjh6f2pwUa3o_3HQtTE0KKAYcpvt29tGQT&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792532086%26ver%3D7039%26signature%3D1cxMAmJaM8S%2A7ICAP6UNRGLZFyfhPt0LPF4TEuCm6D0xoAgaStd7Xjiizo4TD%2A95qvzCPDbAUMgr7GYy6aCNFzU3vRt4%2APfBOUlgK6MHlzkAIITc%2AFcv9rPZBeJFHBGq%26new%3D1",
       "published_at": "2026-10-20T10:57:00Z",
       "tags": [
         "微信公众号",
@@ -1371,7 +1227,7 @@
       "importance": 93,
       "content_kind": "article",
       "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "reader_url": "./reader.html?id=acc20f07b656944b",
+      "reader_url": "./reader.html?id=86f3a6bc18fdab84",
       "index_url": "https://weixin.sogou.com/weixin?type=2&query=DeepSeek+%E5%8F%91%E5%B8%83",
       "reader_status": "indexed-summary"
     },
@@ -1674,6 +1530,24 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "e879be1befb70532",
+      "category": "bigtech",
+      "title": "Gemini 4 Argon: Built to solve your hardest problems",
+      "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+      "source": "Google AI",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+      "published_at": "2026-10-13T16:00:00Z",
+      "tags": [
+        "Google",
+        "Official"
+      ],
+      "importance": 92,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=e879be1befb70532",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "demis-frontier-ai-framework-20260714",
       "category": "voices",
       "title": "A Framework for Frontier AI and the Dawning of a New Age",
@@ -1690,25 +1564,6 @@
       "content_kind": "social",
       "verification": "实验室负责人官方账号长文",
       "reader_url": "./reader.html?id=demis-frontier-ai-framework-20260714",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "d7cdf634558c71f4",
-      "category": "impact",
-      "title": "In a New Anthropic Lab, A.I. Turns to Biology",
-      "summary": "In a New Anthropic Lab, A.I. Turns to Biology The New York Times",
-      "source": "The New York Times",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNNFZzajNZQW1MeHplVTRLYWd5NUlpUjhTSVU1YU9sODRIQTRvZU5TXzBvR2xETVVPYmEzRVJNNVJkRk83Y2pPZlVFbnB5RHZULU85MEdTa09wZUVBM3ZiLUJIdWs3U2NieXZVNTJUNER0WG1qSGF1TkdEZGs4TjNLdVFB?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-09-25T07:00:00Z",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "importance": 91,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=d7cdf634558c71f4",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -1763,6 +1618,25 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=4245445afae80a9b",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "de7f179ce791bcbb",
+      "category": "impact",
+      "title": "Opinion | This Is a Rare Arena in Which People Think A.I. Is Helping. It’s Making Things Worse.",
+      "summary": "Opinion | This Is a Rare Arena in Which People Think A.I. Is Helping. It’s Making Things Worse. The New York Times",
+      "source": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOVlFwSTlmcFRQT0UwU3NlQzlraE44OHVFWERDVTlMVHlRM0R5QXNwM0tFVWNoOU1VTGNFQ0FQUmRFcEQ1QnAtaXY5a1liUkVkNkNIYkEzTGlmc3BmRm51RTEtY1ZGM080UlBXTjYtZUZJOEkwWWpRSUl2VHFTN29ibC1WS0Y3Vmlq?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-22T07:00:00Z",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "importance": 90,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=de7f179ce791bcbb",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -1836,6 +1710,24 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=25c3f7b3a6fe47e8",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "76791c7060c74d13",
+      "category": "opensource",
+      "title": "NVIDIA Cosmos3-H-Dreams: Bringing Clinical Surgery to Life Through Generative Simulation",
+      "summary": "A Blog post by NVIDIA on Hugging Face",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/blog/nvidia/cosmos3-h-dreams",
+      "published_at": "2026-10-20T18:17:47Z",
+      "tags": [
+        "Hugging Face",
+        "Open Source"
+      ],
+      "importance": 88,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=76791c7060c74d13",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -1948,6 +1840,44 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "fef675c45f484a0e",
+      "category": "impact",
+      "title": "Top mathematicians grade AI’s ability to solve toughest problems",
+      "summary": "Top mathematicians grade AI’s ability to solve toughest problems FAS Current",
+      "source": "FAS Current",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOazRweDFGLUdLelA5TWp5bDVTZ0tLeDJFcHd3V2pnZGhXTTFFLUY2MEl6S2I2aElGSWswUVdXdkRBVFBLYjVTN0Vrck4wYkNrcnY0bmFHNlZNYXdfd2ZlNzFMd2l4MEJpRWZRam1hQUVrOUk0Nm01dmN5bWY3THdzWUU2STJSSG5tX0RPdEJHcExQUFVya1JxYzZNUk04REd5M1E?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-19T23:38:18Z",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "importance": 88,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=fef675c45f484a0e",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "314e72ae5e040398",
+      "category": "impact",
+      "title": "AI Proved the Quasi-Riemann Hypothesis. What Happens Now?",
+      "summary": "AI Proved the Quasi-Riemann Hypothesis. What Happens Now? Quanta Magazine",
+      "source": "Quanta Magazine",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQWkd6S1luM0tWSTRhX3ZYV3p4VmdNbGR3VEFPUGRNREpCVl92cGM5RGNpaW5jWmM3VVVTOVZCdE1NRm4xWllxdnd3TGZ5OG91V3IxbFVyV3dZTUlNZ19VU3dicWVoTlFXMXZUc20xUEZkQWxMYjFOTnFrclZheUh5Z3loanFHa2d6RTFHeG1PX3R6ckxxU3p6U2pXNVY?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-19T15:43:30Z",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "importance": 88,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=314e72ae5e040398",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "8ee1043aca167d86",
       "category": "opensource",
       "title": "TorchNeuron: running HF models on AWS Trainium is easier than ever",
@@ -1963,6 +1893,24 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=8ee1043aca167d86",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "12f2aee58399d15c",
+      "category": "frontier",
+      "title": "Anthropic discloses fake tip to police among new rogue AI incidents",
+      "summary": "Anthropic discloses fake tip to police among new rogue AI incidents Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPUzh0MDhsc3I0ZzFCYTc4V0U4Nlk3WDVkX3ppUW5ZdzBJZTlGSGcxYUUtVThoRF9JZ24tLWhEaEQxRVFjWnRJU28wWVRkYVpRU09pdnBtZnFTdTZuM29vTjBURkdla0Z0N0ozSm8xemVKeXNyNjNDVGhCcWI0VDhPLUZUM1RiWVRGYXRXZ2JGSjRhYS04RGVjQUZ0dGlRN3NHeDA0OVcwQk4?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-11T07:00:00Z",
+      "tags": [
+        "Frontier Labs",
+        "Industry"
+      ],
+      "importance": 88,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=12f2aee58399d15c",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -1984,50 +1932,13 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "46b74daa8aad9839",
-      "category": "impact",
-      "title": "Will physics be the next field to be turned upside down by AI?",
-      "summary": "Will physics be the next field to be turned upside down by AI? New Scientist",
-      "source": "New Scientist",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOQ2l4R0tGTlhPYk1Xektfb0QzQTRGMWpjYjFmZXRIUmdzUWV3YkJPaTI4djJqcUV2emdvbEZvYld2ZlFmUDN0ekxOcldNMF9mMjdBMmhQT0ZEZ0wzQVdzZ29xOGNTblBmTlEzWlhZdTdaYVhkRkZfMUw4N0NIeG9wQlh3V3BWT0dmRkU4WURaSHJaU1VEQ1lEZGJYSmhZM3pNVFNnbE8tQmd4cU4w?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-16T17:02:01Z",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "importance": 87,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=46b74daa8aad9839",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "cec3f5f15ba31f3a",
-      "category": "opensource",
-      "title": "Scaling Indic Pretraining: 2.8 Trillion Tokens and an Open Data Generation Pipeline",
-      "summary": "A Blog post by NVIDIA on Hugging Face",
-      "source": "Hugging Face",
-      "url": "https://huggingface.co/blog/nvidia/scaling-indic-pretraining",
-      "published_at": "2026-10-16T01:44:47Z",
-      "tags": [
-        "Hugging Face",
-        "Open Source"
-      ],
-      "importance": 87,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=cec3f5f15ba31f3a",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "981fb38639007d1d",
       "category": "impact",
       "title": "AstraZeneca Strikes Up to $1.5 Billion AI Drug Discovery Deal With Insitro",
       "summary": "AstraZeneca Strikes Up to $1.5 Billion AI Drug Discovery Deal With Insitro WSJ",
       "source": "WSJ",
       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPYzJ4ZVJOeGdjS0xITnEyMmNUQnhJc2dwZ0V1ZG13VXJzclZrVUF0SXJOREVuVzhqU2ducUVhZ0JidE1HOXNrQURWWElEMGFZeklvOFI1N0pRY3cwWnZpcWRwakM0R1hIb29veGtvN2s1WHFkd3d4YlBOdlN6YTRoaUtTR3BkbkdrUmRKalVjZWN1WjkzcktOai11RTJOd1RpNE5jVjBtTEVKcG4xSzA0a05NX3dQQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-15T12:38:34Z",
+      "published_at": "2026-10-15T12:37:00Z",
       "tags": [
         "AI for Science",
         "Biology",
@@ -2037,25 +1948,6 @@
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=981fb38639007d1d",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "2d8a4c8b0ba90f70",
-      "category": "impact",
-      "title": "CERN and Mistral join forces to accelerate AI for science – Home",
-      "summary": "CERN and Mistral join forces to accelerate AI for science – Home Home | CERN",
-      "source": "Home | CERN",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPQllxbHdUcnp1V0NUay1vZUlyNnJTNjJmZXNsbWN6Q1JCM2ZRRUNHWjVQRjYydHBlLU82UWJlUUhzX2JCc3h4TVFCUEZkT2RNLUpZMm9WLUdLNlB2ZG1ScXBJZ1hVM1ctd0JLUU9LWEluaTR5eG5HMHg4UGZGQnBYWkRB?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-15T10:00:00Z",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "importance": 87,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=2d8a4c8b0ba90f70",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2075,6 +1967,43 @@
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=52b1ec65369de5c4",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "cd2eb95d123dda91",
+      "category": "impact",
+      "title": "Iambic, an AI drug discovery specialist, banks $150M in an IPO",
+      "summary": "Iambic, an AI drug discovery specialist, banks $150M in an IPO BioPharma Dive",
+      "source": "BioPharma Dive",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOSllsTTQtWHk0Rm5hRzZPeHozTjRUSGxMZ0pnOFgwajQ3WWpFNzlJbUdrX2NZZnZWTXhzUFJMeWdkbUJaRXBqT09UUTgwTmJCZVVacklaaDR6RWtPNGFUSGRZaTI2eV9ZanpERUNDMTgwMWdtRVowSmFWc1NDVTh0ZjVXdw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-15T00:13:45Z",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "importance": 87,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=cd2eb95d123dda91",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "bf7898bdac1a8944",
+      "category": "frontier",
+      "title": "Anthropic launches third Claude 5.5 model, expanding AI lineup before planned IPO",
+      "summary": "Anthropic launches third Claude 5.5 model, expanding AI lineup before planned IPO Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPbENadk1Lcm1iLUZOd0hYSmRZLWJHLTd0YjAwTExuMVozWW9McllnVWJuTHdPY3ZfRWJwVGdzMmpVaHhvODVVMkFMd0U0ejdyRjQxcEJMVzRqcTJqbWVaLXI5QnM1ckRSYmZVYjlBR2NqRTZaaW42QjFZMC00ZmxKOF9Fal9EODV2dEZnb1BPUDBlSFJrRDVtWkNLTWhacE04b3dyemlvckZTR3JmR0xONmxGb19hNU1tWFJMcVlJajNYUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-07T07:00:00Z",
+      "tags": [
+        "Frontier Labs",
+        "Industry"
+      ],
+      "importance": 87,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=bf7898bdac1a8944",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2114,6 +2043,24 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "ba9d1d8fc0217a3b",
+      "category": "startups",
+      "title": "This AI startup says it can generate permit-ready blueprints in minutes",
+      "summary": "This AI startup says it can generate permit-ready blueprints in minutes TechCrunch",
+      "source": "TechCrunch",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNeDR4WkpvX1MxeUJ6SEo0Zmxmcndnd04tLUF1RFRNMlQzekYyZ0hDRWVhbU1rVkh4UmNxRmh0TG9YckNlZE1BcU01YmNPWFBuY3Bndk1wYXJWeDlyN0ZzdkhNTkhfZjVzMV9HZGhoVWdZVElEYzMtQmxVNnZmelVaNXBhcmFzSkNWVEJ1cmdabnpzWWxHS1hWa1BNMnZ3UVozTVMxbGFKQnh5dw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-12T07:00:00Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 85,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=ba9d1d8fc0217a3b",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "b358971df29545a3",
       "category": "voices",
       "title": "AMD acquiring Fei-Fei Li's World Labs AI firm in deal worth $8.2 billion",
@@ -2126,10 +2073,29 @@
         "Vision",
         "World Models"
       ],
-      "importance": 84,
+      "importance": 83,
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=b358971df29545a3",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "91acac9c4120bfb0",
+      "category": "voices",
+      "title": "AMD to buy Fei-Fei Li's World Labs in $8.2 billion bet on 'physical AI'",
+      "summary": "AMD to buy Fei-Fei Li's World Labs in $8.2 billion bet on 'physical AI' Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUEpLOGExLXd6b0dKeXJadmdubW9zdWZzTDB6eVhLb0RSN3RSQTYyenBJdTVRdmR6Vm5jRnp4VHVQQ1NEbGFQb1J0V08xcThIRUs1aG5NQ0piLXhEQTRhcXZQNEZkMUVuaHVyLTRNVjhjbDEtZmxuTGpuR2d1ZDU2b1pGdkxqS1o2TUNDcUMyaFUzRVdmUUpPQndkdEZMZw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-28T07:00:00Z",
+      "tags": [
+        "Researcher Watch",
+        "Vision",
+        "World Models"
+      ],
+      "importance": 83,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=91acac9c4120bfb0",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2145,10 +2111,28 @@
         "Vision",
         "World Models"
       ],
-      "importance": 84,
+      "importance": 83,
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=0df5597e0f6bc79a",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "6b293df20fbb2b2f",
+      "category": "frontier",
+      "title": "Anthropic Readies Model That Reads Users' Intentions Better",
+      "summary": "Anthropic Readies Model That Reads Users' Intentions Better The Information",
+      "source": "The Information",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUUI1LVFnVzE0bmNHTjRZSGJMRUhueTNjT1JzSFU5eDhHeFQtNlFYalF6eE9wU2FEelA3dHpXY2xGSW1NbVppT3NMcnlYaHk5alZCVnhoMFIzeHpRUXM1akVfeGJBZG54VWE5X0xZX3hUN21xd2xRQkxMQ0FhckVpOW9GLXRkUDJKYVk0Q1FEbUJkeGFMUmlRLXhUc0g5Zzg5SXlRRTNmQWgyQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-19T14:00:00Z",
+      "tags": [
+        "Frontier Labs",
+        "Industry"
+      ],
+      "importance": 82,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=6b293df20fbb2b2f",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2163,28 +2147,10 @@
         "Founder Watch",
         "Embodied AI"
       ],
-      "importance": 83,
+      "importance": 82,
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=e53e3f6c06a7c12a",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "91acac9c4120bfb0",
-      "category": "startups",
-      "title": "AMD to buy Fei-Fei Li's World Labs in $8.2 billion bet on 'physical AI'",
-      "summary": "AMD to buy Fei-Fei Li's World Labs in $8.2 billion bet on 'physical AI' Reuters",
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUEpLOGExLXd6b0dKeXJadmdubW9zdWZzTDB6eVhLb0RSN3RSQTYyenBJdTVRdmR6Vm5jRnp4VHVQQ1NEbGFQb1J0V08xcThIRUs1aG5NQ0piLXhEQTRhcXZQNEZkMUVuaHVyLTRNVjhjbDEtZmxuTGpuR2d1ZDU2b1pGdkxqS1o2TUNDcUMyaFUzRVdmUUpPQndkdEZMZw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-09-28T07:00:00Z",
-      "tags": [
-        "Founder Watch",
-        "Embodied AI"
-      ],
-      "importance": 83,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=91acac9c4120bfb0",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2207,6 +2173,78 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "3aa8dc91d97dd22e",
+      "category": "frontier",
+      "title": "Teaching Claude why",
+      "summary": "New research on how we've reduced agentic misalignment",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/research/teaching-claude-why",
+      "published_at": "2026-05-08T00:00:00Z",
+      "tags": [
+        "Anthropic",
+        "Research"
+      ],
+      "importance": 82,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=3aa8dc91d97dd22e",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "ce5945b4ac2a857e",
+      "category": "frontier",
+      "title": "How AI assistance impacts the formation of coding skills",
+      "summary": "A randomized trial with 52 developers found AI assistance lowered comprehension scores, except when used for explanations rather than delegation.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/research/AI-assistance-coding-skills",
+      "published_at": "2026-01-29T00:00:00Z",
+      "tags": [
+        "Anthropic",
+        "Research"
+      ],
+      "importance": 82,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=ce5945b4ac2a857e",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "b9bf7e1494c6d406",
+      "category": "frontier",
+      "title": "A small number of samples can poison LLMs",
+      "summary": "Anthropic research on data poisoning attacks shows a few hundred malicious documents can \"backdoor\" large language models of any size.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/research/small-samples-poison",
+      "published_at": "2025-10-09T00:00:00Z",
+      "tags": [
+        "Anthropic",
+        "Research"
+      ],
+      "importance": 82,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=b9bf7e1494c6d406",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "2da92cef66f372ef",
+      "category": "frontier",
+      "title": "Tracing the thoughts of a large language model",
+      "summary": "Anthropic's latest interpretability research: a new microscope to understand Claude's internal mechanisms",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/research/tracing-thoughts-language-model",
+      "published_at": "2025-03-27T00:00:00Z",
+      "tags": [
+        "Anthropic",
+        "Research"
+      ],
+      "importance": 82,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=2da92cef66f372ef",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "5c9d8a9c4e643775",
       "category": "voices",
       "title": "Top A.I. Leaders Call for Slowing Down A.I. Development",
@@ -2223,6 +2261,44 @@
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=5c9d8a9c4e643775",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "3ed60355fb590d1d",
+      "category": "voices",
+      "title": "Big Grok @Bot update",
+      "summary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
+      "source": "X",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBsTTQ2NENVOE1zX21VbmVwVEdHWXJYOTJVNWxRUVh2RE92TnUzZWxiLWJYYUE3c04zX1NmaXBFaU1QQ2xJb0Q2TFBpQjVON29vQlZRc0tkUHZGVDZCN1E?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-20T16:57:26Z",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "importance": 80,
+      "content_kind": "social",
+      "verification": "公开平台索引，需查看原帖",
+      "reader_url": "./reader.html?id=3ed60355fb590d1d",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "279d208f8274cfa6",
+      "category": "voices",
+      "title": "Grok @Bot upgrades",
+      "summary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
+      "source": "X",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBFVU1yTkI3c1JydldaNkV4VExITmdnamNKOHpETl8yYzFfRXNuRW1HZ3U3TjZSVXB0UTZyZ3pZZVdGTHRpY0c0em91NXpyNmFiUkZIRFZTblVpbC1jR3c?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-20T16:56:47Z",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "importance": 80,
+      "content_kind": "social",
+      "verification": "公开平台索引，需查看原帖",
+      "reader_url": "./reader.html?id=279d208f8274cfa6",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2261,63 +2337,6 @@
       "content_kind": "social",
       "verification": "公开平台索引，需查看原帖",
       "reader_url": "./reader.html?id=188fc20beb79eb48",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "5be43fd273dbe351",
-      "category": "voices",
-      "title": "Grok @Bot might turn out to be your favorite employee",
-      "summary": "Grok @Bot might turn out to be your favorite employee X",
-      "source": "X",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE94ZGRDdzhuS0wyaXJKb3czdGZHOFVybXB4eks1aGZxYzV2NG9NVEdlQy1SczJYaWI2eW1kMHo1aGlhU2JlX1VnajYwRjJRTEJ5ZHJiNkVLQ1RUQmp2Wnc?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-19T16:27:50Z",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "importance": 80,
-      "content_kind": "social",
-      "verification": "公开平台索引，需查看原帖",
-      "reader_url": "./reader.html?id=5be43fd273dbe351",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "10b395ba9b5537e0",
-      "category": "voices",
-      "title": "Hire Grok @Bot today. You won’t regret it.",
-      "summary": "Hire Grok @Bot today. You won’t regret it. X",
-      "source": "X",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1oTFN1ZzZfRG82YW9MaHNXOF9fWTJWMkRlVFpES2dJSFhHQVlicUIzTmI2VFZVdTBvQlUtMVh2NjZUSk1PbV9MUnNMYVNJWFhHbmpXWXEtUXBRaHJWS1E?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-19T07:29:25Z",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "importance": 80,
-      "content_kind": "social",
-      "verification": "公开平台索引，需查看原帖",
-      "reader_url": "./reader.html?id=10b395ba9b5537e0",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "16811b69ff94cd7e",
-      "category": "voices",
-      "title": "Mace Windu fell out of a window by Lil Vader 😂 (AI Ruins Everything)",
-      "summary": "Mace Windu fell out of a window by Lil Vader 😂 (AI Ruins Everything) X",
-      "source": "X",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1ZNGtGS3NKQ3ktbmlMeXFSZmp5MGxmeWFlcnVJOVZZNXh3RFl0dFNQN1dGSEhzLXBqaE91dFZ2ZlJNcHlfSjZ3SHVlWTIzNVh4TURfcFJQd2x1dmNYckE?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-19T07:15:03Z",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "importance": 80,
-      "content_kind": "social",
-      "verification": "公开平台索引，需查看原帖",
-      "reader_url": "./reader.html?id=16811b69ff94cd7e",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2465,6 +2484,24 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "1f38ee34d5759550",
+      "category": "startups",
+      "title": "AMD Spent $8.2 Billion on Fei-Fei Li’s Startup. The Real Story Is Why.",
+      "summary": "AMD Spent $8.2 Billion on Fei-Fei Li’s Startup. The Real Story Is Why. Vocal",
+      "source": "Vocal",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPdHdObmt6NmNuSUd4ZVZBQkxYY1RjaTU4RjlmU2p5QjFUVm1YeG1qOGtPODJxNUUtWDdVNXFSeG9UMUJpSmJhNXA2RkZKWU9ldVBvWVRLNEJYZmo2MzBiODZQRmpmTVlfLWJxa3RDMV9tYWRZNXZzUnlpSGtJcERJMnpwa2RYLTBSTjliQ01YWHNqZw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-09-30T15:23:39Z",
+      "tags": [
+        "Founder Watch",
+        "Embodied AI"
+      ],
+      "importance": 75,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=1f38ee34d5759550",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "d9704d4940c3cc02",
       "category": "startups",
       "title": "AMD acquires World Labs AI startup, upping the ante against Nvidia",
@@ -2480,24 +2517,6 @@
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=d9704d4940c3cc02",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "5af5e10deef61fc6",
-      "category": "startups",
-      "title": "AMD to Acquire World Labs for $8.2 Billion",
-      "summary": "AMD to Acquire World Labs for $8.2 Billion WSJ",
-      "source": "WSJ",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQLVpVcHpJVVFBektEcldpS0ttVXk1a2dkR0kzZEtUNmp3d1hQNzVEb3NOZVhEc1piQmtIYlI3WF9QUExkT2R3TW9tOW1ZZ0RpSGdELWxBbVRldmYtRmNUQjRxWjdZeS1RZnVvNFhvbU9pQzFfd2RyXzYxMnR4X3RpNFlBUzU?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-09-28T07:00:00Z",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "importance": 75,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=5af5e10deef61fc6",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2534,24 +2553,6 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=6610786a80ea3510",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "de49305e290f09ad",
-      "category": "bigtech",
-      "title": "As AI Grows More Complex, Model Builders Rely on NVIDIA",
-      "summary": "Unveiling what it describes as the most capable model series yet for professional knowledge work, OpenAI launched GPT-5.2 in December. The model was trained and deployed on NVIDIA infrastructure, including NVIDIA Hopper and GB200 NVL72 systems. GPT-5.3 Codex — the first OpenAI agentic coding model to help build itself — was released in February and […]",
-      "source": "NVIDIA AI",
-      "url": "https://blogs.nvidia.com/blog/leading-models-nvidia/",
-      "published_at": "2025-12-11T19:19:57Z",
-      "tags": [
-        "NVIDIA",
-        "Infrastructure"
-      ],
-      "importance": 75,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=de49305e290f09ad",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2627,6 +2628,24 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "af058525244051a4",
+      "category": "policy",
+      "title": "AI Safety and Cybersecurity Should Be Allies. Instead, They're at Odds",
+      "summary": "AI Safety and Cybersecurity Should Be Allies. Instead, They're at Odds Time Magazine",
+      "source": "Time Magazine",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1fdDhvMnNVcE4yMG1TZ2I5SXlQT2VtSkhXRHM3Q3lEQzJHdmZVeS00Zlc5WUpwLXJLU3VaTEF1Z1lfcnY4SC1KOF9WSWtwRXVoZ25QZmt1NlBqMVRxWTBicEt2b1MzanJSREplYw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-20T14:51:01Z",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "importance": 72,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=af058525244051a4",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "970a036d2a2c060c",
       "category": "policy",
       "title": "Anthropic’s AI Safety Bill Has an Alarming Threshold for Government Action",
@@ -2660,24 +2679,6 @@
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=9784c9da89ea16c8",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "3614e7174ce6b50b",
-      "category": "policy",
-      "title": "Exclusive: AI safety money floods into political races",
-      "summary": "Exclusive: AI safety money floods into political races Axios",
-      "source": "Axios",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPMFo2Q3FTYll5RkZlN240MEVfOXVBMHZWeU9UUDVmbjNQNWw5bjczTjJVc2tpRlVrRDVkS005LVktcTd6LWF1aHVCVDA5YUdjRXZHRG5BRndYb0FKaW55VGg0dm1ZUFJLVHIxZzNhZC00dWFVV2U3UURaQ2NHenIyTkJSTDZZZFhVV2c?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-14T14:45:37Z",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "importance": 71,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=3614e7174ce6b50b",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2717,6 +2718,24 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "90adef479b32848c",
+      "category": "opensource",
+      "title": "llm-d 1.0 hardens open-source AI inference for day 2 production operations",
+      "summary": "llm-d 1.0 hardens open-source AI inference for day 2 production operations IBM Research",
+      "source": "IBM Research",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPTUI0R3lZTGpCVDllNUEta3AxWVNpbUFHbDh2NElRZm5uOVp3cTVVZHNGUE5kd0NYYXRXM0lkWFFkRlRJYTB1NWlnazFpREpKOTNaaGFxdEdlZi1mZkp2dzVEOU1VLU5HT0tjVG83dS1fX2JzTTRRSlFEQzRKaVFVZGl6VkxfOVk?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-20T12:00:00Z",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "importance": 70,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=90adef479b32848c",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "898473658d7b45a4",
       "category": "policy",
       "title": "Opinion: New York still needs more AI regulation",
@@ -2728,7 +2747,7 @@
         "Policy",
         "Safety"
       ],
-      "importance": 71,
+      "importance": 70,
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=898473658d7b45a4",
@@ -2750,24 +2769,6 @@
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=f451def5ff36a95b",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "b1ec3efa2a25e483",
-      "category": "opensource",
-      "title": "Introducing Reflection Beam: an open-weight model for agentic coding on AWS | Amazon Web Services",
-      "summary": "Introducing Reflection Beam: an open-weight model for agentic coding on AWS | Amazon Web Services Amazon Web Services (AWS)",
-      "source": "Amazon Web Services (AWS)",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPSElxZ0NWWkFqY3FmY29PN3JhMHRxSVo3eEJMLUYxMmtNNVl2LUlzNjZsU05heFlmby1aWFh4ZFRCRTRobDMwdjZvdGI1NlNCb1ZGRS0zMUdqQjJvRFpQb0JoN1NFLXhGdzI1WFl0Z0UtRWNVNWYySEZDV05GdGhzZHhsdU1BT3Z2Y09uWUo2TXZJZEY4ekotQVJYM0hWQ3VyWHJvSnU2WFU0T2JLVTNGSkVlcTk0c2M5amhJN01n?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-16T15:23:10Z",
-      "tags": [
-        "Open Source",
-        "Models & Tools"
-      ],
-      "importance": 69,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=b1ec3efa2a25e483",
       "reader_status": "public-page-excerpt"
     },
     {
