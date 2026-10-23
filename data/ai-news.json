@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-23T11:34:05Z",
+  "generated_at": "2026-10-23T17:03:24Z",
   "item_count": 130,
   "category_counts": {
     "research": 20,
@@ -45,7 +45,7 @@
       "字节豆包 / Seed": 0
     },
     "people_watch_coverage": {
-      "Elon Musk / xAI": 4,
+      "Elon Musk / xAI": 5,
       "Sam Altman / OpenAI": 1,
       "Dario Amodei / Anthropic": 0,
       "Demis Hassabis / DeepMind": 1,
@@ -74,12 +74,6 @@
       "note": ""
     },
     {
-      "name": "NVIDIA AI",
-      "status": "ok",
-      "count": 6,
-      "note": ""
-    },
-    {
       "name": "Google DeepMind",
       "status": "ok",
       "count": 8,
@@ -98,33 +92,9 @@
       "note": ""
     },
     {
-      "name": "Anthropic",
-      "status": "ok",
-      "count": 8,
-      "note": ""
-    },
-    {
-      "name": "World Model Founders",
-      "status": "ok",
-      "count": 7,
-      "note": ""
-    },
-    {
-      "name": "Microsoft Research",
+      "name": "NVIDIA AI",
       "status": "ok",
       "count": 6,
-      "note": ""
-    },
-    {
-      "name": "Academic Startup Radar",
-      "status": "ok",
-      "count": 10,
-      "note": ""
-    },
-    {
-      "name": "AI for Biology, Medicine & Materials",
-      "status": "ok",
-      "count": 12,
       "note": ""
     },
     {
@@ -134,9 +104,45 @@
       "note": ""
     },
     {
+      "name": "Anthropic",
+      "status": "ok",
+      "count": 8,
+      "note": ""
+    },
+    {
+      "name": "Microsoft Research",
+      "status": "ok",
+      "count": 6,
+      "note": ""
+    },
+    {
+      "name": "AI for Biology, Medicine & Materials",
+      "status": "ok",
+      "count": 12,
+      "note": ""
+    },
+    {
+      "name": "Academic Startup Radar",
+      "status": "ok",
+      "count": 10,
+      "note": ""
+    },
+    {
+      "name": "World Model Founders",
+      "status": "ok",
+      "count": 7,
+      "note": ""
+    },
+    {
       "name": "AI for Mathematics & Science",
       "status": "ok",
       "count": 12,
+      "note": ""
+    },
+    {
+      "name": "AI Policy Monitor",
+      "status": "ok",
+      "count": 10,
       "note": ""
     },
     {
@@ -146,15 +152,15 @@
       "note": ""
     },
     {
-      "name": "Frontier Lab Monitor",
-      "status": "ok",
-      "count": 9,
-      "note": ""
-    },
-    {
       "name": "China AI · Kimi & Qwen",
       "status": "ok",
       "count": 10,
+      "note": ""
+    },
+    {
+      "name": "Frontier Lab Monitor",
+      "status": "ok",
+      "count": 9,
       "note": ""
     },
     {
@@ -165,12 +171,6 @@
     },
     {
       "name": "China AI · DeepSeek & Zhipu",
-      "status": "ok",
-      "count": 10,
-      "note": ""
-    },
-    {
-      "name": "AI Policy Monitor",
       "status": "ok",
       "count": 10,
       "note": ""
@@ -384,6 +384,24 @@
       "cached_pdf": "./papers/bace-gecco-2026.pdf"
     },
     {
+      "id": "e1a2d44d6cf2a7b9",
+      "category": "frontier",
+      "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
+      "summary": "Learn how OpenAI scaled Habitat with reliable multi-tenancy, global caching, and Azure Cosmos DB to deliver 12× faster reads for ChatGPT.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+      "published_at": "2026-10-23T17:00:00Z",
+      "tags": [
+        "OpenAI",
+        "Official"
+      ],
+      "importance": 100,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=e1a2d44d6cf2a7b9",
+      "reader_status": "summary-only"
+    },
+    {
       "id": "6783d78e24503132",
       "category": "frontier",
       "title": "OpenAI and Poland’s NASK partner to advance AI safety and security",
@@ -400,6 +418,24 @@
       "verification": "官方来源",
       "reader_url": "./reader.html?id=6783d78e24503132",
       "reader_status": "summary-only"
+    },
+    {
+      "id": "917442616b678363",
+      "category": "frontier",
+      "title": "An alignment assessment of the UK AISI cybertesting incident",
+      "summary": "In a UK AISI evaluation, Mythos 5 took unsanctioned actions that impacted real people and organizations. In this post, we investigate these behaviors from Claude Mythos 5 further, to understand what they reveal about the model’s alignment.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/research/alignment-assessment-ukaisi",
+      "published_at": "2026-10-23T00:00:00Z",
+      "tags": [
+        "Anthropic",
+        "Research"
+      ],
+      "importance": 100,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=917442616b678363",
+      "reader_status": "public-page-excerpt"
     },
     {
       "id": "707c650794089c59",
@@ -564,24 +600,6 @@
       "reader_status": "summary-only"
     },
     {
-      "id": "2d7a796779ad44b3",
-      "category": "frontier",
-      "title": "ChatGPT Ads expands to 26 new countries as over 100,000 advertisers have used the platform",
-      "summary": "From local businesses to global brands, more advertisers can now reach people as they explore, compare and decide what to buy in ChatGPT.",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/chatgpt-ads-expands-26-new-countries",
-      "published_at": "2026-10-21T13:00:00Z",
-      "tags": [
-        "OpenAI",
-        "Official"
-      ],
-      "importance": 100,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=2d7a796779ad44b3",
-      "reader_status": "summary-only"
-    },
-    {
       "id": "1370731209172c9f",
       "category": "frontier",
       "title": "OpenAI models are coming to Google Cloud",
@@ -618,24 +636,6 @@
       "reader_status": "summary-only"
     },
     {
-      "id": "f1a201df9c4afa96",
-      "category": "frontier",
-      "title": "Physicist Christopher Stubbs joins Anthropic's Long-Term Benefit Trust",
-      "summary": "Dr. Christopher Stubbs, an experimental physicist and former Dean of Science at Harvard University, has joined Anthropic’s Long-Term Benefit Trust. He brings to the Trust decades of scientific expertise across observational cosmology and precision measurement. He has also advised the US government on national security and arms control. “I am honored to join Anthropic’s Long-Term Benefit Trust and to help the company deliver on its public benefit mission,” said Stubbs. “I use AI tools in my research every day and see what they make possible, and as an educator I have confronted some of the hard questions they raise. As a grandfather, I want to help ensure that AI is…",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust",
-      "published_at": "2026-10-21T00:00:00Z",
-      "tags": [
-        "Anthropic",
-        "Official"
-      ],
-      "importance": 100,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=f1a201df9c4afa96",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "rhb-icml-2026",
       "category": "research",
       "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
@@ -661,6 +661,24 @@
       "cached_pdf": "./papers/rhb-icml-2026.pdf"
     },
     {
+      "id": "f1a201df9c4afa96",
+      "category": "frontier",
+      "title": "Physicist Christopher Stubbs joins Anthropic's Long-Term Benefit Trust",
+      "summary": "Dr. Christopher Stubbs, an experimental physicist and former Dean of Science at Harvard University, has joined Anthropic’s Long-Term Benefit Trust. He brings to the Trust decades of scientific expertise across observational cosmology and precision measurement. He has also advised the US government on national security and arms control. “I am honored to join Anthropic’s Long-Term Benefit Trust and to help the company deliver on its public benefit mission,” said Stubbs. “I use AI tools in my research every day and see what they make possible, and as an educator I have confronted some of the hard questions they raise. As a grandfather, I want to help ensure that AI is…",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust",
+      "published_at": "2026-10-21T00:00:00Z",
+      "tags": [
+        "Anthropic",
+        "Official"
+      ],
+      "importance": 99,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=f1a201df9c4afa96",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "974c9e9820541901",
       "category": "frontier",
       "title": "Accelerating the search for antimicrobial peptides with Google Antigravity",
@@ -676,25 +694,7 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=974c9e9820541901",
-      "reader_status": "summary-only"
-    },
-    {
-      "id": "6d8fd330d7b28b32",
-      "category": "frontier",
-      "title": "Google DeepMind and Singapore Government collaborate to build fine-tuned AI model for scam detection",
-      "summary": "Learn how Google DeepMind and GovTech Singapore uses lightweight on-device Gemma models to intercept conversational scams in private chats with zero cloud data egress.",
-      "source": "Google DeepMind",
-      "url": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
-      "published_at": "2026-10-14T02:00:14Z",
-      "tags": [
-        "DeepMind",
-        "Official"
-      ],
-      "importance": 98,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=6d8fd330d7b28b32",
-      "reader_status": "summary-only"
+      "reader_status": "public-page-excerpt"
     },
     {
       "id": "gpt5-protein-synthesis-20260205",
@@ -759,7 +759,7 @@
         "millimeter-wave sensing",
         "cloud privacy"
       ],
-      "importance": 96,
+      "importance": 95,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "reader_url": "./reader.html?id=668eb184974d3b23",
@@ -788,7 +788,7 @@
         "IEEE 802.11",
         "WPA2"
       ],
-      "importance": 96,
+      "importance": 95,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "reader_url": "./reader.html?id=0a63d56e8fa822e3",
@@ -817,7 +817,7 @@
         "encrypted traffic",
         "classifier-free guidance"
       ],
-      "importance": 96,
+      "importance": 95,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "reader_url": "./reader.html?id=86014af20295558e",
@@ -845,7 +845,7 @@
         "microcontroller",
         "communication efficiency"
       ],
-      "importance": 96,
+      "importance": 95,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "reader_url": "./reader.html?id=00aa28def363e6ba",
@@ -875,7 +875,7 @@
         "post-quantum cryptography",
         "encrypted inference"
       ],
-      "importance": 96,
+      "importance": 95,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "reader_url": "./reader.html?id=3e0ba1541d6f8d4c",
@@ -905,7 +905,7 @@
         "large language models",
         "mobile devices"
       ],
-      "importance": 96,
+      "importance": 95,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "reader_url": "./reader.html?id=ec6829ec5806cd85",
@@ -935,7 +935,7 @@
         "human activity recognition",
         "resource-constrained devices"
       ],
-      "importance": 96,
+      "importance": 95,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "reader_url": "./reader.html?id=7af79194efddb37f",
@@ -962,7 +962,7 @@
         "physics engine",
         "learning-based prediction"
       ],
-      "importance": 96,
+      "importance": 95,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "reader_url": "./reader.html?id=adaa1a5cf37d428a",
@@ -992,7 +992,7 @@
         "security screening",
         "metasurfaces"
       ],
-      "importance": 96,
+      "importance": 95,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "reader_url": "./reader.html?id=e7c2f6b09fd75d7e",
@@ -1022,7 +1022,7 @@
         "task automation",
         "large language models"
       ],
-      "importance": 96,
+      "importance": 95,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "reader_url": "./reader.html?id=24cc2a2afb34edf1",
@@ -1052,7 +1052,7 @@
         "3GPP standards",
         "automated security analysis"
       ],
-      "importance": 96,
+      "importance": 95,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "reader_url": "./reader.html?id=35b7201d613dabbd",
@@ -1069,6 +1069,25 @@
       "reader_status": "abstract-only"
     },
     {
+      "id": "elon-grok-build-open-source-20260716",
+      "category": "voices",
+      "title": "Elon Musk 宣布 Grok Build 开源",
+      "summary": "Elon Musk 在 X 表示 Grok Build 已开放源代码，目标是让开发者共同改进更可靠的 Agent harness。人物原帖属于早期一手信号，后续仍应结合代码仓库、许可证和 xAI 的正式文档判断实际开放范围。",
+      "source": "X · Elon Musk",
+      "url": "https://x.com/elonmusk/status/2077495635687723408",
+      "published_at": "2026-07-16T08:00:00Z",
+      "tags": [
+        "Elon Musk",
+        "xAI",
+        "Open Source"
+      ],
+      "importance": 95,
+      "content_kind": "social",
+      "verification": "创始人官方账号原帖 · 需结合仓库核对",
+      "reader_url": "./reader.html?id=elon-grok-build-open-source-20260716",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "a1263dd70d8d4b50",
       "category": "research",
       "title": "Focus Pocus: Redirecting Technologically Distracted Students via Artificially Intelligent Characters",
@@ -1082,7 +1101,7 @@
         "attention detection",
         "gaze tracking"
       ],
-      "importance": 95,
+      "importance": 94,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "reader_url": "./reader.html?id=a1263dd70d8d4b50",
@@ -1109,7 +1128,7 @@
         "explanation styles",
         "financial literacy"
       ],
-      "importance": 95,
+      "importance": 94,
       "content_kind": "paper",
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
       "reader_url": "./reader.html?id=9644b8ed1a6cc706",
@@ -1124,32 +1143,13 @@
       "reader_status": "abstract-only"
     },
     {
-      "id": "elon-grok-build-open-source-20260716",
-      "category": "voices",
-      "title": "Elon Musk 宣布 Grok Build 开源",
-      "summary": "Elon Musk 在 X 表示 Grok Build 已开放源代码，目标是让开发者共同改进更可靠的 Agent harness。人物原帖属于早期一手信号，后续仍应结合代码仓库、许可证和 xAI 的正式文档判断实际开放范围。",
-      "source": "X · Elon Musk",
-      "url": "https://x.com/elonmusk/status/2077495635687723408",
-      "published_at": "2026-07-16T08:00:00Z",
-      "tags": [
-        "Elon Musk",
-        "xAI",
-        "Open Source"
-      ],
-      "importance": 95,
-      "content_kind": "social",
-      "verification": "创始人官方账号原帖 · 需结合仓库核对",
-      "reader_url": "./reader.html?id=elon-grok-build-open-source-20260716",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "793b95e76526fd48",
       "category": "impact",
       "title": "AstraZeneca strikes $40 million AI drug discovery deal with insitro",
       "summary": "AstraZeneca strikes $40 million AI drug discovery deal with insitro Reuters",
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOaGhDYkZMZ0F5S0ZlU3NudjgxN1Mzb2NQeVFNQ2FCN253aFI4Vzdlb0JMSHZfUm9KaUYxam9Ga01rbUJod29GS3FycDhmQkRSeUNBa3dWZERBbGhmLTlscllTSkR3ajU4MF9zOFJZTFhYX1VnR3N2bVZwSHVnRTVPZWFpd3gtd2NtN2Y5b1ZtTFBqbEJjaEFTeTlIUFRPOGJGUXZCVElUMjVXRmRMNG1uU2NMMERidDIxUFVn?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-15T22:55:09Z",
+      "published_at": "2026-10-15T07:00:00Z",
       "tags": [
         "AI for Science",
         "Biology",
@@ -1168,7 +1168,7 @@
       "summary": "CERN and Mistral partner to build Flare, a new AI model for physics Reuters",
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOejlwRzRlN1BnaFhFZ1VYb0ZKSVFmN1NRcFppbWFLdXV3ZzEtdUFpc0RRcFNtTmRVeGhjX0pLVmV1bElvQmpFeVlsYkcwX0h2WDFQaksyZ2JYSng5c3MwbVJ2V20zN0hQYU1vNXc3bWZlWjlSX1ZwTHE2NnRmNzRjX3VodU5ZemRfU2NqaXdPWGVyNzJXWTYyU0I5dFFLSmZq?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-15T13:02:13Z",
+      "published_at": "2026-10-15T07:00:00Z",
       "tags": [
         "AI for Science",
         "Mathematics",
@@ -1315,12 +1315,12 @@
       "reader_status": "indexed-summary"
     },
     {
-      "id": "399af9163cac6926",
+      "id": "b90d292df97d9ebc",
       "category": "china",
       "title": "DeepSeek 发布 新模型,第一件事是拜码头",
       "summary": "一、信号:模型 发布 会变成了＂上架仪式＂把这波操作的时间线捋一遍.9 月 10 日, DeepSeek V4.1-Flash 新定价生效.官方合作伙...",
       "source": "微信公众号 · AI 0添加",
-      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HDdG22qj3Zx5yBZ8SoYp39Th0EIqzFEeTr8FLokT&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792755246%26ver%3D7044%26signature%3D077iLbHlZEkpMxPvqalOhHIKKWEDEZIjdzB%2Ar9jgRaeY-HGT4NRsIqG8vOYMuc83s1ngAwrc2ggXM1z-0EpODiihaQiIsMx3rWSSkJP4FCaOSxCWrxa4TO-0weCDG4cj%26new%3D1",
+      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HGiT22qjTyw0_g5GZNooUAA0zaV5-Bh1hMgEgyQg&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792775005%26ver%3D7044%26signature%3D077iLbHlZEkpMxPvqalOhHIKKWEDEZIjdzB%2Ar9jgRae4e554DGERJx0qSUbX8SYoQ0-Ae0lPF-gvu%2AYUaFoe5mkvrmV%2AIx3fTv0lA3tpA%2AK0t7Zk1TWdT3mt8a8b34eH%26new%3D1",
       "published_at": "2026-10-23T09:17:59Z",
       "tags": [
         "微信公众号",
@@ -1330,7 +1330,7 @@
       "importance": 93,
       "content_kind": "article",
       "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "reader_url": "./reader.html?id=399af9163cac6926",
+      "reader_url": "./reader.html?id=b90d292df97d9ebc",
       "index_url": "https://weixin.sogou.com/weixin?type=2&query=DeepSeek+%E5%8F%91%E5%B8%83",
       "reader_status": "indexed-summary"
     },
@@ -1433,12 +1433,12 @@
       "reader_status": "indexed-summary"
     },
     {
-      "id": "5d16224c741cdea2",
+      "id": "e239f333dbb317c2",
       "category": "china",
       "title": "DeepSeek 发布 V4.1-Flash-1017,开放 Search/Fetch API",
       "summary": "DeepSeek 于 10 月 17 日 发布 V4.1-Flash-1017,网页端、App、API 同步更新.模型标识仍为 deepseek -flash,调用地址与价格不变...",
       "source": "微信公众号 · 曾老师讲透易经的智慧",
-      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HI-T2Wqjb3oqpzlvRB_-52arzYIN_L2EkQt5Uhma&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792643972%26ver%3D7041%26signature%3D%2AfeMAhGZk94ZExkO3GH7YLEYWGcvNsOIfLBGb1gKnFVymmQUeR7A7Su59aZLIyaDaZ4O%2AHUGYmAjw0SgtjAsH0hULtHyX6vzU9dUVXSn7LWZFBrtdsWW-5VWHJkBE3zv%26new%3D1",
+      "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HGiT22qjyAfvgHPOiO3EoryECpqTfj5Jz9_yd0MY&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792775005%26ver%3D7044%26signature%3Dfro4AX5fiKWLzkIYv5oA5teJMkw1DHcqUJu3zYBZMTI86rSpd9Kpn%2AzlR6o6evs6RBpmOvqbpNT5AtrXDfIN98rXZjxLSnOdMMdH-6ij7aDxD5FzQjrXHTIwyGD3r78A%26new%3D1",
       "published_at": "2026-10-21T10:01:12Z",
       "tags": [
         "微信公众号",
@@ -1448,27 +1448,9 @@
       "importance": 93,
       "content_kind": "article",
       "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "reader_url": "./reader.html?id=5d16224c741cdea2",
+      "reader_url": "./reader.html?id=e239f333dbb317c2",
       "index_url": "https://weixin.sogou.com/weixin?type=2&query=DeepSeek+%E5%8F%91%E5%B8%83",
       "reader_status": "indexed-summary"
-    },
-    {
-      "id": "af3f5180566e7755",
-      "category": "bigtech",
-      "title": "Southeast Asia’s digital economy to hit $368 billion",
-      "summary": "Cover image for the e-Conomy SEA 2026 report titled Building the intelligent economy by Google, Temasek, and Bain and Company. A 3D illustration features a glowing yellow star surrounded by miniature scenes representing digital sectors, including data cen",
-      "source": "Google AI",
-      "url": "https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026/",
-      "published_at": "2026-10-21T04:00:00Z",
-      "tags": [
-        "Google",
-        "Official"
-      ],
-      "importance": 93,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=af3f5180566e7755",
-      "reader_status": "public-page-excerpt"
     },
     {
       "id": "e30a5ea53f408916",
@@ -1651,25 +1633,6 @@
       "reader_status": "indexed-summary"
     },
     {
-      "id": "1882747ca7ca2d9e",
-      "category": "impact",
-      "title": "TechBio 3.0 closes the drug discovery loop with multimodal AI and generative chemistry | npj Drug Discovery",
-      "summary": "TechBio 3.0 closes the drug discovery loop with multimodal AI and generative chemistry | npj Drug Discovery Nature",
-      "source": "Nature",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9HdzNZWlh2bU1BS3lrVHdvLV9ZZTdZT0ljZExidjd2RFBwbUpJVmJmZDVFVUVWTEtUbTdFUjlTV01UVnRLTlpVVV9QckdjcHNDeGpyQkkwc0xIZGdMTkFB?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-09T07:00:00Z",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "importance": 93,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=1882747ca7ca2d9e",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "9ea5613b4342bfde",
       "category": "impact",
       "title": "‘Breathtaking,’ ‘Devastating’: Mathematics Reels After New OpenAI Release",
@@ -1686,6 +1649,24 @@
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=9ea5613b4342bfde",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "af3f5180566e7755",
+      "category": "bigtech",
+      "title": "Southeast Asia’s digital economy to hit $368 billion",
+      "summary": "Cover image for the e-Conomy SEA 2026 report titled Building the intelligent economy by Google, Temasek, and Bain and Company. A 3D illustration features a glowing yellow star surrounded by miniature scenes representing digital sectors, including data cen",
+      "source": "Google AI",
+      "url": "https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026/",
+      "published_at": "2026-10-21T04:00:00Z",
+      "tags": [
+        "Google",
+        "Official"
+      ],
+      "importance": 92,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=af3f5180566e7755",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -1817,6 +1798,42 @@
       "reader_status": "public-page-excerpt"
     },
     {
+      "id": "10cd34ba83198b16",
+      "category": "opensource",
+      "title": "LitPivot: Developing research ideas through dynamic contextualization within the literature landscape",
+      "summary": "A Blog post by Ai2 on Hugging Face",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/blog/allenai/litpivot",
+      "published_at": "2026-10-23T16:15:50Z",
+      "tags": [
+        "Hugging Face",
+        "Open Source"
+      ],
+      "importance": 88,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=10cd34ba83198b16",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "d34747657438013f",
+      "category": "opensource",
+      "title": "Does Your Model Run on AWS Trainium? Look It Up",
+      "summary": "We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/blog/torch-neuronx-model-support",
+      "published_at": "2026-10-23T00:00:00Z",
+      "tags": [
+        "Hugging Face",
+        "Open Source"
+      ],
+      "importance": 88,
+      "content_kind": "article",
+      "verification": "官方来源",
+      "reader_url": "./reader.html?id=d34747657438013f",
+      "reader_status": "public-page-excerpt"
+    },
+    {
       "id": "ed98a2f31f466406",
       "category": "opensource",
       "title": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
@@ -1832,24 +1849,6 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=ed98a2f31f466406",
-      "reader_status": "public-page-excerpt"
-    },
-    {
-      "id": "8d502ff2518331b7",
-      "category": "opensource",
-      "title": "OlmoEarth v1.3: State-of-the-art embeddings for the whole planet",
-      "summary": "A Blog post by Ai2 on Hugging Face",
-      "source": "Hugging Face",
-      "url": "https://huggingface.co/blog/allenai/olmoearth-v1-3",
-      "published_at": "2026-10-22T16:11:31Z",
-      "tags": [
-        "Hugging Face",
-        "Open Source"
-      ],
-      "importance": 88,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=8d502ff2518331b7",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -1906,6 +1905,25 @@
       "content_kind": "article",
       "verification": "媒体或公开网页",
       "reader_url": "./reader.html?id=973b869910bc732b",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "7a74c6b0b6be2be3",
+      "category": "impact",
+      "title": "Healthcare ETF: China May Control a Key Bottleneck in AI Drug Discovery",
+      "summary": "Healthcare ETF: China May Control a Key Bottleneck in AI Drug Discovery KraneShares",
+      "source": "KraneShares",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNZnlweEUtRjBzU1VidV9xdFdCV1RmSTRtbVhLX2NpVTgzQThzNDBONWhiOWxhWlhkOU5IWXc1cF9OUGNEajJSN3lPc21Va1VkdjdrTGtDOWhmaFdvZHR6N216T2ItWHJHdnZXREJyUnhVRDMySW5FNHRWR193YnV0SjlSWk00QWpUY3RSSl96eXp6ZTV5SmdlaVA5aw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-21T20:26:05Z",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "importance": 88,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=7a74c6b0b6be2be3",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2001,24 +2019,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "ed03c5d67f3d4540",
-      "category": "opensource",
-      "title": "Granite Speech 5.0: Transcribe, Translate, and Attribute more Accurately and Faster",
-      "summary": "A Blog post by IBM Granite on Hugging Face",
-      "source": "Hugging Face",
-      "url": "https://huggingface.co/blog/ibm-granite/granite-speech-5",
-      "published_at": "2026-10-21T14:58:18Z",
-      "tags": [
-        "Hugging Face",
-        "Open Source"
-      ],
-      "importance": 88,
-      "content_kind": "article",
-      "verification": "官方来源",
-      "reader_url": "./reader.html?id=ed03c5d67f3d4540",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "c8b8632d0d99012d",
       "category": "impact",
       "title": "Astellas links up with AI Proteins in $400M computational drug discovery deal",
@@ -2038,12 +2038,12 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "0c2a670883b1974d",
+      "id": "f8f2c2d6b145fa5f",
       "category": "impact",
-      "title": "What It Means to Be a Mathematician When AI Does the Math",
-      "summary": "What It Means to Be a Mathematician When AI Does the Math IEEE Spectrum",
+      "title": "AI-Generated Math Proof Hints at a Path to Safer Automated Code",
+      "summary": "AI-Generated Math Proof Hints at a Path to Safer Automated Code IEEE Spectrum",
       "source": "IEEE Spectrum",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE90UVBIUzFaeWI2M2V4MkEtUmRFZ0Z5ajc2Z005YjhzYjJLMGFRVlR3NFhZVVFCaGtzcC0tTV9YbDBST0tTaGJyZUlDNDQ0TDZDTXBJbFlB?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE50WXROVU5oQ29kRGJVOU5neHA5WHMtdlY0UXY0N0tRLU1tRktBTWNSYkY4SmJ6SFRqYndONGUzZlVwRHdBTkx2RzFHdU9HUHlUNGtoOU8wUDM5dWJlaGk5eUd0eTRyN2xmWklSSi1pbw?oc=5&hl=en-US&gl=US&ceid=US:en",
       "published_at": "2026-10-21T07:00:00Z",
       "tags": [
         "AI for Science",
@@ -2053,7 +2053,7 @@
       "importance": 88,
       "content_kind": "article",
       "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=0c2a670883b1974d",
+      "reader_url": "./reader.html?id=f8f2c2d6b145fa5f",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2108,6 +2108,24 @@
       "content_kind": "article",
       "verification": "官方来源",
       "reader_url": "./reader.html?id=a371457dab8cb482",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "ba9d1d8fc0217a3b",
+      "category": "startups",
+      "title": "This AI startup says it can generate permit-ready blueprints in minutes",
+      "summary": "This AI startup says it can generate permit-ready blueprints in minutes TechCrunch",
+      "source": "TechCrunch",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNeDR4WkpvX1MxeUJ6SEo0Zmxmcndnd04tLUF1RFRNMlQzekYyZ0hDRWVhbU1rVkh4UmNxRmh0TG9YckNlZE1BcU01YmNPWFBuY3Bndk1wYXJWeDlyN0ZzdkhNTkhfZjVzMV9HZGhoVWdZVElEYzMtQmxVNnZmelVaNXBhcmFzSkNWVEJ1cmdabnpzWWxHS1hWa1BNMnZ3UVozTVMxbGFKQnh5dw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-12T07:00:00Z",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "importance": 85,
+      "content_kind": "article",
+      "verification": "媒体或公开网页",
+      "reader_url": "./reader.html?id=ba9d1d8fc0217a3b",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2186,12 +2204,12 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "0a95d6d806951f0b",
+      "id": "0328c3ccdabdf721",
       "category": "voices",
-      "title": "World Labs Founder Fei-Fei Li Urges Independent Oversight of AI",
-      "summary": "World Labs Founder Fei-Fei Li Urges Independent Oversight of AI Bloomberg.com",
+      "title": "Watch Fei-Fei Li: AI’s Future Is ‘About Humans’",
+      "summary": "Watch Fei-Fei Li: AI’s Future Is ‘About Humans’ Bloomberg.com",
       "source": "Bloomberg.com",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPcFdqRzZsTmJGMEJIV0FHVnFDN013Zlp6WTBnaEVMQ1BzSlJqTmNSWUxUNXFWWS0zQWNVY2JIbGxCSU9BdTFSR3FJMXA2T2VRNjFnVk5hbFJrUkRXaTNxeGpqaWxaSEY3QlIzYVhCNDUzY180cm1qVldNaWtxOGhnaWI0a3RtUjlZeS15Qlh0Wl90U1hQbURwNXoxS3NmdFlMbENaSnpyakRLdkxWa3ZQblF6NUg?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOMFREUU4yX3dEam50OUR0WUItR1JVTDdReXdpVUJmQkxJbUlWdlN0UHJNWWdOczFQR083WjB6Z05ZX3ZPazB4SWJLNlhNNm9ja1E2Ukh0OE1RbHlMOG9TRTR6TXdqbHNNNUtnZ3lYU0JPX2ZQbjczbDl4TlEyYXRxMHZWS0NpcFI2dmZLaGhvSTg1aTB1SUxNaQ?oc=5&hl=en-US&gl=US&ceid=US:en",
       "published_at": "2026-09-22T07:00:00Z",
       "tags": [
         "Researcher Watch",
@@ -2201,7 +2219,7 @@
       "importance": 82,
       "content_kind": "article",
       "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=0a95d6d806951f0b",
+      "reader_url": "./reader.html?id=0328c3ccdabdf721",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2261,25 +2279,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "99b990fce460e8c5",
-      "category": "voices",
-      "title": "It’s that easy",
-      "summary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
-      "source": "X",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE45Nlp5OV9FWHRxMDR3NHBtcF9ucEV5dk5FaGxncGdCWlpZb1VNR2VKQ1A0Y2lhdzk0TjNPTTYta1dzTlA1bHhoM0pUTDliN3ZfRlRPT2haMWFpQ2xITnc?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-23T01:35:37Z",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "importance": 80,
-      "content_kind": "social",
-      "verification": "公开平台索引，需查看原帖",
-      "reader_url": "./reader.html?id=99b990fce460e8c5",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "b7c99a34abeb3e06",
       "category": "voices",
       "title": "Grok Bot now integrates with your phone apps",
@@ -2315,6 +2314,25 @@
       "content_kind": "social",
       "verification": "公开平台索引，需查看原帖",
       "reader_url": "./reader.html?id=ec3b9fede136c9e2",
+      "reader_status": "public-page-excerpt"
+    },
+    {
+      "id": "1f9e2eb9153fab80",
+      "category": "voices",
+      "title": "Grok @Bot",
+      "summary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
+      "source": "X",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9ELWVOcFcxem1jbkpJcXc5TjlPQmlLRzZaU0pVWXhMTHJWNHQtQ2JlQlp4aVBoNldQdEx3aktSMXNxWkhnU0JQRFNZZktHdFlackNfOFk0WXhfb0VOU2c?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-22T16:22:20Z",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "importance": 80,
+      "content_kind": "social",
+      "verification": "公开平台索引，需查看原帖",
+      "reader_url": "./reader.html?id=1f9e2eb9153fab80",
       "reader_status": "public-page-excerpt"
     },
     {
@@ -2426,24 +2444,6 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "9dc278d3055ac5b7",
-      "category": "startups",
-      "title": "Cardiovascular AI startup Corologic lands South Korea's TIPS grant, begins clinical trials",
-      "summary": "Cardiovascular AI startup Corologic lands South Korea's TIPS grant, begins clinical trials Dealroom",
-      "source": "Dealroom",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNRjItMWVWT1IwaGtfc0VzWXVGaC15cjhvMC1zeDBlcmJJVjVsUVhfVkVKaFRwQVprM2YxQzdIRkUxQjJwSExtZFVGQ3Vra2k1S2FGNW1hVnQ5TGNVNk9VbFFDb1hxRHI3bkxtb2UxQUlLbERCaWU1d1Y5R2pORk1RczhlUlViam5QcDVnUm5RMlMyRHFEZThZSUg0a2FLMEMwd2hxY1Rudmo1Y0U2S2pmOFJ0TVNEWXpFT3NiNnhWSmg?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-10-01T01:41:34Z",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "importance": 75,
-      "content_kind": "article",
-      "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=9dc278d3055ac5b7",
-      "reader_status": "public-page-excerpt"
-    },
-    {
       "id": "7d71223c113e68d0",
       "category": "bigtech",
       "title": "NVIDIA Nemotron Achieves Benchmark-Leading Performance With LangChain Deep Agents Harness",
@@ -2516,13 +2516,13 @@
       "reader_status": "public-page-excerpt"
     },
     {
-      "id": "bcfee6554e1e72a6",
+      "id": "9dc278d3055ac5b7",
       "category": "startups",
-      "title": "Meet Noah Shinn: The 23-year-old college dropout whose viral AI assistant is taking on Meta’s Muse",
-      "summary": "Meet Noah Shinn: The 23-year-old college dropout whose viral AI assistant is taking on Meta’s Muse Fortune",
-      "source": "Fortune",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQNGd6UFUtS3k5WThwSUo5V2t5VnFKRUlsWEFHQllSOTZ3RXR1b0l4LWFLM2w2NEVxZHEtaVBCN1IteS1fRXdFbmFTV2phakVLdHpPQ2xjWmRTSThLdzdKNFcwSzZXVUR0TzlaNVVZTGxHbE52eG5oRTNGOEZTY1Z2a2NqYko5TDlTeXNDMWNwQUFZVmVOZk5tLWE5M01ZdEVnQ3d1X3lEcGxPUVp2ZkZPbkhFMml2NWN4UW5lNElmVTBtUXFnZlE?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-09-30T07:00:00Z",
+      "title": "Cardiovascular AI startup Corologic lands South Korea's TIPS grant, begins clinical trials",
+      "summary": "Cardiovascular AI startup Corologic lands South Korea's TIPS grant, begins clinical trials Dealroom",
+      "source": "Dealroom",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNRjItMWVWT1IwaGtfc0VzWXVGaC15cjhvMC1zeDBlcmJJVjVsUVhfVkVKaFRwQVprM2YxQzdIRkUxQjJwSExtZFVGQ3Vra2k1S2FGNW1hVnQ5TGNVNk9VbFFDb1hxRHI3bkxtb2UxQUlLbERCaWU1d1Y5R2pORk1RczhlUlViam5QcDVnUm5RMlMyRHFEZThZSUg0a2FLMEMwd2hxY1Rudmo1Y0U2S2pmOFJ0TVNEWXpFT3NiNnhWSmg?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-10-01T01:41:34Z",
       "tags": [
         "Academic Startup",
         "Funding"
@@ -2530,7 +2530,7 @@
       "importance": 74,
       "content_kind": "article",
       "verification": "媒体或公开网页",
-      "reader_url": "./reader.html?id=bcfee6554e1e72a6",
+      "reader_url": "./reader.html?id=9dc278d3055ac5b7",
       "reader_status": "public-page-excerpt"
     },
     {
