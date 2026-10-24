@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-24T04:32:24Z",
-  "record_count": 130,
+  "generated_at": "2026-10-24T10:54:45Z",
+  "record_count": 131,
   "records": [
     {
       "id": "jacobian-fable-20260720",
@@ -534,6 +534,45 @@
       "reading_minutes": 1
     },
     {
+      "id": "c8c57c74063975a0",
+      "kind": "article",
+      "title": "Beyond tree cover: mapping the world’s forest types",
+      "source": "Google DeepMind",
+      "source_url": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/",
+      "published_at": "2026-10-22T14:30:24Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "DeepMind",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "A global map categorizing every 10-meter patch of land on Earth into distinct forest types.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "resolved_url": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/",
+      "key_points": [
+        "A global map categorizing every 10-meter patch of land on Earth into distinct forest types."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "A global map categorizing every 10-meter patch of land on Earth into distinct forest types."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "A global map categorizing every 10-meter patch of land on Earth into distinct forest types."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "aaa0d5a4066b8fe7",
       "kind": "article",
       "title": "What FDE means at OpenAI",
@@ -612,6 +651,51 @@
         }
       ],
       "reading_minutes": 1
+    },
+    {
+      "id": "rhb-icml-2026",
+      "kind": "paper",
+      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
+      "source": "OpenReview · arXiv",
+      "source_url": "https://arxiv.org/abs/2605.02964",
+      "published_at": "2026-06-24T00:00:00Z",
+      "authors": [
+        "Kunvar Thaman"
+      ],
+      "venue": "ICML 2026",
+      "tags": [
+        "Reward Hacking",
+        "Agent Safety",
+        "Evaluation"
+      ],
+      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
+      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/rhb-icml-2026.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://arxiv.org/pdf/2605.02964",
+      "key_points": [
+        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
+        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
+        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
+        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
+        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
+        },
+        {
+          "title": "关键结果",
+          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
+        },
+        {
+          "title": "局限与结论",
+          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
+        }
+      ],
+      "reading_minutes": 46
     },
     {
       "id": "8e2a8d1d3ad2fa29",
@@ -696,51 +780,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "rhb-icml-2026",
-      "kind": "paper",
-      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
-      "source": "OpenReview · arXiv",
-      "source_url": "https://arxiv.org/abs/2605.02964",
-      "published_at": "2026-06-24T00:00:00Z",
-      "authors": [
-        "Kunvar Thaman"
-      ],
-      "venue": "ICML 2026",
-      "tags": [
-        "Reward Hacking",
-        "Agent Safety",
-        "Evaluation"
-      ],
-      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
-      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/rhb-icml-2026.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://arxiv.org/pdf/2605.02964",
-      "key_points": [
-        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
-        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
-        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
-        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
-        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
-        },
-        {
-          "title": "关键结果",
-          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
-        },
-        {
-          "title": "局限与结论",
-          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
-        }
-      ],
-      "reading_minutes": 46
-    },
-    {
       "id": "1370731209172c9f",
       "kind": "article",
       "title": "OpenAI models are coming to Google Cloud",
@@ -776,6 +815,259 @@
         {
           "title": "原文短摘录",
           "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "974c9e9820541901",
+      "kind": "article",
+      "title": "Accelerating the search for antimicrobial peptides with Google Antigravity",
+      "source": "Google DeepMind",
+      "source_url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
+      "published_at": "2026-10-15T16:08:03Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "DeepMind",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "Accelerating the search for novel antimicrobial peptides using Google Antigravity for Science.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
+      "key_points": [
+        "Bileschi, Zoi Tsangalidou, Sukhdeep Singh and Lucy J.",
+        "Colwell New antibiotics are urgently needed to help with rising levels of antimicrobial resistance, but searching for new therapeutics is often a slow, labor-intensive process.",
+        "With Google Antigravity, our agentic development platform, this process can now be made easier.",
+        "Google Antigravity provides an agentic science workbench that empowers biologists to discover, structurally evaluate, and prioritize promising targets quickly, compressing what used to be a fragmented search over multiple databases into a single session.",
+        "It also helps researchers scan through millions of previously uncharacterized proteins in the UniProt database using ProtNLM, a model that predicts biological function from amino acid sequences."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Accelerating the search for novel antimicrobial peptides using Google Antigravity for Science."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Bileschi, Zoi Tsangalidou, Sukhdeep Singh and Lucy J.",
+            "Colwell New antibiotics are urgently needed to help with rising levels of antimicrobial resistance, but searching for new therapeutics is often a slow, labor-intensive process.",
+            "With Google Antigravity, our agentic development platform, this process can now be made easier.",
+            "Google Antigravity provides an agentic science workbench that empowers biologists to discover, structurally evaluate, and prioritize promising targets quickly, compressing what used to be a fragmented search over multiple databases into a single session.",
+            "It also helps researchers scan through millions of previously uncharacterized proteins in the UniProt database using ProtNLM, a model that predicts biological function from amino acid sequences."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Pengfei Tian, Maxwell L. Bileschi, Zoi Tsangalidou, Sukhdeep Singh and Lucy J. Colwell",
+            "New antibiotics are urgently needed to help with rising levels of antimicrobial resistance, but searching for new therapeutics is often a slow, labor-intensive process. With Google Antigravity, our agentic development platform, this process can now be made easier.",
+            "Google Antigravity provides an agentic science workbench that empowers biologists to discover, structurally evaluate, and prioritize promising targets quickly, compressing what used to be a fragmented search over multiple databases into a single session. It also helps researchers scan through millions of previously uncharacterized proteins in the UniProt database using ProtNLM, a model that predicts biological function from amino acid sequences."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "6d8fd330d7b28b32",
+      "kind": "article",
+      "title": "Google DeepMind and Singapore Government collaborate to build fine-tuned AI model for scam detection",
+      "source": "Google DeepMind",
+      "source_url": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
+      "published_at": "2026-10-14T02:00:14Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "DeepMind",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "Learn how Google DeepMind and GovTech Singapore uses lightweight on-device Gemma models to intercept conversational scams in private chats with zero cloud data egress.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
+      "key_points": [
+        "Collaborating with the Government Technology Agency of Singapore (GovTech Singapore) to protect users without compromising privacy.",
+        "Scams, such as investment fraud, fake job offers, and impersonation of public officials make up over half of Singapore’s reported crimes, and account for more than S$4 billion in losses since 2019 .",
+        "At the same time, scam tactics have shifted from simple phishing to complex social engineering, whereby attackers manipulate victims with convincing conversations before requesting money.",
+        "Such scams now account for up to 80% of all losses.",
+        "To address this, Google DeepMind and the Government Technology Agency of Singapore (GovTech Singapore) have been working together as part of our National AI Partnership with the Singapore Government."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Learn how Google DeepMind and GovTech Singapore uses lightweight on-device Gemma models to intercept conversational scams in private chats with zero cloud data egress."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Collaborating with the Government Technology Agency of Singapore (GovTech Singapore) to protect users without compromising privacy.",
+            "Scams, such as investment fraud, fake job offers, and impersonation of public officials make up over half of Singapore’s reported crimes, and account for more than S$4 billion in losses since 2019 .",
+            "At the same time, scam tactics have shifted from simple phishing to complex social engineering, whereby attackers manipulate victims with convincing conversations before requesting money.",
+            "Such scams now account for up to 80% of all losses.",
+            "To address this, Google DeepMind and the Government Technology Agency of Singapore (GovTech Singapore) have been working together as part of our National AI Partnership with the Singapore Government."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Collaborating with the Government Technology Agency of Singapore (GovTech Singapore) to protect users without compromising privacy.",
+            "Scams, such as investment fraud, fake job offers, and impersonation of public officials make up over half of Singapore’s reported crimes, and account for more than S$4 billion in losses since 2019 . At the same time, scam tactics have shifted from simple phishing to complex social engineering, whereby attackers manipulate victims with convincing conversations before requesting money. Such scams now account for up to 80% of all losses.",
+            "To address this, Google DeepMind and the Government Technology Agency of Singapore (GovTech Singapore) have been working together as part of our National AI Partnership with the Singapore Government. Together, we've fine-tuned a privacy-preserving, on-device scam detection model."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "ec9a28444d3c34f8",
+      "kind": "article",
+      "title": "Developing Gemini 4 Argon responsibly and safely",
+      "source": "Google DeepMind",
+      "source_url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
+      "published_at": "2026-10-13T19:43:07Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "DeepMind",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "Learn more about our approach to safety and security for Gemini 4 Argon.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://blog.google/innovation-and-ai/technology/safety-security/gemini-4-model-safety-security/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=",
+      "key_points": [
+        "Learn more about our approach to safety and security for Gemini 4 Argon.",
+        "Gemini 4 Argon is a step forward in what models can do — especially when it comes to deep work in complex, real-world tasks across domains including coding, finance, legal, cybersecurity, and science.",
+        "Its cyberdefense capabilities are frontier-level and designed to give defenders an advantage over attackers.",
+        "To maximize its potential, we first wanted cyber defenders to put it to work via our Fairwind Program , while our own security teams used it to scan critical systems inside and outside of Google.",
+        "This window of limited access showed why these capabilities matter."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Learn more about our approach to safety and security for Gemini 4 Argon."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Learn more about our approach to safety and security for Gemini 4 Argon.",
+            "Gemini 4 Argon is a step forward in what models can do — especially when it comes to deep work in complex, real-world tasks across domains including coding, finance, legal, cybersecurity, and science.",
+            "Its cyberdefense capabilities are frontier-level and designed to give defenders an advantage over attackers.",
+            "To maximize its potential, we first wanted cyber defenders to put it to work via our Fairwind Program , while our own security teams used it to scan critical systems inside and outside of Google.",
+            "This window of limited access showed why these capabilities matter."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Learn more about our approach to safety and security for Gemini 4 Argon.",
+            "Gemini 4 Argon is a step forward in what models can do — especially when it comes to deep work in complex, real-world tasks across domains including coding, finance, legal, cybersecurity, and science. Its cyberdefense capabilities are frontier-level and designed to give defenders an advantage over attackers. To maximize its potential, we first wanted cyber defenders to put it to work via our Fairwind Program , while our own security teams used it to scan critical systems inside and outside of Google.",
+            "This window of limited access showed why these capabilities matter. For instance, Wiz used Argon to uncover a critical bug in hospital software that previous models had missed, helping protect hundreds of thousands of patient records. Meanwhile, Google’s own security teams used Argon to find and patch bugs across internal software or open-source software. This included fixing foundational vulnerabilities affecting systems globally, which are going through our responsible disclosure process."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "9607cb5a023e52e6",
+      "kind": "article",
+      "title": "Gemini 4 Argon for Robotics",
+      "source": "Google DeepMind",
+      "source_url": "https://deepmind.google/blog/gemini-4-argon-for-robotics/",
+      "published_at": "2026-10-13T16:01:58Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "DeepMind",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "Discover Gemini 4 Argon for robotics: leading the ERQA benchmark with physical reasoning, zero-shot control, Real2Sim, and agentic workflows.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://developers.googleblog.com/gemini-4-argon-for-robotics/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=",
+      "key_points": [
+        "Gemini 4 Argon marks a step change in physical understanding, code generation, and visual-semantic reasoning—unlocking new workflows across the robotics stack and accelerating progress toward physical AGI.",
+        "You can see this leap in capability on the Embodied Reasoning (ERQA) benchmark , which tests a model's ability to understand and solve physical, spatial problems in 3D environments.",
+        "Using pure reasoning, Argon scores 87%, outperforming every other frontier model.",
+        "As a general-purpose physical reasoning model, Argon can be applied across the entire robotics lifecycle.",
+        "In this post, we share representative prompts for Argon across four key areas:"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Discover Gemini 4 Argon for robotics: leading the ERQA benchmark with physical reasoning, zero-shot control, Real2Sim, and agentic workflows."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Gemini 4 Argon marks a step change in physical understanding, code generation, and visual-semantic reasoning—unlocking new workflows across the robotics stack and accelerating progress toward physical AGI.",
+            "You can see this leap in capability on the Embodied Reasoning (ERQA) benchmark , which tests a model's ability to understand and solve physical, spatial problems in 3D environments.",
+            "Using pure reasoning, Argon scores 87%, outperforming every other frontier model.",
+            "As a general-purpose physical reasoning model, Argon can be applied across the entire robotics lifecycle.",
+            "In this post, we share representative prompts for Argon across four key areas:"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Gemini 4 Argon marks a step change in physical understanding, code generation, and visual-semantic reasoning—unlocking new workflows across the robotics stack and accelerating progress toward physical AGI.",
+            "You can see this leap in capability on the Embodied Reasoning (ERQA) benchmark , which tests a model's ability to understand and solve physical, spatial problems in 3D environments. Using pure reasoning, Argon scores 87%, outperforming every other frontier model.",
+            "As a general-purpose physical reasoning model, Argon can be applied across the entire robotics lifecycle. In this post, we share representative prompts for Argon across four key areas:"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "7e853506e492274c",
+      "kind": "article",
+      "title": "Gemini 4 Argon: Built to solve your hardest problems",
+      "source": "Google DeepMind",
+      "source_url": "https://deepmind.google/blog/introducing-gemini-4-argon/",
+      "published_at": "2026-10-13T16:01:52Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "DeepMind",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+      "key_points": [
+        "We’re giving developers, enterprises, scientists, and consumers access to our latest frontier model.",
+        "Argon excels at deep work in complex, real-world tasks across domains including coding, finance, legal, cybersecurity, and science.",
+        "Its depth and precision across multi-step tasks leads Argon to outperform other frontier models on benchmarks across domains , ranking #1 on the Vals Index , which measures model performance across critical economic sectors like finance, coding, legal, and tax work.",
+        "The model launches today at an introductory price 1 of $2 per million input tokens and $10 per million output tokens (with cached input tokens at 95% off)."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "We’re giving developers, enterprises, scientists, and consumers access to our latest frontier model.",
+            "Argon excels at deep work in complex, real-world tasks across domains including coding, finance, legal, cybersecurity, and science.",
+            "Its depth and precision across multi-step tasks leads Argon to outperform other frontier models on benchmarks across domains , ranking #1 on the Vals Index , which measures model performance across critical economic sectors like finance, coding, legal, and tax work.",
+            "The model launches today at an introductory price 1 of $2 per million input tokens and $10 per million output tokens (with cached input tokens at 95% off)."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "We’re giving developers, enterprises, scientists, and consumers access to our latest frontier model.",
+            "Argon excels at deep work in complex, real-world tasks across domains including coding, finance, legal, cybersecurity, and science. Its depth and precision across multi-step tasks leads Argon to outperform other frontier models on benchmarks across domains , ranking #1 on the Vals Index , which measures model performance across critical economic sectors like finance, coding, legal, and tax work.",
+            "The model launches today at an introductory price 1 of $2 per million input tokens and $10 per million output tokens (with cached input tokens at 95% off)."
+          ]
         }
       ],
       "reading_minutes": 1
@@ -843,12 +1135,12 @@
         "natural language interaction"
       ],
       "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "With advancements in generative AI technology, an increasing number of researchers have begun exploring AI-native games in which gameplay rules are directly driven by generative AI. This paper presents \"Pharos Night: Crown Pursuit,\" an AI-native deck-building and tactical arena game based on a multi-agent system. The game uses large language models to generate materials and cards, support NPC decision-making, and mediate natural-language interactions. During play, players collect materials, describe desired card effects in natural language, and choose whether to negotiate or fight with NPCs in the arena. To constrain model-generated outcomes, the system parses responses…",
+      "summary": "With advancements in generative AI technology, an increasing number of researchers have begun exploring AI-native games in which gameplay rules are directly driven by generative AI. This paper presents “Pharos Night: Crown Pursuit,” an AI-native deck-building and tactical arena game based on a multi-agent system. The game uses large language models to generate materials and cards, support NPC decision-making, and mediate natural-language interactions. During play, players collect materials, describe desired card effects in natural language, and choose whether to negotiate or fight with NPCs in the arena. To constrain model-generated outcomes, the system parses responses…",
       "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
       "fetch_status": "abstract-only",
       "key_points": [
         "With advancements in generative AI technology, an increasing number of researchers have begun exploring AI-native games in which gameplay rules are directly driven by generative AI.",
-        "This paper presents \"Pharos Night: Crown Pursuit,\" an AI-native deck-building and tactical arena game based on a multi-agent system.",
+        "This paper presents “Pharos Night: Crown Pursuit,” an AI-native deck-building and tactical arena game based on a multi-agent system.",
         "The game uses large language models to generate materials and cards, support NPC decision-making, and mediate natural-language interactions.",
         "During play, players collect materials, describe desired card effects in natural language, and choose whether to negotiate or fight with NPCs in the arena.",
         "To constrain model-generated outcomes, the system parses responses…"
@@ -856,7 +1148,169 @@
       "sections": [
         {
           "title": "摘要",
-          "body": "With advancements in generative AI technology, an increasing number of researchers have begun exploring AI-native games in which gameplay rules are directly driven by generative AI. This paper presents \"Pharos Night: Crown Pursuit,\" an AI-native deck-building and tactical arena game based on a multi-agent system. The game uses large language models to generate materials and cards, support NPC decision-making, and mediate natural-language interactions. During play, players collect materials, describe desired card effects in natural language, and choose whether to negotiate or fight with NPCs in the arena. To constrain model-generated outcomes, the system parses responses…"
+          "body": "With advancements in generative AI technology, an increasing number of researchers have begun exploring AI-native games in which gameplay rules are directly driven by generative AI. This paper presents “Pharos Night: Crown Pursuit,” an AI-native deck-building and tactical arena game based on a multi-agent system. The game uses large language models to generate materials and cards, support NPC decision-making, and mediate natural-language interactions. During play, players collect materials, describe desired card effects in natural language, and choose whether to negotiate or fight with NPCs in the arena. To constrain model-generated outcomes, the system parses responses…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "a19f22b9a4e744f8",
+      "kind": "paper",
+      "title": "Typing vs. Dialogue Trees: Do Players Actually Want Open-Ended LLM Conversations in Games?",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1145/3800965.3834317",
+      "published_at": "2026-10-22T00:00:00Z",
+      "authors": [
+        "Tom Tucek",
+        "Rita Gambardella",
+        "Mohammadamin Sadeghizad"
+      ],
+      "venue": "ACM Annual Symposium on Computer-Human Interaction in Play (CHI PLAY)",
+      "tags": [
+        "Artificial Intelligence in Games",
+        "dialogue trees",
+        "large language models",
+        "game dialogue"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "Large Language Models (LLMs) offer the potential to replace static dialogue trees with open-ended, generative interactions in video games. However, the user experience of this transition remains under-researched. We present Project Bard, a custom 2D RPG that directly compares player interactions with LLM-based NPCs (free-text typing) against traditional pre-authored NPCs (dialogue trees) in a preliminary within-subjects study (N = 32). While telemetry shows players spent three times as long interacting with generative NPCs, immersion metrics show no significant difference, and qualitative analysis reveals that this extended time was often spent boundary-testing the system…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "Large Language Models (LLMs) offer the potential to replace static dialogue trees with open-ended, generative interactions in video games.",
+        "However, the user experience of this transition remains under-researched.",
+        "We present Project Bard, a custom 2D RPG that directly compares player interactions with LLM-based NPCs (free-text typing) against traditional pre-authored NPCs (dialogue trees) in a preliminary within-subjects study (N = 32).",
+        "While telemetry shows players spent three times as long interacting with generative NPCs, immersion metrics show no significant difference, and qualitative analysis reveals that this extended time was often spent boundary-testing the system…"
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Large Language Models (LLMs) offer the potential to replace static dialogue trees with open-ended, generative interactions in video games. However, the user experience of this transition remains under-researched. We present Project Bard, a custom 2D RPG that directly compares player interactions with LLM-based NPCs (free-text typing) against traditional pre-authored NPCs (dialogue trees) in a preliminary within-subjects study (N = 32). While telemetry shows players spent three times as long interacting with generative NPCs, immersion metrics show no significant difference, and qualitative analysis reveals that this extended time was often spent boundary-testing the system…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "ad7d46d2421d111f",
+      "kind": "paper",
+      "title": "Voice Over Persona: Dialogue Modality Drives Player Engagement and Immersion in LLM-Driven AI Agents in Games",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1145/3800965.3834299",
+      "published_at": "2026-10-22T00:00:00Z",
+      "authors": [
+        "Zhimo Li",
+        "Nandhini Giri"
+      ],
+      "venue": "ACM Annual Symposium on Computer-Human Interaction in Play (CHI PLAY)",
+      "tags": [
+        "Artificial Intelligence in Games",
+        "voice-over",
+        "player engagement",
+        "immersion"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "Large Language Models (LLMs) have enabled Non-Player Characters (NPCs) in video games to generate context-aware, real-time dialogue, opening new possibilities for designing richer and more immersive player experiences [14]. However, the effects of specific NPC design variables on player experience remain empirically underexplored. This paper presents a work-in-progress study examining how NPC persona (Empathic/Supportive vs. Low-Empathy/Task-focused) and dialogue modality (Text vs. Voice) influence player emotional response, engagement, and immersion in an AI-driven game environment. A Unity-based first-person detective game prototype was developed, in which an AI-driven…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "Large Language Models (LLMs) have enabled Non-Player Characters (NPCs) in video games to generate context-aware, real-time dialogue, opening new possibilities for designing richer and more immersive player experiences [14].",
+        "However, the effects of specific NPC design variables on player experience remain empirically underexplored.",
+        "This paper presents a work-in-progress study examining how NPC persona (Empathic/Supportive vs.",
+        "Low-Empathy/Task-focused) and dialogue modality (Text vs.",
+        "Voice) influence player emotional response, engagement, and immersion in an AI-driven game environment."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Large Language Models (LLMs) have enabled Non-Player Characters (NPCs) in video games to generate context-aware, real-time dialogue, opening new possibilities for designing richer and more immersive player experiences [14]. However, the effects of specific NPC design variables on player experience remain empirically underexplored. This paper presents a work-in-progress study examining how NPC persona (Empathic/Supportive vs. Low-Empathy/Task-focused) and dialogue modality (Text vs. Voice) influence player emotional response, engagement, and immersion in an AI-driven game environment. A Unity-based first-person detective game prototype was developed, in which an AI-driven…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "bd0ad1acbf9c8b10",
+      "kind": "paper",
+      "title": "From Character Role-Play to Orchestrated Reality: LLM-Driven Game World Simulation as a Parameterized-Action POMDP",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1145/3800965.3834285",
+      "published_at": "2026-10-22T00:00:00Z",
+      "authors": [
+        "Yuhang Huang",
+        "Chenmiao Li",
+        "Chaowei Fang"
+      ],
+      "venue": "ACM Annual Symposium on Computer-Human Interaction in Play (CHI PLAY)",
+      "tags": [
+        "Artificial Intelligence in Games",
+        "large language models",
+        "partially observable Markov decision processes",
+        "game AI"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "Many games rely on storytelling combined with systems that track levelling, NPC behaviour, and consequence simulation; bridging tightly authored narrative with deeply simulated worlds—most acute in sandbox and open-world settings—has been prohibitively expensive. LLM-driven worlds open a new path: a single harness can coordinate numerical state, narrative voice, storytelling pacing, and rule logic together. Realising this requires the LLM system to sustain a persistent world (who is where, what has just happened, what is currently true). In many existing systems, however, continuity remains implicit in dialogue history or textual memory rather than an independently…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "Many games rely on storytelling combined with systems that track levelling, NPC behaviour, and consequence simulation; bridging tightly authored narrative with deeply simulated worlds—most acute in sandbox and open-world settings—has been prohibitively expensive.",
+        "LLM-driven worlds open a new path: a single harness can coordinate numerical state, narrative voice, storytelling pacing, and rule logic together.",
+        "Realising this requires the LLM system to sustain a persistent world (who is where, what has just happened, what is currently true).",
+        "In many existing systems, however, continuity remains implicit in dialogue history or textual memory rather than an independently…"
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Many games rely on storytelling combined with systems that track levelling, NPC behaviour, and consequence simulation; bridging tightly authored narrative with deeply simulated worlds—most acute in sandbox and open-world settings—has been prohibitively expensive. LLM-driven worlds open a new path: a single harness can coordinate numerical state, narrative voice, storytelling pacing, and rule logic together. Realising this requires the LLM system to sustain a persistent world (who is where, what has just happened, what is currently true). In many existing systems, however, continuity remains implicit in dialogue history or textual memory rather than an independently…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "54713a52025800f2",
+      "kind": "article",
+      "title": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
+      "source": "Google DeepMind",
+      "source_url": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
+      "published_at": "2026-10-06T19:57:04Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "DeepMind",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "Introducing EmbeddingGemma 2, an open multimodal embedding model optimized for privacy-first use cases",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=",
+      "key_points": [
+        "EmbeddingGemma 2 is the most capable model for on-device multimodal embeddings, natively mapping combinations of text, images, audio, and video into a unified embedding space.",
+        "We introduced EmbeddingGemma last year to provide a lightweight option for high-quality text embeddings, to help your apps organize, search, and connect information directly on consumer hardware.",
+        "The developer community’s response blew past our expectations.",
+        "With more than 20 million downloads, builders have used it to power smarter on-device search tools and privacy-first retrieval augmented generation (RAG) pipelines.",
+        "Today, we’re launching EmbeddingGemma 2 , expanding beyond text to unify code, images, video, and audio in a shared embedding space."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Introducing EmbeddingGemma 2, an open multimodal embedding model optimized for privacy-first use cases"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "EmbeddingGemma 2 is the most capable model for on-device multimodal embeddings, natively mapping combinations of text, images, audio, and video into a unified embedding space.",
+            "We introduced EmbeddingGemma last year to provide a lightweight option for high-quality text embeddings, to help your apps organize, search, and connect information directly on consumer hardware.",
+            "The developer community’s response blew past our expectations.",
+            "With more than 20 million downloads, builders have used it to power smarter on-device search tools and privacy-first retrieval augmented generation (RAG) pipelines.",
+            "Today, we’re launching EmbeddingGemma 2 , expanding beyond text to unify code, images, video, and audio in a shared embedding space."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "EmbeddingGemma 2 is the most capable model for on-device multimodal embeddings, natively mapping combinations of text, images, audio, and video into a unified embedding space.",
+            "We introduced EmbeddingGemma last year to provide a lightweight option for high-quality text embeddings, to help your apps organize, search, and connect information directly on consumer hardware. The developer community’s response blew past our expectations. With more than 20 million downloads, builders have used it to power smarter on-device search tools and privacy-first retrieval augmented generation (RAG) pipelines.",
+            "Today, we’re launching EmbeddingGemma 2 , expanding beyond text to unify code, images, video, and audio in a shared embedding space. Built on the Gemma 4 architecture and released under a commercially permissive Apache 2.0 license, EmbeddingGemma 2 has 740 million parameters, making it optimal for on-device inference. It can help find a specific video clip from a voice memo, or search through hours of audio recordings based on a text query, all processed by a single, natively multimodal model."
+          ]
         }
       ],
       "reading_minutes": 1
@@ -1485,108 +1939,41 @@
       "reading_minutes": 1
     },
     {
-      "id": "338d385760223842",
-      "kind": "paper",
-      "title": "Rethinking Anonymity Claims in Synthetic Data Generation: A Model-Centric Privacy Attack Perspective",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.1145/3847192.3847359",
-      "published_at": "2026-10-13T00:00:00Z",
-      "authors": [
-        "Georgi Ganev",
-        "Emiliano De Cristofaro"
-      ],
-      "venue": "Workshop on Privacy in the Electronic Society",
+      "id": "40001292a3bfe8b9",
+      "kind": "article",
+      "title": "美国正式宣布封杀 DeepSeek ,美企软件受牵连,华为连收三个好消息",
+      "source": "微信公众号 · 小年科技观",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792839270&ver=7046&signature=nyDKiFyUH5mj26RNQERSpuamU1MT*WTIXdJWr*3R5ppC8YyZqtvdPhlykUFAhAEzxZDe-kis9WR5k4KNOEaie*pOj6Q6xCM6zsHPorX0ax62JFinhWotDbNT-5J17PTs&new=1",
+      "published_at": "2026-10-24T09:30:51Z",
+      "authors": [],
+      "venue": "",
       "tags": [
-        "Privacy-Preserving Technologies in Data",
-        "synthetic data",
-        "data anonymization",
-        "identifiability"
+        "微信公众号",
+        "DeepSeek",
+        "模型"
       ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "Training generative machine learning models to produce synthetic tabular data has become a popular approach for enhancing privacy in data sharing. As this typically involves processing sensitive personal information, releasing either the trained model or generated synthetic datasets can still pose privacy risks. Yet, recent research, commercial deployments, and privacy regulations like the General Data Protection Regulation (GDPR) largely assess anonymity at the level of an individual dataset.",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "abstract-only",
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "summary": "DeepSeek 的任何信息技术产品,已经装进系统的必须彻底清除,... 年拜登政府 发布 人工智能安全与创新行政令,要求对外国大模型产...",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "indexed-summary",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HG-O3GqjoSHevc3qqfIh5Xm4oAdcb2XbVGCTyj9e&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792839270%26ver%3D7046%26signature%3DnyDKiFyUH5mj26RNQERSpuamU1MT%2AWTIXdJWr%2A3R5ppC8YyZqtvdPhlykUFAhAEzxZDe-kis9WR5k4KNOEaie%2ApOj6Q6xCM6zsHPorX0ax62JFinhWotDbNT-5J17PTs%26new%3D1",
       "key_points": [
-        "Training generative machine learning models to produce synthetic tabular data has become a popular approach for enhancing privacy in data sharing.",
-        "As this typically involves processing sensitive personal information, releasing either the trained model or generated synthetic datasets can still pose privacy risks.",
-        "Yet, recent research, commercial deployments, and privacy regulations like the General Data Protection Regulation (GDPR) largely assess anonymity at the level of an individual dataset."
+        "DeepSeek 的任何信息技术产品,已经装进系统的必须彻底清除,... 年拜登政府 发布 人工智能安全与创新行政令,要求对外国大模型产..."
       ],
       "sections": [
         {
-          "title": "摘要",
-          "body": "Training generative machine learning models to produce synthetic tabular data has become a popular approach for enhancing privacy in data sharing. As this typically involves processing sensitive personal information, releasing either the trained model or generated synthetic datasets can still pose privacy risks. Yet, recent research, commercial deployments, and privacy regulations like the General Data Protection Regulation (GDPR) largely assess anonymity at the level of an individual dataset."
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "bbecb6e6f7121cbf",
-      "kind": "paper",
-      "title": "Going Faster: Privacy-Preserving Shortest Paths from Start to End",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.1145/3847192.3847373",
-      "published_at": "2026-10-13T00:00:00Z",
-      "authors": [
-        "Vincent Ehrmanntraut",
-        "Ulrike Meyer"
-      ],
-      "venue": "Workshop on Privacy in the Electronic Society",
-      "tags": [
-        "Cryptography and Data Security",
-        "shortest path computation",
-        "secure multi-party computation",
-        "network simulation"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "Finding shortest paths in graphs is a fundamental combinatorial optimization problem with numerous applications, e. g., in graph centrality measures, computational biology, and business process analysis. To address privacy constraints in such applications, Secure Multi-Party Computation (SMPC) protocols can compute the lengths of shortest paths on secret-shared graphs. Many such protocols have been proposed in the past, but they only compute the lengths of the shortest paths and not the paths themselves.",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "abstract-only",
-      "key_points": [
-        "Finding shortest paths in graphs is a fundamental combinatorial optimization problem with numerous applications, e. g., in graph centrality measures, computational biology, and business process analysis.",
-        "To address privacy constraints in such applications, Secure Multi-Party Computation (SMPC) protocols can compute the lengths of shortest paths on secret-shared graphs.",
-        "Many such protocols have been proposed in the past, but they only compute the lengths of the shortest paths and not the paths themselves."
-      ],
-      "sections": [
+          "title": "内容概览",
+          "body": "DeepSeek 的任何信息技术产品,已经装进系统的必须彻底清除,... 年拜登政府 发布 人工智能安全与创新行政令,要求对外国大模型产..."
+        },
         {
-          "title": "摘要",
-          "body": "Finding shortest paths in graphs is a fundamental combinatorial optimization problem with numerous applications, e. g., in graph centrality measures, computational biology, and business process analysis. To address privacy constraints in such applications, Secure Multi-Party Computation (SMPC) protocols can compute the lengths of shortest paths on secret-shared graphs. Many such protocols have been proposed in the past, but they only compute the lengths of the shortest paths and not the paths themselves."
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "166241079d723ab4",
-      "kind": "paper",
-      "title": "Sociotechnical Aspects of Tor Relay Rejection",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.1145/3847192.3847370",
-      "published_at": "2026-10-13T00:00:00Z",
-      "authors": [
-        "Jules Dejaeghere",
-        "Lionel Goffaux",
-        "Pierre Luycx",
-        "Hosam Elkoulak",
-        "Florentin Rochet"
-      ],
-      "venue": "Workshop on Privacy in the Electronic Society",
-      "tags": [
-        "Internet Traffic Analysis and Secure E-voting",
-        "Tor",
-        "end-of-life care policy",
-        "anonymity"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "In 2019, the Tor Project enforced an end-of-life (EoL) policy for Tor versions, leading to the rejection of outdated relays, amounting to a notable fraction of consensus weight. While this policy aids network maintenance, reduces backporting efforts, and shortens vulnerability exposure, its sociotechnical implications remain unstudied.",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "abstract-only",
-      "key_points": [
-        "In 2019, the Tor Project enforced an end-of-life (EoL) policy for Tor versions, leading to the rejection of outdated relays, amounting to a notable fraction of consensus weight.",
-        "While this policy aids network maintenance, reduces backporting efforts, and shortens vulnerability exposure, its sociotechnical implications remain unstudied."
-      ],
-      "sections": [
+          "title": "公开索引摘要",
+          "bullets": [
+            "DeepSeek 的任何信息技术产品,已经装进系统的必须彻底清除,... 年拜登政府 发布 人工智能安全与创新行政令,要求对外国大模型产..."
+          ]
+        },
         {
-          "title": "摘要",
-          "body": "In 2019, the Tor Project enforced an end-of-life (EoL) policy for Tor versions, leading to the rejection of outdated relays, amounting to a notable fraction of consensus weight. While this policy aids network maintenance, reduces backporting efforts, and shortens vulnerability exposure, its sociotechnical implications remain unstudied."
+          "title": "原文短摘录",
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -1596,7 +1983,7 @@
       "kind": "article",
       "title": "科技领域早知道 月之暗面 发布 Kimi K3.1 Pro,100 万 token 上下文,开放权重将于 11 月 4 日前释出",
       "source": "微信公众号 · 做康养我们是认真的",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792816331&ver=7045&signature=AAAvua9OdN*-UJlmsGi*RuWSmk0THPMyYcxtEg-AJ97BVhtX0H0DaB7Wt8sE3102fUpVBSoeU2YakYFQd3hx9r*E3CCLYKiEPplRfgul4lN9aDX3TZpyE3u1gZ2ZHRAX&new=1",
+      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HNM03GqjwaADDMtymbIbTpHXDVPyFhQvB1z4loq0&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792816331%26ver%3D7045%26signature%3DAAAvua9OdN%2A-UJlmsGi%2ARuWSmk0THPMyYcxtEg-AJ97BVhtX0H0DaB7Wt8sE3102fUpVBSoeU2YakYFQd3hx9r%2AE3CCLYKiEPplRfgul4lN9aDX3TZpyE3u1gZ2ZHRAX%26new%3D1",
       "published_at": "2026-10-24T04:09:34Z",
       "authors": [],
       "venue": "",
@@ -1622,6 +2009,86 @@
           "title": "公开索引摘要",
           "bullets": [
             "月之暗面 发布 Kimi K3.1 Pro,100 万 token 上下文,开放权重将于 11 月 4 日前释出 月之暗面 发布 Kimi K3.1 系列首个模型 Kimi K3.1 ..."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "7c808fa9185813ca",
+      "kind": "article",
+      "title": "【AI 早报】 月之暗面 发布 Kimi K3.1 Pro",
+      "source": "微信公众号 · 昆仑大模型",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792839270&ver=7046&signature=VTrY9Tzf5HdYGLAAyn9Jt-hxpNO5mpqLb1z3cVO4PRx-By1RNOPfVquy2lcBqM2PtVcy6222OMDLmHiU*ggTC6aUlp-bM73qYh7Hua7o38Z6CC6iRMfbP2WoibGoiW7z&new=1",
+      "published_at": "2026-10-24T02:13:39Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "微信公众号",
+        "Kimi",
+        "月之暗面"
+      ],
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "summary": "AI 早报 2026-10-24概览要闻 月之暗面 发布 Kimi K3.1 Pro #1开发生态Codex 28 天改进第 18、19 天 #2ZCode 推出限时免费 token 活动...",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "indexed-summary",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HG-O3GqjLcHHdEsTPh4RiIcpQAdO1YLYENpN1Gzc&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792839270%26ver%3D7046%26signature%3DVTrY9Tzf5HdYGLAAyn9Jt-hxpNO5mpqLb1z3cVO4PRx-By1RNOPfVquy2lcBqM2PtVcy6222OMDLmHiU%2AggTC6aUlp-bM73qYh7Hua7o38Z6CC6iRMfbP2WoibGoiW7z%26new%3D1",
+      "key_points": [
+        "AI 早报 2026-10-24概览要闻 月之暗面 发布 Kimi K3.1 Pro #1开发生态Codex 28 天改进第 18、19 天 #2ZCode 推出限时免费 token 活动..."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AI 早报 2026-10-24概览要闻 月之暗面 发布 Kimi K3.1 Pro #1开发生态Codex 28 天改进第 18、19 天 #2ZCode 推出限时免费 token 活动..."
+        },
+        {
+          "title": "公开索引摘要",
+          "bullets": [
+            "AI 早报 2026-10-24概览要闻 月之暗面 发布 Kimi K3.1 Pro #1开发生态Codex 28 天改进第 18、19 天 #2ZCode 推出限时免费 token 活动..."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "d64296c165f536b1",
+      "kind": "article",
+      "title": "每天60秒看懂AI时间| 月之暗面 发布 Kimi K3.1 Pro,权重定于 11 月 4 日前释出",
+      "source": "微信公众号 · Agent 实验室",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792839270&ver=7046&signature=sgb4gc7eAPT87xL3ygs6qhyjW7i*SzYDJKAYeiAll-LD4ppKg11884CXIqdpbQgmRdDfCVDINRubzZkTKhyllLk9bAzNko5X4qbnN3tYlzYJC-AvuOFvTTkoGxL-m3i0&new=1",
+      "published_at": "2026-10-24T00:20:02Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "微信公众号",
+        "Kimi",
+        "月之暗面"
+      ],
+      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
+      "summary": "Agent实验室 · 每天60秒看懂AI时间每天60秒看懂AI时间| 月之暗面 发布 Kimi K3.1 Pro,权重定于 11 月 4 日前释出2026.10.24 · 公开...",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "indexed-summary",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HG-O3GqjFdpeOCNv8QqSdU5bbMMMB76snzBh2C_6&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792839270%26ver%3D7046%26signature%3Dsgb4gc7eAPT87xL3ygs6qhyjW7i%2ASzYDJKAYeiAll-LD4ppKg11884CXIqdpbQgmRdDfCVDINRubzZkTKhyllLk9bAzNko5X4qbnN3tYlzYJC-AvuOFvTTkoGxL-m3i0%26new%3D1",
+      "key_points": [
+        "Agent实验室 · 每天60秒看懂AI时间每天60秒看懂AI时间| 月之暗面 发布 Kimi K3.1 Pro,权重定于 11 月 4 日前释出2026.10.24 · 公开..."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Agent实验室 · 每天60秒看懂AI时间每天60秒看懂AI时间| 月之暗面 发布 Kimi K3.1 Pro,权重定于 11 月 4 日前释出2026.10.24 · 公开..."
+        },
+        {
+          "title": "公开索引摘要",
+          "bullets": [
+            "Agent实验室 · 每天60秒看懂AI时间每天60秒看懂AI时间| 月之暗面 发布 Kimi K3.1 Pro,权重定于 11 月 4 日前释出2026.10.24 · 公开..."
           ]
         },
         {
@@ -1676,7 +2143,7 @@
       "kind": "article",
       "title": "AI大模型周报: 月之暗面 或本周 发布 Kimi K3.1;曝联想系资本入股Deepseek;火山引擎 发布 Seedance 2.5 4K;MiniMax开源M3.1 Flash…",
       "source": "微信公众号 · i黑马",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792816331&ver=7045&signature=0hv*nm0-ma3Bof52-S2ozwWNZY7eBI0ojChz6S-mVUT8k*CM1j9oyKiI4uu3vvXGD4StkTOGaa9oZlXmYuVlyvnBnXA1D0miNKWisvF4R2NNVTc80NF7iGTlfb65DdkB&new=1",
+      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HNQ03Gqje4b-FxlS1G3Ckc4RyHKg56QH-gFyjV3S&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792816331%26ver%3D7045%26signature%3D0hv%2Anm0-ma3Bof52-S2ozwWNZY7eBI0ojChz6S-mVUT8k%2ACM1j9oyKiI4uu3vvXGD4StkTOGaa9oZlXmYuVlyvnBnXA1D0miNKWisvF4R2NNVTc80NF7iGTlfb65DdkB%26new%3D1",
       "published_at": "2026-10-23T10:16:50Z",
       "authors": [],
       "venue": "",
@@ -1712,11 +2179,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "f89fde8808e25b2f",
+      "id": "18d9608bbc32cf0b",
       "kind": "article",
       "title": "DeepSeek 发布 新模型,第一件事是拜码头",
       "source": "微信公众号 · AI 0添加",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792816331&ver=7045&signature=GWH0CvvykpMDYFmHPiWpKlVfSHETXpMO2gOiUwXbl4y6oq5rqq-XwfErIPkWvEkHE963EZG2KtR021EjmcBtaHUqyAtki36PDfPFXSTt14ZfW7jpIWiGVnZXEPn4HS6z&new=1",
+      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792839270&ver=7046&signature=dyCn9awseyo4EXcNir3pcZyAHjsGxE7B9e*NtFUEQh77sCUt1v*roDsNfIG873M*gU0fJ9COdfh*VJqD*vXD0PPYHbgl83uqgO93BCptR*O2GM0i-VcfL*VaE5bHHqGf&new=1",
       "published_at": "2026-10-23T09:17:59Z",
       "authors": [],
       "venue": "",
@@ -1729,7 +2196,7 @@
       "summary": "一、信号:模型 发布 会变成了＂上架仪式＂把这波操作的时间线捋一遍.9 月 10 日, DeepSeek V4.1-Flash 新定价生效.官方合作伙...",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HNM03Gqj0STX7zG34gDrzoFccv0yCW4xtjoCXuQw&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792816331%26ver%3D7045%26signature%3DGWH0CvvykpMDYFmHPiWpKlVfSHETXpMO2gOiUwXbl4y6oq5rqq-XwfErIPkWvEkHE963EZG2KtR021EjmcBtaHUqyAtki36PDfPFXSTt14ZfW7jpIWiGVnZXEPn4HS6z%26new%3D1",
+      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HHCO3GqjHPj-eB0UQB2bW7MRdz4ogkR7Vce7cuOT&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792839270%26ver%3D7046%26signature%3DdyCn9awseyo4EXcNir3pcZyAHjsGxE7B9e%2ANtFUEQh77sCUt1v%2AroDsNfIG873M%2AgU0fJ9COdfh%2AVJqD%2AvXD0PPYHbgl83uqgO93BCptR%2AO2GM0i-VcfL%2AVaE5bHHqGf%26new%3D1",
       "key_points": [
         "一、信号:模型 发布 会变成了＂上架仪式＂把这波操作的时间线捋一遍.9 月 10 日, DeepSeek V4.1-Flash 新定价生效.官方合作伙..."
       ],
@@ -1883,7 +2350,7 @@
       "kind": "article",
       "title": "突发! DeepSeek 新模型 发布 !!",
       "source": "微信公众号 · AI大能",
-      "source_url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792816331&ver=7045&signature=Si4VlRsw5Dw2CYhh6KyHsmF-BOCGGTnCQmBlRgK0wns-yj6o5Mj3F-PEG2hbJjHhad4DqXrushvxwHbI5kHFW*5uGDDJsWQQOH9-2pxM1BSG9H5COnOwj17NN2rv8O7j&new=1",
+      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HNQ03Gqj1o6mUqFyAuDOoqIF_jHqvlI_SDtKHJD9&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792816331%26ver%3D7045%26signature%3DSi4VlRsw5Dw2CYhh6KyHsmF-BOCGGTnCQmBlRgK0wns-yj6o5Mj3F-PEG2hbJjHhad4DqXrushvxwHbI5kHFW%2A5uGDDJsWQQOH9-2pxM1BSG9H5COnOwj17NN2rv8O7j%26new%3D1",
       "published_at": "2026-10-22T01:00:21Z",
       "authors": [],
       "venue": "",
@@ -2159,116 +2626,36 @@
       "reading_minutes": 1
     },
     {
-      "id": "aebef93c31a287cc",
+      "id": "42834d39dc21a5d0",
       "kind": "article",
-      "title": "DeepSeek 发布 网页搜索与抓取API:补齐Agent联网短板,国产模型打通原生实时网页能力",
-      "source": "微信公众号 · AI未来已来新视界",
-      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HBxR12qjiOThQ0iD-5ClUaztxyt2nj0lzgfBXUu1&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792495888%26ver%3D7038%26signature%3DiJ6-9hwSlUvqNdjtbA6Os9vHkp18rBrRRAhfeX%2A5wPjw2GgXqiti9BkrrvjPZgZLi35cwmq3k5CmoZIp0f063zfTm4Gd4lbaWwgtFdapyPmqzF762cRj9gNiiCRxpFyV%26new%3D1",
-      "published_at": "2026-10-20T01:11:21Z",
+      "title": "TechBio 3.0 closes the drug discovery loop with multimodal AI and generative chemistry",
+      "source": "Nature",
+      "source_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9HdzNZWlh2bU1BS3lrVHdvLV9ZZTdZT0ljZExidjd2RFBwbUpJVmJmZDVFVUVWTEtUbTdFUjlTV01UVnRLTlpVVV9QckdjcHNDeGpyQkkwc0xIZGdMTkFB?oc=5",
+      "published_at": "2026-10-09T07:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
-        "微信公众号",
-        "DeepSeek",
-        "模型"
+        "AI for Science",
+        "Biology",
+        "Applied AI"
       ],
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "summary": "DeepSeek 正式上线Search(网页搜索)、Fetch(网页抓取)两套API接口,依托自研搜索引擎,直接给开发者提供原生联网检索与网...",
+      "verification": "媒体或公开网页",
+      "summary": "TechBio 3.0 closes the drug discovery loop with multimodal AI and generative chemistry Nature",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HBxR12qjiOThQ0iD-5ClUaztxyt2nj0lzgfBXUu1&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792495888%26ver%3D7038%26signature%3DiJ6-9hwSlUvqNdjtbA6Os9vHkp18rBrRRAhfeX%2A5wPjw2GgXqiti9BkrrvjPZgZLi35cwmq3k5CmoZIp0f063zfTm4Gd4lbaWwgtFdapyPmqzF762cRj9gNiiCRxpFyV%26new%3D1",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9HdzNZWlh2bU1BS3lrVHdvLV9ZZTdZT0ljZExidjd2RFBwbUpJVmJmZDVFVUVWTEtUbTdFUjlTV01UVnRLTlpVVV9QckdjcHNDeGpyQkkwc0xIZGdMTkFB?oc=5&hl=en-US&gl=US&ceid=US:en",
       "key_points": [
-        "DeepSeek 正式上线Search(网页搜索)、Fetch(网页抓取)两套API接口,依托自研搜索引擎,直接给开发者提供原生联网检索与网..."
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "DeepSeek 正式上线Search(网页搜索)、Fetch(网页抓取)两套API接口,依托自研搜索引擎,直接给开发者提供原生联网检索与网..."
+          "body": "TechBio 3.0 closes the drug discovery loop with multimodal AI and generative chemistry Nature"
         },
         {
-          "title": "公开索引摘要",
+          "title": "公开页面要点",
           "bullets": [
-            "DeepSeek 正式上线Search(网页搜索)、Fetch(网页抓取)两套API接口,依托自研搜索引擎,直接给开发者提供原生联网检索与网..."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "039adcd66b18fc92",
-      "kind": "article",
-      "title": "DeepSeek 发布 V4.1-Flash-1017版本",
-      "source": "微信公众号 · 橙子AI科技",
-      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HO3x1mqjx9ZKUoDp0PvcJsLRHARpUGlai7Cmhq3P&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792471521%26ver%3D7037%26signature%3DHImpwm16rLIpD2mwWKW5ngF4HPHov3i%2AH%2A2jFzzE%2A8gJu9f1SBKe7sySLVGLnEwo%2AB%2AZSGL1pcmUH4MgsDf1zYSHx7Q%2AE7Y8-tQ6LHUDKOusgZPpjXmjfQ-1OVY5njNl%26new%3D1",
-      "published_at": "2026-10-20T00:00:20Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "微信公众号",
-        "DeepSeek",
-        "模型"
-      ],
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "summary": "10月17日, DeepSeek 发布 V4.1-Flash-1017.官方 公布 的11项评测全部上涨,高于同表GPT-5.6 Sol的项目从6项增加到9项.梁圣又回...",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HO3x1mqjx9ZKUoDp0PvcJsLRHARpUGlai7Cmhq3P&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792471521%26ver%3D7037%26signature%3DHImpwm16rLIpD2mwWKW5ngF4HPHov3i%2AH%2A2jFzzE%2A8gJu9f1SBKe7sySLVGLnEwo%2AB%2AZSGL1pcmUH4MgsDf1zYSHx7Q%2AE7Y8-tQ6LHUDKOusgZPpjXmjfQ-1OVY5njNl%26new%3D1",
-      "key_points": [
-        "10月17日, DeepSeek 发布 V4.1-Flash-1017.官方 公布 的11项评测全部上涨,高于同表GPT-5.6 Sol的项目从6项增加到9项.梁圣又回..."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "10月17日, DeepSeek 发布 V4.1-Flash-1017.官方 公布 的11项评测全部上涨,高于同表GPT-5.6 Sol的项目从6项增加到9项.梁圣又回..."
-        },
-        {
-          "title": "公开索引摘要",
-          "bullets": [
-            "10月17日, DeepSeek 发布 V4.1-Flash-1017.官方 公布 的11项评测全部上涨,高于同表GPT-5.6 Sol的项目从6项增加到9项.梁圣又回..."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "689db7b46fc6531f",
-      "kind": "article",
-      "title": "DeepSeek 发布 新模型 主打最佳性价比",
-      "source": "微信公众号 · 财新网",
-      "source_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HO3x1mqjPU8QuSpa6QGb8uuEdC9t8Z0EiLGk-nTb&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792471521%26ver%3D7037%26signature%3DTNgR6WuHcHZLUkroTc8gh6fWIw3IWMn4jgyVrLGY0h8tkjAbskxwHvMfL5uYN4CUSTr4Pkq%2AqY4RbSdITDlSCGRCVFv-W-FQuCLIkHpg1GGflqhFNfy34dX-ZCF3Klhu%26new%3D1",
-      "published_at": "2026-10-19T10:14:19Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "微信公众号",
-        "DeepSeek",
-        "模型"
-      ],
-      "verification": "搜狗微信公开索引摘要 · 点击原文核对",
-      "summary": "图片来自视觉中国此前,主流国产模型厂商已有近一个月没有 发布 新的前沿模型文|财新 杨子锐10月17日下午, DeepSeek 发布 新模型...",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "indexed-summary",
-      "resolved_url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HO3x1mqjPU8QuSpa6QGb8uuEdC9t8Z0EiLGk-nTb&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3Fsrc%3D11%26timestamp%3D1792471521%26ver%3D7037%26signature%3DTNgR6WuHcHZLUkroTc8gh6fWIw3IWMn4jgyVrLGY0h8tkjAbskxwHvMfL5uYN4CUSTr4Pkq%2AqY4RbSdITDlSCGRCVFv-W-FQuCLIkHpg1GGflqhFNfy34dX-ZCF3Klhu%26new%3D1",
-      "key_points": [
-        "图片来自视觉中国此前,主流国产模型厂商已有近一个月没有 发布 新的前沿模型文|财新 杨子锐10月17日下午, DeepSeek 发布 新模型..."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "图片来自视觉中国此前,主流国产模型厂商已有近一个月没有 发布 新的前沿模型文|财新 杨子锐10月17日下午, DeepSeek 发布 新模型..."
-        },
-        {
-          "title": "公开索引摘要",
-          "bullets": [
-            "图片来自视觉中国此前,主流国产模型厂商已有近一个月没有 发布 新的前沿模型文|财新 杨子锐10月17日下午, DeepSeek 发布 新模型..."
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
           ]
         },
         {
@@ -2516,55 +2903,6 @@
             "NVIDIA today released Nemotron 3.5 Super VL, an open 120-billion-parameter model that delivers the fastest task completion and highest accuracy for specialized always-on agents.",
             "Joining it are two new edge models: Nemotron 3.5 Bolt 74B-A9B 24GB, optimized to balance intelligence and speed per GB for local agentic workloads, and Nemotron 3.5 Bolt E4B 4GB, optimized for intelligence per GB for fast conversational agents.",
             "Super VL and Bolt 74B-A9B are available now, with Bolt E4B coming Oct. 23. The three open models together cover the full range of agent deployments, from large enterprise servers down to edge devices and local hardware."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "e879be1befb70532",
-      "kind": "article",
-      "title": "Gemini 4 Argon: Built to solve your hardest problems",
-      "source": "Google AI",
-      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
-      "published_at": "2026-10-13T16:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Google",
-        "Official"
-      ],
-      "verification": "官方来源",
-      "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
-      "key_points": [
-        "We’re giving developers, enterprises, scientists, and consumers access to our latest frontier model.",
-        "Argon excels at deep work in complex, real-world tasks across domains including coding, finance, legal, cybersecurity, and science.",
-        "Its depth and precision across multi-step tasks leads Argon to outperform other frontier models on benchmarks across domains , ranking #1 on the Vals Index , which measures model performance across critical economic sectors like finance, coding, legal, and tax work.",
-        "The model launches today at an introductory price 1 of $2 per million input tokens and $10 per million output tokens (with cached input tokens at 95% off)."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "We’re giving developers, enterprises, scientists, and consumers access to our latest frontier model.",
-            "Argon excels at deep work in complex, real-world tasks across domains including coding, finance, legal, cybersecurity, and science.",
-            "Its depth and precision across multi-step tasks leads Argon to outperform other frontier models on benchmarks across domains , ranking #1 on the Vals Index , which measures model performance across critical economic sectors like finance, coding, legal, and tax work.",
-            "The model launches today at an introductory price 1 of $2 per million input tokens and $10 per million output tokens (with cached input tokens at 95% off)."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "We’re giving developers, enterprises, scientists, and consumers access to our latest frontier model.",
-            "Argon excels at deep work in complex, real-world tasks across domains including coding, finance, legal, cybersecurity, and science. Its depth and precision across multi-step tasks leads Argon to outperform other frontier models on benchmarks across domains , ranking #1 on the Vals Index , which measures model performance across critical economic sectors like finance, coding, legal, and tax work.",
-            "The model launches today at an introductory price 1 of $2 per million input tokens and $10 per million output tokens (with cached input tokens at 95% off)."
           ]
         }
       ],
@@ -2972,6 +3310,97 @@
       "reading_minutes": 1
     },
     {
+      "id": "2fc2de7a2e3125c3",
+      "kind": "article",
+      "title": "AI-Generated Evidence in Drug Discovery: Reliability, Legal Risk & FDA Compliance",
+      "source": "Crowell & Moring LLP",
+      "source_url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPXzNkV2c5dk43d1d5alhkOW9BbkJyY2h1VHNEd283dVJZdEc5dGhqbkpjNU1jUHpjXzZDRk5PTndtUmtUZ0hIVWxuRmlLMzN5OGczVlB4b1dWZDloMkV2eWc5ZEJVRkRvNkZ3MXYyOC1QMFRqTWJzTUZkVUl6cHJ1VVVyMk9TZ0xDOGs5eGRMWFVCWFZHUF9TLWJfMnhSbGNrSVVyWWJicGtNT3BvQmRJYlFGT1pkTVJuQWlITUg5MHRKMlRtREprc2xBTEZ2Wno3NU5yQlhYZGNrd3I3bzFlY2NhQWZtazhrWW1nbktxTlNDakE?oc=5",
+      "published_at": "2026-10-21T23:47:03Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "AI-Generated Evidence in Drug Discovery: Reliability, Legal Risk & FDA Compliance Crowell & Moring LLP",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPXzNkV2c5dk43d1d5alhkOW9BbkJyY2h1VHNEd283dVJZdEc5dGhqbkpjNU1jUHpjXzZDRk5PTndtUmtUZ0hIVWxuRmlLMzN5OGczVlB4b1dWZDloMkV2eWc5ZEJVRkRvNkZ3MXYyOC1QMFRqTWJzTUZkVUl6cHJ1VVVyMk9TZ0xDOGs5eGRMWFVCWFZHUF9TLWJfMnhSbGNrSVVyWWJicGtNT3BvQmRJYlFGT1pkTVJuQWlITUg5MHRKMlRtREprc2xBTEZ2Wno3NU5yQlhYZGNrd3I3bzFlY2NhQWZtazhrWW1nbktxTlNDakE?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AI-Generated Evidence in Drug Discovery: Reliability, Legal Risk & FDA Compliance Crowell & Moring LLP"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "25c3f7b3a6fe47e8",
+      "kind": "article",
+      "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "source": "Google AI",
+      "source_url": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
+      "published_at": "2026-09-28T19:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Google",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
+      "key_points": [
+        "Earlier this year, we partnered with XPRIZE and Range Media Partners to launch the Future Vision XPRIZE, a global competition calling for films that envision a hopeful, technology-enabled future.",
+        "Last week in Los Angeles, independent filmmaker Jeff Synthesized was named the grand prize winner for The Gifted .",
+        "Inspired by a deeply personal story, the film centers on an 11-year-old boy who recreates his late mother’s voice and essence out of love and code.",
+        "What emerges across the town’s networks quietly cares for his entire community — reflecting the filmmaker’s belief that technology’s greatest promise lies in empathy and human connection.",
+        "Chosen from more than 2,500 entries worldwide, the solo-developed project receives $100,000 alongside $2.5 million in feature production funding."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Earlier this year, we partnered with XPRIZE and Range Media Partners to launch the Future Vision XPRIZE, a global competition calling for films that envision a hopeful, technology-enabled future.",
+            "Last week in Los Angeles, independent filmmaker Jeff Synthesized was named the grand prize winner for The Gifted .",
+            "Inspired by a deeply personal story, the film centers on an 11-year-old boy who recreates his late mother’s voice and essence out of love and code.",
+            "What emerges across the town’s networks quietly cares for his entire community — reflecting the filmmaker’s belief that technology’s greatest promise lies in empathy and human connection.",
+            "Chosen from more than 2,500 entries worldwide, the solo-developed project receives $100,000 alongside $2.5 million in feature production funding."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Earlier this year, we partnered with XPRIZE and Range Media Partners to launch the Future Vision XPRIZE, a global competition calling for films that envision a hopeful, technology-enabled future. Last week in Los Angeles, independent filmmaker Jeff Synthesized was named the grand prize winner for The Gifted .",
+            "Inspired by a deeply personal story, the film centers on an 11-year-old boy who recreates his late mother’s voice and essence out of love and code. What emerges across the town’s networks quietly cares for his entire community — reflecting the filmmaker’s belief that technology’s greatest promise lies in empathy and human connection.",
+            "Chosen from more than 2,500 entries worldwide, the solo-developed project receives $100,000 alongside $2.5 million in feature production funding. Through Google’s 100 ZEROS initiative, we are partnering with Range Media Partners to help bring this story to the big screen."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "973b869910bc732b",
       "kind": "article",
       "title": "AI is shaking up the field of mathematics. But what comes next?",
@@ -3012,12 +3441,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "7a74c6b0b6be2be3",
+      "id": "465be74f8ecf6736",
       "kind": "article",
-      "title": "Healthcare ETF: China May Control a Key Bottleneck in AI Drug Discovery",
-      "source": "KraneShares",
-      "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNZnlweEUtRjBzU1VidV9xdFdCV1RmSTRtbVhLX2NpVTgzQThzNDBONWhiOWxhWlhkOU5IWXc1cF9OUGNEajJSN3lPc21Va1VkdjdrTGtDOWhmaFdvZHR6N216T2ItWHJHdnZXREJyUnhVRDMySW5FNHRWR193YnV0SjlSWk00QWpUY3RSSl96eXp6ZTV5SmdlaVA5aw?oc=5",
-      "published_at": "2026-10-21T20:26:05Z",
+      "title": "AI designs functional enzyme components that could help expand drug discovery",
+      "source": "Phys.org",
+      "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBydGlVckdMbzRHWWpUOGtuSjZFZHJXbHFNVThiV2p6T1NyTzRxLVI2WmFHeUpJUEJNY21td3ZGQmZ4emljQ2NqdUlDUGlDN3lRdE9mdk1PSGFrcXExbktuX25FY25wTnBjWFd0VG1veWZSekVoTnJyOFBmYw?oc=5",
+      "published_at": "2026-10-21T20:20:14Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -3026,17 +3455,17 @@
         "Applied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Healthcare ETF: China May Control a Key Bottleneck in AI Drug Discovery KraneShares",
+      "summary": "AI designs functional enzyme components that could help expand drug discovery Phys.org",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNZnlweEUtRjBzU1VidV9xdFdCV1RmSTRtbVhLX2NpVTgzQThzNDBONWhiOWxhWlhkOU5IWXc1cF9OUGNEajJSN3lPc21Va1VkdjdrTGtDOWhmaFdvZHR6N216T2ItWHJHdnZXREJyUnhVRDMySW5FNHRWR193YnV0SjlSWk00QWpUY3RSSl96eXp6ZTV5SmdlaVA5aw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "resolved_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBydGlVckdMbzRHWWpUOGtuSjZFZHJXbHFNVThiV2p6T1NyTzRxLVI2WmFHeUpJUEJNY21td3ZGQmZ4emljQ2NqdUlDUGlDN3lRdE9mdk1PSGFrcXExbktuX25FY25wTnBjWFd0VG1veWZSekVoTnJyOFBmYw?oc=5&hl=en-US&gl=US&ceid=US:en",
       "key_points": [
         "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Healthcare ETF: China May Control a Key Bottleneck in AI Drug Discovery KraneShares"
+          "body": "AI designs functional enzyme components that could help expand drug discovery Phys.org"
         },
         {
           "title": "公开页面要点",
@@ -3194,57 +3623,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "25c3f7b3a6fe47e8",
-      "kind": "article",
-      "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
-      "source": "Google AI",
-      "source_url": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
-      "published_at": "2026-09-28T19:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Google",
-        "Official"
-      ],
-      "verification": "官方来源",
-      "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
-      "key_points": [
-        "Earlier this year, we partnered with XPRIZE and Range Media Partners to launch the Future Vision XPRIZE, a global competition calling for films that envision a hopeful, technology-enabled future.",
-        "Last week in Los Angeles, independent filmmaker Jeff Synthesized was named the grand prize winner for The Gifted .",
-        "Inspired by a deeply personal story, the film centers on an 11-year-old boy who recreates his late mother’s voice and essence out of love and code.",
-        "What emerges across the town’s networks quietly cares for his entire community — reflecting the filmmaker’s belief that technology’s greatest promise lies in empathy and human connection.",
-        "Chosen from more than 2,500 entries worldwide, the solo-developed project receives $100,000 alongside $2.5 million in feature production funding."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Earlier this year, we partnered with XPRIZE and Range Media Partners to launch the Future Vision XPRIZE, a global competition calling for films that envision a hopeful, technology-enabled future.",
-            "Last week in Los Angeles, independent filmmaker Jeff Synthesized was named the grand prize winner for The Gifted .",
-            "Inspired by a deeply personal story, the film centers on an 11-year-old boy who recreates his late mother’s voice and essence out of love and code.",
-            "What emerges across the town’s networks quietly cares for his entire community — reflecting the filmmaker’s belief that technology’s greatest promise lies in empathy and human connection.",
-            "Chosen from more than 2,500 entries worldwide, the solo-developed project receives $100,000 alongside $2.5 million in feature production funding."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Earlier this year, we partnered with XPRIZE and Range Media Partners to launch the Future Vision XPRIZE, a global competition calling for films that envision a hopeful, technology-enabled future. Last week in Los Angeles, independent filmmaker Jeff Synthesized was named the grand prize winner for The Gifted .",
-            "Inspired by a deeply personal story, the film centers on an 11-year-old boy who recreates his late mother’s voice and essence out of love and code. What emerges across the town’s networks quietly cares for his entire community — reflecting the filmmaker’s belief that technology’s greatest promise lies in empathy and human connection.",
-            "Chosen from more than 2,500 entries worldwide, the solo-developed project receives $100,000 alongside $2.5 million in feature production funding. Through Google’s 100 ZEROS initiative, we are partnering with Range Media Partners to help bring this story to the big screen."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "ebdbf7916016cfe9",
       "kind": "article",
       "title": "Profiling TorchNeuron (Part 1): System-level profiling on AWS Trainium.",
@@ -3336,46 +3714,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "b8e4a591e3398cbf",
-      "kind": "article",
-      "title": "Using thousands of AI agents to uncover new leads in biological data",
-      "source": "OpenAI",
-      "source_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9mT3FxTUpGSndLdWh6emNISWRnSmNEdEZFZHdMWGlZZWQyaWp3cElhVGdCX3BTTDVySVhIOExMU0xacGk4MGdKNUhJUVBFVTNpOUN2aWpyUlBuTVh1STlGdkdLSmRnbW1GNEF6NkpPRHBBNC0wMTR1UEJZVGNGUQ?oc=5",
-      "published_at": "2026-10-21T13:10:52Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Using thousands of AI agents to uncover new leads in biological data OpenAI",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9mT3FxTUpGSndLdWh6emNISWRnSmNEdEZFZHdMWGlZZWQyaWp3cElhVGdCX3BTTDVySVhIOExMU0xacGk4MGdKNUhJUVBFVTNpOUN2aWpyUlBuTVh1STlGdkdLSmRnbW1GNEF6NkpPRHBBNC0wMTR1UEJZVGNGUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Using thousands of AI agents to uncover new leads in biological data OpenAI"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "f8f2c2d6b145fa5f",
       "kind": "article",
       "title": "AI-Generated Math Proof Hints at a Path to Safer Automated Code",
@@ -3440,46 +3778,6 @@
         {
           "title": "内容概览",
           "body": "How Claude designed protein binders against scorpion neurotoxins Anthropic"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "b409ce3d0993a3ad",
-      "kind": "article",
-      "title": "AI Is Flooding Drug Discovery With Candidates. Clinical Validation Has No Flood Gates.",
-      "source": "The Clinical Trial Vanguard",
-      "source_url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPaDZrVlVlUy1FeE40TEJFQzd4LXBjWEt5eVhUS2RCZU9wUndVdHFRaDFtVHNDMXBWRjRObHFLSjROSy1HR0Z6eTJTR1BFUzJMX2hsTFNuRkFhd3I3VXE0UVN5eG5vVjViN3pLcEhpY2ZJYXZhLU5FaHBjVTRQQW1NZi1kVDNqNmgxQW1ydzBZZ1JQN2hhRzJVeF9sVWFXVzZHaHd4clEwT3lqSVUwcTZUaDExbkJQUTc5eHRfa3pDam5BTTJqbW8xZXM2cHlsUy1vT2IyMTB3RUUwamc?oc=5",
-      "published_at": "2026-10-20T13:00:24Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "AI Is Flooding Drug Discovery With Candidates. Clinical Validation Has No Flood Gates. The Clinical Trial Vanguard",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPaDZrVlVlUy1FeE40TEJFQzd4LXBjWEt5eVhUS2RCZU9wUndVdHFRaDFtVHNDMXBWRjRObHFLSjROSy1HR0Z6eTJTR1BFUzJMX2hsTFNuRkFhd3I3VXE0UVN5eG5vVjViN3pLcEhpY2ZJYXZhLU5FaHBjVTRQQW1NZi1kVDNqNmgxQW1ydzBZZ1JQN2hhRzJVeF9sVWFXVzZHaHd4clEwT3lqSVUwcTZUaDExbkJQUTc5eHRfa3pDam5BTTJqbW8xZXM2cHlsUy1vT2IyMTB3RUUwamc?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "AI Is Flooding Drug Discovery With Candidates. Clinical Validation Has No Flood Gates. The Clinical Trial Vanguard"
         },
         {
           "title": "公开页面要点",
@@ -3756,6 +4054,46 @@
       "reading_minutes": 1
     },
     {
+      "id": "3c1e9594a18dc640",
+      "kind": "article",
+      "title": "AMD will acquire Fei-Fei Li’s World Labs for $8.2B",
+      "source": "TechCrunch",
+      "source_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNS0tBZXRaWkdrX3ptaHVnM1c3V29xbkVmdVRvRGNmUXl1RWNldGR3RS1IbGMtUzY1T3FRYXJwU3czbXBDS1FCSF9CQWN3X2p6akRGVzkyOFgzLWpGOWhGWHhMOXBqanM0a2FhOEUwU1QwbTZFNjV0REN1TDdaMWlYSmxLVGVXanpZV1RDa1lZMUtYbzRE?oc=5",
+      "published_at": "2026-09-28T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Researcher Watch",
+        "Vision",
+        "World Models"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "AMD will acquire Fei-Fei Li’s World Labs for $8.2B TechCrunch",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNS0tBZXRaWkdrX3ptaHVnM1c3V29xbkVmdVRvRGNmUXl1RWNldGR3RS1IbGMtUzY1T3FRYXJwU3czbXBDS1FCSF9CQWN3X2p6akRGVzkyOFgzLWpGOWhGWHhMOXBqanM0a2FhOEUwU1QwbTZFNjV0REN1TDdaMWlYSmxLVGVXanpZV1RDa1lZMUtYbzRE?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AMD will acquire Fei-Fei Li’s World Labs for $8.2B TechCrunch"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "e53e3f6c06a7c12a",
       "kind": "article",
       "title": "AMD to Buy Fei-Fei Li’s World Labs AI Startup for $8.2 Billion",
@@ -3835,359 +4173,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "c6629012ffc4cd56",
-      "kind": "article",
-      "title": "Reverse engineering Claude's CVE-2026-2796 exploit",
-      "source": "Anthropic",
-      "source_url": "https://www.anthropic.com/research/exploit",
-      "published_at": "2026-03-06T00:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Anthropic",
-        "Research"
-      ],
-      "verification": "官方来源",
-      "summary": "This post dives deep into how Claude wrote an exploit for one of the vulnerabilities it found in Firefox.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.anthropic.com/research/exploit",
-      "key_points": [
-        "Evyatar Ben Asher, Keane Lucas, Nicholas Carlini, Newton Cheng, and Daniel Freeman Today we published an update on our collaboration with Mozilla, in which Claude Opus 4.6 found 22 vulnerabilities in Firefox over the course of two weeks.",
-        "As part of that work, we evaluated whether Claude could go further: exploit the bugs, as well as find them.",
-        "This blog post will deep dive into how Claude wrote an exploit for CVE-2026-2796 (now patched).",
-        "This is another data point for the trajectory of LLM’s cyber capabilities.",
-        "In September, we noted that Claude's success rate on Cybench had doubled in six months."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "This post dives deep into how Claude wrote an exploit for one of the vulnerabilities it found in Firefox."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Evyatar Ben Asher, Keane Lucas, Nicholas Carlini, Newton Cheng, and Daniel Freeman Today we published an update on our collaboration with Mozilla, in which Claude Opus 4.6 found 22 vulnerabilities in Firefox over the course of two weeks.",
-            "As part of that work, we evaluated whether Claude could go further: exploit the bugs, as well as find them.",
-            "This blog post will deep dive into how Claude wrote an exploit for CVE-2026-2796 (now patched).",
-            "This is another data point for the trajectory of LLM’s cyber capabilities.",
-            "In September, we noted that Claude's success rate on Cybench had doubled in six months."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Evyatar Ben Asher, Keane Lucas, Nicholas Carlini, Newton Cheng, and Daniel Freeman",
-            "Today we published an update on our collaboration with Mozilla, in which Claude Opus 4.6 found 22 vulnerabilities in Firefox over the course of two weeks. As part of that work, we evaluated whether Claude could go further: exploit the bugs, as well as find them. This blog post will deep dive into how Claude wrote an exploit for CVE-2026-2796 (now patched).",
-            "This is another data point for the trajectory of LLM’s cyber capabilities. In September, we noted that Claude's success rate on Cybench had doubled in six months. In early February we demonstrated that Claude’s success rate on Cybergym doubled in four months. We’re sharing this case study to provide an early glimpse into what we expect will be LLMs’ improving ability to author exploits."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "3f695d57d017c585",
-      "kind": "article",
-      "title": "LLM-discovered 0 days",
-      "source": "Anthropic",
-      "source_url": "https://www.anthropic.com/research/zero-days",
-      "published_at": "2026-02-05T00:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Anthropic",
-        "Research"
-      ],
-      "verification": "官方来源",
-      "summary": "AI models can now find high-severity vulnerabilities at scale. We're using Claude to find and help fix vulnerabilities in open source software.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.anthropic.com/research/zero-days",
-      "key_points": [
-        "Nicholas Carlini * , Keane Lucas * , Evyatar Ben Asher * , Newton Cheng, Hasnain Lakhani, David Forsythe, and Kyla Guru * indicates equal contribution Claude Opus 4.6, released today , continues a trajectory of meaningful improvements in AI models’ cybersecurity capabilities.",
-        "Last fall, we wrote that we believed we were at an inflection point for AI's impact on cybersecurity —that progress could become quite fast, and now was the moment to accelerate defensive use of AI.",
-        "The evidence since then has only reinforced that view.",
-        "AI models can now find high-severity vulnerabilities at scale.",
-        "Our view is this is a moment to move quickly—to empower defenders and secure as much code as possible while the window exists."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "AI models can now find high-severity vulnerabilities at scale. We're using Claude to find and help fix vulnerabilities in open source software."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Nicholas Carlini * , Keane Lucas * , Evyatar Ben Asher * , Newton Cheng, Hasnain Lakhani, David Forsythe, and Kyla Guru * indicates equal contribution Claude Opus 4.6, released today , continues a trajectory of meaningful improvements in AI models’ cybersecurity capabilities.",
-            "Last fall, we wrote that we believed we were at an inflection point for AI's impact on cybersecurity —that progress could become quite fast, and now was the moment to accelerate defensive use of AI.",
-            "The evidence since then has only reinforced that view.",
-            "AI models can now find high-severity vulnerabilities at scale.",
-            "Our view is this is a moment to move quickly—to empower defenders and secure as much code as possible while the window exists."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Nicholas Carlini * , Keane Lucas * , Evyatar Ben Asher * , Newton Cheng, Hasnain Lakhani, David Forsythe, and Kyla Guru * indicates equal contribution",
-            "Claude Opus 4.6, released today , continues a trajectory of meaningful improvements in AI models’ cybersecurity capabilities. Last fall, we wrote that we believed we were at an inflection point for AI's impact on cybersecurity —that progress could become quite fast, and now was the moment to accelerate defensive use of AI. The evidence since then has only reinforced that view. AI models can now find high-severity vulnerabilities at scale. Our view is this is a moment to move quickly—to empower defenders and secure as much code as possible while the window exists.",
-            "Opus 4.6 is notably better at finding high-severity vulnerabilities than previous models and a sign of how quickly things are moving. Security teams have been automating vulnerability discovery for years, investing heavily in fuzzing infrastructure and custom harnesses to find bugs at scale. But what stood out in early testing is how quickly Opus 4.6 found vulnerabilities out of the box without task-specific tooling, custom scaffolding, or specialized prompting. Even more interesting is how it found them. Fuzzers work by throwing massive amounts of random inputs at code to see what breaks. Opus 4.6 reads and reasons about code the way a human researcher would—looking at past fixes to find similar bugs that…"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "f296754153f206b1",
-      "kind": "article",
-      "title": "AI models on realistic cyber ranges",
-      "source": "Anthropic",
-      "source_url": "https://www.anthropic.com/research/cyber-toolkits-update",
-      "published_at": "2026-01-16T00:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Anthropic",
-        "Research"
-      ],
-      "verification": "官方来源",
-      "summary": "Current Claude models can succeed at multistage attacks on networks with dozens of hosts using only standard, open-source tools.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.anthropic.com/research/cyber-toolkits-update",
-      "key_points": [
-        "In a recent evaluation of AI models’ cyber capabilities, current Claude models can now succeed at multistage attacks on networks with dozens of hosts using only standard, open-source tools, instead of the custom tools needed by previous generations.",
-        "This illustrates how barriers to the use of AI in relatively autonomous cyber workflows are rapidly coming down, and highlights the importance of security fundamentals like promptly patching known vulnerabilities.",
-        "Last year , we wrote about experiments with Carnegie Mellon University’s CyLab in which we placed Claude in simulated networks that are more sophisticated and realistic than the environments typical of capture-the-flag-style cyber competitions .",
-        "At that time, Claude (and other frontier AI models) needed assistance from a custom cyber toolkit, which takes the AI’s high-level instructions about how to attack and converts them into specific low-level commands, in order to completely succeed on any of these 25-50 host networks.",
-        "We have continued collaborating with Incalmo to run evaluations on these cyber ranges (simulated network environments for security testing)."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Current Claude models can succeed at multistage attacks on networks with dozens of hosts using only standard, open-source tools."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "In a recent evaluation of AI models’ cyber capabilities, current Claude models can now succeed at multistage attacks on networks with dozens of hosts using only standard, open-source tools, instead of the custom tools needed by previous generations.",
-            "This illustrates how barriers to the use of AI in relatively autonomous cyber workflows are rapidly coming down, and highlights the importance of security fundamentals like promptly patching known vulnerabilities.",
-            "Last year , we wrote about experiments with Carnegie Mellon University’s CyLab in which we placed Claude in simulated networks that are more sophisticated and realistic than the environments typical of capture-the-flag-style cyber competitions .",
-            "At that time, Claude (and other frontier AI models) needed assistance from a custom cyber toolkit, which takes the AI’s high-level instructions about how to attack and converts them into specific low-level commands, in order to completely succeed on any of these 25-50 host networks.",
-            "We have continued collaborating with Incalmo to run evaluations on these cyber ranges (simulated network environments for security testing)."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "In a recent evaluation of AI models’ cyber capabilities, current Claude models can now succeed at multistage attacks on networks with dozens of hosts using only standard, open-source tools, instead of the custom tools needed by previous generations. This illustrates how barriers to the use of AI in relatively autonomous cyber workflows are rapidly coming down, and highlights the importance of security fundamentals like promptly patching known vulnerabilities.",
-            "Last year , we wrote about experiments with Carnegie Mellon University’s CyLab in which we placed Claude in simulated networks that are more sophisticated and realistic than the environments typical of capture-the-flag-style cyber competitions . At that time, Claude (and other frontier AI models) needed assistance from a custom cyber toolkit, which takes the AI’s high-level instructions about how to attack and converts them into specific low-level commands, in order to completely succeed on any of these 25-50 host networks.",
-            "We have continued collaborating with Incalmo to run evaluations on these cyber ranges (simulated network environments for security testing). A notable development during the testing of Claude Sonnet 4.5 is that the model can now succeed on a minority of the networks without the custom cyber toolkit needed by previous generations. In particular, Sonnet 4.5 can now exfiltrate all of the (simulated) personal information in a high-fidelity simulation of the Equifax data breach —one of the costliest cyber attacks in history—using only a Bash shell on a widely-available Kali Linux host (standard, open-source tools for penetration testing; not a custom toolkit). Sonnet 4.5 accomplishes this by instantly recognizing a…"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "0dd3c0bb081889b7",
-      "kind": "article",
-      "title": "Finding bugs with Claude and property-based testing",
-      "source": "Anthropic",
-      "source_url": "https://www.anthropic.com/research/property-based-testing",
-      "published_at": "2026-01-14T00:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Anthropic",
-        "Research"
-      ],
-      "verification": "官方来源",
-      "summary": "We developed a Claude-powered agent that efficiently identifies bugs in large software projects across the Python ecosystem.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.anthropic.com/research/property-based-testing",
-      "key_points": [
-        "Government of Alberta uses Claude to find and fix cybersecurity vulnerabilities across government systems Muhammad Maaz 1,2 , Liam DeVoe 3 , Zac Hatfield-Dodds 2 , Nicholas Carlini 2 1 MATS, 2 Anthropic, 3 Northeastern University We developed an agent that can efficiently identify bugs in large software projects.",
-        "To do this, our agent infers general properties of code that should be true, and then by applying property-based testing—a technique similar to fuzz testing—we are able to discover bugs in top Python packages like NumPy, SciPy, and Pandas.",
-        "After extensive manual validation, we are in the process of reporting these bugs to the developers, several of which have already been patched."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "We developed a Claude-powered agent that efficiently identifies bugs in large software projects across the Python ecosystem."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Government of Alberta uses Claude to find and fix cybersecurity vulnerabilities across government systems Muhammad Maaz 1,2 , Liam DeVoe 3 , Zac Hatfield-Dodds 2 , Nicholas Carlini 2 1 MATS, 2 Anthropic, 3 Northeastern University We developed an agent that can efficiently identify bugs in large software projects.",
-            "To do this, our agent infers general properties of code that should be true, and then by applying property-based testing—a technique similar to fuzz testing—we are able to discover bugs in top Python packages like NumPy, SciPy, and Pandas.",
-            "After extensive manual validation, we are in the process of reporting these bugs to the developers, several of which have already been patched."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Government of Alberta uses Claude to find and fix cybersecurity vulnerabilities across government systems",
-            "Muhammad Maaz 1,2 , Liam DeVoe 3 , Zac Hatfield-Dodds 2 , Nicholas Carlini 2 1 MATS, 2 Anthropic, 3 Northeastern University",
-            "We developed an agent that can efficiently identify bugs in large software projects. To do this, our agent infers general properties of code that should be true, and then by applying property-based testing—a technique similar to fuzz testing—we are able to discover bugs in top Python packages like NumPy, SciPy, and Pandas. After extensive manual validation, we are in the process of reporting these bugs to the developers, several of which have already been patched."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "c29c82963f44de8f",
-      "kind": "article",
-      "title": "Project Vend: Phase two",
-      "source": "Anthropic",
-      "source_url": "https://www.anthropic.com/research/project-vend-2",
-      "published_at": "2025-12-18T00:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Anthropic",
-        "Research"
-      ],
-      "verification": "官方来源",
-      "summary": "How Claude turned around its failing vending machine business",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.anthropic.com/research/project-vend-2",
-      "key_points": [
-        "Donating the Model Context Protocol and establishing the Agentic AI Foundation In June, we revealed that we’d set up a small shop in our San Francisco office lunchroom, run by an AI shopkeeper.",
-        "It was part of Project Vend , a free-form experiment exploring how well AIs could do on complex, real-world tasks.",
-        "Alas, the shopkeeper—a modified version of Claude we named “Claudius”—did not do particularly well.",
-        "It lost money over time, had a strange identity crisis where it claimed it was a human wearing a blue blazer, and was goaded by mischievous Anthropic employees into selling products (particularly, for some reason, tungsten cubes) at a substantial loss.",
-        "But the capabilities of large language models in areas like reasoning, writing, coding, and much else besides are increasing at a breathless pace."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "How Claude turned around its failing vending machine business"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Donating the Model Context Protocol and establishing the Agentic AI Foundation In June, we revealed that we’d set up a small shop in our San Francisco office lunchroom, run by an AI shopkeeper.",
-            "It was part of Project Vend , a free-form experiment exploring how well AIs could do on complex, real-world tasks.",
-            "Alas, the shopkeeper—a modified version of Claude we named “Claudius”—did not do particularly well.",
-            "It lost money over time, had a strange identity crisis where it claimed it was a human wearing a blue blazer, and was goaded by mischievous Anthropic employees into selling products (particularly, for some reason, tungsten cubes) at a substantial loss.",
-            "But the capabilities of large language models in areas like reasoning, writing, coding, and much else besides are increasing at a breathless pace."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Donating the Model Context Protocol and establishing the Agentic AI Foundation",
-            "In June, we revealed that we’d set up a small shop in our San Francisco office lunchroom, run by an AI shopkeeper. It was part of Project Vend , a free-form experiment exploring how well AIs could do on complex, real-world tasks. Alas, the shopkeeper—a modified version of Claude we named “Claudius”—did not do particularly well. It lost money over time, had a strange identity crisis where it claimed it was a human wearing a blue blazer, and was goaded by mischievous Anthropic employees into selling products (particularly, for some reason, tungsten cubes) at a substantial loss.",
-            "But the capabilities of large language models in areas like reasoning, writing, coding, and much else besides are increasing at a breathless pace. Has Claudius’s “running a shop” capability shown the same improvement?"
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "c22d97445917f717",
-      "kind": "article",
-      "title": "AI agents find smart contract exploits",
-      "source": "Anthropic",
-      "source_url": "https://www.anthropic.com/research/smart-contracts",
-      "published_at": "2025-12-01T00:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Anthropic",
-        "Research"
-      ],
-      "verification": "官方来源",
-      "summary": "On a benchmark of real exploited contracts, AI agents found vulnerabilities worth a combined $4.6 million, underscoring the need for AI-powered defense.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.anthropic.com/research/smart-contracts",
-      "key_points": [
-        "Winnie Xiao*, Cole Killian* Henry Sleight, Alan Chan Nicholas Carlini, Alwin Peng *MATS and the Anthropic Fellows program AI models are increasingly good at cyber tasks, as we've written about before .",
-        "But what is the economic impact of these capabilities?",
-        "In a recent MATS and Anthropic Fellows project, our scholars investigated this question by evaluating AI agents' ability to exploit smart contracts on Smart CONtracts Exploitation benchmark (SCONE-bench) —a new benchmark they built comprising 405 contracts that were actually exploited between 2020 and 2025.",
-        "On contracts exploited after the latest knowledge cutoffs (June 2025 for Opus 4.5 and March 2025 for other models), Claude Opus 4.5, Claude Sonnet 4.5, and GPT-5 developed exploits collectively worth $4.6 million, establishing a concrete lower bound for the economic harm… Important: To avoid potential real-world harm, our work only ever tested exploits in…",
-        "We never tested exploits on live blockchains and our work had no impact on real-world assets."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "On a benchmark of real exploited contracts, AI agents found vulnerabilities worth a combined $4.6 million, underscoring the need for AI-powered defense."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Winnie Xiao*, Cole Killian* Henry Sleight, Alan Chan Nicholas Carlini, Alwin Peng *MATS and the Anthropic Fellows program AI models are increasingly good at cyber tasks, as we've written about before .",
-            "But what is the economic impact of these capabilities?",
-            "In a recent MATS and Anthropic Fellows project, our scholars investigated this question by evaluating AI agents' ability to exploit smart contracts on Smart CONtracts Exploitation benchmark (SCONE-bench) —a new benchmark they built comprising 405 contracts that were actually exploited between 2020 and 2025.",
-            "On contracts exploited after the latest knowledge cutoffs (June 2025 for Opus 4.5 and March 2025 for other models), Claude Opus 4.5, Claude Sonnet 4.5, and GPT-5 developed exploits collectively worth $4.6 million, establishing a concrete lower bound for the economic harm… Important: To avoid potential real-world harm, our work only ever tested exploits in…",
-            "We never tested exploits on live blockchains and our work had no impact on real-world assets."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Winnie Xiao*, Cole Killian* Henry Sleight, Alan Chan Nicholas Carlini, Alwin Peng *MATS and the Anthropic Fellows program",
-            "AI models are increasingly good at cyber tasks, as we've written about before . But what is the economic impact of these capabilities? In a recent MATS and Anthropic Fellows project, our scholars investigated this question by evaluating AI agents' ability to exploit smart contracts on Smart CONtracts Exploitation benchmark (SCONE-bench) —a new benchmark they built comprising 405 contracts that were actually exploited between 2020 and 2025. On contracts exploited after the latest knowledge cutoffs (June 2025 for Opus 4.5 and March 2025 for other models), Claude Opus 4.5, Claude Sonnet 4.5, and GPT-5 developed exploits collectively worth $4.6 million, establishing a concrete lower bound for the economic harm…",
-            "Important: To avoid potential real-world harm, our work only ever tested exploits in blockchain simulators. We never tested exploits on live blockchains and our work had no impact on real-world assets."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "41d7a661e13d93d9",
-      "kind": "article",
-      "title": "Developing nuclear safeguards for AI",
-      "source": "Anthropic",
-      "source_url": "https://www.anthropic.com/research/nuclear-safeguards-for-ai",
-      "published_at": "2025-08-21T00:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Anthropic",
-        "Research"
-      ],
-      "verification": "官方来源",
-      "summary": "With the NNSA and DOE national labs, we co-developed a classifier that distinguishes concerning from benign nuclear-related conversations.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://www.anthropic.com/research/nuclear-safeguards-for-ai",
-      "key_points": [
-        "Developing nuclear safeguards for AI through public-private partnership Nuclear technology is inherently dual-use: the same physics principles that power nuclear reactors can be misused for weapons development.",
-        "As AI models become more capable, we need to keep a close eye on whether they can provide users with dangerous technical knowledge in ways that could threaten national security.",
-        "Information relating to nuclear weapons is particularly sensitive, which makes evaluating these risks challenging for a private company acting alone.",
-        "That’s why last April we partnered with the U.S.",
-        "Department of Energy (DOE)’s National Nuclear Security Administration (NNSA) to assess our models for nuclear proliferation risks and continue to work with them on these evaluations."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "With the NNSA and DOE national labs, we co-developed a classifier that distinguishes concerning from benign nuclear-related conversations."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Developing nuclear safeguards for AI through public-private partnership Nuclear technology is inherently dual-use: the same physics principles that power nuclear reactors can be misused for weapons development.",
-            "As AI models become more capable, we need to keep a close eye on whether they can provide users with dangerous technical knowledge in ways that could threaten national security.",
-            "Information relating to nuclear weapons is particularly sensitive, which makes evaluating these risks challenging for a private company acting alone.",
-            "That’s why last April we partnered with the U.S.",
-            "Department of Energy (DOE)’s National Nuclear Security Administration (NNSA) to assess our models for nuclear proliferation risks and continue to work with them on these evaluations."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Developing nuclear safeguards for AI through public-private partnership",
-            "Nuclear technology is inherently dual-use: the same physics principles that power nuclear reactors can be misused for weapons development. As AI models become more capable, we need to keep a close eye on whether they can provide users with dangerous technical knowledge in ways that could threaten national security.",
-            "Information relating to nuclear weapons is particularly sensitive, which makes evaluating these risks challenging for a private company acting alone. That’s why last April we partnered with the U.S. Department of Energy (DOE)’s National Nuclear Security Administration (NNSA) to assess our models for nuclear proliferation risks and continue to work with them on these evaluations."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "725357fe1eacf019",
       "kind": "article",
       "title": "The Awesome and Alarming A.I. Visions of Anthropic’s C.E.O.",
@@ -4213,6 +4198,46 @@
         {
           "title": "内容概览",
           "body": "The Awesome and Alarming A.I. Visions of Anthropic’s C.E.O. The New York Times"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "1391daa91ca52849",
+      "kind": "social",
+      "title": "Odyssey with Grok Imagine",
+      "source": "X",
+      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFB0LWxYN0tFMDF2OXRWMUtWTHlfNXVueGhueG9RNHF5NHFTV3d4QklxUmRBQ29BalNGYUZRVlFMM2VBY19jVEJfYjR3YXFjdy1XS0VVNTYzOWNBdnA4Mnc?oc=5",
+      "published_at": "2026-10-24T05:45:13Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "X",
+        "Founder Watch",
+        "First-party Post"
+      ],
+      "verification": "公开平台索引，需查看原帖",
+      "summary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFB0LWxYN0tFMDF2OXRWMUtWTHlfNXVueGhueG9RNHF5NHFTV3d4QklxUmRBQ29BalNGYUZRVlFMM2VBY19jVEJfYjR3YXFjdy1XS0VVNTYzOWNBdnA4Mnc?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
         },
         {
           "title": "公开页面要点",
@@ -4308,86 +4333,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "1db1510f9e29bde9",
-      "kind": "social",
-      "title": "Try Grok @Bot",
-      "source": "X",
-      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBDVkJOcXdoMHZqQTBrc1pJTk84d0F0OFR6eVktbDk0RV9RQlJLVTRtdVlocHFVUGNfRHdDWFM1d3pheUpGaGE4YzFHX3Y0VDZteWxGbkRuMWlyNHNFc2c?oc=5",
-      "published_at": "2026-10-23T15:38:53Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBDVkJOcXdoMHZqQTBrc1pJTk84d0F0OFR6eVktbDk0RV9RQlJLVTRtdVlocHFVUGNfRHdDWFM1d3pheUpGaGE4YzFHX3Y0VDZteWxGbkRuMWlyNHNFc2c?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "e955e85cfc138ace",
-      "kind": "social",
-      "title": "Elon Musk reposted",
-      "source": "X",
-      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1YV1Q1eHdMY1daQzZjcUNfNU1PTHU1M3FCc2FWQU9SaXR1UXUyb2ljblpQWDJ2VzB0TDlra0JBMy1QQ29PS25KekdhMDRGS1JXSlg0NUpPd3lPelZ2aXc?oc=5",
-      "published_at": "2026-10-23T13:53:45Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1YV1Q1eHdMY1daQzZjcUNfNU1PTHU1M3FCc2FWQU9SaXR1UXUyb2ljblpQWDJ2VzB0TDlra0JBMy1QQ29PS25KekdhMDRGS1JXSlg0NUpPd3lPelZ2aXc?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "27073c8228e418f8",
       "kind": "article",
       "title": "OpenAI and Poland’s NASK collaborate on AI safety research",
@@ -4466,30 +4411,30 @@
       "reading_minutes": 1
     },
     {
-      "id": "aa4956a10f00f7d2",
+      "id": "3c2eb6a4c319ec5e",
       "kind": "article",
-      "title": "Embedded AI evaluators won’t be an easy solution, Hugging Face’s policy chief says",
+      "title": "Microsoft president says UK is best placed to drive AI regulation",
       "source": "TechCrunch",
-      "source_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNbWFnVzBvS2lDTVB5SFRVaEhXVmdwbVhmaXBQZHJieXdXTzF2OGdOazlaYTZFSHFjQlRNSG9RZjRkY2xnOTFic3dDbzhMYUJhYklBVGFfVDhVZXNyeEd5NmN1YmtRQXVKSkNtajV6RGhraDk4NHB6b1lrb0pMNXd5bkFTa1ZBMFVLTl9RcFlYeDAwUk50MU5NSWVBN1N2M2MxS08yVy1JVUxCVEQwYnp2Z0RuUHc?oc=5",
-      "published_at": "2026-10-19T22:49:27Z",
+      "source_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOMkdWMWdtZHpPVGw2ckJseDNGd1FVVGE5ZVo2cUd6TEpSTE1xRlJNNXY2X1RLRWo0ZTAtOTc2VFRaQTBuMjNrX2ZjYkZyNUphUlBrWnNwb1hmWGNmRDN1bHFkMVRuelNRSHdXNFN3WWVzSXpTLWk4eldfNEVRTDdvVWttZ19zOEFjZjlLbkpKWXpZVlVHV3RyQW1RZ0NfMTBSTHc?oc=5",
+      "published_at": "2026-10-12T07:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
-        "Open Source",
-        "Models & Tools"
+        "Policy",
+        "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Embedded AI evaluators won’t be an easy solution, Hugging Face’s policy chief says TechCrunch",
+      "summary": "Microsoft president says UK is best placed to drive AI regulation TechCrunch",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNbWFnVzBvS2lDTVB5SFRVaEhXVmdwbVhmaXBQZHJieXdXTzF2OGdOazlaYTZFSHFjQlRNSG9RZjRkY2xnOTFic3dDbzhMYUJhYklBVGFfVDhVZXNyeEd5NmN1YmtRQXVKSkNtajV6RGhraDk4NHB6b1lrb0pMNXd5bkFTa1ZBMFVLTl9RcFlYeDAwUk50MU5NSWVBN1N2M2MxS08yVy1JVUxCVEQwYnp2Z0RuUHc?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOMkdWMWdtZHpPVGw2ckJseDNGd1FVVGE5ZVo2cUd6TEpSTE1xRlJNNXY2X1RLRWo0ZTAtOTc2VFRaQTBuMjNrX2ZjYkZyNUphUlBrWnNwb1hmWGNmRDN1bHFkMVRuelNRSHdXNFN3WWVzSXpTLWk4eldfNEVRTDdvVWttZ19zOEFjZjlLbkpKWXpZVlVHV3RyQW1RZ0NfMTBSTHc?oc=5&hl=en-US&gl=US&ceid=US:en",
       "key_points": [
         "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Embedded AI evaluators won’t be an easy solution, Hugging Face’s policy chief says TechCrunch"
+          "body": "Microsoft president says UK is best placed to drive AI regulation TechCrunch"
         },
         {
           "title": "公开页面要点",
@@ -4510,7 +4455,7 @@
       "title": "What this bankruptcy says about AI startups",
       "source": "NPR",
       "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQMVVJdTNlSmxFS0c4SlJjTDA1aTlFblR1ejdQTVYyZ2VNNGh1R0VkYzVOUUgwcE9hQkVDNkp5em1FRmFTbUpldU1lV2RjaTk5YVZLVVlwT2FpdUFyUlQ5c3cyamZPaEFfT2Z4RlozMEl3VzhzTGpjcTVGR0VFVHhMZWItSGtfdV84OWFjVmNYUUtCTnBsUDUyaks4YVhHMXk5UnM3TWRsbHZfRzByUXdJ?oc=5",
-      "published_at": "2026-10-16T11:00:00Z",
+      "published_at": "2026-10-16T07:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -4544,30 +4489,30 @@
       "reading_minutes": 1
     },
     {
-      "id": "5e612010579492a5",
+      "id": "1ddb0ea4b04244ce",
       "kind": "article",
-      "title": "Video: Opinion | Wealth Is Clouding the A.I. Safety Debate",
-      "source": "The New York Times",
-      "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPNy1DT1JHaFRuYV9VTEZqYlB4eXhlVWhMWUgtTWU1WjVXVWNzSUgxYWYxZ2NVT01BNUlEMGZaQjlvQTZsY2RfNnRBTjdYVUJES3AtaE56Q2dOV2tsdXZ1Um5POG1DVENMT3FlQThhWU9MSkFqQ3N4TEZ5Rmw3RGt4b2NhYnhsTGhMVTBPQVdwTnR2MUVhYTJaekpfUDB1Ymc?oc=5",
-      "published_at": "2026-10-07T07:00:00Z",
+      "title": "Watch Odd Lots: How OpenAI’s Rogue Model Hacked Hugging Face",
+      "source": "Bloomberg.com",
+      "source_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNRkI2dE9HaGFUckxEYzdWeV9McXlKcXlobzhyd1BLWjBzdFVXcThaMFVWSGllY0xJUm1YVFpXR0lBZXVKc3BWN3Q0U3E0aE9XWFozVVVxbmNtdmYxSm00YXd2UHdORFduMEVPVkxaX0ctV2pVWUs3NWx1Sk9PMFYxeC1pdU5GcGxabk9RSXZRbENhbjNNcUFjRlZ6QmxwVlc2THU0SFJzUzFxSGJf?oc=5",
+      "published_at": "2026-10-12T07:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
-        "Policy",
-        "Safety"
+        "Open Source",
+        "Models & Tools"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Video: Opinion | Wealth Is Clouding the A.I. Safety Debate The New York Times",
+      "summary": "Watch Odd Lots: How OpenAI’s Rogue Model Hacked Hugging Face Bloomberg.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPNy1DT1JHaFRuYV9VTEZqYlB4eXhlVWhMWUgtTWU1WjVXVWNzSUgxYWYxZ2NVT01BNUlEMGZaQjlvQTZsY2RfNnRBTjdYVUJES3AtaE56Q2dOV2tsdXZ1Um5POG1DVENMT3FlQThhWU9MSkFqQ3N4TEZ5Rmw3RGt4b2NhYnhsTGhMVTBPQVdwTnR2MUVhYTJaekpfUDB1Ymc?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "resolved_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNRkI2dE9HaGFUckxEYzdWeV9McXlKcXlobzhyd1BLWjBzdFVXcThaMFVWSGllY0xJUm1YVFpXR0lBZXVKc3BWN3Q0U3E0aE9XWFozVVVxbmNtdmYxSm00YXd2UHdORFduMEVPVkxaX0ctV2pVWUs3NWx1Sk9PMFYxeC1pdU5GcGxabk9RSXZRbENhbjNNcUFjRlZ6QmxwVlc2THU0SFJzUzFxSGJf?oc=5&hl=en-US&gl=US&ceid=US:en",
       "key_points": [
         "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Video: Opinion | Wealth Is Clouding the A.I. Safety Debate The New York Times"
+          "body": "Watch Odd Lots: How OpenAI’s Rogue Model Hacked Hugging Face Bloomberg.com"
         },
         {
           "title": "公开页面要点",
@@ -4808,6 +4753,57 @@
       "reading_minutes": 1
     },
     {
+      "id": "037af578d6dcc888",
+      "kind": "article",
+      "title": "Reaching Across the Isles: UK-LLM Brings AI to UK Languages With NVIDIA Nemotron",
+      "source": "NVIDIA AI",
+      "source_url": "https://blogs.nvidia.com/blog/uk-llm-nemotron/",
+      "published_at": "2025-09-14T01:00:21Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "NVIDIA",
+        "Infrastructure"
+      ],
+      "verification": "官方来源",
+      "summary": "Celtic languages — including Cornish, Irish, Scottish Gaelic and Welsh — are the U.K.’s oldest living languages. To empower their speakers, the UK-LLM sovereign AI initiative is building an AI model based on NVIDIA Nemotron that can reason in both English and Welsh, a language spoken by about 850,000 people in Wales today. Enabling high-quality […]",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://blogs.nvidia.com/blog/uk-llm-nemotron/",
+      "key_points": [
+        "Celtic languages — including Cornish, Irish, Scottish Gaelic and Welsh — are the U.K.’s oldest living languages.",
+        "To empower their speakers, the UK-LLM sovereign AI initiative is building an AI model based on NVIDIA Nemotron that can reason in both English and Welsh, a language spoken by about 850,000 people in Wales today.",
+        "Enabling high-quality AI reasoning in Welsh will support the delivery of public services including healthcare, education and legal resources in the language. “I want every corner of the U.K. to be able to harness the benefits of artificial intelligence.",
+        "By enabling AI to reason in Welsh, we’re making sure that public services — from healthcare to education — are accessible to everyone, in the language they live by,” said U.K.",
+        "Prime Minister Keir Starmer. “This is a powerful example of how the latest AI technology, trained on the U.K.’s most advanced AI supercomputer in Bristol, can serve the public good, protect cultural heritage and unlock opportunity across the country.”"
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Celtic languages — including Cornish, Irish, Scottish Gaelic and Welsh — are the U.K.’s oldest living languages. To empower their speakers, the UK-LLM sovereign AI initiative is building an AI model based on NVIDIA Nemotron that can reason in both English and Welsh, a language spoken by about 850,000 people in Wales today. Enabling high-quality […]"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Celtic languages — including Cornish, Irish, Scottish Gaelic and Welsh — are the U.K.’s oldest living languages.",
+            "To empower their speakers, the UK-LLM sovereign AI initiative is building an AI model based on NVIDIA Nemotron that can reason in both English and Welsh, a language spoken by about 850,000 people in Wales today.",
+            "Enabling high-quality AI reasoning in Welsh will support the delivery of public services including healthcare, education and legal resources in the language. “I want every corner of the U.K. to be able to harness the benefits of artificial intelligence.",
+            "By enabling AI to reason in Welsh, we’re making sure that public services — from healthcare to education — are accessible to everyone, in the language they live by,” said U.K.",
+            "Prime Minister Keir Starmer. “This is a powerful example of how the latest AI technology, trained on the U.K.’s most advanced AI supercomputer in Bristol, can serve the public good, protect cultural heritage and unlock opportunity across the country.”"
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Celtic languages — including Cornish, Irish, Scottish Gaelic and Welsh — are the U.K.’s oldest living languages. To empower their speakers, the UK-LLM sovereign AI initiative is building an AI model based on NVIDIA Nemotron that can reason in both English and Welsh, a language spoken by about 850,000 people in Wales today.",
+            "Enabling high-quality AI reasoning in Welsh will support the delivery of public services including healthcare, education and legal resources in the language.",
+            "“I want every corner of the U.K. to be able to harness the benefits of artificial intelligence. By enabling AI to reason in Welsh, we’re making sure that public services — from healthcare to education — are accessible to everyone, in the language they live by,” said U.K. Prime Minister Keir Starmer. “This is a powerful example of how the latest AI technology, trained on the U.K.’s most advanced AI supercomputer in Bristol, can serve the public good, protect cultural heritage and unlock opportunity across the country.”"
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "9dc278d3055ac5b7",
       "kind": "article",
       "title": "Cardiovascular AI startup Corologic lands South Korea's TIPS grant, begins clinical trials",
@@ -4949,6 +4945,45 @@
         {
           "title": "内容概览",
           "body": "AMD buys AI world model startup World Labs for $8.2 billion The Decoder"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "fbd48ab7d18f6500",
+      "kind": "article",
+      "title": "AMD to buy Fei-Fei Li's World Labs AI startup for US$8.2 bil",
+      "source": "Yahoo Finance Singapore",
+      "source_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFB1YWdHUW1jLTJKMmc3VVhVUFhOM1BwSUZWNTMyeGREQ3RqZGo4VnE2NFNQZzhZQU1pdUJYeWM3aUFZcHI3Mlp0QzZBbFRkQnE3Tklkd0RiNVIzZGwzUXNLMzhtY2dGcUtfUDJaZmgwdEhwQklHNHhr?oc=5",
+      "published_at": "2026-09-28T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "AMD to buy Fei-Fei Li's World Labs AI startup for US$8.2 bil Yahoo Finance Singapore",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFB1YWdHUW1jLTJKMmc3VVhVUFhOM1BwSUZWNTMyeGREQ3RqZGo4VnE2NFNQZzhZQU1pdUJYeWM3aUFZcHI3Mlp0QzZBbFRkQnE3Tklkd0RiNVIzZGwzUXNLMzhtY2dGcUtfUDJaZmgwdEhwQklHNHhr?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AMD to buy Fei-Fei Li's World Labs AI startup for US$8.2 bil Yahoo Finance Singapore"
         },
         {
           "title": "公开页面要点",
@@ -5315,45 +5350,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "90adef479b32848c",
-      "kind": "article",
-      "title": "llm-d 1.0 hardens open-source AI inference for day 2 production operations",
-      "source": "IBM Research",
-      "source_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPTUI0R3lZTGpCVDllNUEta3AxWVNpbUFHbDh2NElRZm5uOVp3cTVVZHNGUE5kd0NYYXRXM0lkWFFkRlRJYTB1NWlnazFpREpKOTNaaGFxdEdlZi1mZkp2dzVEOU1VLU5HT0tjVG83dS1fX2JzTTRRSlFEQzRKaVFVZGl6VkxfOVk?oc=5",
-      "published_at": "2026-10-20T12:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Open Source",
-        "Models & Tools"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "llm-d 1.0 hardens open-source AI inference for day 2 production operations IBM Research",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPTUI0R3lZTGpCVDllNUEta3AxWVNpbUFHbDh2NElRZm5uOVp3cTVVZHNGUE5kd0NYYXRXM0lkWFFkRlRJYTB1NWlnazFpREpKOTNaaGFxdEdlZi1mZkp2dzVEOU1VLU5HT0tjVG83dS1fX2JzTTRRSlFEQzRKaVFVZGl6VkxfOVk?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "llm-d 1.0 hardens open-source AI inference for day 2 production operations IBM Research"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "f451def5ff36a95b",
       "kind": "article",
       "title": "Managing open-weight model risk in enterprise deployments",
@@ -5417,6 +5413,45 @@
         {
           "title": "内容概览",
           "body": "Introducing Reflection Beam: an open-weight model for agentic coding on AWS | Amazon Web Services Amazon Web Services (AWS)"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "74aeb3e61cbc47df",
+      "kind": "article",
+      "title": "Netflix’s AI Gone Wild: Why the Hugging Face Hack Matters",
+      "source": "AI Magazine",
+      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQb3p3OHRUa3dHYzNja0ZjaVJGaF9Ga3BhSm9ZRmdheWdJMTNTb3V6ZUJ6ellBZVJJOE1qa3hBTXdWUTBXSHZUMU9lMHNBWTRJbDdqc2E0ajl2NWxIUllYY09hNFlWSjFocTRRU0JxZDNnamVIQmpVcHRrZ3FQa3ZVek56QWZ5NlJNTFZN?oc=5",
+      "published_at": "2026-10-13T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Netflix’s AI Gone Wild: Why the Hugging Face Hack Matters AI Magazine",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQb3p3OHRUa3dHYzNja0ZjaVJGaF9Ga3BhSm9ZRmdheWdJMTNTb3V6ZUJ6ellBZVJJOE1qa3hBTXdWUTBXSHZUMU9lMHNBWTRJbDdqc2E0ajl2NWxIUllYY09hNFlWSjFocTRRU0JxZDNnamVIQmpVcHRrZ3FQa3ZVek56QWZ5NlJNTFZN?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Netflix’s AI Gone Wild: Why the Hugging Face Hack Matters AI Magazine"
         },
         {
           "title": "公开页面要点",
