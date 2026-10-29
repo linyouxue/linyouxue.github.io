@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-28T22:31:54Z",
-  "record_count": 130,
+  "generated_at": "2026-10-29T05:43:21Z",
+  "record_count": 131,
   "records": [
     {
       "id": "jacobian-fable-20260720",
@@ -107,6 +107,41 @@
       "reading_minutes": 1
     },
     {
+      "id": "unit-distance-openai-20260520",
+      "kind": "paper",
+      "title": "OpenAI 模型推翻平面单位距离问题中的长期猜想",
+      "source": "OpenAI · Research",
+      "source_url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+      "published_at": "2026-05-20T08:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Unit Distance",
+        "Discrete Geometry",
+        "Verified Proof"
+      ],
+      "verification": "官方论文 · 外部数学家已检查",
+      "summary": "OpenAI 的通用推理模型找到一族新的点集构造，证明单位距离对数可以达到 n 的 1+δ 次方，从而推翻长期流行的 n 的 1+o(1) 上界猜想。证明已由外部数学家检查，并有公开证明 PDF 与多位数学家的伴随评论。",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/unit-distance-openai-20260520.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf",
+      "key_points": [
+        "Planar Point Sets with Many Unit Distances OpenAI Abstract For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets.",
+        "We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n.",
+        "This disproves the well-known unit distance conjecture from [ Erd46].",
+        "The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely.",
+        "After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets. We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n. This disproves the well-known unit distance conjecture from [ Erd46]. The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely. After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1. Golod–Shafarevich theory ensures existence of an inﬁnite such tower, even after a quotient step making the prescribed Frobenius classes trivial. A crucial property of the construction is that all resulting discriminants and class numbers are at most exponential in the extension degree. 1 Main Result For a ﬁnite set P ⊂ R2, let ν(P ) = # {{x,y } ⊂ P : |x −y| = 1} andν(n) = max |P |=nν(P ). The planar unit-distance problem goes back to Erdős [ Erd46], who conjectured that there should be an absolute constant C such that, for all suﬃciently large n, ν(n) ≤n1+C/ log logn. (1) The same 1946 paper also introduced the distinct-distances problem, later resolved up to logarithmic factors by Guth–Katz [ GK15]. An elementary upper bound is ν(n) = O(n3/2): the Euclidean unit-distance graph is K2,3-free, since two unit circles meet in at most two points, and the Kővári–Sós–Turán theorem applies [ KST54]. The best known upper bound ν(n) = O(n4/3) is due to Spencer–Szemerédi–Trotter [ SST84]; Székely later gave a short crossing-number proof of this incidence bound [ Sze97]. It is useful to compare this with the same question for other norms on R2, a direction studied systematically by Brass [ Bra96]. If the unit ball has a ﬂat segment, one can arrange quadratically many unit distances, so the interesting normed-plane analogues usually impose strict convexity or genericity. Székely’s crossing-number argument extends to strictly convex norms, again giving O(n4/3), and Valtr constructed a strictly convex norm for which this exponent is attained…"
+        }
+      ],
+      "reading_minutes": 32
+    },
+    {
       "id": "7e5ba917980fe86d",
       "kind": "article",
       "title": "Working with academic communities to build scientific understanding",
@@ -145,41 +180,6 @@
         }
       ],
       "reading_minutes": 1
-    },
-    {
-      "id": "unit-distance-openai-20260520",
-      "kind": "paper",
-      "title": "OpenAI 模型推翻平面单位距离问题中的长期猜想",
-      "source": "OpenAI · Research",
-      "source_url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
-      "published_at": "2026-05-20T08:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Unit Distance",
-        "Discrete Geometry",
-        "Verified Proof"
-      ],
-      "verification": "官方论文 · 外部数学家已检查",
-      "summary": "OpenAI 的通用推理模型找到一族新的点集构造，证明单位距离对数可以达到 n 的 1+δ 次方，从而推翻长期流行的 n 的 1+o(1) 上界猜想。证明已由外部数学家检查，并有公开证明 PDF 与多位数学家的伴随评论。",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/unit-distance-openai-20260520.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf",
-      "key_points": [
-        "Planar Point Sets with Many Unit Distances OpenAI Abstract For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets.",
-        "We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n.",
-        "This disproves the well-known unit distance conjecture from [ Erd46].",
-        "The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely.",
-        "After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets. We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n. This disproves the well-known unit distance conjecture from [ Erd46]. The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely. After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1. Golod–Shafarevich theory ensures existence of an inﬁnite such tower, even after a quotient step making the prescribed Frobenius classes trivial. A crucial property of the construction is that all resulting discriminants and class numbers are at most exponential in the extension degree. 1 Main Result For a ﬁnite set P ⊂ R2, let ν(P ) = # {{x,y } ⊂ P : |x −y| = 1} andν(n) = max |P |=nν(P ). The planar unit-distance problem goes back to Erdős [ Erd46], who conjectured that there should be an absolute constant C such that, for all suﬃciently large n, ν(n) ≤n1+C/ log logn. (1) The same 1946 paper also introduced the distinct-distances problem, later resolved up to logarithmic factors by Guth–Katz [ GK15]. An elementary upper bound is ν(n) = O(n3/2): the Euclidean unit-distance graph is K2,3-free, since two unit circles meet in at most two points, and the Kővári–Sós–Turán theorem applies [ KST54]. The best known upper bound ν(n) = O(n4/3) is due to Spencer–Szemerédi–Trotter [ SST84]; Székely later gave a short crossing-number proof of this incidence bound [ Sze97]. It is useful to compare this with the same question for other norms on R2, a direction studied systematically by Brass [ Bra96]. If the unit ball has a ﬂat segment, one can arrange quadratically many unit distances, so the interesting normed-plane analogues usually impose strict convexity or genericity. Székely’s crossing-number argument extends to strictly convex norms, again giving O(n4/3), and Valtr constructed a strictly convex norm for which this exponent is attained…"
-        }
-      ],
-      "reading_minutes": 32
     },
     {
       "id": "81aac3f62c43b5c7",
@@ -636,6 +636,55 @@
       "reading_minutes": 1
     },
     {
+      "id": "02481470c266a9aa",
+      "kind": "article",
+      "title": "AI for Science expands to foundations and institutions",
+      "source": "Anthropic",
+      "source_url": "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions",
+      "published_at": "2026-10-28T00:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Anthropic",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "We’re highlighting 20 scientific foundations, institutions, and research groups from around the world that we’ve partnered with in an expansion of our AI for Science program.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions",
+      "key_points": [
+        "We’re highlighting 20 scientific foundations, institutions, and research groups from around the world that we’ve partnered with in an expansion of our AI for Science program , which gives free Claude credits to researchers working on high-impact scientific projects.",
+        "We started the AI for Science program in May 2025 with the belief that AI could significantly speed up scientific progress.",
+        "Our goal is to increase access to AI tools and resources to enable researchers to deepen and expand their own scientific work. (Over the last few months, we’ve also launched our discounted Team plan for scientists and have supported hundreds of projects across biology, medicine, physics, chemistry, climate science, and mathematics.) Scientists have told us…",
+        "With scientists at the center of this transformation, the field is setting the questions and developing the research projects that will help us tackle some of humanity’s toughest problems."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "We’re highlighting 20 scientific foundations, institutions, and research groups from around the world that we’ve partnered with in an expansion of our AI for Science program."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "We’re highlighting 20 scientific foundations, institutions, and research groups from around the world that we’ve partnered with in an expansion of our AI for Science program , which gives free Claude credits to researchers working on high-impact scientific projects.",
+            "We started the AI for Science program in May 2025 with the belief that AI could significantly speed up scientific progress.",
+            "Our goal is to increase access to AI tools and resources to enable researchers to deepen and expand their own scientific work. (Over the last few months, we’ve also launched our discounted Team plan for scientists and have supported hundreds of projects across biology, medicine, physics, chemistry, climate science, and mathematics.) Scientists have told us…",
+            "With scientists at the center of this transformation, the field is setting the questions and developing the research projects that will help us tackle some of humanity’s toughest problems."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "We’re highlighting 20 scientific foundations, institutions, and research groups from around the world that we’ve partnered with in an expansion of our AI for Science program , which gives free Claude credits to researchers working on high-impact scientific projects.",
+            "We started the AI for Science program in May 2025 with the belief that AI could significantly speed up scientific progress. Our goal is to increase access to AI tools and resources to enable researchers to deepen and expand their own scientific work. (Over the last few months, we’ve also launched our discounted Team plan for scientists and have supported hundreds of projects across biology, medicine, physics, chemistry, climate science, and mathematics.)",
+            "Scientists have told us that they’re working with Claude to generate hypotheses, design experiments, swiftly analyze complex data, and communicate findings. With scientists at the center of this transformation, the field is setting the questions and developing the research projects that will help us tackle some of humanity’s toughest problems."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "7dc73ec1eb4a3613",
       "kind": "article",
       "title": "Genie 4: A new generation of world simulation",
@@ -998,48 +1047,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "ec4f1ef7bbdbbcfe",
-      "kind": "article",
-      "title": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
-      "source": "OpenAI",
-      "source_url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
-      "published_at": "2026-10-26T13:45:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "OpenAI",
-        "Official"
-      ],
-      "verification": "官方来源",
-      "summary": "CodeRabbit uses GPT-6.1 Sol to investigate security risks across complex codebases. Its security agent helps developers review findings and proposed fixes.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "summary-only",
-      "fetch_note": "HTTP Error 403: Forbidden",
-      "resolved_url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
-      "key_points": [
-        "CodeRabbit uses GPT-6.1 Sol to investigate security risks across complex codebases.",
-        "Its security agent helps developers review findings and proposed fixes."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "CodeRabbit uses GPT-6.1 Sol to investigate security risks across complex codebases. Its security agent helps developers review findings and proposed fixes."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "CodeRabbit uses GPT-6.1 Sol to investigate security risks across complex codebases.",
-            "Its security agent helps developers review findings and proposed fixes."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "rhb-icml-2026",
       "kind": "paper",
       "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
@@ -1083,6 +1090,48 @@
         }
       ],
       "reading_minutes": 46
+    },
+    {
+      "id": "ec4f1ef7bbdbbcfe",
+      "kind": "article",
+      "title": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
+      "source": "OpenAI",
+      "source_url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
+      "published_at": "2026-10-26T13:45:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "OpenAI",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "CodeRabbit uses GPT-6.1 Sol to investigate security risks across complex codebases. Its security agent helps developers review findings and proposed fixes.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "summary-only",
+      "fetch_note": "HTTP Error 403: Forbidden",
+      "resolved_url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
+      "key_points": [
+        "CodeRabbit uses GPT-6.1 Sol to investigate security risks across complex codebases.",
+        "Its security agent helps developers review findings and proposed fixes."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "CodeRabbit uses GPT-6.1 Sol to investigate security risks across complex codebases. Its security agent helps developers review findings and proposed fixes."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "CodeRabbit uses GPT-6.1 Sol to investigate security risks across complex codebases.",
+            "Its security agent helps developers review findings and proposed fixes."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
     },
     {
       "id": "13feb31babe1a17d",
@@ -1223,57 +1272,6 @@
         {
           "title": "原文短摘录",
           "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "974c9e9820541901",
-      "kind": "article",
-      "title": "Accelerating the search for antimicrobial peptides with Google Antigravity",
-      "source": "Google DeepMind",
-      "source_url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
-      "published_at": "2026-10-15T16:08:03Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "DeepMind",
-        "Official"
-      ],
-      "verification": "官方来源",
-      "summary": "Accelerating the search for novel antimicrobial peptides using Google Antigravity for Science.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
-      "key_points": [
-        "Bileschi, Zoi Tsangalidou, Sukhdeep Singh and Lucy J.",
-        "Colwell New antibiotics are urgently needed to help with rising levels of antimicrobial resistance, but searching for new therapeutics is often a slow, labor-intensive process.",
-        "With Google Antigravity, our agentic development platform, this process can now be made easier.",
-        "Google Antigravity provides an agentic science workbench that empowers biologists to discover, structurally evaluate, and prioritize promising targets quickly, compressing what used to be a fragmented search over multiple databases into a single session.",
-        "It also helps researchers scan through millions of previously uncharacterized proteins in the UniProt database using ProtNLM, a model that predicts biological function from amino acid sequences."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Accelerating the search for novel antimicrobial peptides using Google Antigravity for Science."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Bileschi, Zoi Tsangalidou, Sukhdeep Singh and Lucy J.",
-            "Colwell New antibiotics are urgently needed to help with rising levels of antimicrobial resistance, but searching for new therapeutics is often a slow, labor-intensive process.",
-            "With Google Antigravity, our agentic development platform, this process can now be made easier.",
-            "Google Antigravity provides an agentic science workbench that empowers biologists to discover, structurally evaluate, and prioritize promising targets quickly, compressing what used to be a fragmented search over multiple databases into a single session.",
-            "It also helps researchers scan through millions of previously uncharacterized proteins in the UniProt database using ProtNLM, a model that predicts biological function from amino acid sequences."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Pengfei Tian, Maxwell L. Bileschi, Zoi Tsangalidou, Sukhdeep Singh and Lucy J. Colwell",
-            "New antibiotics are urgently needed to help with rising levels of antimicrobial resistance, but searching for new therapeutics is often a slow, labor-intensive process. With Google Antigravity, our agentic development platform, this process can now be made easier.",
-            "Google Antigravity provides an agentic science workbench that empowers biologists to discover, structurally evaluate, and prioritize promising targets quickly, compressing what used to be a fragmented search over multiple databases into a single session. It also helps researchers scan through millions of previously uncharacterized proteins in the UniProt database using ProtNLM, a model that predicts biological function from amino acid sequences."
-          ]
         }
       ],
       "reading_minutes": 1
@@ -2127,55 +2125,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "d0c777d088b738a0",
-      "kind": "article",
-      "title": "Our newest AI Quest: Mapping the human brain",
-      "source": "Google AI",
-      "source_url": "https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks/",
-      "published_at": "2026-10-26T16:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Google",
-        "Official"
-      ],
-      "verification": "官方来源",
-      "summary": "An illustration of a planet rotating to show various cartoon figures waving. At the top is the text \"AI Quests\"",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks/",
-      "key_points": [
-        "Our third lesson in our AI Quests series, “Polar Peaks,” teaches students key AI literacy skills while delving into neuroscience.",
-        "Google Research and the Stanford Accelerator for Learning just launched \"Polar Peaks,\" an interactive quest that teaches students ages 11 to 14 how to map the human brain using artificial intelligence.",
-        "This program helps students practice data cleaning and model testing while emphasizing the need for human oversight in technology.",
-        "You can access new teacher training modules through the Google AI Educator Series to help bring these lessons into your classroom. \"Our newest AI Quest: Mapping the human brain\" teaches students how AI works responsibly."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "An illustration of a planet rotating to show various cartoon figures waving. At the top is the text \"AI Quests\""
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Our third lesson in our AI Quests series, “Polar Peaks,” teaches students key AI literacy skills while delving into neuroscience.",
-            "Google Research and the Stanford Accelerator for Learning just launched \"Polar Peaks,\" an interactive quest that teaches students ages 11 to 14 how to map the human brain using artificial intelligence.",
-            "This program helps students practice data cleaning and model testing while emphasizing the need for human oversight in technology.",
-            "You can access new teacher training modules through the Google AI Educator Series to help bring these lessons into your classroom. \"Our newest AI Quest: Mapping the human brain\" teaches students how AI works responsibly."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Our third lesson in our AI Quests series, “Polar Peaks,” teaches students key AI literacy skills while delving into neuroscience.",
-            "Google Research and the Stanford Accelerator for Learning just launched \"Polar Peaks,\" an interactive quest that teaches students ages 11 to 14 how to map the human brain using artificial intelligence. This program helps students practice data cleaning and model testing while emphasizing the need for human oversight in technology. You can access new teacher training modules through the Google AI Educator Series to help bring these lessons into your classroom.",
-            "\"Our newest AI Quest: Mapping the human brain\" teaches students how AI works responsibly."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "8fe3dbb1d8a49923",
       "kind": "article",
       "title": "月之暗面 发布 了 Kimi K3.1Pro,权重压到11月4日",
@@ -2776,41 +2725,50 @@
       "reading_minutes": 1
     },
     {
-      "id": "cc6abc9649d13508",
+      "id": "d0c777d088b738a0",
       "kind": "article",
-      "title": "The rise of agentic AI in drug discovery from static tools to autonomous virtual scientists",
-      "source": "Nature",
-      "source_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE0zSnZwRjUwY0RlYnYyam9sYnVTYTgzUmNlOUJNdmFmU2FyQTlQRE1raGliWksxcVZ5QVpYbE9wM0JQQ0RTUUN6YmN2T201c2ZaTk9GMzFVRHBKWElSWlpB?oc=5",
-      "published_at": "2026-10-12T07:00:00Z",
+      "title": "Our newest AI Quest: Mapping the human brain",
+      "source": "Google AI",
+      "source_url": "https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks/",
+      "published_at": "2026-10-26T16:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
+        "Google",
+        "Official"
       ],
-      "verification": "媒体或公开网页",
-      "summary": "The rise of agentic AI in drug discovery from static tools to autonomous virtual scientists Nature",
+      "verification": "官方来源",
+      "summary": "An illustration of a planet rotating to show various cartoon figures waving. At the top is the text \"AI Quests\"",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE0zSnZwRjUwY0RlYnYyam9sYnVTYTgzUmNlOUJNdmFmU2FyQTlQRE1raGliWksxcVZ5QVpYbE9wM0JQQ0RTUUN6YmN2T201c2ZaTk9GMzFVRHBKWElSWlpB?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "resolved_url": "https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks/",
       "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+        "Our third lesson in our AI Quests series, “Polar Peaks,” teaches students key AI literacy skills while delving into neuroscience.",
+        "Google Research and the Stanford Accelerator for Learning just launched \"Polar Peaks,\" an interactive quest that teaches students ages 11 to 14 how to map the human brain using artificial intelligence.",
+        "This program helps students practice data cleaning and model testing while emphasizing the need for human oversight in technology.",
+        "You can access new teacher training modules through the Google AI Educator Series to help bring these lessons into your classroom. \"Our newest AI Quest: Mapping the human brain\" teaches students how AI works responsibly."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "The rise of agentic AI in drug discovery from static tools to autonomous virtual scientists Nature"
+          "body": "An illustration of a planet rotating to show various cartoon figures waving. At the top is the text \"AI Quests\""
         },
         {
           "title": "公开页面要点",
           "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+            "Our third lesson in our AI Quests series, “Polar Peaks,” teaches students key AI literacy skills while delving into neuroscience.",
+            "Google Research and the Stanford Accelerator for Learning just launched \"Polar Peaks,\" an interactive quest that teaches students ages 11 to 14 how to map the human brain using artificial intelligence.",
+            "This program helps students practice data cleaning and model testing while emphasizing the need for human oversight in technology.",
+            "You can access new teacher training modules through the Google AI Educator Series to help bring these lessons into your classroom. \"Our newest AI Quest: Mapping the human brain\" teaches students how AI works responsibly."
           ]
         },
         {
           "title": "原文短摘录",
-          "paragraphs": []
+          "paragraphs": [
+            "Our third lesson in our AI Quests series, “Polar Peaks,” teaches students key AI literacy skills while delving into neuroscience.",
+            "Google Research and the Stanford Accelerator for Learning just launched \"Polar Peaks,\" an interactive quest that teaches students ages 11 to 14 how to map the human brain using artificial intelligence. This program helps students practice data cleaning and model testing while emphasizing the need for human oversight in technology. You can access new teacher training modules through the Google AI Educator Series to help bring these lessons into your classroom.",
+            "\"Our newest AI Quest: Mapping the human brain\" teaches students how AI works responsibly."
+          ]
         }
       ],
       "reading_minutes": 1
@@ -3449,6 +3407,46 @@
       "reading_minutes": 1
     },
     {
+      "id": "bcc20877783bd6f2",
+      "kind": "article",
+      "title": "OpenAI said its AI cracked major problems in math, computing, and physics",
+      "source": "Quartz",
+      "source_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBCdWcxMHFYTVprV0s3ckc3R0ZrMHJpbjI0RVJ3V3kwSE84bXVHbXUtSkdWX1ZoRFlVMUwzMTlQV1Nocm9pa2pMaE1xN3NZcVU3UnBIM24ySDB0YXo4YlhPUXduTE1Fbk5pdTZiSm5BOGdDemNfVDZaZ19mUVZ0UQ?oc=5",
+      "published_at": "2026-10-27T12:12:10Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "OpenAI said its AI cracked major problems in math, computing, and physics Quartz",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBCdWcxMHFYTVprV0s3ckc3R0ZrMHJpbjI0RVJ3V3kwSE84bXVHbXUtSkdWX1ZoRFlVMUwzMTlQV1Nocm9pa2pMaE1xN3NZcVU3UnBIM24ySDB0YXo4YlhPUXduTE1Fbk5pdTZiSm5BOGdDemNfVDZaZ19mUVZ0UQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "OpenAI said its AI cracked major problems in math, computing, and physics Quartz"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "9597b6bcc54c2be5",
       "kind": "article",
       "title": "The latest AI news we announced in September 2026",
@@ -3689,46 +3687,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "2fc2de7a2e3125c3",
-      "kind": "article",
-      "title": "AI-Generated Evidence in Drug Discovery: Reliability, Legal Risk & FDA Compliance",
-      "source": "Crowell & Moring LLP",
-      "source_url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPXzNkV2c5dk43d1d5alhkOW9BbkJyY2h1VHNEd283dVJZdEc5dGhqbkpjNU1jUHpjXzZDRk5PTndtUmtUZ0hIVWxuRmlLMzN5OGczVlB4b1dWZDloMkV2eWc5ZEJVRkRvNkZ3MXYyOC1QMFRqTWJzTUZkVUl6cHJ1VVVyMk9TZ0xDOGs5eGRMWFVCWFZHUF9TLWJfMnhSbGNrSVVyWWJicGtNT3BvQmRJYlFGT1pkTVJuQWlITUg5MHRKMlRtREprc2xBTEZ2Wno3NU5yQlhYZGNrd3I3bzFlY2NhQWZtazhrWW1nbktxTlNDakE?oc=5",
-      "published_at": "2026-10-21T23:47:03Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "AI-Generated Evidence in Drug Discovery: Reliability, Legal Risk & FDA Compliance Crowell & Moring LLP",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPXzNkV2c5dk43d1d5alhkOW9BbkJyY2h1VHNEd283dVJZdEc5dGhqbkpjNU1jUHpjXzZDRk5PTndtUmtUZ0hIVWxuRmlLMzN5OGczVlB4b1dWZDloMkV2eWc5ZEJVRkRvNkZ3MXYyOC1QMFRqTWJzTUZkVUl6cHJ1VVVyMk9TZ0xDOGs5eGRMWFVCWFZHUF9TLWJfMnhSbGNrSVVyWWJicGtNT3BvQmRJYlFGT1pkTVJuQWlITUg5MHRKMlRtREprc2xBTEZ2Wno3NU5yQlhYZGNrd3I3bzFlY2NhQWZtazhrWW1nbktxTlNDakE?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "AI-Generated Evidence in Drug Discovery: Reliability, Legal Risk & FDA Compliance Crowell & Moring LLP"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "973b869910bc732b",
       "kind": "article",
       "title": "AI is shaking up the field of mathematics. But what comes next?",
@@ -3754,6 +3712,136 @@
         {
           "title": "内容概览",
           "body": "AI is shaking up the field of mathematics. But what comes next? NPR"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "465be74f8ecf6736",
+      "kind": "article",
+      "title": "AI designs functional enzyme components that could help expand drug discovery",
+      "source": "Phys.org",
+      "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBydGlVckdMbzRHWWpUOGtuSjZFZHJXbHFNVThiV2p6T1NyTzRxLVI2WmFHeUpJUEJNY21td3ZGQmZ4emljQ2NqdUlDUGlDN3lRdE9mdk1PSGFrcXExbktuX25FY25wTnBjWFd0VG1veWZSekVoTnJyOFBmYw?oc=5",
+      "published_at": "2026-10-21T20:20:14Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "AI designs functional enzyme components that could help expand drug discovery Phys.org",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBydGlVckdMbzRHWWpUOGtuSjZFZHJXbHFNVThiV2p6T1NyTzRxLVI2WmFHeUpJUEJNY21td3ZGQmZ4emljQ2NqdUlDUGlDN3lRdE9mdk1PSGFrcXExbktuX25FY25wTnBjWFd0VG1veWZSekVoTnJyOFBmYw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AI designs functional enzyme components that could help expand drug discovery Phys.org"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "25c3f7b3a6fe47e8",
+      "kind": "article",
+      "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "source": "Google AI",
+      "source_url": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
+      "published_at": "2026-09-28T19:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Google",
+        "Official"
+      ],
+      "verification": "官方来源",
+      "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
+      "key_points": [
+        "Earlier this year, we partnered with XPRIZE and Range Media Partners to launch the Future Vision XPRIZE, a global competition calling for films that envision a hopeful, technology-enabled future.",
+        "Last week in Los Angeles, independent filmmaker Jeff Synthesized was named the grand prize winner for The Gifted .",
+        "Inspired by a deeply personal story, the film centers on an 11-year-old boy who recreates his late mother’s voice and essence out of love and code.",
+        "What emerges across the town’s networks quietly cares for his entire community — reflecting the filmmaker’s belief that technology’s greatest promise lies in empathy and human connection.",
+        "Chosen from more than 2,500 entries worldwide, the solo-developed project receives $100,000 alongside $2.5 million in feature production funding."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Earlier this year, we partnered with XPRIZE and Range Media Partners to launch the Future Vision XPRIZE, a global competition calling for films that envision a hopeful, technology-enabled future.",
+            "Last week in Los Angeles, independent filmmaker Jeff Synthesized was named the grand prize winner for The Gifted .",
+            "Inspired by a deeply personal story, the film centers on an 11-year-old boy who recreates his late mother’s voice and essence out of love and code.",
+            "What emerges across the town’s networks quietly cares for his entire community — reflecting the filmmaker’s belief that technology’s greatest promise lies in empathy and human connection.",
+            "Chosen from more than 2,500 entries worldwide, the solo-developed project receives $100,000 alongside $2.5 million in feature production funding."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Earlier this year, we partnered with XPRIZE and Range Media Partners to launch the Future Vision XPRIZE, a global competition calling for films that envision a hopeful, technology-enabled future. Last week in Los Angeles, independent filmmaker Jeff Synthesized was named the grand prize winner for The Gifted .",
+            "Inspired by a deeply personal story, the film centers on an 11-year-old boy who recreates his late mother’s voice and essence out of love and code. What emerges across the town’s networks quietly cares for his entire community — reflecting the filmmaker’s belief that technology’s greatest promise lies in empathy and human connection.",
+            "Chosen from more than 2,500 entries worldwide, the solo-developed project receives $100,000 alongside $2.5 million in feature production funding. Through Google’s 100 ZEROS initiative, we are partnering with Range Media Partners to help bring this story to the big screen."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "9620d9737845b3da",
+      "kind": "article",
+      "title": "Anthropic's path from AI startup to industry-defining IPO",
+      "source": "Reuters",
+      "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPT2ZsWlY5ZUdaTFJOS0c0OHU5MGtpM2FobkVWZ2VNYWVmR21TcVllblBxM2NTTU9VbXgwbDFVVGgzZkY1YnFXUEQzcmlVbkJXZmRjUWxmUlhQZXZDTnRLNjRzM2JWM20xXzEyLVFmVjh5M01pclJQOFAwaUV2U0ZMZUFwYnFhbGdyaHdic0NBdkhQM29WZDlhWEI4MA?oc=5",
+      "published_at": "2026-10-26T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Anthropic's path from AI startup to industry-defining IPO Reuters",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPT2ZsWlY5ZUdaTFJOS0c0OHU5MGtpM2FobkVWZ2VNYWVmR21TcVllblBxM2NTTU9VbXgwbDFVVGgzZkY1YnFXUEQzcmlVbkJXZmRjUWxmUlhQZXZDTnRLNjRzM2JWM20xXzEyLVFmVjh5M01pclJQOFAwaUV2U0ZMZUFwYnFhbGdyaHdic0NBdkhQM29WZDlhWEI4MA?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Anthropic's path from AI startup to industry-defining IPO Reuters"
         },
         {
           "title": "公开页面要点",
@@ -3820,57 +3908,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "25c3f7b3a6fe47e8",
-      "kind": "article",
-      "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
-      "source": "Google AI",
-      "source_url": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
-      "published_at": "2026-09-28T19:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Google",
-        "Official"
-      ],
-      "verification": "官方来源",
-      "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
-      "key_points": [
-        "Earlier this year, we partnered with XPRIZE and Range Media Partners to launch the Future Vision XPRIZE, a global competition calling for films that envision a hopeful, technology-enabled future.",
-        "Last week in Los Angeles, independent filmmaker Jeff Synthesized was named the grand prize winner for The Gifted .",
-        "Inspired by a deeply personal story, the film centers on an 11-year-old boy who recreates his late mother’s voice and essence out of love and code.",
-        "What emerges across the town’s networks quietly cares for his entire community — reflecting the filmmaker’s belief that technology’s greatest promise lies in empathy and human connection.",
-        "Chosen from more than 2,500 entries worldwide, the solo-developed project receives $100,000 alongside $2.5 million in feature production funding."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Earlier this year, we partnered with XPRIZE and Range Media Partners to launch the Future Vision XPRIZE, a global competition calling for films that envision a hopeful, technology-enabled future.",
-            "Last week in Los Angeles, independent filmmaker Jeff Synthesized was named the grand prize winner for The Gifted .",
-            "Inspired by a deeply personal story, the film centers on an 11-year-old boy who recreates his late mother’s voice and essence out of love and code.",
-            "What emerges across the town’s networks quietly cares for his entire community — reflecting the filmmaker’s belief that technology’s greatest promise lies in empathy and human connection.",
-            "Chosen from more than 2,500 entries worldwide, the solo-developed project receives $100,000 alongside $2.5 million in feature production funding."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Earlier this year, we partnered with XPRIZE and Range Media Partners to launch the Future Vision XPRIZE, a global competition calling for films that envision a hopeful, technology-enabled future. Last week in Los Angeles, independent filmmaker Jeff Synthesized was named the grand prize winner for The Gifted .",
-            "Inspired by a deeply personal story, the film centers on an 11-year-old boy who recreates his late mother’s voice and essence out of love and code. What emerges across the town’s networks quietly cares for his entire community — reflecting the filmmaker’s belief that technology’s greatest promise lies in empathy and human connection.",
-            "Chosen from more than 2,500 entries worldwide, the solo-developed project receives $100,000 alongside $2.5 million in feature production funding. Through Google’s 100 ZEROS initiative, we are partnering with Range Media Partners to help bring this story to the big screen."
-          ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "850e451d6d4d7efd",
       "kind": "article",
       "title": "Google Beam expands with new regions, partners, and customers",
@@ -3917,6 +3954,46 @@
             "Google Beam is expanding its global reach to six countries, supported by 18 partners and new hardware from HP. Internal testing shows the technology improves team connection and reduces the need for follow-up meetings. Starting in October, you can book and test these units at select Industrious locations to see how they enhance your own professional meetings.",
             "Google Beam is expanding its global reach to help people connect face-to-face from anywhere."
           ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "a9fea966b5c25601",
+      "kind": "article",
+      "title": "Google Deepmind's Hassabis calls AI hacks 'early warning shots'",
+      "source": "Reuters",
+      "source_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNRUpQLTQySlpPSFREYzVycnZUeHhKeWh5TFZTSmw0elFKaVB0THNKYU44eHdhQnJBOS1aNFk2MzlRblBlbzZEa0J4ZFk0VFkxaTdubmpWNVUwaFNwV3pkbHpHYU1XWFlaTGp1MU1vRlNMdkU0Tm9ZU3BweUktbDgxbktvWXl2UzZsVW93LVFPbkZyVDFudHQ2Z3FzQjM1bnZRa3RfbWQ1ME44RFBhVXJiM19aWQ?oc=5",
+      "published_at": "2026-10-14T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Researcher Watch",
+        "Foundation Models",
+        "Leadership"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Google Deepmind's Hassabis calls AI hacks 'early warning shots' Reuters",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNRUpQLTQySlpPSFREYzVycnZUeHhKeWh5TFZTSmw0elFKaVB0THNKYU44eHdhQnJBOS1aNFk2MzlRblBlbzZEa0J4ZFk0VFkxaTdubmpWNVUwaFNwV3pkbHpHYU1XWFlaTGp1MU1vRlNMdkU0Tm9ZU3BweUktbDgxbktvWXl2UzZsVW93LVFPbkZyVDFudHQ2Z3FzQjM1bnZRa3RfbWQ1ME44RFBhVXJiM19aWQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Google Deepmind's Hassabis calls AI hacks 'early warning shots' Reuters"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -4066,6 +4143,46 @@
         {
           "title": "内容概览",
           "body": "AMD to buy Fei-Fei Li’s AI start-up for $8bn Financial Times"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "3c1e9594a18dc640",
+      "kind": "article",
+      "title": "AMD will acquire Fei-Fei Li’s World Labs for $8.2B",
+      "source": "TechCrunch",
+      "source_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNS0tBZXRaWkdrX3ptaHVnM1c3V29xbkVmdVRvRGNmUXl1RWNldGR3RS1IbGMtUzY1T3FRYXJwU3czbXBDS1FCSF9CQWN3X2p6akRGVzkyOFgzLWpGOWhGWHhMOXBqanM0a2FhOEUwU1QwbTZFNjV0REN1TDdaMWlYSmxLVGVXanpZV1RDa1lZMUtYbzRE?oc=5",
+      "published_at": "2026-09-28T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Researcher Watch",
+        "Vision",
+        "World Models"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "AMD will acquire Fei-Fei Li’s World Labs for $8.2B TechCrunch",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNS0tBZXRaWkdrX3ptaHVnM1c3V29xbkVmdVRvRGNmUXl1RWNldGR3RS1IbGMtUzY1T3FRYXJwU3czbXBDS1FCSF9CQWN3X2p6akRGVzkyOFgzLWpGOWhGWHhMOXBqanM0a2FhOEUwU1QwbTZFNjV0REN1TDdaMWlYSmxLVGVXanpZV1RDa1lZMUtYbzRE?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "AMD will acquire Fei-Fei Li’s World Labs for $8.2B TechCrunch"
         },
         {
           "title": "公开页面要点",
@@ -4280,86 +4397,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "f41c4bd8986dd4c6",
-      "kind": "social",
-      "title": "Grok @Bot is like hiring an awesome employee",
-      "source": "X",
-      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1rTmtoUlNMc3p2V1d3d0M5dS1CSkh3Y2hURTN2VXAxdHFNY05LY0NHY1l3TTNWZmF6dUg3MUNsQ3lVZE50LVJXMUhKN2NQN01Bck5tclRZU0xLTEFVV1E?oc=5",
-      "published_at": "2026-10-28T06:08:02Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Grok @Bot is like hiring an awesome employee X",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1rTmtoUlNMc3p2V1d3d0M5dS1CSkh3Y2hURTN2VXAxdHFNY05LY0NHY1l3TTNWZmF6dUg3MUNsQ3lVZE50LVJXMUhKN2NQN01Bck5tclRZU0xLTEFVV1E?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Grok @Bot is like hiring an awesome employee X"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "a66de27b8b72bd7b",
-      "kind": "social",
-      "title": "Grok Imagine",
-      "source": "X",
-      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE83b2l5di1scXA1WXB0T3Q3QmxhNFh5Q1ZVQ1hNb1NDaGJ2SGJCdnJwYVpyZmZldWExWmI5VnJOQUhlZlFRUm9VWmVEVXZnZGpGYmlzNFE2UVBlcFpBZ1E?oc=5",
-      "published_at": "2026-10-28T06:03:03Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE83b2l5di1scXA1WXB0T3Q3QmxhNFh5Q1ZVQ1hNb1NDaGJ2SGJCdnJwYVpyZmZldWExWmI5VnJOQUhlZlFRUm9VWmVEVXZnZGpGYmlzNFE2UVBlcFpBZ1E?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "b8cf73475cc0cc0f",
       "kind": "article",
       "title": "Robotics AI startup Physical Intelligence is seeking a valuation of about $20 billion",
@@ -4384,45 +4421,6 @@
         {
           "title": "内容概览",
           "body": "Robotics AI startup Physical Intelligence is seeking a valuation of about $20 billion Quartz"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "85caa8607dc36b11",
-      "kind": "article",
-      "title": "Genomics Data Analysis AI Startup Omabit Raises $2M in Seed Financing",
-      "source": "GenomeWeb",
-      "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNNVBJR2tNQnBfR3BhTGRITkhmclhUYnRNcTdZMV92U3RXMV91T3p6bVdSZVpVVGIyX1JTa3Vfb1BZQUFOWUEyVEl5d2RTWElvbkcxcDhhSWttNExXdXAtRVFiWkVUVEN0SUQxMk5zSlJzQWVBdmduNVF4ay10dWZqRkFVa1lWeEZxVUt0RWVlNGRqZVpLNlEwRXNaVQ?oc=5",
-      "published_at": "2026-10-26T13:43:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Genomics Data Analysis AI Startup Omabit Raises $2M in Seed Financing GenomeWeb",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNNVBJR2tNQnBfR3BhTGRITkhmclhUYnRNcTdZMV92U3RXMV91T3p6bVdSZVpVVGIyX1JTa3Vfb1BZQUFOWUEyVEl5d2RTWElvbkcxcDhhSWttNExXdXAtRVFiWkVUVEN0SUQxMk5zSlJzQWVBdmduNVF4ay10dWZqRkFVa1lWeEZxVUt0RWVlNGRqZVpLNlEwRXNaVQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Genomics Data Analysis AI Startup Omabit Raises $2M in Seed Financing GenomeWeb"
         },
         {
           "title": "公开页面要点",
@@ -4501,6 +4499,45 @@
         {
           "title": "内容概览",
           "body": "Nvidia's $12.9 billion Hugging Face deal draws DOJ scrutiny CNBC"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "85caa8607dc36b11",
+      "kind": "article",
+      "title": "Genomics Data Analysis AI Startup Omabit Raises $2M in Seed Financing",
+      "source": "GenomeWeb",
+      "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNNVBJR2tNQnBfR3BhTGRITkhmclhUYnRNcTdZMV92U3RXMV91T3p6bVdSZVpVVGIyX1JTa3Vfb1BZQUFOWUEyVEl5d2RTWElvbkcxcDhhSWttNExXdXAtRVFiWkVUVEN0SUQxMk5zSlJzQWVBdmduNVF4ay10dWZqRkFVa1lWeEZxVUt0RWVlNGRqZVpLNlEwRXNaVQ?oc=5",
+      "published_at": "2026-10-26T13:43:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Genomics Data Analysis AI Startup Omabit Raises $2M in Seed Financing GenomeWeb",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNNVBJR2tNQnBfR3BhTGRITkhmclhUYnRNcTdZMV92U3RXMV91T3p6bVdSZVpVVGIyX1JTa3Vfb1BZQUFOWUEyVEl5d2RTWElvbkcxcDhhSWttNExXdXAtRVFiWkVUVEN0SUQxMk5zSlJzQWVBdmduNVF4ay10dWZqRkFVa1lWeEZxVUt0RWVlNGRqZVpLNlEwRXNaVQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Genomics Data Analysis AI Startup Omabit Raises $2M in Seed Financing GenomeWeb"
         },
         {
           "title": "公开页面要点",
@@ -4633,45 +4670,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "72a1b9246d305480",
-      "kind": "article",
-      "title": "Tulane twins create AI startup connecting coders with corporations",
-      "source": "The Tulane Hullabaloo",
-      "source_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQRjFGc05iLW42NnVRLUpKWUhUaTZvczU1aXBkZTJ4dHdKbEZoWTlncXp4bWw0Yzl5TWRPQ1AyQmpFSTl5N2JLajZkWjFveUtldXFEYXZkVmVTMTBRbC1wZUZsbWNmcm5salk0b1FOdHVSQmEwazBqLUpTWWtiTUtRYWdiNGpfbHZ5cjg3b3U4dmRNUVhmNlYyai1lNVRfNWhHc2RYNlNVVVR0Q00?oc=5",
-      "published_at": "2026-10-15T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Tulane twins create AI startup connecting coders with corporations The Tulane Hullabaloo",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQRjFGc05iLW42NnVRLUpKWUhUaTZvczU1aXBkZTJ4dHdKbEZoWTlncXp4bWw0Yzl5TWRPQ1AyQmpFSTl5N2JLajZkWjFveUtldXFEYXZkVmVTMTBRbC1wZUZsbWNmcm5salk0b1FOdHVSQmEwazBqLUpTWWtiTUtRYWdiNGpfbHZ5cjg3b3U4dmRNUVhmNlYyai1lNVRfNWhHc2RYNlNVVVR0Q00?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Tulane twins create AI startup connecting coders with corporations The Tulane Hullabaloo"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "1ddb0ea4b04244ce",
       "kind": "article",
       "title": "Watch Odd Lots: How OpenAI’s Rogue Model Hacked Hugging Face",
@@ -4696,6 +4694,45 @@
         {
           "title": "内容概览",
           "body": "Watch Odd Lots: How OpenAI’s Rogue Model Hacked Hugging Face Bloomberg"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "43124613add0d573",
+      "kind": "article",
+      "title": "Washington State University Taps AI Company for Sports Comms",
+      "source": "GovTech",
+      "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPdUlKVWV2cEFfZ3U0QXI0ZkF4VW9DdXZMZFByR3RHakt6REdwUGVrdVlfLXVVdTIzcUJpbHpibFZ2VU9EbkxsREdPcmdiM3YwUWNfY0liaGNINWNmZEExbjdBeExsOV8yRXJ1WVBfVGp6M2tEYjlRVlZFLWRJRGxMOWpna1h2eDBuWG9vZkVSN2F2eFNaRGFWcnJmNnRjOWtNYWhpWUVlbw?oc=5",
+      "published_at": "2026-10-08T20:18:29Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Washington State University Taps AI Company for Sports Comms GovTech",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPdUlKVWV2cEFfZ3U0QXI0ZkF4VW9DdXZMZFByR3RHakt6REdwUGVrdVlfLXVVdTIzcUJpbHpibFZ2VU9EbkxsREdPcmdiM3YwUWNfY0liaGNINWNmZEExbjdBeExsOV8yRXJ1WVBfVGp6M2tEYjlRVlZFLWRJRGxMOWpna1h2eDBuWG9vZkVSN2F2eFNaRGFWcnJmNnRjOWtNYWhpWUVlbw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Washington State University Taps AI Company for Sports Comms GovTech"
         },
         {
           "title": "公开页面要点",
@@ -5260,45 +5297,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "b92de5400db86576",
-      "kind": "article",
-      "title": "The EU AI Act and UK AI regulation: A product law perspective",
-      "source": "Hogan Lovells Cadwalader",
-      "source_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNTFhWWC1JYjV2eElqSFRFSWNqXzJ4ZFR2R0xpUVVNLU0yUXJqQVpKQ19Xb3FLRC1KQ1A2WjhsRDFnQTY5czB1MmFlbGhSZmFjNTRrWjlZVGtfZXd1TC1OclYxenpoVHN4U2tTejE5M2xsakluTF9zZXQxZV9zNi0zZGQwTVAxemRSVmhHeHZiTEFDbzNZazJjeFV6RlM?oc=5",
-      "published_at": "2026-10-19T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "The EU AI Act and UK AI regulation: A product law perspective Hogan Lovells Cadwalader",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNTFhWWC1JYjV2eElqSFRFSWNqXzJ4ZFR2R0xpUVVNLU0yUXJqQVpKQ19Xb3FLRC1KQ1A2WjhsRDFnQTY5czB1MmFlbGhSZmFjNTRrWjlZVGtfZXd1TC1OclYxenpoVHN4U2tTejE5M2xsakluTF9zZXQxZV9zNi0zZGQwTVAxemRSVmhHeHZiTEFDbzNZazJjeFV6RlM?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "The EU AI Act and UK AI regulation: A product law perspective Hogan Lovells Cadwalader"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "afc93f98911f2bac",
       "kind": "article",
       "title": "California Gov Newsom boosts AI regulation as he eyes 2028 presidential run",
@@ -5401,6 +5399,45 @@
         {
           "title": "内容概览",
           "body": "Anthropic quietly pitches its own AI safety bill to lawmakers Politico"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "98ab4b7e5e43a592",
+      "kind": "article",
+      "title": "A timeline of developments in AI safety since the attack on Hugging Face",
+      "source": "AP News",
+      "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPaUdUMlp0Z0xkQTl3clhkT2VWYy1EclBLWWpQOGJJc1Bad2xkdTk5eGR3YmdEUC1EZmtibnFZREhkV1BzLURrTlNkbnRDVDRqS1RrUHFhRy1TSGRpeWVldEtfbG1GY2YtQW9VSnZpV3BFM0VhcFlhQXhzOWFiampadkdleFJpYXZxLTdLSGRXcUJ5dE0ta1ZDVjJtaw?oc=5",
+      "published_at": "2026-10-13T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "A timeline of developments in AI safety since the attack on Hugging Face AP News",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPaUdUMlp0Z0xkQTl3clhkT2VWYy1EclBLWWpQOGJJc1Bad2xkdTk5eGR3YmdEUC1EZmtibnFZREhkV1BzLURrTlNkbnRDVDRqS1RrUHFhRy1TSGRpeWVldEtfbG1GY2YtQW9VSnZpV3BFM0VhcFlhQXhzOWFiampadkdleFJpYXZxLTdLSGRXcUJ5dE0ta1ZDVjJtaw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "A timeline of developments in AI safety since the attack on Hugging Face AP News"
         },
         {
           "title": "公开页面要点",
