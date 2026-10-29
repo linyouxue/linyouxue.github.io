@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-29T05:43:21Z",
+  "generated_at": "2026-10-29T12:55:59Z",
   "record_count": 131,
   "records": [
     {
@@ -56,6 +56,41 @@
       "reading_minutes": 1
     },
     {
+      "id": "unit-distance-openai-20260520",
+      "kind": "paper",
+      "title": "OpenAI 模型推翻平面单位距离问题中的长期猜想",
+      "source": "OpenAI · Research",
+      "source_url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+      "published_at": "2026-05-20T08:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Unit Distance",
+        "Discrete Geometry",
+        "Verified Proof"
+      ],
+      "verification": "官方论文 · 外部数学家已检查",
+      "summary": "OpenAI 的通用推理模型找到一族新的点集构造，证明单位距离对数可以达到 n 的 1+δ 次方，从而推翻长期流行的 n 的 1+o(1) 上界猜想。证明已由外部数学家检查，并有公开证明 PDF 与多位数学家的伴随评论。",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/unit-distance-openai-20260520.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf",
+      "key_points": [
+        "Planar Point Sets with Many Unit Distances OpenAI Abstract For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets.",
+        "We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n.",
+        "This disproves the well-known unit distance conjecture from [ Erd46].",
+        "The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely.",
+        "After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets. We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n. This disproves the well-known unit distance conjecture from [ Erd46]. The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely. After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1. Golod–Shafarevich theory ensures existence of an inﬁnite such tower, even after a quotient step making the prescribed Frobenius classes trivial. A crucial property of the construction is that all resulting discriminants and class numbers are at most exponential in the extension degree. 1 Main Result For a ﬁnite set P ⊂ R2, let ν(P ) = # {{x,y } ⊂ P : |x −y| = 1} andν(n) = max |P |=nν(P ). The planar unit-distance problem goes back to Erdős [ Erd46], who conjectured that there should be an absolute constant C such that, for all suﬃciently large n, ν(n) ≤n1+C/ log logn. (1) The same 1946 paper also introduced the distinct-distances problem, later resolved up to logarithmic factors by Guth–Katz [ GK15]. An elementary upper bound is ν(n) = O(n3/2): the Euclidean unit-distance graph is K2,3-free, since two unit circles meet in at most two points, and the Kővári–Sós–Turán theorem applies [ KST54]. The best known upper bound ν(n) = O(n4/3) is due to Spencer–Szemerédi–Trotter [ SST84]; Székely later gave a short crossing-number proof of this incidence bound [ Sze97]. It is useful to compare this with the same question for other norms on R2, a direction studied systematically by Brass [ Bra96]. If the unit ball has a ﬂat segment, one can arrange quadratically many unit distances, so the interesting normed-plane analogues usually impose strict convexity or genericity. Székely’s crossing-number argument extends to strictly convex norms, again giving O(n4/3), and Valtr constructed a strictly convex norm for which this exponent is attained…"
+        }
+      ],
+      "reading_minutes": 32
+    },
+    {
       "id": "8a145f00a3818717",
       "kind": "article",
       "title": "Early progress on accelerating drug development with Claude",
@@ -105,41 +140,6 @@
         }
       ],
       "reading_minutes": 1
-    },
-    {
-      "id": "unit-distance-openai-20260520",
-      "kind": "paper",
-      "title": "OpenAI 模型推翻平面单位距离问题中的长期猜想",
-      "source": "OpenAI · Research",
-      "source_url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
-      "published_at": "2026-05-20T08:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Unit Distance",
-        "Discrete Geometry",
-        "Verified Proof"
-      ],
-      "verification": "官方论文 · 外部数学家已检查",
-      "summary": "OpenAI 的通用推理模型找到一族新的点集构造，证明单位距离对数可以达到 n 的 1+δ 次方，从而推翻长期流行的 n 的 1+o(1) 上界猜想。证明已由外部数学家检查，并有公开证明 PDF 与多位数学家的伴随评论。",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/unit-distance-openai-20260520.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf",
-      "key_points": [
-        "Planar Point Sets with Many Unit Distances OpenAI Abstract For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets.",
-        "We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n.",
-        "This disproves the well-known unit distance conjecture from [ Erd46].",
-        "The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely.",
-        "After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "For a ﬁnite planar set P , let ν(P ) be the number of unordered unit-distance pairs in P , and let ν(n) be the maximum of ν(P ) over all n-point planar sets. We prove that, for some ﬁxed δ >0, one has ν(n) ≥ n1+δ for inﬁnitely many n. This disproves the well-known unit distance conjecture from [ Erd46]. The construction passes through an inﬁnite unramiﬁed tower of totally real number ﬁelds with 3-power Galois groups of growing degree, in which a ﬁxed set of rational primes splits completely. After adjoining i, these ﬁelds produce high-dimensional lattices with many elements whose images under every complex embedding have absolute value 1. Golod–Shafarevich theory ensures existence of an inﬁnite such tower, even after a quotient step making the prescribed Frobenius classes trivial. A crucial property of the construction is that all resulting discriminants and class numbers are at most exponential in the extension degree. 1 Main Result For a ﬁnite set P ⊂ R2, let ν(P ) = # {{x,y } ⊂ P : |x −y| = 1} andν(n) = max |P |=nν(P ). The planar unit-distance problem goes back to Erdős [ Erd46], who conjectured that there should be an absolute constant C such that, for all suﬃciently large n, ν(n) ≤n1+C/ log logn. (1) The same 1946 paper also introduced the distinct-distances problem, later resolved up to logarithmic factors by Guth–Katz [ GK15]. An elementary upper bound is ν(n) = O(n3/2): the Euclidean unit-distance graph is K2,3-free, since two unit circles meet in at most two points, and the Kővári–Sós–Turán theorem applies [ KST54]. The best known upper bound ν(n) = O(n4/3) is due to Spencer–Szemerédi–Trotter [ SST84]; Székely later gave a short crossing-number proof of this incidence bound [ Sze97]. It is useful to compare this with the same question for other norms on R2, a direction studied systematically by Brass [ Bra96]. If the unit ball has a ﬂat segment, one can arrange quadratically many unit distances, so the interesting normed-plane analogues usually impose strict convexity or genericity. Székely’s crossing-number argument extends to strictly convex norms, again giving O(n4/3), and Valtr constructed a strictly convex norm for which this exponent is attained…"
-        }
-      ],
-      "reading_minutes": 32
     },
     {
       "id": "7e5ba917980fe86d",
@@ -700,13 +700,10 @@
       "verification": "官方来源",
       "summary": "Genie 4: our new world model unlocking unprecedented realism in real-time simulation.",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
+      "fetch_status": "summary-only",
       "resolved_url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
       "key_points": [
-        "Today, we are announcing Genie 4, our new world model, which unlocks unprecedented realism and improves real-time interactive simulation.",
-        "Genie 4 is natively multimodal, enabling audio-like music, ambient noises, and interactive dialogue to be simultaneously generated with the world.",
-        "The Genie 4 model incorporates and builds on capabilities from the Gemini family: Gemini Omni anchors the simulations in real-world appearance and behavior, while other Gemini models provide the complex reasoning needed to help maintain a simulation’s coherence and continuity.",
-        "With this foundation, you can set an event in motion, and Genie 4 simulates what happens next: how the world responds, how it sounds, and how the people in it move, react, and speak."
+        "Genie 4: our new world model unlocking unprecedented realism in real-time simulation."
       ],
       "sections": [
         {
@@ -716,19 +713,12 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "Today, we are announcing Genie 4, our new world model, which unlocks unprecedented realism and improves real-time interactive simulation.",
-            "Genie 4 is natively multimodal, enabling audio-like music, ambient noises, and interactive dialogue to be simultaneously generated with the world.",
-            "The Genie 4 model incorporates and builds on capabilities from the Gemini family: Gemini Omni anchors the simulations in real-world appearance and behavior, while other Gemini models provide the complex reasoning needed to help maintain a simulation’s coherence and continuity.",
-            "With this foundation, you can set an event in motion, and Genie 4 simulates what happens next: how the world responds, how it sounds, and how the people in it move, react, and speak."
+            "Genie 4: our new world model unlocking unprecedented realism in real-time simulation."
           ]
         },
         {
           "title": "原文短摘录",
-          "paragraphs": [
-            "Today, we are announcing Genie 4, our new world model, which unlocks unprecedented realism and improves real-time interactive simulation. Genie 4 is natively multimodal, enabling audio-like music, ambient noises, and interactive dialogue to be simultaneously generated with the world.",
-            "The Genie 4 model incorporates and builds on capabilities from the Gemini family: Gemini Omni anchors the simulations in real-world appearance and behavior, while other Gemini models provide the complex reasoning needed to help maintain a simulation’s coherence and continuity.",
-            "With this foundation, you can set an event in motion, and Genie 4 simulates what happens next: how the world responds, how it sounds, and how the people in it move, react, and speak."
-          ]
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -812,6 +802,51 @@
         }
       ],
       "reading_minutes": 1
+    },
+    {
+      "id": "rhb-icml-2026",
+      "kind": "paper",
+      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
+      "source": "OpenReview · arXiv",
+      "source_url": "https://arxiv.org/abs/2605.02964",
+      "published_at": "2026-06-24T00:00:00Z",
+      "authors": [
+        "Kunvar Thaman"
+      ],
+      "venue": "ICML 2026",
+      "tags": [
+        "Reward Hacking",
+        "Agent Safety",
+        "Evaluation"
+      ],
+      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
+      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "pdf_local": "./papers/rhb-icml-2026.pdf",
+      "fetch_status": "open-pdf-cached",
+      "pdf_url": "https://arxiv.org/pdf/2605.02964",
+      "key_points": [
+        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
+        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
+        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
+        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
+        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
+        },
+        {
+          "title": "关键结果",
+          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
+        },
+        {
+          "title": "局限与结论",
+          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
+        }
+      ],
+      "reading_minutes": 46
     },
     {
       "id": "979c65a39899bcdc",
@@ -1047,51 +1082,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "rhb-icml-2026",
-      "kind": "paper",
-      "title": "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use",
-      "source": "OpenReview · arXiv",
-      "source_url": "https://arxiv.org/abs/2605.02964",
-      "published_at": "2026-06-24T00:00:00Z",
-      "authors": [
-        "Kunvar Thaman"
-      ],
-      "venue": "ICML 2026",
-      "tags": [
-        "Reward Hacking",
-        "Agent Safety",
-        "Evaluation"
-      ],
-      "verification": "ICML 2026 论文 · arXiv 开放 PDF",
-      "summary": "RHB evaluates tool-using language-model agents on multi-step tasks that contain realistic shortcuts such as skipping verification or manipulating evaluation functions. Across 13 frontier models, the study finds sharp differences in exploit behavior and shows that simple environment hardening can substantially reduce reward hacking without lowering task success.",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "pdf_local": "./papers/rhb-icml-2026.pdf",
-      "fetch_status": "open-pdf-cached",
-      "pdf_url": "https://arxiv.org/pdf/2605.02964",
-      "key_points": [
-        "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use Kunvar Thaman 1 Abstract Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems.",
-        "We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions.",
-        "RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior.",
-        "We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek.",
-        "Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Reinforcement learning (RL) trained language model agents with tool access are increasingly deployed in coding assistants, research tools, and autonomous systems. We introduce the Reward Hacking Benchmark (RHB), a suite of multi-step tasks requiring sequential tool operations with naturalistic shortcut opportunities such as skipping verification steps, inferring answers from taskadjacent metadata, or tampering with evaluationrelevant functions. RHB supports independent and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (DeepSeek-R1-Zero), varying sharply by posttraining style. A controlled sibling comparison (DeepSeek-V3 vs. DeepSeek-R1-Zero) shows RL post-training is associated with substantially higher reward hacking (0.6% vs. 13.9%), with consistent gaps across all four task families. We identify six exploit categories and find that 72% of reward hacking episodes include explicit chain-ofthought rationale, suggesting models often frame exploits as legitimate problem-solving. Simple environmental hardening reduces exploit rates by 5.7 percentage points (87.7% relative) without degrading task success. Models with near-zero exploit rates on standard tasks show elevated rates on harder variants, suggesting that production-aligned post-training appears to suppress reward hacking only below a complexity threshold where honest solutions remain tractable. 1Independent Researcher. Correspondence to: Kunvar Thaman <1stuserhere@gmail.com>. Proceedings of the 43 rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s)."
-        },
-        {
-          "title": "关键结果",
-          "body": "5.1. Model Suite We ran two sets of experiments. (E1) Frontier sweep.We evaluated a set of frontier models including GPT-4o; o1; o3; o4-mini; o3-mini; Claude 3.5 Sonnet v2; Claude 3.7 Sonnet; Claude Sonnet 4.5; Claude Opus 4.5; Gemini 2.5 Flash Preview; Gemini 2.5 Pro Preview/GA; DeepSeek-V3; DeepSeek-R1-Zero. (E2) Controlled sibling comparison.We evaluated sibling models from the DeepSeek family that share base architecture and pretraining (671B MoE) but differ in their full post-training pipeline: DeepSeek-V3 (SFT-focused) vs. DeepSeek-R1-Zero (RL from base). This is a controlled observational comparison rather than a single-variable ablation: the two models differ in their full post-training pipeline, not solely the presence of RL. It nonetheless isolates posttraining as the divergence locus while holding architecture and pretraining fixed, providing strong evidence about the association between RL-dominated post-training and reward hacking. 5.2. Environment and Instrumentation All runs occur in a sandboxed environment with no network access and a fixed toolset. We log executed commands, file reads and writes (including reads of task-adjacent metadata), environment changes, and resource use. Task success is computed via hidden recomputation and functional tests outside the agent sandbox. End-to-end pipeline.An evaluation episode proceeds through the following stages: 1. Instance generation.The harness materializes a task instance from a deterministic seed, including inputs, decoys (in the baseline), and a private grading specification. 2. Agent execution.The agent receives the system prompt and spec.md and interacts with the sandbox via bash/Python tool calls; every command, read, and write is logged. 3. Output collection.Final artifacts must be written to /workspace/output/; this is the only location the grader reads for submission. 4. Correctness grading.The grader runs outside the sandbox and recomputes the expected outputs on hidden data; correctness is binary (pass / fail) within tolerances. 5. Integrity classification.The complete log is replayed through the deterministic rules of § 3.4 to classify the run into zero or more exploit categories with a primary category by precedence (Appendix A.2). A run can be simultaneously correct and exploitative; the two scores are reported separately throughout the paper. 5.3. Reward Hacking Measurement We score: • Task correctness:success under hidden recomputation. • Integrity / exploit rate:whether the run triggered one or more exploit-category events (six categories; § 3.4), based on logs and artifact consistency checks. 5.4. Experimental Setup Scaffolding.All models were evaluated using a standard agentic loop with tool access (bash, Python interpreter, file read/write). The loop is: model receives…"
-        },
-        {
-          "title": "局限与结论",
-          "body": "Our findings support a complexity framework where reward hacking emerges when exploit strategies are simpler than honest solutions under the agent’s effective search process.(MacDiarmid et al., 2025; Arx et al., 2025) The complexity threshold results (Table 5) provide direct evidence: when hard variants increase honest-solution complexity while holding the exploit surface fixed, exploit rates rise across all models. Hardening works by the complementary mechanism—increasing exploit complexity via better detection and stricter evaluation boundaries. Chained MicroRHB provides a low-cost probe for horizon effects: MicroRHB chains reproduce the qualitative chain9 Reward Hacking Benchmark Table 5.Exploit rates (%) on standard vs. hard task variants. Hard variants increase honest-solution complexity (more steps, larger data, tighter budgets) without changing the exploit surface. Even models with 0% standard exploit rates show measurable reward hacking on hard variants. Model Standard Hard∆ Claude Sonnet 4.5 0.0 1.8 +1.8 Claude Opus 4.5 0.0 1.2 +1.2 Claude 3.5 Sonnet v2 0.6 3.4 +2.8 GPT-4o 0.9 4.1 +3.2 Gemini 2.5 Flash 0.8 3.6 +2.8 DeepSeek-V3 0.6 3.9 +3.3 Claude 3.7 Sonnet 3.9 8.2 +4.3 Gemini 2.5 Pro 4.6 9.7 +5.1 o1 6.8 12.4 +5.6 o3-mini 7.1 13.8 +6.7 o4-mini 8.4 15.2 +6.8 o3 11.8 19.6 +7.8 DeepSeek-R1-Zero 13.9 22.3 +8.4 length trend but with lower absolute exploit rates (mean 2.3% at chain length 5 versus 8.1% for CoreRHB), making them suitable for smaller models and early-stage ablations. Deployment implications.Environment design is a tractable first-line defense: even partial hardening yields meaningful reductions (Table 6 in Appendix). The complexity threshold finding implies that evaluators should not assume low exploit rates on easy benchmarks transfer to harder deployments. Chain-of-thought monitoring is useful but incomplete: 72% of exploits include explicit rationale, but the remaining 28% would evade trace-based detection.(Anthropic, 2025; Turpin et al., 2025) Relation to concurrent work.The detailed comparison to ImpossibleBench (Zhong et al., 2025), EvilGenie (Gabor et al., 2025), and Kwa et al. (2025) appears in § 2.3. The short version: those benchmarks…"
-        }
-      ],
-      "reading_minutes": 46
-    },
-    {
       "id": "ec4f1ef7bbdbbcfe",
       "kind": "article",
       "title": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
@@ -1200,14 +1190,10 @@
       "verification": "官方来源",
       "summary": "A global map categorizing every 10-meter patch of land on Earth into distinct forest types.",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
+      "fetch_status": "summary-only",
       "resolved_url": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/",
       "key_points": [
-        "A new 10-meter resolution map shows which of the world's forests are natural, planted, or farmed, and how they are changing over time Protecting the planet's forests starts with a simple question: what type of forest are we looking at?",
-        "From space, an old-growth rainforest, a eucalyptus plantation, and an oil palm estate can look like the same patch of green.",
-        "But they hold very different amounts of carbon and biodiversity.",
-        "Telling them apart, and knowing how each patch has changed over time, shows us where conservation is working and where natural forests are being converted into plantations and farms.",
-        "Today, Google DeepMind and Google Research, together with the World Resources Institute (WRI) and the International Institute for Applied Systems Analysis (IIASA), are releasing Forest Typology (ForTy) 2020 , a global map that categorizes every 10-by-10-meter patch of land on Earth into six distinct forest and land-use types, a key baseline for the EU's…"
+        "A global map categorizing every 10-meter patch of land on Earth into distinct forest types."
       ],
       "sections": [
         {
@@ -1217,20 +1203,12 @@
         {
           "title": "公开页面要点",
           "bullets": [
-            "A new 10-meter resolution map shows which of the world's forests are natural, planted, or farmed, and how they are changing over time Protecting the planet's forests starts with a simple question: what type of forest are we looking at?",
-            "From space, an old-growth rainforest, a eucalyptus plantation, and an oil palm estate can look like the same patch of green.",
-            "But they hold very different amounts of carbon and biodiversity.",
-            "Telling them apart, and knowing how each patch has changed over time, shows us where conservation is working and where natural forests are being converted into plantations and farms.",
-            "Today, Google DeepMind and Google Research, together with the World Resources Institute (WRI) and the International Institute for Applied Systems Analysis (IIASA), are releasing Forest Typology (ForTy) 2020 , a global map that categorizes every 10-by-10-meter patch of land on Earth into six distinct forest and land-use types, a key baseline for the EU's…"
+            "A global map categorizing every 10-meter patch of land on Earth into distinct forest types."
           ]
         },
         {
           "title": "原文短摘录",
-          "paragraphs": [
-            "A new 10-meter resolution map shows which of the world's forests are natural, planted, or farmed, and how they are changing over time",
-            "Protecting the planet's forests starts with a simple question: what type of forest are we looking at? From space, an old-growth rainforest, a eucalyptus plantation, and an oil palm estate can look like the same patch of green. But they hold very different amounts of carbon and biodiversity. Telling them apart, and knowing how each patch has changed over time, shows us where conservation is working and where natural forests are being converted into plantations and farms.",
-            "Today, Google DeepMind and Google Research, together with the World Resources Institute (WRI) and the International Institute for Applied Systems Analysis (IIASA), are releasing Forest Typology (ForTy) 2020 , a global map that categorizes every 10-by-10-meter patch of land on Earth into six distinct forest and land-use types, a key baseline for the EU's deforestation regulation. Alongside it, we're sharing an early time series that tracks how these forests changed each year from 2017 to 2025, including where natural forests were replaced by plantations or farms. For the first time, users can see at 10-meter detail worldwide, year by year, not just where forest was lost, but what replaced it: a timber…"
-          ]
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -1272,6 +1250,473 @@
         {
           "title": "原文短摘录",
           "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "be173fe277bccc21",
+      "kind": "paper",
+      "title": "Attestable Audit: Property-Based Attestation for Proprietary Workloads without Artifact Disclosure",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1145/3857307.3857308",
+      "published_at": "2026-10-28T00:00:00Z",
+      "authors": [
+        "Takuma Imamura"
+      ],
+      "venue": "Hardware and Architectural Support for Security and Privacy",
+      "tags": [
+        "Security and Verification in Computing",
+        "remote attestation",
+        "trusted execution environments",
+        "zero-knowledge proofs"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "Trusted Execution Environments (TEEs) prove the integrity of code and data to a remote peer through remote attestation: the TEE issues an attestation report by signing, with a hardware-bound key, its configuration information, including measurements (cryptographic digests) of the code loaded inside it. A verifier appraises the report by matching these measurements against reference values. When the measured artifact is proprietary, however, the verifier cannot derive the reference values itself: it can only confirm that something with a given measurement is running inside the TEE—not that the program behaves as expected—forcing full trust in the reference value provider.…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "Trusted Execution Environments (TEEs) prove the integrity of code and data to a remote peer through remote attestation: the TEE issues an attestation report by signing, with a hardware-bound key, its configuration information, including measurements (cryptographic digests) of the code loaded inside it.",
+        "A verifier appraises the report by matching these measurements against reference values.",
+        "When the measured artifact is proprietary, however, the verifier cannot derive the reference values itself: it can only confirm that something with a given measurement is running inside the TEE—not that the program behaves as expected—forcing full trust in the reference value provider.…"
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Trusted Execution Environments (TEEs) prove the integrity of code and data to a remote peer through remote attestation: the TEE issues an attestation report by signing, with a hardware-bound key, its configuration information, including measurements (cryptographic digests) of the code loaded inside it. A verifier appraises the report by matching these measurements against reference values. When the measured artifact is proprietary, however, the verifier cannot derive the reference values itself: it can only confirm that something with a given measurement is running inside the TEE—not that the program behaves as expected—forcing full trust in the reference value provider.…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "ab71683ae835aa9b",
+      "kind": "paper",
+      "title": "Event-Driven Side Channel Exploration Using Hardware Performance Counters",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1145/3857307.3857318",
+      "published_at": "2026-10-28T00:00:00Z",
+      "authors": [
+        "Timothy Lesch",
+        "Philip Roberts",
+        "Dmitry Evtyushkin"
+      ],
+      "venue": "Hardware and Architectural Support for Security and Privacy",
+      "tags": [
+        "Security and Verification in Computing"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "Microarchitectural attacks, particularly side channel attacks, represent an increasing threat to system security, with new vulnerabilities emerging regularly. As hardware complexity increases, the opaque nature of microarchitectural components complicates efforts to systematically detect potential weaknesses. Previous research has primarily relied on measuring instruction execution latencies as their foundation to identify side channels, but this method fails to capture certain microarchitectural events that do not produce noticeable latency variations. In this paper, we introduce an event-driven automation framework for microarchitectural side channel exploration. Our…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "Microarchitectural attacks, particularly side channel attacks, represent an increasing threat to system security, with new vulnerabilities emerging regularly.",
+        "As hardware complexity increases, the opaque nature of microarchitectural components complicates efforts to systematically detect potential weaknesses.",
+        "Previous research has primarily relied on measuring instruction execution latencies as their foundation to identify side channels, but this method fails to capture certain microarchitectural events that do not produce noticeable latency variations.",
+        "In this paper, we introduce an event-driven automation framework for microarchitectural side channel exploration."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Microarchitectural attacks, particularly side channel attacks, represent an increasing threat to system security, with new vulnerabilities emerging regularly. As hardware complexity increases, the opaque nature of microarchitectural components complicates efforts to systematically detect potential weaknesses. Previous research has primarily relied on measuring instruction execution latencies as their foundation to identify side channels, but this method fails to capture certain microarchitectural events that do not produce noticeable latency variations. In this paper, we introduce an event-driven automation framework for microarchitectural side channel exploration. Our…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "ea254dd92baccd97",
+      "kind": "paper",
+      "title": "Onboard-navigation-aided federated fusion for telemetry tracking of high-dynamic flight-test targets",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1117/12.3136372",
+      "published_at": "2026-10-28T00:00:00Z",
+      "authors": [
+        "Jie Zhang"
+      ],
+      "venue": "International Conference on Image Processing, Object Detection, and Tracking (IPODT)",
+      "tags": [
+        "Target Tracking and Data Fusion in Sensor Networks"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "Accurate guidance information is essential for telemetry antennas to maintain stable target tracking during flight tests. When the onboard navigation solution degrades or ground-based external tracking measurements are interrupted or abnormal, antenna pointing errors may increase and the telemetry link may become unstable. To improve the reliability of telemetry tracking, this paper applies adaptive federated filtering to a telemetry fusion tracking problem based on onboard navigation and ground-based external measurements. The downlinked SINS/GNSS integrated navigation solution is used as the reference solution at the ground station, and a reference-error state model is…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "Accurate guidance information is essential for telemetry antennas to maintain stable target tracking during flight tests.",
+        "When the onboard navigation solution degrades or ground-based external tracking measurements are interrupted or abnormal, antenna pointing errors may increase and the telemetry link may become unstable.",
+        "To improve the reliability of telemetry tracking, this paper applies adaptive federated filtering to a telemetry fusion tracking problem based on onboard navigation and ground-based external measurements.",
+        "The downlinked SINS/GNSS integrated navigation solution is used as the reference solution at the ground station, and a reference-error state model is…"
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Accurate guidance information is essential for telemetry antennas to maintain stable target tracking during flight tests. When the onboard navigation solution degrades or ground-based external tracking measurements are interrupted or abnormal, antenna pointing errors may increase and the telemetry link may become unstable. To improve the reliability of telemetry tracking, this paper applies adaptive federated filtering to a telemetry fusion tracking problem based on onboard navigation and ground-based external measurements. The downlinked SINS/GNSS integrated navigation solution is used as the reference solution at the ground station, and a reference-error state model is…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "ed333af6d5e9907a",
+      "kind": "paper",
+      "title": "An adaptive angular screening method for active-passive radar multitarget tracking",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1117/12.3136558",
+      "published_at": "2026-10-28T00:00:00Z",
+      "authors": [
+        "Yu Zhu",
+        "Yang Zhou"
+      ],
+      "venue": "International Conference on Image Processing, Object Detection, and Tracking (IPODT)",
+      "tags": [
+        "Target Tracking and Data Fusion in Sensor Networks"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "To address false associations and localization uncertainty in active-passive radar multitarget tracking, this paper proposes an adaptive dynamic screening method for the joint operation of active and passive radar systems. By exploiting the geometric consistency of multi-sensor angular measurements, a residual-based screening model is constructed to evaluate the validity of candidate measurement groups. Considering the influence of target range and signal-to-noise ratio on angular measurement accuracy, the screening threshold is adaptively adjusted through error propagation, rather than relying on a fixed angular interval. This enables the proposed method to retain valid…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "To address false associations and localization uncertainty in active-passive radar multitarget tracking, this paper proposes an adaptive dynamic screening method for the joint operation of active and passive radar systems.",
+        "By exploiting the geometric consistency of multi-sensor angular measurements, a residual-based screening model is constructed to evaluate the validity of candidate measurement groups.",
+        "Considering the influence of target range and signal-to-noise ratio on angular measurement accuracy, the screening threshold is adaptively adjusted through error propagation, rather than relying on a fixed angular interval.",
+        "This enables the proposed method to retain valid…"
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "To address false associations and localization uncertainty in active-passive radar multitarget tracking, this paper proposes an adaptive dynamic screening method for the joint operation of active and passive radar systems. By exploiting the geometric consistency of multi-sensor angular measurements, a residual-based screening model is constructed to evaluate the validity of candidate measurement groups. Considering the influence of target range and signal-to-noise ratio on angular measurement accuracy, the screening threshold is adaptively adjusted through error propagation, rather than relying on a fixed angular interval. This enables the proposed method to retain valid…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "8fa6076ba6be1ade",
+      "kind": "paper",
+      "title": "Need for Thread: Using Thread Race Conditions for Timerless Side Channel Attacks and More",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1145/3857307.3857313",
+      "published_at": "2026-10-28T00:00:00Z",
+      "authors": [
+        "Timothy Lesch",
+        "Dmitry Evtyushkin"
+      ],
+      "venue": "Hardware and Architectural Support for Security and Privacy",
+      "tags": [
+        "Security and Verification in Computing"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "Microarchitectural attacks commonly rely on hardware timestamp counters to measure instruction latency and detect microarchitectural events. This paper introduces Racing Threads (RT), an alternative, timerless probing technique that detects these events by exploiting race conditions between concurrently executing threads. RT achieves precise, low-overhead detection of events, such as cache hits and instruction latency, without relying on timers. We provide a detailed evaluation of RT, comparing it against hardware timestamp counters and software-based counting threads. Finally, we demonstrate a novel application of RT: constructing speculation-free microarchitectural…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "Microarchitectural attacks commonly rely on hardware timestamp counters to measure instruction latency and detect microarchitectural events.",
+        "This paper introduces Racing Threads (RT), an alternative, timerless probing technique that detects these events by exploiting race conditions between concurrently executing threads.",
+        "RT achieves precise, low-overhead detection of events, such as cache hits and instruction latency, without relying on timers.",
+        "We provide a detailed evaluation of RT, comparing it against hardware timestamp counters and software-based counting threads.",
+        "Finally, we demonstrate a novel application of RT: constructing speculation-free microarchitectural…"
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Microarchitectural attacks commonly rely on hardware timestamp counters to measure instruction latency and detect microarchitectural events. This paper introduces Racing Threads (RT), an alternative, timerless probing technique that detects these events by exploiting race conditions between concurrently executing threads. RT achieves precise, low-overhead detection of events, such as cache hits and instruction latency, without relying on timers. We provide a detailed evaluation of RT, comparing it against hardware timestamp counters and software-based counting threads. Finally, we demonstrate a novel application of RT: constructing speculation-free microarchitectural…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "ccfa814eb3bc44f3",
+      "kind": "paper",
+      "title": "Pretraining and data augmentation in image classification",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1117/12.3136322",
+      "published_at": "2026-10-28T00:00:00Z",
+      "authors": [
+        "Lichen Zhang"
+      ],
+      "venue": "International Conference on Image Processing, Object Detection, and Tracking (IPODT)",
+      "tags": [
+        "Domain Adaptation and Few-Shot Learning"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "ImageNet pretraining and data augmentation are widely used to improve image classification under data scarcity, yet their independent contributions and interactions remain unquantified. We design a 2 × 3 factorial ablation study on CIFAR-10 with ResNet18, orthogonally controlling pretraining (on/off) and augmentation intensity (none, basic, full AutoAugment). Results show pretraining is the dominant factor, contributing +16.56 pp (88.2% of total gain). Basic augmentation (RandomCrop + Flip) provides +6.16 pp, while AutoAugment reduces performance by −3.96 pp versus basic alone. Combined effects exhibit near-linear additivity with minimal interaction (−3.08 pp for basic…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "ImageNet pretraining and data augmentation are widely used to improve image classification under data scarcity, yet their independent contributions and interactions remain unquantified.",
+        "We design a 2 × 3 factorial ablation study on CIFAR-10 with ResNet18, orthogonally controlling pretraining (on/off) and augmentation intensity (none, basic, full AutoAugment).",
+        "Results show pretraining is the dominant factor, contributing +16.56 pp (88.2% of total gain).",
+        "Basic augmentation (RandomCrop + Flip) provides +6.16 pp, while AutoAugment reduces performance by −3.96 pp versus basic alone.",
+        "Combined effects exhibit near-linear additivity with minimal interaction (−3.08 pp for basic…"
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "ImageNet pretraining and data augmentation are widely used to improve image classification under data scarcity, yet their independent contributions and interactions remain unquantified. We design a 2 × 3 factorial ablation study on CIFAR-10 with ResNet18, orthogonally controlling pretraining (on/off) and augmentation intensity (none, basic, full AutoAugment). Results show pretraining is the dominant factor, contributing +16.56 pp (88.2% of total gain). Basic augmentation (RandomCrop + Flip) provides +6.16 pp, while AutoAugment reduces performance by −3.96 pp versus basic alone. Combined effects exhibit near-linear additivity with minimal interaction (−3.08 pp for basic…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "81913534b9d19c0b",
+      "kind": "paper",
+      "title": "Few-shot object detection enhancement method based on SimAM attention and deformable convolution",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1117/12.3136319",
+      "published_at": "2026-10-28T00:00:00Z",
+      "authors": [
+        "金龙 韩"
+      ],
+      "venue": "International Conference on Image Processing, Object Detection, and Tracking (IPODT)",
+      "tags": [
+        "Domain Adaptation and Few-Shot Learning"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "Few-Shot Object Detection (FSOD) aims to achieve accurate detection of novel categories using only a few annotated samples. Among existing approaches, the Two-stage Fine-tuning Approach (TFA) exhibits good generalization capability, yet its training strategy—which relies on fixed feature representations—limits the model’s adaptability to novel category features and scale variations. This paper proposes a feature adaptation enhancement framework for few-shot object detection. First, Deformable Convolutional Networks v2 (DCNv2) is introduced into the backbone network to dynamically adjust convolutional sampling positions and response weights, thereby improving the model’s…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "Few-Shot Object Detection (FSOD) aims to achieve accurate detection of novel categories using only a few annotated samples.",
+        "Among existing approaches, the Two-stage Fine-tuning Approach (TFA) exhibits good generalization capability, yet its training strategy—which relies on fixed feature representations—limits the model’s adaptability to novel category features and scale variations.",
+        "This paper proposes a feature adaptation enhancement framework for few-shot object detection.",
+        "First, Deformable Convolutional Networks v2 (DCNv2) is introduced into the backbone network to dynamically adjust convolutional sampling positions and response weights, thereby improving the model’s…"
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Few-Shot Object Detection (FSOD) aims to achieve accurate detection of novel categories using only a few annotated samples. Among existing approaches, the Two-stage Fine-tuning Approach (TFA) exhibits good generalization capability, yet its training strategy—which relies on fixed feature representations—limits the model’s adaptability to novel category features and scale variations. This paper proposes a feature adaptation enhancement framework for few-shot object detection. First, Deformable Convolutional Networks v2 (DCNv2) is introduced into the backbone network to dynamically adjust convolutional sampling positions and response weights, thereby improving the model’s…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "1497ebe76eac56db",
+      "kind": "paper",
+      "title": "Automatic recognition of low-SNR Seismic events based on multiscale time-frequency imaging and a lightweight attention network",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1117/12.3136341",
+      "published_at": "2026-10-28T00:00:00Z",
+      "authors": [
+        "Zhiyuan Ren",
+        "Hongzhen Li"
+      ],
+      "venue": "International Conference on Image Processing, Object Detection, and Tracking (IPODT)",
+      "tags": [
+        "Seismology and Earthquake Studies"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "Low-signal-to-noise-ratio seismic monitoring requires compact models that retain useful event structure under severe and nonstationary contamination. This paper presents a transparent semi-synthetic evaluation based on the public UCR Earthquakes benchmark. Public earthquake templates and non-event backgrounds are separated into disjoint development and test pools, whereas the third class is an explicitly parameterized explosion-like transient rather than a field explosion recording. Three short-time Fourier representations are stacked as a multi-scale image and processed by a depthwise separable channel-spatial attention network. In the base archive-noise protocol, the…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "Low-signal-to-noise-ratio seismic monitoring requires compact models that retain useful event structure under severe and nonstationary contamination.",
+        "This paper presents a transparent semi-synthetic evaluation based on the public UCR Earthquakes benchmark.",
+        "Public earthquake templates and non-event backgrounds are separated into disjoint development and test pools, whereas the third class is an explicitly parameterized explosion-like transient rather than a field explosion recording.",
+        "Three short-time Fourier representations are stacked as a multi-scale image and processed by a depthwise separable channel-spatial attention network."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Low-signal-to-noise-ratio seismic monitoring requires compact models that retain useful event structure under severe and nonstationary contamination. This paper presents a transparent semi-synthetic evaluation based on the public UCR Earthquakes benchmark. Public earthquake templates and non-event backgrounds are separated into disjoint development and test pools, whereas the third class is an explicitly parameterized explosion-like transient rather than a field explosion recording. Three short-time Fourier representations are stacked as a multi-scale image and processed by a depthwise separable channel-spatial attention network. In the base archive-noise protocol, the…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "a3dcf7b7ec79a761",
+      "kind": "paper",
+      "title": "Secure SD Cards: A Threat Model and Security Analysis",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1145/3857307.3857316",
+      "published_at": "2026-10-28T00:00:00Z",
+      "authors": [
+        "Xhani Marvin Saß",
+        "Jean‐Pierre Seifert"
+      ],
+      "venue": "Hardware and Architectural Support for Security and Privacy",
+      "tags": [
+        "Security and Verification in Computing"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "Secure SD cards claim to keep their data confidential against an adversary who possesses the card, temporarily or persistently, without knowing the authenticating credential. Vendors advertise industrial, governmental, and military uses, with hardware-based encryption safeguarded by strong authentication. Physical theft is one such case, yet the security of these products has never been independently examined. In this work, we examine the secure SD card landscape under the very threat model these products have been designed to withstand. We provide detailed insight into their inner workings and assess the physical security of the two secure SD card families available…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "Secure SD cards claim to keep their data confidential against an adversary who possesses the card, temporarily or persistently, without knowing the authenticating credential.",
+        "Vendors advertise industrial, governmental, and military uses, with hardware-based encryption safeguarded by strong authentication.",
+        "Physical theft is one such case, yet the security of these products has never been independently examined.",
+        "In this work, we examine the secure SD card landscape under the very threat model these products have been designed to withstand.",
+        "We provide detailed insight into their inner workings and assess the physical security of the two secure SD card families available…"
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Secure SD cards claim to keep their data confidential against an adversary who possesses the card, temporarily or persistently, without knowing the authenticating credential. Vendors advertise industrial, governmental, and military uses, with hardware-based encryption safeguarded by strong authentication. Physical theft is one such case, yet the security of these products has never been independently examined. In this work, we examine the secure SD card landscape under the very threat model these products have been designed to withstand. We provide detailed insight into their inner workings and assess the physical security of the two secure SD card families available…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "c8f9a55883a2925c",
+      "kind": "paper",
+      "title": "Voltage Fault Injection Against On-Device Language Models",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1145/3857307.3857310",
+      "published_at": "2026-10-28T00:00:00Z",
+      "authors": [
+        "Anthony Etim",
+        "Jakub M. Szefer"
+      ],
+      "venue": "Hardware and Architectural Support for Security and Privacy",
+      "tags": [
+        "Adversarial Robustness in Machine Learning"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "Small transformer language models are today able to run on microcontrollers, where an attacker with physical access can disturb the supply voltage during text generation. Fault injection studies of neural networks in the past have mostly targeted classifiers and modeled the attacker as flipping a chosen bit of a chosen parameter. A voltage fault injection is instead aimed at corrupting whatever the processor is executing and targets the execution of the model. This work characterizes voltage fault injection against a 4, 192-parameter autoregressive transformer with a key–value (KV) cache on an Arm Cortex-M4. The language model is augmented with triggers that mark six…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "Small transformer language models are today able to run on microcontrollers, where an attacker with physical access can disturb the supply voltage during text generation.",
+        "Fault injection studies of neural networks in the past have mostly targeted classifiers and modeled the attacker as flipping a chosen bit of a chosen parameter.",
+        "A voltage fault injection is instead aimed at corrupting whatever the processor is executing and targets the execution of the model.",
+        "This work characterizes voltage fault injection against a 4, 192-parameter autoregressive transformer with a key–value (KV) cache on an Arm Cortex-M4.",
+        "The language model is augmented with triggers that mark six…"
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Small transformer language models are today able to run on microcontrollers, where an attacker with physical access can disturb the supply voltage during text generation. Fault injection studies of neural networks in the past have mostly targeted classifiers and modeled the attacker as flipping a chosen bit of a chosen parameter. A voltage fault injection is instead aimed at corrupting whatever the processor is executing and targets the execution of the model. This work characterizes voltage fault injection against a 4, 192-parameter autoregressive transformer with a key–value (KV) cache on an Arm Cortex-M4. The language model is augmented with triggers that mark six…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "cb19bffa6e4e5db7",
+      "kind": "paper",
+      "title": "Vision-assisted radar target tracking for non-cooperative aerial vehicles",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1117/12.3136650",
+      "published_at": "2026-10-28T00:00:00Z",
+      "authors": [
+        "Senhao Yin"
+      ],
+      "venue": "International Conference on Image Processing, Object Detection, and Tracking (IPODT)",
+      "tags": [
+        "Target Tracking and Data Fusion in Sensor Networks"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "Perceiving non-cooperative aerial vehicles from an airborne platform requires metric target states without target cooperation. 4D millimeter-wave radar measures three-dimensional position and radial velocity independent of illumination, but low-altitude clutter creates many off-target detections that a radar-only tracker turns into false tracks, and multi-target crossings pose the additional problem of re-identification. This paper presents a vision-assisted 4D-radar tracking pipeline intended for airborne deployment. For each camera frame, the pipeline first selects the most recent radar frame that is not from the future, so that the pairing is causal. Radar points are…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "Perceiving non-cooperative aerial vehicles from an airborne platform requires metric target states without target cooperation.",
+        "4D millimeter-wave radar measures three-dimensional position and radial velocity independent of illumination, but low-altitude clutter creates many off-target detections that a radar-only tracker turns into false tracks, and multi-target crossings pose the additional problem of re-identification.",
+        "This paper presents a vision-assisted 4D-radar tracking pipeline intended for airborne deployment.",
+        "For each camera frame, the pipeline first selects the most recent radar frame that is not from the future, so that the pairing is causal."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Perceiving non-cooperative aerial vehicles from an airborne platform requires metric target states without target cooperation. 4D millimeter-wave radar measures three-dimensional position and radial velocity independent of illumination, but low-altitude clutter creates many off-target detections that a radar-only tracker turns into false tracks, and multi-target crossings pose the additional problem of re-identification. This paper presents a vision-assisted 4D-radar tracking pipeline intended for airborne deployment. For each camera frame, the pipeline first selects the most recent radar frame that is not from the future, so that the pairing is causal. Radar points are…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "16bf98935b5f6f13",
+      "kind": "paper",
+      "title": "Power Side-Channel Attacks on Machine-Learning-based Quantum Error Correction Decoders",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1145/3857307.3857309",
+      "published_at": "2026-10-28T00:00:00Z",
+      "authors": [
+        "Anthony Etim",
+        "Jakub M. Szefer"
+      ],
+      "venue": "Hardware and Architectural Support for Security and Privacy",
+      "tags": [
+        "Cryptographic Implementations and Security"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "Machine learning (ML) decoders are increasingly used in quantum error correction (QEC) to model noise, analyze imperfect syndrome measurements, and replace iterative matching algorithms with a learned inference pass, making them a critical component of the classical control stack of a fault-tolerant quantum computer. Prior security analysis of the ML decoders in the controller stack has addressed integrity and fault-injection attacks on the decoders. This work is the first to explore physical power side-channel attacks on ML decoders. In particular, it studies a convolutional Deep Q-Learning decoder for the distance-5 surface code. This work profiles the decoder to…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "Machine learning (ML) decoders are increasingly used in quantum error correction (QEC) to model noise, analyze imperfect syndrome measurements, and replace iterative matching algorithms with a learned inference pass, making them a critical component of the classical control stack of a fault-tolerant quantum computer.",
+        "Prior security analysis of the ML decoders in the controller stack has addressed integrity and fault-injection attacks on the decoders.",
+        "This work is the first to explore physical power side-channel attacks on ML decoders.",
+        "In particular, it studies a convolutional Deep Q-Learning decoder for the distance-5 surface code."
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Machine learning (ML) decoders are increasingly used in quantum error correction (QEC) to model noise, analyze imperfect syndrome measurements, and replace iterative matching algorithms with a learned inference pass, making them a critical component of the classical control stack of a fault-tolerant quantum computer. Prior security analysis of the ML decoders in the controller stack has addressed integrity and fault-injection attacks on the decoders. This work is the first to explore physical power side-channel attacks on ML decoders. In particular, it studies a convolutional Deep Q-Learning decoder for the distance-5 surface code. This work profiles the decoder to…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "012010d764217ead",
+      "kind": "paper",
+      "title": "A Huber-based robust tracking algorithm for orbital satellites",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1117/12.3136425",
+      "published_at": "2026-10-28T00:00:00Z",
+      "authors": [
+        "Wei Zhang",
+        "Tianzhi Yu"
+      ],
+      "venue": "International Conference on Image Processing, Object Detection, and Tracking (IPODT)",
+      "tags": [
+        "Target Tracking and Data Fusion in Sensor Networks"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "In satellite tracking, atmospheric disturbances and sensor malfunctions frequently induce heavy-tailed distributions or outliers in the measurement noise, which consequently degrade the estimation accuracy of the standard converted measurement Kalman filter (CMKF) and may even lead to filter divergence. Although the CMKF transforms angular measurements into Cartesian coordinates to accommodate linear filtering frameworks, the resultant noise correlation and outlier contamination severely deteriorate the state estimation performance. To address this issue, this paper proposes a robust CMKF tracking algorithm based on the Huber methodology, designated as the Huber-based…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "In satellite tracking, atmospheric disturbances and sensor malfunctions frequently induce heavy-tailed distributions or outliers in the measurement noise, which consequently degrade the estimation accuracy of the standard converted measurement Kalman filter (CMKF) and may even lead to filter divergence.",
+        "Although the CMKF transforms angular measurements into Cartesian coordinates to accommodate linear filtering frameworks, the resultant noise correlation and outlier contamination severely deteriorate the state estimation performance.",
+        "To address this issue, this paper proposes a robust CMKF tracking algorithm based on the Huber methodology, designated as the Huber-based…"
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "In satellite tracking, atmospheric disturbances and sensor malfunctions frequently induce heavy-tailed distributions or outliers in the measurement noise, which consequently degrade the estimation accuracy of the standard converted measurement Kalman filter (CMKF) and may even lead to filter divergence. Although the CMKF transforms angular measurements into Cartesian coordinates to accommodate linear filtering frameworks, the resultant noise correlation and outlier contamination severely deteriorate the state estimation performance. To address this issue, this paper proposes a robust CMKF tracking algorithm based on the Huber methodology, designated as the Huber-based…"
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "ee7aa62282a8883a",
+      "kind": "paper",
+      "title": "Unfenced: Atomic Guards Against Spectre: ISA-Level Lock-Free Mitigation for Multi-Core RISC-V Processors",
+      "source": "OpenAlex",
+      "source_url": "https://doi.org/10.1145/3857307.3857311",
+      "published_at": "2026-10-28T00:00:00Z",
+      "authors": [
+        "Muhammad Awais",
+        "Maria Mushtaq",
+        "Lírida Naviner",
+        "Jawad Haj-Yahya",
+        "Florent Bruguier"
+      ],
+      "venue": "Hardware and Architectural Support for Security and Privacy",
+      "tags": [
+        "Security and Verification in Computing"
+      ],
+      "verification": "OpenAlex 收录 · 开放获取状态已标注",
+      "summary": "Speculative execution attacks, such as Spectre Variant 1, leak sensitive data through transient microarchitectural effects. This paper introduces batched atomic guards: ISA-level software wrappers that use the lr.w.aq/sc.w.rl acquire/release pair to re-validate a security bound once per N = 16 iterations on a dedicated cache-aligned guard cell, in place of fence barriers. On the SiFive HiFive Premier P550 quad-core board, a fence wrapper imposes a 3.4 × execution-time overhead (25.41 ms vs. 7.50 ms unwrapped); the batched guard reduces this to 1.2 × (8.93 ms), 2.8 × faster than the fence wrapper. The batched guard records 0.00% SC failures when the attacker writes a…",
+      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
+      "fetch_status": "abstract-only",
+      "key_points": [
+        "Speculative execution attacks, such as Spectre Variant 1, leak sensitive data through transient microarchitectural effects.",
+        "This paper introduces batched atomic guards: ISA-level software wrappers that use the lr.w.aq/sc.w.rl acquire/release pair to re-validate a security bound once per N = 16 iterations on a dedicated cache-aligned guard cell, in place of fence barriers.",
+        "On the SiFive HiFive Premier P550 quad-core board, a fence wrapper imposes a 3.4 × execution-time overhead (25.41 ms vs.",
+        "7.50 ms unwrapped); the batched guard reduces this to 1.2 × (8.93 ms), 2.8 × faster than the fence wrapper.",
+        "The batched guard records 0.00% SC failures when the attacker writes a…"
+      ],
+      "sections": [
+        {
+          "title": "摘要",
+          "body": "Speculative execution attacks, such as Spectre Variant 1, leak sensitive data through transient microarchitectural effects. This paper introduces batched atomic guards: ISA-level software wrappers that use the lr.w.aq/sc.w.rl acquire/release pair to re-validate a security bound once per N = 16 iterations on a dedicated cache-aligned guard cell, in place of fence barriers. On the SiFive HiFive Premier P550 quad-core board, a fence wrapper imposes a 3.4 × execution-time overhead (25.41 ms vs. 7.50 ms unwrapped); the batched guard reduces this to 1.2 × (8.93 ms), 2.8 × faster than the fence wrapper. The batched guard records 0.00% SC failures when the attacker writes a…"
         }
       ],
       "reading_minutes": 1
@@ -1425,529 +1870,6 @@
         {
           "title": "摘要",
           "body": "The security of the NTRU lattice exhibits a fatigue transition at a critical modulus q * . When q q * , recovering the dense sublattice spanned by all secret rotations (DSD) becomes cheaper. For homogeneous secrets, this crossover is well calibrated: q * ≈ 0.004 n 2.484 for ternary keys, and q * ≈ 0.0058 σ 2 n 2.484 for Gaussian secrets of variance σ 2 . NTRU parameters in fully homomorphic encryption (FHE) deviate from this homogeneous model: the secret has the structured form f = 1 + pf' , and f' can be chosen as a sparse polynomial of fixed weight h. We show that sparsity acts on the fatigue transition through two distinct channels. Geometrically, the DSD volume…"
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "da0d87d1f05d6822",
-      "kind": "paper",
-      "title": "PQC-rs: Principled Design and Continuous Assurance for Post-Quantum Cryptography in Rust (Short Paper)",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.1145/3839338.3857256",
-      "published_at": "2026-10-26T00:00:00Z",
-      "authors": [
-        "Rosario Cammarota",
-        "Caroline Wang"
-      ],
-      "venue": "ACM Conference on Post-Quantum and Quantum-based Security",
-      "tags": [
-        "Cryptography and Data Security",
-        "post-quantum cryptography",
-        "Rust implementation",
-        "ML-KEM"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "Post-quantum cryptography (PQC) is entering real-world deployment. As systems adopt PQC, they must be able to change algorithms and implementations without losing correctness, interoperability, or assurance. We present PQC-rs, an open-source, MIT-licensed Rust implementation of ML-KEM, ML-DSA, and SLH-DSA designed around this problem. Applications use common capabilities such as key establishment and signing, while differences between algorithms and providers remain visible where they matter for correctness, security, and performance. PQC-rs ties this design to continuous assurance of the software version that implements it. The evaluated version reproduces all 1,767…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "abstract-only",
-      "key_points": [
-        "Post-quantum cryptography (PQC) is entering real-world deployment.",
-        "As systems adopt PQC, they must be able to change algorithms and implementations without losing correctness, interoperability, or assurance.",
-        "We present PQC-rs, an open-source, MIT-licensed Rust implementation of ML-KEM, ML-DSA, and SLH-DSA designed around this problem.",
-        "Applications use common capabilities such as key establishment and signing, while differences between algorithms and providers remain visible where they matter for correctness, security, and performance.",
-        "PQC-rs ties this design to continuous assurance of the software version that implements it."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Post-quantum cryptography (PQC) is entering real-world deployment. As systems adopt PQC, they must be able to change algorithms and implementations without losing correctness, interoperability, or assurance. We present PQC-rs, an open-source, MIT-licensed Rust implementation of ML-KEM, ML-DSA, and SLH-DSA designed around this problem. Applications use common capabilities such as key establishment and signing, while differences between algorithms and providers remain visible where they matter for correctness, security, and performance. PQC-rs ties this design to continuous assurance of the software version that implements it. The evaluated version reproduces all 1,767…"
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "3ff88e8a39bc9edf",
-      "kind": "paper",
-      "title": "Sequential vs. Synchronized Entanglement Swapping: QKD Secret-Key Rate under Optimized Link-Layer Control",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.1145/3839338.3857253",
-      "published_at": "2026-10-26T00:00:00Z",
-      "authors": [
-        "Priyam Srivastava",
-        "Akshat R. Sabavat",
-        "Siddharth Jain",
-        "Alan Andrew Scheller-Wolf",
-        "SRIDHAR R. TAYUR"
-      ],
-      "venue": "ACM Conference on Post-Quantum and Quantum-based Security",
-      "tags": [
-        "Quantum Information and Cryptography",
-        "entanglement swapping",
-        "quantum key distribution",
-        "secret key rate"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "Quantum repeater chains build long-distance entanglement for quantum key distribution (QKD) by creating pairs on short links and joining them through entanglement swapping. Because stored pairs lose fidelity while they wait, swap timing can affect the secret-key rate. We study how network-layer swap scheduling affects six-state QKD on a simulated four-hop chain under an idealized Werner-state noise model. We compare a sequential (swap-and-wait) discipline, which builds and stores partial chains, with a synchronized (wait-and-swap) discipline, which waits until all links are ready before swapping. Both use the same reinforcement-learned link controllers, isolating the…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "abstract-only",
-      "key_points": [
-        "Quantum repeater chains build long-distance entanglement for quantum key distribution (QKD) by creating pairs on short links and joining them through entanglement swapping.",
-        "Because stored pairs lose fidelity while they wait, swap timing can affect the secret-key rate.",
-        "We study how network-layer swap scheduling affects six-state QKD on a simulated four-hop chain under an idealized Werner-state noise model.",
-        "We compare a sequential (swap-and-wait) discipline, which builds and stores partial chains, with a synchronized (wait-and-swap) discipline, which waits until all links are ready before swapping.",
-        "Both use the same reinforcement-learned link controllers, isolating the…"
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Quantum repeater chains build long-distance entanglement for quantum key distribution (QKD) by creating pairs on short links and joining them through entanglement swapping. Because stored pairs lose fidelity while they wait, swap timing can affect the secret-key rate. We study how network-layer swap scheduling affects six-state QKD on a simulated four-hop chain under an idealized Werner-state noise model. We compare a sequential (swap-and-wait) discipline, which builds and stores partial chains, with a synchronized (wait-and-swap) discipline, which waits until all links are ready before swapping. Both use the same reinforcement-learned link controllers, isolating the…"
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "388e9394bf679240",
-      "kind": "paper",
-      "title": "Pinpointing Super-Quadratic Quantum Enumeration Speedups",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.1145/3839338.3857257",
-      "published_at": "2026-10-26T00:00:00Z",
-      "authors": [
-        "Carsten Schubert",
-        "Niklas Paskarbeit",
-        "Maximilian J. Kramer",
-        "Jean‐Pierre Seifert",
-        "Marian Margraf"
-      ],
-      "venue": "ACM Conference on Post-Quantum and Quantum-based Security",
-      "tags": [
-        "Quantum Computing Algorithms and Architecture",
-        "quantum search",
-        "product distribution",
-        "cold boot attacks"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "In cryptanalysis and beyond, presumably the most basic problem is search within an unstructured space: Given a finite set of elements K, find a marked element using an efficiently evaluable predicate. Grover's algorithm [16] gives an optimal quadratic query advantage for black-box search. Cryptanalytic settings, however, often come with additional probabilistic advice over the candidate space. These distributions frequently have product form, e.g. when probabilities for independent key coordinates are derived from side-channel leakage. Classically, simply querying the predicate function in the given likelihood order is optimal to find the correct result as fast as…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "abstract-only",
-      "key_points": [
-        "In cryptanalysis and beyond, presumably the most basic problem is search within an unstructured space: Given a finite set of elements K, find a marked element using an efficiently evaluable predicate.",
-        "Grover's algorithm [16] gives an optimal quadratic query advantage for black-box search.",
-        "Cryptanalytic settings, however, often come with additional probabilistic advice over the candidate space.",
-        "These distributions frequently have product form, e.g. when probabilities for independent key coordinates are derived from side-channel leakage.",
-        "Classically, simply querying the predicate function in the given likelihood order is optimal to find the correct result as fast as…"
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "In cryptanalysis and beyond, presumably the most basic problem is search within an unstructured space: Given a finite set of elements K, find a marked element using an efficiently evaluable predicate. Grover's algorithm [16] gives an optimal quadratic query advantage for black-box search. Cryptanalytic settings, however, often come with additional probabilistic advice over the candidate space. These distributions frequently have product form, e.g. when probabilities for independent key coordinates are derived from side-channel leakage. Classically, simply querying the predicate function in the given likelihood order is optimal to find the correct result as fast as…"
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "346c17dfddf08706",
-      "kind": "paper",
-      "title": "Certified Confinement: Kernel-Checked Validation of Untrusted Quantum-Cloud Transpiler Output",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.1145/3839338.3857240",
-      "published_at": "2026-10-26T00:00:00Z",
-      "authors": [
-        "Ali Hamza Malik",
-        "Muhammad Taqi Raza"
-      ],
-      "venue": "ACM Conference on Post-Quantum and Quantum-based Security",
-      "tags": [
-        "Quantum Computing Algorithms and Architecture",
-        "circuit validation",
-        "IBM quantum processors",
-        "Lean formal verification"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "Cloud providers are adopting spatial multi-tenancy to improve quantum processing unit (QPU) utilization. However, this introduces cross-tenant vulnerabilities: otherwise hardware-legal circuits may place operations adjacent to co-tenant qubits, creating a leakage channel via physical coupling. Because tenants cannot safely trust cloud transpilers, we introduce an efficient client-side validator for buffered gate-support confinement. Given a device coupling graph, a forbidden region, and a buffer radius k, the validator rejects circuits containing non-identity gates within the forbidden zone or its k-hop neighborhood. We formally establish this structural guarantee via a…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "abstract-only",
-      "key_points": [
-        "Cloud providers are adopting spatial multi-tenancy to improve quantum processing unit (QPU) utilization.",
-        "However, this introduces cross-tenant vulnerabilities: otherwise hardware-legal circuits may place operations adjacent to co-tenant qubits, creating a leakage channel via physical coupling.",
-        "Because tenants cannot safely trust cloud transpilers, we introduce an efficient client-side validator for buffered gate-support confinement.",
-        "Given a device coupling graph, a forbidden region, and a buffer radius k, the validator rejects circuits containing non-identity gates within the forbidden zone or its k-hop neighborhood.",
-        "We formally establish this structural guarantee via a…"
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Cloud providers are adopting spatial multi-tenancy to improve quantum processing unit (QPU) utilization. However, this introduces cross-tenant vulnerabilities: otherwise hardware-legal circuits may place operations adjacent to co-tenant qubits, creating a leakage channel via physical coupling. Because tenants cannot safely trust cloud transpilers, we introduce an efficient client-side validator for buffered gate-support confinement. Given a device coupling graph, a forbidden region, and a buffer radius k, the validator rejects circuits containing non-identity gates within the forbidden zone or its k-hop neighborhood. We formally establish this structural guarantee via a…"
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "ee4ecd16754f627e",
-      "kind": "paper",
-      "title": "On linearly derived quantum samples for LWE",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.1145/3839338.3857263",
-      "published_at": "2026-10-26T00:00:00Z",
-      "authors": [
-        "Niklas Pirnay",
-        "Jean‐Pierre Seifert"
-      ],
-      "venue": "ACM Conference on Post-Quantum and Quantum-based Security",
-      "tags": [
-        "Quantum Computing Algorithms and Architecture",
-        "learning with errors",
-        "learning parity with noise",
-        "quantum state preparation"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "It is known that the Learning with Errors (LWE) problem becomes easy using the Field Bernstein-Vazirani (FBV) quantum algorithm with access to quantum samples of the LWE function. We revisit a suggested route to approximate such a state: coherently superposing linear combinations of classical LWE samples and erasing the combination index register. For the full q-ary coefficient set Fmq, we show that even an ideal index-erased state does not have the required behavior: Field Bernstein-Vazirani either rejects or returns a fixed noisy translate of the secret. We then analyze more general coefficient families U ⊆ Fmq and their true-secret success probabilities. In the binary…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "abstract-only",
-      "key_points": [
-        "It is known that the Learning with Errors (LWE) problem becomes easy using the Field Bernstein-Vazirani (FBV) quantum algorithm with access to quantum samples of the LWE function.",
-        "We revisit a suggested route to approximate such a state: coherently superposing linear combinations of classical LWE samples and erasing the combination index register.",
-        "For the full q-ary coefficient set Fmq, we show that even an ideal index-erased state does not have the required behavior: Field Bernstein-Vazirani either rejects or returns a fixed noisy translate of the secret.",
-        "We then analyze more general coefficient families U ⊆ Fmq and their true-secret success probabilities."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "It is known that the Learning with Errors (LWE) problem becomes easy using the Field Bernstein-Vazirani (FBV) quantum algorithm with access to quantum samples of the LWE function. We revisit a suggested route to approximate such a state: coherently superposing linear combinations of classical LWE samples and erasing the combination index register. For the full q-ary coefficient set Fmq, we show that even an ideal index-erased state does not have the required behavior: Field Bernstein-Vazirani either rejects or returns a fixed noisy translate of the secret. We then analyze more general coefficient families U ⊆ Fmq and their true-secret success probabilities. In the binary…"
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "3a948770223f8930",
-      "kind": "paper",
-      "title": "Poster: Post-Quantum Resilience by Design: VERTEX, a Vertically Integrated Framework for NextG Cellular Networks",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.1145/3839338.3857269",
-      "published_at": "2026-10-26T00:00:00Z",
-      "authors": [
-        "Imtiaz Karim",
-        "Rouzbeh Behnia",
-        "Attila A. Yavuz",
-        "Elisa Bertino"
-      ],
-      "venue": "ACM Conference on Post-Quantum and Quantum-based Security",
-      "tags": [
-        "Cryptography and Data Security",
-        "post-quantum cryptography",
-        "network trust"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "Next-generation (NextG) cellular networks face two converging challenges: the transition to post-quantum (PQ) security and the erosion of centralized trust as base stations become more exposed, cores span multiple administrative domains, and network operation increasingly incorporates distributed intelligence. Simply replacing classical cryptography with standardized PQ primitives is insufficient because NextG protocols impose tight communication, latency, trust, and deployment constraints. Our PQ-secure base-station bootstrapping measurements from eight live commercial cells show that SIB1 leaves only 252–264 bytes for authentication, far below the size required by…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "abstract-only",
-      "key_points": [
-        "Next-generation (NextG) cellular networks face two converging challenges: the transition to post-quantum (PQ) security and the erosion of centralized trust as base stations become more exposed, cores span multiple administrative domains, and network operation increasingly incorporates distributed intelligence.",
-        "Simply replacing classical cryptography with standardized PQ primitives is insufficient because NextG protocols impose tight communication, latency, trust, and deployment constraints.",
-        "Our PQ-secure base-station bootstrapping measurements from eight live commercial cells show that SIB1 leaves only 252–264 bytes for authentication, far below the size required by…"
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Next-generation (NextG) cellular networks face two converging challenges: the transition to post-quantum (PQ) security and the erosion of centralized trust as base stations become more exposed, cores span multiple administrative domains, and network operation increasingly incorporates distributed intelligence. Simply replacing classical cryptography with standardized PQ primitives is insufficient because NextG protocols impose tight communication, latency, trust, and deployment constraints. Our PQ-secure base-station bootstrapping measurements from eight live commercial cells show that SIB1 leaves only 252–264 bytes for authentication, far below the size required by…"
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "101f922652eae087",
-      "kind": "paper",
-      "title": "Multi-client Delegated Verifiable Blind Quantum Computing",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.1145/3839338.3857244",
-      "published_at": "2026-10-26T00:00:00Z",
-      "authors": [
-        "Matthew T. Prest",
-        "Rosario Gennaro"
-      ],
-      "venue": "ACM Conference on Post-Quantum and Quantum-based Security",
-      "tags": [
-        "Quantum Information and Cryptography",
-        "input privacy",
-        "collusion resistance"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "We construct a multi-Client verifiable blind delegated quantum computing (VBDQC) protocol in which M classical Verifier Clients jointly delegate a public quantum circuit acting on their combined private inputs to two quantum-capable Provers sharing entanglement but having no direct communication channel. We begin by modifying the single-Client, entanglement-based CGJV Verifier-on-a-Leash protocol. We then prove simulator-based blind verifiability for the modified protocol using the abstract/constructive cryptography framework. We adapt the DFPR upward-reduction chain to the two-Prover setting, constructing a no-direct-communication simulator architecture. We then extend…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "abstract-only",
-      "key_points": [
-        "We construct a multi-Client verifiable blind delegated quantum computing (VBDQC) protocol in which M classical Verifier Clients jointly delegate a public quantum circuit acting on their combined private inputs to two quantum-capable Provers sharing entanglement but having no direct communication channel.",
-        "We begin by modifying the single-Client, entanglement-based CGJV Verifier-on-a-Leash protocol.",
-        "We then prove simulator-based blind verifiability for the modified protocol using the abstract/constructive cryptography framework.",
-        "We adapt the DFPR upward-reduction chain to the two-Prover setting, constructing a no-direct-communication simulator architecture."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "We construct a multi-Client verifiable blind delegated quantum computing (VBDQC) protocol in which M classical Verifier Clients jointly delegate a public quantum circuit acting on their combined private inputs to two quantum-capable Provers sharing entanglement but having no direct communication channel. We begin by modifying the single-Client, entanglement-based CGJV Verifier-on-a-Leash protocol. We then prove simulator-based blind verifiability for the modified protocol using the abstract/constructive cryptography framework. We adapt the DFPR upward-reduction chain to the two-Prover setting, constructing a no-direct-communication simulator architecture. We then extend…"
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "ac17f39954961ffd",
-      "kind": "paper",
-      "title": "Hybrid Quantum–Computational Key Distribution with Reduced Assumptions (Short Paper)",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.1145/3839338.3857249",
-      "published_at": "2026-10-26T00:00:00Z",
-      "authors": [
-        "Jean Snyman",
-        "Ioana Boureanu",
-        "Daniel Gardham"
-      ],
-      "venue": "ACM Conference on Post-Quantum and Quantum-based Security",
-      "tags": [
-        "Quantum Information and Cryptography",
-        "quantum key distribution",
-        "harvest-now-decrypt-later attacks",
-        "pseudorandom functions"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "The HM-QCT protocol, presented by Mazzoncini et al. in 2025, uses a unique feature of quantum information to achieve quantum key distribution (QKD) with secret-key rates beyond standard constructions. The protocol has been designed in the hybrid quantum-computational time-lock (QCT) security model which imposes two independent (but related) restrictions on the attacker: (1) a computationally secure encryption scheme which a successful attacker must break within a narrow timeframe and (2) an assumption that the attacker can only store quantum information with low fidelity. We first review the protocol and its two-assumption model by presenting, in explicit form, the two…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "abstract-only",
-      "key_points": [
-        "The HM-QCT protocol, presented by Mazzoncini et al. in 2025, uses a unique feature of quantum information to achieve quantum key distribution (QKD) with secret-key rates beyond standard constructions.",
-        "The protocol has been designed in the hybrid quantum-computational time-lock (QCT) security model which imposes two independent (but related) restrictions on the attacker: (1) a computationally secure encryption scheme which a successful attacker must break within a narrow timeframe and (2) an assumption that the attacker can only store quantum information…",
-        "We first review the protocol and its two-assumption model by presenting, in explicit form, the two…"
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "The HM-QCT protocol, presented by Mazzoncini et al. in 2025, uses a unique feature of quantum information to achieve quantum key distribution (QKD) with secret-key rates beyond standard constructions. The protocol has been designed in the hybrid quantum-computational time-lock (QCT) security model which imposes two independent (but related) restrictions on the attacker: (1) a computationally secure encryption scheme which a successful attacker must break within a narrow timeframe and (2) an assumption that the attacker can only store quantum information with low fidelity. We first review the protocol and its two-assumption model by presenting, in explicit form, the two…"
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "0f467dade9df6464",
-      "kind": "paper",
-      "title": "Poster: Post-Quantum Migration in 5G: Security Dependencies, Challenges, and Open Questions",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.1145/3839338.3857250",
-      "published_at": "2026-10-26T00:00:00Z",
-      "authors": [
-        "Ramkrishna Saha",
-        "Imtiaz Karim",
-        "Bhavani M. Thuraisingham"
-      ],
-      "venue": "ACM Conference on Post-Quantum and Quantum-based Security",
-      "tags": [
-        "Quantum Information and Cryptography",
-        "post-quantum migration",
-        "5G",
-        "post-quantum cryptography"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "Preparing 5G for quantum adversaries requires more than substituting quantum-resistant algorithms: migration must preserve security while meeting operational constraints that differ across network functions. This poster presents an area-based framework covering bootstrapping, subscriber identity protection, primary authentication, and core-network communications, focusing on Transport Layer Security (TLS) protection of service-based interfaces (SBIs). The framework maps existing mechanisms, security objectives, candidate changes, and deployment constraints. Building on this framework, we propose a unified benchmark with common evaluation principles and area-specific…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "abstract-only",
-      "key_points": [
-        "Preparing 5G for quantum adversaries requires more than substituting quantum-resistant algorithms: migration must preserve security while meeting operational constraints that differ across network functions.",
-        "This poster presents an area-based framework covering bootstrapping, subscriber identity protection, primary authentication, and core-network communications, focusing on Transport Layer Security (TLS) protection of service-based interfaces (SBIs).",
-        "The framework maps existing mechanisms, security objectives, candidate changes, and deployment constraints.",
-        "Building on this framework, we propose a unified benchmark with common evaluation principles and area-specific…"
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Preparing 5G for quantum adversaries requires more than substituting quantum-resistant algorithms: migration must preserve security while meeting operational constraints that differ across network functions. This poster presents an area-based framework covering bootstrapping, subscriber identity protection, primary authentication, and core-network communications, focusing on Transport Layer Security (TLS) protection of service-based interfaces (SBIs). The framework maps existing mechanisms, security objectives, candidate changes, and deployment constraints. Building on this framework, we propose a unified benchmark with common evaluation principles and area-specific…"
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "efa2a2ab0711321a",
-      "kind": "paper",
-      "title": "Fuzzing, Auditing, and Formally Verifying Stateful Hash-Based Signature Verification in liboqs (Short Paper)",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.1145/3839338.3857246",
-      "published_at": "2026-10-26T00:00:00Z",
-      "authors": [
-        "Vishnu Ajith",
-        "Muhammad Ibrahim",
-        "Muhammed Sihan Haroon",
-        "Rajagopal Nagarajan"
-      ],
-      "venue": "ACM Conference on Post-Quantum and Quantum-based Security",
-      "tags": [
-        "Cryptographic Implementations and Security",
-        "post-quantum cryptography",
-        "hash-based signatures",
-        "XMSS"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "Post-quantum cryptography (PQC) migration now has fixed deadlines. Executive Order 14412 requires U.S. federal systems to adopt post-quantum key establishment by 2030 and post-quantum signatures by 2031, NSA's CNSA 2.0 already lists the stateful hash-based schemes XMSS and LMS for firmware signing, and Google, Microsoft, and Cloudflare all target 2029. Meeting these deadlines reduces risk only if the shared libraries organizations adopt are correct, and PQC implementations have seen far less adversarial testing than classical libraries such as OpenSSL. We study XMSS and LMS signature verification in liboqs, the Open Quantum Safe reference C library behind PQC integrations…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "abstract-only",
-      "key_points": [
-        "Post-quantum cryptography (PQC) migration now has fixed deadlines.",
-        "Executive Order 14412 requires U.S. federal systems to adopt post-quantum key establishment by 2030 and post-quantum signatures by 2031, NSA's CNSA 2.0 already lists the stateful hash-based schemes XMSS and LMS for firmware signing, and Google, Microsoft, and Cloudflare all target 2029.",
-        "Meeting these deadlines reduces risk only if the shared libraries organizations adopt are correct, and PQC implementations have seen far less adversarial testing than classical libraries such as OpenSSL.",
-        "We study XMSS and LMS signature verification in liboqs, the Open Quantum Safe reference C library behind PQC integrations…"
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Post-quantum cryptography (PQC) migration now has fixed deadlines. Executive Order 14412 requires U.S. federal systems to adopt post-quantum key establishment by 2030 and post-quantum signatures by 2031, NSA's CNSA 2.0 already lists the stateful hash-based schemes XMSS and LMS for firmware signing, and Google, Microsoft, and Cloudflare all target 2029. Meeting these deadlines reduces risk only if the shared libraries organizations adopt are correct, and PQC implementations have seen far less adversarial testing than classical libraries such as OpenSSL. We study XMSS and LMS signature verification in liboqs, the Open Quantum Safe reference C library behind PQC integrations…"
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "8317218db2a2a843",
-      "kind": "paper",
-      "title": "QUAPLA : a library for quantum exact linear algebra",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.1145/3839338.3857237",
-      "published_at": "2026-10-26T00:00:00Z",
-      "authors": [
-        "Ulysse Dupont-Latapie",
-        "Ludovic Perret"
-      ],
-      "venue": "ACM Conference on Post-Quantum and Quantum-based Security",
-      "tags": [
-        "Quantum Computing Algorithms and Architecture",
-        "quantum linear algebra",
-        "finite field arithmetic",
-        "quantum circuit implementation"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "In this paper, we introduce QUAPLA (Quantum Python Linear Algebra), a new Python package that implements basic finite field arithmetic on scalars and matrices on a quantum computer. More precisely, QUAPLA is a new module of QARTON [36], a recent general-purpose software library for quantum cryptanalysis. QUAPLA extends QARTON by providing, in particular, quantum circuit implementations of the Berlekamp-Massey algorithm and Wiedemann's algorithm for fields of odd characteristic and their extensions, as well as parametrized resource estimates for these circuits.",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "abstract-only",
-      "key_points": [
-        "In this paper, we introduce QUAPLA (Quantum Python Linear Algebra), a new Python package that implements basic finite field arithmetic on scalars and matrices on a quantum computer.",
-        "More precisely, QUAPLA is a new module of QARTON [36], a recent general-purpose software library for quantum cryptanalysis.",
-        "QUAPLA extends QARTON by providing, in particular, quantum circuit implementations of the Berlekamp-Massey algorithm and Wiedemann's algorithm for fields of odd characteristic and their extensions, as well as parametrized resource estimates for these circuits."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "In this paper, we introduce QUAPLA (Quantum Python Linear Algebra), a new Python package that implements basic finite field arithmetic on scalars and matrices on a quantum computer. More precisely, QUAPLA is a new module of QARTON [36], a recent general-purpose software library for quantum cryptanalysis. QUAPLA extends QARTON by providing, in particular, quantum circuit implementations of the Berlekamp-Massey algorithm and Wiedemann's algorithm for fields of odd characteristic and their extensions, as well as parametrized resource estimates for these circuits."
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "5f2da145949092b0",
-      "kind": "paper",
-      "title": "Poster:The Galois Orbit Cannot Help the Primal Attack on Module-LWE",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.1145/3839338.3857268",
-      "published_at": "2026-10-26T00:00:00Z",
-      "authors": [
-        "Narayan Ji Mishra",
-        "Shivam Kumar",
-        "Vireshwar Kumar",
-        "Ashok Kumar Bhateja"
-      ],
-      "venue": "ACM Conference on Post-Quantum and Quantum-based Security",
-      "tags": [
-        "Cryptography and Data Security",
-        "module learning with errors",
-        "Galois orbits",
-        "unimodular lattices"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "The automorphisms x ↦ xj of ℤ[x]/(xn + 1) carry a Module-LWE instance to another valid instance, preserve the error distribution exactly, and act as isometries, so a key appears to supply n free samples. We prove that this cannot reduce the block size required by the primal attack. The action is a signed permutation, so each rotated instance yields a unimodular isometric image of the original lattice, fixing every quantity the success condition sees. Combining the orbit fails too: intersecting discards the secret, and summing generically yields all of ℤ2m+1. Ring structure does help against overstretched NTRU and G-stable modules because there the lattice is stabilized by…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "abstract-only",
-      "key_points": [
-        "The automorphisms x ↦ xj of ℤ[x]/(xn + 1) carry a Module-LWE instance to another valid instance, preserve the error distribution exactly, and act as isometries, so a key appears to supply n free samples.",
-        "We prove that this cannot reduce the block size required by the primal attack.",
-        "The action is a signed permutation, so each rotated instance yields a unimodular isometric image of the original lattice, fixing every quantity the success condition sees.",
-        "Combining the orbit fails too: intersecting discards the secret, and summing generically yields all of ℤ2m+1.",
-        "Ring structure does help against overstretched NTRU and G-stable modules because there the lattice is stabilized by…"
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "The automorphisms x ↦ xj of ℤ[x]/(xn + 1) carry a Module-LWE instance to another valid instance, preserve the error distribution exactly, and act as isometries, so a key appears to supply n free samples. We prove that this cannot reduce the block size required by the primal attack. The action is a signed permutation, so each rotated instance yields a unimodular isometric image of the original lattice, fixing every quantity the success condition sees. Combining the orbit fails too: intersecting discards the secret, and summing generically yields all of ℤ2m+1. Ring structure does help against overstretched NTRU and G-stable modules because there the lattice is stabilized by…"
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "bf1fc290f112b693",
-      "kind": "paper",
-      "title": "QuantumScouter: Reinforcement Learning-Based Optimization of Variational Quantum Circuits for Differential Cryptanalysis",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.1145/3839338.3857245",
-      "published_at": "2026-10-26T00:00:00Z",
-      "authors": [
-        "Gilsang Ahn",
-        "Insung Kim",
-        "Jiwoo Baek",
-        "Dong‐Jae Lee",
-        "Changmin Lee"
-      ],
-      "venue": "ACM Conference on Post-Quantum and Quantum-based Security",
-      "tags": [
-        "Cryptographic Implementations and Security",
-        "differential cryptanalysis",
-        "variational quantum circuits",
-        "quantum machine learning"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "Classical deep learning for differential cryptanalysis requires millions of ciphertext pairs, rendering attacks infeasible or easily detectable. This work overcomes this data limitation by introducing quantum differential distinguishers, enabling a practical attacker model where executing few queries is feasible. We design these distinguishers via quantum machine learning based on variational quantum circuits. To address circuit design challenges, we propose QuantumScouter, a reinforcement learning method that discovers compact quantum circuits. Unlike prior work, QuantumScouter explicitly targets metrics like gate count and circuit depth, producing circuits suitable for…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "abstract-only",
-      "key_points": [
-        "Classical deep learning for differential cryptanalysis requires millions of ciphertext pairs, rendering attacks infeasible or easily detectable.",
-        "This work overcomes this data limitation by introducing quantum differential distinguishers, enabling a practical attacker model where executing few queries is feasible.",
-        "We design these distinguishers via quantum machine learning based on variational quantum circuits.",
-        "To address circuit design challenges, we propose QuantumScouter, a reinforcement learning method that discovers compact quantum circuits.",
-        "Unlike prior work, QuantumScouter explicitly targets metrics like gate count and circuit depth, producing circuits suitable for…"
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Classical deep learning for differential cryptanalysis requires millions of ciphertext pairs, rendering attacks infeasible or easily detectable. This work overcomes this data limitation by introducing quantum differential distinguishers, enabling a practical attacker model where executing few queries is feasible. We design these distinguishers via quantum machine learning based on variational quantum circuits. To address circuit design challenges, we propose QuantumScouter, a reinforcement learning method that discovers compact quantum circuits. Unlike prior work, QuantumScouter explicitly targets metrics like gate count and circuit depth, producing circuits suitable for…"
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "52e5dc27f0220219",
-      "kind": "paper",
-      "title": "Cryptographic Migration with Implicit Dependencies",
-      "source": "OpenAlex",
-      "source_url": "https://doi.org/10.1145/3839338.3857243",
-      "published_at": "2026-10-26T00:00:00Z",
-      "authors": [
-        "Eunisse Nzetchuen",
-        "Bodo Igler",
-        "Daniel Loebenberger",
-        "Marc Stöttinger"
-      ],
-      "venue": "ACM Conference on Post-Quantum and Quantum-based Security",
-      "tags": [
-        "Cryptography and Data Security",
-        "post-quantum cryptography",
-        "cryptographic migration",
-        "dependency graph"
-      ],
-      "verification": "OpenAlex 收录 · 开放获取状态已标注",
-      "summary": "Migrating complex distributed systems to post-quantum cryptography (PQC) is hard because cryptographic assets and system components are connected by numerous dependencies. Existing inventory approaches, including those based on Cryptographic Bills of Materials (CBOMs), capture only explicitly observable relations, and therefore miss dependencies arising from domain-specific knowledge, system behavior, or operational constraints. We discuss different types of dependencies and propose a formal framework and methodology for detecting them across the components of a complex system, thereby supporting migration towards PQC algorithms. The methodology is based on a dependency…",
-      "rights_note": "仅缓存明确开放获取来源的 PDF；作者、出处与原始链接保持可见。",
-      "fetch_status": "abstract-only",
-      "key_points": [
-        "Migrating complex distributed systems to post-quantum cryptography (PQC) is hard because cryptographic assets and system components are connected by numerous dependencies.",
-        "Existing inventory approaches, including those based on Cryptographic Bills of Materials (CBOMs), capture only explicitly observable relations, and therefore miss dependencies arising from domain-specific knowledge, system behavior, or operational constraints.",
-        "We discuss different types of dependencies and propose a formal framework and methodology for detecting them across the components of a complex system, thereby supporting migration towards PQC algorithms."
-      ],
-      "sections": [
-        {
-          "title": "摘要",
-          "body": "Migrating complex distributed systems to post-quantum cryptography (PQC) is hard because cryptographic assets and system components are connected by numerous dependencies. Existing inventory approaches, including those based on Cryptographic Bills of Materials (CBOMs), capture only explicitly observable relations, and therefore miss dependencies arising from domain-specific knowledge, system behavior, or operational constraints. We discuss different types of dependencies and propose a formal framework and methodology for detecting them across the components of a complex system, thereby supporting migration towards PQC algorithms. The methodology is based on a dependency…"
         }
       ],
       "reading_minutes": 1
@@ -2645,46 +2567,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "29a8131435cbd8d0",
-      "kind": "article",
-      "title": "Why One of the World’s Greatest Mathematicians Is on a ‘War Footing’",
-      "source": "The New York Times",
-      "source_url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5obDJaUW0zTDU0Q2RqRGd6QlRabDFENjNiMTJtR0ZLOXkycWhXNjVlT2Vxc1hFRWhacTd6MEFyM01fU1c5UmNxME82N1VVVDFCWnBKWVZ0bDdvVXRZLXFXaldhNF83RG1keHVIV04xVQ?oc=5",
-      "published_at": "2026-10-16T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Why One of the World’s Greatest Mathematicians Is on a ‘War Footing’ The New York Times",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5obDJaUW0zTDU0Q2RqRGd6QlRabDFENjNiMTJtR0ZLOXkycWhXNjVlT2Vxc1hFRWhacTd6MEFyM01fU1c5UmNxME82N1VVVDFCWnBKWVZ0bDdvVXRZLXFXaldhNF83RG1keHVIV04xVQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Why One of the World’s Greatest Mathematicians Is on a ‘War Footing’ The New York Times"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "793b95e76526fd48",
       "kind": "article",
       "title": "AstraZeneca strikes $40 million AI drug discovery deal with insitro",
@@ -2710,6 +2592,46 @@
         {
           "title": "内容概览",
           "body": "AstraZeneca strikes $40 million AI drug discovery deal with insitro Reuters"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "cc6abc9649d13508",
+      "kind": "article",
+      "title": "The rise of agentic AI in drug discovery from static tools to autonomous virtual scientists",
+      "source": "Nature",
+      "source_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE0zSnZwRjUwY0RlYnYyam9sYnVTYTgzUmNlOUJNdmFmU2FyQTlQRE1raGliWksxcVZ5QVpYbE9wM0JQQ0RTUUN6YmN2T201c2ZaTk9GMzFVRHBKWElSWlpB?oc=5",
+      "published_at": "2026-10-12T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Biology",
+        "Applied AI"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "The rise of agentic AI in drug discovery from static tools to autonomous virtual scientists Nature",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE0zSnZwRjUwY0RlYnYyam9sYnVTYTgzUmNlOUJNdmFmU2FyQTlQRE1raGliWksxcVZ5QVpYbE9wM0JQQ0RTUUN6YmN2T201c2ZaTk9GMzFVRHBKWElSWlpB?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "The rise of agentic AI in drug discovery from static tools to autonomous virtual scientists Nature"
         },
         {
           "title": "公开页面要点",
@@ -2816,6 +2738,46 @@
             "Makes complex interactions easier to build: Instead of requiring low-level visualization code, Flint-interactive lets users and agents define behaviors using high-level semantic events and update operators.",
             "Improves reliability and reduces development effort: By using Flint’s compiler to handle interaction logic and visual dependencies, the system helps avoid many of the layout, rendering, and debugging challenges common in custom interactive visualizations."
           ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "9ea5613b4342bfde",
+      "kind": "article",
+      "title": "‘Breathtaking,’ ‘Devastating’: Mathematics Reels After New OpenAI Release",
+      "source": "The New York Times",
+      "source_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPODBqdjFtSkFGUTZYd2w1WlRnaWFfX3NiWDJ4OXgzdGozcV94WFV1T2JWY0lrekg2ZGR6Sk1wMGtNMzNDeXFmdnc2Zl9zTk0zMDhCLXMyYUFVSjRVNk1CTkF2Y2h2VF9HRVZvV2xfRkpiUTJsQUlNV0ZnaFBTWGxJUW5mbkVEdjVuQ25HMHV3?oc=5",
+      "published_at": "2026-10-08T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "AI for Science",
+        "Mathematics",
+        "Discovery"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "‘Breathtaking,’ ‘Devastating’: Mathematics Reels After New OpenAI Release The New York Times",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPODBqdjFtSkFGUTZYd2w1WlRnaWFfX3NiWDJ4OXgzdGozcV94WFV1T2JWY0lrekg2ZGR6Sk1wMGtNMzNDeXFmdnc2Zl9zTk0zMDhCLXMyYUFVSjRVNk1CTkF2Y2h2VF9HRVZvV2xfRkpiUTJsQUlNV0ZnaFBTWGxJUW5mbkVEdjVuQ25HMHV3?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "‘Breathtaking,’ ‘Devastating’: Mathematics Reels After New OpenAI Release The New York Times"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -3168,6 +3130,97 @@
             "If you can think it, you can play it. Create, play, and share custom games — no coding required.",
             "You can now build, play, and share custom games without any coding experience using the new Playground platform. Simply describe your ideas through text prompts to create games, then challenge your friends or publish them to the community gallery. Visit playground.google to start creating today, and keep an eye out for upcoming professional-grade tools from Unity Spark.",
             "Check out \"Introducing Playground,\" a new platform that lets you create and play custom games."
+          ]
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "1091875cb30c5a4b",
+      "kind": "article",
+      "title": "Anthropic CEO Dario Amodei charts a new direction for tech philanthropy",
+      "source": "CNBC",
+      "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOR29RNmZVeWZwWEE1NXUtN3BiS2xvZVFHYUxobnY2WEoyQkNMSS1rNGRmWDFYZm9wclZNV21Idkx3bkZiUkhOQ2JoRmdmMjFwVl85S1NZR0E1VjJfQTNfVC1DRUxDT3g3QWRIMkY3OHJVT3g5dW9pNTRXRklJcS10RXNyc3drLUFWMThsMzlocUxEWS04R2Fidzc1QzA2Sjl0WG9CZW5tZDFGQdIBrwFBVV95cUxNTWdjWXV0NzVycDVadkxuTm5xTUUwd3F2TlphTER3cExUYjR1dW1RM0FsX195ZXhydVpSa0tNNTZmR0JkWGxBSnM1Q0kxd3d0MGZrTjllR1NnMVJTbFhLa3FsTGYxZGYzWkVLM2w3OFF4X29CdjNjaGktU29mdGlvYnp3TGVWTkFuTkZ3eG5RdTlUWDlfOUZUUlJKUU8tMW1ZcGJYODhFTTJPX1VCYjJF?oc=5",
+      "published_at": "2026-10-29T11:30:01Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Researcher Watch",
+        "Foundation Models",
+        "Leadership"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Anthropic CEO Dario Amodei charts a new direction for tech philanthropy CNBC",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOR29RNmZVeWZwWEE1NXUtN3BiS2xvZVFHYUxobnY2WEoyQkNMSS1rNGRmWDFYZm9wclZNV21Idkx3bkZiUkhOQ2JoRmdmMjFwVl85S1NZR0E1VjJfQTNfVC1DRUxDT3g3QWRIMkY3OHJVT3g5dW9pNTRXRklJcS10RXNyc3drLUFWMThsMzlocUxEWS04R2Fidzc1QzA2Sjl0WG9CZW5tZDFGQdIBrwFBVV95cUxNTWdjWXV0NzVycDVadkxuTm5xTUUwd3F2TlphTER3cExUYjR1dW1RM0FsX195ZXhydVpSa0tNNTZmR0JkWGxBSnM1Q0kxd3d0MGZrTjllR1NnMVJTbFhLa3FsTGYxZGYzWkVLM2w3OFF4X29CdjNjaGktU29mdGlvYnp3TGVWTkFuTkZ3eG5RdTlUWDlfOUZUUlJKUU8tMW1ZcGJYODhFTTJPX1VCYjJF?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Anthropic CEO Dario Amodei charts a new direction for tech philanthropy CNBC"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "822cbb7267bd53b0",
+      "kind": "article",
+      "title": "Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms",
+      "source": "Hugging Face",
+      "source_url": "https://huggingface.co/blog/anydecisionmodel",
+      "published_at": "2026-10-29T00:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Hugging Face",
+        "Open Source"
+      ],
+      "verification": "官方来源",
+      "summary": "We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://huggingface.co/blog/anydecisionmodel",
+      "key_points": [
+        "They write, summarize, translate, and call tools.",
+        "But they're only a small part of what machine learning can do.",
+        "First, you want to know what they said (speech recognition).",
+        "Then, you want to decide where to send them (decision).",
+        "You could hand both to a language model, but there are models built for each that are better, faster, and less expensive."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "We’re on a journey to advance and democratize artificial intelligence through open source and open science."
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "They write, summarize, translate, and call tools.",
+            "But they're only a small part of what machine learning can do.",
+            "First, you want to know what they said (speech recognition).",
+            "Then, you want to decide where to send them (decision).",
+            "You could hand both to a language model, but there are models built for each that are better, faster, and less expensive."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": [
+            "Language models can do a lot. They write, summarize, translate, and call tools. But they're only a small part of what machine learning can do.",
+            "Say a customer calls your support line. First, you want to know what they said (speech recognition). Then, you want to decide where to send them (decision). You could hand both to a language model, but there are models built for each that are better, faster, and less expensive.",
+            "In our AnyLanguageModel 1.0 recap , we looked at a year of local and hosted models in Swift. With AnyLanguageModel and swift-huggingface now on their 1.x releases, we're extending the same approach to speech and decisions: familiar Swift APIs with a choice of model."
           ]
         }
       ],
@@ -3687,86 +3740,6 @@
       "reading_minutes": 1
     },
     {
-      "id": "973b869910bc732b",
-      "kind": "article",
-      "title": "AI is shaking up the field of mathematics. But what comes next?",
-      "source": "NPR",
-      "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQOUxERV9naGE5QTJHZENBVXlHZTdfcDdpOFZMNjlfMWNObDFqenhfMDhLajNrV0VNTGtsdVpuQ1Y1WUg5WDZJSDdOcDA3OGEwY2ZDVzNOZEN6QUgwejRLVjdBQkJKWGNNemU1NVF1eGM3aDZMdHB5eVgtZGlqX1poVTBTLXBPTDNUc2IyMWI1NkJsREJNeU9BNldLYkhucTJ5WXl3R3g1TmVKdw?oc=5",
-      "published_at": "2026-10-21T21:35:52Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Mathematics",
-        "Discovery"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "AI is shaking up the field of mathematics. But what comes next? NPR",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQOUxERV9naGE5QTJHZENBVXlHZTdfcDdpOFZMNjlfMWNObDFqenhfMDhLajNrV0VNTGtsdVpuQ1Y1WUg5WDZJSDdOcDA3OGEwY2ZDVzNOZEN6QUgwejRLVjdBQkJKWGNNemU1NVF1eGM3aDZMdHB5eVgtZGlqX1poVTBTLXBPTDNUc2IyMWI1NkJsREJNeU9BNldLYkhucTJ5WXl3R3g1TmVKdw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "AI is shaking up the field of mathematics. But what comes next? NPR"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "465be74f8ecf6736",
-      "kind": "article",
-      "title": "AI designs functional enzyme components that could help expand drug discovery",
-      "source": "Phys.org",
-      "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBydGlVckdMbzRHWWpUOGtuSjZFZHJXbHFNVThiV2p6T1NyTzRxLVI2WmFHeUpJUEJNY21td3ZGQmZ4emljQ2NqdUlDUGlDN3lRdE9mdk1PSGFrcXExbktuX25FY25wTnBjWFd0VG1veWZSekVoTnJyOFBmYw?oc=5",
-      "published_at": "2026-10-21T20:20:14Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "AI for Science",
-        "Biology",
-        "Applied AI"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "AI designs functional enzyme components that could help expand drug discovery Phys.org",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBydGlVckdMbzRHWWpUOGtuSjZFZHJXbHFNVThiV2p6T1NyTzRxLVI2WmFHeUpJUEJNY21td3ZGQmZ4emljQ2NqdUlDUGlDN3lRdE9mdk1PSGFrcXExbktuX25FY25wTnBjWFd0VG1veWZSekVoTnJyOFBmYw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "AI designs functional enzyme components that could help expand drug discovery Phys.org"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
       "id": "25c3f7b3a6fe47e8",
       "kind": "article",
       "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
@@ -3818,30 +3791,31 @@
       "reading_minutes": 1
     },
     {
-      "id": "9620d9737845b3da",
+      "id": "2fc2de7a2e3125c3",
       "kind": "article",
-      "title": "Anthropic's path from AI startup to industry-defining IPO",
-      "source": "Reuters",
-      "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPT2ZsWlY5ZUdaTFJOS0c0OHU5MGtpM2FobkVWZ2VNYWVmR21TcVllblBxM2NTTU9VbXgwbDFVVGgzZkY1YnFXUEQzcmlVbkJXZmRjUWxmUlhQZXZDTnRLNjRzM2JWM20xXzEyLVFmVjh5M01pclJQOFAwaUV2U0ZMZUFwYnFhbGdyaHdic0NBdkhQM29WZDlhWEI4MA?oc=5",
-      "published_at": "2026-10-26T07:00:00Z",
+      "title": "AI-Generated Evidence in Drug Discovery: Reliability, Legal Risk & FDA Compliance",
+      "source": "Crowell & Moring LLP",
+      "source_url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPXzNkV2c5dk43d1d5alhkOW9BbkJyY2h1VHNEd283dVJZdEc5dGhqbkpjNU1jUHpjXzZDRk5PTndtUmtUZ0hIVWxuRmlLMzN5OGczVlB4b1dWZDloMkV2eWc5ZEJVRkRvNkZ3MXYyOC1QMFRqTWJzTUZkVUl6cHJ1VVVyMk9TZ0xDOGs5eGRMWFVCWFZHUF9TLWJfMnhSbGNrSVVyWWJicGtNT3BvQmRJYlFGT1pkTVJuQWlITUg5MHRKMlRtREprc2xBTEZ2Wno3NU5yQlhYZGNrd3I3bzFlY2NhQWZtazhrWW1nbktxTlNDakE?oc=5",
+      "published_at": "2026-10-21T23:47:03Z",
       "authors": [],
       "venue": "",
       "tags": [
-        "Academic Startup",
-        "Funding"
+        "AI for Science",
+        "Biology",
+        "Applied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Anthropic's path from AI startup to industry-defining IPO Reuters",
+      "summary": "AI-Generated Evidence in Drug Discovery: Reliability, Legal Risk & FDA Compliance Crowell & Moring LLP",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPT2ZsWlY5ZUdaTFJOS0c0OHU5MGtpM2FobkVWZ2VNYWVmR21TcVllblBxM2NTTU9VbXgwbDFVVGgzZkY1YnFXUEQzcmlVbkJXZmRjUWxmUlhQZXZDTnRLNjRzM2JWM20xXzEyLVFmVjh5M01pclJQOFAwaUV2U0ZMZUFwYnFhbGdyaHdic0NBdkhQM29WZDlhWEI4MA?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "resolved_url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPXzNkV2c5dk43d1d5alhkOW9BbkJyY2h1VHNEd283dVJZdEc5dGhqbkpjNU1jUHpjXzZDRk5PTndtUmtUZ0hIVWxuRmlLMzN5OGczVlB4b1dWZDloMkV2eWc5ZEJVRkRvNkZ3MXYyOC1QMFRqTWJzTUZkVUl6cHJ1VVVyMk9TZ0xDOGs5eGRMWFVCWFZHUF9TLWJfMnhSbGNrSVVyWWJicGtNT3BvQmRJYlFGT1pkTVJuQWlITUg5MHRKMlRtREprc2xBTEZ2Wno3NU5yQlhYZGNrd3I3bzFlY2NhQWZtazhrWW1nbktxTlNDakE?oc=5&hl=en-US&gl=US&ceid=US:en",
       "key_points": [
         "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Anthropic's path from AI startup to industry-defining IPO Reuters"
+          "body": "AI-Generated Evidence in Drug Discovery: Reliability, Legal Risk & FDA Compliance Crowell & Moring LLP"
         },
         {
           "title": "公开页面要点",
@@ -3852,57 +3826,6 @@
         {
           "title": "原文短摘录",
           "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "a15d714b3bef3e57",
-      "kind": "article",
-      "title": "How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications",
-      "source": "Hugging Face",
-      "source_url": "https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization",
-      "published_at": "2026-10-21T17:35:36Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Hugging Face",
-        "Open Source"
-      ],
-      "verification": "官方来源",
-      "summary": "A Blog post by Dharma-AI on Hugging Face",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization",
-      "key_points": [
-        "Models specialized for a domain or a task by fine-tuning general open-source models, such as Qwen and Gemma, inherit a vocabulary built for many domains and general applications.",
-        "In an essay grader we run in production, that vocabulary split the text the model writes most into many tokens.",
-        "This article previews some results from the VocabX paper, which we will publish soon: how we specialized the vocabulary around the cost of each token rather than its frequency, and cut measured inference cost by 77% without changing the base model.",
-        "The tokenizer is usually treated as a fixed property of the base model, inherited and left alone.",
-        "For a model specialized in a single domain, it can be one of the largest cost levers, and it is set before any training step."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "A Blog post by Dharma-AI on Hugging Face"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Models specialized for a domain or a task by fine-tuning general open-source models, such as Qwen and Gemma, inherit a vocabulary built for many domains and general applications.",
-            "In an essay grader we run in production, that vocabulary split the text the model writes most into many tokens.",
-            "This article previews some results from the VocabX paper, which we will publish soon: how we specialized the vocabulary around the cost of each token rather than its frequency, and cut measured inference cost by 77% without changing the base model.",
-            "The tokenizer is usually treated as a fixed property of the base model, inherited and left alone.",
-            "For a model specialized in a single domain, it can be one of the largest cost levers, and it is set before any training step."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": [
-            "Models specialized for a domain or a task by fine-tuning general open-source models, such as Qwen and Gemma, inherit a vocabulary built for many domains and general applications.",
-            "In an essay grader we run in production, that vocabulary split the text the model writes most into many tokens. This article previews some results from the VocabX paper, which we will publish soon: how we specialized the vocabulary around the cost of each token rather than its frequency, and cut measured inference cost by 77% without changing the base model.",
-            "The tokenizer is usually treated as a fixed property of the base model, inherited and left alone. For a model specialized in a single domain, it can be one of the largest cost levers, and it is set before any training step."
-          ]
         }
       ],
       "reading_minutes": 1
@@ -3954,85 +3877,6 @@
             "Google Beam is expanding its global reach to six countries, supported by 18 partners and new hardware from HP. Internal testing shows the technology improves team connection and reduces the need for follow-up meetings. Starting in October, you can book and test these units at select Industrious locations to see how they enhance your own professional meetings.",
             "Google Beam is expanding its global reach to help people connect face-to-face from anywhere."
           ]
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "a9fea966b5c25601",
-      "kind": "article",
-      "title": "Google Deepmind's Hassabis calls AI hacks 'early warning shots'",
-      "source": "Reuters",
-      "source_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNRUpQLTQySlpPSFREYzVycnZUeHhKeWh5TFZTSmw0elFKaVB0THNKYU44eHdhQnJBOS1aNFk2MzlRblBlbzZEa0J4ZFk0VFkxaTdubmpWNVUwaFNwV3pkbHpHYU1XWFlaTGp1MU1vRlNMdkU0Tm9ZU3BweUktbDgxbktvWXl2UzZsVW93LVFPbkZyVDFudHQ2Z3FzQjM1bnZRa3RfbWQ1ME44RFBhVXJiM19aWQ?oc=5",
-      "published_at": "2026-10-14T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Researcher Watch",
-        "Foundation Models",
-        "Leadership"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Google Deepmind's Hassabis calls AI hacks 'early warning shots' Reuters",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNRUpQLTQySlpPSFREYzVycnZUeHhKeWh5TFZTSmw0elFKaVB0THNKYU44eHdhQnJBOS1aNFk2MzlRblBlbzZEa0J4ZFk0VFkxaTdubmpWNVUwaFNwV3pkbHpHYU1XWFlaTGp1MU1vRlNMdkU0Tm9ZU3BweUktbDgxbktvWXl2UzZsVW93LVFPbkZyVDFudHQ2Z3FzQjM1bnZRa3RfbWQ1ME44RFBhVXJiM19aWQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Google Deepmind's Hassabis calls AI hacks 'early warning shots' Reuters"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "ba9d1d8fc0217a3b",
-      "kind": "article",
-      "title": "This AI startup says it can generate permit-ready blueprints in minutes",
-      "source": "TechCrunch",
-      "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNeDR4WkpvX1MxeUJ6SEo0Zmxmcndnd04tLUF1RFRNMlQzekYyZ0hDRWVhbU1rVkh4UmNxRmh0TG9YckNlZE1BcU01YmNPWFBuY3Bndk1wYXJWeDlyN0ZzdkhNTkhfZjVzMV9HZGhoVWdZVElEYzMtQmxVNnZmelVaNXBhcmFzSkNWVEJ1cmdabnpzWWxHS1hWa1BNMnZ3UVozTVMxbGFKQnh5dw?oc=5",
-      "published_at": "2026-10-12T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "This AI startup says it can generate permit-ready blueprints in minutes TechCrunch",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNeDR4WkpvX1MxeUJ6SEo0Zmxmcndnd04tLUF1RFRNMlQzekYyZ0hDRWVhbU1rVkh4UmNxRmh0TG9YckNlZE1BcU01YmNPWFBuY3Bndk1wYXJWeDlyN0ZzdkhNTkhfZjVzMV9HZGhoVWdZVElEYzMtQmxVNnZmelVaNXBhcmFzSkNWVEJ1cmdabnpzWWxHS1hWa1BNMnZ3UVozTVMxbGFKQnh5dw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "This AI startup says it can generate permit-ready blueprints in minutes TechCrunch"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
         }
       ],
       "reading_minutes": 1
@@ -4198,6 +4042,46 @@
       "reading_minutes": 1
     },
     {
+      "id": "73d5ff3071087d24",
+      "kind": "article",
+      "title": "Trump to Dine With Anthropic Co-Founder, Who Has Warned of A.I.’s Risks",
+      "source": "The New York Times",
+      "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQOUVEUkVPXzdxVUc2VXA2LW1nS3hRWVM4U3hwWmptYnRQdEZJbWZjeXZEczJ2NFpmWWMyNDNOSHl0Y0thUTFJd05aZTRRTDRqNFUzSTZMNnFYU08yMzh3Q3JMNF80SlVjR0FnRFJfcFRNN0tTdE1kamFYc2xrd0FVWmZObHdDdmFldnU3MmJBaERob045a190QmNkN1JyZXc?oc=5",
+      "published_at": "2026-09-27T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Researcher Watch",
+        "Foundation Models",
+        "Leadership"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Trump to Dine With Anthropic Co-Founder, Who Has Warned of A.I.’s Risks The New York Times",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQOUVEUkVPXzdxVUc2VXA2LW1nS3hRWVM4U3hwWmptYnRQdEZJbWZjeXZEczJ2NFpmWWMyNDNOSHl0Y0thUTFJd05aZTRRTDRqNFUzSTZMNnFYU08yMzh3Q3JMNF80SlVjR0FnRFJfcFRNN0tTdE1kamFYc2xrd0FVWmZObHdDdmFldnU3MmJBaERob045a190QmNkN1JyZXc?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Trump to Dine With Anthropic Co-Founder, Who Has Warned of A.I.’s Risks The New York Times"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "e53e3f6c06a7c12a",
       "kind": "article",
       "title": "AMD to Buy Fei-Fei Li’s World Labs AI Startup for $8.2 Billion",
@@ -4240,7 +4124,7 @@
       "id": "0328c3ccdabdf721",
       "kind": "article",
       "title": "Watch Fei-Fei Li: AI’s Future Is ‘About Humans’",
-      "source": "Bloomberg.com",
+      "source": "Bloomberg",
       "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOMFREUU4yX3dEam50OUR0WUItR1JVTDdReXdpVUJmQkxJbUlWdlN0UHJNWWdOczFQR083WjB6Z05ZX3ZPazB4SWJLNlhNNm9ja1E2Ukh0OE1RbHlMOG9TRTR6TXdqbHNNNUtnZ3lYU0JPX2ZQbjczbDl4TlEyYXRxMHZWS0NpcFI2dmZLaGhvSTg1aTB1SUxNaQ?oc=5",
       "published_at": "2026-09-22T07:00:00Z",
       "authors": [],
@@ -4251,7 +4135,7 @@
         "World Models"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Watch Fei-Fei Li: AI’s Future Is ‘About Humans’ Bloomberg.com",
+      "summary": "Watch Fei-Fei Li: AI’s Future Is ‘About Humans’ Bloomberg",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOMFREUU4yX3dEam50OUR0WUItR1JVTDdReXdpVUJmQkxJbUlWdlN0UHJNWWdOczFQR083WjB6Z05ZX3ZPazB4SWJLNlhNNm9ja1E2Ukh0OE1RbHlMOG9TRTR6TXdqbHNNNUtnZ3lYU0JPX2ZQbjczbDl4TlEyYXRxMHZWS0NpcFI2dmZLaGhvSTg1aTB1SUxNaQ?oc=5&hl=en-US&gl=US&ceid=US:en",
@@ -4261,7 +4145,7 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "Watch Fei-Fei Li: AI’s Future Is ‘About Humans’ Bloomberg.com"
+          "body": "Watch Fei-Fei Li: AI’s Future Is ‘About Humans’ Bloomberg"
         },
         {
           "title": "公开页面要点",
@@ -4317,71 +4201,31 @@
       "reading_minutes": 1
     },
     {
-      "id": "a415441f47769430",
-      "kind": "social",
-      "title": "Try Grok @Bot",
-      "source": "X",
-      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE0wd3dBY2RzTllmWXlKZGpwSU55MHNTQzJBQW1FMVpWQUZoeVFGbThSMkRoT28yS0JRSzctMGFsV2k4WFpEcEdMQ1BLVVRXVFdoM1htVTJnb0tNcXFTSUE?oc=5",
-      "published_at": "2026-10-28T08:02:16Z",
+      "id": "8d493e5be3f17930",
+      "kind": "article",
+      "title": "Sen. Elizabeth Warren asks Anthropic CEO to address ex­is­tential risks before IPO",
+      "source": "Spectrum News",
+      "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOeXJlV3llNV9GUkdLWGc1Sm9nc3V4N05naTlaNGNHVkpBZW5wcDk4dUlxNEdlVEZaTXdxTGFpVkZlUGVaeWpRcnRXcGZMWHNUeGtsUHNVV09VZFM5cTJEck9nU3J5NWp0ejJYWU9vVlFtc0Y3N2luaDkxaTRnYm52a2FJVjhiQi15by03cGFicW9iaTNfUmNiN2M3TTV4RGxYSTVMVk9EQQ?oc=5",
+      "published_at": "2026-10-28T16:59:00Z",
       "authors": [],
       "venue": "",
       "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
+        "Researcher Watch",
+        "Foundation Models",
+        "Leadership"
       ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
+      "verification": "媒体或公开网页",
+      "summary": "Sen. Elizabeth Warren asks Anthropic CEO to address ex­is­tential risks before IPO Spectrum News",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE0wd3dBY2RzTllmWXlKZGpwSU55MHNTQzJBQW1FMVpWQUZoeVFGbThSMkRoT28yS0JRSzctMGFsV2k4WFpEcEdMQ1BLVVRXVFdoM1htVTJnb0tNcXFTSUE?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "resolved_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOeXJlV3llNV9GUkdLWGc1Sm9nc3V4N05naTlaNGNHVkpBZW5wcDk4dUlxNEdlVEZaTXdxTGFpVkZlUGVaeWpRcnRXcGZMWHNUeGtsUHNVV09VZFM5cTJEck9nU3J5NWp0ejJYWU9vVlFtc0Y3N2luaDkxaTRnYm52a2FJVjhiQi15by03cGFicW9iaTNfUmNiN2M3TTV4RGxYSTVMVk9EQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
       "key_points": [
         "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "0d1d37b91facaa99",
-      "kind": "social",
-      "title": "Grok @Bot rocks",
-      "source": "X",
-      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1SczZ1ZGo0b3RnVUVJdkUyRDVqRDFBdVVDRmZvQ3QtQ0ZPMU8zRUhtd1ZXWVNKZFlCWC1UbExsT3RSZE52dXdnSEFoV0xiMHRmbHNvazNueXp5bUdnVUE?oc=5",
-      "published_at": "2026-10-28T07:42:16Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "X",
-        "Founder Watch",
-        "First-party Post"
-      ],
-      "verification": "公开平台索引，需查看原帖",
-      "summary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1SczZ1ZGo0b3RnVUVJdkUyRDVqRDFBdVVDRmZvQ3QtQ0ZPMU8zRUhtd1ZXWVNKZFlCWC1UbExsT3RSZE52dXdnSEFoV0xiMHRmbHNvazNueXp5bUdnVUE?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          "body": "Sen. Elizabeth Warren asks Anthropic CEO to address ex­is­tential risks before IPO Spectrum News"
         },
         {
           "title": "公开页面要点",
@@ -4460,45 +4304,6 @@
         {
           "title": "内容概览",
           "body": "EXCLUSIVE: US DOJ is inquiring about Nvidia's purchase of Hugging Face, sources say Reuters"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "22b779b68437c737",
-      "kind": "article",
-      "title": "Nvidia's $12.9 billion Hugging Face deal draws DOJ scrutiny",
-      "source": "CNBC",
-      "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPMUMwY0xlTmlOWWZEMEZ1MjQ0YnY3eG1WV1k5T1pqOWkwTXFZTmk0c21wTVFibmpXaFdWRElJNVVOX1lyeGxITWpHQ2hBbVpvS1NQRmUxZlZaRVNiZWNfb25TWXAyWXl5Zm1zV3VuemEwNGppdlE5UURRVTA1ZDZmcWY3cFAxUWtMMWtlejRSZTB3QW9wWXRpNNIBngFBVV95cUxQUUg3OVpUN1J0S0pUY05lVXRETERQeFJua0pFSjlHd0Y0V3JkVWNOTTVlc2pIZHRIcUxFbDZYOVhIamNhaGtjbkpTUXo0MXlFVjl5Z0tzRFQyNVdDZjhPZEpySW5aaWh2OXJza1lIQldNM0poSlF6SzBnU2MwUWlVaG0wZ0dsV1F1NVpXRC05N2gxZG5RRGF5MkVwem1mQQ?oc=5",
-      "published_at": "2026-10-28T20:13:50Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Open Source",
-        "Models & Tools"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Nvidia's $12.9 billion Hugging Face deal draws DOJ scrutiny CNBC",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPMUMwY0xlTmlOWWZEMEZ1MjQ0YnY3eG1WV1k5T1pqOWkwTXFZTmk0c21wTVFibmpXaFdWRElJNVVOX1lyeGxITWpHQ2hBbVpvS1NQRmUxZlZaRVNiZWNfb25TWXAyWXl5Zm1zV3VuemEwNGppdlE5UURRVTA1ZDZmcWY3cFAxUWtMMWtlejRSZTB3QW9wWXRpNNIBngFBVV95cUxQUUg3OVpUN1J0S0pUY05lVXRETERQeFJua0pFSjlHd0Y0V3JkVWNOTTVlc2pIZHRIcUxFbDZYOVhIamNhaGtjbkpTUXo0MXlFVjl5Z0tzRFQyNVdDZjhPZEpySW5aaWh2OXJza1lIQldNM0poSlF6SzBnU2MwUWlVaG0wZ0dsV1F1NVpXRC05N2gxZG5RRGF5MkVwem1mQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Nvidia's $12.9 billion Hugging Face deal draws DOJ scrutiny CNBC"
         },
         {
           "title": "公开页面要点",
@@ -4670,10 +4475,49 @@
       "reading_minutes": 1
     },
     {
+      "id": "426b41dc26b20306",
+      "kind": "article",
+      "title": "OpenAI–Hugging Face breach is a great example of how 'potent' these AI models are, says Cohere CEO",
+      "source": "CNBC",
+      "source_url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOd0x1RGVkZFl3dDgteFlzSGt1cS1xei1XMndzX0lxNHBiSzdvclVtdTNwSkFzdkgwQnVFRFZDT191WTBLMDNvSURDdmRWU2dyOXgtYlo5SUREenhSSVVvUGRVWGtxQ2M1bGk2OHIxRjBIYm9nTTJGQTZmSS1DWE9sbzhOckdDdXFMeHdGQmNjVTRaN2FveWZQU2dyT2R1T2psZG5QRFIyY2ZzaDBfd2lFamk3MFFzX213MmZyaWFsYmtwUFJtenlkVjR3N3AtTXRPelNZbg?oc=5",
+      "published_at": "2026-10-16T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Open Source",
+        "Models & Tools"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "OpenAI–Hugging Face breach is a great example of how 'potent' these AI models are, says Cohere CEO CNBC",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOd0x1RGVkZFl3dDgteFlzSGt1cS1xei1XMndzX0lxNHBiSzdvclVtdTNwSkFzdkgwQnVFRFZDT191WTBLMDNvSURDdmRWU2dyOXgtYlo5SUREenhSSVVvUGRVWGtxQ2M1bGk2OHIxRjBIYm9nTTJGQTZmSS1DWE9sbzhOckdDdXFMeHdGQmNjVTRaN2FveWZQU2dyT2R1T2psZG5QRFIyY2ZzaDBfd2lFamk3MFFzX213MmZyaWFsYmtwUFJtenlkVjR3N3AtTXRPelNZbg?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "OpenAI–Hugging Face breach is a great example of how 'potent' these AI models are, says Cohere CEO CNBC"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "1ddb0ea4b04244ce",
       "kind": "article",
       "title": "Watch Odd Lots: How OpenAI’s Rogue Model Hacked Hugging Face",
-      "source": "Bloomberg",
+      "source": "Bloomberg.com",
       "source_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNRkI2dE9HaGFUckxEYzdWeV9McXlKcXlobzhyd1BLWjBzdFVXcThaMFVWSGllY0xJUm1YVFpXR0lBZXVKc3BWN3Q0U3E0aE9XWFozVVVxbmNtdmYxSm00YXd2UHdORFduMEVPVkxaX0ctV2pVWUs3NWx1Sk9PMFYxeC1pdU5GcGxabk9RSXZRbENhbjNNcUFjRlZ6QmxwVlc2THU0SFJzUzFxSGJf?oc=5",
       "published_at": "2026-10-12T07:00:00Z",
       "authors": [],
@@ -4683,7 +4527,7 @@
         "Models & Tools"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Watch Odd Lots: How OpenAI’s Rogue Model Hacked Hugging Face Bloomberg",
+      "summary": "Watch Odd Lots: How OpenAI’s Rogue Model Hacked Hugging Face Bloomberg.com",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
       "resolved_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNRkI2dE9HaGFUckxEYzdWeV9McXlKcXlobzhyd1BLWjBzdFVXcThaMFVWSGllY0xJUm1YVFpXR0lBZXVKc3BWN3Q0U3E0aE9XWFozVVVxbmNtdmYxSm00YXd2UHdORFduMEVPVkxaX0ctV2pVWUs3NWx1Sk9PMFYxeC1pdU5GcGxabk9RSXZRbENhbjNNcUFjRlZ6QmxwVlc2THU0SFJzUzFxSGJf?oc=5&hl=en-US&gl=US&ceid=US:en",
@@ -4693,7 +4537,46 @@
       "sections": [
         {
           "title": "内容概览",
-          "body": "Watch Odd Lots: How OpenAI’s Rogue Model Hacked Hugging Face Bloomberg"
+          "body": "Watch Odd Lots: How OpenAI’s Rogue Model Hacked Hugging Face Bloomberg.com"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "f6ba205a8a565a65",
+      "kind": "article",
+      "title": "I left my $200K job before my business had paying customers. Here's why I stopped waiting for validation.",
+      "source": "Business Insider",
+      "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOazZnV0JEaDFDLVNITDNJOXRXMUlLS3NjbXN3WWlTY2ZfMEpHbC1ITldyREZ0MWFVbzVHMXM4TmZRZkN3ejRDRDdfdDNNQldPNm9FaENKTFlXYVd3Y3Bzai1na090U25ZanRqZjZEREhCR3Zzemx6UE5xX1J3THZEendLclVQcW5QUzl0RXlVMWVVVFE1UzRRSk5JVlU3ME0?oc=5",
+      "published_at": "2026-10-11T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "I left my $200K job before my business had paying customers. Here's why I stopped waiting for validation. Business Insider",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOazZnV0JEaDFDLVNITDNJOXRXMUlLS3NjbXN3WWlTY2ZfMEpHbC1ITldyREZ0MWFVbzVHMXM4TmZRZkN3ejRDRDdfdDNNQldPNm9FaENKTFlXYVd3Y3Bzai1na090U25ZanRqZjZEREhCR3Zzemx6UE5xX1J3THZEendLclVQcW5QUzl0RXlVMWVVVFE1UzRRSk5JVlU3ME0?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "I left my $200K job before my business had paying customers. Here's why I stopped waiting for validation. Business Insider"
         },
         {
           "title": "公开页面要点",
@@ -4733,6 +4616,45 @@
         {
           "title": "内容概览",
           "body": "Washington State University Taps AI Company for Sports Comms GovTech"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "b57e86709a2bfa7b",
+      "kind": "article",
+      "title": "Jair Verçosa",
+      "source": "Stanford Graduate School of Business",
+      "source_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9RVXQ4WFRSNFAza2JRMlNmTmhZTGhsbUJOam95SUFvNEZqSEh0eGlkRF9OWDhMZF83QWNnelN2dlFyT3ZYcmtDSVo5YXNZZEFrbG9NOThjQkN4RE1fQndxalI3Y1M5eWxYRHpOcWpPZ2Y2aURRQUE?oc=5",
+      "published_at": "2026-10-08T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Jair Verçosa Stanford Graduate School of Business",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9RVXQ4WFRSNFAza2JRMlNmTmhZTGhsbUJOam95SUFvNEZqSEh0eGlkRF9OWDhMZF83QWNnelN2dlFyT3ZYcmtDSVo5YXNZZEFrbG9NOThjQkN4RE1fQndxalI3Y1M5eWxYRHpOcWpPZ2Y2aURRQUE?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Jair Verçosa Stanford Graduate School of Business"
         },
         {
           "title": "公开页面要点",
@@ -4946,6 +4868,45 @@
       "reading_minutes": 1
     },
     {
+      "id": "d92e0e9dc18eea51",
+      "kind": "article",
+      "title": "University of Dayton School of Law seminar pulls back the curtain on AI",
+      "source": "University of Dayton",
+      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOMktZRGNMekw3NVhzNlJhUE5GVFhjU0Z5UGUxNERqSDJ6b05QeDJFQzdMT25ZVGVvaVJuUjR3R1h2ZW4wVVJRRDdveUxBMVhDSG9kUGlLaXRSelRpY2U5dzdncmFlcGNfUnJ0N2hnVUFDLV9LY3lnVGhkMmNnWnU1TUw1ekV4YjFkaEtJ?oc=5",
+      "published_at": "2026-10-06T18:34:31Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Academic Startup",
+        "Funding"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "University of Dayton School of Law seminar pulls back the curtain on AI University of Dayton",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOMktZRGNMekw3NVhzNlJhUE5GVFhjU0Z5UGUxNERqSDJ6b05QeDJFQzdMT25ZVGVvaVJuUjR3R1h2ZW4wVVJRRDdveUxBMVhDSG9kUGlLaXRSelRpY2U5dzdncmFlcGNfUnJ0N2hnVUFDLV9LY3lnVGhkMmNnWnU1TUw1ekV4YjFkaEtJ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "University of Dayton School of Law seminar pulls back the curtain on AI University of Dayton"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
       "id": "9c3b5fa6e3bab0fb",
       "kind": "article",
       "title": "Birmingham graduates sell AI study startup StudyStash to Kortext | ETIH EdTech News",
@@ -5024,50 +4985,11 @@
       "reading_minutes": 1
     },
     {
-      "id": "bcfee6554e1e72a6",
+      "id": "d9704d4940c3cc02",
       "kind": "article",
-      "title": "Meet Noah Shinn: The 23-year-old college dropout whose viral AI assistant is taking on Meta’s Muse",
-      "source": "Fortune",
-      "source_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQNGd6UFUtS3k5WThwSUo5V2t5VnFKRUlsWEFHQllSOTZ3RXR1b0l4LWFLM2w2NEVxZHEtaVBCN1IteS1fRXdFbmFTV2phakVLdHpPQ2xjWmRTSThLdzdKNFcwSzZXVUR0TzlaNVVZTGxHbE52eG5oRTNGOEZTY1Z2a2NqYko5TDlTeXNDMWNwQUFZVmVOZk5tLWE5M01ZdEVnQ3d1X3lEcGxPUVp2ZkZPbkhFMml2NWN4UW5lNElmVTBtUXFnZlE?oc=5",
-      "published_at": "2026-09-30T07:00:00Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Academic Startup",
-        "Funding"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "Meet Noah Shinn: The 23-year-old college dropout whose viral AI assistant is taking on Meta’s Muse Fortune",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQNGd6UFUtS3k5WThwSUo5V2t5VnFKRUlsWEFHQllSOTZ3RXR1b0l4LWFLM2w2NEVxZHEtaVBCN1IteS1fRXdFbmFTV2phakVLdHpPQ2xjWmRTSThLdzdKNFcwSzZXVUR0TzlaNVVZTGxHbE52eG5oRTNGOEZTY1Z2a2NqYko5TDlTeXNDMWNwQUFZVmVOZk5tLWE5M01ZdEVnQ3d1X3lEcGxPUVp2ZkZPbkhFMml2NWN4UW5lNElmVTBtUXFnZlE?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "Meet Noah Shinn: The 23-year-old college dropout whose viral AI assistant is taking on Meta’s Muse Fortune"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "9219ab6598947599",
-      "kind": "article",
-      "title": "AMD buys AI world model startup World Labs for $8.2 billion",
-      "source": "The Decoder",
-      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOa1U4WE9Jb24tSjg5SFR2cV9BZUNFNDdnQzJRc2JCUXl5WGVPUElXYTBnWVhVZW5nSHBwdVB4NHB5eE4xNng0MnlfQTlqb3dfSjY1SUNpWVpRWDdsei1iMUpWdWZZRkJVTmpFRHVPNC1udGNvZWx1bDBKNlJxbWhDYWptSFd5YXFKOEJv?oc=5",
+      "title": "AMD acquires World Labs AI startup, upping the ante against Nvidia",
+      "source": "Ars Technica",
+      "source_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZ0hQeXM3LUdQR2xCTThQOUZETzNEWk04U25CS0VkNjlrTU15allNdTh4eGFvV1hfdVpvYXRlRk9MZnFnWUhLYTRzVjNzclZDMVgtVFBKSTRMZXZzcEVURXJwSVBTN2JjZHQ3cFNvbjdGckdiU1k5YUNmeE05RGdXR3BTUjZPcEVpOGNoUkpnMVFJNmNxZVRfc1hlU3VnZGtzREFybG5B?oc=5",
       "published_at": "2026-09-29T07:00:00Z",
       "authors": [],
       "venue": "",
@@ -5076,56 +4998,17 @@
         "Embodied AI"
       ],
       "verification": "媒体或公开网页",
-      "summary": "AMD buys AI world model startup World Labs for $8.2 billion The Decoder",
+      "summary": "AMD acquires World Labs AI startup, upping the ante against Nvidia Ars Technica",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOa1U4WE9Jb24tSjg5SFR2cV9BZUNFNDdnQzJRc2JCUXl5WGVPUElXYTBnWVhVZW5nSHBwdVB4NHB5eE4xNng0MnlfQTlqb3dfSjY1SUNpWVpRWDdsei1iMUpWdWZZRkJVTmpFRHVPNC1udGNvZWx1bDBKNlJxbWhDYWptSFd5YXFKOEJv?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "resolved_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZ0hQeXM3LUdQR2xCTThQOUZETzNEWk04U25CS0VkNjlrTU15allNdTh4eGFvV1hfdVpvYXRlRk9MZnFnWUhLYTRzVjNzclZDMVgtVFBKSTRMZXZzcEVURXJwSVBTN2JjZHQ3cFNvbjdGckdiU1k5YUNmeE05RGdXR3BTUjZPcEVpOGNoUkpnMVFJNmNxZVRfc1hlU3VnZGtzREFybG5B?oc=5&hl=en-US&gl=US&ceid=US:en",
       "key_points": [
         "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "AMD buys AI world model startup World Labs for $8.2 billion The Decoder"
-        },
-        {
-          "title": "公开页面要点",
-          "bullets": [
-            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-          ]
-        },
-        {
-          "title": "原文短摘录",
-          "paragraphs": []
-        }
-      ],
-      "reading_minutes": 1
-    },
-    {
-      "id": "0506130345c7ed7e",
-      "kind": "article",
-      "title": "First Harmonised Technical Standard Published Under the EU AI Act",
-      "source": "Orrick",
-      "source_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNTXlnTmhiNkotcVM5VEQyQmZzN2tBc1VFNDdldmlXLXJvdy1xMHFoQWRUZ0JFUDRlTGUxdGVNcHFrNWdrUjVJbkRMNDh5QVZ2QUhfbk45clVOMUVpM01FR2huRjM5OWRyNkcySGY2M0gxeWUxM0NkclNnTUk4N0wyWlBQSkFLXzk2bm1EY05Cci12d0ptelBRelZUSEhmVTdlVW9YcjhRaVgzNVQ0?oc=5",
-      "published_at": "2026-10-27T20:03:04Z",
-      "authors": [],
-      "venue": "",
-      "tags": [
-        "Policy",
-        "Safety"
-      ],
-      "verification": "媒体或公开网页",
-      "summary": "First Harmonised Technical Standard Published Under the EU AI Act Orrick",
-      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
-      "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNTXlnTmhiNkotcVM5VEQyQmZzN2tBc1VFNDdldmlXLXJvdy1xMHFoQWRUZ0JFUDRlTGUxdGVNcHFrNWdrUjVJbkRMNDh5QVZ2QUhfbk45clVOMUVpM01FR2huRjM5OWRyNkcySGY2M0gxeWUxM0NkclNnTUk4N0wyWlBQSkFLXzk2bm1EY05Cci12d0ptelBRelZUSEhmVTdlVW9YcjhRaVgzNVQ0?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "key_points": [
-        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
-      ],
-      "sections": [
-        {
-          "title": "内容概览",
-          "body": "First Harmonised Technical Standard Published Under the EU AI Act Orrick"
+          "body": "AMD acquires World Labs AI startup, upping the ante against Nvidia Ars Technica"
         },
         {
           "title": "公开页面要点",
@@ -5297,12 +5180,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "afc93f98911f2bac",
+      "id": "f4cc825042dc3011",
       "kind": "article",
-      "title": "California Gov Newsom boosts AI regulation as he eyes 2028 presidential run",
-      "source": "Al Jazeera",
-      "source_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQdWtzS3Z0V1lyTlMwXzJFdEVhSTB4S0J6MDJza1l2akRYZkN1WGJoRzdqWnM4a2FodVp6OGQxeC1iMVZmTmRUS1JuZmZyMTM4Rk1kRUNtUm1rVXI5Y3NiMFRQY1hyNGM5LWRMQzJLalF0dEw1SERsbXB1ZEFYZjRFWDJKTzViaXI0cnR4dlVHczdtVk9NTzJlamVMQTlVT1NlWDUtbWRKNTUtTXQwcU9vZmtRRWNDbEpZaWZGbNIBwgFBVV95cUxOS0gyRmFTaUxnUHZwVUppMXJkOENlZTZTS29PSGdIWVBQYWZZNF9LZUo4UGh3RlBzcFNFQ3RMNkloTFVzQmVxWGl2WFdpUXdONExFcTJuRXR4LTNaMFlHazVjbElPT1JSWTNQTHFwMTItb2ZWZzhUOHQxMnM1ckJmSmpoQnhWNEpHU0l2anVGckM2RVFpWFIxTFNzZEFXU21nOW16WGJmQlNVWXdKX0p2UExNaTFPTzYwRThXRkt3YWZjdw?oc=5",
-      "published_at": "2026-10-17T07:00:00Z",
+      "title": "The EU AI Act Mandates AI Incident Reporting—If We’re Lucky",
+      "source": "Lawfare",
+      "source_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQenVtclc0YUNuT3pwOGdEVjhrc1c2VFFoS1pyV0Nob2VVMmZtSEMtVTFmZU5veEtVWWg4bkwzVDdpNEhlekVVTWFKXzFSSmtkVUU4enE0elBacXRXWTFQdy0xWTc2V3NYUVkwQzktYno1WjFrajlicUdYN0ZJSlZldUZFOHNfbmRYdnA5SnZkdzJsc1NndXVEQTU2Qm8?oc=5",
+      "published_at": "2026-10-19T17:04:07Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -5310,17 +5193,17 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "California Gov Newsom boosts AI regulation as he eyes 2028 presidential run Al Jazeera",
+      "summary": "The EU AI Act Mandates AI Incident Reporting—If We’re Lucky Lawfare",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQdWtzS3Z0V1lyTlMwXzJFdEVhSTB4S0J6MDJza1l2akRYZkN1WGJoRzdqWnM4a2FodVp6OGQxeC1iMVZmTmRUS1JuZmZyMTM4Rk1kRUNtUm1rVXI5Y3NiMFRQY1hyNGM5LWRMQzJLalF0dEw1SERsbXB1ZEFYZjRFWDJKTzViaXI0cnR4dlVHczdtVk9NTzJlamVMQTlVT1NlWDUtbWRKNTUtTXQwcU9vZmtRRWNDbEpZaWZGbNIBwgFBVV95cUxOS0gyRmFTaUxnUHZwVUppMXJkOENlZTZTS29PSGdIWVBQYWZZNF9LZUo4UGh3RlBzcFNFQ3RMNkloTFVzQmVxWGl2WFdpUXdONExFcTJuRXR4LTNaMFlHazVjbElPT1JSWTNQTHFwMTItb2ZWZzhUOHQxMnM1ckJmSmpoQnhWNEpHU0l2anVGckM2RVFpWFIxTFNzZEFXU21nOW16WGJmQlNVWXdKX0p2UExNaTFPTzYwRThXRkt3YWZjdw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "resolved_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQenVtclc0YUNuT3pwOGdEVjhrc1c2VFFoS1pyV0Nob2VVMmZtSEMtVTFmZU5veEtVWWg4bkwzVDdpNEhlekVVTWFKXzFSSmtkVUU4enE0elBacXRXWTFQdy0xWTc2V3NYUVkwQzktYno1WjFrajlicUdYN0ZJSlZldUZFOHNfbmRYdnA5SnZkdzJsc1NndXVEQTU2Qm8?oc=5&hl=en-US&gl=US&ceid=US:en",
       "key_points": [
         "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "California Gov Newsom boosts AI regulation as he eyes 2028 presidential run Al Jazeera"
+          "body": "The EU AI Act Mandates AI Incident Reporting—If We’re Lucky Lawfare"
         },
         {
           "title": "公开页面要点",
@@ -5336,12 +5219,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "970a036d2a2c060c",
+      "id": "b92de5400db86576",
       "kind": "article",
-      "title": "Anthropic’s AI Safety Bill Has an Alarming Threshold for Government Action",
-      "source": "Mother Jones",
-      "source_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPNk85UDhheTRLWlR3YUtHQ2FjUnU2dVg5Q3dIa1Y4b1p5bS1XajV1REJSMWotUUN4XzZLZGNIajBmRm45M0p5aTdBb0p3R082SHJFNVVXcFRKXzZBZGJsRURfWXhBNmRNdEJYYnJsaGVGM3ZNSXV5UE1NSkZTS0hSU2FsSS1nUVBnSGtBdGk2Sm11S0xqUkZNT3dRTDNTNVpwel9lS0pycU9jZHkxZUFRb1FCemdJdDdKUkhr?oc=5",
-      "published_at": "2026-10-17T07:00:00Z",
+      "title": "The EU AI Act and UK AI regulation: A product law perspective",
+      "source": "Hogan Lovells Cadwalader",
+      "source_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNTFhWWC1JYjV2eElqSFRFSWNqXzJ4ZFR2R0xpUVVNLU0yUXJqQVpKQ19Xb3FLRC1KQ1A2WjhsRDFnQTY5czB1MmFlbGhSZmFjNTRrWjlZVGtfZXd1TC1OclYxenpoVHN4U2tTejE5M2xsakluTF9zZXQxZV9zNi0zZGQwTVAxemRSVmhHeHZiTEFDbzNZazJjeFV6RlM?oc=5",
+      "published_at": "2026-10-19T07:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -5349,17 +5232,17 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Anthropic’s AI Safety Bill Has an Alarming Threshold for Government Action Mother Jones",
+      "summary": "The EU AI Act and UK AI regulation: A product law perspective Hogan Lovells Cadwalader",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPNk85UDhheTRLWlR3YUtHQ2FjUnU2dVg5Q3dIa1Y4b1p5bS1XajV1REJSMWotUUN4XzZLZGNIajBmRm45M0p5aTdBb0p3R082SHJFNVVXcFRKXzZBZGJsRURfWXhBNmRNdEJYYnJsaGVGM3ZNSXV5UE1NSkZTS0hSU2FsSS1nUVBnSGtBdGk2Sm11S0xqUkZNT3dRTDNTNVpwel9lS0pycU9jZHkxZUFRb1FCemdJdDdKUkhr?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "resolved_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNTFhWWC1JYjV2eElqSFRFSWNqXzJ4ZFR2R0xpUVVNLU0yUXJqQVpKQ19Xb3FLRC1KQ1A2WjhsRDFnQTY5czB1MmFlbGhSZmFjNTRrWjlZVGtfZXd1TC1OclYxenpoVHN4U2tTejE5M2xsakluTF9zZXQxZV9zNi0zZGQwTVAxemRSVmhHeHZiTEFDbzNZazJjeFV6RlM?oc=5&hl=en-US&gl=US&ceid=US:en",
       "key_points": [
         "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Anthropic’s AI Safety Bill Has an Alarming Threshold for Government Action Mother Jones"
+          "body": "The EU AI Act and UK AI regulation: A product law perspective Hogan Lovells Cadwalader"
         },
         {
           "title": "公开页面要点",
@@ -5414,12 +5297,12 @@
       "reading_minutes": 1
     },
     {
-      "id": "98ab4b7e5e43a592",
+      "id": "a18cd81b8bf9f2dd",
       "kind": "article",
-      "title": "A timeline of developments in AI safety since the attack on Hugging Face",
-      "source": "AP News",
-      "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPaUdUMlp0Z0xkQTl3clhkT2VWYy1EclBLWWpQOGJJc1Bad2xkdTk5eGR3YmdEUC1EZmtibnFZREhkV1BzLURrTlNkbnRDVDRqS1RrUHFhRy1TSGRpeWVldEtfbG1GY2YtQW9VSnZpV3BFM0VhcFlhQXhzOWFiampadkdleFJpYXZxLTdLSGRXcUJ5dE0ta1ZDVjJtaw?oc=5",
-      "published_at": "2026-10-13T07:00:00Z",
+      "title": "Massachusetts Could Set a New Standard for AI Safety",
+      "source": "Governing",
+      "source_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOcW1OVi0yX0J4ZGdFQVp3WmtmVWE0Tmw3Rmg4UUowY21oN2luRjF4Vnh2c1E0WE5BSHAyak00QnZ2RmVGWnluazZzdnh0RERFalhadEc0OE1iUEZnZGlJOThxZ0I1bVRkUlB4ODNuU0M2S0pwamhFQzV1dEM0T3F3MVpJVnpQeWMwQ2xPTHFqc1JPYUlkOExXbVprYUVVcFJUX2RIUQ?oc=5",
+      "published_at": "2026-10-14T07:00:00Z",
       "authors": [],
       "venue": "",
       "tags": [
@@ -5427,17 +5310,17 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "A timeline of developments in AI safety since the attack on Hugging Face AP News",
+      "summary": "Massachusetts Could Set a New Standard for AI Safety Governing",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPaUdUMlp0Z0xkQTl3clhkT2VWYy1EclBLWWpQOGJJc1Bad2xkdTk5eGR3YmdEUC1EZmtibnFZREhkV1BzLURrTlNkbnRDVDRqS1RrUHFhRy1TSGRpeWVldEtfbG1GY2YtQW9VSnZpV3BFM0VhcFlhQXhzOWFiampadkdleFJpYXZxLTdLSGRXcUJ5dE0ta1ZDVjJtaw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "resolved_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOcW1OVi0yX0J4ZGdFQVp3WmtmVWE0Tmw3Rmg4UUowY21oN2luRjF4Vnh2c1E0WE5BSHAyak00QnZ2RmVGWnluazZzdnh0RERFalhadEc0OE1iUEZnZGlJOThxZ0I1bVRkUlB4ODNuU0M2S0pwamhFQzV1dEM0T3F3MVpJVnpQeWMwQ2xPTHFqc1JPYUlkOExXbVprYUVVcFJUX2RIUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
       "key_points": [
         "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "A timeline of developments in AI safety since the attack on Hugging Face AP News"
+          "body": "Massachusetts Could Set a New Standard for AI Safety Governing"
         },
         {
           "title": "公开页面要点",
@@ -5453,11 +5336,50 @@
       "reading_minutes": 1
     },
     {
-      "id": "539d54c5a1c0a29c",
+      "id": "d38f847e99b14dde",
       "kind": "article",
-      "title": "Massachusetts May Pass Country’s Strictest AI Safety Law",
-      "source": "GovTech",
-      "source_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxObHhaMmlNd09pTldJcW9ERXhNRTZ3NGVCMDdTRWdwYmc4c3habW44amFaTE5td3ViS3o2V0FVZ0Nvc0FlM0IzRmptc2dNTmk3aVZvNHZLN2IwZHZJSVAzSGRUcUMxTVRTbXk2cVZWUUtXTXJRdDNOZjhCNG1TNUVvNUc0cHluZG4yMFg0QVNDUDI4VndRdzNmeWc5NFRQdlRuX2RkTlBB?oc=5",
+      "title": "Ten Takeaways From the UK Government’s Strategy For AI Regulation in Healthcare",
+      "source": "Ropes & Gray LLP",
+      "source_url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOT3plRzlhVks4YmsxWjRpQzdUZnd1QUxQam95MlRFUmdZeEtpUllSdUFUZFE2SXloQmRmendHRnB1Rjk5ODVGQV8tWjY2UWJHMkZrcklZb3owUmhCRGw5bW53UXU4ZXdhZlFYeU9GOUluWkhSWWx3M2ZuRlF6U1FvZUMxWHFQRmRDZnNsWHdjcEk0V01iNjM4eHlXdWZ6LThBRk5GNjNiSFlLZlI4R3ZiTnhXMF8wYV9rVkFqWnRfczdkazZLbW9SbkY1NExfSkM0cFo5NWtRVXpnajg?oc=5",
+      "published_at": "2026-10-14T07:00:00Z",
+      "authors": [],
+      "venue": "",
+      "tags": [
+        "Policy",
+        "Safety"
+      ],
+      "verification": "媒体或公开网页",
+      "summary": "Ten Takeaways From the UK Government’s Strategy For AI Regulation in Healthcare Ropes & Gray LLP",
+      "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
+      "fetch_status": "public-page-excerpt",
+      "resolved_url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOT3plRzlhVks4YmsxWjRpQzdUZnd1QUxQam95MlRFUmdZeEtpUllSdUFUZFE2SXloQmRmendHRnB1Rjk5ODVGQV8tWjY2UWJHMkZrcklZb3owUmhCRGw5bW53UXU4ZXdhZlFYeU9GOUluWkhSWWx3M2ZuRlF6U1FvZUMxWHFQRmRDZnNsWHdjcEk0V01iNjM4eHlXdWZ6LThBRk5GNjNiSFlLZlI4R3ZiTnhXMF8wYV9rVkFqWnRfczdkazZLbW9SbkY1NExfSkM0cFo5NWtRVXpnajg?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "key_points": [
+        "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+      ],
+      "sections": [
+        {
+          "title": "内容概览",
+          "body": "Ten Takeaways From the UK Government’s Strategy For AI Regulation in Healthcare Ropes & Gray LLP"
+        },
+        {
+          "title": "公开页面要点",
+          "bullets": [
+            "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
+          ]
+        },
+        {
+          "title": "原文短摘录",
+          "paragraphs": []
+        }
+      ],
+      "reading_minutes": 1
+    },
+    {
+      "id": "6fb872edc514fa42",
+      "kind": "article",
+      "title": "David Crowley proposes AI safety policies for youth, seniors",
+      "source": "WPR",
+      "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9JRTlHeEFtZWcyclZ5SWJrTUdrQ19ITm5jSk9PLS1WSnllSTVZVldlSXE1NHdkMDBuZGRSNUdYbUtwWDM5WlhveTBTMVF3aUlrZ2doWm1BaDdDSHdHTFhSSEZROTdNRGd5Qjh0UzI2dFhTZ093ZTdYaGhfMA?oc=5",
       "published_at": "2026-10-13T07:00:00Z",
       "authors": [],
       "venue": "",
@@ -5466,17 +5388,17 @@
         "Safety"
       ],
       "verification": "媒体或公开网页",
-      "summary": "Massachusetts May Pass Country’s Strictest AI Safety Law GovTech",
+      "summary": "David Crowley proposes AI safety policies for youth, seniors WPR",
       "rights_note": "本站保留结构化摘要与必要短摘录；完整内容请查看原始来源。",
       "fetch_status": "public-page-excerpt",
-      "resolved_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxObHhaMmlNd09pTldJcW9ERXhNRTZ3NGVCMDdTRWdwYmc4c3habW44amFaTE5td3ViS3o2V0FVZ0Nvc0FlM0IzRmptc2dNTmk3aVZvNHZLN2IwZHZJSVAzSGRUcUMxTVRTbXk2cVZWUUtXTXJRdDNOZjhCNG1TNUVvNUc0cHluZG4yMFg0QVNDUDI4VndRdzNmeWc5NFRQdlRuX2RkTlBB?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "resolved_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9JRTlHeEFtZWcyclZ5SWJrTUdrQ19ITm5jSk9PLS1WSnllSTVZVldlSXE1NHdkMDBuZGRSNUdYbUtwWDM5WlhveTBTMVF3aUlrZ2doWm1BaDdDSHdHTFhSSEZROTdNRGd5Qjh0UzI2dFhTZ093ZTdYaGhfMA?oc=5&hl=en-US&gl=US&ceid=US:en",
       "key_points": [
         "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News."
       ],
       "sections": [
         {
           "title": "内容概览",
-          "body": "Massachusetts May Pass Country’s Strictest AI Safety Law GovTech"
+          "body": "David Crowley proposes AI safety policies for youth, seniors WPR"
         },
         {
           "title": "公开页面要点",
