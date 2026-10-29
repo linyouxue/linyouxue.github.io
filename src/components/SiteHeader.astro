@@ -1,0 +1,17 @@
+---
+import { site } from '../data/site';
+import { pathFor, ui, type Lang } from '../lib/i18n';
+import LanguageSwitch from './LanguageSwitch.astro';
+interface Props { lang: Lang; current?: 'writing' | 'work' | 'about'; alternatePath?: string; }
+const { lang, current, alternatePath = pathFor(lang === 'en' ? 'zh' : 'en', current ? `/${current}/` : '/') } = Astro.props;
+const t = ui[lang];
+---
+<header class="site-header">
+  <a class="site-name" href={pathFor(lang)} aria-label={lang === 'en' ? 'Linyouxue — Home' : '林元靖 — 首页'}>{site.name[lang]}</a>
+  <nav class="site-nav" aria-label={lang === 'en' ? 'Main navigation' : '主导航'}>
+    <a href={pathFor(lang, '/writing/')} aria-current={current === 'writing' ? 'page' : undefined}>{t.writing}</a>
+    <a href={pathFor(lang, '/work/')} aria-current={current === 'work' ? 'page' : undefined}>{t.work}</a>
+    <a href={pathFor(lang, '/about/')} aria-current={current === 'about' ? 'page' : undefined}>{t.about}</a>
+  </nav>
+  <LanguageSwitch lang={lang} alternatePath={alternatePath} />
+</header>

@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LanguageSwitch from '../components/LanguageSwitch.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+import { site } from '../data/site';
+import { pathFor, ui, type Lang } from '../lib/i18n';
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const t = ui[lang];
+---
+<BaseLayout lang={lang} title={site.name[lang]} kind="cover">
+  <div class="cover">
+    <header class="cover-header">
+      <LanguageSwitch lang={lang} alternatePath={pathFor(lang === 'en' ? 'zh' : 'en')} />
+    </header>
+    <main class="cover-spread" id="main">
+      <section class="cover-identity">
+        <h1>{site.name[lang]}</h1>
+        <p class="cover-byline">{lang === 'en' ? 'Yuanjing Lin · 林元靖' : 'Linyouxue · Yuanjing Lin'}</p>
+        <p class="cover-bio">{site.bio[lang]}</p>
+      </section>
+      <section class="cover-contents" aria-labelledby="writing-title">
+        <h2 id="writing-title" class="writing-title">{t.writing}</h2>
+        <p class="cover-topics">{t.technical}<br />{t.notes}</p>
+        <a class="enter-writing" href={pathFor(lang, '/writing/')}>
+          <span>{t.enter}</span>
+          <svg aria-hidden="true" width="42" height="22" viewBox="0 0 42 22" fill="none"><path d="M1 11h38M30 2l9 9-9 9" stroke="currentColor" stroke-width="1.5" /></svg>
+        </a>
+        <nav class="cover-secondary" aria-label={lang === 'en' ? 'More about me' : '了解更多'}>
+          <a href={pathFor(lang, '/work/')}>{t.work}</a>
+          <a href={pathFor(lang, '/about/')}>{t.about}</a>
+        </nav>
+      </section>
+    </main>
+    <footer class="cover-footer"><SocialLinks lang={lang} /></footer>
+  </div>
+</BaseLayout>

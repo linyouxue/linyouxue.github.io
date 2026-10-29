@@ -1,0 +1,29 @@
+---
+import '../styles/site.css';
+import { site } from '../data/site';
+import type { Lang } from '../lib/i18n';
+interface Props { lang: Lang; title: string; description?: string; kind?: 'cover' | 'content' | 'reading'; }
+const { lang, title, description = site.bio[lang], kind = 'content' } = Astro.props;
+---
+<!doctype html>
+<html lang={lang === 'zh' ? 'zh-CN' : 'en'}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/site-icon.svg" />
+    <title>{title === site.name[lang] ? title : `${title} — ${site.name[lang]}`}</title>
+    {kind === 'cover' && <script is:inline>
+      try {
+        if (!sessionStorage.getItem('cover-intro-seen')) {
+          document.documentElement.dataset.coverIntro = 'play';
+          sessionStorage.setItem('cover-intro-seen', 'true');
+        }
+      } catch { /* Navigation and the complete cover work without storage. */ }
+    </script>}
+  </head>
+  <body data-page-kind={kind}>
+    <a class="skip-link" href="#main">{lang === 'en' ? 'Skip to content' : '跳到内容'}</a>
+    <slot />
+  </body>
+</html>

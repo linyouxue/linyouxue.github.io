@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import { ui, type Lang } from '../lib/i18n';
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const t = ui[lang];
+---
+<BaseLayout lang={lang} title={t.work}>
+  <SiteHeader lang={lang} current="work" />
+  <main class="index-page work-page" id="main">
+    <header class="page-heading">
+      <h1>{t.work}</h1>
+      <p>{t.workIntro}</p>
+    </header>
+    <section class="empty-state" aria-label={t.work}>
+      <p>{t.workEmpty}</p>
+    </section>
+  </main>
+</BaseLayout>

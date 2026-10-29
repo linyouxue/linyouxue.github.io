@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+import { site } from '../data/site';
+import { ui, type Lang } from '../lib/i18n';
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const t = ui[lang];
+---
+<BaseLayout lang={lang} title={t.about}>
+  <SiteHeader lang={lang} current="about" />
+  <main class="index-page about-page" id="main">
+    <header class="page-heading">
+      <h1>{t.about}</h1>
+    </header>
+    <div class="about-body">
+      <img class="portrait" src="/assets/lin-yuanjing.png" alt={lang === 'en' ? 'Portrait of Yuanjing Lin' : '林元靖的照片'} width="217" height="305" />
+      <div class="about-copy">
+        <h2>{site.realName[lang]}</h2>
+        <p class="about-affiliation">{site.affiliation[lang]}</p>
+        <p class="about-interests">{site.interests[lang]}</p>
+        <section class="about-contact" aria-labelledby="contact-title">
+          <h3 id="contact-title">{t.contact}</h3>
+          <SocialLinks lang={lang} variant="full" />
+        </section>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import { ui, type Lang } from '../lib/i18n';
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const t = ui[lang];
+---
+<BaseLayout lang={lang} title={t.writing}>
+  <SiteHeader lang={lang} current="writing" />
+  <main class="index-page" id="main">
+    <header class="page-heading">
+      <h1 class="writing-title">{t.writing}</h1>
+      <p>{t.writingIntro}</p>
+    </header>
+    <section class="empty-state" aria-label={t.writing}>
+      <p class="empty-context">{t.technical}<span aria-hidden="true"> / </span>{t.notes}</p>
+      <p>{t.writingEmpty}</p>
+    </section>
+  </main>
+</BaseLayout>
