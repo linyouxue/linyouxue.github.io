@@ -17,7 +17,7 @@ const t = ui[lang];
   </div>
   <div id="meteor-layer" aria-hidden="true"></div>
   <div id="star-cursor" aria-hidden="true"></div>
-  <div id="cursor-tail" aria-hidden="true"></div>
+  <canvas id="cursor-tail" aria-hidden="true"></canvas>
   <header class="language-control">
     <LanguageSwitch lang={lang} alternatePath={pathFor(lang === 'en' ? 'zh' : 'en')} />
   </header>
@@ -37,9 +37,7 @@ const t = ui[lang];
       <SocialLinks lang={lang} variant="icons" />
     </section>
   </main>
-  <footer class="cover-replay">
-    <button type="button" id="replay-intro">{lang === 'en' ? 'Replay' : '重播'}</button>
-  </footer>
+  <div class="cover-bottom-space" aria-hidden="true"></div>
   <script>
     import '../scripts/cover';
   </script>

@@ -1,12 +1,6 @@
 const root = document.documentElement;
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 
-document.querySelector('#replay-intro')?.addEventListener('click', () => {
-  document.body.classList.remove('intro-playing');
-  void document.body.offsetWidth;
-  document.body.classList.add('intro-playing');
-});
-
 const meteorLayer = document.querySelector<HTMLElement>('#meteor-layer')!;
 let meteorTimer: number | undefined;
 const meteorBatchTimers = new Set<number>();
@@ -48,38 +42,74 @@ function scheduleMeteor(delay = 8000 + Math.random() * 4000) {
 }
 
 const cursor = document.querySelector<HTMLElement>('#star-cursor')!;
-const tail = document.querySelector<HTMLElement>('#cursor-tail')!;
-let previousPointer: { x: number; y: number } | undefined;
-let tailTimer: number | undefined;
+const tail = document.querySelector<HTMLCanvasElement>('#cursor-tail')!;
+const tailContext = tail.getContext('2d')!;
+const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
+const trailLifetime = 260;
+let trail: { x: number; y: number; time: number }[] = [];
+let tailFrame: number | undefined;
+
+function resizeTail() {
+  const scale = devicePixelRatio || 1;
+  tail.width = Math.round(innerWidth * scale);
+  tail.height = Math.round(innerHeight * scale);
+  tailContext.setTransform(scale, 0, 0, scale, 0, 0);
+  trail = [];
+}
+
+function drawTail(time: number) {
+  trail = trail.filter(point => time - point.time < trailLifetime);
+  tailContext.clearRect(0, 0, innerWidth, innerHeight);
+  tailContext.lineCap = 'round';
+  tailContext.lineWidth = 1.5;
+  tailContext.shadowColor = '#b4d9ff';
+  tailContext.shadowBlur = 6;
+  for (let index = 1; index < trail.length; index++) {
+    const previous = trail[index - 1], point = trail[index];
+    const opacity = (1 - (time - previous.time) / trailLifetime) * .85;
+    tailContext.strokeStyle = `rgba(207,232,255,${opacity})`;
+    tailContext.beginPath();
+    tailContext.moveTo(previous.x, previous.y);
+    tailContext.lineTo(point.x, point.y);
+    tailContext.stroke();
+  }
+  tailFrame = trail.length ? requestAnimationFrame(drawTail) : undefined;
+}
 
 function positionStar(x: number, y: number) {
   cursor.style.display = 'block'; cursor.style.left = `${x}px`; cursor.style.top = `${y}px`;
-  if (previousPointer) {
-    const dx = x - previousPointer.x, dy = y - previousPointer.y;
-    tail.style.display = 'block'; tail.style.left = `${x}px`; tail.style.top = `${y}px`;
-    tail.style.width = `${Math.min(27, Math.hypot(dx, dy) * 2 + 8)}px`;
-    tail.style.transform = `translate(-100%,-50%) rotate(${Math.atan2(dy, dx)}rad)`;
-    tail.style.opacity = '.3';
-    clearTimeout(tailTimer);
-    tailTimer = window.setTimeout(() => { tail.style.opacity = '0'; }, 100);
+  tail.style.display = 'block';
+  trail.push({ x, y, time: performance.now() });
+  // Keep the light close to the star even during a fast sweep.
+  let length = 0;
+  for (let index = trail.length - 1; index > 0; index--) {
+    length += Math.hypot(trail[index].x - trail[index - 1].x, trail[index].y - trail[index - 1].y);
+    if (length > 180) { trail = trail.slice(index); break; }
   }
-  previousPointer = { x, y };
+  if (tailFrame === undefined) tailFrame = requestAnimationFrame(drawTail);
 }
 
 function hideStar() {
-  cursor.style.display = 'none'; tail.style.display = 'none'; previousPointer = undefined;
+  if (tailFrame !== undefined) cancelAnimationFrame(tailFrame);
+  tailFrame = undefined; trail = [];
+  tailContext.clearRect(0, 0, innerWidth, innerHeight);
+  cursor.style.display = 'none'; tail.style.display = 'none';
   document.body.classList.remove('has-stellar-cursor');
 }
 
 addEventListener('pointermove', event => {
-  if (event.pointerType !== 'mouse' || reducedMotion.matches || document.hidden) return;
+  if (event.pointerType !== 'mouse' || !finePointer.matches || reducedMotion.matches || document.hidden) return;
   document.body.classList.add('has-stellar-cursor');
   positionStar(event.clientX, event.clientY);
 });
 document.addEventListener('pointerleave', hideStar);
+addEventListener('blur', hideStar);
+addEventListener('resize', resizeTail);
+finePointer.addEventListener('change', hideStar);
+resizeTail();
 
 function stopMotion() {
-  clearTimeout(meteorTimer); clearTimeout(tailTimer);
+  clearTimeout(meteorTimer);
   meteorBatchTimers.forEach(timer => clearTimeout(timer)); meteorBatchTimers.clear();
   meteorLayer.replaceChildren();
   hideStar();

@@ -68,7 +68,7 @@ test('reduced motion presents an immediately usable static cover on a phone', as
   await page.goto('/zh/');
   await expect(page.getByRole('img', { name: '林元靖的网头', exact: true })).toBeVisible();
   await expect(page.getByRole('heading', { level: 1, name: '林元靖', exact: true })).toBeVisible();
-  await page.getByRole('button', { name: '重播', exact: true }).click();
+  await expect(page.getByRole('button', { name: /Replay|重播/, exact: true })).toHaveCount(0);
   await expect.poll(() => page.evaluate(() => document.getAnimations().length)).toBe(0);
   await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.getByRole('link', { name: '博客', exact: true }).click();
