@@ -13,7 +13,7 @@ export const about = {
     education: 'Education',
     years: '2025 — Present',
     university: 'Beijing Institute of Technology',
-    degree: 'Xu Teli Honors Class · BSc in Artificial Intelligence (in progress)',
+    degree: 'Xu Teli Honors Class · Undergraduate in Artificial Intelligence (in progress)',
     learning: 'Learning by doing',
     practice: [
       { title: 'Agent workflows & Skills', description: 'Exploring collaboration patterns and building useful skills.' },

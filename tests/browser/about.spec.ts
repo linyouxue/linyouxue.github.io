@@ -8,7 +8,7 @@ test('About introduces the author and their current interests in both language e
     await expect(page.getByRole('heading', { name: heading, exact: true })).toBeVisible();
   }
   await expect(page.getByText('2025 — Present', { exact: true })).toBeVisible();
-  await expect(page.getByText('Xu Teli Honors Class · BSc in Artificial Intelligence (in progress)', { exact: true })).toBeVisible();
+  await expect(page.getByText('Xu Teli Honors Class · Undergraduate in Artificial Intelligence (in progress)', { exact: true })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'UIE fine-tuning', exact: true })).toBeVisible();
   await expect(page.getByText('I love spin and looping with inverted rubber on both sides.', { exact: true })).toBeVisible();
   await expect(page.getByText('Xinjiang and New Zealand are on my wish list.', { exact: true })).toBeVisible();
