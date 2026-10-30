@@ -1,0 +1,45 @@
+---
+articleId: reading-attention
+lang: en
+title: Reading attention as a weighted conversation
+summary: Following normalized weights from a question to its context, with a small control for seeing how temperature changes a distribution.
+date: 2026-10-19
+kind: paper-note
+tags: [Attention, Paper reading]
+published: false
+cover:
+  src: ./token-flow.svg
+  alt: Context and probability, arranged as a simple flow
+---
+
+import ProbabilityExample from '../../../src/components/ProbabilityExample.astro';
+
+Attention is easier to read when we start with the question it answers: which parts of the available context should contribute to this representation? The weights provide a local answer. They do not, by themselves, explain every decision the model makes.
+
+## Begin with a question
+
+A query is compared with keys, and the resulting scores are normalized. The weighted values are then combined. This separation helps us ask where the information comes from and how the weighting changes.
+
+$$
+\operatorname{Attention}(Q,K,V)=\operatorname{softmax}\left(\frac{QK^\top}{\sqrt{d_k}}\right)V.
+$$
+
+The scale in the denominator affects the scores before normalization. To isolate the effect of a softer distribution, the control below starts with two candidates whose logit difference is two. Move the temperature and watch the leading probability change.
+
+<ProbabilityExample />
+
+## Read a weight in context
+
+A large weight says that one value contributes more strongly to this particular combination. It does not necessarily identify the cause of a final answer. A useful reading keeps the layer, head, token position, and task in view.
+
+Compare two nearby cases, preserve the original inputs, and describe the local difference before trying to generalize. If a visualization omits part of the sequence, say so in the accompanying explanation.
+
+<details><summary>Why must the weights sum to one?</summary><p>Softmax divides each exponentiated score by the sum of all exponentiated scores. The normalization makes the weights nonnegative and gives their sum the value one.</p></details>
+
+## Questions for another reading
+
+- What information is available at this position?
+- Which comparison changes only one relevant condition?
+- Does the claimed explanation survive a different example?
+
+The equation becomes more useful when it leads to a checkable question. A paper note can preserve that question without pretending it has already been answered.

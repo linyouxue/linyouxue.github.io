@@ -1,0 +1,15 @@
+---
+import { site } from '../data/site';
+import { pathFor, ui, type Lang } from '../lib/i18n';
+import LanguageSwitch from './LanguageSwitch.astro';
+interface Props { lang:Lang; }
+const { lang } = Astro.props;
+---
+<header class="journal-header">
+  <a class="journal-home" href={pathFor(lang)}><span aria-hidden="true">←</span> {ui[lang].home}</a>
+  <a class="journal-identity" href={pathFor(lang)} aria-label={lang === 'en' ? 'Linyouxue — Home' : '林元靖 — 首页'}>{site.name[lang]}</a>
+  <div class="journal-actions">
+    <LanguageSwitch lang={lang} alternatePath={pathFor(lang === 'en' ? 'zh' : 'en', '/writing/')} />
+    <button type="button" data-search-toggle aria-label={lang === 'en' ? 'Search articles' : '搜索文章'} aria-expanded="false" aria-controls="writing-search-panel"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></button>
+  </div>
+</header>

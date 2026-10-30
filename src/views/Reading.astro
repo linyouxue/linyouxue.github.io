@@ -1,0 +1,71 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import LanguageSwitch from '../components/LanguageSwitch.astro';
+import { articlePath, type Article } from '../lib/articles';
+import { pathFor, ui } from '../lib/i18n';
+import '../styles/writing.css';
+import '../styles/reading.css';
+import 'katex/dist/katex.min.css';
+interface Props { article: Article; }
+const { article } = Astro.props;
+const { data } = article;
+const lang = data.lang;
+const { Content, headings } = await render(article);
+// Footnotes belong to the final chapter; their generated accessibility heading is not a chapter.
+const chapters = headings.filter(heading => (heading.depth === 2 || heading.depth === 3) && heading.slug !== 'footnote-label');
+const back = lang === 'en' ? 'Back to Writing' : '返回文章';
+---
+<BaseLayout lang={lang} title={data.title} description={data.summary} kind="reading">
+  <script slot="head" is:inline>
+    try { document.documentElement.dataset.readingTheme = localStorage.getItem('reading-theme') === 'night' ? 'night' : 'day'; }
+    catch { document.documentElement.dataset.readingTheme = 'day'; }
+    try {
+      const scale = Number(localStorage.getItem('reading-font-scale'));
+      if ([1, 1.12, 1.25].includes(scale)) document.documentElement.style.setProperty('--reading-scale', String(scale));
+    } catch { /* Default type remains available without storage. */ }
+  </script>
+  <SiteHeader lang={lang} current="writing" alternatePath={articlePath(data.articleId, lang === 'en' ? 'zh' : 'en')} />
+  <div class="reading-layout">
+    <main id="main" class="reading-main" data-article-id={data.articleId} tabindex="-1">
+      <header class="reading-heading">
+        <a class="reading-back" href={pathFor(lang, '/writing/')}><span aria-hidden="true">← </span>{back}</a>
+        <p class="reading-kind">{data.kind === 'technical' ? ui[lang].technical : ui[lang].notes}</p>
+        <h1>{data.title}</h1>
+        <p class="reading-summary">{data.summary}</p>
+        <p class="reading-meta"><time datetime={data.date.toISOString()}>{new Intl.DateTimeFormat(lang === 'en' ? 'en-US' : 'zh-CN', { dateStyle:'long', timeZone:'UTC' }).format(data.date)}</time><span aria-hidden="true"> · </span>{data.tags.join(' / ')}</p>
+      </header>
+      <article class="article-body"><Content /></article>
+      <footer class="reading-end"><a href={pathFor(lang, '/writing/')}><span aria-hidden="true">← </span>{back}</a></footer>
+    </main>
+    <aside class="desktop-toc">
+      <button type="button" class="reading-tool" data-theme-toggle>{lang === 'en' ? 'Switch to night' : '切换夜间'}</button>
+      {chapters.length > 1 && <nav aria-label={lang === 'en' ? 'On this page' : '本页目录'}>
+      <p>{lang === 'en' ? 'On this page' : '本页目录'}</p>
+      <ol>{chapters.map(heading => <li class:list={{ subheading:heading.depth === 3 }}><a data-chapter href={`#${heading.slug}`}>{heading.text}</a></li>)}</ol>
+    </nav>}
+    </aside>
+  </div>
+  <button type="button" class="reading-tools-trigger" aria-expanded="false" aria-controls="mobile-reading-top mobile-reading-bottom">{lang === 'en' ? 'Show reading tools' : '显示阅读工具'}</button>
+  <div id="mobile-reading-top" class="mobile-reading-top" hidden>
+    <a href={pathFor(lang, '/writing/')} aria-label={back}>←</a>
+    <p>{data.title}</p>
+    <LanguageSwitch lang={lang} alternatePath={articlePath(data.articleId, lang === 'en' ? 'zh' : 'en')} />
+    <button type="button" data-tools-close aria-label={lang === 'en' ? 'Hide reading tools' : '收起阅读工具'}>×</button>
+  </div>
+  <div id="mobile-reading-bottom" class="mobile-reading-bottom" hidden>
+    {chapters.length > 1 && <button type="button" data-contents-open aria-haspopup="dialog" aria-controls="reading-contents">{lang === 'en' ? 'Contents' : '目录'}</button>}
+    <button type="button" data-theme-toggle>{lang === 'en' ? 'Switch to night' : '切换夜间'}</button>
+    <button type="button" data-font-size>{lang === 'en' ? 'Text size: 100%' : '字号：100%'}</button>
+  </div>
+  {chapters.length > 1 && <dialog id="reading-contents" class="contents-dialog" aria-labelledby="contents-title">
+    <header><h2 id="contents-title">{lang === 'en' ? 'Contents' : '目录'}</h2><button type="button" data-contents-close>{lang === 'en' ? 'Close contents' : '关闭目录'}</button></header>
+    <nav aria-label={lang === 'en' ? 'Chapters' : '章节'}><ol>{chapters.map(heading => <li class:list={{ subheading:heading.depth === 3 }}><a data-chapter href={`#${heading.slug}`}>{heading.text}</a></li>)}</ol></nav>
+  </dialog>}
+  <dialog class="image-dialog" aria-label={lang === 'en' ? 'Image' : '图片'}>
+    <header><p data-image-caption></p><button type="button" data-image-close>{lang === 'en' ? 'Close image' : '关闭图片'}</button></header>
+    <div class="image-dialog-scroll"></div>
+  </dialog>
+  <script>import '../scripts/reading';</script>
+</BaseLayout>

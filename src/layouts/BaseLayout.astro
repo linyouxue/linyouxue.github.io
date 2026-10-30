@@ -13,6 +13,7 @@ const { lang, title, description = site.bio[lang], kind = 'content' } = Astro.pr
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/site-icon.svg" />
     <title>{title === site.name[lang] ? title : `${title} — ${site.name[lang]}`}</title>
+    <slot name="head" />
   </head>
   <body data-page-kind={kind} class:list={{ 'intro-playing': kind === 'cover' }}>
     <a class="skip-link" href="#main">{lang === 'en' ? 'Skip to content' : '跳到内容'}</a>
