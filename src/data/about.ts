@@ -1,0 +1,56 @@
+export const about = {
+  en: {
+    identity: 'Artificial Intelligence · Beijing Institute of Technology',
+    introduction: "I study Artificial Intelligence at Beijing Institute of Technology, in the Xu Teli Honors Class. I'm exploring agents, language models, and image generation.",
+    quickFacts: 'Quick facts',
+    facts: ['Born in 2007', 'INTP', 'Table tennis', 'Travel'],
+    questions: "Questions I’m exploring",
+    interests: [
+      { title: 'Agents & Skills', description: 'How can multiple agents collaborate effectively, and how can better skills improve what they can do?' },
+      { title: 'Scaling & Architectures', description: 'What can scaling laws tell us, and how do architectures like MoE change the design choices?' },
+      { title: 'Diffusion', description: 'How do visual ideas become images, and what mathematics makes diffusion work?' },
+    ],
+    education: 'Education',
+    years: '2025 — Present',
+    university: 'Beijing Institute of Technology',
+    degree: 'Xu Teli Honors Class · Undergraduate in Artificial Intelligence (in progress)',
+    learning: 'Learning by doing',
+    practice: [
+      { title: 'Agent workflows & Skills', description: 'Exploring collaboration patterns and building useful skills.' },
+      { title: 'UIE fine-tuning', description: 'Hands-on model setup, training, and result analysis.' },
+    ],
+    life: 'Beyond the screen',
+    hobbies: [
+      { title: 'Table tennis', description: 'I love spin and looping with inverted rubber on both sides.' },
+      { title: 'Travel', description: 'Xinjiang and New Zealand are on my wish list.' },
+    ],
+    connect: 'Let’s connect',
+  },
+  zh: {
+    identity: '人工智能 · 北京理工大学',
+    introduction: '我在北京理工大学徐特立英才班学习人工智能，正探索 Agent、语言模型与图像生成中感兴趣的问题。',
+    quickFacts: '关于我的几件小事',
+    facts: ['2007 年生', 'INTP', '乒乓球', '旅行'],
+    questions: '目前关注的问题',
+    interests: [
+      { title: 'Agent 与 Skills', description: '多个 Agent 如何有效协作？怎样设计更好的 Skills，提升 Agent 的能力？' },
+      { title: '规模与架构', description: 'Scaling law 能告诉我们什么？MoE 等架构又如何改变模型设计中的选择？' },
+      { title: '扩散模型', description: '视觉想法如何变成图像？扩散模型背后的数学又是怎样的？' },
+    ],
+    education: '教育',
+    years: '2025 — 至今',
+    university: '北京理工大学',
+    degree: '徐特立英才班 · 人工智能本科（在读）',
+    learning: '在实践中学习',
+    practice: [
+      { title: 'Agent 工作流与 Skills', description: '正在探索多 Agent 的协作方式，尝试构建实用的 Skills。' },
+      { title: 'UIE 模型微调', description: '曾动手配置模型运行环境、开展信息抽取微调训练，并分析结果。' },
+    ],
+    life: '屏幕之外',
+    hobbies: [
+      { title: '乒乓球', description: '喜欢旋转，也喜欢双面反胶的弧圈打法。' },
+      { title: '旅行', description: '新疆和新西兰，都在我想去的地方清单里。' },
+    ],
+    connect: '与我联系',
+  },
+} as const;

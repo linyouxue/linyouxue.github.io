@@ -1,0 +1,10 @@
+---
+import type { Lang } from '../lib/i18n';
+interface Props { lang: Lang; alternatePath: string; }
+const { lang, alternatePath } = Astro.props;
+---
+<nav class="language-switch" aria-label={lang === 'en' ? 'Language' : '语言'}>
+  {lang === 'en' ? <span aria-current="true" lang="en">EN</span> : <a href={alternatePath} lang="en" hreflang="en" aria-label="Switch to English">EN</a>}
+  <span class="language-divider" aria-hidden="true">/</span>
+  {lang === 'zh' ? <span aria-current="true" lang="zh-CN">中文</span> : <a href={alternatePath} lang="zh-CN" hreflang="zh-CN" aria-label="切换到中文">中文</a>}
+</nav>

@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import JournalHeader from '../components/JournalHeader.astro';
+import { ui, type Lang } from '../lib/i18n';
+import '../styles/writing.css';
+import { getArticles, articlePath } from '../lib/articles';
+import { Image } from 'astro:assets';
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const t = ui[lang];
+const articles = (await getArticles()).filter(entry => entry.data.lang === lang);
+const tags = [...new Set(articles.flatMap(entry => entry.data.tags))];
+---
+<BaseLayout lang={lang} title={t.writing}>
+  <div class="writing-shell">
+  <JournalHeader lang={lang} />
+  <main class="writing-index" id="main">
+    <header class="writing-heading">
+      <h1 class="writing-title">{t.writing}</h1>
+    </header>
+    <div class="writing-filters">
+      <nav class="writing-types" aria-label={lang === 'en' ? 'Article type' : '文章类型'}>
+        <button type="button" data-type="all" aria-pressed="true">{lang === 'en' ? 'All' : '全部'}</button>
+        <button type="button" data-type="technical" aria-pressed="false">{t.technical}</button>
+        <button type="button" data-type="paper-note" aria-pressed="false">{t.notes}</button>
+      </nav>
+    </div>
+    <div id="writing-search-panel" hidden>
+      <form role="search" class="writing-search">
+        <label for="article-search" class="visually-hidden">{lang === 'en' ? 'Search articles' : '搜索文章'}</label>
+        <input id="article-search" type="search" placeholder={lang === 'en' ? 'Search titles, summaries, tags…' : '搜索标题、摘要、标签…'} />
+        <button type="button" class="clear-filters" hidden>{lang === 'en' ? 'Clear filters' : '清除筛选'}</button>
+      </form>
+      {tags.length > 0 && <nav class="writing-tags" aria-label={lang === 'en' ? 'Topics' : '主题'}>
+      {tags.map(tag => <button type="button" data-topic={tag} aria-pressed="false">{tag}</button>)}
+      </nav>}
+    </div>
+    <div class="article-list">
+      {articles.map(({ data }, index) => <article class:list={['article-entry', { featured: index === 0 }]} data-kind={data.kind} data-topics={JSON.stringify(data.tags)} data-search={`${data.title} ${data.summary} ${data.tags.join(' ')}`}>
+        {index === 0 && data.cover && <a class="article-cover" href={articlePath(data.articleId, lang)} tabindex="-1" aria-hidden="true"><Image src={data.cover.src} alt="" /></a>}
+        <div class:list={{ 'compact-body': index > 0 && data.cover }}>
+          <div>
+            <h2><a href={articlePath(data.articleId, lang)}>{data.title}</a></h2>
+            <p class="article-summary">{data.summary}</p>
+          </div>
+          {index > 0 && data.cover && <Image class="article-thumbnail" src={data.cover.src} alt={data.cover.alt} />}
+        </div>
+        <div class="article-meta">
+          <time datetime={data.date.toISOString()}>{new Intl.DateTimeFormat(lang === 'en' ? 'en-US' : 'zh-CN', { dateStyle:'medium', timeZone:'UTC' }).format(data.date)}</time>
+          <span>{data.kind === 'technical' ? t.technical : t.notes}</span>
+          {data.tags.map(tag => <button type="button" data-topic={tag} aria-pressed="false">{tag}</button>)}
+        </div>
+      </article>)}
+    </div>
+    <section class="writing-empty" aria-label={t.writing} aria-live="polite" hidden={articles.length > 0}>
+      <p data-library-empty hidden={articles.length > 0}>{t.writingEmpty}</p>
+      <p data-filter-empty hidden>{lang === 'en' ? 'No matching articles.' : '没有匹配的文章。'}</p>
+    </section>
+  </main>
+  </div>
+  <script>import '../scripts/writing';</script>
+</BaseLayout>

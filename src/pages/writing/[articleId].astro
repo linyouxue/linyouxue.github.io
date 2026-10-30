@@ -1,0 +1,7 @@
+---
+import Reading from '../../views/Reading.astro';
+import { articleRoutes } from '../../lib/articles';
+export const getStaticPaths = () => articleRoutes('en');
+const { article } = Astro.props;
+---
+<Reading article={article} />

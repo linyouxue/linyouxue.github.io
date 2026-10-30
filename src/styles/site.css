@@ -1,0 +1,121 @@
+@layer reset, base, layout, components, motion;
+
+@layer reset {
+  *, *::before, *::after { box-sizing: border-box; }
+  body, h1, h2, h3, p { margin: 0; }
+  img, svg { display: block; }
+  button, input, select { font: inherit; }
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --paper: #f8f7f3;
+    --ink: #272d2a;
+    --muted: #646963;
+    --accent: #762d40;
+    --selected: #e8dadd;
+    --line: #d9d8d1;
+    --serif: Georgia, 'Times New Roman', 'Noto Serif CJK SC', 'Songti SC', SimSun, serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif;
+  }
+  html { background: var(--paper); color: var(--ink); font-family: var(--sans); }
+  body { min-width: 0; font-size: 16px; line-height: 1.65; }
+  ::selection { background: var(--selected); }
+  a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: .25em; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; }
+  a:hover { color: var(--accent); }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 400; }
+  [lang='zh-CN'] h1, [lang='zh-CN'] h2, [lang='zh-CN'] h3 { font-family: 'Noto Serif CJK SC', 'Songti SC', SimSun, serif; }
+  .skip-link { position: absolute; top: 12px; left: 20px; padding: 8px 16px; transform: translateY(-160%); z-index: 20; background: var(--paper); }
+  .skip-link:focus { transform: none; }
+}
+
+@layer layout {
+  .site-header { width: min(100% - 160px, 1280px); margin-inline: auto; min-height: 128px; display: flex; align-items: center; gap: 58px; }
+  .site-name { font: 26px/1.2 var(--serif); letter-spacing: -.035em; text-decoration: none; margin-right: auto; }
+  .site-nav { display: flex; align-items: center; gap: 34px; }
+  .site-nav a { text-decoration: none; padding-block: 12px; }
+  .site-nav a[aria-current='page'] { color: var(--accent); text-decoration: underline; text-underline-offset: .6em; }
+  .index-page { width: min(100% - 240px, 1120px); margin: 102px auto 120px; }
+  .page-heading { display: grid; grid-template-columns: 1.15fr 1fr; align-items: end; gap: 72px; padding-bottom: 64px; }
+  .page-heading h1 { font-size: 88px; line-height: 1.08; letter-spacing: -.045em; text-wrap: balance; }
+  .page-heading > p { max-width: 360px; padding-bottom: 6px; color: var(--muted); font-size: 19px; }
+  .empty-state { padding-top: 38px; border-top: 1px solid var(--line); }
+  .empty-state > p:last-child { margin-top: 68px; font: 28px/1.5 var(--serif); }
+  .empty-context { color: var(--muted); }
+  .empty-context span { padding-inline: 12px; color: var(--line); }
+  .work-page .page-heading h1 { font-size: 80px; }
+  .work-page .empty-state > p { margin-top: 30px; }
+  .about-body { border-top: 1px solid var(--line); padding-top: 48px; display: grid; grid-template-columns: 217px minmax(0, 1fr); gap: 80px; }
+  .portrait { width: 217px; max-width: 100%; height: auto; }
+  .about-copy { max-width: 620px; }
+  .about-copy h2 { font-size: 38px; line-height: 1.3; }
+  .about-affiliation { color: var(--muted); margin-top: 14px; }
+  .about-interests { font-size: 19px; line-height: 1.8; margin-top: 30px; text-wrap: pretty; }
+  .about-contact { margin-top: 40px; }
+  .about-contact h3 { font-family: var(--sans); font-size: 16px; font-weight: 400; margin-bottom: 12px; color: var(--muted); }
+}
+
+@layer components {
+  .language-switch { display: flex; align-items: center; gap: 14px; font-size: 15px; }
+  .language-switch a { color: var(--muted); text-decoration: none; padding-block: 10px; }
+  .language-switch a:hover { color: var(--accent); }
+  .language-switch [aria-current] { color: var(--ink); }
+  .language-divider { color: var(--line); }
+  .social-links { display: flex; flex-wrap: wrap; align-items: center; gap: 18px 34px; color: var(--muted); font-size: 15px; }
+  .social-links a { display: flex; align-items: center; gap: 10px; padding-block: 10px; text-decoration: none; }
+  .social-links svg { flex-shrink: 0; }
+  .xiaohongshu-mark { display: block; flex-shrink: 0; width: 22px; height: 22px; background: currentColor; mask: url('/assets/xiaohongshu.svg') center / contain no-repeat; -webkit-mask: url('/assets/xiaohongshu.svg') center / contain no-repeat; }
+  .social-links-full { column-gap: 30px; font-size: 16px; color: var(--ink); }
+  .social-links-full a:last-child { flex-basis: 100%; width: fit-content; }
+}
+
+@layer motion {
+  @view-transition { navigation: auto; }
+  .writing-title { view-transition-name: writing-title; }
+  .social-links a, .site-nav a { transition: color 160ms ease; }
+  ::view-transition-group(*) { animation-duration: 450ms; animation-timing-function: cubic-bezier(.2, .7, .3, 1); }
+  ::view-transition-old(writing-title) { display: none; }
+  ::view-transition-new(writing-title) { animation: none; }
+  ::view-transition-old(root) { animation-duration: 180ms; }
+  ::view-transition-new(root) { animation-duration: 280ms; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+}
+
+@media (max-width: 1080px) {
+  .site-header { width: calc(100% - 96px); }
+  .site-header { gap: 32px; }
+  .site-nav { gap: 24px; }
+  .index-page { width: calc(100% - 112px); }
+  .page-heading { gap: 40px; }
+  .page-heading h1 { font-size: 72px; }
+}
+
+@media (max-width: 720px) {
+  .site-header { width: calc(100% - 48px); }
+  .site-header { flex-wrap: wrap; column-gap: 12px; row-gap: 16px; padding-block: 25px 18px; min-height: auto; }
+  .site-name { font-size: 24px; }
+  .site-header > .language-switch { order: 1; }
+  .site-nav { order: 2; width: 100%; gap: 24px; font-size: 15px; justify-content: space-between; }
+  .site-nav a { padding-block: 8px; }
+  .index-page { width: calc(100% - 48px); margin-block: 62px 80px; }
+  .page-heading { display: block; padding-bottom: 37px; }
+  .page-heading h1 { font-size: 58px; line-height: 1.14; }
+  .page-heading > p { margin-top: 24px; max-width: 320px; font-size: 17px; }
+  .empty-state { padding-top: 25px; }
+  .empty-state > p:last-child { margin-top: 48px; font-size: 25px; }
+  .empty-context { font-size: 15px; }
+  .empty-context span { padding-inline: 5px; }
+  .work-page .page-heading h1 { font-size: 56px; }
+  .about-body { grid-template-columns: 1fr; gap: 32px; padding-top: 32px; }
+  .portrait { width: 130px; }
+  .about-copy h2 { font-size: 32px; }
+  .about-interests { font-size: 17px; margin-top: 24px; }
+  .about-contact { margin-top: 30px; }
+  .social-links-full { gap: 4px 26px; }
+}
