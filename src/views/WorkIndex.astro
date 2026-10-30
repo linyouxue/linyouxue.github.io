@@ -1,20 +1,51 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import SiteHeader from '../components/SiteHeader.astro';
-import { ui, type Lang } from '../lib/i18n';
+import JournalHeader from '../components/JournalHeader.astro';
+import { pathFor, ui, type Lang } from '../lib/i18n';
+import '../styles/writing.css';
+import '../styles/work.css';
 interface Props { lang: Lang; }
 const { lang } = Astro.props;
 const t = ui[lang];
+const copy = {
+  en: {
+    introduction: 'Research and projects I take part in.',
+    all: 'All', papers: 'Papers', projects: 'Projects',
+    papersEmpty: 'No papers published yet.', projectsEmpty: 'No projects published yet.',
+    explore: 'Explore Writing',
+  },
+  zh: {
+    introduction: '我实际参与的研究与项目。',
+    all: '全部', papers: '论文', projects: '项目',
+    papersEmpty: '目前还没有发布论文。', projectsEmpty: '目前还没有发布项目。',
+    explore: '浏览文章',
+  },
+}[lang];
 ---
-<BaseLayout lang={lang} title={t.work}>
-  <SiteHeader lang={lang} current="work" />
-  <main class="index-page work-page" id="main">
-    <header class="page-heading">
-      <h1>{t.work}</h1>
-      <p>{t.workIntro}</p>
+<BaseLayout lang={lang} title={t.work} description={copy.introduction}>
+ <div class="writing-shell work-shell">
+  <JournalHeader lang={lang} alternatePath={pathFor(lang === 'en' ? 'zh' : 'en', '/work/')} showSearch={false} />
+  <main class="work-index" id="main">
+    <header class="work-heading">
+      <h1>{lang === 'en' ? <Fragment><span class="work-title-first">Research &amp;</span> Projects</Fragment> : t.work}</h1>
+      <p>{copy.introduction}</p>
     </header>
-    <section class="empty-state" aria-label={t.work}>
-      <p>{t.workEmpty}</p>
+    <nav class="work-types" aria-label={lang === 'en' ? 'Work type' : '个人工作类型'}>
+      <button type="button" data-work-filter data-empty-label={t.workEmpty} aria-pressed="true">{copy.all}</button>
+      <button type="button" data-work-filter data-empty-label={copy.papersEmpty} aria-pressed="false">{copy.papers}</button>
+      <button type="button" data-work-filter data-empty-label={copy.projectsEmpty} aria-pressed="false">{copy.projects}</button>
+    </nav>
+    <section class="work-empty" aria-label={t.work}>
+      <p data-work-empty role="status" aria-live="polite">{t.workEmpty}</p>
+      <a class="work-explore" href={pathFor(lang, '/writing/')}>{copy.explore}<span aria-hidden="true">→</span></a>
     </section>
   </main>
+  <footer class="work-footer">
+    <nav aria-label={lang === 'en' ? 'More to explore' : '继续浏览'}>
+      <a href={pathFor(lang, '/writing/')}>{t.writing}</a>
+      <a href={pathFor(lang, '/about/')}>{t.about}</a>
+    </nav>
+  </footer>
+ </div>
+ <script>import '../scripts/work';</script>
 </BaseLayout>
