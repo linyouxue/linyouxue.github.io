@@ -1,0 +1,5 @@
+---
+import { unavailableHtml } from '../lib/unavailable';
+Astro.response.status = 404;
+---
+<Fragment set:html={unavailableHtml('en')} />
