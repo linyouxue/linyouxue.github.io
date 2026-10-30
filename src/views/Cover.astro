@@ -4,34 +4,43 @@ import LanguageSwitch from '../components/LanguageSwitch.astro';
 import SocialLinks from '../components/SocialLinks.astro';
 import { site } from '../data/site';
 import { pathFor, ui, type Lang } from '../lib/i18n';
+import '../styles/cover.css';
 interface Props { lang: Lang; }
 const { lang } = Astro.props;
 const t = ui[lang];
 ---
 <BaseLayout lang={lang} title={site.name[lang]} kind="cover">
-  <div class="cover">
-    <header class="cover-header">
-      <LanguageSwitch lang={lang} alternatePath={pathFor(lang === 'en' ? 'zh' : 'en')} />
-    </header>
-    <main class="cover-spread" id="main">
-      <section class="cover-identity">
-        <h1>{site.name[lang]}</h1>
-        <p class="cover-byline">{lang === 'en' ? 'Yuanjing Lin · 林元靖' : 'Linyouxue · Yuanjing Lin'}</p>
-        <p class="cover-bio">{site.bio[lang]}</p>
-      </section>
-      <section class="cover-contents" aria-labelledby="writing-title">
-        <h2 id="writing-title" class="writing-title">{t.writing}</h2>
-        <p class="cover-topics">{t.technical}<br />{t.notes}</p>
-        <a class="enter-writing" href={pathFor(lang, '/writing/')}>
-          <span>{t.enter}</span>
-          <svg aria-hidden="true" width="42" height="22" viewBox="0 0 42 22" fill="none"><path d="M1 11h38M30 2l9 9-9 9" stroke="currentColor" stroke-width="1.5" /></svg>
-        </a>
-        <nav class="cover-secondary" aria-label={lang === 'en' ? 'More about me' : '了解更多'}>
-          <a href={pathFor(lang, '/work/')}>{t.work}</a>
-          <a href={pathFor(lang, '/about/')}>{t.about}</a>
-        </nav>
-      </section>
-    </main>
-    <footer class="cover-footer"><SocialLinks lang={lang} /></footer>
+  <div class="galaxy-scene" aria-hidden="true">
+    <div class="galaxy-background"></div>
+    <div class="reading-shade"></div>
+    <div class="entrance-veil"></div>
   </div>
+  <div id="meteor-layer" aria-hidden="true"></div>
+  <div id="star-cursor" aria-hidden="true"></div>
+  <div id="cursor-tail" aria-hidden="true"></div>
+  <header class="language-control">
+    <LanguageSwitch lang={lang} alternatePath={pathFor(lang === 'en' ? 'zh' : 'en')} />
+  </header>
+  <main class="portal-stage" id="main">
+    <section class="portal" aria-label={lang === 'en' ? 'Linyouxue’s personal homepage' : '林元靖的个人主页'}>
+      <img class="avatar" src="/assets/avatar.webp" alt={lang === 'en' ? 'Linyouxue’s avatar' : '林元靖的网头'} width="110" height="110" fetchpriority="high" />
+      <h1>{site.name[lang]}</h1>
+      <p class="subtitle">{site.tagline[lang]}</p>
+      <div class="divider" aria-hidden="true"></div>
+      <p class="bio">{site.bio[lang].split('\n').map(line => <span>{line}</span>)}</p>
+      <nav class="main-navigation" aria-label={lang === 'en' ? 'Main navigation' : '主导航'}>
+        <a href={pathFor(lang)} aria-current="page">{t.home}</a>
+        <a href={pathFor(lang, '/writing/')}>{lang === 'en' ? 'Blog' : '博客'}</a>
+        <a href={pathFor(lang, '/work/')}>{lang === 'en' ? 'Research' : t.work}</a>
+        <a href={pathFor(lang, '/about/')}>{t.about}</a>
+      </nav>
+      <SocialLinks lang={lang} variant="icons" />
+    </section>
+  </main>
+  <footer class="cover-replay">
+    <button type="button" id="replay-intro">{lang === 'en' ? 'Replay' : '重播'}</button>
+  </footer>
+  <script>
+    import '../scripts/cover';
+  </script>
 </BaseLayout>

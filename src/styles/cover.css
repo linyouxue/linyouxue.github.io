@@ -1,0 +1,80 @@
+.galaxy-cover { color-scheme: dark; background: #050a19; }
+[data-page-kind='cover'] { --ink: #f5f7ff; --secondary: #d1d8e9; --line: #e7eeff4a; --ease: cubic-bezier(.17,.7,.25,1); min-height: 100svh; display: flex; flex-direction: column; color: var(--ink); font: 16px/1.6 'Segoe UI','Microsoft YaHei',sans-serif; }
+.galaxy-cover button, .galaxy-cover a { -webkit-tap-highlight-color: transparent; }
+.galaxy-cover button { font: inherit; color: inherit; cursor: pointer; }
+.galaxy-cover a { color: inherit; text-underline-offset: 3px; }
+.galaxy-cover .skip-link { background: #0b1425; color: #f5f7ff; }
+.galaxy-cover button:focus-visible, .galaxy-cover a:focus-visible { outline: 2px solid #eaf6ff; outline-offset: 5px; }
+.galaxy-scene, .galaxy-background, .reading-shade, .entrance-veil, #meteor-layer { position: fixed; inset: 0; pointer-events: none; }
+.galaxy-scene { z-index: -3; overflow: hidden; background: #050a19; }
+.galaxy-background { width: 100%; height: 100%; background: url('/assets/galaxy-illustration-1586.webp') center / cover no-repeat; }
+.reading-shade { background: radial-gradient(ellipse at 50% 46%, #02071888 0, #02071862 39%, #02071845 75%), #02071824; }
+.entrance-veil { background: #050a19; opacity: 0; }
+.language-control { position: absolute; z-index: 5; right: 26px; top: 17px; }
+.language-control .language-switch { gap: 9px; font-size: 13px; }
+.language-control .language-switch a, .language-control .language-switch [aria-current] { padding: 7px 1px; color: inherit; }
+.language-control .language-switch a { opacity: .65; }
+.language-control .language-switch a:hover { opacity: 1; }
+.language-control .language-divider { opacity: .45; color: inherit; }
+.portal-stage { position: relative; z-index: 0; flex: 1; display: grid; place-items: center; padding: 72px 24px 30px; }
+.portal { width: min(460px, 100%); display: flex; flex-direction: column; align-items: center; text-align: center; text-shadow: 0 1px 8px #0005; }
+.avatar { width: 110px; height: 110px; border: 2px solid #ffffffdb; border-radius: 50%; object-fit: cover; background: #e6edf5; box-shadow: 0 2px 15px #0004; }
+.portal h1, [lang='zh-CN'] .portal h1 { margin: 10px 0 0; font-family: inherit; font-size: 42px; font-weight: 450; line-height: 1.2; letter-spacing: -.035em; }
+.subtitle { margin: 5px 0 0; color: var(--secondary); font-size: 17px; font-weight: 300; line-height: 1.55; letter-spacing: 2.7px; }
+.divider { width: 254px; max-width: 80%; height: 1px; margin: 22px 0 19px; background: var(--line); }
+.bio { font-size: 15px; line-height: 1.8; text-wrap: pretty; }
+.bio span { display: block; }
+.main-navigation { display: flex; justify-content: center; gap: 8px; margin-top: 32px; }
+.main-navigation a { min-width: 66px; padding: 7px 16px; border: 1px solid #ecf2ffb3; border-radius: 24px; background: transparent; font-size: 14px; line-height: 21px; text-decoration: none; transition: background-color 160ms, border-color 160ms, transform 160ms; }
+.main-navigation a:hover { background: #e9f3ff1b; border-color: #fff; transform: translateY(-2px); }
+.main-navigation a:active { transform: translateY(0); background: #e9f3ff2d; }
+.main-navigation [aria-current] { background: #e9f3ff08; }
+.portal .social-links { display: flex; gap: 21px; margin-top: 28px; color: inherit; }
+.portal .social-links a { display: grid; place-items: center; width: 30px; height: 34px; padding: 0; opacity: .85; transition: transform 160ms, opacity 160ms; }
+.portal .social-links a:hover { opacity: 1; transform: translateY(-2px); }
+.portal .social-links svg { width: 21px; height: 21px; }
+.portal .xiaohongshu-mark { width: 26px; height: 26px; }
+/* Retain the approved profile position after removing the study controls. */
+.cover-replay { position: relative; z-index: 5; flex-shrink: 0; height: 141px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 16px; }
+.cover-replay button { min-height: 30px; padding: 3px 7px; border: 0; border-radius: 6px; background: transparent; color: #d5deed; font-size: 11px; opacity: .65; }
+.cover-replay button:hover { opacity: 1; background: #d1e4ff15; }
+#meteor-layer { z-index: -1; overflow: hidden; }
+.meteor { position: absolute; width: 8px; height: 8px; opacity: .95; animation: meteor-pass var(--duration) linear both; }
+.meteor::before, #star-cursor::before { content: ''; display: block; width: 100%; height: 100%; background: #f5f8ff; clip-path: polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%); }
+.meteor::before { filter: drop-shadow(0 0 2px #d4ecff); }
+.meteor::after { content: ''; position: absolute; right: 5px; top: 3.5px; width: 53px; height: 1px; transform: rotate(var(--angle)); transform-origin: right center; background: linear-gradient(90deg, transparent, #d9edff80); }
+@keyframes meteor-pass { from { transform: translate(0,0); } to { transform: translate(var(--dx),var(--dy)); } }
+#star-cursor, #cursor-tail { display: none; position: fixed; z-index: 100; pointer-events: none; }
+#star-cursor { width: 12px; height: 12px; margin: -6px 0 0 -6px; filter: drop-shadow(0 0 3px #cfeaff50); }
+#cursor-tail { height: 1px; transform-origin: right center; background: linear-gradient(90deg, transparent, #d4eaff80); opacity: 0; transition: opacity 120ms; }
+.intro-playing .galaxy-background { animation: background-arrive 1250ms var(--ease) both; }
+.intro-playing .entrance-veil { animation: veil-open 1050ms var(--ease) both; }
+.intro-playing .avatar { animation: arrive 550ms 100ms var(--ease) both; }
+.intro-playing .portal h1 { animation: arrive 550ms 220ms var(--ease) both; }
+.intro-playing .subtitle { animation: arrive 550ms 300ms var(--ease) both; }
+.intro-playing .divider, .intro-playing .bio { animation: arrive 550ms 400ms var(--ease) both; }
+.intro-playing .main-navigation { animation: arrive 550ms 550ms var(--ease) both; }
+.intro-playing .social-links { animation: arrive 550ms 650ms var(--ease) both; }
+@keyframes background-arrive { from { transform: scale(1.035); } to { transform: scale(1); } }
+@keyframes veil-open { from { opacity: 1; } to { opacity: 0; } }
+@keyframes arrive { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 600px) {
+  .language-control { top: 15px; right: 22px; }
+  .portal-stage { padding: 64px 22px 23px; }
+  .portal h1, [lang='zh-CN'] .portal h1 { font-size: 40px; }
+  .subtitle { font-size: 15px; letter-spacing: 2.3px; }
+  .bio { font-size: 13px; line-height: 1.9; }
+  .main-navigation { gap: 7px; margin-top: 29px; }
+  .main-navigation a { min-width: 57px; padding: 6px 12px; font-size: 13px; }
+  .portal .social-links { margin-top: 26px; }
+  .cover-replay { height: 138px; padding-bottom: 13px; }
+  .meteor::after { width: 42px; }
+}
+@media (pointer: fine) {
+  body.has-stellar-cursor, .has-stellar-cursor a, .has-stellar-cursor button { cursor: none; }
+}
+.galaxy-cover[data-page-hidden='true'] *, .galaxy-cover[data-page-hidden='true'] *::before, .galaxy-cover[data-page-hidden='true'] *::after { animation-play-state: paused !important; }
+@media (prefers-reduced-motion: reduce) {
+  .galaxy-cover *, .galaxy-cover *::before, .galaxy-cover *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  #meteor-layer, #star-cursor, #cursor-tail { display: none !important; }
+}

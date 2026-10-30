@@ -4,8 +4,9 @@ export const site = {
   email: 'linyuanjing@bit.edu.cn',
   github: 'https://github.com/linyouxue',
   xiaohongshu: 'https://www.xiaohongshu.com/user/profile/685a58ce000000001b01899f',
+  tagline: { en: 'AI & Machine Learning', zh: '人工智能与机器学习' },
   bio: {
-    en: 'A student at Beijing Institute of Technology, exploring artificial intelligence and machine learning.',
+    en: 'A student at Beijing Institute of Technology.\nExploring artificial intelligence & machine learning.',
     zh: '就读于北京理工大学。\n关注人工智能与机器学习。',
   },
   affiliation: {
