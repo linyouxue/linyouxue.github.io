@@ -25,15 +25,15 @@ test('a visitor opens Work and About in either language and finds the real conta
   await expect(page).toHaveURL(/\/zh\/work\/$/);
   await expect(page.getByText('目前还没有发布个人工作。', { exact: true })).toBeVisible();
   await page.getByRole('link', { name: '关于', exact: true }).click();
-  await expect(page.getByRole('heading', { level: 1, name: '关于', exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 1, name: '林元靖', exact: true })).toBeVisible();
   await expect(page.getByRole('img', { name: '林元靖的网头', exact: true })).toBeVisible();
-  await expect(page.getByText('北京理工大学 · 徐特立英才班', { exact: true })).toBeVisible();
+  await expect(page.getByText('徐特立英才班 · 人工智能本科（在读）', { exact: true })).toBeVisible();
   await expect(page.getByRole('link', { name: 'GitHub', exact: true })).toHaveAttribute('href', 'https://github.com/linyouxue');
   await expect(page.getByRole('link', { name: '小红书', exact: true })).toHaveAttribute('href', 'https://www.xiaohongshu.com/user/profile/685a58ce000000001b01899f');
   await expect(page.getByRole('link', { name: 'linyuanjing@bit.edu.cn', exact: true })).toHaveAttribute('href', 'mailto:linyuanjing@bit.edu.cn');
   await page.getByRole('link', { name: 'Switch to English' }).click();
   await expect(page).toHaveURL(/\/about\/$/);
-  await expect(page.getByRole('heading', { level: 1, name: 'About', exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 1, name: 'Yuanjing Lin', exact: true })).toBeVisible();
   await expect(page.getByRole('link', { name: 'Xiaohongshu', exact: true })).toBeVisible();
   await page.getByRole('link', { name: 'Linyouxue — Home', exact: true }).click();
   await expect(page.getByRole('link', { name: 'GitHub', exact: true })).toBeVisible();
@@ -50,7 +50,7 @@ test('the Chinese cover keeps its language across all four destinations', async 
   for (const [label, path, heading] of [
     ['博客', 'writing', '文章'],
     ['研究与项目', 'work', '研究与项目'],
-    ['关于', 'about', '关于'],
+    ['关于', 'about', '林元靖'],
   ]) {
     await navigation.getByRole('link', { name: label, exact: true }).click();
     await expect(page).toHaveURL(new RegExp(`/zh/${path}/$`));
