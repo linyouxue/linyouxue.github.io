@@ -115,7 +115,12 @@ function describeFont() {
   if (fontButton) fontButton.textContent = `${isChinese ? '字号：' : 'Text size: '}${Math.round(scale * 100)}%`;
 }
 fontButton?.addEventListener('click', () => {
-  const block = document.elementFromPoint(innerWidth / 2, innerHeight / 3)?.closest<HTMLElement>('.article-body p, .article-body li, .article-body h2, .article-body h3, .article-body pre');
+  const readingTop = document.querySelector<HTMLElement>('#mobile-reading-top:not([hidden])')?.getBoundingClientRect().bottom ?? 0;
+  // A point can hit whitespace or a table cell; retain the first visible reading block.
+  const block = [...(body?.querySelectorAll<HTMLElement>('p, li, h2, h3, pre, table') ?? [])].find(element => {
+    const bounds = element.getBoundingClientRect();
+    return bounds.bottom > readingTop && bounds.top < innerHeight;
+  });
   const previousTop = block?.getBoundingClientRect().top;
   const current = Number(document.documentElement.style.getPropertyValue('--reading-scale')) || 1;
   const scale = scales[(scales.indexOf(current) + 1) % scales.length];

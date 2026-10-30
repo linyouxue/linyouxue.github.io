@@ -12,16 +12,21 @@ test('a phone reader reveals overlay tools, chooses a chapter and keeps typograp
   await expect(page.getByRole('button', { name:'目录',exact:true })).toBeVisible({ timeout:3000 });
   const after = await paragraph.boundingBox();
   expect(after).toEqual(before);
-  await page.getByRole('button', { name:'切换夜间',exact:true }).tap();
-  await expect(page.getByRole('button', { name:'切换日间',exact:true })).toBeVisible();
-  await page.getByRole('button', { name:/字号/ }).tap();
-  await expect(page.getByRole('button', { name:/112%/ })).toBeVisible();
   await page.getByRole('button', { name:'目录',exact:true }).tap();
   const contents = page.getByRole('dialog', { name:'目录',exact:true });
   await contents.getByRole('link', { name:'把问题变成可比较的实验',exact:true }).tap();
   await expect(contents).toBeHidden();
   await expect(page.getByRole('button', { name:'目录',exact:true })).toBeHidden();
   await expect(page.getByRole('heading', { name:'把问题变成可比较的实验',exact:true })).toBeFocused();
+  const readingParagraph = page.getByRole('paragraph').filter({ hasText:'我们首先需要一个问题，然后才需要一个评测。' });
+  await readingParagraph.tap();
+  const readingPosition = (await readingParagraph.boundingBox())!.y;
+  await page.getByRole('button', { name:'切换夜间',exact:true }).tap();
+  await expect(page.getByRole('button', { name:'切换日间',exact:true })).toBeVisible();
+  expect((await readingParagraph.boundingBox())!.y).toBeCloseTo(readingPosition, 0);
+  await page.getByRole('button', { name:/字号/ }).tap();
+  await expect(page.getByRole('button', { name:/112%/ })).toBeVisible();
+  await expect.poll(async () => Math.abs((await readingParagraph.boundingBox())!.y - readingPosition)).toBeLessThan(3);
   await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });
 
