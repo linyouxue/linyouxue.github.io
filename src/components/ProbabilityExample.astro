@@ -1,0 +1,22 @@
+---
+interface Props { lang?: 'en' | 'zh'; }
+const { lang = 'en' } = Astro.props;
+---
+<div class="probability-demo">
+  <label>{lang === 'en' ? 'Temperature' : '温度'} <input type="range" min="0.5" max="2" step="0.1" value="1" /></label>
+  <p>{lang === 'en' ? 'Leading candidate probability' : '首位候选的概率'}: <output aria-label={lang === 'en' ? 'Leading candidate probability' : '首位候选的概率'}>0.88</output></p>
+</div>
+<script>
+  document.querySelectorAll<HTMLElement>('.probability-demo').forEach(demo => {
+    const input = demo.querySelector('input')!;
+    const output = demo.querySelector('output')!;
+    input.addEventListener('input', () => { output.value = (1 / (1 + Math.exp(-2 / Number(input.value)))).toFixed(2); });
+  });
+</script>
+<style>
+  .probability-demo { padding:24px; border-block:1px solid var(--line); margin-block:2em; font:16px/1.7 var(--sans); }
+  label { display:flex; flex-wrap:wrap; align-items:center; gap:20px; }
+  input { flex:1; min-width:120px; accent-color:var(--accent); }
+  p { margin:16px 0 0; }
+  output { font-variant-numeric:tabular-nums; color:var(--accent); }
+</style>
